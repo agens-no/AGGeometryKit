@@ -54,6 +54,8 @@
 
 - (AGQuadrilateral)quadrilateral
 {
+    return AGQuadrilateralMakeWithCGRect(self.bounds);
+    
     CGPoint tl = [self outerPointForInnerPoint:CGPointMake(0, 0)];
     CGPoint tr = [self outerPointForInnerPoint:CGPointMake(self.bounds.size.width, 0)];
     CGPoint br = [self outerPointForInnerPoint:CGPointMake(self.bounds.size.width, self.bounds.size.height)];
