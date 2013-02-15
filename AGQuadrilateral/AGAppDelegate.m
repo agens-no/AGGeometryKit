@@ -7,10 +7,7 @@
 //
 
 #import "AGAppDelegate.h"
-
-#import "AGMasterViewController.h"
-
-#import "AGDetailViewController.h"
+#import "AGQuadrilateralSample.h"
 
 @implementation AGAppDelegate
 
@@ -19,18 +16,11 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 
-    AGMasterViewController *masterViewController = [[AGMasterViewController alloc] initWithNibName:@"AGMasterViewController" bundle:nil];
-    UINavigationController *masterNavigationController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
+    AGQuadrilateralSample *quadSampleController = [[AGQuadrilateralSample alloc] initWithNibName:nil bundle:nil];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:quadSampleController];
+    navigationController.navigationBarHidden = YES;
 
-    AGDetailViewController *detailViewController = [[AGDetailViewController alloc] initWithNibName:@"AGDetailViewController" bundle:nil];
-    UINavigationController *detailNavigationController = [[UINavigationController alloc] initWithRootViewController:detailViewController];
-
-    masterViewController.detailViewController = detailViewController;
-
-    self.splitViewController = [[UISplitViewController alloc] init];
-    self.splitViewController.delegate = detailViewController;
-    self.splitViewController.viewControllers = @[masterNavigationController, detailNavigationController];
-    self.window.rootViewController = self.splitViewController;
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     return YES;
 }
