@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+// Using AGPoint for better precision when calculating transform for quadrilaterals
 
 typedef union AGPoint {
     struct { double x, y; };
