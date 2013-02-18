@@ -35,7 +35,6 @@ void AGQuadrilateralGetXValues(AGQuadrilateral q, double *out_values);
 void AGQuadrilateralGetYValues(AGQuadrilateral q, double *out_values);
 inline AGQuadrilateral AGQuadrilateralInterpolation(AGQuadrilateral q1, AGQuadrilateral q2, double progress);
 inline NSString * NSStringFromAGQuadrilateral(AGQuadrilateral q);
-CATransform3D CATransform3DMakeRectToQuadrilateral(CGRect rect, AGQuadrilateral q);
 
 
 /**
