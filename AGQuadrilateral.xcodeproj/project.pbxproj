@@ -231,8 +231,8 @@
 				A333A5F816A9A59200E334AD /* CALayer+Extensions.m */,
 				A30B0C4C16D2229600856E00 /* CAAnimationBlockDelegate.h */,
 				A30B0C4D16D2229600856E00 /* CAAnimationBlockDelegate.m */,
-				A333A5F916A9A59200E334AD /* easing.c */,
 				A333A5FA16A9A59200E334AD /* easing.h */,
+				A333A5F916A9A59200E334AD /* easing.c */,
 			);
 			path = Source;
 			sourceTree = "<group>";

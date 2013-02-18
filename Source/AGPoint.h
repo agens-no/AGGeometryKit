@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 
-
 typedef union AGPoint {
     struct { double x, y; };
     double v[2];
