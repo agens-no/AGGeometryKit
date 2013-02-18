@@ -145,28 +145,28 @@ extern double AGQuadrilateralGetSmallestX(AGQuadrilateral q)
 {
     double values[4];
     AGQuadrilateralGetXValues(q, values);
-    return doubleLowest(values, 4);
+    return minInArray(values, 4);
 }
 
 extern double AGQuadrilateralGetBiggestX(AGQuadrilateral q)
 {
     double values[4];
     AGQuadrilateralGetXValues(q, values);
-    return doubleHighest(values, 4);
+    return maxInArray(values, 4);
 }
 
 extern double AGQuadrilateralGetSmallestY(AGQuadrilateral q)
 {
     double values[4];
     AGQuadrilateralGetYValues(q, values);
-    return doubleLowest(values, 4);
+    return minInArray(values, 4);
 }
 
 extern double AGQuadrilateralGetBiggestY(AGQuadrilateral q)
 {
     double values[4];
     AGQuadrilateralGetYValues(q, values);
-    return doubleHighest(values, 4);
+    return maxInArray(values, 4);
 }
 
 extern CGRect AGQuadrilateralGetBoundingRect(AGQuadrilateral q)
@@ -176,10 +176,10 @@ extern CGRect AGQuadrilateralGetBoundingRect(AGQuadrilateral q)
     AGQuadrilateralGetXValues(q, xValues);
     AGQuadrilateralGetYValues(q, yValues);
     
-    CGFloat xmin = doubleLowest(xValues, 4);
-    CGFloat xmax = doubleHighest(xValues, 4);
-    CGFloat ymin = doubleLowest(yValues, 4);
-    CGFloat ymax = doubleHighest(yValues, 4);
+    CGFloat xmin = minInArray(xValues, 4);
+    CGFloat xmax = maxInArray(xValues, 4);
+    CGFloat ymin = minInArray(yValues, 4);
+    CGFloat ymax = maxInArray(yValues, 4);
     
     CGRect rect;
     rect.origin.x = xmin;

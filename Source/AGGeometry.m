@@ -12,30 +12,37 @@
 #import "GLKit/GLKVector3.h"
 #import "AGMath.h"
 
-BOOL VGCornerIsOnSide(VGCorner corner, VGSide side)
+BOOL AGCornerIsOnSide(AGCorner corner, VGSide side)
 {
     return (corner & side) == side;
 }
 
-CGPoint VGCornerConvertToAnchorPoint(VGCorner corner)
+CGPoint AGCornerConvertToAnchorPoint(AGCorner corner)
 {
     switch (corner) {
-        case VGCornerTopLeft:
+        case AGCornerTopLeft:
             return CGPointMake(0, 0);
             break;
-        case VGCornerTopRight:
+        case AGCornerTopRight:
             return CGPointMake(1, 0);
             break;
-        case VGCornerBottomLeft:
+        case AGCornerBottomLeft:
             return CGPointMake(0, 1);
             break;
-        case VGCornerBottomRight:
+        case AGCornerBottomRight:
             return CGPointMake(1, 1);
             break;
     }
 }
 
-CGPoint CGPointForAnchorPointInRect(CGPoint anchor, CGRect rect)
+CGPoint AGCornerConvertToPointForRect(AGCorner corner, CGRect rect)
+{
+    CGPoint anchor = AGCornerConvertToAnchorPoint(corner);
+    CGPoint p = CGPointGetPointForAnchorPointInRect(anchor, rect);
+    return p;
+}
+
+CGPoint CGPointGetPointForAnchorPointInRect(CGPoint anchor, CGRect rect)
 {
     CGPoint point;
     point.x = (anchor.x * rect.size.width) + rect.origin.x;
@@ -43,7 +50,7 @@ CGPoint CGPointForAnchorPointInRect(CGPoint anchor, CGRect rect)
     return point;
 }
 
-CGPoint CGPointAnchorForPointInRect(CGPoint point, CGRect rect)
+CGPoint CGPointGetAnchorPointForPointInRect(CGPoint point, CGRect rect)
 {
     CGPoint anchor = CGPointZero;
     CGPoint minPoint = CGPointMake(CGRectGetMinX(rect), CGRectGetMinY(rect));
@@ -54,35 +61,28 @@ CGPoint CGPointAnchorForPointInRect(CGPoint point, CGRect rect)
 
 CGPoint CGPointForCenterInRect(CGRect rect)
 {
-    return CGPointForAnchorPointInRect(CGPointMake(0.5, 0.5), rect);
+    return CGPointGetPointForAnchorPointInRect(CGPointMake(0.5, 0.5), rect);
 }
 
-CGPoint VGCornerConvertToPointForRect(VGCorner corner, CGRect rect)
-{
-    CGPoint anchor = VGCornerConvertToAnchorPoint(corner);
-    CGPoint p = CGPointForAnchorPointInRect(anchor, rect);
-    return p;
-}
-
-double CGPointDistanceBetweenPoints(CGPoint p1, CGPoint p2)
+extern double CGPointDistanceBetweenPoints(CGPoint p1, CGPoint p2)
 {
     CGPoint p = CGPointNormalizedDistance(p1, p2);
     return sqrtf(powf(p.x, 2.0f) + powf(p.y, 2.0f));
 }
 
-CGPoint CGPointNormalizedDistance(CGPoint p1, CGPoint p2)
+extern CGPoint CGPointNormalizedDistance(CGPoint p1, CGPoint p2)
 {
     return CGPointMake(p2.x - p1.x, p2.y - p1.y);
 }
 
-double CGRectGetAspectRatio(CGRect rect) {
-    return rect.size.width / rect.size.height;
+extern double CGSizeGetAspectRatio(CGSize size) {
+    return size.width / size.height;
 }
 
-BOOL CGRectAspectIsWiderThanCGRect(CGRect rect1, CGRect rect2)
+extern BOOL CGSizeAspectIsWiderThanCGSize(CGSize size1, CGSize size2)
 {
-    double aspect1 = CGRectGetAspectRatio(rect1);
-    double aspect2 = CGRectGetAspectRatio(rect1);
+    double aspect1 = CGSizeGetAspectRatio(size1);
+    double aspect2 = CGSizeGetAspectRatio(size2);
     return aspect1 > aspect2;
 }
 
@@ -101,87 +101,48 @@ CGSize CGSizeAdjustOuterSizeToFitInnerSize(CGSize outer, CGSize inner)
     }
 }
 
-BOOL CGSizeEqualToOrGreaterThanSize(CGSize greaterSize, CGSize size2)
-{
-    return greaterSize.width >= size2.width && greaterSize.height > size2.height;
-}
-
-BOOL CGRectGotAnyNanValues(CGRect rect)
+extern BOOL CGRectGotAnyNanValues(CGRect rect)
 {
     return CGSizeGotAnyNanValues(rect.size) || CGPointGotAnyNanValues(rect.origin);
 }
 
-BOOL CGSizeGotAnyNanValues(CGSize size)
+extern BOOL CGSizeGotAnyNanValues(CGSize size)
 {
     return size.width == NAN || size.height == NAN;
 }
 
-BOOL CGPointGotAnyNanValues(CGPoint origin)
+extern BOOL CGPointGotAnyNanValues(CGPoint origin)
 {
     return origin.x == NAN || origin.y == NAN;
 }
 
-CGSize CGSizeGreatestSize(CGSize size1, CGSize size2)
-{
-    if(CGSizeEqualToOrGreaterThanSize(size1, size2))
-    {
-        return size1;
-    }
-    else
-    {
-        return size2;
-    }
-}
-
-CGSize CGSizeSmallestSize(CGSize size1, CGSize size2)
-{
-    if(CGSizeEqualToOrGreaterThanSize(size1, size2))
-    {
-        return size2;
-    }
-    else
-    {
-        return size1;
-    }
-}
-
-double RadiansToDegrees(double radians)
-{
-    return radians * 180 / M_PI;
-}
-
-double DegreesToRadians(double degrees)
-{
-    return degrees * M_PI / 180;
-}
-
-CGPoint CGPointAddSize(CGPoint p, CGSize s)
+extern CGPoint CGPointAddSize(CGPoint p, CGSize s)
 {
     return CGPointMake(p.x + s.width, p.y + s.height);
 }
 
-CGRect CGRectMakeWithSize(CGSize size)
+extern CGRect CGRectMakeWithSize(CGSize size)
 {
     return (CGRect){CGPointZero, size};
 }
 
-CGSize CGSizeGetHalf(CGSize size)
+extern CGSize CGSizeGetHalf(CGSize size)
 {
     return CGSizeMake(size.width / 2.0, size.height / 2.0);
 }
 
-CGSize CGSizeFlipped(CGSize size)
+extern CGSize CGSizeFlipped(CGSize size)
 {
     return CGSizeMake(size.height, size.width);
 }
 
-CGRect CGRectNewWidth(CGRect rect, double newWidth)
+extern CGRect CGRectNewWidth(CGRect rect, CGFloat newWidth)
 {
     rect.size.width = newWidth;
     return rect;
 }
 
-CGRect CGRectNewHeight(CGRect rect, double newHeight)
+extern CGRect CGRectNewHeight(CGRect rect, CGFloat newHeight)
 {
     rect.size.height = newHeight;
     return rect;
@@ -219,11 +180,6 @@ CGSize CGSizeInterpolate(CGSize size1, CGSize size2, double progress)
     return result;
 }
 
-CGSize CGSizeInterpolateWithFunction(CGSize size1, CGSize size2, double progress, AHFloat (*function)(AHFloat))
-{
-    return CGSizeInterpolate(size1, size2, function(progress));
-}
-
 CGPoint CGPointInterpolate(CGPoint point1, CGPoint point2, double progress)
 {
     CGPoint result;
@@ -232,27 +188,12 @@ CGPoint CGPointInterpolate(CGPoint point1, CGPoint point2, double progress)
     return result;
 }
 
-CGPoint CGPointInterpolateWithFunction(CGPoint point1, CGPoint point2, double progress, AHFloat (*function)(AHFloat))
-{
-    return CGPointInterpolate(point1, point2, function(progress));
-}
-
 CGRect CGRectInterpolate(CGRect rect1, CGRect rect2, double progress)
 {
     CGRect result;
     result.origin = CGPointInterpolate(rect1.origin, rect2.origin, progress);
     result.size = CGSizeInterpolate(rect1.size, rect2.size, progress);
     return result;
-}
-
-CGRect CGRectInterpolateWithFunction(CGRect rect1, CGRect rect2, double progress, AHFloat (*function)(AHFloat))
-{
-    return CGRectInterpolate(rect1, rect2, function(progress));
-}
-
-extern BOOL CGPointContainsNaNValues(CGPoint p)
-{
-    return p.x != p.x || p.y != p.y;
 }
 
 BOOL getLineIntersection(double p0_x,

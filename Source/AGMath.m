@@ -8,22 +8,14 @@
 
 #import "AGMath.h"
 
-double valueInterpolate(double startValue, double endValue, double progress)
+extern double valueInterpolate(double startValue, double endValue, double progress)
 {
     double diff = endValue - startValue;
     double value = startValue + (diff * progress);
     return value;
 }
 
-double valueInterpolateWithFunction(double startValue, double endValue, double progress, AHFloat (*function)(AHFloat))
-{
-    double diff = endValue - startValue;
-    progress = function(progress);
-    double value = startValue + (diff * progress);
-    return value;
-}
-
-double progressForValue(double startValue, double endValue, double value)
+extern double progressForValue(double startValue, double endValue, double value)
 {
     double diff = value - startValue;
     double scope = endValue - startValue;
@@ -41,12 +33,7 @@ double progressForValue(double startValue, double endValue, double value)
     return progress;
 }
 
-double progressForValueConstrained(double startValue, double endValue, double value)
-{
-    return MIN(1.0, MAX(0.0, progressForValue(startValue, endValue, value)));
-}
-
-extern double doubleLowest(double values[], unsigned int numberOfValues)
+extern double minInArray(double values[], unsigned int numberOfValues)
 {
     double lowest = values[0];
     
@@ -58,7 +45,7 @@ extern double doubleLowest(double values[], unsigned int numberOfValues)
     return lowest;
 }
 
-extern double doubleHighest(double values[], unsigned int numberOfValues)
+extern double maxInArray(double values[], unsigned int numberOfValues)
 {
     double highest = values[0];
     
@@ -69,6 +56,26 @@ extern double doubleHighest(double values[], unsigned int numberOfValues)
     
     return highest;
 }
+
+extern double clamp(double value, double min, double max)
+{
+    if(value > max)
+        return max;
+    if(value < min)
+        return min;
+    return value;
+}
+
+extern double radiansToDegrees(double radians)
+{
+    return radians * 180 / M_PI;
+}
+
+extern double degreesToRadians(double degrees)
+{
+    return degrees * M_PI / 180;
+}
+
 
 @interface AGMath ()
 

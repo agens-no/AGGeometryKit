@@ -53,11 +53,6 @@
     }
 }
 
-- (void)testValueInterpolateWithFunction
-{
-    
-}
-
 - (void)testProgressForValue
 {
     {

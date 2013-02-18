@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "easing.h"
 
 // http://processingjs.nihongoresources.com/bezierinfo/
 
@@ -25,45 +24,43 @@ typedef enum VGSide {
 } VGSide;
 
 typedef enum {
-    VGCornerTopLeft = VGSideTop | VGSideLeft,
-    VGCornerTopRight = VGSideTop | VGSideRight,
-    VGCornerBottomLeft = VGSideBottom | VGSideLeft,
-    VGCornerBottomRight = VGSideBottom | VGSideRight,
-} VGCorner;
+    AGCornerTopLeft = VGSideTop | VGSideLeft,
+    AGCornerTopRight = VGSideTop | VGSideRight,
+    AGCornerBottomLeft = VGSideBottom | VGSideLeft,
+    AGCornerBottomRight = VGSideBottom | VGSideRight,
+} AGCorner;
 
-BOOL VGCornerIsOnSide(VGCorner corner, VGSide side);
-CGPoint VGCornerConvertToAnchorPoint(VGCorner corner);
-CGPoint CGPointForAnchorPointInRect(CGPoint anchor, CGRect rect);
-CGPoint CGPointAnchorForPointInRect(CGPoint point, CGRect rect);
+BOOL AGCornerIsOnSide(AGCorner corner, VGSide side);
+CGPoint AGCornerConvertToAnchorPoint(AGCorner corner);
+CGPoint AGCornerConvertToPointForRect(AGCorner corner, CGRect rect);
+
+CGPoint CGPointGetPointForAnchorPointInRect(CGPoint anchor, CGRect rect);
+CGPoint CGPointGetAnchorPointForPointInRect(CGPoint point, CGRect rect);
 CGPoint CGPointForCenterInRect(CGRect rect);
-CGPoint VGCornerConvertToPointForRect(VGCorner corner, CGRect rect);
-double CGPointDistanceBetweenPoints(CGPoint p1, CGPoint p2);
-CGPoint CGPointNormalizedDistance(CGPoint p1, CGPoint p2);
-double CGRectGetAspectRatio(CGRect rect);
+
+inline double CGPointDistanceBetweenPoints(CGPoint p1, CGPoint p2);
+inline CGPoint CGPointNormalizedDistance(CGPoint p1, CGPoint p2);
+
+inline double CGSizeGetAspectRatio(CGSize size);
+inline BOOL CGSizeAspectIsWiderThanCGSize(CGSize size1, CGSize size2);
 CGSize CGSizeAdjustOuterSizeToFitInnerSize(CGSize outer, CGSize inner);
-BOOL CGRectAspectIsWiderThanCGRect(CGRect rect1, CGRect rect2);
-BOOL CGSizeEqualToOrGreaterThanSize(CGSize greaterSize, CGSize size2);
-BOOL CGRectGotAnyNanValues(CGRect rect);
-BOOL CGSizeGotAnyNanValues(CGSize size);
-BOOL CGPointGotAnyNanValues(CGPoint origin);
-CGSize CGSizeGreatestSize(CGSize size1, CGSize size2);
-CGSize CGSizeSmallestSize(CGSize size1, CGSize size2);
-double RadiansToDegrees(double radians);
-double DegreesToRadians(double degrees);
-CGPoint CGPointAddSize(CGPoint p, CGSize s);
-CGRect CGRectMakeWithSize(CGSize size);
-CGSize CGSizeGetHalf(CGSize size);
-CGSize CGSizeFlipped(CGSize size);
-CGRect CGRectNewWidth(CGRect rect, double newWidth);
-CGRect CGRectNewHeight(CGRect rect, double newHeight);
+
+inline BOOL CGRectGotAnyNanValues(CGRect rect);
+inline BOOL CGSizeGotAnyNanValues(CGSize size);
+inline BOOL CGPointGotAnyNanValues(CGPoint origin);
+
+inline CGPoint CGPointAddSize(CGPoint p, CGSize s);
+inline CGRect CGRectMakeWithSize(CGSize size);
+inline CGSize CGSizeGetHalf(CGSize size);
+inline CGSize CGSizeFlipped(CGSize size);
+inline CGRect CGRectNewWidth(CGRect rect, CGFloat newWidth);
+inline CGRect CGRectNewHeight(CGRect rect, CGFloat newHeight);
+
 CGRect CGRectSmallestWithCGPoints(CGPoint pointsArray[], int numberOfPoints);
-CGPoint CGPointInterpolate(CGPoint point1, CGPoint point2, double progress);
-CGPoint CGPointInterpolateWithFunction(CGPoint point1, CGPoint point2, double progress, AHFloat (*function)(AHFloat));
+
 CGSize CGSizeInterpolate(CGSize size1, CGSize size2, double progress);
-CGSize CGSizeInterpolateWithFunction(CGSize size1, CGSize size2, double progress, AHFloat (*function)(AHFloat));
+CGPoint CGPointInterpolate(CGPoint point1, CGPoint point2, double progress);
 CGRect CGRectInterpolate(CGRect rect1, CGRect rect2, double progress);
-CGRect CGRectInterpolateWithFunction(CGRect rect1, CGRect rect2, double progress, float (*function)(float));
-inline BOOL CGPointContainsNaNValues(CGPoint p);
 
 BOOL getLineIntersection(double p0_x,
                          double p0_y,

@@ -17,16 +17,16 @@
 
 @implementation AGGeometryTest
 
-- (void)testVGCornerIsOnSide
+- (void)testAGCornerIsOnSide
 {
-    STAssertTrue(VGCornerIsOnSide(VGCornerTopLeft, VGSideLeft), @"corner should on given side");
-    STAssertTrue(VGCornerIsOnSide(VGCornerBottomLeft, VGSideLeft), @"corner should on given side");
-    STAssertTrue(VGCornerIsOnSide(VGCornerTopLeft, VGSideTop), @"corner should on given side");
-    STAssertTrue(VGCornerIsOnSide(VGCornerTopRight, VGSideTop), @"corner should on given side");
-    STAssertTrue(VGCornerIsOnSide(VGCornerTopRight, VGSideRight), @"corner should on given side");
-    STAssertTrue(VGCornerIsOnSide(VGCornerBottomRight, VGSideRight), @"corner should on given side");
-    STAssertTrue(VGCornerIsOnSide(VGCornerBottomRight, VGSideBottom), @"corner should on given side");
-    STAssertTrue(VGCornerIsOnSide(VGCornerBottomLeft, VGSideBottom), @"corner should on given side");
+    STAssertTrue(AGCornerIsOnSide(AGCornerTopLeft, VGSideLeft), @"corner should on given side");
+    STAssertTrue(AGCornerIsOnSide(AGCornerBottomLeft, VGSideLeft), @"corner should on given side");
+    STAssertTrue(AGCornerIsOnSide(AGCornerTopLeft, VGSideTop), @"corner should on given side");
+    STAssertTrue(AGCornerIsOnSide(AGCornerTopRight, VGSideTop), @"corner should on given side");
+    STAssertTrue(AGCornerIsOnSide(AGCornerTopRight, VGSideRight), @"corner should on given side");
+    STAssertTrue(AGCornerIsOnSide(AGCornerBottomRight, VGSideRight), @"corner should on given side");
+    STAssertTrue(AGCornerIsOnSide(AGCornerBottomRight, VGSideBottom), @"corner should on given side");
+    STAssertTrue(AGCornerIsOnSide(AGCornerBottomLeft, VGSideBottom), @"corner should on given side");
 }
 
 - (void)testCGPointForAnchorPointInRect
@@ -66,16 +66,16 @@
     CGRect rect = CGRectMake(50, 80, 350, 270); 
     CGPoint point;
     
-    point = CGPointForAnchorPointInRect(VGCornerConvertToAnchorPoint(VGCornerTopLeft), rect);
+    point = CGPointForAnchorPointInRect(AGCornerConvertToAnchorPoint(AGCornerTopLeft), rect);
     STAssertEquals(point, CGPointMake(50, 80), @"point is not as expected");
     
-    point = CGPointForAnchorPointInRect(VGCornerConvertToAnchorPoint(VGCornerTopRight), rect);
+    point = CGPointForAnchorPointInRect(AGCornerConvertToAnchorPoint(AGCornerTopRight), rect);
     STAssertEquals(point, CGPointMake(50 + 350, 80), @"point is not as expected");
     
-    point = CGPointForAnchorPointInRect(VGCornerConvertToAnchorPoint(VGCornerBottomRight), rect);
+    point = CGPointForAnchorPointInRect(AGCornerConvertToAnchorPoint(AGCornerBottomRight), rect);
     STAssertEquals(point, CGPointMake(50 + 350, 80 + 270), @"point is not as expected");
     
-    point = CGPointForAnchorPointInRect(VGCornerConvertToAnchorPoint(VGCornerBottomLeft), rect);
+    point = CGPointForAnchorPointInRect(AGCornerConvertToAnchorPoint(AGCornerBottomLeft), rect);
     STAssertEquals(point, CGPointMake(50, 80 + 270), @"point is not as expected");
 }
 
