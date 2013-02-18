@@ -22,11 +22,3 @@ inline AGPoint AGPointMakeWithCGPoint(CGPoint p);
 inline AGPoint AGPointMake(double x, double y);
 inline AGPoint AGPointInterpolate(AGPoint p1, AGPoint p2, double progress);
 NSString * NSStringFromAGPoint(AGPoint p);
-
-typedef union AGLine {
-    struct { AGPoint start, end; };
-    double v[2];
-} AGLine;
-
-inline AGLine AGLineMake(AGPoint start, AGPoint end);
-inline AGLine AGLineLength(AGLine l);
