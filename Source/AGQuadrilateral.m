@@ -183,9 +183,9 @@ extern CGRect AGQuadrilateralGetBoundingRect(AGQuadrilateral q)
     AGQuadrilateralGetYValues(q, yValues);
     
     CGFloat xmin = doubleLowest(xValues, 4);
-    CGFloat xmax = doubleLowest(xValues, 4);
+    CGFloat xmax = doubleHighest(xValues, 4);
     CGFloat ymin = doubleLowest(yValues, 4);
-    CGFloat ymax = doubleLowest(yValues, 4);
+    CGFloat ymax = doubleHighest(yValues, 4);
     
     CGRect rect;
     rect.origin.x = xmin;
