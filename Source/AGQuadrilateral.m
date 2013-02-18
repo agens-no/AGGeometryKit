@@ -150,14 +150,14 @@ extern AGQuadrilateral AGQuadrilateralMakeWithCGSize(CGSize size)
 extern double AGQuadrilateralGetSmallestX(AGQuadrilateral q)
 {
     double values[4];
-    AGQuadrilateralGetYValues(q, values);
+    AGQuadrilateralGetXValues(q, values);
     return doubleLowest(values, 4);
 }
 
 extern double AGQuadrilateralGetBiggestX(AGQuadrilateral q)
 {
     double values[4];
-    AGQuadrilateralGetYValues(q, values);
+    AGQuadrilateralGetXValues(q, values);
     return doubleHighest(values, 4);
 }
 

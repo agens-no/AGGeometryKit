@@ -51,7 +51,6 @@ CATransform3D CATransform3DMakeRectToQuadrilateral(CGRect rect, AGQuadrilateral 
 @interface NSValue (AGQuadrilateralAdditions)
 
 + (NSValue *)valueWithAGQuadrilateral:(AGQuadrilateral)q;
-
 - (AGQuadrilateral)AGQuadrilateralValue;
 
 @end
