@@ -29,7 +29,7 @@
                            delay:(NSTimeInterval)delay
                 progressFunction:(double(^)(double p))progressFunction
                           forKey:(NSString *)animKey
-                      onComplete:(void(^)(void))onComplete;
+                      onComplete:(void(^)(BOOL finished))onComplete;
 
 - (void)animateFromPresentedStateToQuadrilateral:(AGQuadrilateral)quad
                                forNumberOfFrames:(NSUInteger)numberOfFrames
@@ -37,6 +37,6 @@
                                            delay:(NSTimeInterval)delay
                                 progressFunction:(double(^)(double p))progressFunction
                                           forKey:(NSString *)animKey
-                                      onComplete:(void(^)(void))onComplete;
+                                      onComplete:(void(^)(BOOL finished))onComplete;
 
 @end

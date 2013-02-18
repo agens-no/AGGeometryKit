@@ -7,6 +7,7 @@
 //
 
 #import "CALayer+AGQuadrilateral.h"
+#import "CAAnimationBlockDelegate.h"
 
 @implementation CALayer (AGQuadrilateral)
 
@@ -16,14 +17,17 @@
                                       andQuadrilateral:(AGQuadrilateral)quad2
                                                   rect:(CGRect)rect
                                      forNumberOfFrames:(NSUInteger)numberOfFrames
+                                                 delay:(NSTimeInterval)delay
                                               duration:(NSTimeInterval)duration
                                       progressFunction:(double(^)(double p))progressFunction
+                                            onComplete:(void(^)(BOOL finished))onComplete
 {
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
     animation.duration = duration;
     animation.repeatCount = 1;
     animation.removedOnCompletion = NO;
     animation.fillMode = kCAFillModeForwards;
+    animation.beginTime = CACurrentMediaTime() + delay;
     
     NSMutableArray *values = [NSMutableArray arrayWithCapacity:numberOfFrames];
     
@@ -37,6 +41,10 @@
     }
     
     animation.values = values;
+    
+    CAAnimationBlockDelegate *delegate = [[CAAnimationBlockDelegate alloc] init];
+    delegate.onAnimationDidStop = onComplete;
+    animation.delegate = delegate;
     
     return animation;
 }
@@ -54,8 +62,6 @@
 
 - (AGQuadrilateral)quadrilateral
 {
-    return AGQuadrilateralMakeWithCGRect(self.bounds);
-    
     CGPoint tl = [self outerPointForInnerPoint:CGPointMake(0, 0)];
     CGPoint tr = [self outerPointForInnerPoint:CGPointMake(self.bounds.size.width, 0)];
     CGPoint br = [self outerPointForInnerPoint:CGPointMake(self.bounds.size.width, self.bounds.size.height)];
@@ -66,7 +72,6 @@
     return q;
 }
 
-
 - (void)animateFromQuadrilateral:(AGQuadrilateral)quad1
                  toQuadrilateral:(AGQuadrilateral)quad2
                forNumberOfFrames:(NSUInteger)numberOfFrames
@@ -74,7 +79,7 @@
                            delay:(NSTimeInterval)delay
                 progressFunction:(double(^)(double p))progressFunction
                           forKey:(NSString *)animKey
-                      onComplete:(void(^)(void))onComplete
+                      onComplete:(void(^)(BOOL finished))onComplete
 {
     if(!CGPointEqualToPoint(self.anchorPoint, CGPointZero))
     {
@@ -87,10 +92,10 @@
                                                            andQuadrilateral:quad2
                                                                        rect:self.bounds
                                                           forNumberOfFrames:numberOfFrames
+                                                                      delay:delay
                                                                    duration:duration
-                                                           progressFunction:progressFunction];
-    
-    anim.beginTime = CACurrentMediaTime() + delay;
+                                                           progressFunction:progressFunction
+                                                                 onComplete:onComplete];
     
     [self addAnimation:anim forKey:animKey];
     
@@ -103,7 +108,7 @@
                                            delay:(NSTimeInterval)delay
                                 progressFunction:(double(^)(double p))progressFunction
                                           forKey:(NSString *)animKey
-                                      onComplete:(void(^)(void))onComplete
+                                      onComplete:(void(^)(BOOL finished))onComplete
 {
     AGQuadrilateral currentQuad = [(CALayer *)[self presentationLayer] quadrilateral];
     
