@@ -11,14 +11,16 @@
 double valueInterpolate(double startValue, double endValue, double progress)
 {
     double diff = endValue - startValue;
-    return startValue + (diff * progress);
+    double value = startValue + (diff * progress);
+    return value;
 }
 
 double valueInterpolateWithFunction(double startValue, double endValue, double progress, AHFloat (*function)(AHFloat))
 {
     double diff = endValue - startValue;
     progress = function(progress);
-    return startValue + (diff * progress);
+    double value = startValue + (diff * progress);
+    return value;
 }
 
 double progressForValue(double startValue, double endValue, double value)

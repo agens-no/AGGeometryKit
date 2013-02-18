@@ -250,6 +250,11 @@ CGRect CGRectInterpolateWithFunction(CGRect rect1, CGRect rect2, double progress
     return CGRectInterpolate(rect1, rect2, function(progress));
 }
 
+extern BOOL CGPointContainsNaNValues(CGPoint p)
+{
+    return p.x != p.x || p.y != p.y;
+}
+
 BOOL getLineIntersection(double p0_x,
                          double p0_y,
                          double p1_x,

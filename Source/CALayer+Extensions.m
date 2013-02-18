@@ -59,8 +59,14 @@
     }
     
     CGPoint outerPoint = [self convertPoint:innerPoint toLayer:self.superlayer];
-    outerPoint.x -= self.frame.origin.x;
-    outerPoint.y -= self.frame.origin.y;
+    outerPoint.x -= self.position.x;
+    outerPoint.y -= self.position.y;
+    
+    if(outerPoint.x != outerPoint.x || outerPoint.y != outerPoint.y)
+    {
+        [NSException raise:NSInternalInconsistencyException format:@"Calculated NaN values from CALayer %@", self];
+    }
+    
     return outerPoint;
 }
 

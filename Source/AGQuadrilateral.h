@@ -22,7 +22,7 @@ inline AGQuadrilateral AGQuadrilateralInsetRight(AGQuadrilateral q, double inset
 inline AGQuadrilateral AGQuadrilateralInsetTop(AGQuadrilateral q, double inset);
 inline AGQuadrilateral AGQuadrilateralInsetBottom(AGQuadrilateral q, double inset);
 inline AGQuadrilateral AGQuadrilateralMirror(AGQuadrilateral q, BOOL x, BOOL y);
-inline AGQuadrilateral AGQuadrilateralMakeWithCGPoints(CGPoint tl, CGPoint tr, CGPoint bl, CGPoint br);
+inline AGQuadrilateral AGQuadrilateralMakeWithCGPoints(CGPoint tl, CGPoint tr, CGPoint br, CGPoint bl);
 inline AGQuadrilateral AGQuadrilateralMakeWithCGRect(CGRect rect);
 inline AGQuadrilateral AGQuadrilateralMakeWithCGSize(CGSize size);
 inline double AGQuadrilateralGetSmallestX(AGQuadrilateral q);

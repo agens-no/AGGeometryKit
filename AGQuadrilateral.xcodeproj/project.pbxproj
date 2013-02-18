@@ -14,6 +14,8 @@
 		A30B0C4816CE8F3900856E00 /* AGQuadrilateralTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A30B0C4716CE8F3900856E00 /* AGQuadrilateralTest.m */; };
 		A30B0C4916CE932700856E00 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A60A16A9A6F000E334AD /* QuartzCore.framework */; };
 		A30B0C4B16CE932D00856E00 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A59816A9A3BD00E334AD /* CoreGraphics.framework */; };
+		A30B0C4E16D2229700856E00 /* CAAnimationBlockDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A30B0C4D16D2229600856E00 /* CAAnimationBlockDelegate.m */; };
+		A30B0C4F16D2229700856E00 /* CAAnimationBlockDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A30B0C4D16D2229600856E00 /* CAAnimationBlockDelegate.m */; };
 		A333A59516A9A3BD00E334AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A59416A9A3BD00E334AD /* UIKit.framework */; };
 		A333A59716A9A3BD00E334AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A59616A9A3BD00E334AD /* Foundation.framework */; };
 		A333A59916A9A3BD00E334AD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A59816A9A3BD00E334AD /* CoreGraphics.framework */; };
@@ -63,6 +65,8 @@
 		A30B0C4316CE8DCD00856E00 /* CALayer+AGQuadrilateral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+AGQuadrilateral.h"; sourceTree = "<group>"; };
 		A30B0C4416CE8DCD00856E00 /* CALayer+AGQuadrilateral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AGQuadrilateral.m"; sourceTree = "<group>"; };
 		A30B0C4716CE8F3900856E00 /* AGQuadrilateralTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGQuadrilateralTest.m; sourceTree = "<group>"; };
+		A30B0C4C16D2229600856E00 /* CAAnimationBlockDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAAnimationBlockDelegate.h; sourceTree = "<group>"; };
+		A30B0C4D16D2229600856E00 /* CAAnimationBlockDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAAnimationBlockDelegate.m; sourceTree = "<group>"; };
 		A333A59016A9A3BD00E334AD /* AGQuadrilateral.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AGQuadrilateral.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A333A59416A9A3BD00E334AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A333A59616A9A3BD00E334AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -225,6 +229,8 @@
 				A30B0C4416CE8DCD00856E00 /* CALayer+AGQuadrilateral.m */,
 				A333A5F716A9A59200E334AD /* CALayer+Extensions.h */,
 				A333A5F816A9A59200E334AD /* CALayer+Extensions.m */,
+				A30B0C4C16D2229600856E00 /* CAAnimationBlockDelegate.h */,
+				A30B0C4D16D2229600856E00 /* CAAnimationBlockDelegate.m */,
 				A333A5F916A9A59200E334AD /* easing.c */,
 				A333A5FA16A9A59200E334AD /* easing.h */,
 			);
@@ -355,6 +361,7 @@
 				A333A60F16A9A73B00E334AD /* AGQuadrilateralSample.m in Sources */,
 				A30B0C4116CE859500856E00 /* AGPoint.m in Sources */,
 				A30B0C4516CE8DCD00856E00 /* CALayer+AGQuadrilateral.m in Sources */,
+				A30B0C4E16D2229700856E00 /* CAAnimationBlockDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +379,7 @@
 				A30B0C4216CE859500856E00 /* AGPoint.m in Sources */,
 				A30B0C4616CE8DCD00856E00 /* CALayer+AGQuadrilateral.m in Sources */,
 				A30B0C4816CE8F3900856E00 /* AGQuadrilateralTest.m in Sources */,
+				A30B0C4F16D2229700856E00 /* CAAnimationBlockDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

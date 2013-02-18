@@ -10,12 +10,6 @@
 #import "AGMath.h"
 #import "AGGeometry.h"
 
-typedef union {
-    CGPoint cg;
-    AGPoint ag;
-} AGPointUnionCGPoint;
-
-
 const AGPoint AGPointZero = (AGPoint){0, 0};
 
 extern BOOL AGPointEqual(AGPoint p1, AGPoint p2)
@@ -28,11 +22,10 @@ extern BOOL AGPointEqualToCGPoint(AGPoint p1, CGPoint p2)
     return p1.x == p2.x && p1.x == p2.x;
 }
 
-extern AGPoint AGPointMakeWithCGPoint(CGPoint p)
+extern AGPoint AGPointMakeWithCGPoint(CGPoint cg)
 {
-    AGPointUnionCGPoint uPoint;
-    uPoint.cg = p;
-    return uPoint.ag;
+    AGPoint ag = {cg.x, cg.y};
+    return ag;
 }
 
 extern AGPoint AGPointMake(double x, double y)

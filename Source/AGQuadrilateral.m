@@ -183,9 +183,9 @@ extern CGRect AGQuadrilateralGetBoundingRect(AGQuadrilateral q)
     AGQuadrilateralGetYValues(q, yValues);
     
     CGFloat xmin = doubleLowest(xValues, 4);
-    CGFloat xmax = doubleLowest(xValues, 4);
+    CGFloat xmax = doubleHighest(xValues, 4);
     CGFloat ymin = doubleLowest(yValues, 4);
-    CGFloat ymax = doubleLowest(yValues, 4);
+    CGFloat ymax = doubleHighest(yValues, 4);
     
     CGRect rect;
     rect.origin.x = xmin;
@@ -243,57 +243,54 @@ extern NSString * NSStringFromAGQuadrilateral(AGQuadrilateral q)
             ];
 }
 
+// Taken from https://github.com/Ciechan/BCGenieEffect/blob/master/UIView%2BGenie.m
+// Which derives from http://stackoverflow.com/a/12820877/558816
 CATransform3D CATransform3DMakeRectToQuadrilateral(CGRect rect, AGQuadrilateral q)
 {
-    double X = rect.origin.x;
-    double Y = rect.origin.y;
     double W = rect.size.width;
     double H = rect.size.height;
     
-    double y21 = q.tr.y - q.tl.y;
-    double y32 = q.bl.y - q.tr.y;
-    double y43 = q.br.y - q.bl.y;
-    double y14 = q.tl.y - q.br.y;
-    double y31 = q.bl.y - q.tl.y;
-    double y42 = q.br.y - q.tr.y;
+    double x1a = q.tl.x;
+    double y1a = q.tl.y;
     
-    double a = -H*(q.tr.x*q.bl.x*y14 + q.tr.x*q.br.x*y31 - q.tl.x*q.br.x*y32 + q.tl.x*q.bl.x*y42);
-    double b = W*(q.tr.x*q.bl.x*y14 + q.bl.x*q.br.x*y21 + q.tl.x*q.br.x*y32 + q.tl.x*q.tr.x*y43);
-    double c = H*X*(q.tr.x*q.bl.x*y14 + q.tr.x*q.br.x*y31 - q.tl.x*q.br.x*y32 + q.tl.x*q.bl.x*y42) - H*W*q.tl.x*(q.br.x*y32 - q.bl.x*y42 + q.tr.x*y43) - W*Y*(q.tr.x*q.bl.x*y14 + q.bl.x*q.br.x*y21 + q.tl.x*q.br.x*y32 + q.tl.x*q.tr.x*y43);
+    double x2a = q.tr.x;
+    double y2a = q.tr.y;
     
-    double d = H*(-q.br.x*y21*q.bl.y + q.tr.x*q.tl.y*y43 - q.tl.x*q.tr.y*y43 - q.bl.x*q.tl.y*q.br.y + q.bl.x*q.tr.y*q.br.y);
-    double e = W*(q.br.x*q.tr.y*y31 - q.bl.x*q.tl.y*y42 - q.tr.x*y31*q.br.y + q.tl.x*q.bl.y*y42);
-    double f = -(W*(q.br.x*(Y*q.tr.y*y31 + H*q.tl.y*y32) - q.bl.x*(H + Y)*q.tl.y*y42 + H*q.tr.x*q.tl.y*y43 + q.tr.x*Y*(q.tl.y - q.bl.y)*q.br.y + q.tl.x*Y*q.bl.y*(-q.tr.y + q.br.y)) - H*X*(q.br.x*y21*q.bl.y - q.tr.x*q.tl.y*y43 + q.bl.x*(q.tl.y - q.tr.y)*q.br.y + q.tl.x*q.tr.y*(-q.bl.y + q.br.y)));
+    double x3a = q.bl.x;
+    double y3a = q.bl.y;
     
-    double g = H*(q.bl.x*y21 - q.br.x*y21 + (-q.tl.x + q.tr.x)*y43);
-    double h = W*(-q.tr.x*y31 + q.br.x*y31 + (q.tl.x - q.bl.x)*y42);
-    double i = W*Y*(q.tr.x*y31 - q.br.x*y31 - q.tl.x*y42 + q.bl.x*y42) + H*(X*(-(q.bl.x*y21) + q.br.x*y21 + q.tl.x*y43 - q.tr.x*y43) + W*(-(q.bl.x*q.tr.y) + q.br.x*q.tr.y + q.tr.x*q.bl.y - q.br.x*q.bl.y - q.tr.x*q.br.y + q.bl.x*q.br.y));
+    double x4a = q.br.x;
+    double y4a = q.br.y;
     
-    if(fabs(i) < 0.00001)
+    double y21 = y2a - y1a,
+    y32 = y3a - y2a,
+    y43 = y4a - y3a,
+    y14 = y1a - y4a,
+    y31 = y3a - y1a,
+    y42 = y4a - y2a;
+    
+    double a = -H*(x2a*x3a*y14 + x2a*x4a*y31 - x1a*x4a*y32 + x1a*x3a*y42);
+    double b = W*(x2a*x3a*y14 + x3a*x4a*y21 + x1a*x4a*y32 + x1a*x2a*y43);
+    double c = - H*W*x1a*(x4a*y32 - x3a*y42 + x2a*y43);
+    
+    double d = H*(-x4a*y21*y3a + x2a*y1a*y43 - x1a*y2a*y43 - x3a*y1a*y4a + x3a*y2a*y4a);
+    double e = W*(x4a*y2a*y31 - x3a*y1a*y42 - x2a*y31*y4a + x1a*y3a*y42);
+    double f = -(W*(x4a*(H*y1a*y32) - x3a*(H)*y1a*y42 + H*x2a*y1a*y43));
+    
+    double g = H*(x3a*y21 - x4a*y21 + (-x1a + x2a)*y43);
+    double h = W*(-x2a*y31 + x4a*y31 + (x1a - x3a)*y42);
+    double i = H*(W*(-(x3a*y2a) + x4a*y2a + x2a*y3a - x4a*y3a - x2a*y4a + x3a*y4a));
+    
+    const double kEpsilon = 0.0001;
+    
+    if(fabs(i) < kEpsilon)
     {
-        i = 0.00001;
+        i = kEpsilon* (i > 0 ? 1.0 : -1.0);
     }
     
-    CATransform3D t = CATransform3DIdentity;
+    CATransform3D transform = {a/i, d/i, 0, g/i, b/i, e/i, 0, h/i, 0, 0, 1, 0, c/i, f/i, 0, 1.0};
     
-    t.m11 = a / i;
-    t.m12 = d / i;
-    t.m13 = 0;
-    t.m14 = g / i;
-    t.m21 = b / i;
-    t.m22 = e / i;
-    t.m23 = 0;
-    t.m24 = h / i;
-    t.m31 = 0;
-    t.m32 = 0;
-    t.m33 = 1;
-    t.m34 = 0;
-    t.m41 = c / i;
-    t.m42 = f / i;
-    t.m43 = 0;
-    t.m44 = i / i;
-    
-    return t;
+    return transform;
 }
 
 

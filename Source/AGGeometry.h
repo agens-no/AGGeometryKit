@@ -63,6 +63,7 @@ CGSize CGSizeInterpolate(CGSize size1, CGSize size2, double progress);
 CGSize CGSizeInterpolateWithFunction(CGSize size1, CGSize size2, double progress, AHFloat (*function)(AHFloat));
 CGRect CGRectInterpolate(CGRect rect1, CGRect rect2, double progress);
 CGRect CGRectInterpolateWithFunction(CGRect rect1, CGRect rect2, double progress, float (*function)(float));
+inline BOOL CGPointContainsNaNValues(CGPoint p);
 
 BOOL getLineIntersection(double p0_x,
                          double p0_y,
