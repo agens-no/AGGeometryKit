@@ -30,20 +30,14 @@ const AGQuadrilateral AGQuadrilateralZero = { (AGPoint){0, 0}, (AGPoint){0, 0}, 
 
 extern BOOL AGQuadrilateralEqual(AGQuadrilateral q1, AGQuadrilateral q2)
 {
-    if(AGPointEqual(q1.tl, q2.tl)
-       &&
-       AGPointEqual(q1.tr, q2.tr)
-       &&
-       AGPointEqual(q1.bl, q2.bl)
-       &&
-       AGPointEqual(q1.br, q2.br))
+    for(int i = 0; i < 4; i++)
     {
-        return YES;
+        if(!AGPointEqual(q1.v[i], q2.v[i]))
+        {
+            return NO;
+        }
     }
-    else
-    {
-        return NO;
-    }
+    return YES;
 }
 
 BOOL AGQuadrilateralIsValid(AGQuadrilateral q)
@@ -81,21 +75,21 @@ extern AGQuadrilateral AGQuadrilateralInsetRight(AGQuadrilateral q, double inset
 
 extern AGQuadrilateral AGQuadrilateralInsetTop(AGQuadrilateral q, double inset)
 {
-    q.tl.x += inset;
+    q.tl.y += inset;
     q.tr.y += inset;
     return q;
 }
 
 extern AGQuadrilateral AGQuadrilateralInsetBottom(AGQuadrilateral q, double inset)
 {
-    q.tl.x -= inset;
+    q.tl.y -= inset;
     q.tr.y -= inset;
     return q;
 }
 
 extern AGQuadrilateral AGQuadrilateralMirror(AGQuadrilateral q, BOOL x, BOOL y)
 {
-    AGQuadrilateral mirroredQ = q;
+    AGQuadrilateral mirroredQ;
     if(x)
     {
         mirroredQ.tl.x = q.tr.x;
