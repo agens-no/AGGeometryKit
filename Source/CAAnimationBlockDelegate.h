@@ -13,6 +13,6 @@
 
 @property (nonatomic, copy) void (^onAnimationDidStart)();
 @property (nonatomic, copy) void (^onAnimationDidStop)(BOOL finished);
-@property (nonatomic, assign) BOOL autoRemoveBlocks; // defaults to YES
+@property (nonatomic, assign) BOOL autoRemoveBlocks; // defaults to YES - will clear blocks after calling onAnimationDidStop
 
 @end

@@ -6,9 +6,7 @@
 //  Copyright 2013 Håvard Fossli. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-// Using AGPoint for better precision when calculating transform for quadrilaterals
+// Using AGPoint for better precision with double when calculating transform for quadrilaterals
 
 typedef union AGPoint {
     struct { double x, y; };
