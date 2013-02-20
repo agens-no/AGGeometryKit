@@ -18,7 +18,14 @@ typedef union AGPoint {
 extern const AGPoint AGPointZero;
 inline BOOL AGPointEqual(AGPoint p1, AGPoint p2);
 inline BOOL AGPointEqualToCGPoint(AGPoint p1, CGPoint p2);
-inline AGPoint AGPointMakeWithCGPoint(CGPoint p);
+inline AGPoint AGPointMakeWithCGPoint(CGPoint cg);
+inline AGPoint AGPointMakeWithCGPointZeroFill(CGPoint cg);
 inline AGPoint AGPointMake(double x, double y);
 inline AGPoint AGPointInterpolate(AGPoint p1, AGPoint p2, double progress);
+inline AGPoint AGPointSubtract(AGPoint p1, AGPoint p2);
+inline AGPoint AGPointAdd(AGPoint p1, AGPoint p2);
+inline AGPoint AGPointMultiply(AGPoint p1, double factor);
+inline double AGPointDotProduct(AGPoint p1, AGPoint p2);
+inline double AGPointCrossProduct(AGPoint p1, AGPoint p2);
+inline CGPoint AGPointAsCGPoint(AGPoint p);
 NSString * NSStringFromAGPoint(AGPoint p);

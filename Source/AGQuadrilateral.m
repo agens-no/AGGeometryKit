@@ -9,7 +9,7 @@
 #import "AGQuadrilateral.h"
 #import "AGMath.h"
 #import "AGGeometry.h"
-
+#import "AGLine.h"
 
 /*
  
@@ -40,10 +40,15 @@ extern BOOL AGQuadrilateralEqual(AGQuadrilateral q1, AGQuadrilateral q2)
     return YES;
 }
 
-BOOL AGQuadrilateralIsValid(AGQuadrilateral q)
+extern BOOL AGQuadrilateralIsConvex(AGQuadrilateral q)
 {
-    BOOL isConvex = getLineIntersection(q.tl.x, q.tl.y, q.tr.x, q.tr.y, q.br.x, q.br.y, q.bl.x, q.bl.y, NULL, NULL);
+    BOOL isConvex = AGLineIntersection(AGLineMake(q.bl, q.tr), AGLineMake(q.br, q.tl), NULL);
     return isConvex;
+}
+
+extern BOOL AGQuadrilateralIsValid(AGQuadrilateral q)
+{
+    return AGQuadrilateralIsConvex(q);
 }
 
 extern AGQuadrilateral AGQuadrilateralMove(AGQuadrilateral q, double x, double y)
@@ -107,6 +112,11 @@ extern AGQuadrilateral AGQuadrilateralMirror(AGQuadrilateral q, BOOL x, BOOL y)
     return mirroredQ;
 }
 
+extern AGQuadrilateral AGQuadrilateralMakeWithPoints(AGPoint tl, AGPoint tr, AGPoint br, AGPoint bl)
+{
+    return (AGQuadrilateral){.tl = tl, .tr = tr, .br = br, .bl = bl};
+}
+
 extern AGQuadrilateral AGQuadrilateralMakeWithCGPoints(CGPoint tl, CGPoint tr, CGPoint br, CGPoint bl)
 {
     AGQuadrilateral q;
@@ -145,28 +155,28 @@ extern double AGQuadrilateralGetSmallestX(AGQuadrilateral q)
 {
     double values[4];
     AGQuadrilateralGetXValues(q, values);
-    return minInArray(values, 4);
+    return minInArray(values, 4, NULL);
 }
 
 extern double AGQuadrilateralGetBiggestX(AGQuadrilateral q)
 {
     double values[4];
     AGQuadrilateralGetXValues(q, values);
-    return maxInArray(values, 4);
+    return maxInArray(values, 4, NULL);
 }
 
 extern double AGQuadrilateralGetSmallestY(AGQuadrilateral q)
 {
     double values[4];
     AGQuadrilateralGetYValues(q, values);
-    return minInArray(values, 4);
+    return minInArray(values, 4, NULL);
 }
 
 extern double AGQuadrilateralGetBiggestY(AGQuadrilateral q)
 {
     double values[4];
     AGQuadrilateralGetYValues(q, values);
-    return maxInArray(values, 4);
+    return maxInArray(values, 4, NULL);
 }
 
 extern CGRect AGQuadrilateralGetBoundingRect(AGQuadrilateral q)
@@ -176,10 +186,10 @@ extern CGRect AGQuadrilateralGetBoundingRect(AGQuadrilateral q)
     AGQuadrilateralGetXValues(q, xValues);
     AGQuadrilateralGetYValues(q, yValues);
     
-    CGFloat xmin = minInArray(xValues, 4);
-    CGFloat xmax = maxInArray(xValues, 4);
-    CGFloat ymin = minInArray(yValues, 4);
-    CGFloat ymax = maxInArray(yValues, 4);
+    CGFloat xmin = minInArray(xValues, 4, NULL);
+    CGFloat xmax = maxInArray(xValues, 4, NULL);
+    CGFloat ymin = minInArray(yValues, 4, NULL);
+    CGFloat ymax = maxInArray(yValues, 4, NULL);
     
     CGRect rect;
     rect.origin.x = xmin;
@@ -188,6 +198,13 @@ extern CGRect AGQuadrilateralGetBoundingRect(AGQuadrilateral q)
     rect.size.height = ymax - ymin;
     
     return rect;
+}
+
+extern AGPoint AGQuadrilateralGetCenter(AGQuadrilateral q)
+{
+    AGPoint center = AGPointZero;
+    AGLineIntersection(AGLineMake(q.bl, q.tr), AGLineMake(q.br, q.tl), &center);
+    return center;
 }
 
 extern CGSize AGQuadrilateralGetSize(AGQuadrilateral q)
@@ -216,12 +233,12 @@ void AGQuadrilateralGetYValues(AGQuadrilateral q, double *out_values)
 
 extern AGQuadrilateral AGQuadrilateralInterpolation(AGQuadrilateral q1, AGQuadrilateral q2, double progress)
 {
-    AGQuadrilateral i;
-    i.tl = AGPointInterpolate(q1.tl, q2.tl, progress);
-    i.tr = AGPointInterpolate(q1.tr, q2.tr, progress);
-    i.bl = AGPointInterpolate(q1.bl, q2.bl, progress);
-    i.br = AGPointInterpolate(q1.br, q2.br, progress);
-    return i;
+    AGQuadrilateral q;
+    for(int i = 0; i < 4; i++)
+    {
+        q.v[i] = AGPointInterpolate(q1.v[i], q2.v[i], progress);
+    }
+    return q;
 }
 
 extern NSString * NSStringFromAGQuadrilateral(AGQuadrilateral q)

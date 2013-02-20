@@ -33,7 +33,6 @@
                                                         CGPointMake(740, -20),
                                                         CGPointMake(800, 500),
                                                         CGPointMake(-50, 300));
-    q = AGQuadrilateralMakeWithCGSize(CGSizeMake(500, 400));
     return q;
 }
 
@@ -68,6 +67,15 @@
     
     AGQuadrilateral concaveQuad = [self createSampleConcaveQuad];
     STAssertFalse(AGQuadrilateralIsValid(concaveQuad), nil);
+}
+
+- (void)testAGQuadrilateral
+{
+    {
+        AGQuadrilateral q = AGQuadrilateralMakeWithCGSize(CGSizeMake(500, 500));
+        AGPoint center = AGQuadrilateralGetCenter(q);
+        STAssertEquals(AGPointAsCGPoint(center), CGPointMake(250, 250), nil);
+    }
 }
 
 @end

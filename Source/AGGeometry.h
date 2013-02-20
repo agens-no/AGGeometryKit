@@ -10,65 +10,59 @@
 
 // http://processingjs.nihongoresources.com/bezierinfo/
 
-typedef enum VGAxis {
-    VGAxisX,
-    VGAxisY,
-    VGAxizZ,
-} VGAxis;
+typedef enum AGAxis {
+    AGAxisX,
+    AGAxisY,
+    AGAxizZ,
+} AGAxis;
 
-typedef enum VGSide {
-    VGSideTop = 1 << 0,
-    VGSideBottom = 1 << 1,
-    VGSideLeft = 1 << 2,
-    VGSideRight = 1 << 3,
-} VGSide;
+typedef enum AGSide {
+    AGSideTop = 1 << 0,
+    AGSideBottom = 1 << 1,
+    AGSideLeft = 1 << 2,
+    AGSideRight = 1 << 3,
+} AGSide;
 
 typedef enum {
-    AGCornerTopLeft = VGSideTop | VGSideLeft,
-    AGCornerTopRight = VGSideTop | VGSideRight,
-    AGCornerBottomLeft = VGSideBottom | VGSideLeft,
-    AGCornerBottomRight = VGSideBottom | VGSideRight,
+    AGCornerTopLeft = AGSideTop | AGSideLeft,
+    AGCornerTopRight = AGSideTop | AGSideRight,
+    AGCornerBottomLeft = AGSideBottom | AGSideLeft,
+    AGCornerBottomRight = AGSideBottom | AGSideRight,
 } AGCorner;
 
-BOOL AGCornerIsOnSide(AGCorner corner, VGSide side);
+BOOL AGCornerIsOnSide(AGCorner corner, AGSide side);
 CGPoint AGCornerConvertToAnchorPoint(AGCorner corner);
 CGPoint AGCornerConvertToPointForRect(AGCorner corner, CGRect rect);
-
 CGPoint CGPointGetPointForAnchorPointInRect(CGPoint anchor, CGRect rect);
 CGPoint CGPointGetAnchorPointForPointInRect(CGPoint point, CGRect rect);
 CGPoint CGPointForCenterInRect(CGRect rect);
-
-inline double CGPointDistanceBetweenPoints(CGPoint p1, CGPoint p2);
+inline CGFloat CGPointDistanceBetweenPoints(CGPoint p1, CGPoint p2);
 inline CGPoint CGPointNormalizedDistance(CGPoint p1, CGPoint p2);
-
 inline double CGSizeGetAspectRatio(CGSize size);
 inline BOOL CGSizeAspectIsWiderThanCGSize(CGSize size1, CGSize size2);
 CGSize CGSizeAdjustOuterSizeToFitInnerSize(CGSize outer, CGSize inner);
-
 inline BOOL CGRectGotAnyNanValues(CGRect rect);
 inline BOOL CGSizeGotAnyNanValues(CGSize size);
 inline BOOL CGPointGotAnyNanValues(CGPoint origin);
-
 inline CGPoint CGPointAddSize(CGPoint p, CGSize s);
 inline CGRect CGRectMakeWithSize(CGSize size);
+inline CGPoint CGRectGetMidPoint(CGRect rect);
 inline CGSize CGSizeGetHalf(CGSize size);
-inline CGSize CGSizeFlipped(CGSize size);
-inline CGRect CGRectNewWidth(CGRect rect, CGFloat newWidth);
-inline CGRect CGRectNewHeight(CGRect rect, CGFloat newHeight);
-
+inline CGSize CGSizeFlipAxis(CGSize size);
+inline CGRect CGRectWithSize(CGRect rect, CGSize newSize);
+inline CGRect CGRectWithWidth(CGRect rect, CGFloat newWidth);
+inline CGRect CGRectWithHeight(CGRect rect, CGFloat newHeight);
+inline CGRect CGRectWithOrigin(CGRect rect, CGPoint origin);
+inline CGRect CGRectWithOriginMinX(CGRect rect, CGFloat value);
+inline CGRect CGRectWithOriginMinY(CGRect rect, CGFloat value);
+inline CGRect CGRectWithOriginMaxY(CGRect rect, CGFloat value);
+inline CGRect CGRectWithOriginMaxX(CGRect rect, CGFloat value);
+inline CGRect CGRectWithOriginMidX(CGRect rect, CGFloat value);
+inline CGRect CGRectWithOriginMidY(CGRect rect, CGFloat value);
+inline CGRect CGRectApply(CGRect rect, CGRect (^block)(CGRect rect));
+inline CGSize CGSizeApply(CGSize size, CGSize (^block)(CGSize size));
+inline CGPoint CGPointApply(CGPoint point, CGPoint (^block)(CGPoint point));
 CGRect CGRectSmallestWithCGPoints(CGPoint pointsArray[], int numberOfPoints);
-
 CGSize CGSizeInterpolate(CGSize size1, CGSize size2, double progress);
 CGPoint CGPointInterpolate(CGPoint point1, CGPoint point2, double progress);
 CGRect CGRectInterpolate(CGRect rect1, CGRect rect2, double progress);
-
-BOOL getLineIntersection(double p0_x,
-                         double p0_y,
-                         double p1_x,
-                         double p1_y,
-                         double p2_x,
-                         double p2_y,
-                         double p3_x,
-                         double p3_y,
-                         double *out_i_x,
-                         double *out_i_y);

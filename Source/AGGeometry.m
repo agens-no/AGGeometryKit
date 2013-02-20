@@ -12,7 +12,7 @@
 #import "GLKit/GLKVector3.h"
 #import "AGMath.h"
 
-BOOL AGCornerIsOnSide(AGCorner corner, VGSide side)
+BOOL AGCornerIsOnSide(AGCorner corner, AGSide side)
 {
     return (corner & side) == side;
 }
@@ -64,7 +64,7 @@ CGPoint CGPointForCenterInRect(CGRect rect)
     return CGPointGetPointForAnchorPointInRect(CGPointMake(0.5, 0.5), rect);
 }
 
-extern double CGPointDistanceBetweenPoints(CGPoint p1, CGPoint p2)
+extern CGFloat CGPointDistanceBetweenPoints(CGPoint p1, CGPoint p2)
 {
     CGPoint p = CGPointNormalizedDistance(p1, p2);
     return sqrtf(powf(p.x, 2.0f) + powf(p.y, 2.0f));
@@ -126,26 +126,94 @@ extern CGRect CGRectMakeWithSize(CGSize size)
     return (CGRect){CGPointZero, size};
 }
 
+extern CGPoint CGRectGetMidPoint(CGRect rect)
+{
+    return CGPointMake(CGRectGetMidX(rect), CGRectGetMidY(rect));
+}
+
 extern CGSize CGSizeGetHalf(CGSize size)
 {
     return CGSizeMake(size.width / 2.0, size.height / 2.0);
 }
 
-extern CGSize CGSizeFlipped(CGSize size)
+extern CGSize CGSizeFlipAxis(CGSize size)
 {
     return CGSizeMake(size.height, size.width);
 }
 
-extern CGRect CGRectNewWidth(CGRect rect, CGFloat newWidth)
+extern CGRect CGRectWithSize(CGRect rect, CGSize newSize)
+{
+    rect.size = newSize;
+    return rect;
+}
+
+extern CGRect CGRectWithWidth(CGRect rect, CGFloat newWidth)
 {
     rect.size.width = newWidth;
     return rect;
 }
 
-extern CGRect CGRectNewHeight(CGRect rect, CGFloat newHeight)
+extern CGRect CGRectWithHeight(CGRect rect, CGFloat newHeight)
 {
     rect.size.height = newHeight;
     return rect;
+}
+
+extern CGRect CGRectWithOrigin(CGRect rect, CGPoint origin)
+{
+    rect.origin = origin;
+    return rect;
+}
+
+extern CGRect CGRectWithOriginMinX(CGRect rect, CGFloat value)
+{
+    rect.origin.x = value;
+    return rect;
+}
+
+extern CGRect CGRectWithOriginMinY(CGRect rect, CGFloat value)
+{
+    rect.origin.y = value;
+    return rect;
+}
+
+extern CGRect CGRectWithOriginMaxY(CGRect rect, CGFloat value)
+{
+    rect.origin.y = value - rect.size.height;
+    return rect;
+}
+
+extern CGRect CGRectWithOriginMaxX(CGRect rect, CGFloat value)
+{
+    rect.origin.x = value - rect.size.width;
+    return rect;
+}
+
+extern CGRect CGRectWithOriginMidX(CGRect rect, CGFloat value)
+{
+    rect.origin.x = value - (rect.size.width / 2.0);
+    return rect;
+}
+
+extern CGRect CGRectWithOriginMidY(CGRect rect, CGFloat value)
+{
+    rect.origin.y = value - (rect.size.height / 2.0);
+    return rect;
+}
+
+extern CGRect CGRectApply(CGRect rect, CGRect (^block)(CGRect rect))
+{
+    return block(rect);
+}
+
+extern CGSize CGSizeApply(CGSize size, CGSize (^block)(CGSize size))
+{
+    return block(size);
+}
+
+extern CGPoint CGPointApply(CGPoint point, CGPoint (^block)(CGPoint point))
+{
+    return block(point);
 }
 
 CGRect CGRectSmallestWithCGPoints(CGPoint pointsArray[], int numberOfPoints)
@@ -172,6 +240,28 @@ CGRect CGRectSmallestWithCGPoints(CGPoint pointsArray[], int numberOfPoints)
     return rect;
 }
 
+CGSize CGSizeDistanceBetweenRects(CGRect rect1, CGRect rect2)
+{
+    if (CGRectIntersectsRect(rect1, rect2))
+    {
+        return CGSizeMake(0, 0);
+    }
+    
+    CGRect mostLeft = rect1.origin.x < rect2.origin.x ? rect1 : rect2;
+    CGRect mostRight = rect2.origin.x < rect1.origin.x ? rect1 : rect2;
+    
+    CGFloat xDifference = mostLeft.origin.x == mostRight.origin.x ? 0 : mostRight.origin.x - (mostLeft.origin.x + mostLeft.size.width);
+    xDifference = MAX(0, xDifference);
+    
+    CGRect upper = rect1.origin.y < rect2.origin.y ? rect1 : rect2;
+    CGRect lower = rect2.origin.y < rect1.origin.y ? rect1 : rect2;
+    
+    CGFloat yDifference = upper.origin.y == lower.origin.y ? 0 : lower.origin.y - (upper.origin.y + upper.size.height);
+    yDifference = MAX(0, yDifference);
+    
+    return CGSizeMake(xDifference, yDifference);
+}
+
 CGSize CGSizeInterpolate(CGSize size1, CGSize size2, double progress)
 {
     CGSize result;
@@ -194,51 +284,4 @@ CGRect CGRectInterpolate(CGRect rect1, CGRect rect2, double progress)
     result.origin = CGPointInterpolate(rect1.origin, rect2.origin, progress);
     result.size = CGSizeInterpolate(rect1.size, rect2.size, progress);
     return result;
-}
-
-BOOL getLineIntersection(double p0_x,
-                         double p0_y,
-                         double p1_x,
-                         double p1_y,
-                         double p2_x,
-                         double p2_y,
-                         double p3_x,
-                         double p3_y,
-                         double *out_i_x,
-                         double *out_i_y)
-{    
-    // http://stackoverflow.com/a/13981450/202451
-    // http://stackoverflow.com/a/14795484/202451
-    
-    double s02_x, s02_y, s10_x, s10_y, s32_x, s32_y, s_numer, t_numer, denom, t;
-    s10_x = p1_x - p0_x;
-    s10_y = p1_y - p0_y;
-    s32_x = p3_x - p2_x;
-    s32_y = p3_y - p2_y;
-    
-    denom = s10_x * s32_y - s32_x * s10_y;
-    if (denom == 0)
-        return NO; // Parallel
-    
-    s02_x = p0_x - p2_x;
-    s02_y = p0_y - p2_y;
-    s_numer = s10_x * s02_y - s10_y * s02_x;
-    if (s_numer < 0)
-        return NO; // No collision
-    
-    t_numer = s32_x * s02_y - s32_y * s02_x;
-    if (t_numer < 0)
-        return NO; // No collision
-    
-    if (s_numer > denom || t_numer > denom)
-        return NO; // No collision
-    
-    // Collision detected
-    t = t_numer / denom;
-    if (out_i_x != NULL)
-        *out_i_x = p0_x + (t * s10_x);
-    if (out_i_y != NULL)
-        *out_i_y = p0_y + (t * s10_y);
-    
-    return YES;
 }

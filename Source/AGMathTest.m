@@ -33,23 +33,23 @@
 {
     {
         double value = valueInterpolate(100, 200, 0.7);
-        assertThatDouble(value, is(equalToDouble(170.0f)));
+        STAssertEquals(value, 170.0, nil);
     }
     {
         double value = valueInterpolate(100, 200, 0.0);
-        assertThatDouble(value, is(equalToDouble(100.0f)));
+        STAssertEquals(value, 100.0, nil);
     }
     {
         double value = valueInterpolate(100, 200, 1.0);
-        assertThatDouble(value, is(equalToDouble(200.0f)));
+        STAssertEquals(value, 200.0, nil);
     }
     {
         double value = valueInterpolate(100, 200, -0.5);
-        assertThatDouble(value, is(equalToDouble(50.0f)));
+        STAssertEquals(value, 50.0, nil);
     }
     {
         double value = valueInterpolate(100, 200, 1.5);
-        assertThatDouble(value, is(equalToDouble(250.0f)));
+        STAssertEquals(value, 250.0, nil);
     }
 }
 
@@ -57,24 +57,92 @@
 {
     {
         double progress = progressForValue(100, 200, 170);
-        assertThatDouble(progress, is(equalToDouble(0.7f)));
+        STAssertEquals(progress, 0.7, nil);
     }
     {
         double progress = progressForValue(100, 200, 100.0f);
-        assertThatDouble(progress, is(equalToDouble(0.0f)));
+        STAssertEquals(progress, 0.0, nil);
     }
     {
         double progress = progressForValue(100, 200, 200);
-        assertThatDouble(progress, is(equalToDouble(1.0f)));
+        STAssertEquals(progress, 1.0, nil);
     }
     {
         double progress = progressForValue(100, 200, 50);
-        assertThatDouble(progress, is(equalToDouble(-0.5f)));
+        STAssertEquals(progress, -0.5, nil);
     }
     {
         double progress = progressForValue(100, 200, 250);
-        assertThatDouble(progress, is(equalToDouble(1.5f)));
+        STAssertEquals(progress, 1.5, nil);
     }
+}
+
+- (void)testBIT
+{
+    int a = 0;
+    STAssertFalse(BIT_TEST(a, 1 << 5), nil);
+    
+    BIT_SET(a, 1 << 5);
+    STAssertTrue(BIT_TEST(a, 1 << 5), nil);
+    
+    BIT_CLEAR(a, 1 << 5);
+    STAssertFalse(BIT_TEST(a, 1 << 5), nil);
+}
+
+- (void)testCLAMP
+{
+    STAssertEquals(CLAMP(0.5, 1.0, 50.0), 1.0, nil);
+    STAssertEquals(CLAMP(0.5, 0.0, 50.0), 0.5, nil);
+    STAssertEquals(CLAMP(-1.5, -2.0, -1.0), -1.5, nil);
+    STAssertEquals(CLAMP(5, -2.0, -1.0), -1.0, nil);
+    STAssertEquals(CLAMP(5, 2, 7), 5, nil);
+    STAssertEquals(CLAMP(5, -2, 3), 3, nil);
+}
+
+- (void)testIS_WITHIN
+{
+    STAssertTrue(IS_WITHIN(0, -5, 2), nil);
+    STAssertTrue(IS_WITHIN(10.0, -5, 20.0), nil);
+    STAssertFalse(IS_WITHIN(2, 5, 7), nil);
+    STAssertFalse(IS_WITHIN(12, 5, 7), nil);
+}
+
+- (void)testMinInArray_maxInArray
+{
+    double values[5];
+
+    for(int i = 0; i < 5; i++)
+    {
+        values[i] = i + 10;
+    }
+    
+    unsigned int index;
+    double value;
+    
+    value = minInArray(values, 5, &index);
+    STAssertEquals(value, 10.0, nil);
+    STAssertEquals(index, 0u, nil);
+    
+    value = maxInArray(values, 5, &index);
+    STAssertEquals(value, 14.0, nil);
+    STAssertEquals(index, 4u, nil);
+    
+    values[3] = 100;
+    values[2] = -15;
+    
+    value = minInArray(values, 5, &index);
+    STAssertEquals(value, -15.0, nil);
+    STAssertEquals(index, 2u, nil);
+    
+    value = maxInArray(values, 5, &index);
+    STAssertEquals(value, 100.0, nil);
+    STAssertEquals(index, 3u, nil);
+}
+
+- (void)testFloatToDoubleZeroFill
+{
+    STAssertEquals(floatToDoubleZeroFill((double)0.5f), 0.5, nil);
+    STAssertEquals(floatToDoubleZeroFill(1.0f / 3.0f), 0.333333, nil);
 }
 
 @end
