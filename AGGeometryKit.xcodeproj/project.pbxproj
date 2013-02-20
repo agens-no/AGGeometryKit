@@ -65,6 +65,8 @@
 		A333A60616A9A59200E334AD /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = A333A5F916A9A59200E334AD /* easing.c */; };
 		A333A60B16A9A6F000E334AD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A60A16A9A6F000E334AD /* QuartzCore.framework */; };
 		A384023916D56829000C698B /* AGCornerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A384023816D56829000C698B /* AGCornerTest.m */; };
+		A384023C16D568C2000C698B /* UIView+FrameExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = A384023B16D568C2000C698B /* UIView+FrameExtra.m */; };
+		A384023D16D568C2000C698B /* UIView+FrameExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = A384023B16D568C2000C698B /* UIView+FrameExtra.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +131,8 @@
 		A333A60716A9A5A300E334AD /* AGMathTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMathTest.m; sourceTree = "<group>"; };
 		A333A60A16A9A6F000E334AD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A384023816D56829000C698B /* AGCornerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCornerTest.m; sourceTree = "<group>"; };
+		A384023A16D568C2000C698B /* UIView+FrameExtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameExtra.h"; sourceTree = "<group>"; };
+		A384023B16D568C2000C698B /* UIView+FrameExtra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameExtra.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +253,8 @@
 				A333A5F816A9A59200E334AD /* CALayer+Extensions.m */,
 				A30B0C4C16D2229600856E00 /* CAAnimationBlockDelegate.h */,
 				A30B0C4D16D2229600856E00 /* CAAnimationBlockDelegate.m */,
+				A384023A16D568C2000C698B /* UIView+FrameExtra.h */,
+				A384023B16D568C2000C698B /* UIView+FrameExtra.m */,
 				A333A5FA16A9A59200E334AD /* easing.h */,
 				A333A5F916A9A59200E334AD /* easing.c */,
 			);
@@ -390,6 +396,7 @@
 				A3270F3B16D5675800A92C03 /* AGAppDelegate.m in Sources */,
 				A3270F3F16D5675800A92C03 /* AGQuadSample.m in Sources */,
 				A3270F4B16D5675800A92C03 /* main.m in Sources */,
+				A384023C16D568C2000C698B /* UIView+FrameExtra.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +423,7 @@
 				A3270F4C16D5675800A92C03 /* main.m in Sources */,
 				A3270F5216D5675800A92C03 /* AGQuadTests.m in Sources */,
 				A384023916D56829000C698B /* AGCornerTest.m in Sources */,
+				A384023D16D568C2000C698B /* UIView+FrameExtra.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
