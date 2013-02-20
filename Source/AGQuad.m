@@ -6,7 +6,7 @@
 //
 //
 
-#import "AGQuadrilateral.h"
+#import "AGQuad.h"
 #import "AGMath.h"
 #import "AGGeometry.h"
 #import "AGLine.h"
@@ -20,15 +20,13 @@
  http://stackoverflow.com/questions/9088882/return-catransform3d-to-map-quadrilateral-to-quadrilateral
  
  
- 
- 
  */
 
 
 
-const AGQuadrilateral AGQuadrilateralZero = { (AGPoint){0, 0}, (AGPoint){0, 0}, (AGPoint){0, 0}, (AGPoint){0, 0} };
+const AGQuad AGQuadZero = { (AGPoint){0, 0}, (AGPoint){0, 0}, (AGPoint){0, 0}, (AGPoint){0, 0} };
 
-extern BOOL AGQuadrilateralEqual(AGQuadrilateral q1, AGQuadrilateral q2)
+extern BOOL AGQuadEqual(AGQuad q1, AGQuad q2)
 {
     for(int i = 0; i < 4; i++)
     {
@@ -40,18 +38,18 @@ extern BOOL AGQuadrilateralEqual(AGQuadrilateral q1, AGQuadrilateral q2)
     return YES;
 }
 
-extern BOOL AGQuadrilateralIsConvex(AGQuadrilateral q)
+extern BOOL AGQuadIsConvex(AGQuad q)
 {
     BOOL isConvex = AGLineIntersection(AGLineMake(q.bl, q.tr), AGLineMake(q.br, q.tl), NULL);
     return isConvex;
 }
 
-extern BOOL AGQuadrilateralIsValid(AGQuadrilateral q)
+extern BOOL AGQuadIsValid(AGQuad q)
 {
-    return AGQuadrilateralIsConvex(q);
+    return AGQuadIsConvex(q);
 }
 
-extern AGQuadrilateral AGQuadrilateralMove(AGQuadrilateral q, double x, double y)
+extern AGQuad AGQuadMove(AGQuad q, double x, double y)
 {
     q.tl.x += x;
     q.tr.x += x;
@@ -64,37 +62,37 @@ extern AGQuadrilateral AGQuadrilateralMove(AGQuadrilateral q, double x, double y
     return q;
 }
 
-extern AGQuadrilateral AGQuadrilateralInsetLeft(AGQuadrilateral q, double inset)
+extern AGQuad AGQuadInsetLeft(AGQuad q, double inset)
 {
     q.tl.x += inset;
     q.bl.x += inset;
     return q;
 }
 
-extern AGQuadrilateral AGQuadrilateralInsetRight(AGQuadrilateral q, double inset)
+extern AGQuad AGQuadInsetRight(AGQuad q, double inset)
 {
     q.tr.x -= inset;
     q.br.x -= inset;
     return q;
 }
 
-extern AGQuadrilateral AGQuadrilateralInsetTop(AGQuadrilateral q, double inset)
+extern AGQuad AGQuadInsetTop(AGQuad q, double inset)
 {
     q.tl.y += inset;
     q.tr.y += inset;
     return q;
 }
 
-extern AGQuadrilateral AGQuadrilateralInsetBottom(AGQuadrilateral q, double inset)
+extern AGQuad AGQuadInsetBottom(AGQuad q, double inset)
 {
     q.tl.y -= inset;
     q.tr.y -= inset;
     return q;
 }
 
-extern AGQuadrilateral AGQuadrilateralMirror(AGQuadrilateral q, BOOL x, BOOL y)
+extern AGQuad AGQuadMirror(AGQuad q, BOOL x, BOOL y)
 {
-    AGQuadrilateral mirroredQ;
+    AGQuad mirroredQ;
     if(x)
     {
         mirroredQ.tl.x = q.tr.x;
@@ -112,14 +110,14 @@ extern AGQuadrilateral AGQuadrilateralMirror(AGQuadrilateral q, BOOL x, BOOL y)
     return mirroredQ;
 }
 
-extern AGQuadrilateral AGQuadrilateralMakeWithPoints(AGPoint tl, AGPoint tr, AGPoint br, AGPoint bl)
+extern AGQuad AGQuadMake(AGPoint tl, AGPoint tr, AGPoint br, AGPoint bl)
 {
-    return (AGQuadrilateral){.tl = tl, .tr = tr, .br = br, .bl = bl};
+    return (AGQuad){.tl = tl, .tr = tr, .br = br, .bl = bl};
 }
 
-extern AGQuadrilateral AGQuadrilateralMakeWithCGPoints(CGPoint tl, CGPoint tr, CGPoint br, CGPoint bl)
+extern AGQuad AGQuadMakeWithCGPoints(CGPoint tl, CGPoint tr, CGPoint br, CGPoint bl)
 {
-    AGQuadrilateral q;
+    AGQuad q;
     q.tl = AGPointMakeWithCGPoint(tl);
     q.tr = AGPointMakeWithCGPoint(tr);
     q.br = AGPointMakeWithCGPoint(br);
@@ -127,9 +125,9 @@ extern AGQuadrilateral AGQuadrilateralMakeWithCGPoints(CGPoint tl, CGPoint tr, C
     return q;
 }
 
-extern AGQuadrilateral AGQuadrilateralMakeWithCGRect(CGRect rect)
+extern AGQuad AGQuadMakeWithCGRect(CGRect rect)
 {
-    AGQuadrilateral q;
+    AGQuad q;
     q.tl.x = CGRectGetMinX(rect);
     q.tl.y = CGRectGetMinY(rect);
     q.tr.x = CGRectGetMaxX(rect);
@@ -141,9 +139,9 @@ extern AGQuadrilateral AGQuadrilateralMakeWithCGRect(CGRect rect)
     return q;
 }
 
-extern AGQuadrilateral AGQuadrilateralMakeWithCGSize(CGSize size)
+extern AGQuad AGQuadMakeWithCGSize(CGSize size)
 {
-    AGQuadrilateral q = AGQuadrilateralZero;
+    AGQuad q = AGQuadZero;
     q.tr.x = size.width;
     q.br.x = size.width;
     q.bl.y = size.height;
@@ -151,40 +149,40 @@ extern AGQuadrilateral AGQuadrilateralMakeWithCGSize(CGSize size)
     return q;
 }
 
-extern double AGQuadrilateralGetSmallestX(AGQuadrilateral q)
+extern double AGQuadGetSmallestX(AGQuad q)
 {
     double values[4];
-    AGQuadrilateralGetXValues(q, values);
+    AGQuadGetXValues(q, values);
     return minInArray(values, 4, NULL);
 }
 
-extern double AGQuadrilateralGetBiggestX(AGQuadrilateral q)
+extern double AGQuadGetBiggestX(AGQuad q)
 {
     double values[4];
-    AGQuadrilateralGetXValues(q, values);
+    AGQuadGetXValues(q, values);
     return maxInArray(values, 4, NULL);
 }
 
-extern double AGQuadrilateralGetSmallestY(AGQuadrilateral q)
+extern double AGQuadGetSmallestY(AGQuad q)
 {
     double values[4];
-    AGQuadrilateralGetYValues(q, values);
+    AGQuadGetYValues(q, values);
     return minInArray(values, 4, NULL);
 }
 
-extern double AGQuadrilateralGetBiggestY(AGQuadrilateral q)
+extern double AGQuadGetBiggestY(AGQuad q)
 {
     double values[4];
-    AGQuadrilateralGetYValues(q, values);
+    AGQuadGetYValues(q, values);
     return maxInArray(values, 4, NULL);
 }
 
-extern CGRect AGQuadrilateralGetBoundingRect(AGQuadrilateral q)
+extern CGRect AGQuadGetBoundingRect(AGQuad q)
 {
     double xValues[4];
     double yValues[4];
-    AGQuadrilateralGetXValues(q, xValues);
-    AGQuadrilateralGetYValues(q, yValues);
+    AGQuadGetXValues(q, xValues);
+    AGQuadGetYValues(q, yValues);
     
     CGFloat xmin = minInArray(xValues, 4, NULL);
     CGFloat xmax = maxInArray(xValues, 4, NULL);
@@ -200,20 +198,20 @@ extern CGRect AGQuadrilateralGetBoundingRect(AGQuadrilateral q)
     return rect;
 }
 
-extern AGPoint AGQuadrilateralGetCenter(AGQuadrilateral q)
+extern AGPoint AGQuadGetCenter(AGQuad q)
 {
     AGPoint center = AGPointZero;
     AGLineIntersection(AGLineMake(q.bl, q.tr), AGLineMake(q.br, q.tl), &center);
     return center;
 }
 
-extern CGSize AGQuadrilateralGetSize(AGQuadrilateral q)
+extern CGSize AGQuadGetSize(AGQuad q)
 {
-    CGRect smallestRect = AGQuadrilateralGetBoundingRect(q);
+    CGRect smallestRect = AGQuadGetBoundingRect(q);
     return smallestRect.size;
 }
 
-void AGQuadrilateralGetXValues(AGQuadrilateral q, double *out_values)
+void AGQuadGetXValues(AGQuad q, double *out_values)
 {
     for(int i = 0; i < 4; i++)
     {
@@ -222,7 +220,7 @@ void AGQuadrilateralGetXValues(AGQuadrilateral q, double *out_values)
     }
 }
 
-void AGQuadrilateralGetYValues(AGQuadrilateral q, double *out_values)
+void AGQuadGetYValues(AGQuad q, double *out_values)
 {
     for(int i = 0; i < 4; i++)
     {
@@ -231,9 +229,9 @@ void AGQuadrilateralGetYValues(AGQuadrilateral q, double *out_values)
     }
 }
 
-extern AGQuadrilateral AGQuadrilateralInterpolation(AGQuadrilateral q1, AGQuadrilateral q2, double progress)
+extern AGQuad AGQuadInterpolation(AGQuad q1, AGQuad q2, double progress)
 {
-    AGQuadrilateral q;
+    AGQuad q;
     for(int i = 0; i < 4; i++)
     {
         q.v[i] = AGPointInterpolate(q1.v[i], q2.v[i], progress);
@@ -241,7 +239,7 @@ extern AGQuadrilateral AGQuadrilateralInterpolation(AGQuadrilateral q1, AGQuadri
     return q;
 }
 
-extern NSString * NSStringFromAGQuadrilateral(AGQuadrilateral q)
+extern NSString * NSStringFromAGQuad(AGQuad q)
 {
     return [NSString stringWithFormat:@"tl: %@,\n\t"
             "tr: %@,\n\t"
@@ -256,7 +254,7 @@ extern NSString * NSStringFromAGQuadrilateral(AGQuadrilateral q)
 
 // Taken from https://github.com/Ciechan/BCGenieEffect/blob/master/UIView%2BGenie.m
 // Which derives from http://stackoverflow.com/a/12820877/558816
-CATransform3D CATransform3DMakeRectToQuadrilateral(CGRect rect, AGQuadrilateral q)
+CATransform3D CATransform3DForCGRectToQuad(CGRect rect, AGQuad q)
 {
     double W = rect.size.width;
     double H = rect.size.height;
@@ -306,17 +304,17 @@ CATransform3D CATransform3DMakeRectToQuadrilateral(CGRect rect, AGQuadrilateral 
 
 
 
-@implementation NSValue (AGQuadrilateralAdditions)
+@implementation NSValue (AGQuadAdditions)
 
-+ (NSValue *)valueWithAGQuadrilateral:(AGQuadrilateral)q
++ (NSValue *)valueWithAGQuad:(AGQuad)q
 {
-    NSValue *value = [NSValue value:&q withObjCType:@encode(AGQuadrilateral)];
+    NSValue *value = [NSValue value:&q withObjCType:@encode(AGQuad)];
     return value;
 }
 
-- (AGQuadrilateral)AGQuadrilateralValue
+- (AGQuad)AGQuadValue
 {
-    AGQuadrilateral q;
+    AGQuad q;
     [self getValue:&q];
     return q;
 }

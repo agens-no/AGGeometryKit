@@ -1,6 +1,6 @@
 //
 //  AGPoint.h
-//  AGQuadrilateral
+//  AGQuad
 //
 //  Created by Håvard Fossli on 15.02.13.
 //  Copyright 2013 Håvard Fossli. All rights reserved.

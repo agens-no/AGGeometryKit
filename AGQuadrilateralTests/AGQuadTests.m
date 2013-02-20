@@ -1,14 +1,14 @@
 //
-//  AGQuadrilateralTests.m
-//  AGQuadrilateralTests
+//  AGQuadTests.m
+//  AGQuadTests
 //
 //  Created by Håvard Fossli on 18.01.13.
 //  Copyright (c) 2013 Håvard Fossli. All rights reserved.
 //
 
-#import "AGQuadrilateralTests.h"
+#import "AGQuadTests.h"
 
-@implementation AGQuadrilateralTests
+@implementation AGQuadTests
 
 - (void)setUp
 {

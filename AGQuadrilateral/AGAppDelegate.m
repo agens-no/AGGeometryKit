@@ -1,13 +1,13 @@
 //
 //  AGAppDelegate.m
-//  AGQuadrilateral
+//  AGQuad
 //
 //  Created by Håvard Fossli on 18.01.13.
 //  Copyright (c) 2013 Håvard Fossli. All rights reserved.
 //
 
 #import "AGAppDelegate.h"
-#import "AGQuadrilateralSample.h"
+#import "AGQuadSample.h"
 
 @implementation AGAppDelegate
 
@@ -16,7 +16,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 
-    AGQuadrilateralSample *quadSampleController = [[AGQuadrilateralSample alloc] initWithNibName:nil bundle:nil];
+    AGQuadSample *quadSampleController = [[AGQuadSample alloc] initWithNibName:nil bundle:nil];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:quadSampleController];
     navigationController.navigationBarHidden = YES;
 

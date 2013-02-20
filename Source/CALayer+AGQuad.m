@@ -1,20 +1,20 @@
 //
-//  CALayer+AGQuadrilateral.m
-//  AGQuadrilateral
+//  CALayer+AGQuad.m
+//  AGQuad
 //
 //  Created by Håvard Fossli on 15.02.13.
 //  Copyright (c) 2013 Håvard Fossli. All rights reserved.
 //
 
-#import "CALayer+AGQuadrilateral.h"
+#import "CALayer+AGQuad.h"
 #import "CAAnimationBlockDelegate.h"
 
-@implementation CALayer (AGQuadrilateral)
+@implementation CALayer (AGQuad)
 
 @dynamic quadrilateral;
 
-+ (CAKeyframeAnimation *)animationBetweenQuadrilateral:(AGQuadrilateral)quad1
-                                      andQuadrilateral:(AGQuadrilateral)quad2
++ (CAKeyframeAnimation *)animationBetweenQuadrilateral:(AGQuad)quad1
+                                      andQuadrilateral:(AGQuad)quad2
                                                   rect:(CGRect)rect
                                      forNumberOfFrames:(NSUInteger)numberOfFrames
                                                  delay:(NSTimeInterval)delay
@@ -34,8 +34,8 @@
     for(int i = 0; i < numberOfFrames; i++)
     {
         double p = progressFunction((double)i / (double)numberOfFrames);
-        AGQuadrilateral quad = AGQuadrilateralInterpolation(quad1, quad2, p);
-        CATransform3D transform = CATransform3DMakeRectToQuadrilateral(rect, quad);
+        AGQuad quad = AGQuadInterpolation(quad1, quad2, p);
+        CATransform3D transform = CATransform3DForCGRectToQuad(rect, quad);
         NSValue *value = [NSValue valueWithCATransform3D:transform];
         [values addObject:value];
     }
@@ -49,31 +49,31 @@
     return animation;
 }
 
-- (void)setQuadrilateral:(AGQuadrilateral)quadrilateral
+- (void)setQuadrilateral:(AGQuad)quadrilateral
 {
     [self ensureAnchorPointIsSetToZero];
     
-    if(!AGQuadrilateralEqual(quadrilateral, AGQuadrilateralZero))
+    if(!AGQuadEqual(quadrilateral, AGQuadZero))
     {
-        CATransform3D t = CATransform3DMakeRectToQuadrilateral(self.bounds, quadrilateral);
+        CATransform3D t = CATransform3DForCGRectToQuad(self.bounds, quadrilateral);
         self.transform = t;
     }
 }
 
-- (AGQuadrilateral)quadrilateral
+- (AGQuad)quadrilateral
 {
     CGPoint tl = [self outerPointForInnerPoint:CGPointMake(0, 0)];
     CGPoint tr = [self outerPointForInnerPoint:CGPointMake(self.bounds.size.width, 0)];
     CGPoint br = [self outerPointForInnerPoint:CGPointMake(self.bounds.size.width, self.bounds.size.height)];
     CGPoint bl = [self outerPointForInnerPoint:CGPointMake(0, self.bounds.size.height)];
     
-    AGQuadrilateral q = AGQuadrilateralMakeWithCGPoints(tl, tr, br, bl);
+    AGQuad q = AGQuadMakeWithCGPoints(tl, tr, br, bl);
     
     return q;
 }
 
-- (void)animateFromQuadrilateral:(AGQuadrilateral)quad1
-                 toQuadrilateral:(AGQuadrilateral)quad2
+- (void)animateFromQuadrilateral:(AGQuad)quad1
+                 toQuadrilateral:(AGQuad)quad2
                forNumberOfFrames:(NSUInteger)numberOfFrames
                         duration:(NSTimeInterval)duration
                            delay:(NSTimeInterval)delay
@@ -102,7 +102,7 @@
     [CATransaction commit];
 }
 
-- (void)animateFromPresentedStateToQuadrilateral:(AGQuadrilateral)quad
+- (void)animateFromPresentedStateToQuadrilateral:(AGQuad)quad
                                forNumberOfFrames:(NSUInteger)numberOfFrames
                                         duration:(NSTimeInterval)duration
                                            delay:(NSTimeInterval)delay
@@ -110,7 +110,7 @@
                                           forKey:(NSString *)animKey
                                       onComplete:(void(^)(BOOL finished))onComplete
 {
-    AGQuadrilateral currentQuad = [(CALayer *)[self presentationLayer] quadrilateral];
+    AGQuad currentQuad = [(CALayer *)[self presentationLayer] quadrilateral];
     
     [self animateFromQuadrilateral:currentQuad toQuadrilateral:quad forNumberOfFrames:numberOfFrames duration:duration delay:delay progressFunction:progressFunction forKey:animKey onComplete:onComplete];
 }

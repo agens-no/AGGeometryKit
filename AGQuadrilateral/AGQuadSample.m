@@ -1,24 +1,24 @@
 //
-//  AGQuadrilateralSample.m
-//  AGQuadrilateral
+//  AGQuadSample.m
+//  AGQuad
 //
 //  Created by Håvard Fossli on 18.01.13.
 //  Copyright 2013 Håvard Fossli. All rights reserved.
 //
 
-#import "AGQuadrilateralSample.h"
-#import "AGQuadrilateral.h"
+#import "AGQuadSample.h"
+#import "AGQuad.h"
 #import "easing.h"
-#import "CALayer+AGQuadrilateral.h"
+#import "CALayer+AGQuad.h"
 
-@interface AGQuadrilateralSample ()
+@interface AGQuadSample ()
 
 @property (nonatomic, strong) IBOutlet UIImageView *imageView;
 
 @end
 
 
-@implementation AGQuadrilateralSample
+@implementation AGQuadSample
 
 #pragma mark - Construct and destruct
 
@@ -51,13 +51,13 @@
 
 - (IBAction)changeToSquareShape:(id)sender
 {
-    AGQuadrilateral quad = AGQuadrilateralMakeWithCGRect(self.imageView.bounds);
+    AGQuad quad = AGQuadMakeWithCGRect(self.imageView.bounds);
     [self animateToQuad:quad];
 }
 
 - (IBAction)changeToOddShape1:(id)sender
 {
-    AGQuadrilateral quad = AGQuadrilateralMakeWithCGRect(self.imageView.bounds);
+    AGQuad quad = AGQuadMakeWithCGRect(self.imageView.bounds);
     quad.tr.y += 125;
     quad.br.y -= 65;
     quad.bl.x -= 40;
@@ -67,7 +67,7 @@
 
 - (IBAction)changeToOddShape2:(id)sender
 {
-    AGQuadrilateral quad = AGQuadrilateralMakeWithCGRect(self.imageView.bounds);
+    AGQuad quad = AGQuadMakeWithCGRect(self.imageView.bounds);
     quad.tr.y -= 125;
     quad.br.y += 65;
     quad.bl.x += 40;
@@ -77,10 +77,10 @@
 
 #pragma mark - Convinience methods
 
-- (void)animateToQuad:(AGQuadrilateral)quad
+- (void)animateToQuad:(AGQuad)quad
 {
-    NSLog(@"Animating from:\n    %@", NSStringFromAGQuadrilateral(self.imageView.layer.quadrilateral));
-    NSLog(@"Animating to:\n    %@", NSStringFromAGQuadrilateral(quad));
+    NSLog(@"Animating from:\n    %@", NSStringFromAGQuad(self.imageView.layer.quadrilateral));
+    NSLog(@"Animating to:\n    %@", NSStringFromAGQuad(quad));
     
     NSTimeInterval duration = 2.0;
         
@@ -93,7 +93,7 @@
                                                   }
                                                             forKey:@"demo"
                                                         onComplete:^(BOOL finished) {
-        NSString *quadInfoString = NSStringFromAGQuadrilateral([[self.imageView.layer presentationLayer] quadrilateral]);
+        NSString *quadInfoString = NSStringFromAGQuad([[self.imageView.layer presentationLayer] quadrilateral]);
         NSLog(@"Animation done (%@):\n    %@", finished ? @"FINISHED" : @"CANCELLED", quadInfoString);
     }];
 }

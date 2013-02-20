@@ -1,6 +1,6 @@
 //
 //  AGCoreAnimationBlockDelegate.m
-//  AGQuadrilateral
+//  AGQuad
 //
 //  Created by Håvard Fossli on 18.02.13.
 //  Copyright 2013 Håvard Fossli. All rights reserved.

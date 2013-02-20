@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'AGQuadrilateral' target in the 'AGQuadrilateral' project
+// Prefix header for all source files of the 'AGQuad' target in the 'AGQuad' project
 //
 
 #import <Availability.h>
