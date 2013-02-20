@@ -8,7 +8,7 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 #import <QuartzCore/QuartzCore.h>
-#import "AGGeometry.h"
+#import "CGGeometry+Extra.h"
 
 @interface AGGeometryTest : SenTestCase
 
@@ -17,21 +17,8 @@
 
 @implementation AGGeometryTest
 
-- (void)testAGCornerIsOnSide
-{
-    STAssertTrue(AGCornerIsOnSide(AGCornerTopLeft, AGSideLeft), @"corner should on given side");
-    STAssertTrue(AGCornerIsOnSide(AGCornerBottomLeft, AGSideLeft), @"corner should on given side");
-    STAssertTrue(AGCornerIsOnSide(AGCornerTopLeft, AGSideTop), @"corner should on given side");
-    STAssertTrue(AGCornerIsOnSide(AGCornerTopRight, AGSideTop), @"corner should on given side");
-    STAssertTrue(AGCornerIsOnSide(AGCornerTopRight, AGSideRight), @"corner should on given side");
-    STAssertTrue(AGCornerIsOnSide(AGCornerBottomRight, AGSideRight), @"corner should on given side");
-    STAssertTrue(AGCornerIsOnSide(AGCornerBottomRight, AGSideBottom), @"corner should on given side");
-    STAssertTrue(AGCornerIsOnSide(AGCornerBottomLeft, AGSideBottom), @"corner should on given side");
-}
-
 - (void)testCGPointForAnchorPointInRect
-{
-    
+{    
     CGRect rect = CGRectMake(50, 80, 350, 270);
     CGPoint point;
     
@@ -59,24 +46,6 @@
         CGPoint anchor = CGPointGetAnchorPointForPointInRect(point, rect);
         STAssertEquals(anchor, CGPointMake(1.0, 1.0), @"anchor is not as expected");
     }
-}
-
-- (void)testCombinedUsageAnchorAndCorner
-{
-    CGRect rect = CGRectMake(50, 80, 350, 270); 
-    CGPoint point;
-    
-    point = CGPointGetPointForAnchorPointInRect(AGCornerConvertToAnchorPoint(AGCornerTopLeft), rect);
-    STAssertEquals(point, CGPointMake(50, 80), @"point is not as expected");
-    
-    point = CGPointGetPointForAnchorPointInRect(AGCornerConvertToAnchorPoint(AGCornerTopRight), rect);
-    STAssertEquals(point, CGPointMake(50 + 350, 80), @"point is not as expected");
-    
-    point = CGPointGetPointForAnchorPointInRect(AGCornerConvertToAnchorPoint(AGCornerBottomRight), rect);
-    STAssertEquals(point, CGPointMake(50 + 350, 80 + 270), @"point is not as expected");
-    
-    point = CGPointGetPointForAnchorPointInRect(AGCornerConvertToAnchorPoint(AGCornerBottomLeft), rect);
-    STAssertEquals(point, CGPointMake(50, 80 + 270), @"point is not as expected");
 }
 
 - (void)testCGPointDistanceBetweenPoints

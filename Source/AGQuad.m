@@ -8,7 +8,6 @@
 
 #import "AGQuad.h"
 #import "AGMath.h"
-#import "AGGeometry.h"
 #import "AGLine.h"
 
 /*
@@ -301,23 +300,4 @@ CATransform3D CATransform3DForCGRectToQuad(CGRect rect, AGQuad q)
     
     return transform;
 }
-
-
-
-@implementation NSValue (AGQuadAdditions)
-
-+ (NSValue *)valueWithAGQuad:(AGQuad)q
-{
-    NSValue *value = [NSValue value:&q withObjCType:@encode(AGQuad)];
-    return value;
-}
-
-- (AGQuad)AGQuadValue
-{
-    AGQuad q;
-    [self getValue:&q];
-    return q;
-}
-
-@end
 

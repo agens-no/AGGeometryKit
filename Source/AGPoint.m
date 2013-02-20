@@ -8,7 +8,6 @@
 
 #import "AGPoint.h"
 #import "AGMath.h"
-#import "AGGeometry.h"
 
 const AGPoint AGPointZero = (AGPoint){0, 0};
 

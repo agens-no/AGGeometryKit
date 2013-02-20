@@ -41,12 +41,3 @@ inline NSString * NSStringFromAGQuad(AGQuad q);
 CATransform3D CATransform3DForCGRectToQuad(CGRect rect, AGQuad q);
 
 
-
-@interface NSValue (AGQuadAdditions)
-
-+ (NSValue *)valueWithAGQuad:(AGQuad)q;
-- (AGQuad)AGQuadValue;
-
-@end
-
-

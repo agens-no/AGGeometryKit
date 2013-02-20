@@ -6,41 +6,11 @@
 //  Copyright (c) 2012 Håvard Fossli. All rights reserved.
 //
 
-#import "AGGeometry.h"
+#import "CGGeometry+Extra.h"
 #import <QuartzCore/QuartzCore.h>
 #import "GLKit/GLKMatrix3.h"
 #import "GLKit/GLKVector3.h"
 #import "AGMath.h"
-
-BOOL AGCornerIsOnSide(AGCorner corner, AGSide side)
-{
-    return (corner & side) == side;
-}
-
-CGPoint AGCornerConvertToAnchorPoint(AGCorner corner)
-{
-    switch (corner) {
-        case AGCornerTopLeft:
-            return CGPointMake(0, 0);
-            break;
-        case AGCornerTopRight:
-            return CGPointMake(1, 0);
-            break;
-        case AGCornerBottomLeft:
-            return CGPointMake(0, 1);
-            break;
-        case AGCornerBottomRight:
-            return CGPointMake(1, 1);
-            break;
-    }
-}
-
-CGPoint AGCornerConvertToPointForRect(AGCorner corner, CGRect rect)
-{
-    CGPoint anchor = AGCornerConvertToAnchorPoint(corner);
-    CGPoint p = CGPointGetPointForAnchorPointInRect(anchor, rect);
-    return p;
-}
 
 CGPoint CGPointGetPointForAnchorPointInRect(CGPoint anchor, CGRect rect)
 {
@@ -61,7 +31,7 @@ CGPoint CGPointGetAnchorPointForPointInRect(CGPoint point, CGRect rect)
 
 CGPoint CGPointForCenterInRect(CGRect rect)
 {
-    return CGPointGetPointForAnchorPointInRect(CGPointMake(0.5, 0.5), rect);
+    return CGPointMake(CGRectGetMidX(rect), CGRectGetMidY(rect));
 }
 
 extern CGFloat CGPointDistanceBetweenPoints(CGPoint p1, CGPoint p2)
@@ -136,7 +106,7 @@ extern CGSize CGSizeGetHalf(CGSize size)
     return CGSizeMake(size.width / 2.0, size.height / 2.0);
 }
 
-extern CGSize CGSizeFlipAxis(CGSize size)
+extern CGSize CGSizeSwitchAxis(CGSize size)
 {
     return CGSizeMake(size.height, size.width);
 }

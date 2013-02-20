@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A333A58F16A9A3BD00E334AD"
-               BuildableName = "AGQuadrilateral.app"
+               BuildableName = "AGGeometryKit.app"
                BlueprintName = "AGGeometryKit"
                ReferencedContainer = "container:AGGeometryKit.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A333A5BC16A9A3BD00E334AD"
-               BuildableName = "AGQuadrilateralTests.octest"
+               BuildableName = "AGGeometryKitTests.octest"
                BlueprintName = "AGGeometryKitTests"
                ReferencedContainer = "container:AGGeometryKit.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A333A58F16A9A3BD00E334AD"
-            BuildableName = "AGQuadrilateral.app"
+            BuildableName = "AGGeometryKit.app"
             BlueprintName = "AGGeometryKit"
             ReferencedContainer = "container:AGGeometryKit.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A333A58F16A9A3BD00E334AD"
-            BuildableName = "AGQuadrilateral.app"
+            BuildableName = "AGGeometryKit.app"
             BlueprintName = "AGGeometryKit"
             ReferencedContainer = "container:AGGeometryKit.xcodeproj">
          </BuildableReference>
@@ -85,7 +85,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A333A58F16A9A3BD00E334AD"
-            BuildableName = "AGQuadrilateral.app"
+            BuildableName = "AGGeometryKit.app"
             BlueprintName = "AGGeometryKit"
             ReferencedContainer = "container:AGGeometryKit.xcodeproj">
          </BuildableReference>

@@ -10,29 +10,6 @@
 
 // http://processingjs.nihongoresources.com/bezierinfo/
 
-typedef enum AGAxis {
-    AGAxisX,
-    AGAxisY,
-    AGAxizZ,
-} AGAxis;
-
-typedef enum AGSide {
-    AGSideTop = 1 << 0,
-    AGSideBottom = 1 << 1,
-    AGSideLeft = 1 << 2,
-    AGSideRight = 1 << 3,
-} AGSide;
-
-typedef enum {
-    AGCornerTopLeft = AGSideTop | AGSideLeft,
-    AGCornerTopRight = AGSideTop | AGSideRight,
-    AGCornerBottomLeft = AGSideBottom | AGSideLeft,
-    AGCornerBottomRight = AGSideBottom | AGSideRight,
-} AGCorner;
-
-BOOL AGCornerIsOnSide(AGCorner corner, AGSide side);
-CGPoint AGCornerConvertToAnchorPoint(AGCorner corner);
-CGPoint AGCornerConvertToPointForRect(AGCorner corner, CGRect rect);
 CGPoint CGPointGetPointForAnchorPointInRect(CGPoint anchor, CGRect rect);
 CGPoint CGPointGetAnchorPointForPointInRect(CGPoint point, CGRect rect);
 CGPoint CGPointForCenterInRect(CGRect rect);
@@ -48,7 +25,7 @@ inline CGPoint CGPointAddSize(CGPoint p, CGSize s);
 inline CGRect CGRectMakeWithSize(CGSize size);
 inline CGPoint CGRectGetMidPoint(CGRect rect);
 inline CGSize CGSizeGetHalf(CGSize size);
-inline CGSize CGSizeFlipAxis(CGSize size);
+inline CGSize CGSizeSwitchAxis(CGSize size);
 inline CGRect CGRectWithSize(CGRect rect, CGSize newSize);
 inline CGRect CGRectWithWidth(CGRect rect, CGFloat newWidth);
 inline CGRect CGRectWithHeight(CGRect rect, CGFloat newHeight);
