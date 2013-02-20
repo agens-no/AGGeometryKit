@@ -10,28 +10,26 @@
 
 @interface UIView (FrameExtra)
 
-@property (nonatomic, assign) CGPoint frameOrigin;
 @property (nonatomic, assign) CGSize frameSize;
+@property (nonatomic, readonly) CGFloat frameWidthHalf;
+@property (nonatomic, readonly) CGFloat frameHeightHalf;
 
+@property (nonatomic, assign) CGPoint frameOrigin;
 @property (nonatomic, assign) CGFloat frameMinX;
 @property (nonatomic, assign) CGFloat frameMinY;
 @property (nonatomic, assign) CGFloat frameMidX;
 @property (nonatomic, assign) CGFloat frameMidY;
 @property (nonatomic, assign) CGFloat frameMaxX;
 @property (nonatomic, assign) CGFloat frameMaxY;
-
 @property (nonatomic, assign) CGFloat frameWidth;
 @property (nonatomic, assign) CGFloat frameHeight;
-
-@property (nonatomic, readonly) CGFloat frameWidthHalf;
-@property (nonatomic, readonly) CGFloat frameHeightHalf;
 
 @property (nonatomic, assign) CGPoint boundsOrigin;
 @property (nonatomic, assign) CGSize boundsSize;
 @property (nonatomic, assign) CGFloat boundsWidth;
 @property (nonatomic, assign) CGFloat boundsHeight;
-@property (nonatomic, readonly) CGPoint boundsCenter;
 
+@property (nonatomic, readonly) CGPoint boundsCenter;
 @property (nonatomic, readonly) CGFloat boundsWidthHalf;
 @property (nonatomic, readonly) CGFloat boundsHeightHalf;
 
