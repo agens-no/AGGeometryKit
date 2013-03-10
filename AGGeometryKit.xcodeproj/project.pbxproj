@@ -16,7 +16,7 @@
 		A30B0C4B16CE932D00856E00 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A59816A9A3BD00E334AD /* CoreGraphics.framework */; };
 		A30B0C4E16D2229700856E00 /* CAAnimationBlockDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A30B0C4D16D2229600856E00 /* CAAnimationBlockDelegate.m */; };
 		A30B0C4F16D2229700856E00 /* CAAnimationBlockDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A30B0C4D16D2229600856E00 /* CAAnimationBlockDelegate.m */; };
-		A3270F1216D5128200A92C03 /* AGGeometryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A333A5F216A9A59200E334AD /* AGGeometryTest.m */; };
+		A3270F1216D5128200A92C03 /* CGGeometry+ExtraTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A333A5F216A9A59200E334AD /* CGGeometry+ExtraTest.m */; };
 		A3270F1516D5272500A92C03 /* AGLine.m in Sources */ = {isa = PBXBuildFile; fileRef = A3270F1416D5272500A92C03 /* AGLine.m */; };
 		A3270F1616D5272500A92C03 /* AGLine.m in Sources */ = {isa = PBXBuildFile; fileRef = A3270F1416D5272500A92C03 /* AGLine.m */; };
 		A3270F1716D551E200A92C03 /* AGMathTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A333A60716A9A5A300E334AD /* AGMathTest.m */; };
@@ -119,7 +119,7 @@
 		A333A5BE16A9A3BD00E334AD /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		A333A5F016A9A59200E334AD /* CGGeometry+Extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGGeometry+Extra.h"; sourceTree = "<group>"; };
 		A333A5F116A9A59200E334AD /* CGGeometry+Extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+Extra.m"; sourceTree = "<group>"; };
-		A333A5F216A9A59200E334AD /* AGGeometryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGGeometryTest.m; sourceTree = "<group>"; };
+		A333A5F216A9A59200E334AD /* CGGeometry+ExtraTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+ExtraTest.m"; sourceTree = "<group>"; };
 		A333A5F316A9A59200E334AD /* AGMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMath.h; sourceTree = "<group>"; };
 		A333A5F416A9A59200E334AD /* AGMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMath.m; sourceTree = "<group>"; };
 		A333A5F516A9A59200E334AD /* AGQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGQuad.h; sourceTree = "<group>"; };
@@ -234,7 +234,7 @@
 				A384023816D56829000C698B /* AGCornerTest.m */,
 				A333A5F016A9A59200E334AD /* CGGeometry+Extra.h */,
 				A333A5F116A9A59200E334AD /* CGGeometry+Extra.m */,
-				A333A5F216A9A59200E334AD /* AGGeometryTest.m */,
+				A333A5F216A9A59200E334AD /* CGGeometry+ExtraTest.m */,
 				A333A5F316A9A59200E334AD /* AGMath.h */,
 				A333A5F416A9A59200E334AD /* AGMath.m */,
 				A333A60716A9A5A300E334AD /* AGMathTest.m */,
@@ -413,7 +413,7 @@
 				A30B0C4616CE8DCD00856E00 /* CALayer+AGQuad.m in Sources */,
 				A30B0C4816CE8F3900856E00 /* AGQuadTest.m in Sources */,
 				A30B0C4F16D2229700856E00 /* CAAnimationBlockDelegate.m in Sources */,
-				A3270F1216D5128200A92C03 /* AGGeometryTest.m in Sources */,
+				A3270F1216D5128200A92C03 /* CGGeometry+ExtraTest.m in Sources */,
 				A3270F1616D5272500A92C03 /* AGLine.m in Sources */,
 				A3270F1716D551E200A92C03 /* AGMathTest.m in Sources */,
 				A3270F2016D5642C00A92C03 /* AGCorner.m in Sources */,
