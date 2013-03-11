@@ -30,6 +30,8 @@
 /**
  * @property AGQuad quadrilateral
  * Updating this property will update property 'transform' unless it is set to AGQuadZero
+ * @abstract 
+ *   If transform is set to CATransform3DIdentity the quad returned will be similar to bounds.
  * @discussion
  *   It is only possible to make convex transforms with quadrilaterals.
  *   So make sure your quadrilateral is convex.

@@ -268,7 +268,7 @@ extern NSString * NSStringFromAGQuad(AGQuad q)
 
 // Taken from https://github.com/Ciechan/BCGenieEffect/blob/master/UIView%2BGenie.m
 // Which derives from http://stackoverflow.com/a/12820877/558816
-CATransform3D CATransform3DForCGRectToQuad(CGRect rect, AGQuad q)
+CATransform3D CATransform3DWithQuadFromBounds(AGQuad q, CGRect rect)
 {
     double W = rect.size.width;
     double H = rect.size.height;

@@ -50,7 +50,7 @@
     {
         double p = progressFunction((double)i / (double)numberOfFrames);
         AGQuad quad = AGQuadInterpolation(quad1, quad2, p);
-        CATransform3D transform = CATransform3DForCGRectToQuad(rect, quad);
+        CATransform3D transform = CATransform3DWithQuadFromBounds(rect, quad);
         NSValue *value = [NSValue valueWithCATransform3D:transform];
         [values addObject:value];
     }
@@ -70,7 +70,7 @@
     
     if(!AGQuadEqual(quadrilateral, AGQuadZero))
     {
-        CATransform3D t = CATransform3DForCGRectToQuad(self.bounds, quadrilateral);
+        CATransform3D t = CATransform3DWithQuadFromBounds(self.bounds, quadrilateral);
         self.transform = t;
     }
 }

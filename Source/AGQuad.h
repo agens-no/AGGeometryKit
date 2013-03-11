@@ -61,6 +61,6 @@ inline NSString * NSStringFromAGQuad(AGQuad q);
  *   So make sure your quadrilateral is convex.
  *   http://upload.wikimedia.org/wikipedia/commons/f/f1/Quadrilateral_hierarchy.png
  */
-CATransform3D CATransform3DForCGRectToQuad(CGRect rect, AGQuad q);
+CATransform3D CATransform3DWithQuadFromBounds(AGQuad q, CGRect rect);
 
 
