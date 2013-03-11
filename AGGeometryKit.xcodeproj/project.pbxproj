@@ -26,8 +26,6 @@
 		A3270F2516D564D600A92C03 /* NSValue+AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A3270F2316D564D600A92C03 /* NSValue+AGQuad.m */; };
 		A3270F3B16D5675800A92C03 /* AGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3270F2816D5675800A92C03 /* AGAppDelegate.m */; };
 		A3270F3C16D5675800A92C03 /* AGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3270F2816D5675800A92C03 /* AGAppDelegate.m */; };
-		A3270F3D16D5675800A92C03 /* AGGeometryKit-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3270F2916D5675800A92C03 /* AGGeometryKit-Info.plist */; };
-		A3270F3E16D5675800A92C03 /* AGGeometryKit-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3270F2916D5675800A92C03 /* AGGeometryKit-Info.plist */; };
 		A3270F3F16D5675800A92C03 /* AGQuadSample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3270F2C16D5675800A92C03 /* AGQuadSample.m */; };
 		A3270F4016D5675800A92C03 /* AGQuadSample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3270F2C16D5675800A92C03 /* AGQuadSample.m */; };
 		A3270F4116D5675800A92C03 /* AGQuadSample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3270F2D16D5675800A92C03 /* AGQuadSample.xib */; };
@@ -253,10 +251,10 @@
 				A30B0C4416CE8DCD00856E00 /* CALayer+AGQuad.m */,
 				A333A5F716A9A59200E334AD /* CALayer+Extensions.h */,
 				A333A5F816A9A59200E334AD /* CALayer+Extensions.m */,
-				A30B0C4C16D2229600856E00 /* CAAnimationBlockDelegate.h */,
-				A30B0C4D16D2229600856E00 /* CAAnimationBlockDelegate.m */,
 				A384023A16D568C2000C698B /* UIView+FrameExtra.h */,
 				A384023B16D568C2000C698B /* UIView+FrameExtra.m */,
+				A30B0C4C16D2229600856E00 /* CAAnimationBlockDelegate.h */,
+				A30B0C4D16D2229600856E00 /* CAAnimationBlockDelegate.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -333,7 +331,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3270F3D16D5675800A92C03 /* AGGeometryKit-Info.plist in Resources */,
 				A3270F4116D5675800A92C03 /* AGQuadSample.xib in Resources */,
 				A3270F4316D5675800A92C03 /* Default-568h@2x.png in Resources */,
 				A3270F4516D5675800A92C03 /* Default.png in Resources */,
@@ -348,7 +345,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3270F3E16D5675800A92C03 /* AGGeometryKit-Info.plist in Resources */,
 				A3270F4216D5675800A92C03 /* AGQuadSample.xib in Resources */,
 				A3270F4416D5675800A92C03 /* Default-568h@2x.png in Resources */,
 				A3270F4616D5675800A92C03 /* Default.png in Resources */,
