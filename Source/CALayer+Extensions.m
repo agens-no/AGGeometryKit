@@ -58,6 +58,11 @@
         [NSException raise:NSInternalInconsistencyException format:@"To calculate the outer point for a givven inner point it is required that the layer have a superlayer. This can hopefully be improved."];
     }
     
+    if(!CGPointEqualToPoint(self.anchorPoint, CGPointZero))
+    {
+        [NSException raise:NSInternalInconsistencyException format:@"This method is *dumb* and currently only supports anchorpoint to be 0"];
+    }
+    
     CGPoint outerPoint = [self convertPoint:innerPoint toLayer:self.superlayer];
     outerPoint.x -= self.position.x;
     outerPoint.y -= self.position.y;
