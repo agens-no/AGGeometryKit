@@ -26,7 +26,7 @@
 #import "GLKit/GLKMatrix3.h"
 #import "GLKit/GLKVector3.h"
 #import "AGMath.h"
-#import <objc/objc-sync.h>
+#import "pthread.h"
 
 CGPoint CGPointGetPointForAnchorPointInRect(CGPoint anchor, CGRect rect)
 {
@@ -94,11 +94,13 @@ extern BOOL CGRectGotAnyNanValues(CGRect rect)
 
 extern BOOL CGSizeGotAnyNanValues(CGSize size)
 {
+    // which is better 'a == NAN' or 'a != a'?
     return size.width == NAN || size.height == NAN;
 }
 
 extern BOOL CGPointGotAnyNanValues(CGPoint origin)
 {
+    // which is better 'a == NAN' or 'a != a'?
     return origin.x == NAN || origin.y == NAN;
 }
 
@@ -272,8 +274,12 @@ CGRect CGRectInterpolate(CGRect rect1, CGRect rect2, double progress)
     return result;
 }
 
+// http://stackoverflow.com/a/15328910/202451
+
 CGPoint CGPointApplyCATransform3D(CGPoint point, CATransform3D transform, CGPoint anchorPoint, CATransform3D parentSublayerTransform)
 {
+    
+    static pthread_mutex_t mtx = PTHREAD_MUTEX_INITIALIZER;
     static CALayer *sublayer, *layer;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -282,14 +288,20 @@ CGPoint CGPointApplyCATransform3D(CGPoint point, CATransform3D transform, CGPoin
         [layer addSublayer:sublayer];
     });
     
-    objc_sync_enter(layer);
+    if(pthread_mutex_lock(&mtx))
+    {
+        [NSException raise:NSInternalInconsistencyException format:@"pthread_mutex_lock failed"];
+    }
     
     layer.sublayerTransform = parentSublayerTransform;
     sublayer.transform = transform;
     sublayer.anchorPoint = anchorPoint;
     CGPoint retval = [sublayer convertPoint:point toLayer:layer];
     
-    objc_sync_exit(layer);
+    if(pthread_mutex_unlock(&mtx) != 0)
+    {
+        [NSException raise:NSInternalInconsistencyException format:@"pthread_mutex_unlock failed"];
+    } 
     
     return retval;
 }
