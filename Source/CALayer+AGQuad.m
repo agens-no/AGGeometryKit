@@ -34,7 +34,7 @@
                                      forNumberOfFrames:(NSUInteger)numberOfFrames
                                                  delay:(NSTimeInterval)delay
                                               duration:(NSTimeInterval)duration
-                                      progressFunction:(double(^)(double p))progressFunction
+                                 interpolationFunction:(double(^)(double p))progressFunction
                                             onComplete:(void(^)(BOOL finished))onComplete
 {
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
@@ -92,8 +92,8 @@
                forNumberOfFrames:(NSUInteger)numberOfFrames
                         duration:(NSTimeInterval)duration
                            delay:(NSTimeInterval)delay
-                progressFunction:(double(^)(double p))progressFunction
-                          forKey:(NSString *)animKey
+                         animKey:(NSString *)animKey
+           interpolationFunction:(double(^)(double p))progressFunction
                       onComplete:(void(^)(BOOL finished))onComplete
 {
     if(!CGPointEqualToPoint(self.anchorPoint, CGPointZero))
@@ -109,7 +109,7 @@
                                                           forNumberOfFrames:numberOfFrames
                                                                       delay:delay
                                                                    duration:duration
-                                                           progressFunction:progressFunction
+                                                      interpolationFunction:progressFunction
                                                                  onComplete:onComplete];
     
     [self addAnimation:anim forKey:animKey];
@@ -121,13 +121,20 @@
                                forNumberOfFrames:(NSUInteger)numberOfFrames
                                         duration:(NSTimeInterval)duration
                                            delay:(NSTimeInterval)delay
-                                progressFunction:(double(^)(double p))progressFunction
-                                          forKey:(NSString *)animKey
+                                         animKey:(NSString *)animKey
+                           interpolationFunction:(double(^)(double p))progressFunction
                                       onComplete:(void(^)(BOOL finished))onComplete
 {
     AGQuad currentQuad = [(CALayer *)[self presentationLayer] quadrilateral];
     
-    [self animateFromQuadrilateral:currentQuad toQuadrilateral:quad forNumberOfFrames:numberOfFrames duration:duration delay:delay progressFunction:progressFunction forKey:animKey onComplete:onComplete];
+    [self animateFromQuadrilateral:currentQuad
+                   toQuadrilateral:quad
+                 forNumberOfFrames:numberOfFrames
+                          duration:duration
+                             delay:delay
+                           animKey:animKey
+             interpolationFunction:progressFunction
+                        onComplete:onComplete];
 }
 
 

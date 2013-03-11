@@ -98,19 +98,23 @@
     NSLog(@"Animating to:\n    %@", NSStringFromAGQuad(quad));
     
     NSTimeInterval duration = 2.0;
-        
+    
+    double (^interpolationFunction)(double) = ^(double p) {
+        return (double) ElasticEaseOut(p);
+    };
+    
+    void (^onAnimComplete)(BOOL finished) = ^(BOOL finished) {
+        NSString *quadInfoString = NSStringFromAGQuad([[self.imageView.layer presentationLayer] quadrilateral]);
+        NSLog(@"Animation done (%@):\n    %@", finished ? @"FINISHED" : @"CANCELLED", quadInfoString);
+    };
+    
     [self.imageView.layer animateFromPresentedStateToQuadrilateral:quad
                                                  forNumberOfFrames:duration * 60
                                                           duration:duration
                                                              delay:0.0
-                                                  progressFunction:^double(double p) {
-                                                      return ElasticEaseOut(p);
-                                                  }
-                                                            forKey:@"demo"
-                                                        onComplete:^(BOOL finished) {
-        NSString *quadInfoString = NSStringFromAGQuad([[self.imageView.layer presentationLayer] quadrilateral]);
-        NSLog(@"Animation done (%@):\n    %@", finished ? @"FINISHED" : @"CANCELLED", quadInfoString);
-    }];
+                                                           animKey:@"demo"
+                                             interpolationFunction:interpolationFunction
+                                                        onComplete:onAnimComplete];
 }
 
 @end

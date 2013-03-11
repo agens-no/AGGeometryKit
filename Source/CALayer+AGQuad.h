@@ -42,16 +42,16 @@
                forNumberOfFrames:(NSUInteger)numberOfFrames
                         duration:(NSTimeInterval)duration
                            delay:(NSTimeInterval)delay
-                progressFunction:(double(^)(double p))progressFunction
-                          forKey:(NSString *)animKey
+                         animKey:(NSString *)animKey
+           interpolationFunction:(double(^)(double p))progressFunction
                       onComplete:(void(^)(BOOL finished))onComplete;
 
 - (void)animateFromPresentedStateToQuadrilateral:(AGQuad)quad
                                forNumberOfFrames:(NSUInteger)numberOfFrames
                                         duration:(NSTimeInterval)duration
                                            delay:(NSTimeInterval)delay
-                                progressFunction:(double(^)(double p))progressFunction
-                                          forKey:(NSString *)animKey
+                                         animKey:(NSString *)animKey
+                           interpolationFunction:(double(^)(double p))progressFunction
                                       onComplete:(void(^)(BOOL finished))onComplete;
 
 @end
