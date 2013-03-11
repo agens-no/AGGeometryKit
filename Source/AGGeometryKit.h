@@ -16,5 +16,4 @@
 #import "CALayer+AGQuad.h"
 #import "CALayer+Extensions.h"
 #import "CAAnimationBlockDelegate.h"
-#import "easing.h"
 #import "UIView+FrameExtra.h"

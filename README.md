@@ -33,7 +33,7 @@ A bundle of small classes which enriches your possibilities with UIKit and CoreA
 	  s.homepage     = "https://github.com/hfossli/AGGeometryKit.git"
 	  s.authors      = { "Håvard Fossli" => "hfossli@agens.no" }
 	  s.source       = { :git => "git@github.com:hfossli/AGGeometryKit.git", :branch => "master" }
-	  s.source_files = 'AGQuad.h', 'AGQuad.m', 'AGPoint.h', 'AGPoint.m', 'NSValue+AGQuad.h', 'NSValue+AGQuad.m', 'CALayer+AGQuad.h', 'CALayer+AGQuad.m', 'CAAnimationBlockDelegate.h', 'CAAnimationBlockDelegate.m', 'easing.h', 'easing.m'
+	  s.source_files = 'AGQuad.h', 'AGQuad.m', 'AGPoint.h', 'AGPoint.m', 'NSValue+AGQuad.h', 'NSValue+AGQuad.m', 'CALayer+AGQuad.h', 'CALayer+AGQuad.m', 'CAAnimationBlockDelegate.h', 'CAAnimationBlockDelegate.m'
 	  s.frameworks   = 'SystemConfiguration', 'IOKit', 'CoreGraphics', 'UIKit', 'QuartzCore'
 	  s.platform     = :ios
 	end

@@ -61,12 +61,12 @@
 		A333A60216A9A59200E334AD /* AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A333A5F616A9A59200E334AD /* AGQuad.m */; };
 		A333A60316A9A59200E334AD /* CALayer+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A333A5F816A9A59200E334AD /* CALayer+Extensions.m */; };
 		A333A60416A9A59200E334AD /* CALayer+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A333A5F816A9A59200E334AD /* CALayer+Extensions.m */; };
-		A333A60516A9A59200E334AD /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = A333A5F916A9A59200E334AD /* easing.c */; };
-		A333A60616A9A59200E334AD /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = A333A5F916A9A59200E334AD /* easing.c */; };
 		A333A60B16A9A6F000E334AD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A60A16A9A6F000E334AD /* QuartzCore.framework */; };
 		A384023916D56829000C698B /* AGCornerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A384023816D56829000C698B /* AGCornerTest.m */; };
 		A384023C16D568C2000C698B /* UIView+FrameExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = A384023B16D568C2000C698B /* UIView+FrameExtra.m */; };
 		A384023D16D568C2000C698B /* UIView+FrameExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = A384023B16D568C2000C698B /* UIView+FrameExtra.m */; };
+		A3EE526916EDEE83007706C6 /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = A3EE526716EDEE83007706C6 /* easing.c */; };
+		A3EE526A16EDEE83007706C6 /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = A3EE526716EDEE83007706C6 /* easing.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,13 +126,13 @@
 		A333A5F616A9A59200E334AD /* AGQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGQuad.m; sourceTree = "<group>"; };
 		A333A5F716A9A59200E334AD /* CALayer+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Extensions.h"; sourceTree = "<group>"; };
 		A333A5F816A9A59200E334AD /* CALayer+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Extensions.m"; sourceTree = "<group>"; };
-		A333A5F916A9A59200E334AD /* easing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = easing.c; sourceTree = "<group>"; };
-		A333A5FA16A9A59200E334AD /* easing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = easing.h; sourceTree = "<group>"; };
 		A333A60716A9A5A300E334AD /* AGMathTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMathTest.m; sourceTree = "<group>"; };
 		A333A60A16A9A6F000E334AD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A384023816D56829000C698B /* AGCornerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCornerTest.m; sourceTree = "<group>"; };
 		A384023A16D568C2000C698B /* UIView+FrameExtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameExtra.h"; sourceTree = "<group>"; };
 		A384023B16D568C2000C698B /* UIView+FrameExtra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameExtra.m"; sourceTree = "<group>"; };
+		A3EE526716EDEE83007706C6 /* easing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = easing.c; sourceTree = "<group>"; };
+		A3EE526816EDEE83007706C6 /* easing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = easing.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +178,8 @@
 				A3270F3116D5675800A92C03 /* InfoPlist.strings */,
 				A3270F3316D5675800A92C03 /* main.m */,
 				A3270F3416D5675800A92C03 /* sampleimg.jpg */,
+				A3EE526716EDEE83007706C6 /* easing.c */,
+				A3EE526816EDEE83007706C6 /* easing.h */,
 			);
 			path = AGGeometryKit;
 			sourceTree = "<group>";
@@ -255,8 +257,6 @@
 				A30B0C4D16D2229600856E00 /* CAAnimationBlockDelegate.m */,
 				A384023A16D568C2000C698B /* UIView+FrameExtra.h */,
 				A384023B16D568C2000C698B /* UIView+FrameExtra.m */,
-				A333A5FA16A9A59200E334AD /* easing.h */,
-				A333A5F916A9A59200E334AD /* easing.c */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -386,7 +386,6 @@
 				A333A5FF16A9A59200E334AD /* AGMath.m in Sources */,
 				A333A60116A9A59200E334AD /* AGQuad.m in Sources */,
 				A333A60316A9A59200E334AD /* CALayer+Extensions.m in Sources */,
-				A333A60516A9A59200E334AD /* easing.c in Sources */,
 				A30B0C4116CE859500856E00 /* AGPoint.m in Sources */,
 				A30B0C4516CE8DCD00856E00 /* CALayer+AGQuad.m in Sources */,
 				A30B0C4E16D2229700856E00 /* CAAnimationBlockDelegate.m in Sources */,
@@ -397,6 +396,7 @@
 				A3270F3F16D5675800A92C03 /* AGQuadSample.m in Sources */,
 				A3270F4B16D5675800A92C03 /* main.m in Sources */,
 				A384023C16D568C2000C698B /* UIView+FrameExtra.m in Sources */,
+				A3EE526916EDEE83007706C6 /* easing.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +408,6 @@
 				A333A60016A9A59200E334AD /* AGMath.m in Sources */,
 				A333A60216A9A59200E334AD /* AGQuad.m in Sources */,
 				A333A60416A9A59200E334AD /* CALayer+Extensions.m in Sources */,
-				A333A60616A9A59200E334AD /* easing.c in Sources */,
 				A30B0C4216CE859500856E00 /* AGPoint.m in Sources */,
 				A30B0C4616CE8DCD00856E00 /* CALayer+AGQuad.m in Sources */,
 				A30B0C4816CE8F3900856E00 /* AGQuadTest.m in Sources */,
@@ -424,6 +423,7 @@
 				A3270F5216D5675800A92C03 /* AGQuadTests.m in Sources */,
 				A384023916D56829000C698B /* AGCornerTest.m in Sources */,
 				A384023D16D568C2000C698B /* UIView+FrameExtra.m in Sources */,
+				A3EE526A16EDEE83007706C6 /* easing.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
