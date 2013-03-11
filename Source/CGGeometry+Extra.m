@@ -26,6 +26,7 @@
 #import "GLKit/GLKMatrix3.h"
 #import "GLKit/GLKVector3.h"
 #import "AGMath.h"
+#import <objc/objc-sync.h>
 
 CGPoint CGPointGetPointForAnchorPointInRect(CGPoint anchor, CGRect rect)
 {
@@ -269,4 +270,26 @@ CGRect CGRectInterpolate(CGRect rect1, CGRect rect2, double progress)
     result.origin = CGPointInterpolate(rect1.origin, rect2.origin, progress);
     result.size = CGSizeInterpolate(rect1.size, rect2.size, progress);
     return result;
+}
+
+CGPoint CGPointApplyCATransform3D(CGPoint point, CATransform3D transform, CGPoint anchorPoint, CATransform3D parentSublayerTransform)
+{
+    static CALayer *sublayer, *layer;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sublayer = [CALayer layer];
+        layer = [CALayer layer];
+        [layer addSublayer:sublayer];
+    });
+    
+    objc_sync_enter(layer);
+    
+    layer.sublayerTransform = parentSublayerTransform;
+    sublayer.transform = transform;
+    sublayer.anchorPoint = anchorPoint;
+    CGPoint retval = [sublayer convertPoint:point toLayer:layer];
+    
+    objc_sync_exit(layer);
+    
+    return retval;
 }

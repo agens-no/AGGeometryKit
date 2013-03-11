@@ -58,3 +58,4 @@ CGRect CGRectSmallestWithCGPoints(CGPoint pointsArray[], int numberOfPoints);
 CGSize CGSizeInterpolate(CGSize size1, CGSize size2, double progress);
 CGPoint CGPointInterpolate(CGPoint point1, CGPoint point2, double progress);
 CGRect CGRectInterpolate(CGRect rect1, CGRect rect2, double progress);
+CGPoint CGPointApplyCATransform3D(CGPoint point, CATransform3D transform, CGPoint anchorPoint, CATransform3D parentSublayerTransform);

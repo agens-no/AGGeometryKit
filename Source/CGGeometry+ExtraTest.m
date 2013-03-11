@@ -151,4 +151,24 @@
     }
 }
 
+- (void)testCGPointApplyCATransform3D
+{
+    {
+        CGPoint p = CGPointMake(0, 0);
+        CATransform3D t = CATransform3DMakeScale(1.8, 1.4, 0.0);
+        CGPoint anchorPoint = CGPointMake(0, 0);
+        CGPoint retval = CGPointApplyCATransform3D(p, t, anchorPoint, CATransform3DIdentity);
+        CGPoint correct = CGPointMake(0, 0);
+        STAssertEquals(retval, correct, nil);
+    }
+    {
+        CGPoint p = CGPointMake(100, 100);
+        CATransform3D t = CATransform3DMakeScale(1.8, 1.4, 0.0);
+        CGPoint anchorPoint = CGPointMake(0, 0);
+        CGPoint retval = CGPointApplyCATransform3D(p, t, anchorPoint, CATransform3DIdentity);
+        CGPoint correct = CGPointMake(180, 140);
+        STAssertEquals(retval, correct, nil);
+    }
+}
+
 @end
