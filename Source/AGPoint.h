@@ -21,7 +21,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-// Using AGPoint for better precision with double when calculating transform for quadrilaterals
+// Using AGPoint for
+// - better precision with double when calculating transform for quadrilaterals
+// - being able to access values with index
 
 typedef union AGPoint {
     struct { double x, y; };
@@ -41,4 +43,4 @@ inline AGPoint AGPointMultiply(AGPoint p1, double factor);
 inline double AGPointDotProduct(AGPoint p1, AGPoint p2);
 inline double AGPointCrossProduct(AGPoint p1, AGPoint p2);
 inline CGPoint AGPointAsCGPoint(AGPoint p);
-NSString * NSStringFromAGPoint(AGPoint p);
+inline NSString * NSStringFromAGPoint(AGPoint p);

@@ -44,26 +44,26 @@
 
 #pragma mark - Tests
 
-- (void)testValueInterpolate
+- (void)testinterpolate
 {
     {
-        double value = valueInterpolate(100, 200, 0.7);
+        double value = interpolate(100, 200, 0.7);
         STAssertEquals(value, 170.0, nil);
     }
     {
-        double value = valueInterpolate(100, 200, 0.0);
+        double value = interpolate(100, 200, 0.0);
         STAssertEquals(value, 100.0, nil);
     }
     {
-        double value = valueInterpolate(100, 200, 1.0);
+        double value = interpolate(100, 200, 1.0);
         STAssertEquals(value, 200.0, nil);
     }
     {
-        double value = valueInterpolate(100, 200, -0.5);
+        double value = interpolate(100, 200, -0.5);
         STAssertEquals(value, 50.0, nil);
     }
     {
-        double value = valueInterpolate(100, 200, 1.5);
+        double value = interpolate(100, 200, 1.5);
         STAssertEquals(value, 250.0, nil);
     }
 }
@@ -71,23 +71,23 @@
 - (void)testProgressForValue
 {
     {
-        double progress = progressForValue(100, 200, 170);
+        double progress = interpolationProgress(100, 200, 170);
         STAssertEquals(progress, 0.7, nil);
     }
     {
-        double progress = progressForValue(100, 200, 100.0f);
+        double progress = interpolationProgress(100, 200, 100.0f);
         STAssertEquals(progress, 0.0, nil);
     }
     {
-        double progress = progressForValue(100, 200, 200);
+        double progress = interpolationProgress(100, 200, 200);
         STAssertEquals(progress, 1.0, nil);
     }
     {
-        double progress = progressForValue(100, 200, 50);
+        double progress = interpolationProgress(100, 200, 50);
         STAssertEquals(progress, -0.5, nil);
     }
     {
-        double progress = progressForValue(100, 200, 250);
+        double progress = interpolationProgress(100, 200, 250);
         STAssertEquals(progress, 1.5, nil);
     }
 }
@@ -154,9 +154,18 @@
     STAssertEquals(index, 3u, nil);
 }
 
+- (float)floatValue
+{
+    return 1.3333333333333333333333;
+}
+
 - (void)testFloatToDoubleZeroFill
 {
-    STAssertEquals(floatToDoubleZeroFill((double)0.5f), 0.5, nil);
+    double doubleValue = 1.256250;
+    float floatValue = doubleValue;
+    
+    STAssertEquals(floatToDoubleZeroFill(floatValue), doubleValue, nil);
+    STAssertEquals(floatToDoubleZeroFill(0.5), 0.5, nil);
     STAssertEquals(floatToDoubleZeroFill(1.0f / 3.0f), 0.333333, nil);
 }
 

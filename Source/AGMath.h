@@ -41,8 +41,11 @@
   __x <= __high && __x >= __low;\
   })
 
-inline double valueInterpolate(double startValue, double endValue, double progress);
-inline double progressForValue(double startValue, double endValue, double value);
+inline float interpolatef(float startValue, float endValue, float progress);
+inline double interpolate(double startValue, double endValue, double progress);
+
+inline float interpolationProgressf(float startValue, float endValue, float value);
+inline double interpolationProgress(double startValue, double endValue, double value);
 
 inline double minInArray(double values[], unsigned int numberOfValues, unsigned int *out_index);
 inline double maxInArray(double values[], unsigned int numberOfValues, unsigned int *out_index);

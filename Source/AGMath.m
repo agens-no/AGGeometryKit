@@ -23,29 +23,42 @@
 
 #import "AGMath.h"
 
-extern double valueInterpolate(double startValue, double endValue, double progress)
+extern float interpolatef(float startValue, float endValue, float progress)
 {
-    double diff = endValue - startValue;
-    double value = startValue + (diff * progress);
-    return value;
+    return startValue + ((endValue - startValue) * progress);
 }
 
-extern double progressForValue(double startValue, double endValue, double value)
+extern double interpolate(double startValue, double endValue, double progress)
+{
+    return startValue + ((endValue - startValue) * progress);
+}
+
+extern float interpolationProgressf(float startValue, float endValue, float value)
 {
     double diff = value - startValue;
-    double scope = endValue - startValue;
-    double progress;
     
     if(diff != 0.0)
     {
-        progress = diff / scope;
+        return diff / (endValue - startValue);
     }
     else
     {
-        progress = 0.0f;
+        return 0.0;
     }
+}
+
+extern double interpolationProgress(double startValue, double endValue, double value)
+{
+    double diff = value - startValue;
     
-    return progress;
+    if(diff != 0.0f)
+    {
+        return diff / (endValue - startValue);
+    }
+    else
+    {
+        return 0.0f;
+    }
 }
 
 extern double minInArray(double values[], unsigned int numberOfValues, unsigned int *out_index)
@@ -142,5 +155,6 @@ extern double degreesToRadians(double degrees)
 
 extern double floatToDoubleZeroFill(float value)
 {
-    return [[NSString stringWithFormat:@"%f", value] doubleValue];
+    double val = [[NSString stringWithFormat:@"%f", value] doubleValue];
+    return val;
 }

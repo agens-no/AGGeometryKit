@@ -56,8 +56,8 @@ extern AGPoint AGPointMake(double x, double y)
 extern AGPoint AGPointInterpolate(AGPoint p1, AGPoint p2, double progress)
 {
     AGPoint result;
-    result.x = valueInterpolate(p1.x, p2.x, progress);
-    result.y = valueInterpolate(p1.y, p2.y, progress);
+    result.x = interpolate(p1.x, p2.x, progress);
+    result.y = interpolate(p1.y, p2.y, progress);
     return result;
 }
 
@@ -91,7 +91,7 @@ extern CGPoint AGPointAsCGPoint(AGPoint p)
     return CGPointMake(p.x, p.y);
 }
 
-NSString * NSStringFromAGPoint(AGPoint p)
+extern NSString * NSStringFromAGPoint(AGPoint p)
 {
     return [NSString stringWithFormat:@"{%f, %f}", p.x, p.y];
 }
