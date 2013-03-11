@@ -131,6 +131,7 @@
 		A384023B16D568C2000C698B /* UIView+FrameExtra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameExtra.m"; sourceTree = "<group>"; };
 		A3EE526716EDEE83007706C6 /* easing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = easing.c; sourceTree = "<group>"; };
 		A3EE526816EDEE83007706C6 /* easing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = easing.h; sourceTree = "<group>"; };
+		A3EE526B16EE63F6007706C6 /* AGQuadKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGQuadKit.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				A3270F2116D5643800A92C03 /* AGGeometryKit.h */,
+				A3EE526B16EE63F6007706C6 /* AGQuadKit.h */,
 				A3270F1D16D5642C00A92C03 /* AGCorner.h */,
 				A3270F1E16D5642C00A92C03 /* AGCorner.m */,
 				A384023816D56829000C698B /* AGCornerTest.m */,
