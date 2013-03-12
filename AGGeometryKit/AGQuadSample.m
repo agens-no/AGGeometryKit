@@ -35,34 +35,11 @@
 
 @implementation AGQuadSample
 
-#pragma mark - Construct and destruct
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if(self)
-    {
-
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [self.imageView.layer ensureAnchorPointIsSetToZero];
     [super viewDidLoad];
 }
-
-- (void)dealloc
-{
-}
-
-- (void)didReceiveMemoryWarning
-{    
-    [super didReceiveMemoryWarning];
-}
-
-#pragma mark - View events
 
 - (IBAction)changeToSquareShape:(id)sender
 {
@@ -89,8 +66,6 @@
     quad.tl.x -= 40;
     [self animateToQuad:quad];
 }
-
-#pragma mark - Convinience methods
 
 - (void)animateToQuad:(AGQuad)quad
 {

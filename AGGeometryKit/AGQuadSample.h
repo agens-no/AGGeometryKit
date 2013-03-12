@@ -26,6 +26,4 @@
 
 @interface AGQuadSample : UIViewController {}
 
-// only public properties and methods
-
 @end
