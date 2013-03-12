@@ -11,7 +11,7 @@ A bundle of small classes which enriches your possibilities with UIKit and CoreA
 * Easing functions 
  
 
-### Example code AGQuad on CALayer
+### Example code property 'quadrilateral' on CALayer
 
 You can access `quadrilateral` as a property just like you would do with `frame`, `center` or `bounds`.
 
@@ -23,12 +23,12 @@ You can access `quadrilateral` as a property just like you would do with `frame`
     
     self.imageView.layer.quadrilateral = quad;
 
-### Example video animation on AGQuad
+### Example video animation with AGQuad
 
 [![ScreenShot](https://raw.github.com/hfossli/AGGeometryKit/master/AGGeometryKit/screenshot_youtube_XuzLhqe10u0.png)](http://www.youtube.com/watch?v=XuzLhqe10u0)
 
 
-### Example code animation on AGQuad
+### Example code animation with AGQuad
 
     - (IBAction)animateToOtherShape:(id)sender
     {
