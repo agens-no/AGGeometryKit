@@ -161,7 +161,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A3270F2616D5675800A92C03 /* AGGeometryKit */ = {
+		A3270F2616D5675800A92C03 /* AGGeometryKitSamples */ = {
 			isa = PBXGroup;
 			children = (
 				A3270F2716D5675800A92C03 /* AGAppDelegate.h */,
@@ -180,7 +180,7 @@
 				A3EE526716EDEE83007706C6 /* easing.c */,
 				A3EE526816EDEE83007706C6 /* easing.h */,
 			);
-			path = AGGeometryKit;
+			path = AGGeometryKitSamples;
 			sourceTree = "<group>";
 		};
 		A3270F3516D5675800A92C03 /* AGGeometryKitTests */ = {
@@ -198,7 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				A333A5EF16A9A59200E334AD /* Source */,
-				A3270F2616D5675800A92C03 /* AGGeometryKit */,
+				A3270F2616D5675800A92C03 /* AGGeometryKitSamples */,
 				A3270F3516D5675800A92C03 /* AGGeometryKitTests */,
 				A333A59316A9A3BD00E334AD /* Frameworks */,
 				A333A59116A9A3BD00E334AD /* Products */,
