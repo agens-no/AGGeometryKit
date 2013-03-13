@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 Håvard Fossli. All rights reserved.
 //
 
-#import "AGGeometry.h"
 #import "AGPoint.h"
 #import "AGMath.h"
 #import "AGLine.h"
