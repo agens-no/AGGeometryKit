@@ -23,10 +23,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AGAppDelegate : UIResponder <UIApplicationDelegate>
+@interface AGAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) UISplitViewController *splitViewController;
+@property (strong, nonatomic) UITabBarController *tabBarController;
 
 @end
