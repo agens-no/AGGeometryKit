@@ -8,10 +8,14 @@ A bundle of small classes which enriches your possibilities with UIKit and CoreA
 * Additions for CGGeometry for common CGRect, CGSize and CGPoint calculations
 * AGQuad which helps you create CATransform3D from convex quadrilaterals (basically you can turn any rectangle into any convex four-cornered shape)
 * Some usefull math functions
-* Easing functions 
- 
 
-### Example code property 'quadrilateral' on CALayer
+More about quadrilaterals: http://en.wikipedia.org/wiki/Quadrilateral
+
+**Keywords**: Convex quadrilateral, simple quadrilateral, tangential, kite, rhombus, square, trapezium, trapezoid, parallelogram, bicentric, cyclic
+
+
+Example code property 'quadrilateral' on CALayer
+------
 
 You can access `quadrilateral` as a property just like you would do with `frame`, `center` or `bounds`.
 
@@ -22,13 +26,17 @@ You can access `quadrilateral` as a property just like you would do with `frame`
     quad.br.y += 50;
     
     self.imageView.layer.quadrilateral = quad;
+    
+It acts very similar to how `frame` relates to `center`, `transform` and `bounds`. In other words always reflects current presented state. With no transform as identity the quadrilateral returned will be the quadrilateral for `bounds`.
 
-### Example video animation with AGQuad
+Example video animation with AGQuad
+------
 
 [![ScreenShot](https://raw.github.com/hfossli/AGGeometryKit/master/AGGeometryKit/screenshot_youtube_XuzLhqe10u0.png)](http://www.youtube.com/watch?v=XuzLhqe10u0)
 
 
-### Example code animation with AGQuad
+Example code animation with AGQuad
+------
 
     - (IBAction)animateToOtherShape:(id)sender
     {
@@ -55,5 +63,14 @@ You can access `quadrilateral` as a property just like you would do with `frame`
                                                             onComplete:nil];
     }
 
+Cocoa pods
+-------
+    
+It is added to the Cocoa Pods public repository.
+
+Full kit: AGGeometryKit
+
+Only the quadrilateral part: AGQuadKit
+    
 
 [![Agens | Digital craftsmanship](http://static.agens.no/images/agens_logo_w_slogan_avenir_small.png)](http://agens.no/)
