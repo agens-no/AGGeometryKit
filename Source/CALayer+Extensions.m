@@ -70,12 +70,12 @@
 {
     if(self.superlayer == nil)
     {
-        [NSException raise:NSInternalInconsistencyException format:@"To calculate the outer point for a givven inner point it is required that the layer have a superlayer. This can hopefully be improved."];
+        [NSException raise:NSInternalInconsistencyException format:@"[CALayer-Extensions] To calculate the outer point for a givven inner point it is required that the layer have a superlayer. This can hopefully be improved."];
     }
     
     if(!CGPointEqualToPoint(self.anchorPoint, CGPointZero))
     {
-        [NSException raise:NSInternalInconsistencyException format:@"This method is *dumb* and currently only supports anchorpoint to be 0"];
+        [NSException raise:NSInternalInconsistencyException format:@"[CALayer-Extensions] This method is *dumb* and currently only supports anchorpoint to be 0"];
     }
     
     CGPoint outerPoint = [self convertPoint:innerPoint toLayer:self.superlayer];
@@ -84,7 +84,7 @@
     
     if(outerPoint.x != outerPoint.x || outerPoint.y != outerPoint.y)
     {
-        [NSException raise:NSInternalInconsistencyException format:@"Calculated NaN values from CALayer %@", self];
+        [NSException raise:NSInternalInconsistencyException format:@"[CALayer-Extensions] Calculated NaN values from CALayer %@", self];
     }
     
     return outerPoint;
