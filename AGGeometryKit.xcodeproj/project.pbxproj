@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0BC28BBF16EF6A3700D86094 /* AngleConverterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC28BBD16EF6A3700D86094 /* AngleConverterController.xib */; };
-		0BC28BC016EF6A3700D86094 /* AngleConverterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC28BBE16EF6A3700D86094 /* AngleConverterController.m */; };
 		0BC28BC316EF6A8900D86094 /* UIView+AngleConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC28BC216EF6A8900D86094 /* UIView+AngleConverter.m */; };
 		A30B0C4116CE859500856E00 /* AGPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A30B0C4016CE859400856E00 /* AGPoint.m */; };
 		A30B0C4216CE859500856E00 /* AGPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A30B0C4016CE859400856E00 /* AGPoint.m */; };
@@ -68,6 +66,10 @@
 		A384023D16D568C2000C698B /* UIView+FrameExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = A384023B16D568C2000C698B /* UIView+FrameExtra.m */; };
 		A3EE526916EDEE83007706C6 /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = A3EE526716EDEE83007706C6 /* easing.c */; };
 		A3EE526A16EDEE83007706C6 /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = A3EE526716EDEE83007706C6 /* easing.c */; };
+		A3EE526F16F07479007706C6 /* AngleConverterController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE526D16F07479007706C6 /* AngleConverterController.m */; };
+		A3EE527016F07479007706C6 /* AngleConverterController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE526D16F07479007706C6 /* AngleConverterController.m */; };
+		A3EE527116F07479007706C6 /* AngleConverterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3EE526E16F07479007706C6 /* AngleConverterController.xib */; };
+		A3EE527216F07479007706C6 /* AngleConverterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3EE526E16F07479007706C6 /* AngleConverterController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,9 +83,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0BC28BBC16EF6A3700D86094 /* AngleConverterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AngleConverterController.h; path = AGGeometryKit/AngleConverterController.h; sourceTree = SOURCE_ROOT; };
-		0BC28BBD16EF6A3700D86094 /* AngleConverterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AngleConverterController.xib; path = AGGeometryKit/AngleConverterController.xib; sourceTree = SOURCE_ROOT; };
-		0BC28BBE16EF6A3700D86094 /* AngleConverterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AngleConverterController.m; path = AGGeometryKit/AngleConverterController.m; sourceTree = SOURCE_ROOT; };
 		0BC28BC116EF6A8900D86094 /* UIView+AngleConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+AngleConverter.h"; path = "AGGeometryKit/UIView+AngleConverter.h"; sourceTree = SOURCE_ROOT; };
 		0BC28BC216EF6A8900D86094 /* UIView+AngleConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+AngleConverter.m"; path = "AGGeometryKit/UIView+AngleConverter.m"; sourceTree = SOURCE_ROOT; };
 		A30B0C3F16CE859400856E00 /* AGPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPoint.h; sourceTree = "<group>"; };
@@ -140,6 +139,9 @@
 		A3EE526716EDEE83007706C6 /* easing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = easing.c; sourceTree = "<group>"; };
 		A3EE526816EDEE83007706C6 /* easing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = easing.h; sourceTree = "<group>"; };
 		A3EE526B16EE63F6007706C6 /* AGQuadKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGQuadKit.h; sourceTree = "<group>"; };
+		A3EE526C16F07479007706C6 /* AngleConverterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AngleConverterController.h; sourceTree = "<group>"; };
+		A3EE526D16F07479007706C6 /* AngleConverterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AngleConverterController.m; sourceTree = "<group>"; };
+		A3EE526E16F07479007706C6 /* AngleConverterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AngleConverterController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,9 @@
 				A3270F2B16D5675800A92C03 /* AGQuadSample.h */,
 				A3270F2C16D5675800A92C03 /* AGQuadSample.m */,
 				A3270F2D16D5675800A92C03 /* AGQuadSample.xib */,
+				A3EE526C16F07479007706C6 /* AngleConverterController.h */,
+				A3EE526D16F07479007706C6 /* AngleConverterController.m */,
+				A3EE526E16F07479007706C6 /* AngleConverterController.xib */,
 				A3270F2E16D5675800A92C03 /* Default-568h@2x.png */,
 				A3270F2F16D5675800A92C03 /* Default.png */,
 				A3270F3016D5675800A92C03 /* Default@2x.png */,
@@ -237,11 +242,6 @@
 		A333A5EF16A9A59200E334AD /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				0BC28BC116EF6A8900D86094 /* UIView+AngleConverter.h */,
-				0BC28BC216EF6A8900D86094 /* UIView+AngleConverter.m */,
-				0BC28BBC16EF6A3700D86094 /* AngleConverterController.h */,
-				0BC28BBE16EF6A3700D86094 /* AngleConverterController.m */,
-				0BC28BBD16EF6A3700D86094 /* AngleConverterController.xib */,
 				A3270F2116D5643800A92C03 /* AGGeometryKit.h */,
 				A3EE526B16EE63F6007706C6 /* AGQuadKit.h */,
 				A3270F1D16D5642C00A92C03 /* AGCorner.h */,
@@ -270,6 +270,8 @@
 				A384023B16D568C2000C698B /* UIView+FrameExtra.m */,
 				A30B0C4C16D2229600856E00 /* CAAnimationBlockDelegate.h */,
 				A30B0C4D16D2229600856E00 /* CAAnimationBlockDelegate.m */,
+				0BC28BC116EF6A8900D86094 /* UIView+AngleConverter.h */,
+				0BC28BC216EF6A8900D86094 /* UIView+AngleConverter.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -353,7 +355,7 @@
 				A3270F4916D5675800A92C03 /* InfoPlist.strings in Resources */,
 				A3270F4D16D5675800A92C03 /* sampleimg.jpg in Resources */,
 				A3270F5316D5675800A92C03 /* InfoPlist.strings in Resources */,
-				0BC28BBF16EF6A3700D86094 /* AngleConverterController.xib in Resources */,
+				A3EE527116F07479007706C6 /* AngleConverterController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +370,7 @@
 				A3270F4A16D5675800A92C03 /* InfoPlist.strings in Resources */,
 				A3270F4E16D5675800A92C03 /* sampleimg.jpg in Resources */,
 				A3270F5416D5675800A92C03 /* InfoPlist.strings in Resources */,
+				A3EE527216F07479007706C6 /* AngleConverterController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,8 +412,8 @@
 				A3270F4B16D5675800A92C03 /* main.m in Sources */,
 				A384023C16D568C2000C698B /* UIView+FrameExtra.m in Sources */,
 				A3EE526916EDEE83007706C6 /* easing.c in Sources */,
-				0BC28BC016EF6A3700D86094 /* AngleConverterController.m in Sources */,
 				0BC28BC316EF6A8900D86094 /* UIView+AngleConverter.m in Sources */,
+				A3EE526F16F07479007706C6 /* AngleConverterController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +441,7 @@
 				A384023916D56829000C698B /* AGCornerTest.m in Sources */,
 				A384023D16D568C2000C698B /* UIView+FrameExtra.m in Sources */,
 				A3EE526A16EDEE83007706C6 /* easing.c in Sources */,
+				A3EE527016F07479007706C6 /* AngleConverterController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
