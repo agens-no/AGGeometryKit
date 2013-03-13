@@ -305,3 +305,29 @@ CGPoint CGPointApplyCATransform3D(CGPoint point, CATransform3D transform, CGPoin
     
     return retval;
 }
+
+extern CGPoint CGPointVectorNormalize(CGPoint v)
+{
+    CGFloat length = CGPointVectorGetLength(v);
+    if(length != 0.0)
+    {
+        v.x /= length;
+        v.y /= length;
+    }
+    return v;
+}
+
+extern CGFloat CGPointVectorGetLength(CGPoint v)
+{
+    return sqrtf(v.x * v.x + v.y * v.y);
+}
+
+extern CGFloat CGPointVectorDotProduct(CGPoint v1, CGPoint v2)
+{
+    return (v1.x * v2.x + v1.y * v2.y);
+}
+
+extern CGFloat CGPointVectorCrossProductZComponent(CGPoint v1, CGPoint v2)
+{
+    return v1.x * v2.y - v1.y * v2.x;
+}

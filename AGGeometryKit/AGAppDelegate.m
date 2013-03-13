@@ -23,6 +23,7 @@
 
 #import "AGAppDelegate.h"
 #import "AGQuadSample.h"
+#import "AngleConverterController.h"
 
 @implementation AGAppDelegate
 
@@ -32,10 +33,14 @@
     // Override point for customization after application launch.
 
     AGQuadSample *quadSampleController = [[AGQuadSample alloc] initWithNibName:nil bundle:nil];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:quadSampleController];
-    navigationController.navigationBarHidden = YES;
+    
+    quadSampleController.title = @"QuadSample";
+    
+    UIViewController *viewController2 = [[AngleConverterController alloc] initWithNibName:@"AngleConverterController" bundle:nil];
+    self.tabBarController = [[UITabBarController alloc] init];
+    self.tabBarController.viewControllers = @[quadSampleController, viewController2];
 
-    self.window.rootViewController = navigationController;
+    self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
 }

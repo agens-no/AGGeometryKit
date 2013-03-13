@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BC28BBF16EF6A3700D86094 /* AngleConverterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC28BBD16EF6A3700D86094 /* AngleConverterController.xib */; };
+		0BC28BC016EF6A3700D86094 /* AngleConverterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC28BBE16EF6A3700D86094 /* AngleConverterController.m */; };
+		0BC28BC316EF6A8900D86094 /* UIView+AngleConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC28BC216EF6A8900D86094 /* UIView+AngleConverter.m */; };
 		A30B0C4116CE859500856E00 /* AGPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A30B0C4016CE859400856E00 /* AGPoint.m */; };
 		A30B0C4216CE859500856E00 /* AGPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A30B0C4016CE859400856E00 /* AGPoint.m */; };
 		A30B0C4516CE8DCD00856E00 /* CALayer+AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A30B0C4416CE8DCD00856E00 /* CALayer+AGQuad.m */; };
@@ -78,6 +81,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BC28BBC16EF6A3700D86094 /* AngleConverterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AngleConverterController.h; path = AGGeometryKit/AngleConverterController.h; sourceTree = SOURCE_ROOT; };
+		0BC28BBD16EF6A3700D86094 /* AngleConverterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AngleConverterController.xib; path = AGGeometryKit/AngleConverterController.xib; sourceTree = SOURCE_ROOT; };
+		0BC28BBE16EF6A3700D86094 /* AngleConverterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AngleConverterController.m; path = AGGeometryKit/AngleConverterController.m; sourceTree = SOURCE_ROOT; };
+		0BC28BC116EF6A8900D86094 /* UIView+AngleConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+AngleConverter.h"; path = "AGGeometryKit/UIView+AngleConverter.h"; sourceTree = SOURCE_ROOT; };
+		0BC28BC216EF6A8900D86094 /* UIView+AngleConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+AngleConverter.m"; path = "AGGeometryKit/UIView+AngleConverter.m"; sourceTree = SOURCE_ROOT; };
 		A30B0C3F16CE859400856E00 /* AGPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPoint.h; sourceTree = "<group>"; };
 		A30B0C4016CE859400856E00 /* AGPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPoint.m; sourceTree = "<group>"; };
 		A30B0C4316CE8DCD00856E00 /* CALayer+AGQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+AGQuad.h"; sourceTree = "<group>"; };
@@ -161,7 +169,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A3270F2616D5675800A92C03 /* AGGeometryKitSamples */ = {
+		A3270F2616D5675800A92C03 /* AGGeometryKit */ = {
 			isa = PBXGroup;
 			children = (
 				A3270F2716D5675800A92C03 /* AGAppDelegate.h */,
@@ -180,7 +188,7 @@
 				A3EE526716EDEE83007706C6 /* easing.c */,
 				A3EE526816EDEE83007706C6 /* easing.h */,
 			);
-			path = AGGeometryKitSamples;
+			path = AGGeometryKit;
 			sourceTree = "<group>";
 		};
 		A3270F3516D5675800A92C03 /* AGGeometryKitTests */ = {
@@ -198,7 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				A333A5EF16A9A59200E334AD /* Source */,
-				A3270F2616D5675800A92C03 /* AGGeometryKitSamples */,
+				A3270F2616D5675800A92C03 /* AGGeometryKit */,
 				A3270F3516D5675800A92C03 /* AGGeometryKitTests */,
 				A333A59316A9A3BD00E334AD /* Frameworks */,
 				A333A59116A9A3BD00E334AD /* Products */,
@@ -229,6 +237,11 @@
 		A333A5EF16A9A59200E334AD /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				0BC28BC116EF6A8900D86094 /* UIView+AngleConverter.h */,
+				0BC28BC216EF6A8900D86094 /* UIView+AngleConverter.m */,
+				0BC28BBC16EF6A3700D86094 /* AngleConverterController.h */,
+				0BC28BBE16EF6A3700D86094 /* AngleConverterController.m */,
+				0BC28BBD16EF6A3700D86094 /* AngleConverterController.xib */,
 				A3270F2116D5643800A92C03 /* AGGeometryKit.h */,
 				A3EE526B16EE63F6007706C6 /* AGQuadKit.h */,
 				A3270F1D16D5642C00A92C03 /* AGCorner.h */,
@@ -340,6 +353,7 @@
 				A3270F4916D5675800A92C03 /* InfoPlist.strings in Resources */,
 				A3270F4D16D5675800A92C03 /* sampleimg.jpg in Resources */,
 				A3270F5316D5675800A92C03 /* InfoPlist.strings in Resources */,
+				0BC28BBF16EF6A3700D86094 /* AngleConverterController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +409,8 @@
 				A3270F4B16D5675800A92C03 /* main.m in Sources */,
 				A384023C16D568C2000C698B /* UIView+FrameExtra.m in Sources */,
 				A3EE526916EDEE83007706C6 /* easing.c in Sources */,
+				0BC28BC016EF6A3700D86094 /* AngleConverterController.m in Sources */,
+				0BC28BC316EF6A8900D86094 /* UIView+AngleConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
