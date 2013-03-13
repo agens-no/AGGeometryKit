@@ -66,11 +66,6 @@ Example code animation with AGQuad
 Cocoa pods
 -------
     
-It is added to the Cocoa Pods public repository.
-
-Full kit: AGGeometryKit
-
-Only the quadrilateral part: AGQuadKit
-    
+It is added to the Cocoa Pods public repository as `AGGeometryKit`.    
 
 [![Agens | Digital craftsmanship](http://static.agens.no/images/agens_logo_w_slogan_avenir_small.png)](http://agens.no/)
