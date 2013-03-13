@@ -10,6 +10,7 @@
 
 @interface UIView (AngleConverter)
 
+- (CGFloat)convertAngle:(CGFloat)angle toView:(UIView *)view;
 - (CGFloat)convertAngleOfViewInRelationToView:(UIView *)view;
 
 @end
