@@ -71,6 +71,7 @@
 		A3EE527216F07479007706C6 /* AngleConverterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3EE526E16F07479007706C6 /* AngleConverterController.xib */; };
 		A3EE52BF16F1C5C6007706C6 /* UIView+AngleConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE52BE16F1C5C6007706C6 /* UIView+AngleConverter.m */; };
 		A3EE52C016F1C5C6007706C6 /* UIView+AngleConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE52BE16F1C5C6007706C6 /* UIView+AngleConverter.m */; };
+		A3EE52C216F1E02A007706C6 /* UIView+FrameExtraTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE52C116F1E029007706C6 /* UIView+FrameExtraTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,7 @@
 		A3EE526E16F07479007706C6 /* AngleConverterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AngleConverterController.xib; sourceTree = "<group>"; };
 		A3EE52BD16F1C5C6007706C6 /* UIView+AngleConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AngleConverter.h"; sourceTree = "<group>"; };
 		A3EE52BE16F1C5C6007706C6 /* UIView+AngleConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AngleConverter.m"; sourceTree = "<group>"; };
+		A3EE52C116F1E029007706C6 /* UIView+FrameExtraTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameExtraTest.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +271,7 @@
 				A333A5F816A9A59200E334AD /* CALayer+Extensions.m */,
 				A384023A16D568C2000C698B /* UIView+FrameExtra.h */,
 				A384023B16D568C2000C698B /* UIView+FrameExtra.m */,
+				A3EE52C116F1E029007706C6 /* UIView+FrameExtraTest.m */,
 				A30B0C4C16D2229600856E00 /* CAAnimationBlockDelegate.h */,
 				A30B0C4D16D2229600856E00 /* CAAnimationBlockDelegate.m */,
 				A3EE52BD16F1C5C6007706C6 /* UIView+AngleConverter.h */,
@@ -444,6 +447,7 @@
 				A3EE526A16EDEE83007706C6 /* easing.c in Sources */,
 				A3EE527016F07479007706C6 /* AngleConverterController.m in Sources */,
 				A3EE52C016F1C5C6007706C6 /* UIView+AngleConverter.m in Sources */,
+				A3EE52C216F1E02A007706C6 /* UIView+FrameExtraTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
