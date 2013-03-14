@@ -27,7 +27,7 @@
     
     CGFloat crossZ = CGPointVectorCrossProductZComponent(v1Normalized, v2Normalized);
     CGFloat cosAngleInRelation = CGPointVectorDotProduct(v1Normalized, v2Normalized);
-    CGFloat angleInRelation = acosf(cosAngleInRelation);
+    CGFloat angleInRelation = acosf(cosAngleInRelation) + angle;
     
     if (crossZ > 0.0f)
     {
