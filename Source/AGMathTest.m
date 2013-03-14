@@ -154,11 +154,6 @@
     STAssertEquals(index, 3u, nil);
 }
 
-- (float)floatValue
-{
-    return 1.3333333333333333333333;
-}
-
 - (void)testFloatToDoubleZeroFill
 {
     double doubleValue = 1.256250;
