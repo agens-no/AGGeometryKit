@@ -13,6 +13,20 @@ More about quadrilaterals: http://en.wikipedia.org/wiki/Quadrilateral
 **Keywords**: Convex quadrilateral, simple quadrilateral, tangential, kite, rhombus, square, trapezium, trapezoid, parallelogram, bicentric, cyclic
 
 
+What can you do with it?
+------
+
+I'm most curious myself about this part. You can use the quadrilateral on any view, even webviews with just as good performance as you would have not using it. 
+Send me mail or twitter me anytime if you want to discuss possibilities and things you try to acheive. :)
+
+Bartosz Ciechanowski created a ![genie effect](https://github.com/Ciechan/BCGenieEffect/) around desember 2012 which derives from a fraction of the code found here.
+
+Example video animation with AGQuad
+------
+
+[![ScreenShot](https://raw.github.com/hfossli/AGGeometryKit/master/AGGeometryKit/screenshot_youtube_XuzLhqe10u0.png)](http://www.youtube.com/watch?v=XuzLhqe10u0)
+
+
 Example code property 'quadrilateral' on CALayer
 ------
 
@@ -27,19 +41,6 @@ You can access `quadrilateral` as a property just like you would do with `frame`
     self.imageView.layer.quadrilateral = quad;
     
 It acts very similar to how `frame` relates to `center`, `transform` and `bounds`. In other words always reflects current presented state. With no transform as identity the quadrilateral returned will be the quadrilateral for `bounds`.
-
-Example video animation with AGQuad
-------
-
-[![ScreenShot](https://raw.github.com/hfossli/AGGeometryKit/master/AGGeometryKit/screenshot_youtube_XuzLhqe10u0.png)](http://www.youtube.com/watch?v=XuzLhqe10u0)
-
-
-What can you do with it?
-------
-
-I'm most curious myself about this part. You can use the quadrilateral on any view, even webviews with just as good performance as you would have not using it. 
-
-Bartosz Ciechanowski created a ![genie effect](https://github.com/Ciechan/BCGenieEffect/) around desember 2012 which derives from a fraction of the code found here.
 
 Example code animation with AGQuad
 ------
