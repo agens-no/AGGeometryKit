@@ -1,7 +1,6 @@
 #AGGeometryKit
 
-
-A bundle of small classes which enriches your possibilities with UIKit and CoreAnimation.
+Create CATransform3D with quadrilaterals, useful math functions, calculate angle between views ++
 
 ### Consists of
 
