@@ -24,6 +24,13 @@
 #import <Foundation/Foundation.h>
 #import "AGPoint.h"
 
+/*
+ tl = top left
+ tr = top right
+ br = bottom right
+ bl = bottom left
+ */
+
 typedef union AGQuad {
     struct { AGPoint tl, tr, br, bl; };
     AGPoint v[4];
