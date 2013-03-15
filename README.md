@@ -70,6 +70,8 @@ Example code animation with AGQuad
                                                             onComplete:nil];
     }
 
+Standard CoreAnimation-animation using CATransform3D with custom interpolation between quad points.
+
 Cocoa pods
 -------
     
