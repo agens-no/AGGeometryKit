@@ -35,8 +35,8 @@ You can access `quadrilateral` as a property just like you would do with `frame`
     AGQuad quad = self.imageView.layer.quadrilateral;
     NSLog(@"Quad: %@", NSStringFromAGQuad(quad));
     
-    quad.br.x += 20;
-    quad.br.y += 50;
+    quad.br.x += 20; // bottom right x
+    quad.br.y += 50; // bottom right y
     
     self.imageView.layer.quadrilateral = quad;
     
@@ -48,17 +48,17 @@ Example code animation with AGQuad
     - (IBAction)animateToOtherShape:(id)sender
     {
         AGQuad quad = AGQuadMakeWithCGRect(self.imageView.bounds);
-        quad.tl.x -= 40; // top left
-        quad.tr.y -= 125; // top right
-        quad.br.y += 65; // bottom right
-        quad.bl.x += 40; // bottom left
+        quad.tl.x -= 40; // top left x
+        quad.tr.y -= 125; // top right y
+        quad.br.y += 65; // bottom right y
+        quad.bl.x += 40; // bottom left x
         [self animateToQuad:quad];
     }
     
     - (void)animateToQuad:(AGQuad)quad
     {        
         double (^interpolationFunction)(double) = ^(double p) {
-            return (double) ElasticEaseOut(p);
+            return (double) ElasticEaseOut(p); 
         };
         
         [self.imageView.layer animateFromPresentedStateToQuadrilateral:quad
