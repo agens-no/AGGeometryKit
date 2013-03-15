@@ -35,6 +35,13 @@ Example video animation with AGQuad
 [![ScreenShot](https://raw.github.com/hfossli/AGGeometryKit/master/AGGeometryKit/screenshot_youtube_XuzLhqe10u0.png)](http://www.youtube.com/watch?v=XuzLhqe10u0)
 
 
+What can you do with it?
+------
+
+I'm most curious myself about this part. You can use the quadrilateral on any view, even webviews with just as good performance as you would have not using it. 
+
+Bartosz Ciechanowski created a ![genie effect](https://github.com/Ciechan/BCGenieEffect/) around desember 2012 which derives from a fraction of the code found here.
+
 Example code animation with AGQuad
 ------
 
