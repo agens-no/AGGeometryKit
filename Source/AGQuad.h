@@ -69,5 +69,5 @@ inline NSString * NSStringFromAGQuad(AGQuad q);
  *   http://upload.wikimedia.org/wikipedia/commons/f/f1/Quadrilateral_hierarchy.png
  */
 CATransform3D CATransform3DWithQuadFromBounds(AGQuad q, CGRect rect);
-
+CATransform3D CATransform3DWithQuadFromRect(AGQuad q, CGRect rect);
 
