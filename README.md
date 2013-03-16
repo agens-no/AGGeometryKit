@@ -6,7 +6,7 @@ Create CATransform3D with quadrilaterals, useful math functions, calculate angle
 
 * Additions for CGGeometry for common CGRect, CGSize and CGPoint calculations
 * AGQuad which helps you create CATransform3D from convex quadrilaterals (basically you can turn any rectangle into any convex four-cornered shape)
-* Some usefull math functions
+* Some useful math functions
 
 More about quadrilaterals: http://en.wikipedia.org/wiki/Quadrilateral
 
