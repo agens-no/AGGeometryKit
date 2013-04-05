@@ -81,7 +81,7 @@ These things usually tend to mess up
 - autoresizing mask (to be 100% sure it is good for debugging to turn off `autoresizesSubviews`)
 - anchorPoint MUST be {0, 0} always when using quadrilaterals
 
-I sometimes create a view to represent the quadrilateral if I'm having issues getting the right quadrilateral.
+I sometimes create a view to *represent* the quadrilateral if I'm having issues getting the right quadrilateral.
 
     UIView *quadPreview = [[UIView alloc] init];
     quadPreview.frame = quadView.frame;
@@ -90,7 +90,7 @@ I sometimes create a view to represent the quadrilateral if I'm having issues ge
     quadPreview.layer.shadowOpacity = 1.0;
     quadPreview.layer.shadowRadius = 0.0;
     quadPreview.layer.shadowOffset = CGSizeZero;
-    quadPreview.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.0];
+    quadPreview.backgroundColor = [UIColor clearColor];
     [quadView.superview addSubview:quadPreview];
 
 Cocoa pods
