@@ -11,7 +11,3 @@
 
 // Soooo many juicy bits to be found here http://grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/2.2_r1.1/android/opengl/Matrix.java
 
-CATransform3D CATransform3DForRectToRect(CGRect r1, CGRect r2)
-{
-    
-}
