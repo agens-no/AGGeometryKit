@@ -41,6 +41,12 @@
   __x <= __high && __x >= __low;\
   })
 
+#define M_TAU       6.28318530717958647692528676655900576   /* tau                  */
+#define M_TAU_2     M_PI                                    /* tau/2 = pi           */
+#define M_TAU_4     M_PI_2                                  /* tau/4 = pi/2         */
+#define M_1_TAU     0.15915494309189533576888376337251436   /* 1/tau = 1/2pi        */
+#define M_2_TA      M_1_PI                                  /* 2/tau = 2/2pi = 1/pi */
+
 inline float interpolatef(float startValue, float endValue, float progress);
 inline double interpolate(double startValue, double endValue, double progress);
 

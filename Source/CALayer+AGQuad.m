@@ -64,17 +64,6 @@
     return animation;
 }
 
-- (void)setQuadrilateral:(AGQuad)quadrilateral
-{
-    [self ensureAnchorPointIsSetToZero];
-    
-    if(!AGQuadEqual(quadrilateral, AGQuadZero))
-    {
-        CATransform3D t = CATransform3DWithQuadFromBounds(quadrilateral, self.bounds);
-        self.transform = t;
-    }
-}
-
 - (AGQuad)quadrilateral
 {
     CGPoint tl = [self outerPointForInnerPoint:CGPointMake(0, 0)];
@@ -85,6 +74,17 @@
     AGQuad q = AGQuadMakeWithCGPoints(tl, tr, br, bl);
     
     return q;
+}
+
+- (void)setQuadrilateral:(AGQuad)quadrilateral
+{
+    [self ensureAnchorPointIsSetToZero];
+    
+    if(!AGQuadEqual(quadrilateral, AGQuadZero))
+    {
+        CATransform3D t = CATransform3DWithQuadFromBounds(quadrilateral, self.bounds);
+        self.transform = t;
+    }
 }
 
 - (void)animateFromQuadrilateral:(AGQuad)quad1

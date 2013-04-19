@@ -21,8 +21,22 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import "UIBezierPath+AGQuad.h"
 
-#ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
-#endif
+@implementation UIBezierPath (AGQuad)
+
++ (UIBezierPath *)bezierPathWithAGQuad:(AGQuad)q
+{
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:AGPointAsCGPoint(q.v[0])];
+    
+    for (int i = 1; i < 4; i++) {
+        [path addLineToPoint:AGPointAsCGPoint(q.v[i])];
+    }
+    
+    [path closePath];
+    
+    return path;
+}
+
+@end
