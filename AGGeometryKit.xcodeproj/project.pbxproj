@@ -75,6 +75,10 @@
 		A3EE52C416F1E543007706C6 /* UIView+AngleConverterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE52C316F1E542007706C6 /* UIView+AngleConverterTest.m */; };
 		A3EE52C716F3980C007706C6 /* CATransform3D+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE52C616F3980B007706C6 /* CATransform3D+Extra.m */; };
 		A3EE52C816F3980C007706C6 /* CATransform3D+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE52C616F3980B007706C6 /* CATransform3D+Extra.m */; };
+		A3F77D3B16FA3AC700415B24 /* UIBezierPath+AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F77D3A16FA3AC700415B24 /* UIBezierPath+AGQuad.m */; };
+		A3F77D3C16FA3AC700415B24 /* UIBezierPath+AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F77D3A16FA3AC700415B24 /* UIBezierPath+AGQuad.m */; };
+		A3F77D3F16FA54C400415B24 /* JAValueToString.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F77D3E16FA54C300415B24 /* JAValueToString.m */; };
+		A3F77D4016FA54C400415B24 /* JAValueToString.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F77D3E16FA54C300415B24 /* JAValueToString.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +155,10 @@
 		A3EE52C316F1E542007706C6 /* UIView+AngleConverterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AngleConverterTest.m"; sourceTree = "<group>"; };
 		A3EE52C516F3980A007706C6 /* CATransform3D+Extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CATransform3D+Extra.h"; sourceTree = "<group>"; };
 		A3EE52C616F3980B007706C6 /* CATransform3D+Extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransform3D+Extra.m"; sourceTree = "<group>"; };
+		A3F77D3916FA3AC700415B24 /* UIBezierPath+AGQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+AGQuad.h"; sourceTree = "<group>"; };
+		A3F77D3A16FA3AC700415B24 /* UIBezierPath+AGQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+AGQuad.m"; sourceTree = "<group>"; };
+		A3F77D3D16FA54C300415B24 /* JAValueToString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAValueToString.h; sourceTree = "<group>"; };
+		A3F77D3E16FA54C300415B24 /* JAValueToString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAValueToString.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +207,8 @@
 				A3270F3116D5675800A92C03 /* InfoPlist.strings */,
 				A3270F3316D5675800A92C03 /* main.m */,
 				A3270F3416D5675800A92C03 /* sampleimg.jpg */,
+				A3F77D3D16FA54C300415B24 /* JAValueToString.h */,
+				A3F77D3E16FA54C300415B24 /* JAValueToString.m */,
 				A3EE526716EDEE83007706C6 /* easing.c */,
 				A3EE526816EDEE83007706C6 /* easing.h */,
 			);
@@ -273,6 +283,8 @@
 				A30B0C4716CE8F3900856E00 /* AGQuadTest.m */,
 				A3270F2216D564D600A92C03 /* NSValue+AGQuad.h */,
 				A3270F2316D564D600A92C03 /* NSValue+AGQuad.m */,
+				A3F77D3916FA3AC700415B24 /* UIBezierPath+AGQuad.h */,
+				A3F77D3A16FA3AC700415B24 /* UIBezierPath+AGQuad.m */,
 				A30B0C4316CE8DCD00856E00 /* CALayer+AGQuad.h */,
 				A30B0C4416CE8DCD00856E00 /* CALayer+AGQuad.m */,
 				A333A5F716A9A59200E334AD /* CALayer+Extensions.h */,
@@ -428,6 +440,8 @@
 				A3EE526F16F07479007706C6 /* AngleConverterController.m in Sources */,
 				A3EE52BF16F1C5C6007706C6 /* UIView+AngleConverter.m in Sources */,
 				A3EE52C716F3980C007706C6 /* CATransform3D+Extra.m in Sources */,
+				A3F77D3B16FA3AC700415B24 /* UIBezierPath+AGQuad.m in Sources */,
+				A3F77D3F16FA54C400415B24 /* JAValueToString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +474,8 @@
 				A3EE52C216F1E02A007706C6 /* UIView+FrameExtraTest.m in Sources */,
 				A3EE52C416F1E543007706C6 /* UIView+AngleConverterTest.m in Sources */,
 				A3EE52C816F3980C007706C6 /* CATransform3D+Extra.m in Sources */,
+				A3F77D3C16FA3AC700415B24 /* UIBezierPath+AGQuad.m in Sources */,
+				A3F77D4016FA54C400415B24 /* JAValueToString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
