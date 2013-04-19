@@ -11,3 +11,12 @@
 
 // Soooo many juicy bits to be found here http://grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/2.2_r1.1/android/opengl/Matrix.java
 
+// http://iphonedevelopment.blogspot.no/2008/12/glulookat.html
+
+// http://www.opengl.org/wiki/GluPerspective_code
+
+// http://www.opengl.org/wiki/GluLookAt_code
+
+// http://what-when-how.com/opengl-programming-guide/projection-transformations-viewing-opengl-programming/
+
+// https://android.googlesource.com/
