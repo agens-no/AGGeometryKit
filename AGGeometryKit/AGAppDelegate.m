@@ -24,6 +24,7 @@
 #import "AGAppDelegate.h"
 #import "AGQuadSample.h"
 #import "AngleConverterController.h"
+#import "AGQuadCrop.h"
 
 @implementation AGAppDelegate
 
@@ -32,13 +33,26 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 
-    AGQuadSample *quadSampleController = [[AGQuadSample alloc] initWithNibName:nil bundle:nil];
+    NSMutableArray *controllers = [NSMutableArray array];
     
-    quadSampleController.title = @"QuadSample";
+    {
+        AGQuadCrop *vc = [[AGQuadCrop alloc] initWithNibName:nil bundle:nil];
+        vc.title = @"AGQuadCrop";
+        [controllers addObject:vc];
+    }
+    {
+        AGQuadSample *vc = [[AGQuadSample alloc] initWithNibName:nil bundle:nil];
+        vc.title = @"QuadSample";
+        [controllers addObject:vc];
+    }
+    {
+        AngleConverterController *vc = [[AngleConverterController alloc] initWithNibName:nil bundle:nil];
+        vc.title = @"AngleConverterController";
+        [controllers addObject:vc];
+    }
     
-    UIViewController *viewController2 = [[AngleConverterController alloc] initWithNibName:@"AngleConverterController" bundle:nil];
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = @[quadSampleController, viewController2];
+    self.tabBarController.viewControllers = controllers;
 
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];

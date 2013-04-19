@@ -75,6 +75,14 @@
 		A3EE52C416F1E543007706C6 /* UIView+AngleConverterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE52C316F1E542007706C6 /* UIView+AngleConverterTest.m */; };
 		A3EE52C716F3980C007706C6 /* CATransform3D+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE52C616F3980B007706C6 /* CATransform3D+Extra.m */; };
 		A3EE52C816F3980C007706C6 /* CATransform3D+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE52C616F3980B007706C6 /* CATransform3D+Extra.m */; };
+		A3EE52CB16F72973007706C6 /* UIImage+AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE52CA16F72973007706C6 /* UIImage+AGQuad.m */; };
+		A3EE52CC16F72973007706C6 /* UIImage+AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE52CA16F72973007706C6 /* UIImage+AGQuad.m */; };
+		A3F77D3216FA38EF00415B24 /* AGQuadCrop.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F77D3016FA38EF00415B24 /* AGQuadCrop.m */; };
+		A3F77D3316FA38EF00415B24 /* AGQuadCrop.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F77D3016FA38EF00415B24 /* AGQuadCrop.m */; };
+		A3F77D3416FA38EF00415B24 /* AGQuadCrop.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3F77D3116FA38EF00415B24 /* AGQuadCrop.xib */; };
+		A3F77D3516FA38EF00415B24 /* AGQuadCrop.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3F77D3116FA38EF00415B24 /* AGQuadCrop.xib */; };
+		A3F77D3716FA39B000415B24 /* quadcropsample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3F77D3616FA39B000415B24 /* quadcropsample.jpg */; };
+		A3F77D3816FA39B000415B24 /* quadcropsample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3F77D3616FA39B000415B24 /* quadcropsample.jpg */; };
 		A3F77D3B16FA3AC700415B24 /* UIBezierPath+AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F77D3A16FA3AC700415B24 /* UIBezierPath+AGQuad.m */; };
 		A3F77D3C16FA3AC700415B24 /* UIBezierPath+AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F77D3A16FA3AC700415B24 /* UIBezierPath+AGQuad.m */; };
 		A3F77D3F16FA54C400415B24 /* JAValueToString.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F77D3E16FA54C300415B24 /* JAValueToString.m */; };
@@ -155,6 +163,12 @@
 		A3EE52C316F1E542007706C6 /* UIView+AngleConverterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AngleConverterTest.m"; sourceTree = "<group>"; };
 		A3EE52C516F3980A007706C6 /* CATransform3D+Extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CATransform3D+Extra.h"; sourceTree = "<group>"; };
 		A3EE52C616F3980B007706C6 /* CATransform3D+Extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransform3D+Extra.m"; sourceTree = "<group>"; };
+		A3EE52C916F72973007706C6 /* UIImage+AGQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AGQuad.h"; sourceTree = "<group>"; };
+		A3EE52CA16F72973007706C6 /* UIImage+AGQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AGQuad.m"; sourceTree = "<group>"; };
+		A3F77D2F16FA38EF00415B24 /* AGQuadCrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGQuadCrop.h; sourceTree = "<group>"; };
+		A3F77D3016FA38EF00415B24 /* AGQuadCrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGQuadCrop.m; sourceTree = "<group>"; };
+		A3F77D3116FA38EF00415B24 /* AGQuadCrop.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGQuadCrop.xib; sourceTree = "<group>"; };
+		A3F77D3616FA39B000415B24 /* quadcropsample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = quadcropsample.jpg; sourceTree = "<group>"; };
 		A3F77D3916FA3AC700415B24 /* UIBezierPath+AGQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+AGQuad.h"; sourceTree = "<group>"; };
 		A3F77D3A16FA3AC700415B24 /* UIBezierPath+AGQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+AGQuad.m"; sourceTree = "<group>"; };
 		A3F77D3D16FA54C300415B24 /* JAValueToString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAValueToString.h; sourceTree = "<group>"; };
@@ -198,6 +212,9 @@
 				A3270F2B16D5675800A92C03 /* AGQuadSample.h */,
 				A3270F2C16D5675800A92C03 /* AGQuadSample.m */,
 				A3270F2D16D5675800A92C03 /* AGQuadSample.xib */,
+				A3F77D2F16FA38EF00415B24 /* AGQuadCrop.h */,
+				A3F77D3016FA38EF00415B24 /* AGQuadCrop.m */,
+				A3F77D3116FA38EF00415B24 /* AGQuadCrop.xib */,
 				A3EE526C16F07479007706C6 /* AngleConverterController.h */,
 				A3EE526D16F07479007706C6 /* AngleConverterController.m */,
 				A3EE526E16F07479007706C6 /* AngleConverterController.xib */,
@@ -206,6 +223,7 @@
 				A3270F3016D5675800A92C03 /* Default@2x.png */,
 				A3270F3116D5675800A92C03 /* InfoPlist.strings */,
 				A3270F3316D5675800A92C03 /* main.m */,
+				A3F77D3616FA39B000415B24 /* quadcropsample.jpg */,
 				A3270F3416D5675800A92C03 /* sampleimg.jpg */,
 				A3F77D3D16FA54C300415B24 /* JAValueToString.h */,
 				A3F77D3E16FA54C300415B24 /* JAValueToString.m */,
@@ -285,6 +303,8 @@
 				A3270F2316D564D600A92C03 /* NSValue+AGQuad.m */,
 				A3F77D3916FA3AC700415B24 /* UIBezierPath+AGQuad.h */,
 				A3F77D3A16FA3AC700415B24 /* UIBezierPath+AGQuad.m */,
+				A3EE52C916F72973007706C6 /* UIImage+AGQuad.h */,
+				A3EE52CA16F72973007706C6 /* UIImage+AGQuad.m */,
 				A30B0C4316CE8DCD00856E00 /* CALayer+AGQuad.h */,
 				A30B0C4416CE8DCD00856E00 /* CALayer+AGQuad.m */,
 				A333A5F716A9A59200E334AD /* CALayer+Extensions.h */,
@@ -381,6 +401,8 @@
 				A3270F4D16D5675800A92C03 /* sampleimg.jpg in Resources */,
 				A3270F5316D5675800A92C03 /* InfoPlist.strings in Resources */,
 				A3EE527116F07479007706C6 /* AngleConverterController.xib in Resources */,
+				A3F77D3416FA38EF00415B24 /* AGQuadCrop.xib in Resources */,
+				A3F77D3716FA39B000415B24 /* quadcropsample.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +418,8 @@
 				A3270F4E16D5675800A92C03 /* sampleimg.jpg in Resources */,
 				A3270F5416D5675800A92C03 /* InfoPlist.strings in Resources */,
 				A3EE527216F07479007706C6 /* AngleConverterController.xib in Resources */,
+				A3F77D3516FA38EF00415B24 /* AGQuadCrop.xib in Resources */,
+				A3F77D3816FA39B000415B24 /* quadcropsample.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +464,8 @@
 				A3EE526F16F07479007706C6 /* AngleConverterController.m in Sources */,
 				A3EE52BF16F1C5C6007706C6 /* UIView+AngleConverter.m in Sources */,
 				A3EE52C716F3980C007706C6 /* CATransform3D+Extra.m in Sources */,
+				A3EE52CB16F72973007706C6 /* UIImage+AGQuad.m in Sources */,
+				A3F77D3216FA38EF00415B24 /* AGQuadCrop.m in Sources */,
 				A3F77D3B16FA3AC700415B24 /* UIBezierPath+AGQuad.m in Sources */,
 				A3F77D3F16FA54C400415B24 /* JAValueToString.m in Sources */,
 			);
@@ -474,6 +500,8 @@
 				A3EE52C216F1E02A007706C6 /* UIView+FrameExtraTest.m in Sources */,
 				A3EE52C416F1E543007706C6 /* UIView+AngleConverterTest.m in Sources */,
 				A3EE52C816F3980C007706C6 /* CATransform3D+Extra.m in Sources */,
+				A3EE52CC16F72973007706C6 /* UIImage+AGQuad.m in Sources */,
+				A3F77D3316FA38EF00415B24 /* AGQuadCrop.m in Sources */,
 				A3F77D3C16FA3AC700415B24 /* UIBezierPath+AGQuad.m in Sources */,
 				A3F77D4016FA54C400415B24 /* JAValueToString.m in Sources */,
 			);
