@@ -6,7 +6,7 @@ Create CATransform3D with quadrilaterals, useful math functions, calculate angle
 
 * Additions for CGGeometry for common CGRect, CGSize and CGPoint calculations
 * AGQuad which helps you create CATransform3D from convex quadrilaterals (basically you can turn any rectangle into any convex four-cornered shape)
-* Some usefull math functions
+* Some useful math functions
 
 More about quadrilaterals: http://en.wikipedia.org/wiki/Quadrilateral
 
@@ -20,6 +20,7 @@ I'm most curious myself about this part. You can use the quadrilateral on any vi
 Send me mail or twitter me anytime if you want to discuss possibilities and things you try to acheive. :)
 
 Bartosz Ciechanowski created a ![genie effect](https://github.com/Ciechan/BCGenieEffect/) around desember 2012 which derives from a fraction of the code found here.
+
 
 Example video animation with AGQuad
 ------
@@ -71,6 +72,26 @@ Example code animation with AGQuad
     }
 
 Standard CoreAnimation-animation using CATransform3D with custom interpolation between quad points.
+
+
+Debugging
+------
+
+These things usually tend to mess up
+- autoresizing mask (to be 100% sure it is good for debugging to turn off `autoresizesSubviews`)
+- anchorPoint MUST be {0, 0} always when using quadrilaterals
+
+I sometimes create a view to *represent* the quadrilateral if I'm having issues getting the right quadrilateral.
+
+    UIView *quadPreview = [[UIView alloc] init];
+    quadPreview.frame = quadView.frame;
+    quadPreview.layer.shadowPath = [UIBezierPath bezierPathWithAGQuad:quad].CGPath;
+    quadPreview.layer.shadowColor = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:0.5].CGColor;
+    quadPreview.layer.shadowOpacity = 1.0;
+    quadPreview.layer.shadowRadius = 0.0;
+    quadPreview.layer.shadowOffset = CGSizeZero;
+    quadPreview.backgroundColor = [UIColor clearColor];
+    [quadView.superview addSubview:quadPreview];
 
 Cocoa pods
 -------
