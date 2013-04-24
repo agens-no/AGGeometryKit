@@ -25,7 +25,7 @@ Bartosz Ciechanowski created a ![genie effect](https://github.com/Ciechan/BCGeni
 Example video animation with AGQuad
 ------
 
-[![ScreenShot](https://raw.github.com/hfossli/AGGeometryKit/master/AGGeometryKit/screenshot_youtube_XuzLhqe10u0.png)](http://www.youtube.com/watch?v=XuzLhqe10u0)
+[![ScreenShot](https://raw.github.com/hfossli/AGGeometryKit/master/DemoApplication/AGGeometryKit/screenshot_youtube_XuzLhqe10u0.png)](http://www.youtube.com/watch?v=XuzLhqe10u0)
 
 
 Example code property 'quadrilateral' on CALayer
