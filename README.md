@@ -13,7 +13,7 @@ More about quadrilaterals: http://en.wikipedia.org/wiki/Quadrilateral
 **Keywords**: Convex quadrilateral, simple quadrilateral, tangential, kite, rhombus, square, trapezium, trapezoid, parallelogram, bicentric, cyclic
 
 
-What can you do with it?
+Usage
 ------
 
 I'm most curious myself about this part. You can use the quadrilateral on any view, even webviews with just as good performance as you would have not using it. 
