@@ -60,6 +60,8 @@ inline CGSize AGQuadGetSize(AGQuad q);
 void AGQuadGetXValues(AGQuad q, double *out_values);
 void AGQuadGetYValues(AGQuad q, double *out_values);
 inline AGQuad AGQuadInterpolation(AGQuad q1, AGQuad q2, double progress);
+inline AGQuad AGQuadApplyCGAffineTransform(AGQuad q, CGAffineTransform t);
+inline AGQuad AGQuadApplyCATransform3D(AGQuad q, CATransform3D t);
 inline NSString * NSStringFromAGQuad(AGQuad q);
 
 /**

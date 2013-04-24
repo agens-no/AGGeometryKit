@@ -21,17 +21,17 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "AngleConverterController.h"
+#import "AGAngleConverterSample.h"
 #import "UIView+AngleConverter.h"
 
-@interface AngleConverterController ()
+@interface AGAngleConverterSample ()
 
 @property (nonatomic, retain) UIView *viewA;
 @property (nonatomic, retain) UIView *viewB;
 
 @end
 
-@implementation AngleConverterController
+@implementation AGAngleConverterSample
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -60,16 +60,16 @@
 - (void)setup
 {
     self.viewA = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
-    self.viewA.backgroundColor = [UIColor redColor];
+    self.viewA.backgroundColor = [UIColor colorWithRed:0.063 green:0.431 blue:0.816 alpha:1.000];
     UIView *viewA2 = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 10, 10)];
-    viewA2.backgroundColor = [UIColor greenColor];
+    viewA2.backgroundColor = [UIColor colorWithRed:0.490 green:0.812 blue:0.992 alpha:1.000];
     [self.viewA addSubview:viewA2];
     [self.view addSubview:self.viewA];
     
     self.viewB = [[UIView alloc] initWithFrame:CGRectMake(250, 100, 100, 100)];
-    self.viewB.backgroundColor = [UIColor blueColor];
+    self.viewB.backgroundColor = [UIColor colorWithRed:1.000 green:0.502 blue:0.090 alpha:1.000];
     UIView *viewB2 = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 10, 10)];
-    viewB2.backgroundColor = [UIColor greenColor];
+    viewB2.backgroundColor = [UIColor colorWithRed:0.988 green:0.859 blue:0.753 alpha:1.000];
     [self.viewB addSubview:viewB2];
     [self.view addSubview:self.viewB];
     

@@ -87,6 +87,30 @@
     }
 }
 
+- (AGQuad)convertAGQuad:(AGQuad)quad fromLayer:(CALayer *)l
+{
+    CGPoint tl = [self convertPoint:AGPointAsCGPoint(quad.tl) fromLayer:l];
+    CGPoint tr = [self convertPoint:AGPointAsCGPoint(quad.tr) fromLayer:l];
+    CGPoint br = [self convertPoint:AGPointAsCGPoint(quad.br) fromLayer:l];
+    CGPoint bl = [self convertPoint:AGPointAsCGPoint(quad.bl) fromLayer:l];
+
+    AGQuad q = AGQuadMakeWithCGPoints(tl, tr, br, bl);
+    
+    return q;
+}
+
+- (AGQuad)convertAGQuad:(AGQuad)quad toLayer:(CALayer *)l
+{
+    CGPoint tl = [self convertPoint:AGPointAsCGPoint(quad.tl) toLayer:l];
+    CGPoint tr = [self convertPoint:AGPointAsCGPoint(quad.tr) toLayer:l];
+    CGPoint br = [self convertPoint:AGPointAsCGPoint(quad.br) toLayer:l];
+    CGPoint bl = [self convertPoint:AGPointAsCGPoint(quad.bl) toLayer:l];
+    
+    AGQuad q = AGQuadMakeWithCGPoints(tl, tr, br, bl);
+    
+    return q;
+}
+
 - (void)animateFromQuadrilateral:(AGQuad)quad1
                  toQuadrilateral:(AGQuad)quad2
                forNumberOfFrames:(NSUInteger)numberOfFrames
