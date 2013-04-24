@@ -159,9 +159,10 @@
     double doubleValue = 1.256250;
     float floatValue = doubleValue;
     
+    STAssertEquals(floatToDoubleZeroFill(M_PI), 3.141593000000, nil);
     STAssertEquals(floatToDoubleZeroFill(floatValue), doubleValue, nil);
     STAssertEquals(floatToDoubleZeroFill(0.5), 0.5, nil);
-    STAssertEquals(floatToDoubleZeroFill(1.0f / 3.0f), 0.333333, nil);
+    STAssertEquals(floatToDoubleZeroFill(1.0f / 3.0f), 0.333333000, nil);
 }
 
 @end
