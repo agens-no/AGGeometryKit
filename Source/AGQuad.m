@@ -24,6 +24,7 @@
 #import "AGQuad.h"
 #import "AGMath.h"
 #import "AGLine.h"
+#import "CGGeometry+Extra.h"
 
 /*
  
@@ -249,6 +250,32 @@ extern AGQuad AGQuadInterpolation(AGQuad q1, AGQuad q2, double progress)
     for(int i = 0; i < 4; i++)
     {
         q.v[i] = AGPointInterpolate(q1.v[i], q2.v[i], progress);
+    }
+    return q;
+}
+
+extern AGQuad AGQuadApplyCGAffineTransform(AGQuad q, CGAffineTransform t)
+{
+    for(int i = 0; i < 4; i++)
+    {
+        AGPoint ap1 = q.v[i];
+        CGPoint cp1 = AGPointAsCGPoint(ap1);
+        CGPoint cp2 = CGPointApplyAffineTransform(cp1, t);
+        AGPoint ap2 = AGPointMakeWithCGPoint(cp2);
+        q.v[i] = ap2;
+    }
+    return q;
+}
+
+extern AGQuad AGQuadApplyCATransform3D(AGQuad q, CATransform3D t)
+{
+    for(int i = 0; i < 4; i++)
+    {
+        AGPoint ap1 = q.v[i];
+        CGPoint cp1 = AGPointAsCGPoint(ap1);
+        CGPoint cp2 = CGPointApplyCATransform3D(cp1, t, CGPointZero, CATransform3DIdentity);
+        AGPoint ap2 = AGPointMakeWithCGPoint(cp2);
+        q.v[i] = ap2;
     }
     return q;
 }

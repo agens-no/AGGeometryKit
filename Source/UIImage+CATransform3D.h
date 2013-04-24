@@ -21,15 +21,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "AGPoint.h"
-#import "AGMath.h"
-#import "AGLine.h"
-#import "AGCorner.h"
-#import "AGQuad.h"
-#import "CALayer+AGQuad.h"
-#import "CALayer+Extensions.h"
-#import "CAAnimationBlockDelegate.h"
-#import "UIBezierPath+AGQuad.h"
-#import "UIImage+AGQuad.h"
+#import <UIKit/UIKit.h>
 
+@interface UIImage (CATransform3D)
 
+- (UIImage *)imageWithTransform:(CATransform3D)transform anchorPoint:(CGPoint)anchorPoint;
+
+@end

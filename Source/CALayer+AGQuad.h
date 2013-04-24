@@ -39,6 +39,9 @@
  */
 @property (nonatomic, assign) AGQuad quadrilateral;
 
+- (AGQuad)convertAGQuad:(AGQuad)quad fromLayer:(CALayer *)l;
+- (AGQuad)convertAGQuad:(AGQuad)quad toLayer:(CALayer *)l;
+
 - (void)animateFromQuadrilateral:(AGQuad)quad1
                  toQuadrilateral:(AGQuad)quad2
                forNumberOfFrames:(NSUInteger)numberOfFrames

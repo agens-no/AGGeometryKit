@@ -21,15 +21,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "AGPoint.h"
-#import "AGMath.h"
-#import "AGLine.h"
-#import "AGCorner.h"
+#import <UIKit/UIKit.h>
 #import "AGQuad.h"
-#import "CALayer+AGQuad.h"
-#import "CALayer+Extensions.h"
-#import "CAAnimationBlockDelegate.h"
-#import "UIBezierPath+AGQuad.h"
-#import "UIImage+AGQuad.h"
+#import "UIImage+CATransform3D.h"
 
+@interface UIImage (AGQuad)
 
+- (UIImage *)imageWithQuad:(AGQuad)quad scale:(CGFloat)scale;
+
+- (UIImage *)cropToQuad:(AGQuad)quad outputSize:(CGSize)size;
+
+@end
