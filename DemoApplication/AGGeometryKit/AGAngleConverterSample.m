@@ -60,7 +60,7 @@
 - (void)setup
 {
     self.viewA = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
-    self.viewA.backgroundColor = [UIColor colorWithRed:0.063 green:0.431 blue:0.816 alpha:1.000];
+    self.viewA.backgroundColor = [UIColor colorWithRed:0.063 green:0.431 blue:0.996 alpha:1.000];
     UIView *viewA2 = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 10, 10)];
     viewA2.backgroundColor = [UIColor colorWithRed:0.490 green:0.812 blue:0.992 alpha:1.000];
     [self.viewA addSubview:viewA2];

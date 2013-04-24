@@ -20,3 +20,5 @@
 // http://what-when-how.com/opengl-programming-guide/projection-transformations-viewing-opengl-programming/
 
 // https://android.googlesource.com/
+
+// http://www.cs.utoronto.ca/~strider/vis-notes/tutHomography04.pdf
