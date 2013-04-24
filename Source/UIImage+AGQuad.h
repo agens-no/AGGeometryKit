@@ -29,6 +29,4 @@
 
 - (UIImage *)imageWithQuad:(AGQuad)quad scale:(CGFloat)scale;
 
-- (UIImage *)cropToQuad:(AGQuad)quad outputSize:(CGSize)size;
-
 @end
