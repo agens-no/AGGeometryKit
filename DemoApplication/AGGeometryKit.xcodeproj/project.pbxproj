@@ -378,7 +378,8 @@
 				A3EE52BE16F1C5C6007706C6 /* UIView+AngleConverter.m */,
 				A3EE52C316F1E542007706C6 /* UIView+AngleConverterTest.m */,
 			);
-			path = Source;
+			name = Source;
+			path = ../Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

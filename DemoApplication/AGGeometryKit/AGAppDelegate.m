@@ -25,7 +25,6 @@
 #import "AGQuadSample.h"
 #import "AGQuadControlsSample.h"
 #import "AGAngleConverterSample.h"
-#import "AGImageRenderingSample.h"
 #import "AGRenderingSample.h"
 
 @implementation AGAppDelegate
