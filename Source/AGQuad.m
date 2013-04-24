@@ -1,5 +1,6 @@
 //
 // Author: Håvard Fossli <hfossli@agens.no>
+// Author: https://github.com/kennytm
 //
 // Copyright (c) 2013 Agens AS (http://agens.no/)
 //
@@ -297,6 +298,7 @@ extern NSString * NSStringFromAGQuad(AGQuad q)
 // We could of course use CGSize instead, but I don't know...
 // Taken from https://github.com/Ciechan/BCGenieEffect/blob/master/UIView%2BGenie.m
 // Which derives from http://stackoverflow.com/a/12820877/558816
+
 CATransform3D CATransform3DWithQuadFromBounds(AGQuad q, CGRect rect)
 {
     double W = rect.size.width;
@@ -345,7 +347,10 @@ CATransform3D CATransform3DWithQuadFromBounds(AGQuad q, CGRect rect)
     return transform;
 }
 
-// http://stackoverflow.com/a/12820877/558816
+// Alterations should be updated to this post http://stackoverflow.com/a/12820877/558816
+// The algorithm originates from this post http://stackoverflow.com/a/2352402/202451
+//     by https://github.com/kennytm
+
 CATransform3D CATransform3DWithQuadFromRect(AGQuad q, CGRect rect)
 {
     double X = rect.origin.x;
