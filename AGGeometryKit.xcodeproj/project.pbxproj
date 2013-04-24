@@ -62,15 +62,43 @@
 		A333A60B16A9A6F000E334AD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A60A16A9A6F000E334AD /* QuartzCore.framework */; };
 		A3762F2B172802D200E7A2AB /* image_crop_sample.png in Resources */ = {isa = PBXBuildFile; fileRef = A3762F2A172802D200E7A2AB /* image_crop_sample.png */; };
 		A3762F2C172802D200E7A2AB /* image_crop_sample.png in Resources */ = {isa = PBXBuildFile; fileRef = A3762F2A172802D200E7A2AB /* image_crop_sample.png */; };
+		A3762F301728067A00E7A2AB /* AGQuadControlsSample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3762F2E1728067900E7A2AB /* AGQuadControlsSample.m */; };
+		A3762F311728067A00E7A2AB /* AGQuadControlsSample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3762F2E1728067900E7A2AB /* AGQuadControlsSample.m */; };
+		A3762F321728067A00E7A2AB /* AGQuadControlsSample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3762F2F1728067A00E7A2AB /* AGQuadControlsSample.xib */; };
+		A3762F331728067A00E7A2AB /* AGQuadControlsSample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3762F2F1728067A00E7A2AB /* AGQuadControlsSample.xib */; };
+		A3762F351728138C00E7A2AB /* controlpoint.png in Resources */ = {isa = PBXBuildFile; fileRef = A3762F341728138C00E7A2AB /* controlpoint.png */; };
+		A3762F361728138C00E7A2AB /* controlpoint.png in Resources */ = {isa = PBXBuildFile; fileRef = A3762F341728138C00E7A2AB /* controlpoint.png */; };
+		A3762F38172813CE00E7A2AB /* controlpoint_h.png in Resources */ = {isa = PBXBuildFile; fileRef = A3762F37172813CD00E7A2AB /* controlpoint_h.png */; };
+		A3762F39172813CE00E7A2AB /* controlpoint_h.png in Resources */ = {isa = PBXBuildFile; fileRef = A3762F37172813CD00E7A2AB /* controlpoint_h.png */; };
+		A3762F4017285C4200E7A2AB /* UIImage+CATransform3D.m in Sources */ = {isa = PBXBuildFile; fileRef = A3762F3F17285C4100E7A2AB /* UIImage+CATransform3D.m */; };
+		A3762F4117285C4200E7A2AB /* UIImage+CATransform3D.m in Sources */ = {isa = PBXBuildFile; fileRef = A3762F3F17285C4100E7A2AB /* UIImage+CATransform3D.m */; };
+		A3762F4417285C8100E7A2AB /* CGImageRef+CATransform3D.m in Sources */ = {isa = PBXBuildFile; fileRef = A3762F4317285C8000E7A2AB /* CGImageRef+CATransform3D.m */; };
+		A3762F4517285C8100E7A2AB /* CGImageRef+CATransform3D.m in Sources */ = {isa = PBXBuildFile; fileRef = A3762F4317285C8000E7A2AB /* CGImageRef+CATransform3D.m */; };
+		A3762F4817285D3600E7A2AB /* AGTransformPixelMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = A3762F4717285D3400E7A2AB /* AGTransformPixelMapper.m */; };
+		A3762F4917285D3600E7A2AB /* AGTransformPixelMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = A3762F4717285D3400E7A2AB /* AGTransformPixelMapper.m */; };
+		A3762F5217287EB400E7A2AB /* crop_sample.png in Resources */ = {isa = PBXBuildFile; fileRef = A3762F5017287EB300E7A2AB /* crop_sample.png */; };
+		A3762F5317287EB400E7A2AB /* crop_sample.png in Resources */ = {isa = PBXBuildFile; fileRef = A3762F5017287EB300E7A2AB /* crop_sample.png */; };
+		A3762F5417287EB400E7A2AB /* crop_sample@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3762F5117287EB400E7A2AB /* crop_sample@2x.png */; };
+		A3762F5517287EB400E7A2AB /* crop_sample@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3762F5117287EB400E7A2AB /* crop_sample@2x.png */; };
+		A3762F59172885FE00E7A2AB /* AGRenderingSample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3762F57172885FC00E7A2AB /* AGRenderingSample.m */; };
+		A3762F5A172885FE00E7A2AB /* AGRenderingSample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3762F57172885FC00E7A2AB /* AGRenderingSample.m */; };
+		A3762F5B172885FE00E7A2AB /* AGRenderingSample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3762F58172885FD00E7A2AB /* AGRenderingSample.xib */; };
+		A3762F5C172885FE00E7A2AB /* AGRenderingSample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3762F58172885FD00E7A2AB /* AGRenderingSample.xib */; };
+		A3762F6117288CAC00E7A2AB /* crop_sample_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = A3762F6017288CAB00E7A2AB /* crop_sample_retina.png */; };
+		A3762F6217288CAC00E7A2AB /* crop_sample_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = A3762F6017288CAB00E7A2AB /* crop_sample_retina.png */; };
+		A3762F64172890E400E7A2AB /* tabbar_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A3762F63172890E300E7A2AB /* tabbar_icon.png */; };
+		A3762F65172890E400E7A2AB /* tabbar_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A3762F63172890E300E7A2AB /* tabbar_icon.png */; };
+		A3762F671728914700E7A2AB /* AGGeometryKitApplication.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3762F661728914500E7A2AB /* AGGeometryKitApplication.xib */; };
+		A3762F681728914700E7A2AB /* AGGeometryKitApplication.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3762F661728914500E7A2AB /* AGGeometryKitApplication.xib */; };
 		A384023916D56829000C698B /* AGCornerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A384023816D56829000C698B /* AGCornerTest.m */; };
 		A384023C16D568C2000C698B /* UIView+FrameExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = A384023B16D568C2000C698B /* UIView+FrameExtra.m */; };
 		A384023D16D568C2000C698B /* UIView+FrameExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = A384023B16D568C2000C698B /* UIView+FrameExtra.m */; };
 		A3EE526916EDEE83007706C6 /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = A3EE526716EDEE83007706C6 /* easing.c */; };
 		A3EE526A16EDEE83007706C6 /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = A3EE526716EDEE83007706C6 /* easing.c */; };
-		A3EE526F16F07479007706C6 /* AngleConverterController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE526D16F07479007706C6 /* AngleConverterController.m */; };
-		A3EE527016F07479007706C6 /* AngleConverterController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE526D16F07479007706C6 /* AngleConverterController.m */; };
-		A3EE527116F07479007706C6 /* AngleConverterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3EE526E16F07479007706C6 /* AngleConverterController.xib */; };
-		A3EE527216F07479007706C6 /* AngleConverterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3EE526E16F07479007706C6 /* AngleConverterController.xib */; };
+		A3EE526F16F07479007706C6 /* AGAngleConverterSample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE526D16F07479007706C6 /* AGAngleConverterSample.m */; };
+		A3EE527016F07479007706C6 /* AGAngleConverterSample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE526D16F07479007706C6 /* AGAngleConverterSample.m */; };
+		A3EE527116F07479007706C6 /* AGAngleConverterSample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3EE526E16F07479007706C6 /* AGAngleConverterSample.xib */; };
+		A3EE527216F07479007706C6 /* AGAngleConverterSample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3EE526E16F07479007706C6 /* AGAngleConverterSample.xib */; };
 		A3EE52BF16F1C5C6007706C6 /* UIView+AngleConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE52BE16F1C5C6007706C6 /* UIView+AngleConverter.m */; };
 		A3EE52C016F1C5C6007706C6 /* UIView+AngleConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE52BE16F1C5C6007706C6 /* UIView+AngleConverter.m */; };
 		A3EE52C216F1E02A007706C6 /* UIView+FrameExtraTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE52C116F1E029007706C6 /* UIView+FrameExtraTest.m */; };
@@ -79,10 +107,6 @@
 		A3EE52C816F3980C007706C6 /* CATransform3D+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE52C616F3980B007706C6 /* CATransform3D+Extra.m */; };
 		A3EE52CB16F72973007706C6 /* UIImage+AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE52CA16F72973007706C6 /* UIImage+AGQuad.m */; };
 		A3EE52CC16F72973007706C6 /* UIImage+AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE52CA16F72973007706C6 /* UIImage+AGQuad.m */; };
-		A3F77D3216FA38EF00415B24 /* AGQuadCrop.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F77D3016FA38EF00415B24 /* AGQuadCrop.m */; };
-		A3F77D3316FA38EF00415B24 /* AGQuadCrop.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F77D3016FA38EF00415B24 /* AGQuadCrop.m */; };
-		A3F77D3416FA38EF00415B24 /* AGQuadCrop.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3F77D3116FA38EF00415B24 /* AGQuadCrop.xib */; };
-		A3F77D3516FA38EF00415B24 /* AGQuadCrop.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3F77D3116FA38EF00415B24 /* AGQuadCrop.xib */; };
 		A3F77D3716FA39B000415B24 /* quadcropsample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3F77D3616FA39B000415B24 /* quadcropsample.jpg */; };
 		A3F77D3816FA39B000415B24 /* quadcropsample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3F77D3616FA39B000415B24 /* quadcropsample.jpg */; };
 		A3F77D3B16FA3AC700415B24 /* UIBezierPath+AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F77D3A16FA3AC700415B24 /* UIBezierPath+AGQuad.m */; };
@@ -151,15 +175,34 @@
 		A333A60716A9A5A300E334AD /* AGMathTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMathTest.m; sourceTree = "<group>"; };
 		A333A60A16A9A6F000E334AD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A3762F2A172802D200E7A2AB /* image_crop_sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_crop_sample.png; sourceTree = "<group>"; };
+		A3762F2D1728067900E7A2AB /* AGQuadControlsSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGQuadControlsSample.h; sourceTree = "<group>"; };
+		A3762F2E1728067900E7A2AB /* AGQuadControlsSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGQuadControlsSample.m; sourceTree = "<group>"; };
+		A3762F2F1728067A00E7A2AB /* AGQuadControlsSample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGQuadControlsSample.xib; sourceTree = "<group>"; };
+		A3762F341728138C00E7A2AB /* controlpoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controlpoint.png; sourceTree = "<group>"; };
+		A3762F37172813CD00E7A2AB /* controlpoint_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controlpoint_h.png; sourceTree = "<group>"; };
+		A3762F3E17285C4100E7A2AB /* UIImage+CATransform3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CATransform3D.h"; sourceTree = "<group>"; };
+		A3762F3F17285C4100E7A2AB /* UIImage+CATransform3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CATransform3D.m"; sourceTree = "<group>"; };
+		A3762F4217285C7F00E7A2AB /* CGImageRef+CATransform3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGImageRef+CATransform3D.h"; sourceTree = "<group>"; };
+		A3762F4317285C8000E7A2AB /* CGImageRef+CATransform3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGImageRef+CATransform3D.m"; sourceTree = "<group>"; };
+		A3762F4617285D3400E7A2AB /* AGTransformPixelMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTransformPixelMapper.h; sourceTree = "<group>"; };
+		A3762F4717285D3400E7A2AB /* AGTransformPixelMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTransformPixelMapper.m; sourceTree = "<group>"; };
+		A3762F5017287EB300E7A2AB /* crop_sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crop_sample.png; sourceTree = "<group>"; };
+		A3762F5117287EB400E7A2AB /* crop_sample@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crop_sample@2x.png"; sourceTree = "<group>"; };
+		A3762F56172885FB00E7A2AB /* AGRenderingSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGRenderingSample.h; sourceTree = "<group>"; };
+		A3762F57172885FC00E7A2AB /* AGRenderingSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGRenderingSample.m; sourceTree = "<group>"; };
+		A3762F58172885FD00E7A2AB /* AGRenderingSample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGRenderingSample.xib; sourceTree = "<group>"; };
+		A3762F6017288CAB00E7A2AB /* crop_sample_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crop_sample_retina.png; sourceTree = "<group>"; };
+		A3762F63172890E300E7A2AB /* tabbar_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_icon.png; sourceTree = "<group>"; };
+		A3762F661728914500E7A2AB /* AGGeometryKitApplication.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGGeometryKitApplication.xib; sourceTree = "<group>"; };
 		A384023816D56829000C698B /* AGCornerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCornerTest.m; sourceTree = "<group>"; };
 		A384023A16D568C2000C698B /* UIView+FrameExtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameExtra.h"; sourceTree = "<group>"; };
 		A384023B16D568C2000C698B /* UIView+FrameExtra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameExtra.m"; sourceTree = "<group>"; };
 		A3EE526716EDEE83007706C6 /* easing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = easing.c; sourceTree = "<group>"; };
 		A3EE526816EDEE83007706C6 /* easing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = easing.h; sourceTree = "<group>"; };
 		A3EE526B16EE63F6007706C6 /* AGQuadKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGQuadKit.h; sourceTree = "<group>"; };
-		A3EE526C16F07479007706C6 /* AngleConverterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AngleConverterController.h; sourceTree = "<group>"; };
-		A3EE526D16F07479007706C6 /* AngleConverterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AngleConverterController.m; sourceTree = "<group>"; };
-		A3EE526E16F07479007706C6 /* AngleConverterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AngleConverterController.xib; sourceTree = "<group>"; };
+		A3EE526C16F07479007706C6 /* AGAngleConverterSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGAngleConverterSample.h; sourceTree = "<group>"; };
+		A3EE526D16F07479007706C6 /* AGAngleConverterSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGAngleConverterSample.m; sourceTree = "<group>"; };
+		A3EE526E16F07479007706C6 /* AGAngleConverterSample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGAngleConverterSample.xib; sourceTree = "<group>"; };
 		A3EE52BD16F1C5C6007706C6 /* UIView+AngleConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AngleConverter.h"; sourceTree = "<group>"; };
 		A3EE52BE16F1C5C6007706C6 /* UIView+AngleConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AngleConverter.m"; sourceTree = "<group>"; };
 		A3EE52C116F1E029007706C6 /* UIView+FrameExtraTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameExtraTest.m"; sourceTree = "<group>"; };
@@ -168,9 +211,6 @@
 		A3EE52C616F3980B007706C6 /* CATransform3D+Extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransform3D+Extra.m"; sourceTree = "<group>"; };
 		A3EE52C916F72973007706C6 /* UIImage+AGQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AGQuad.h"; sourceTree = "<group>"; };
 		A3EE52CA16F72973007706C6 /* UIImage+AGQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AGQuad.m"; sourceTree = "<group>"; };
-		A3F77D2F16FA38EF00415B24 /* AGQuadCrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGQuadCrop.h; sourceTree = "<group>"; };
-		A3F77D3016FA38EF00415B24 /* AGQuadCrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGQuadCrop.m; sourceTree = "<group>"; };
-		A3F77D3116FA38EF00415B24 /* AGQuadCrop.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGQuadCrop.xib; sourceTree = "<group>"; };
 		A3F77D3616FA39B000415B24 /* quadcropsample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = quadcropsample.jpg; sourceTree = "<group>"; };
 		A3F77D3916FA3AC700415B24 /* UIBezierPath+AGQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+AGQuad.h"; sourceTree = "<group>"; };
 		A3F77D3A16FA3AC700415B24 /* UIBezierPath+AGQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+AGQuad.m"; sourceTree = "<group>"; };
@@ -210,25 +250,35 @@
 			children = (
 				A3270F2716D5675800A92C03 /* AGAppDelegate.h */,
 				A3270F2816D5675800A92C03 /* AGAppDelegate.m */,
+				A3762F661728914500E7A2AB /* AGGeometryKitApplication.xib */,
 				A3270F2916D5675800A92C03 /* AGGeometryKit-Info.plist */,
 				A3270F2A16D5675800A92C03 /* AGGeometryKit-Prefix.pch */,
 				A3270F2B16D5675800A92C03 /* AGQuadSample.h */,
 				A3270F2C16D5675800A92C03 /* AGQuadSample.m */,
 				A3270F2D16D5675800A92C03 /* AGQuadSample.xib */,
-				A3F77D2F16FA38EF00415B24 /* AGQuadCrop.h */,
-				A3F77D3016FA38EF00415B24 /* AGQuadCrop.m */,
-				A3F77D3116FA38EF00415B24 /* AGQuadCrop.xib */,
-				A3EE526C16F07479007706C6 /* AngleConverterController.h */,
-				A3EE526D16F07479007706C6 /* AngleConverterController.m */,
-				A3EE526E16F07479007706C6 /* AngleConverterController.xib */,
+				A3762F2D1728067900E7A2AB /* AGQuadControlsSample.h */,
+				A3762F2E1728067900E7A2AB /* AGQuadControlsSample.m */,
+				A3762F2F1728067A00E7A2AB /* AGQuadControlsSample.xib */,
+				A3762F56172885FB00E7A2AB /* AGRenderingSample.h */,
+				A3762F57172885FC00E7A2AB /* AGRenderingSample.m */,
+				A3762F58172885FD00E7A2AB /* AGRenderingSample.xib */,
+				A3EE526C16F07479007706C6 /* AGAngleConverterSample.h */,
+				A3EE526D16F07479007706C6 /* AGAngleConverterSample.m */,
+				A3EE526E16F07479007706C6 /* AGAngleConverterSample.xib */,
 				A3270F2E16D5675800A92C03 /* Default-568h@2x.png */,
 				A3270F2F16D5675800A92C03 /* Default.png */,
 				A3270F3016D5675800A92C03 /* Default@2x.png */,
 				A3270F3116D5675800A92C03 /* InfoPlist.strings */,
 				A3270F3316D5675800A92C03 /* main.m */,
 				A3F77D3616FA39B000415B24 /* quadcropsample.jpg */,
+				A3762F341728138C00E7A2AB /* controlpoint.png */,
+				A3762F37172813CD00E7A2AB /* controlpoint_h.png */,
 				A3762F2A172802D200E7A2AB /* image_crop_sample.png */,
+				A3762F5017287EB300E7A2AB /* crop_sample.png */,
+				A3762F5117287EB400E7A2AB /* crop_sample@2x.png */,
+				A3762F6017288CAB00E7A2AB /* crop_sample_retina.png */,
 				A3270F3416D5675800A92C03 /* sampleimg.jpg */,
+				A3762F63172890E300E7A2AB /* tabbar_icon.png */,
 				A3F77D3D16FA54C300415B24 /* JAValueToString.h */,
 				A3F77D3E16FA54C300415B24 /* JAValueToString.m */,
 				A3EE526716EDEE83007706C6 /* easing.c */,
@@ -307,6 +357,12 @@
 				A3270F2316D564D600A92C03 /* NSValue+AGQuad.m */,
 				A3F77D3916FA3AC700415B24 /* UIBezierPath+AGQuad.h */,
 				A3F77D3A16FA3AC700415B24 /* UIBezierPath+AGQuad.m */,
+				A3762F3E17285C4100E7A2AB /* UIImage+CATransform3D.h */,
+				A3762F3F17285C4100E7A2AB /* UIImage+CATransform3D.m */,
+				A3762F4217285C7F00E7A2AB /* CGImageRef+CATransform3D.h */,
+				A3762F4317285C8000E7A2AB /* CGImageRef+CATransform3D.m */,
+				A3762F4617285D3400E7A2AB /* AGTransformPixelMapper.h */,
+				A3762F4717285D3400E7A2AB /* AGTransformPixelMapper.m */,
 				A3EE52C916F72973007706C6 /* UIImage+AGQuad.h */,
 				A3EE52CA16F72973007706C6 /* UIImage+AGQuad.m */,
 				A30B0C4316CE8DCD00856E00 /* CALayer+AGQuad.h */,
@@ -404,10 +460,18 @@
 				A3270F4916D5675800A92C03 /* InfoPlist.strings in Resources */,
 				A3270F4D16D5675800A92C03 /* sampleimg.jpg in Resources */,
 				A3270F5316D5675800A92C03 /* InfoPlist.strings in Resources */,
-				A3EE527116F07479007706C6 /* AngleConverterController.xib in Resources */,
-				A3F77D3416FA38EF00415B24 /* AGQuadCrop.xib in Resources */,
+				A3EE527116F07479007706C6 /* AGAngleConverterSample.xib in Resources */,
 				A3F77D3716FA39B000415B24 /* quadcropsample.jpg in Resources */,
 				A3762F2B172802D200E7A2AB /* image_crop_sample.png in Resources */,
+				A3762F321728067A00E7A2AB /* AGQuadControlsSample.xib in Resources */,
+				A3762F351728138C00E7A2AB /* controlpoint.png in Resources */,
+				A3762F38172813CE00E7A2AB /* controlpoint_h.png in Resources */,
+				A3762F5217287EB400E7A2AB /* crop_sample.png in Resources */,
+				A3762F5417287EB400E7A2AB /* crop_sample@2x.png in Resources */,
+				A3762F5B172885FE00E7A2AB /* AGRenderingSample.xib in Resources */,
+				A3762F6117288CAC00E7A2AB /* crop_sample_retina.png in Resources */,
+				A3762F64172890E400E7A2AB /* tabbar_icon.png in Resources */,
+				A3762F671728914700E7A2AB /* AGGeometryKitApplication.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,10 +486,18 @@
 				A3270F4A16D5675800A92C03 /* InfoPlist.strings in Resources */,
 				A3270F4E16D5675800A92C03 /* sampleimg.jpg in Resources */,
 				A3270F5416D5675800A92C03 /* InfoPlist.strings in Resources */,
-				A3EE527216F07479007706C6 /* AngleConverterController.xib in Resources */,
-				A3F77D3516FA38EF00415B24 /* AGQuadCrop.xib in Resources */,
+				A3EE527216F07479007706C6 /* AGAngleConverterSample.xib in Resources */,
 				A3F77D3816FA39B000415B24 /* quadcropsample.jpg in Resources */,
 				A3762F2C172802D200E7A2AB /* image_crop_sample.png in Resources */,
+				A3762F331728067A00E7A2AB /* AGQuadControlsSample.xib in Resources */,
+				A3762F361728138C00E7A2AB /* controlpoint.png in Resources */,
+				A3762F39172813CE00E7A2AB /* controlpoint_h.png in Resources */,
+				A3762F5317287EB400E7A2AB /* crop_sample.png in Resources */,
+				A3762F5517287EB400E7A2AB /* crop_sample@2x.png in Resources */,
+				A3762F5C172885FE00E7A2AB /* AGRenderingSample.xib in Resources */,
+				A3762F6217288CAC00E7A2AB /* crop_sample_retina.png in Resources */,
+				A3762F65172890E400E7A2AB /* tabbar_icon.png in Resources */,
+				A3762F681728914700E7A2AB /* AGGeometryKitApplication.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,13 +539,17 @@
 				A3270F4B16D5675800A92C03 /* main.m in Sources */,
 				A384023C16D568C2000C698B /* UIView+FrameExtra.m in Sources */,
 				A3EE526916EDEE83007706C6 /* easing.c in Sources */,
-				A3EE526F16F07479007706C6 /* AngleConverterController.m in Sources */,
+				A3EE526F16F07479007706C6 /* AGAngleConverterSample.m in Sources */,
 				A3EE52BF16F1C5C6007706C6 /* UIView+AngleConverter.m in Sources */,
 				A3EE52C716F3980C007706C6 /* CATransform3D+Extra.m in Sources */,
 				A3EE52CB16F72973007706C6 /* UIImage+AGQuad.m in Sources */,
-				A3F77D3216FA38EF00415B24 /* AGQuadCrop.m in Sources */,
 				A3F77D3B16FA3AC700415B24 /* UIBezierPath+AGQuad.m in Sources */,
 				A3F77D3F16FA54C400415B24 /* JAValueToString.m in Sources */,
+				A3762F301728067A00E7A2AB /* AGQuadControlsSample.m in Sources */,
+				A3762F4017285C4200E7A2AB /* UIImage+CATransform3D.m in Sources */,
+				A3762F4417285C8100E7A2AB /* CGImageRef+CATransform3D.m in Sources */,
+				A3762F4817285D3600E7A2AB /* AGTransformPixelMapper.m in Sources */,
+				A3762F59172885FE00E7A2AB /* AGRenderingSample.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,15 +577,19 @@
 				A384023916D56829000C698B /* AGCornerTest.m in Sources */,
 				A384023D16D568C2000C698B /* UIView+FrameExtra.m in Sources */,
 				A3EE526A16EDEE83007706C6 /* easing.c in Sources */,
-				A3EE527016F07479007706C6 /* AngleConverterController.m in Sources */,
+				A3EE527016F07479007706C6 /* AGAngleConverterSample.m in Sources */,
 				A3EE52C016F1C5C6007706C6 /* UIView+AngleConverter.m in Sources */,
 				A3EE52C216F1E02A007706C6 /* UIView+FrameExtraTest.m in Sources */,
 				A3EE52C416F1E543007706C6 /* UIView+AngleConverterTest.m in Sources */,
 				A3EE52C816F3980C007706C6 /* CATransform3D+Extra.m in Sources */,
 				A3EE52CC16F72973007706C6 /* UIImage+AGQuad.m in Sources */,
-				A3F77D3316FA38EF00415B24 /* AGQuadCrop.m in Sources */,
 				A3F77D3C16FA3AC700415B24 /* UIBezierPath+AGQuad.m in Sources */,
 				A3F77D4016FA54C400415B24 /* JAValueToString.m in Sources */,
+				A3762F311728067A00E7A2AB /* AGQuadControlsSample.m in Sources */,
+				A3762F4117285C4200E7A2AB /* UIImage+CATransform3D.m in Sources */,
+				A3762F4517285C8100E7A2AB /* CGImageRef+CATransform3D.m in Sources */,
+				A3762F4917285D3600E7A2AB /* AGTransformPixelMapper.m in Sources */,
+				A3762F5A172885FE00E7A2AB /* AGRenderingSample.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +685,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AGGeometryKit/AGGeometryKit-Prefix.pch";
 				INFOPLIST_FILE = "AGGeometryKit/AGGeometryKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = AGGeometryKit;
 				WRAPPER_EXTENSION = app;
 			};
@@ -620,6 +701,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AGGeometryKit/AGGeometryKit-Prefix.pch";
 				INFOPLIST_FILE = "AGGeometryKit/AGGeometryKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = AGGeometryKit;
 				WRAPPER_EXTENSION = app;
 			};

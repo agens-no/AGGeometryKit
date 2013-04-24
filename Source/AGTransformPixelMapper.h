@@ -1,5 +1,6 @@
 //
 // Author: Håvard Fossli <hfossli@agens.no>
+// Author: Marcos Fuentes http://stackoverflow.com/users/1637195/marcos-fuentes
 //
 // Copyright (c) 2013 Agens AS (http://agens.no/)
 //
@@ -21,13 +22,27 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
 
-#import "AGAppDelegate.h"
+@interface AGTransformPixelMapper : NSObject
 
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, nil);
-    }
-}
+@property (nonatomic, assign, readonly) CATransform3D transform;
+@property (nonatomic, assign, readonly) double denominatorX;
+@property (nonatomic, assign, readonly) double denominatorY;
+@property (nonatomic, assign, readonly) double denominatorW;
+
+- (id)initWithTransform:(CATransform3D)t anchorPoint:(CGPoint)anchorPoint;
+- (CGPoint)projectedPointForModelPoint:(CGPoint)point;
+
+- (void)mapBitmap:(unsigned char *)input
+               to:(unsigned char *)output
+           inSize:(CGSize)inSize
+          outSize:(CGSize)outSize
+            scale:(double)scale
+     bitsPerPixel:(size_t)bitsPerPixel
+ bitsPerComponent:(size_t)bitsPerComponent;
+
+- (CGImageRef)createMappedImageRefFrom:(CGImageRef)imageRef scale:(double)scale;
+
+@end

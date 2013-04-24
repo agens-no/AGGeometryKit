@@ -23,8 +23,11 @@
 
 #import <UIKit/UIKit.h>
 #import "AGQuad.h"
+#import "UIImage+CATransform3D.h"
 
 @interface UIImage (AGQuad)
+
+- (UIImage *)imageWithQuad:(AGQuad)quad scale:(CGFloat)scale;
 
 - (UIImage *)cropToQuad:(AGQuad)quad outputSize:(CGSize)size;
 

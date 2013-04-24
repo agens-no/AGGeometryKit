@@ -24,153 +24,17 @@
 #import "UIImage+AGQuad.h"
 #import "pthread.h"
 #import <QuartzCore/QuartzCore.h>
+#import "CGImageRef+CATransform3D.h"
+#import "UIImage+CATransform3D.h"
 
 @implementation UIImage (AGQuad)
 
-
-- (UIImage *)imageWithTransform:(CATransform3D)transform anchorPoint:(CGPoint)anchorPoint size:(CGSize)size
+- (UIImage *)imageWithQuad:(AGQuad)quad scale:(CGFloat)scale
 {
-    CGImageRef imageRef = CGImageDrawWithCATransform3D(self.CGImage, transform, anchorPoint, size, self.scale);
+    AGQuad scaledQuad = AGQuadApplyCATransform3D(quad, CATransform3DMakeScale(scale, scale, 1.0));
+    CATransform3D transform = CATransform3DWithQuadFromBounds(scaledQuad, (CGRect){CGPointZero, self.size});
+    CGImageRef imageRef = CGImageDrawWithCATransform3D(self.CGImage, transform, CGPointZero, self.size, 1.0);
     return [UIImage imageWithCGImage:imageRef];
-}
-
-// http://stackoverflow.com/a/13850972/202451
-
-CGImageRef CGImageDrawWithCATransform3D(CGImageRef imageRef,
-                                           CATransform3D transform,
-                                           CGPoint anchorPoint,
-                                           CGSize size,
-                                           CGFloat scale)
-{
-    size_t width = CGImageGetWidth(imageRef);
-    size_t height = CGImageGetHeight(imageRef);
-    
-    CATransform3D translateDueToAnchor = CATransform3DMakeTranslation(size.width * (-anchorPoint.x),
-                                                                      size.height * (-anchorPoint.y),
-                                                                      0);
-    CATransform3D translateDueToDisposition = CATransform3DMakeTranslation(size.width * (-0.5 + anchorPoint.x),
-                                                                           size.height * (-0.5 + anchorPoint.y),
-                                                                           0);
-    
-    transform = CATransform3DConcat(translateDueToAnchor, transform);
-    transform = CATransform3DConcat(transform, translateDueToDisposition);
-    
-    float denominatorx = transform.m12 * transform.m21 - transform.m11  * transform.m22 + transform.m14 * transform.m22 * transform.m41 - transform.m12 * transform.m24 * transform.m41 - transform.m14 * transform.m21 * transform.m42 +
-    transform.m11 * transform.m24 * transform.m42;
-    
-    float denominatory = -transform.m12 *transform.m21 + transform.m11 *transform.m22 - transform.m14 *transform.m22 *transform.m41 + transform.m12 *transform.m24 *transform.m41 + transform.m14 *transform.m21 *transform.m42 -
-    transform.m11* transform.m24 *transform.m42;
-    
-    float denominatorw = transform.m12 *transform.m21 - transform.m11 *transform.m22 + transform.m14 *transform.m22 *transform.m41 - transform.m12 *transform.m24 *transform.m41 - transform.m14 *transform.m21 *transform.m42 +
-    transform.m11 *transform.m24 *transform.m42;
-    
-    if (UIGraphicsBeginImageContextWithOptions != NULL)
-    {
-        UIGraphicsBeginImageContextWithOptions(size, NO, scale);
-    } else
-    {
-        UIGraphicsBeginImageContext(size);
-    }
-    
-    CGContextRef ctx;
-    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    
-    unsigned char *inputData = malloc(height * width * 4);
-    unsigned char *outputData = malloc(height * width * 4);
-    
-    NSUInteger bytesPerPixel = 4;
-    NSUInteger bytesPerRow = bytesPerPixel * width;
-    NSUInteger bitsPerComponent = 8;
-    
-    CGContextRef context = CGBitmapContextCreate(inputData,
-                                                 width,
-                                                 height,
-                                                 bitsPerComponent,
-                                                 bytesPerRow,
-                                                 colorSpace,
-                                                 kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
-    CGColorSpaceRelease(colorSpace);
-    CGContextDrawImage(context, CGRectMake(0, 0, width, height), imageRef);
-    CGContextRelease(context);
-    
-    context = CGBitmapContextCreate(outputData,
-                                    width,
-                                    height,
-                                    bitsPerComponent,
-                                    bytesPerRow,
-                                    colorSpace,
-                                    kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
-    CGColorSpaceRelease(colorSpace);
-    CGContextDrawImage(context, CGRectMake(0, 0, width, height), imageRef);
-    CGContextRelease(context);
-    
-    
-    for (int ii = 0 ; ii < width * height ; ++ii)
-    {
-        int x = ii % width;
-        int y = ii / width;
-        int indexOutput = 4 * x + 4 * width * y;
-        
-        CGPoint p = modelToScreen((x*2.0/scale - size.width)/2.0,
-                                  (y*2.0/scale - size.height)/2.0,
-                                  transform,
-                                  denominatorx,
-                                  denominatory,
-                                  denominatorw);
-        
-        p.x *= scale;
-        p.y *= scale;
-        
-        int indexInput = 4*(int)p.x + (4*width*(int)p.y);
-        
-        if (p.x >= width || p.x < 0 || p.y >= height || p.y < 0 || indexInput >  width * height *4)
-        {
-            outputData[indexOutput] = 0.0;
-            outputData[indexOutput+1] = 0.0;
-            outputData[indexOutput+2] = 0.0;
-            outputData[indexOutput+3] = 0.0;
-            
-        }
-        else
-        {
-            outputData[indexOutput] = inputData[indexInput];
-            outputData[indexOutput+1] = inputData[indexInput + 1];
-            outputData[indexOutput+2] = inputData[indexInput + 2];
-            outputData[indexOutput+3] = 255.0;
-        }
-    }
-    
-    ctx = CGBitmapContextCreate(outputData,
-                                width,
-                                height,
-                                8,
-                                CGImageGetBytesPerRow(imageRef),
-                                CGImageGetColorSpace(imageRef),
-                                kCGImageAlphaPremultipliedLast
-                                );
-    
-    imageRef = CGBitmapContextCreateImage(ctx);
-    
-    CGContextRelease(ctx);
-    free(inputData);
-    free(outputData);
-    
-    return imageRef;
-}
-
-static CGPoint modelToScreen(float x,
-                             float y,
-                             CATransform3D _transform,
-                             float _denominatorx,
-                             float _denominatory,
-                             float _denominatorw)
-{
-    float xp = (_transform.m22 *_transform.m41 - _transform.m21 *_transform.m42 - _transform.m22* x + _transform.m24 *_transform.m42 *x + _transform.m21* y - _transform.m24* _transform.m41* y) / _denominatorx;
-    float yp = (-_transform.m11 *_transform.m42 + _transform.m12 * (_transform.m41 - x) + _transform.m14 *_transform.m42 *x + _transform.m11 *y - _transform.m14 *_transform.m41* y) / _denominatory;
-    float wp = (_transform.m12 *_transform.m21 - _transform.m11 *_transform.m22 + _transform.m14*_transform.m22* x - _transform.m12 *_transform.m24* x - _transform.m14 *_transform.m21* y + _transform.m11 *_transform.m24 *y) / _denominatorw;
-    
-    CGPoint result = CGPointMake(xp/wp, yp/wp);
-    return result;
 }
 
 - (UIImage *)cropToQuad:(AGQuad)quad outputSize:(CGSize)size
@@ -190,7 +54,7 @@ static CGPoint modelToScreen(float x,
     //t3 = CATransform3DMakeScale(1, 2, 1);
     //t3 = CATransform3DIdentity;
     
-    return [self imageWithTransform:t1 anchorPoint:CGPointMake(1.0, 1.0) size:size];
+    return [self imageWithTransform:t1 anchorPoint:CGPointMake(1.0, 1.0)];
     
     static pthread_mutex_t mtx = PTHREAD_MUTEX_INITIALIZER;
     static UIImageView *imageView;

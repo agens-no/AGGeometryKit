@@ -23,13 +23,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AngleConverterController : UIViewController
+@interface AGAngleConverterSample : UIViewController
 
-@property (weak, nonatomic) IBOutlet UISlider *mySlider;
+@property (assign, nonatomic) IBOutlet UISlider *mySlider;
 
 - (IBAction)sliderValueChanged:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UILabel *inputLabel;
-@property (weak, nonatomic) IBOutlet UILabel *calculatedAngleLabel;
+@property (assign, nonatomic) IBOutlet UILabel *inputLabel;
+@property (assign, nonatomic) IBOutlet UILabel *calculatedAngleLabel;
 
 @end

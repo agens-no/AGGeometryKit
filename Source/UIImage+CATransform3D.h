@@ -23,11 +23,8 @@
 
 #import <UIKit/UIKit.h>
 
-#import "AGAppDelegate.h"
+@interface UIImage (CATransform3D)
 
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, nil);
-    }
-}
+- (UIImage *)imageWithTransform:(CATransform3D)transform anchorPoint:(CGPoint)anchorPoint;
+
+@end

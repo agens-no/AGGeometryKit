@@ -21,13 +21,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#import <CoreGraphics/CoreGraphics.h>
 
-#import "AGAppDelegate.h"
-
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, nil);
-    }
-}
+CGImageRef CGImageDrawWithCATransform3D(CGImageRef imageRef,
+                                        CATransform3D transform,
+                                        CGPoint anchorPoint,
+                                        CGSize size,
+                                        CGFloat scale);
