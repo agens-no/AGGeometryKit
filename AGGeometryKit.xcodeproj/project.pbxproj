@@ -60,6 +60,8 @@
 		A333A60316A9A59200E334AD /* CALayer+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A333A5F816A9A59200E334AD /* CALayer+Extensions.m */; };
 		A333A60416A9A59200E334AD /* CALayer+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A333A5F816A9A59200E334AD /* CALayer+Extensions.m */; };
 		A333A60B16A9A6F000E334AD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A60A16A9A6F000E334AD /* QuartzCore.framework */; };
+		A3762F2B172802D200E7A2AB /* image_crop_sample.png in Resources */ = {isa = PBXBuildFile; fileRef = A3762F2A172802D200E7A2AB /* image_crop_sample.png */; };
+		A3762F2C172802D200E7A2AB /* image_crop_sample.png in Resources */ = {isa = PBXBuildFile; fileRef = A3762F2A172802D200E7A2AB /* image_crop_sample.png */; };
 		A384023916D56829000C698B /* AGCornerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A384023816D56829000C698B /* AGCornerTest.m */; };
 		A384023C16D568C2000C698B /* UIView+FrameExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = A384023B16D568C2000C698B /* UIView+FrameExtra.m */; };
 		A384023D16D568C2000C698B /* UIView+FrameExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = A384023B16D568C2000C698B /* UIView+FrameExtra.m */; };
@@ -148,6 +150,7 @@
 		A333A5F816A9A59200E334AD /* CALayer+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Extensions.m"; sourceTree = "<group>"; };
 		A333A60716A9A5A300E334AD /* AGMathTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMathTest.m; sourceTree = "<group>"; };
 		A333A60A16A9A6F000E334AD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A3762F2A172802D200E7A2AB /* image_crop_sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_crop_sample.png; sourceTree = "<group>"; };
 		A384023816D56829000C698B /* AGCornerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCornerTest.m; sourceTree = "<group>"; };
 		A384023A16D568C2000C698B /* UIView+FrameExtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameExtra.h"; sourceTree = "<group>"; };
 		A384023B16D568C2000C698B /* UIView+FrameExtra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameExtra.m"; sourceTree = "<group>"; };
@@ -224,6 +227,7 @@
 				A3270F3116D5675800A92C03 /* InfoPlist.strings */,
 				A3270F3316D5675800A92C03 /* main.m */,
 				A3F77D3616FA39B000415B24 /* quadcropsample.jpg */,
+				A3762F2A172802D200E7A2AB /* image_crop_sample.png */,
 				A3270F3416D5675800A92C03 /* sampleimg.jpg */,
 				A3F77D3D16FA54C300415B24 /* JAValueToString.h */,
 				A3F77D3E16FA54C300415B24 /* JAValueToString.m */,
@@ -403,6 +407,7 @@
 				A3EE527116F07479007706C6 /* AngleConverterController.xib in Resources */,
 				A3F77D3416FA38EF00415B24 /* AGQuadCrop.xib in Resources */,
 				A3F77D3716FA39B000415B24 /* quadcropsample.jpg in Resources */,
+				A3762F2B172802D200E7A2AB /* image_crop_sample.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +425,7 @@
 				A3EE527216F07479007706C6 /* AngleConverterController.xib in Resources */,
 				A3F77D3516FA38EF00415B24 /* AGQuadCrop.xib in Resources */,
 				A3F77D3816FA39B000415B24 /* quadcropsample.jpg in Resources */,
+				A3762F2C172802D200E7A2AB /* image_crop_sample.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
