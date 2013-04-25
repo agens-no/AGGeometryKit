@@ -24,10 +24,12 @@
 
 #import "AGTransformPixelMapper.h"
 #import <QuartzCore/QuartzCore.h>
+#import "CGGeometry+Extra.h"
 
 @interface AGTransformPixelMapper ()
 
 @property (nonatomic, assign, readwrite) CATransform3D transform;
+@property (nonatomic, assign, readwrite) CGPoint anchorPoint;
 @property (nonatomic, assign, readwrite) double denominatorX;
 @property (nonatomic, assign, readwrite) double denominatorY;
 @property (nonatomic, assign, readwrite) double denominatorW;
@@ -40,7 +42,8 @@
 {
     self = [self init];
     if(self)
-    {       
+    {
+        
         self.denominatorX = t.m12 * t.m21 - t.m11  * t.m22 + t.m14 * t.m22 * t.m41 - t.m12 * t.m24 * t.m41 - t.m14 * t.m21 * t.m42 +
         t.m11 * t.m24 * t.m42;
         
@@ -51,7 +54,7 @@
         t.m11 *t.m24 *t.m42;
         
         self.transform = t;
-        
+        self.anchorPoint = anchorPoint;
     }
     return self;
 }
