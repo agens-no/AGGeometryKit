@@ -48,7 +48,7 @@
                         duration:(NSTimeInterval)duration
                            delay:(NSTimeInterval)delay
                          animKey:(NSString *)animKey
-           interpolationFunction:(double(^)(double p))progressFunction
+                    easeFunction:(double(^)(double p))progressFunction
                       onComplete:(void(^)(BOOL finished))onComplete;
 
 - (void)animateFromPresentedStateToQuadrilateral:(AGQuad)quad
@@ -56,7 +56,7 @@
                                         duration:(NSTimeInterval)duration
                                            delay:(NSTimeInterval)delay
                                          animKey:(NSString *)animKey
-                           interpolationFunction:(double(^)(double p))progressFunction
+                                    easeFunction:(double(^)(double p))progressFunction
                                       onComplete:(void(^)(BOOL finished))onComplete;
 
 @end

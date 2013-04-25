@@ -88,7 +88,7 @@
                                                           duration:duration
                                                              delay:0.0
                                                            animKey:@"demo"
-                                             interpolationFunction:interpolationFunction
+                                                      easeFunction:interpolationFunction
                                                         onComplete:onAnimComplete];
 }
 
