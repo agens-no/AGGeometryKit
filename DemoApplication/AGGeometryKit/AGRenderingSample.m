@@ -42,13 +42,6 @@
     [self.imageView1.layer ensureAnchorPointIsSetToZero];
 }
 
-- (IBAction)renderWithSimpleCATransform3D:(id)sender
-{    
-    CATransform3D t = CATransform3DMakeRotation(M_PI, 0.0, 0.0, 1.0);
-    
-    self.imageView2.image = [[self originalImage] imageWithTransform:t anchorPoint:CGPointMake(0.5, 0.5)];
-}
-
 - (IBAction)makeBlueFill:(id)sender
 {
     AGQuad quad = [self quadForBlueToFill];
@@ -56,9 +49,16 @@
     self.imageView2.image = [[self originalImage] imageWithQuad:quad scale:2.0];
 }
 
+- (IBAction)makePurpleFill:(id)sender
+{
+    AGQuad quad = [self quadForPurpleFill];
+    
+    self.imageView2.image = [[self originalImage] imageWithQuad:quad scale:2.0];
+}
+
 - (UIImage *)originalImage
 {
-    return [UIImage imageNamed:@"crop_sample@2x.png"];
+    return self.imageView1.image;
 }
 
 - (AGQuad)quadForBlueToFill
@@ -73,4 +73,18 @@
     quad.br = AGPointMake(10555.0/2.0, 1679.0/2.0);
     return quad;
 }
+
+- (AGQuad)quadForPurpleFill
+{
+    /*
+     I'm working on some way to calculate these numbers. I just grabbed these from photoshop....
+     */
+    AGQuad quad;
+    quad.tl = AGPointMake(-10714.0/2.0, -3700.0/2.0);
+    quad.tr = AGPointMake(1933.0/2.0, -1189.0/2.0);
+    quad.bl = AGPointMake(-1066.0/2.0, 813.0/2.0);
+    quad.br = AGPointMake(912.0/2.0, 783.0/2.0);
+    return quad;
+}
+
 @end

@@ -38,7 +38,7 @@
 				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 			</object>
 			<object class="IBUIView" id="766721923">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -55,16 +55,17 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">sampleimg.jpg</string>
+							<string key="NSResourceName">sampleimg_enhanced.jpg</string>
 						</object>
 					</object>
 					<object class="IBUIImageView" id="441421109">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{35, 601}, {45, 45}}</string>
+						<string key="NSFrame">{{32, 605}, {46, 46}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSNextKeyView" ref="145756237"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<int key="IBUIContentMode">9</int>
 						<object class="NSArray" key="IBUIGestureRecognizers" id="0">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 						</object>
@@ -81,10 +82,11 @@
 					<object class="IBUIImageView" id="52323158">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{35, 14}, {45, 45}}</string>
+						<string key="NSFrame">{{32, 9}, {46, 46}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSNextKeyView" ref="1026090619"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<int key="IBUIContentMode">9</int>
 						<reference key="IBUIGestureRecognizers" ref="0"/>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<reference key="IBUIImage" ref="20207681"/>
@@ -93,10 +95,11 @@
 					<object class="IBUIImageView" id="1026090619">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{929, 14}, {45, 45}}</string>
+						<string key="NSFrame">{{930, 9}, {46, 46}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSNextKeyView" ref="441421109"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<int key="IBUIContentMode">9</int>
 						<reference key="IBUIGestureRecognizers" ref="0"/>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<reference key="IBUIImage" ref="20207681"/>
@@ -105,9 +108,11 @@
 					<object class="IBUIImageView" id="145756237">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{929, 601}, {45, 45}}</string>
+						<string key="NSFrame">{{930, 605}, {46, 46}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
+						<reference key="NSNextKeyView" ref="867607466"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<int key="IBUIContentMode">9</int>
 						<reference key="IBUIGestureRecognizers" ref="0"/>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<reference key="IBUIImage" ref="20207681"/>
@@ -118,6 +123,7 @@
 						<int key="NSvFlags">265</int>
 						<string key="NSFrame">{{912, 701}, {94, 27}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -129,6 +135,7 @@
 						<int key="NSvFlags">265</int>
 						<string key="NSFrame">{{803, 703}, {116, 21}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
+						<reference key="NSNextKeyView" ref="221083543"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -155,6 +162,7 @@
 					</object>
 				</object>
 				<string key="NSFrame">{{0, 20}, {1024, 748}}</string>
+				<reference key="NSSuperview"/>
 				<reference key="NSNextKeyView" ref="724908506"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -494,7 +502,7 @@
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>controlpoint.png</string>
 				<string>controlpoint_h.png</string>
-				<string>sampleimg.jpg</string>
+				<string>sampleimg_enhanced.jpg</string>
 			</object>
 			<object class="NSArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
