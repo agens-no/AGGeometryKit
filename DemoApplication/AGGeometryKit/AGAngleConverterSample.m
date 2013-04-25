@@ -26,71 +26,49 @@
 
 @interface AGAngleConverterSample ()
 
-@property (nonatomic, retain) UIView *viewA;
-@property (nonatomic, retain) UIView *viewB;
+@property (nonatomic, retain) UIImageView *viewA;
+@property (nonatomic, retain) UIImageView *viewB;
 
 @end
 
 @implementation AGAngleConverterSample
 
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        self.title = @"AngleConverter";
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     
-    [self setup];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)setup
-{
-    self.viewA = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    self.viewA = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
     self.viewA.backgroundColor = [UIColor colorWithRed:0.063 green:0.431 blue:0.996 alpha:1.000];
-    UIView *viewA2 = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 10, 10)];
-    viewA2.backgroundColor = [UIColor colorWithRed:0.490 green:0.812 blue:0.992 alpha:1.000];
-    [self.viewA addSubview:viewA2];
+    self.viewA.image = [UIImage imageNamed:@"arrow.png"];
     [self.view addSubview:self.viewA];
     
-    self.viewB = [[UIView alloc] initWithFrame:CGRectMake(250, 100, 100, 100)];
+    self.viewB = [[UIImageView alloc] initWithFrame:CGRectMake(250, 100, 100, 100)];
     self.viewB.backgroundColor = [UIColor colorWithRed:1.000 green:0.502 blue:0.090 alpha:1.000];
-    UIView *viewB2 = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 10, 10)];
-    viewB2.backgroundColor = [UIColor colorWithRed:0.988 green:0.859 blue:0.753 alpha:1.000];
-    [self.viewB addSubview:viewB2];
+    self.viewB.image = [UIImage imageNamed:@"arrow.png"];
     [self.view addSubview:self.viewB];
     
-    [self updateLabels];
+    [self updateAngle];
+    [self updateCalculationLabel];
 }
 
 - (IBAction)sliderValueChanged:(id)sender
 {
-    [self updateLabels];
+    [self updateAngle];
+    [self updateCalculationLabel];
 }
 
-- (void)updateLabels
+- (void)updateAngle
 {
     float transformationAngle = self.mySlider.value;
     float transformationAngleInRadians = transformationAngle * M_PI / 180.0f;
     self.viewB.transform = CGAffineTransformMakeRotation(transformationAngleInRadians); // rotates to the right
     
     self.inputLabel.text = [NSString stringWithFormat:@"Input angle: %.2f", transformationAngle];
-    
+}
+
+- (void)updateCalculationLabel
+{
     float angle = [self.viewA convertAngleOfViewInRelationToView:self.viewB];
-    
     self.calculatedAngleLabel.text = [NSString stringWithFormat:@"Calculated angle: %.2f", angle * 180.0f / M_PI];
 }
 
