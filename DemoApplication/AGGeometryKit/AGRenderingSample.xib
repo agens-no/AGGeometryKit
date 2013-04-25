@@ -78,7 +78,7 @@
 					<object class="IBUILabel" id="796354071">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{22, 466}, {180, 34}}</string>
+						<string key="NSFrame">{{22, 458}, {180, 34}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="527238926"/>
@@ -110,7 +110,7 @@
 					<object class="IBUIButton" id="582240019">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 346}, {172, 44}}</string>
+						<string key="NSFrame">{{20, 339}, {172, 44}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="796354071"/>
@@ -149,7 +149,7 @@
 					<object class="IBUILabel" id="793556413">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{22, 116}, {180, 38}}</string>
+						<string key="NSFrame">{{22, 120}, {180, 38}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="955699969"/>
@@ -172,7 +172,7 @@
 					<object class="IBUIButton" id="246747964">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 295}, {172, 44}}</string>
+						<string key="NSFrame">{{20, 288}, {172, 44}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="919522706"/>
@@ -198,17 +198,17 @@
 					<object class="IBUILabel" id="955699969">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{22, 141}, {246, 53}}</string>
+						<string key="NSFrame">{{22, 145}, {246, 84}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="1054698988"/>
+						<reference key="NSNextKeyView" ref="246747964"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">the perspective distort is rendered in the image</string>
+						<string key="IBUIText">What you see on the right side is an image. The perspective distort is rendered in the image.</string>
 						<reference key="IBUITextColor" ref="588183238"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
@@ -228,7 +228,7 @@
 					<object class="IBUILabel" id="527238926">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{22, 490}, {220, 62}}</string>
+						<string key="NSFrame">{{22, 482}, {251, 43}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="562128956"/>
@@ -238,7 +238,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">use buttons above to generate result</string>
+						<string key="IBUIText">Generated using 'original image'</string>
 						<reference key="IBUITextColor" ref="588183238"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
@@ -246,28 +246,7 @@
 						<reference key="IBUIFontDescription" ref="463784532"/>
 						<reference key="IBUIFont" ref="380152590"/>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
-						<double key="preferredMaxLayoutWidth">220</double>
-					</object>
-					<object class="IBUILabel" id="1054698988">
-						<reference key="NSNextResponder" ref="766721923"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{22, 253}, {180, 34}}</string>
-						<reference key="NSSuperview" ref="766721923"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="246747964"/>
-						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<bool key="IBUIOpaque">NO</bool>
-						<bool key="IBUIClipsSubviews">YES</bool>
-						<int key="IBUIContentMode">7</int>
-						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Render image ...</string>
-						<reference key="IBUITextColor" ref="588183238"/>
-						<nil key="IBUIHighlightedColor"/>
-						<int key="IBUIBaselineAdjustment">0</int>
-						<reference key="IBUIFontDescription" ref="965286975"/>
-						<reference key="IBUIFont" ref="856318341"/>
-						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+						<double key="preferredMaxLayoutWidth">251</double>
 					</object>
 					<object class="IBUILabel" id="639992788">
 						<reference key="NSNextResponder" ref="766721923"/>
@@ -282,7 +261,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">This example shows you the feature of being able to render images with CATransform3D (not supported by CoreAnimation)</string>
+						<string key="IBUIText">This example shows you the feature of being able to render images with CATransform3D</string>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC41ODIwNTM3NjQ0IDAuNTgyMDUzNzY0NCAwLjU4MjA1Mzc2NDQAA</bytes>
@@ -394,14 +373,13 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="796354071"/>
 							<reference ref="793556413"/>
-							<reference ref="955699969"/>
 							<reference ref="919522706"/>
 							<reference ref="562128956"/>
-							<reference ref="1054698988"/>
 							<reference ref="639992788"/>
 							<reference ref="246747964"/>
 							<reference ref="582240019"/>
 							<reference ref="527238926"/>
+							<reference ref="955699969"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -448,11 +426,6 @@
 						<reference key="parent" ref="766721923"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">26</int>
-						<reference key="object" ref="1054698988"/>
-						<reference key="parent" ref="766721923"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">27</int>
 						<reference key="object" ref="639992788"/>
 						<reference key="parent" ref="766721923"/>
@@ -473,7 +446,6 @@
 					<string>2.IBPluginDependency</string>
 					<string>24.IBPluginDependency</string>
 					<string>25.IBPluginDependency</string>
-					<string>26.IBPluginDependency</string>
 					<string>27.IBPluginDependency</string>
 					<string>4.IBPluginDependency</string>
 					<string>6.IBPluginDependency</string>
@@ -484,7 +456,6 @@
 					<string>AGRenderingSample</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>UIResponder</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -524,11 +495,9 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>makeBlueFill:</string>
 							<string>makePurpleFill:</string>
-							<string>renderWithSimpleCATransform3D:</string>
 						</object>
 						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 						</object>
@@ -539,7 +508,6 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>makeBlueFill:</string>
 							<string>makePurpleFill:</string>
-							<string>renderWithSimpleCATransform3D:</string>
 						</object>
 						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -549,10 +517,6 @@
 							</object>
 							<object class="IBActionInfo">
 								<string key="name">makePurpleFill:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">renderWithSimpleCATransform3D:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 						</object>
