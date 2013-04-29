@@ -245,23 +245,12 @@
 		A3270F2616D5675800A92C03 /* AGGeometryKit */ = {
 			isa = PBXGroup;
 			children = (
+				A3EA84071729898000AF716C /* Sample Controllers */,
 				A3270F2716D5675800A92C03 /* AGAppDelegate.h */,
 				A3270F2816D5675800A92C03 /* AGAppDelegate.m */,
 				A3762F661728914500E7A2AB /* AGGeometryKitApplication.xib */,
 				A3270F2916D5675800A92C03 /* AGGeometryKit-Info.plist */,
 				A3270F2A16D5675800A92C03 /* AGGeometryKit-Prefix.pch */,
-				A3270F2B16D5675800A92C03 /* AGQuadSample.h */,
-				A3270F2C16D5675800A92C03 /* AGQuadSample.m */,
-				A3270F2D16D5675800A92C03 /* AGQuadSample.xib */,
-				A3762F2D1728067900E7A2AB /* AGQuadControlsSample.h */,
-				A3762F2E1728067900E7A2AB /* AGQuadControlsSample.m */,
-				A3762F2F1728067A00E7A2AB /* AGQuadControlsSample.xib */,
-				A3762F56172885FB00E7A2AB /* AGRenderingSample.h */,
-				A3762F57172885FC00E7A2AB /* AGRenderingSample.m */,
-				A3762F58172885FD00E7A2AB /* AGRenderingSample.xib */,
-				A3EE526C16F07479007706C6 /* AGAngleConverterSample.h */,
-				A3EE526D16F07479007706C6 /* AGAngleConverterSample.m */,
-				A3EE526E16F07479007706C6 /* AGAngleConverterSample.xib */,
 				A3270F2E16D5675800A92C03 /* Default-568h@2x.png */,
 				A3270F2F16D5675800A92C03 /* Default.png */,
 				A3270F3016D5675800A92C03 /* Default@2x.png */,
@@ -376,6 +365,25 @@
 			);
 			name = Source;
 			path = ../Source;
+			sourceTree = "<group>";
+		};
+		A3EA84071729898000AF716C /* Sample Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A3270F2B16D5675800A92C03 /* AGQuadSample.h */,
+				A3270F2C16D5675800A92C03 /* AGQuadSample.m */,
+				A3270F2D16D5675800A92C03 /* AGQuadSample.xib */,
+				A3762F2D1728067900E7A2AB /* AGQuadControlsSample.h */,
+				A3762F2E1728067900E7A2AB /* AGQuadControlsSample.m */,
+				A3762F2F1728067A00E7A2AB /* AGQuadControlsSample.xib */,
+				A3762F56172885FB00E7A2AB /* AGRenderingSample.h */,
+				A3762F57172885FC00E7A2AB /* AGRenderingSample.m */,
+				A3762F58172885FD00E7A2AB /* AGRenderingSample.xib */,
+				A3EE526C16F07479007706C6 /* AGAngleConverterSample.h */,
+				A3EE526D16F07479007706C6 /* AGAngleConverterSample.m */,
+				A3EE526E16F07479007706C6 /* AGAngleConverterSample.xib */,
+			);
+			name = "Sample Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
