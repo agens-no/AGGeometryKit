@@ -30,7 +30,8 @@
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path moveToPoint:AGPointAsCGPoint(q.v[0])];
     
-    for (int i = 1; i < 4; i++) {
+    for (int i = 1; i < 4; i++)
+    {
         [path addLineToPoint:AGPointAsCGPoint(q.v[i])];
     }
     
