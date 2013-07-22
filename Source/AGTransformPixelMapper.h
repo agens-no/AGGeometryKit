@@ -40,8 +40,8 @@
            inSize:(CGSize)inSize
           outSize:(CGSize)outSize
             scale:(double)scale
-     bitsPerPixel:(size_t)bitsPerPixel
- bitsPerComponent:(size_t)bitsPerComponent;
+    bytesPerPixel:(size_t)bytesPerPixel
+      bytesPerRow:(size_t)bytesPerRow;
 
 - (CGImageRef)createMappedImageRefFrom:(CGImageRef)imageRef scale:(double)scale;
 
