@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31E89B2F6B59B6ECE6DB78B6 /* NSValue+AGQuadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E8960B798331CBD9554CFF /* NSValue+AGQuadTest.m */; };
 		A30B0C4116CE859500856E00 /* AGPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A30B0C4016CE859400856E00 /* AGPoint.m */; };
 		A30B0C4216CE859500856E00 /* AGPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A30B0C4016CE859400856E00 /* AGPoint.m */; };
 		A30B0C4516CE8DCD00856E00 /* CALayer+AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A30B0C4416CE8DCD00856E00 /* CALayer+AGQuad.m */; };
@@ -124,6 +125,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		31E8960B798331CBD9554CFF /* NSValue+AGQuadTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+AGQuadTest.m"; sourceTree = "<group>"; };
 		A30B0C3F16CE859400856E00 /* AGPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPoint.h; sourceTree = "<group>"; };
 		A30B0C4016CE859400856E00 /* AGPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPoint.m; sourceTree = "<group>"; };
 		A30B0C4316CE8DCD00856E00 /* CALayer+AGQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+AGQuad.h"; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 				A3EE52BD16F1C5C6007706C6 /* UIView+AngleConverter.h */,
 				A3EE52BE16F1C5C6007706C6 /* UIView+AngleConverter.m */,
 				A3EE52C316F1E542007706C6 /* UIView+AngleConverterTest.m */,
+				31E8960B798331CBD9554CFF /* NSValue+AGQuadTest.m */,
 			);
 			name = Source;
 			path = ../Source;
@@ -585,6 +588,7 @@
 				A3762F4517285C8100E7A2AB /* CGImageRef+CATransform3D.m in Sources */,
 				A3762F4917285D3600E7A2AB /* AGTransformPixelMapper.m in Sources */,
 				A3762F5A172885FE00E7A2AB /* AGRenderingSample.m in Sources */,
+				31E89B2F6B59B6ECE6DB78B6 /* NSValue+AGQuadTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
