@@ -78,20 +78,18 @@
            inSize:(CGSize)inSize
           outSize:(CGSize)outSize
             scale:(double)scale
-     bitsPerPixel:(size_t)bitsPerPixel
- bitsPerComponent:(size_t)bitsPerComponent
+    bytesPerPixel:(size_t)bytesPerPixel
+      bytesPerRow:(size_t)bytesPerRow;
 {
     int width = inSize.width;
     int height = inSize.height;
     
-    size_t bitsPerRow = bitsPerPixel * width;
-    size_t bitsInTotal = width * height * bitsPerPixel;
+    size_t bytesInTotal = height * bytesPerRow;
     
-    for (int ii = 0 ; ii < width * height ; ++ii)
+    for (int y = 0 ; y < height ; ++y)
+    for (int x = 0 ; x < width ; ++x)
     {
-        int x = ii % width;
-        int y = ii / width;
-        int indexOutput = bitsPerPixel * x + bitsPerRow * y;
+        int indexOutput = bytesPerPixel * x + bytesPerRow * y;
         
         CGPoint modelPoint = CGPointMake((x*2.0/scale - outSize.width)/2.0,
                                          (y*2.0/scale - outSize.height)/2.0);
@@ -100,19 +98,19 @@
         p.x *= scale;
         p.y *= scale;
         
-        int indexInput = bitsPerPixel*(int)p.x + (bitsPerRow*(int)p.y);
-        BOOL isOutOfBounds = p.x >= width || p.x < 0 || p.y >= height || p.y < 0 || indexInput >  bitsInTotal;
+        int indexInput = bytesPerPixel*(int)p.x + (bytesPerRow*(int)p.y);
+        BOOL isOutOfBounds = p.x >= width || p.x < 0 || p.y >= height || p.y < 0 || indexInput > bytesInTotal;
         
         if (isOutOfBounds)
         {
-            for(int j = 0; j < bitsPerPixel; j++)
+            for(int j = 0; j < bytesPerPixel; j++)
             {
                 output[indexOutput+j] = 0;
             }
         }
         else
         {
-            for(int j = 0; j < bitsPerPixel; j++)
+            for(int j = 0; j < bytesPerPixel; j++)
             {
                 output[indexOutput+j] = input[indexInput+j];
             }
@@ -125,16 +123,16 @@
     size_t width = CGImageGetWidth(imageRef);
     size_t height = CGImageGetHeight(imageRef);
     
-    size_t bitsPerPixel = 4;
-    size_t bitsPerRow = bitsPerPixel * width;
     size_t bitsPerComponent = 8;
-    size_t bitsInTotal = width * height * bitsPerPixel;
-    
-    unsigned char *inputData = malloc(bitsInTotal);
-    unsigned char *outputData = malloc(bitsInTotal);
+    size_t bytesPerPixel = 4;
+    size_t bytesPerRow = CGImageGetBytesPerRow(imageRef);
+    size_t bytesInTotal = height * bytesPerRow;
+
+    unsigned char *inputData = malloc(bytesInTotal);
+    unsigned char *outputData = malloc(bytesInTotal);
     
     // in case not every bit is drawn into outputData (this is necessary)
-    for (int ii = 0 ; ii < bitsInTotal; ++ii)
+    for (int ii = 0 ; ii < bytesInTotal; ++ii)
     {
         outputData[ii] = 0;
         inputData[ii] = 0;
@@ -145,7 +143,7 @@
                                                  width,
                                                  height,
                                                  bitsPerComponent,
-                                                 bitsPerRow,
+                                                 bytesPerRow,
                                                  colorSpace,
                                                  kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
     CGColorSpaceRelease(colorSpace);
@@ -153,12 +151,12 @@
     CGContextRelease(context);
     
     [self mapBitmap:inputData
-                   to:outputData
-               inSize:CGSizeMake(width, height)
-              outSize:CGSizeMake(width, height)
-                scale:scale
-       bitsPerPixel:bitsPerPixel
-     bitsPerComponent:bitsPerComponent];
+                 to:outputData
+             inSize:CGSizeMake(width, height)
+            outSize:CGSizeMake(width, height)
+              scale:scale
+      bytesPerPixel:bytesPerPixel
+        bytesPerRow:bytesPerRow];
     
     CGContextRef ctx;
     ctx = CGBitmapContextCreate(outputData,
