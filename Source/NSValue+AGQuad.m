@@ -27,14 +27,27 @@
 
 + (NSValue *)valueWithAGQuad:(AGQuad)q
 {
-    NSValue *value = [NSValue value:&q withObjCType:@encode(AGQuad)];
+    double values[8];
+    for(int i = 0; i < 4; i++)
+    {
+        AGPoint p = q.v[i];
+        values[(i*2)] = p.v[0];
+        values[(i*2)+1] = p.v[1];
+    }
+    NSValue *value = [NSValue value:&q withObjCType:@encode(double[8])];
     return value;
 }
 
 - (AGQuad)AGQuadValue
 {
-    AGQuad q;
-    [self getValue:&q];
+    AGQuad q = AGQuadZero;
+    double values[8];
+    [self getValue:values];
+    for(int i = 0; i < 4; i++)
+    {
+        AGPoint p = AGPointMake(values[(i*2)], values[(i*2)+1]);
+        q.v[i] = p;
+    }
     return q;
 }
 
