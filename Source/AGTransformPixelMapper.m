@@ -91,8 +91,8 @@
     {
         int indexOutput = bytesPerPixel * x + bytesPerRow * y;
         
-        CGPoint modelPoint = CGPointMake((x*2.0/scale - outSize.width)/2.0,
-                                         (y*2.0/scale - outSize.height)/2.0);
+        CGPoint modelPoint = CGPointMake((x*2.0/scale - outSize.width/scale)/2.0,
+                                         (y*2.0/scale - outSize.height/scale)/2.0);
         
         CGPoint p = [self projectedPointForModelPoint:modelPoint];
         p.x *= scale;
