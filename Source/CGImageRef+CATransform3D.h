@@ -27,4 +27,4 @@ CGImageRef CGImageDrawWithCATransform3D(CGImageRef imageRef,
                                         CATransform3D transform,
                                         CGPoint anchorPoint,
                                         CGSize size,
-                                        CGFloat scale);
+                                        CGFloat scale) CF_RETURNS_RETAINED;
