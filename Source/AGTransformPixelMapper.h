@@ -43,6 +43,6 @@
     bytesPerPixel:(size_t)bytesPerPixel
       bytesPerRow:(size_t)bytesPerRow;
 
-- (CGImageRef)createMappedImageRefFrom:(CGImageRef)imageRef scale:(double)scale;
+- (CGImageRef)createMappedImageRefFrom:(CGImageRef)imageRef scale:(double)scale CF_RETURNS_RETAINED;
 
 @end

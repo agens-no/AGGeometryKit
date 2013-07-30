@@ -34,7 +34,9 @@
     AGQuad scaledQuad = AGQuadApplyCATransform3D(quad, CATransform3DMakeScale(scale, scale, 1.0));
     CATransform3D transform = CATransform3DWithQuadFromBounds(scaledQuad, (CGRect){CGPointZero, self.size});
     CGImageRef imageRef = CGImageDrawWithCATransform3D(self.CGImage, transform, CGPointZero, self.size, 1.0);
-    return [UIImage imageWithCGImage:imageRef];
+    UIImage* image = [UIImage imageWithCGImage:imageRef];
+    CGImageRelease(imageRef);
+    return image;
 }
 
 
