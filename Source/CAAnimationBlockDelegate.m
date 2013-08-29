@@ -28,6 +28,21 @@
 
 @implementation CAAnimationBlockDelegate
 
++ (instancetype)newWithAnimationDidStart:(void(^)(void))onStart didStop:(void(^)(BOOL completed))onStop
+{
+    CAAnimationBlockDelegate *instance = [[self alloc] init];
+    instance.onStart = onStart;
+    instance.onStop = onStop;
+    return instance;
+}
+
++ (instancetype)newWithAnimationDidStop:(void(^)(BOOL completed))onStop
+{
+    CAAnimationBlockDelegate *instance = [[self alloc] init];
+    instance.onStop = onStop;
+    return instance;
+}
+
 - (id)init
 {
     self = [super init];
@@ -40,25 +55,25 @@
 
 - (void)animationDidStart:(CAAnimation *)anim
 {
-    if(self.onAnimationDidStart)
+    if(self.onStart)
     {
-        self.onAnimationDidStart();
+        self.onStart();
     }
     if(self.autoRemoveBlocks)
     {
-        self.onAnimationDidStart = nil;
+        self.onStart = nil;
     }
 }
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
-    if(self.onAnimationDidStop)
+    if(self.onStop)
     {
-        self.onAnimationDidStop(flag);
+        self.onStop(flag);
     }
     if(self.autoRemoveBlocks)
     {
-        self.onAnimationDidStop = nil;
+        self.onStop = nil;
     }
 }
 

@@ -56,10 +56,7 @@
     }
     
     animation.values = values;
-    
-    CAAnimationBlockDelegate *delegate = [[CAAnimationBlockDelegate alloc] init];
-    delegate.onAnimationDidStop = onComplete;
-    animation.delegate = delegate;
+    animation.delegate = [CAAnimationBlockDelegate newWithAnimationDidStop:onComplete];
     
     return animation;
 }
