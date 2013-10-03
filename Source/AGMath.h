@@ -25,7 +25,12 @@
 
 #define BIT_SET(x, b)   ((x) |= (b))
 #define BIT_CLEAR(x, b) ((x) &= ~(b))
-#define BIT_TEST(x, b)  ((x) & (b))
+#define BIT_TEST_ANY(x, b)  (((x) & (b)) != 0)
+#define BIT_TEST_ALL(x, b)  ({\
+  __typeof__(x) __x = (x); \
+  __typeof__(b) __b = (b);\
+  (__x & __b) == __b;\
+  })
 
 #define CLAMP(x, low, high) ({\
   __typeof__(x) __x = (x); \
