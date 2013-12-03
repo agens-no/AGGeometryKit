@@ -61,6 +61,11 @@
 		A333A60316A9A59200E334AD /* CALayer+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A333A5F816A9A59200E334AD /* CALayer+Extensions.m */; };
 		A333A60416A9A59200E334AD /* CALayer+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A333A5F816A9A59200E334AD /* CALayer+Extensions.m */; };
 		A333A60B16A9A6F000E334AD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A60A16A9A6F000E334AD /* QuartzCore.framework */; };
+		A3467567184DEB7900AD34EC /* AGVector3D.m in Sources */ = {isa = PBXBuildFile; fileRef = A3467565184DEB7900AD34EC /* AGVector3D.m */; };
+		A3467568184DEB7900AD34EC /* AGVector3D.m in Sources */ = {isa = PBXBuildFile; fileRef = A3467565184DEB7900AD34EC /* AGVector3D.m */; };
+		A346756A184DEB7900AD34EC /* AGVector3DTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3467566184DEB7900AD34EC /* AGVector3DTest.m */; };
+		A346756D184DEC0B00AD34EC /* AGPoint3D.m in Sources */ = {isa = PBXBuildFile; fileRef = A346756C184DEC0B00AD34EC /* AGPoint3D.m */; };
+		A346756E184DEC0B00AD34EC /* AGPoint3D.m in Sources */ = {isa = PBXBuildFile; fileRef = A346756C184DEC0B00AD34EC /* AGPoint3D.m */; };
 		A3762F301728067A00E7A2AB /* AGQuadControlsSample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3762F2E1728067900E7A2AB /* AGQuadControlsSample.m */; };
 		A3762F311728067A00E7A2AB /* AGQuadControlsSample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3762F2E1728067900E7A2AB /* AGQuadControlsSample.m */; };
 		A3762F321728067A00E7A2AB /* AGQuadControlsSample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3762F2F1728067A00E7A2AB /* AGQuadControlsSample.xib */; };
@@ -174,6 +179,11 @@
 		A333A5F816A9A59200E334AD /* CALayer+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Extensions.m"; sourceTree = "<group>"; };
 		A333A60716A9A5A300E334AD /* AGMathTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMathTest.m; sourceTree = "<group>"; };
 		A333A60A16A9A6F000E334AD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A3467564184DEB7900AD34EC /* AGVector3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGVector3D.h; sourceTree = "<group>"; };
+		A3467565184DEB7900AD34EC /* AGVector3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGVector3D.m; sourceTree = "<group>"; };
+		A3467566184DEB7900AD34EC /* AGVector3DTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGVector3DTest.m; sourceTree = "<group>"; };
+		A346756B184DEC0B00AD34EC /* AGPoint3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPoint3D.h; sourceTree = "<group>"; };
+		A346756C184DEC0B00AD34EC /* AGPoint3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPoint3D.m; sourceTree = "<group>"; };
 		A3762F2D1728067900E7A2AB /* AGQuadControlsSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGQuadControlsSample.h; sourceTree = "<group>"; };
 		A3762F2E1728067900E7A2AB /* AGQuadControlsSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGQuadControlsSample.m; sourceTree = "<group>"; };
 		A3762F2F1728067A00E7A2AB /* AGQuadControlsSample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGQuadControlsSample.xib; sourceTree = "<group>"; };
@@ -337,6 +347,11 @@
 				A333A60716A9A5A300E334AD /* AGMathTest.m */,
 				A30B0C3F16CE859400856E00 /* AGPoint.h */,
 				A30B0C4016CE859400856E00 /* AGPoint.m */,
+				A3467564184DEB7900AD34EC /* AGVector3D.h */,
+				A3467565184DEB7900AD34EC /* AGVector3D.m */,
+				A3467566184DEB7900AD34EC /* AGVector3DTest.m */,
+				A346756B184DEC0B00AD34EC /* AGPoint3D.h */,
+				A346756C184DEC0B00AD34EC /* AGPoint3D.m */,
 				A3270F1316D5272500A92C03 /* AGLine.h */,
 				A3270F1416D5272500A92C03 /* AGLine.m */,
 				A333A5F516A9A59200E334AD /* AGQuad.h */,
@@ -537,6 +552,7 @@
 				A333A60116A9A59200E334AD /* AGQuad.m in Sources */,
 				A333A60316A9A59200E334AD /* CALayer+Extensions.m in Sources */,
 				A30B0C4116CE859500856E00 /* AGPoint.m in Sources */,
+				A3467567184DEB7900AD34EC /* AGVector3D.m in Sources */,
 				A30B0C4516CE8DCD00856E00 /* CALayer+AGQuad.m in Sources */,
 				A30B0C4E16D2229700856E00 /* CAAnimationBlockDelegate.m in Sources */,
 				A3270F1516D5272500A92C03 /* AGLine.m in Sources */,
@@ -546,6 +562,7 @@
 				A3270F3F16D5675800A92C03 /* AGQuadSample.m in Sources */,
 				A3270F4B16D5675800A92C03 /* main.m in Sources */,
 				A384023C16D568C2000C698B /* UIView+FrameExtra.m in Sources */,
+				A346756D184DEC0B00AD34EC /* AGPoint3D.m in Sources */,
 				A3EE526916EDEE83007706C6 /* easing.c in Sources */,
 				A3EE526F16F07479007706C6 /* AGAngleConverterSample.m in Sources */,
 				A3EE52BF16F1C5C6007706C6 /* UIView+AngleConverter.m in Sources */,
@@ -567,8 +584,10 @@
 			files = (
 				A333A5FC16A9A59200E334AD /* CGGeometry+Extra.m in Sources */,
 				A333A60016A9A59200E334AD /* AGMath.m in Sources */,
+				A3467568184DEB7900AD34EC /* AGVector3D.m in Sources */,
 				A333A60216A9A59200E334AD /* AGQuad.m in Sources */,
 				A333A60416A9A59200E334AD /* CALayer+Extensions.m in Sources */,
+				A346756A184DEB7900AD34EC /* AGVector3DTest.m in Sources */,
 				A30B0C4216CE859500856E00 /* AGPoint.m in Sources */,
 				A30B0C4616CE8DCD00856E00 /* CALayer+AGQuad.m in Sources */,
 				A30B0C4816CE8F3900856E00 /* AGQuadTest.m in Sources */,
@@ -591,6 +610,7 @@
 				A3EE52C416F1E543007706C6 /* UIView+AngleConverterTest.m in Sources */,
 				A3EE52C816F3980C007706C6 /* CATransform3D+Extra.m in Sources */,
 				A3EE52CC16F72973007706C6 /* UIImage+AGQuad.m in Sources */,
+				A346756E184DEC0B00AD34EC /* AGPoint3D.m in Sources */,
 				A3F77D3C16FA3AC700415B24 /* UIBezierPath+AGQuad.m in Sources */,
 				A3F77D4016FA54C400415B24 /* JAValueToString.m in Sources */,
 				A3762F311728067A00E7A2AB /* AGQuadControlsSample.m in Sources */,
