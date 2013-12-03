@@ -92,16 +92,16 @@
     }
 }
 
-- (void)testBIT
+- (void)testBIT_TEST_ALL
 {
     int a = 0;
-    STAssertFalse(BIT_TEST(a, 1 << 5), nil);
+    STAssertFalse(BIT_TEST_ALL(a, 1 << 5), nil);
     
     BIT_SET(a, 1 << 5);
-    STAssertTrue(BIT_TEST(a, 1 << 5), nil);
+    STAssertTrue(BIT_TEST_ALL(a, 1 << 5), nil);
     
     BIT_CLEAR(a, 1 << 5);
-    STAssertFalse(BIT_TEST(a, 1 << 5), nil);
+    STAssertFalse(BIT_TEST_ALL(a, 1 << 5), nil);
 }
 
 - (void)testCLAMP
