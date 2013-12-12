@@ -53,11 +53,34 @@
 @property (nonatomic, assign) CGFloat centerX;
 @property (nonatomic, assign) CGFloat centerY;
 
+@property (nonatomic) CGPoint centerIntegral;
+
 - (void)centerInSuperview;
 - (void)centerHorizontallyInSuperview;
 - (void)centerVerticallyInSuperview;
 - (void)fillSuperview;
 - (void)fillHorizontallyInSuperview;
 - (void)fillVerticallyInSuperview;
+
+CGSize CGSizeBiggestIntersectionOfThree(CGSize aSize, CGSize anotherSize, CGSize aThirdSize);
+CGSize CGSizeBiggestIntersect(CGSize aSize, CGSize anotherSize);
+CGSize CGSizeDifference(CGSize reference, CGSize sizeToCompare);
+BOOL CGSizeSquareGreatherThan(CGSize aGreaterSize, CGSize aSize);
+BOOL CGSizeAnyValueGreatherThan(CGSize aGreaterSize, CGSize aSize);
+BOOL CGSizeAllValuesGreatherThan(CGSize aGreaterSize, CGSize aSize);
+CGSize CGSizeConformIfBigger(CGSize aSize, CGSize conformTo);
+CGSize CGSizeConformIfSmaller(CGSize aSize, CGSize conformTo);
+CGSize CGSizeConformUsingMaxAndMinSizes(CGSize aSize, CGSize maxAllowdSize, CGSize minAllowedSize);
+CGSize CGSizeAbs(CGSize aSize);
+CGPoint CGOriginAbs(CGPoint aPoint);
+CGRect CGRectAbs(CGRect aRect);
+CGPoint CGPointInternalCenterOfRect(CGRect rect);
+CGSize CGSizeScaleWithFactor(CGSize aSize, CGFloat factor);
+CGPoint CGPointAddPoint(CGPoint aPoint, CGPoint anotherPoint);
+CGSize CGSizeAddSize(CGSize aSize, CGSize anotherSize);
+CGRect CGRectInverseAxis(CGRect aRect);
+CGPoint CGPointIntegral(CGPoint aPoint);
+CGSize CGSizeIntegral(CGSize aSize);
+
 
 @end

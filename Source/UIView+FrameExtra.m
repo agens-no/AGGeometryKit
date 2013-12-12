@@ -48,6 +48,7 @@
 @dynamic boundsHeightHalf;
 @dynamic centerX;
 @dynamic centerY;
+@dynamic centerIntegral;
 
 - (CGSize)frameSize
 {
@@ -275,4 +276,113 @@
     self.frame = CGRectMake(self.frameMinX, 0, self.frameWidth, self.superview.boundsHeight);
 }
 
+- (CGPoint)centerIntegral
+{
+	return CGPointMake((int)self.center.x, (int)self.center.y);
+}
+
+- (void)setCenterIntegral:(CGPoint)point
+{
+	self.center = point;
+	self.frame = CGRectIntegral(self.frame);
+}
+
 @end
+
+// c-functions
+
+BOOL CGSizeSquareGreatherThan(CGSize aGreaterSize, CGSize aSize)
+{
+	return aSize.width * aSize.height < aGreaterSize.width * aGreaterSize.height;
+}
+
+BOOL CGSizeAnyValueGreatherThan(CGSize aGreaterSize, CGSize aSize)
+{
+	return aSize.width < aGreaterSize.width || aSize.height < aGreaterSize.height;
+}
+
+BOOL CGSizeAllValuesGreatherThan(CGSize aGreaterSize, CGSize aSize)
+{
+	return aSize.width < aGreaterSize.width && aSize.height < aGreaterSize.height;
+}
+
+CGSize CGSizeConformIfBigger(CGSize aSize, CGSize conformTo)
+{
+	return CGSizeMake(aSize.width > conformTo.width ? conformTo.width : aSize.width, aSize.height > conformTo.height ? conformTo.height : aSize.height);
+}
+
+CGSize CGSizeConformIfSmaller(CGSize aSize, CGSize conformTo)
+{
+	return CGSizeMake(aSize.width < conformTo.width ? conformTo.width : aSize.width, aSize.height < conformTo.height ? conformTo.height : aSize.height);
+}
+
+CGSize CGSizeConformUsingMaxAndMinSizes(CGSize aSize, CGSize maxAllowdSize, CGSize minAllowedSize)
+{
+	CGSize conformedToMinSize = CGSizeConformIfSmaller(aSize, minAllowedSize);
+	CGSize conformedToBoth = CGSizeConformIfBigger(conformedToMinSize, maxAllowdSize);
+	return conformedToBoth;
+}
+
+CGSize CGSizeAbs(CGSize aSize)
+{
+	return CGSizeMake(fabs(aSize.width), fabs(aSize.height));
+}
+
+CGRect CGRectAbs(CGRect aRect)
+{
+	return CGRectStandardize(aRect);
+}
+
+CGPoint CGOriginAbs(CGPoint aPoint)
+{
+	return CGPointMake(fabs(aPoint.x), fabs(aPoint.y));
+}
+
+CGSize CGSizeBiggestIntersect(CGSize aSize, CGSize anotherSize)
+{
+	return CGSizeMake(aSize.width > anotherSize.width ? aSize.width : anotherSize.width, aSize.height > anotherSize.height ? aSize.height : anotherSize.height);
+}
+
+CGSize CGSizeBiggestIntersectionOfThree(CGSize aSize, CGSize anotherSize, CGSize aThirdSize)
+{
+	return CGSizeBiggestIntersect(CGSizeBiggestIntersect(aSize, anotherSize), aThirdSize);
+}
+
+CGSize CGSizeDifference(CGSize reference, CGSize sizeToCompare)
+{
+	return CGSizeMake(sizeToCompare.width - reference.height, sizeToCompare.height - reference.height);
+}
+
+CGPoint CGPointInternalCenterOfRect(CGRect rect)
+{
+	return CGPointIntegral(CGPointMake(rect.size.width / 2.0f, rect.size.height / 2.0f));
+}
+
+CGSize CGSizeAddSize(CGSize aSize, CGSize anotherSize)
+{
+    return CGSizeMake(aSize.width + anotherSize.width, aSize.height + anotherSize.height);
+}
+
+CGPoint CGPointAddPoint(CGPoint aPoint, CGPoint anotherPoint)
+{
+    return CGPointMake(aPoint.x + anotherPoint.x, aPoint.y + anotherPoint.y);
+}
+
+CGRect CGRectInverseAxis(CGRect aRect)
+{
+    return CGRectMake(aRect.origin.y, aRect.origin.x, aRect.size.height, aRect.size.width);
+}
+
+CGPoint CGPointIntegral(CGPoint aPoint)
+{
+    aPoint.x = roundf(aPoint.x);
+    aPoint.y = roundf(aPoint.y);
+    return aPoint;
+}
+
+CGSize CGSizeIntegral(CGSize aSize)
+{
+    aSize.width = roundf(aSize.width);
+    aSize.height = roundf(aSize.height);
+    return aSize;
+}
