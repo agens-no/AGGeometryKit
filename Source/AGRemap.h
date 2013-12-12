@@ -21,18 +21,3 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-
-struct AGPoint3D {
-    CGFloat x;
-    CGFloat y;
-    CGFloat z;
-};
-typedef struct AGPoint3D AGPoint3D;
-
-const AGPoint3D AGPoint3DZero;
-
-AGPoint3D AGPoint3DMake(CGFloat x, CGFloat y, CGFloat z);
-AGPoint3D AGPoint3DMakeWithCGPoint(CGPoint CGPoint);
-CGFloat AGPoint3DGetDistanceXYAxis(AGPoint3D p1, AGPoint3D p2);
-CGPoint AGPoint3DGetCGPoint(AGPoint3D v);

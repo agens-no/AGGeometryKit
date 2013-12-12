@@ -57,55 +57,43 @@
 - (void)testProgressForValue
 {
     {
-        CGFloat progress = agRemapToOneZero(170, 100, 200);
+        CGFloat progress = agRemapToZeroOne(170, 100, 200);
         STAssertEquals(progress, (CGFloat)0.7, nil);
     }
     {
-        CGFloat progress = agRemapToOneZero(100, 100, 200);
+        CGFloat progress = agRemapToZeroOne(100, 100, 200);
         STAssertEquals(progress, (CGFloat)0.0, nil);
     }
     {
-        CGFloat progress = agRemapToOneZero(200, 200, 100);
+        CGFloat progress = agRemapToZeroOne(200, 200, 100);
         STAssertTrue(progress == 0.0, nil);
     }
     {
-        CGFloat progress = agRemapToOneZero(50, 100, 200);
+        CGFloat progress = agRemapToZeroOne(50, 100, 200);
         STAssertEquals(progress, (CGFloat)-0.5, nil);
     }
     {
-        CGFloat progress = agRemapToOneZero(250, 100, 200);
+        CGFloat progress = agRemapToZeroOne(250, 100, 200);
         STAssertEquals(progress, (CGFloat)1.5, nil);
     }
 }
 
-- (void)testBIT_TEST_ALL
-{
-    int a = 0;
-    STAssertFalse(BIT_TEST_ALL(a, 1 << 5), nil);
-    
-    BIT_SET(a, 1 << 5);
-    STAssertTrue(BIT_TEST_ALL(a, 1 << 5), nil);
-    
-    BIT_CLEAR(a, 1 << 5);
-    STAssertFalse(BIT_TEST_ALL(a, 1 << 5), nil);
-}
-
 - (void)testCLAMP
 {
-    STAssertEquals(CLAMP(0.5, 1.0, 50.0), 1.0, nil);
-    STAssertEquals(CLAMP(0.5, 0.0, 50.0), 0.5, nil);
-    STAssertEquals(CLAMP(-1.5, -2.0, -1.0), -1.5, nil);
-    STAssertEquals(CLAMP(5, -2.0, -1.0), -1.0, nil);
-    STAssertEquals(CLAMP(5, 2, 7), 5, nil);
-    STAssertEquals(CLAMP(5, -2, 3), 3, nil);
+    STAssertEquals(AG_CLAMP(0.5, 1.0, 50.0), 1.0, nil);
+    STAssertEquals(AG_CLAMP(0.5, 0.0, 50.0), 0.5, nil);
+    STAssertEquals(AG_CLAMP(-1.5, -2.0, -1.0), -1.5, nil);
+    STAssertEquals(AG_CLAMP(5, -2.0, -1.0), -1.0, nil);
+    STAssertEquals(AG_CLAMP(5, 2, 7), 5, nil);
+    STAssertEquals(AG_CLAMP(5, -2, 3), 3, nil);
 }
 
 - (void)testIS_WITHIN
 {
-    STAssertTrue(IS_WITHIN(0, -5, 2), nil);
-    STAssertTrue(IS_WITHIN(10.0, -5, 20.0), nil);
-    STAssertFalse(IS_WITHIN(2, 5, 7), nil);
-    STAssertFalse(IS_WITHIN(12, 5, 7), nil);
+    STAssertTrue(AG_IS_WITHIN(0, -5, 2), nil);
+    STAssertTrue(AG_IS_WITHIN(10.0, -5, 20.0), nil);
+    STAssertFalse(AG_IS_WITHIN(2, 5, 7), nil);
+    STAssertFalse(AG_IS_WITHIN(12, 5, 7), nil);
 }
 
 - (void)testMinInArray_maxInArray
@@ -120,24 +108,35 @@
     unsigned int index;
     CGFloat value;
     
-    value = minInArray(values, 5, &index);
+    value = agMinInArray(values, 5, &index);
     STAssertEquals(value, (CGFloat)10.0, nil);
     STAssertEquals(index, 0u, nil);
     
-    value = maxInArray(values, 5, &index);
+    value = agMaxInArray(values, 5, &index);
     STAssertEquals(value, (CGFloat)14.0, nil);
     STAssertEquals(index, 4u, nil);
     
     values[3] = 100;
     values[2] = -15;
     
-    value = minInArray(values, 5, &index);
+    value = agMinInArray(values, 5, &index);
     STAssertEquals(value, (CGFloat)-15.0, nil);
     STAssertEquals(index, 2u, nil);
     
-    value = maxInArray(values, 5, &index);
+    value = agMaxInArray(values, 5, &index);
     STAssertEquals(value, (CGFloat)100.0, nil);
     STAssertEquals(index, 3u, nil);
+}
+
+- (void)testMakeProgressPingPong
+{;
+    STAssertEquals(agMakeProgressPingPong(-1), (CGFloat)0.0, nil);
+    STAssertEquals(agMakeProgressPingPong(0.0), (CGFloat)0.0, nil);
+    STAssertEquals(agMakeProgressPingPong(0.25), (CGFloat)0.5, nil);
+    STAssertEquals(agMakeProgressPingPong(0.5), (CGFloat)1.0, nil);
+    STAssertEquals(agMakeProgressPingPong(0.75), (CGFloat)0.5, nil);
+    STAssertEquals(agMakeProgressPingPong(1.0), (CGFloat)0.0, nil);
+    STAssertEquals(agMakeProgressPingPong(1.5), (CGFloat)0.0, nil);
 }
 
 @end

@@ -21,47 +21,35 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-
-#define BIT_SET(x, b)   ((x) |= (b))
-#define BIT_CLEAR(x, b) ((x) &= ~(b))
-#define BIT_TEST_ANY(x, b)  (((x) & (b)) != 0)
-#define BIT_TEST_ALL(x, b)  ({\
-  __typeof__(x) __x = (x); \
-  __typeof__(b) __b = (b);\
-  (__x & __b) == __b;\
-  })
-
-#define CLAMP(x, low, high) ({\
+#define AG_CLAMP(x, low, high) ({\
   __typeof__(x) __x = (x); \
   __typeof__(low) __low = (low);\
   __typeof__(high) __high = (high);\
   __x > __high ? __high : (__x < __low ? __low : __x);\
   })
 
-#define IS_WITHIN(x, low, high) ({\
+#define AG_IS_WITHIN(x, low, high) ({\
   __typeof__(x) __x = (x); \
   __typeof__(low) __low = (low);\
   __typeof__(high) __high = (high);\
   __x <= __high && __x >= __low;\
   })
 
-#define M_TAU       6.28318530717958647692528676655900576   /* tau                  */
-#define M_TAU_2     M_PI                                    /* tau/2 = pi           */
-#define M_TAU_4     M_PI_2                                  /* tau/4 = pi/2         */
-#define M_1_TAU     0.15915494309189533576888376337251436   /* 1/tau = 1/2pi        */
-#define M_2_TA      M_1_PI                                  /* 2/tau = 2/2pi = 1/pi */
+
+
+//#define AG_M_TAU       6.28318530717958647692528676655900576   /* tau                  */
+//#define AG_M_TAU_2     M_PI                                    /* tau/2 = pi           */
+//#define AG_M_TAU_4     M_PI_2                                  /* tau/4 = pi/2         */
+//#define AG_M_1_TAU     0.15915494309189533576888376337251436   /* 1/tau = 1/2pi        */
+//#define AG_M_2_TA      M_1_PI                                  /* 2/tau = 2/2pi = 1/pi */
+
 
 inline CGFloat agInterpolate(CGFloat startValue, CGFloat endValue, CGFloat progress);
 
+inline CGFloat agRemapToZeroOne(CGFloat value, CGFloat startValue, CGFloat endValue);
 inline CGFloat agRemap(CGFloat value, CGFloat oldStartValue, CGFloat oldEndValue, CGFloat newStartValue, CGFloat newEndValue);
 inline CGFloat agRemapAndClamp(CGFloat value, CGFloat oldStartValue, CGFloat oldEndValue, CGFloat newStartValue, CGFloat newEndValue);
-
-inline CGFloat agRemapToOneZero(CGFloat value, CGFloat startValue, CGFloat endValue);
-inline CGFloat agRemapToOneZeroAndClamp(CGFloat value, CGFloat startValue, CGFloat endValue);
-
-inline CGFloat minInArray(CGFloat values[], NSUInteger numberOfValues, NSUInteger *out_index);
-inline CGFloat maxInArray(CGFloat values[], NSUInteger numberOfValues, NSUInteger *out_index);
+inline CGFloat agRemapToZeroOneAndClamp(CGFloat value, CGFloat oldStartValue, CGFloat oldEndValue);
 
 inline CGFloat agClamp(CGFloat value, CGFloat min, CGFloat max);
 
@@ -69,4 +57,29 @@ inline BOOL agIsWithin(CGFloat value, CGFloat min, CGFloat max);
 
 inline CGFloat agRadiansToDegrees(CGFloat radians);
 inline CGFloat agDegreesToRadians(CGFloat degrees);
+inline CGFloat agMakeProgressPingPong(CGFloat progress);
+inline CGFloat agMakeProgressPingPongSin(CGFloat progress);
+inline CGFloat agBezierYForX(CGFloat x, CGPoint p0, CGPoint p1, CGPoint p2, CGPoint p3);
+inline CGFloat agBezierZeroOneYForX(CGFloat x, CGPoint p1, CGPoint p2);
+inline CGFloat agEaseInWithBezier(CGFloat progress);
+inline CGFloat agEaseOutWithBezier(CGFloat progress);
+inline CGFloat agEaseInOutWithBezier(CGFloat progress, CGFloat force);
+inline CGFloat agEaseOutWithOverShoot(CGFloat progress, CGFloat overshoot);
+inline CGFloat agEaseOutWithPower(CGFloat progress, CGFloat power);
+
+inline CGFloat agDelayedProgressForItems(NSUInteger index,
+                                         NSUInteger itemCount,
+                                         CGFloat overlap,
+                                         CGFloat overallProgress);
+
+inline CGFloat agEaseWithTwoBeziers(CGPoint tangent1,
+                                    CGPoint tangent2,
+                                    CGPoint pointOfConnection,
+                                    CGFloat x,
+                                    CGPoint tangent4,
+                                    CGFloat time,
+                                    CGFloat progress);
+
+inline CGFloat agMinInArray(CGFloat values[], NSUInteger numberOfValues, NSUInteger *out_index);
+inline CGFloat agMaxInArray(CGFloat values[], NSUInteger numberOfValues, NSUInteger *out_index);
 

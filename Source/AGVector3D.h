@@ -23,7 +23,6 @@
 
 #import <Foundation/Foundation.h>
 #import <GLKit/GLKit.h>
-#import "AGPoint3D.h"
 #import "GLKit/GLKVector3.h"
 
 struct AGVector3D {
@@ -36,7 +35,6 @@ typedef struct AGVector3D AGVector3D;
 const AGVector3D AGVector3DZero;
 
 AGVector3D AGVector3DMake(CGFloat x, CGFloat y, CGFloat z);
-AGVector3D AGVector3DMakeFromPoints(AGPoint3D p1, AGPoint3D p2);
 CGFloat AGVector3DGetLength(AGVector3D v);
 AGVector3D AGVector3DAdd(AGVector3D v1, AGVector3D v2);
 AGVector3D AGVector3DSubtract(AGVector3D v1, AGVector3D v2);
@@ -44,7 +42,5 @@ AGVector3D AGVector3DNegate(AGVector3D v);
 AGVector3D AGVector3DNormalize(AGVector3D v);
 CGFloat AGVector3DDotProduct(AGVector3D v1, AGVector3D v2);
 AGVector3D AGVector3DCrossProduct(AGVector3D v1, AGVector3D v2);
-AGVector3D AGVector3DMakeWithAGPoint3D(AGPoint3D point);
-AGVector3D AGVector3DGetTriangleNormalFromPoints(AGPoint3D p1, AGPoint3D p2, AGPoint3D p3);
 AGVector3D AGVector3DGetTriangleNormal(AGVector3D v1, AGVector3D v2, AGVector3D v3);
 AGVector3D AGVector3DForGLKVector3(GLKVector3);

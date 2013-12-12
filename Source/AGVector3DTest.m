@@ -30,52 +30,30 @@
 
 @implementation AGVector3DTest
 
-
-- (void)testAGPoint3DGetDistanceXYAxis
+- (void)testAGVector3DGetTriangleNormal
 {
-    AGPoint3D p1 = AGPoint3DMake(0, 0, 0);
-    AGPoint3D p2 = AGPoint3DMake(10, 0, 0);
-    CGFloat distance =  AGPoint3DGetDistanceXYAxis(p1, p2);
-    CGFloat expectedDistance = 10.0;
-    
-    STAssertEquals(distance, expectedDistance, @"Distance is %.2f but was expected %.2f", distance, expectedDistance);
-    
-    p1 = AGPoint3DMake(0, 0, 0);
-    p2 = AGPoint3DMake(10, 10, 0);
-    distance =  AGPoint3DGetDistanceXYAxis(p1, p2);
-    expectedDistance = sqrtf(200.0);
-    
-    STAssertEquals(distance, expectedDistance, @"Distance is %.2f but was expected %.2f", distance, expectedDistance);
-    
-    p1 = AGPoint3DMake(0, 0, 0);
-    p2 = AGPoint3DMake(10, 10, 10);
-    distance =  AGPoint3DGetDistanceXYAxis(p1, p2);
-    expectedDistance = sqrtf(200.0);
-    
-    STAssertEquals(distance, expectedDistance, @"Distance is %.2f but was expected %.2f", distance, expectedDistance);
+    {
+        AGVector3D v1 = AGVector3DMake(0, 0, 0);
+        AGVector3D v2 = AGVector3DMake(1, 0, 0);
+        AGVector3D v3 = AGVector3DMake(1, 1, 0);
+        AGVector3D vector =  AGVector3DGetTriangleNormal(v1, v2, v3);
+        AGVector3D expectedVector = AGVector3DMake(0, 0, 1);
+
+        STAssertEqualsWithAccuracy(vector.x, expectedVector.x, 0.001, @"Normal vector x is %f but was expected %f", vector.x, expectedVector.x);
+        STAssertEqualsWithAccuracy(vector.y, expectedVector.y, 0.001, @"Normal vector y is %f but was expected %f", vector.y, expectedVector.y);
+        STAssertEqualsWithAccuracy(vector.z, expectedVector.z, 0.001, @"Normal vector z is %f but was expected %f", vector.z, expectedVector.z);
+    }
+    {
+        AGVector3D v1 = AGVector3DMake(0, 0, 0);
+        AGVector3D v2 = AGVector3DMake(1, 0, 0);
+        AGVector3D v3 = AGVector3DMake(1, 0, 1);
+        AGVector3D vector =  AGVector3DGetTriangleNormal(v1, v2, v3);
+        AGVector3D expectedVector = AGVector3DMake(0, -1, 0);
+
+        STAssertEqualsWithAccuracy(vector.x, expectedVector.x, 0.001, @"Normal vector x is %f but was expected %f", vector.x, expectedVector.x);
+        STAssertEqualsWithAccuracy(vector.y, expectedVector.y, 0.001, @"Normal vector y is %f but was expected %f", vector.y, expectedVector.y);
+        STAssertEqualsWithAccuracy(vector.z, expectedVector.z, 0.001, @"Normal vector z is %f but was expected %f", vector.z, expectedVector.z);
+    }
 }
 
-- (void)testAGVector3DGetTriangleNormalFromPoints
-{
-    AGPoint3D p1 = AGPoint3DMake(0, 0, 0);
-    AGPoint3D p2 = AGPoint3DMake(1, 0, 0);
-    AGPoint3D p3 = AGPoint3DMake(1, 1, 0);
-    AGVector3D vector =  AGVector3DGetTriangleNormalFromPoints(p1, p2, p3);
-    AGVector3D expectedVector = AGVector3DMake(0, 0, 1);
-    
-    STAssertEqualsWithAccuracy(vector.x, expectedVector.x, 0.001, @"Normal vector x is %f but was expected %f", vector.x, expectedVector.x);
-    STAssertEqualsWithAccuracy(vector.y, expectedVector.y, 0.001, @"Normal vector y is %f but was expected %f", vector.y, expectedVector.y);
-    STAssertEqualsWithAccuracy(vector.z, expectedVector.z, 0.001, @"Normal vector z is %f but was expected %f", vector.z, expectedVector.z);
-    
-    p1 = AGPoint3DMake(0, 0, 0);
-    p2 = AGPoint3DMake(1, 0, 0);
-    p3 = AGPoint3DMake(1, 0, 1);
-    vector =  AGVector3DGetTriangleNormalFromPoints(p1, p2, p3);
-    expectedVector = AGVector3DMake(0, -1, 0);
-    
-    STAssertEqualsWithAccuracy(vector.x, expectedVector.x, 0.001, @"Normal vector x is %f but was expected %f", vector.x, expectedVector.x);
-    STAssertEqualsWithAccuracy(vector.y, expectedVector.y, 0.001, @"Normal vector y is %f but was expected %f", vector.y, expectedVector.y);
-    STAssertEqualsWithAccuracy(vector.z, expectedVector.z, 0.001, @"Normal vector z is %f but was expected %f", vector.z, expectedVector.z);
-
-}
 @end

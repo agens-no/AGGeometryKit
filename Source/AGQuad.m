@@ -169,28 +169,28 @@ extern CGFloat AGQuadGetSmallestX(AGQuad q)
 {
     CGFloat values[4];
     AGQuadGetXValues(q, values);
-    return minInArray(values, 4, NULL);
+    return agMinInArray(values, 4, NULL);
 }
 
 extern CGFloat AGQuadGetBiggestX(AGQuad q)
 {
     CGFloat values[4];
     AGQuadGetXValues(q, values);
-    return maxInArray(values, 4, NULL);
+    return agMaxInArray(values, 4, NULL);
 }
 
 extern CGFloat AGQuadGetSmallestY(AGQuad q)
 {
     CGFloat values[4];
     AGQuadGetYValues(q, values);
-    return minInArray(values, 4, NULL);
+    return agMinInArray(values, 4, NULL);
 }
 
 extern CGFloat AGQuadGetBiggestY(AGQuad q)
 {
     CGFloat values[4];
     AGQuadGetYValues(q, values);
-    return maxInArray(values, 4, NULL);
+    return agMaxInArray(values, 4, NULL);
 }
 
 extern CGRect AGQuadGetBoundingRect(AGQuad q)
@@ -200,10 +200,10 @@ extern CGRect AGQuadGetBoundingRect(AGQuad q)
     AGQuadGetXValues(q, xValues);
     AGQuadGetYValues(q, yValues);
     
-    CGFloat xmin = minInArray(xValues, 4, NULL);
-    CGFloat xmax = maxInArray(xValues, 4, NULL);
-    CGFloat ymin = minInArray(yValues, 4, NULL);
-    CGFloat ymax = maxInArray(yValues, 4, NULL);
+    CGFloat xmin = agMinInArray(xValues, 4, NULL);
+    CGFloat xmax = agMaxInArray(xValues, 4, NULL);
+    CGFloat ymin = agMinInArray(yValues, 4, NULL);
+    CGFloat ymax = agMaxInArray(yValues, 4, NULL);
     
     CGRect rect;
     rect.origin.x = xmin;

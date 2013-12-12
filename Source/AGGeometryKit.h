@@ -32,3 +32,4 @@
 #import "CALayer+Extensions.h"
 #import "CAAnimationBlockDelegate.h"
 #import "UIView+FrameExtra.h"
+#import "AGBitOperations.h"

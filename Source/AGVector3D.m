@@ -33,11 +33,6 @@ AGVector3D AGVector3DMake(CGFloat x, CGFloat y, CGFloat z)
     return vector;
 }
 
-AGVector3D AGVector3DMakeFromPoints(AGPoint3D p1, AGPoint3D p2)
-{
-    return AGVector3DMake(p2.x - p1.x, p2.y - p1.y, p2.z - p1.z);
-}
-
 CGFloat AGVector3DGetLength(AGVector3D v)
 {
     return sqrtf(v.x * v.x + v.y * v.y + v.z * v.z);
@@ -82,11 +77,6 @@ AGVector3D AGVector3DCrossProduct(AGVector3D v1, AGVector3D v2)
                           v1.x * v2.y - v1.y * v2.x);
 }
 
-AGVector3D AGVector3DMakeWithAGPoint3D(AGPoint3D point)
-{
-    return AGVector3DMake(point.x, point.y, point.z);
-}
-
 AGVector3D AGVector3DForGLKVector3(GLKVector3 vec)
 {
 #if defined(__STRICT_ANSI__)
@@ -94,14 +84,6 @@ AGVector3D AGVector3DForGLKVector3(GLKVector3 vec)
 #else
     return AGVector3DMake(vec.x, vec.y, vec.z);
 #endif
-}
-
-AGVector3D AGVector3DGetTriangleNormalFromPoints(AGPoint3D p1, AGPoint3D p2, AGPoint3D p3)
-{
-    AGVector3D v1 = AGVector3DMakeWithAGPoint3D(p1);
-    AGVector3D v2 = AGVector3DMakeWithAGPoint3D(p2);
-    AGVector3D v3 = AGVector3DMakeWithAGPoint3D(p3);
-    return AGVector3DGetTriangleNormal(v1, v2, v3);
 }
 
 AGVector3D AGVector3DGetTriangleNormal(AGVector3D v1, AGVector3D v2, AGVector3D v3)
