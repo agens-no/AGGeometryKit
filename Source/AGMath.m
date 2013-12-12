@@ -23,37 +23,18 @@
 
 #import "AGMath.h"
 
-extern float interpolatef(float startValue, float endValue, float progress)
+extern CGFloat agInterpolate(CGFloat startValue, CGFloat endValue, CGFloat progress)
 {
     return startValue + ((endValue - startValue) * progress);
 }
 
-extern double interpolate(double startValue, double endValue, double progress)
+extern CGFloat agRemapToOneZero(CGFloat value, CGFloat startValue, CGFloat endValue)
 {
-    return startValue + ((endValue - startValue) * progress);
-}
-
-extern float interpolationProgressf(float startValue, float endValue, float value)
-{
-    double diff = value - startValue;
-    
-    if(diff != 0.0)
-    {
-        return diff / (endValue - startValue);
-    }
-    else
-    {
-        return 0.0;
-    }
-}
-
-extern double interpolationProgress(double startValue, double endValue, double value)
-{
-    double diff = value - startValue;
+    CGFloat diff = endValue - startValue;
     
     if(diff != 0.0f)
     {
-        return diff / (endValue - startValue);
+        return (value - startValue) / diff;
     }
     else
     {
@@ -61,14 +42,33 @@ extern double interpolationProgress(double startValue, double endValue, double v
     }
 }
 
-extern double minInArray(double values[], unsigned int numberOfValues, unsigned int *out_index)
+extern CGFloat agRemap(CGFloat value, CGFloat oldStartValue, CGFloat oldEndValue, CGFloat newStartValue, CGFloat newEndValue)
 {
-    double lowest = values[0];
+    float p = agRemapToOneZero(oldStartValue, oldEndValue, value);
+    return agInterpolate(newStartValue, newEndValue, p);
+}
+
+extern CGFloat agRemapAndClamp(CGFloat value, CGFloat oldStartValue, CGFloat oldEndValue, CGFloat newStartValue, CGFloat newEndValue)
+{
+    float p = agRemapToOneZero(oldStartValue, oldEndValue, value);
+    float remapped = agInterpolate(newStartValue, newEndValue, p);
+    return agClamp(remapped, newStartValue, newEndValue);
+}
+
+extern CGFloat agRemapToOneZeroAndClamp(CGFloat value, CGFloat oldStartValue, CGFloat oldEndValue)
+{
+    float remapped = agRemapToOneZero(value, oldStartValue, oldEndValue);
+    return agClamp(remapped, 0.0, 1.0);
+}
+
+extern CGFloat minInArray(CGFloat values[], NSUInteger numberOfValues, NSUInteger *out_index)
+{
+    CGFloat lowest = values[0];
     unsigned int index = 0;
     
     for(int i = 1; i < numberOfValues; i++)
     {
-        double value = values[i];
+        CGFloat value = values[i];
         if(value < lowest)
         {
             lowest = value;
@@ -84,14 +84,14 @@ extern double minInArray(double values[], unsigned int numberOfValues, unsigned 
     return lowest;
 }
 
-extern double maxInArray(double values[], unsigned int numberOfValues, unsigned int *out_index)
+extern CGFloat maxInArray(CGFloat values[], NSUInteger numberOfValues, NSUInteger *out_index)
 {
-    double highest = values[0];
+    CGFloat highest = values[0];
     unsigned int index = 0;
     
     for(int i = 1; i < numberOfValues; i++)
     {
-        double value = values[i];
+        CGFloat value = values[i];
         if(value > highest)
         {
             highest = value;
@@ -107,7 +107,7 @@ extern double maxInArray(double values[], unsigned int numberOfValues, unsigned 
     return highest;
 }
 
-extern float clampf(float value, float min, float max)
+extern CGFloat agClamp(CGFloat value, CGFloat min, CGFloat max)
 {
     if(value > max)
         return max;
@@ -116,16 +116,7 @@ extern float clampf(float value, float min, float max)
     return value;
 }
 
-extern double clamp(double value, double min, double max)
-{
-    if(value > max)
-        return max;
-    if(value < min)
-        return min;
-    return value;
-}
-
-inline BOOL iswithinf(float value, float min, float max)
+extern BOOL agIsWithin(CGFloat value, CGFloat min, CGFloat max)
 {
     if(value >= max)
         return NO;
@@ -134,27 +125,12 @@ inline BOOL iswithinf(float value, float min, float max)
     return YES;
 }
 
-extern BOOL iswithin(double value, double min, double max)
-{
-    if(value >= max)
-        return NO;
-    if(value <= min)
-        return NO;
-    return YES;
-}
-
-extern double radiansToDegrees(double radians)
+extern CGFloat agRadiansToDegrees(CGFloat radians)
 {
     return radians * 180 / M_PI;
 }
 
-extern double degreesToRadians(double degrees)
+extern CGFloat agDegreesToRadians(CGFloat degrees)
 {
     return degrees * M_PI / 180;
-}
-
-extern double floatToDoubleZeroFill(float value)
-{
-    double val = [[NSString stringWithFormat:@"%f", value] doubleValue];
-    return val;
 }

@@ -30,65 +30,51 @@
 
 @implementation AGMathTest
 
-#pragma mark - Construct and destruct
-
-- (void)setUp
-{
-    [super setUp];
-}
-
-- (void)tearDown
-{
-    [super tearDown];
-}
-
-#pragma mark - Tests
-
 - (void)testinterpolate
 {
     {
-        double value = interpolate(100, 200, 0.7);
-        STAssertEquals(value, 170.0, nil);
+        CGFloat value = agInterpolate(100, 200, 0.7);
+        STAssertEquals(value, (CGFloat)170.0, nil);
     }
     {
-        double value = interpolate(100, 200, 0.0);
-        STAssertEquals(value, 100.0, nil);
+        CGFloat value = agInterpolate(100, 200, 0.0);
+        STAssertEquals(value, (CGFloat)100.0, nil);
     }
     {
-        double value = interpolate(100, 200, 1.0);
-        STAssertEquals(value, 200.0, nil);
+        CGFloat value = agInterpolate(100, 200, 1.0);
+        STAssertEquals(value, (CGFloat)200.0, nil);
     }
     {
-        double value = interpolate(100, 200, -0.5);
-        STAssertEquals(value, 50.0, nil);
+        CGFloat value = agInterpolate(100, 200, -0.5);
+        STAssertEquals(value, (CGFloat)50.0, nil);
     }
     {
-        double value = interpolate(100, 200, 1.5);
-        STAssertEquals(value, 250.0, nil);
+        CGFloat value = agInterpolate(100, 200, 1.5);
+        STAssertEquals(value, (CGFloat)250.0, nil);
     }
 }
 
 - (void)testProgressForValue
 {
     {
-        double progress = interpolationProgress(100, 200, 170);
-        STAssertEquals(progress, 0.7, nil);
+        CGFloat progress = agRemapToOneZero(170, 100, 200);
+        STAssertEquals(progress, (CGFloat)0.7, nil);
     }
     {
-        double progress = interpolationProgress(100, 200, 100.0f);
-        STAssertEquals(progress, 0.0, nil);
+        CGFloat progress = agRemapToOneZero(100, 100, 200);
+        STAssertEquals(progress, (CGFloat)0.0, nil);
     }
     {
-        double progress = interpolationProgress(100, 200, 200);
-        STAssertEquals(progress, 1.0, nil);
+        CGFloat progress = agRemapToOneZero(200, 200, 100);
+        STAssertTrue(progress == 0.0, nil);
     }
     {
-        double progress = interpolationProgress(100, 200, 50);
-        STAssertEquals(progress, -0.5, nil);
+        CGFloat progress = agRemapToOneZero(50, 100, 200);
+        STAssertEquals(progress, (CGFloat)-0.5, nil);
     }
     {
-        double progress = interpolationProgress(100, 200, 250);
-        STAssertEquals(progress, 1.5, nil);
+        CGFloat progress = agRemapToOneZero(250, 100, 200);
+        STAssertEquals(progress, (CGFloat)1.5, nil);
     }
 }
 
@@ -124,7 +110,7 @@
 
 - (void)testMinInArray_maxInArray
 {
-    double values[5];
+    CGFloat values[5];
 
     for(int i = 0; i < 5; i++)
     {
@@ -132,37 +118,26 @@
     }
     
     unsigned int index;
-    double value;
+    CGFloat value;
     
     value = minInArray(values, 5, &index);
-    STAssertEquals(value, 10.0, nil);
+    STAssertEquals(value, (CGFloat)10.0, nil);
     STAssertEquals(index, 0u, nil);
     
     value = maxInArray(values, 5, &index);
-    STAssertEquals(value, 14.0, nil);
+    STAssertEquals(value, (CGFloat)14.0, nil);
     STAssertEquals(index, 4u, nil);
     
     values[3] = 100;
     values[2] = -15;
     
     value = minInArray(values, 5, &index);
-    STAssertEquals(value, -15.0, nil);
+    STAssertEquals(value, (CGFloat)-15.0, nil);
     STAssertEquals(index, 2u, nil);
     
     value = maxInArray(values, 5, &index);
-    STAssertEquals(value, 100.0, nil);
+    STAssertEquals(value, (CGFloat)100.0, nil);
     STAssertEquals(index, 3u, nil);
-}
-
-- (void)testFloatToDoubleZeroFill
-{
-    double doubleValue = 1.256250;
-    float floatValue = doubleValue;
-    
-    STAssertEquals(floatToDoubleZeroFill(M_PI), 3.141593000000, nil);
-    STAssertEquals(floatToDoubleZeroFill(floatValue), doubleValue, nil);
-    STAssertEquals(floatToDoubleZeroFill(0.5), 0.5, nil);
-    STAssertEquals(floatToDoubleZeroFill(1.0f / 3.0f), 0.333333000, nil);
 }
 
 @end

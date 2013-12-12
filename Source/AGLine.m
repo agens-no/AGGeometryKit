@@ -32,7 +32,7 @@ extern AGLine AGLineMake(AGPoint start, AGPoint end)
 
 extern AGLine AGLineMakeWithCGPoint(CGPoint start, CGPoint end)
 {
-    return AGLineMake(AGPointMakeWithCGPointZeroFill(start), AGPointMakeWithCGPointZeroFill(end));
+    return AGLineMake(AGPointMakeWithCGPoint(start), AGPointMakeWithCGPoint(end));
 }
 
 extern double AGLineLength(AGLine l)

@@ -208,6 +208,7 @@
 		A39DA67C172984E9005B84D3 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		A39DA67D172984E9005B84D3 /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
 		A3BC981917D8A88B009B7495 /* AGGeometryKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = AGGeometryKit.podspec; path = ../AGGeometryKit.podspec; sourceTree = "<group>"; };
+		A3C6C4101859EB710003472C /* AGSBitOperations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGSBitOperations.h; sourceTree = "<group>"; };
 		A3EE526716EDEE83007706C6 /* easing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = easing.c; sourceTree = "<group>"; };
 		A3EE526816EDEE83007706C6 /* easing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = easing.h; sourceTree = "<group>"; };
 		A3EE526B16EE63F6007706C6 /* AGQuadKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGQuadKit.h; sourceTree = "<group>"; };
@@ -345,6 +346,7 @@
 				A333A5F316A9A59200E334AD /* AGMath.h */,
 				A333A5F416A9A59200E334AD /* AGMath.m */,
 				A333A60716A9A5A300E334AD /* AGMathTest.m */,
+				A3C6C4101859EB710003472C /* AGSBitOperations.h */,
 				A30B0C3F16CE859400856E00 /* AGPoint.h */,
 				A30B0C4016CE859400856E00 /* AGPoint.m */,
 				A3467564184DEB7900AD34EC /* AGVector3D.h */,

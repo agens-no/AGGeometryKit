@@ -42,12 +42,6 @@ extern AGPoint AGPointMakeWithCGPoint(CGPoint cg)
     return ag;
 }
 
-extern AGPoint AGPointMakeWithCGPointZeroFill(CGPoint cg)
-{
-    AGPoint ag = {floatToDoubleZeroFill(cg.x), floatToDoubleZeroFill(cg.y)};
-    return ag;
-}
-
 extern AGPoint AGPointMake(double x, double y)
 {
     return (AGPoint){x, y};
@@ -56,8 +50,8 @@ extern AGPoint AGPointMake(double x, double y)
 extern AGPoint AGPointInterpolate(AGPoint p1, AGPoint p2, double progress)
 {
     AGPoint result;
-    result.x = interpolate(p1.x, p2.x, progress);
-    result.y = interpolate(p1.y, p2.y, progress);
+    result.x = agInterpolate(p1.x, p2.x, progress);
+    result.y = agInterpolate(p1.y, p2.y, progress);
     return result;
 }
 

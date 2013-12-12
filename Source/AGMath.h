@@ -52,24 +52,21 @@
 #define M_1_TAU     0.15915494309189533576888376337251436   /* 1/tau = 1/2pi        */
 #define M_2_TA      M_1_PI                                  /* 2/tau = 2/2pi = 1/pi */
 
-inline float interpolatef(float startValue, float endValue, float progress);
-inline double interpolate(double startValue, double endValue, double progress);
+inline CGFloat agInterpolate(CGFloat startValue, CGFloat endValue, CGFloat progress);
 
-inline float interpolationProgressf(float startValue, float endValue, float value);
-inline double interpolationProgress(double startValue, double endValue, double value);
+inline CGFloat agRemap(CGFloat value, CGFloat oldStartValue, CGFloat oldEndValue, CGFloat newStartValue, CGFloat newEndValue);
+inline CGFloat agRemapAndClamp(CGFloat value, CGFloat oldStartValue, CGFloat oldEndValue, CGFloat newStartValue, CGFloat newEndValue);
 
-inline double minInArray(double values[], unsigned int numberOfValues, unsigned int *out_index);
-inline double maxInArray(double values[], unsigned int numberOfValues, unsigned int *out_index);
+inline CGFloat agRemapToOneZero(CGFloat value, CGFloat startValue, CGFloat endValue);
+inline CGFloat agRemapToOneZeroAndClamp(CGFloat value, CGFloat startValue, CGFloat endValue);
 
-inline float clampf(float value, float min, float max);
-inline double clamp(double value, double min, double max);
+inline CGFloat minInArray(CGFloat values[], NSUInteger numberOfValues, NSUInteger *out_index);
+inline CGFloat maxInArray(CGFloat values[], NSUInteger numberOfValues, NSUInteger *out_index);
 
-inline BOOL iswithinf(float value, float min, float max);
-inline BOOL iswithin(double value, double min, double max);
+inline CGFloat agClamp(CGFloat value, CGFloat min, CGFloat max);
 
-inline double radiansToDegrees(double radians);
-inline double degreesToRadians(double degrees);
+inline BOOL agIsWithin(CGFloat value, CGFloat min, CGFloat max);
 
-inline double floatToDoubleZeroFill(float value);
-
+inline CGFloat agRadiansToDegrees(CGFloat radians);
+inline CGFloat agDegreesToRadians(CGFloat degrees);
 

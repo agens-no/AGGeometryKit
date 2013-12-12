@@ -65,7 +65,7 @@ extern BOOL AGQuadIsValid(AGQuad q)
     return AGQuadIsConvex(q);
 }
 
-extern AGQuad AGQuadMove(AGQuad q, double x, double y)
+extern AGQuad AGQuadMove(AGQuad q, CGFloat x, CGFloat y)
 {
     q.tl.x += x;
     q.tr.x += x;
@@ -78,28 +78,28 @@ extern AGQuad AGQuadMove(AGQuad q, double x, double y)
     return q;
 }
 
-extern AGQuad AGQuadInsetLeft(AGQuad q, double inset)
+extern AGQuad AGQuadInsetLeft(AGQuad q, CGFloat inset)
 {
     q.tl.x += inset;
     q.bl.x += inset;
     return q;
 }
 
-extern AGQuad AGQuadInsetRight(AGQuad q, double inset)
+extern AGQuad AGQuadInsetRight(AGQuad q, CGFloat inset)
 {
     q.tr.x -= inset;
     q.br.x -= inset;
     return q;
 }
 
-extern AGQuad AGQuadInsetTop(AGQuad q, double inset)
+extern AGQuad AGQuadInsetTop(AGQuad q, CGFloat inset)
 {
     q.tl.y += inset;
     q.tr.y += inset;
     return q;
 }
 
-extern AGQuad AGQuadInsetBottom(AGQuad q, double inset)
+extern AGQuad AGQuadInsetBottom(AGQuad q, CGFloat inset)
 {
     q.tl.y -= inset;
     q.tr.y -= inset;
@@ -165,38 +165,38 @@ extern AGQuad AGQuadMakeWithCGSize(CGSize size)
     return q;
 }
 
-extern double AGQuadGetSmallestX(AGQuad q)
+extern CGFloat AGQuadGetSmallestX(AGQuad q)
 {
-    double values[4];
+    CGFloat values[4];
     AGQuadGetXValues(q, values);
     return minInArray(values, 4, NULL);
 }
 
-extern double AGQuadGetBiggestX(AGQuad q)
+extern CGFloat AGQuadGetBiggestX(AGQuad q)
 {
-    double values[4];
+    CGFloat values[4];
     AGQuadGetXValues(q, values);
     return maxInArray(values, 4, NULL);
 }
 
-extern double AGQuadGetSmallestY(AGQuad q)
+extern CGFloat AGQuadGetSmallestY(AGQuad q)
 {
-    double values[4];
+    CGFloat values[4];
     AGQuadGetYValues(q, values);
     return minInArray(values, 4, NULL);
 }
 
-extern double AGQuadGetBiggestY(AGQuad q)
+extern CGFloat AGQuadGetBiggestY(AGQuad q)
 {
-    double values[4];
+    CGFloat values[4];
     AGQuadGetYValues(q, values);
     return maxInArray(values, 4, NULL);
 }
 
 extern CGRect AGQuadGetBoundingRect(AGQuad q)
 {
-    double xValues[4];
-    double yValues[4];
+    CGFloat xValues[4];
+    CGFloat yValues[4];
     AGQuadGetXValues(q, xValues);
     AGQuadGetYValues(q, yValues);
     
@@ -227,7 +227,7 @@ extern CGSize AGQuadGetSize(AGQuad q)
     return smallestRect.size;
 }
 
-void AGQuadGetXValues(AGQuad q, double *out_values)
+void AGQuadGetXValues(AGQuad q, CGFloat *out_values)
 {
     for(int i = 0; i < 4; i++)
     {
@@ -236,7 +236,7 @@ void AGQuadGetXValues(AGQuad q, double *out_values)
     }
 }
 
-void AGQuadGetYValues(AGQuad q, double *out_values)
+void AGQuadGetYValues(AGQuad q, CGFloat *out_values)
 {
     for(int i = 0; i < 4; i++)
     {
@@ -245,7 +245,7 @@ void AGQuadGetYValues(AGQuad q, double *out_values)
     }
 }
 
-extern AGQuad AGQuadInterpolation(AGQuad q1, AGQuad q2, double progress)
+extern AGQuad AGQuadInterpolation(AGQuad q1, AGQuad q2, CGFloat progress)
 {
     AGQuad q;
     for(int i = 0; i < 4; i++)

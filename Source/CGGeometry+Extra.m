@@ -253,16 +253,16 @@ CGSize CGSizeDistanceBetweenRects(CGRect rect1, CGRect rect2)
 CGSize CGSizeInterpolate(CGSize size1, CGSize size2, double progress)
 {
     CGSize result;
-    result.width = interpolate(size1.width, size2.width, progress);
-    result.height = interpolate(size1.height, size2.height, progress);
+    result.width = agInterpolate(size1.width, size2.width, progress);
+    result.height = agInterpolate(size1.height, size2.height, progress);
     return result;
 }
 
 CGPoint CGPointInterpolate(CGPoint point1, CGPoint point2, double progress)
 {
     CGPoint result;
-    result.x = interpolate(point1.x, point2.x, progress);
-    result.y = interpolate(point1.y, point2.y, progress);
+    result.x = agInterpolate(point1.x, point2.x, progress);
+    result.y = agInterpolate(point1.y, point2.y, progress);
     return result;
 }
 
