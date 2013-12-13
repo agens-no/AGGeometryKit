@@ -72,15 +72,6 @@
     STAssertEquals(CGPointDistanceBetweenPoints(p1, p2), (CGFloat) 50.0f, @"Distance is not calculated correctly");
 }
 
-- (void)testCGPointNormalizedDistance
-{
-    CGPoint p1, p2;
-    p1 = CGPointMake(50, 40);
-    p2 = CGPointMake(10, 70);
-    
-    STAssertEquals(CGPointNormalizedDistance(p1, p2), CGPointMake(-40, 30), @"Distance is not calculated correctly");
-}
-
 - (void)testInterpolate
 {
 

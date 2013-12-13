@@ -52,13 +52,8 @@ CGPoint CGPointForCenterInRect(CGRect rect)
 
 extern CGFloat CGPointDistanceBetweenPoints(CGPoint p1, CGPoint p2)
 {
-    CGPoint p = CGPointNormalizedDistance(p1, p2);
+    CGPoint p = CGPointMake(p2.x - p1.x, p2.y - p1.y);
     return sqrtf(powf(p.x, 2.0f) + powf(p.y, 2.0f));
-}
-
-extern CGPoint CGPointNormalizedDistance(CGPoint p1, CGPoint p2)
-{
-    return CGPointMake(p2.x - p1.x, p2.y - p1.y);
 }
 
 extern double CGSizeGetAspectRatio(CGSize size) {
@@ -276,7 +271,10 @@ CGRect CGRectInterpolate(CGRect rect1, CGRect rect2, double progress)
 
 // http://stackoverflow.com/a/15328910/202451
 
-CGPoint CGPointApplyCATransform3D(CGPoint point, CATransform3D transform, CGPoint anchorPoint, CATransform3D parentSublayerTransform)
+CGPoint CGPointApplyCATransform3D(CGPoint point,
+                                  CATransform3D transform,
+                                  CGPoint anchorPoint,
+                                  CATransform3D parentSublayerTransform)
 {
     
     static pthread_mutex_t mtx = PTHREAD_MUTEX_INITIALIZER;
@@ -331,3 +329,96 @@ extern CGFloat CGPointVectorCrossProductZComponent(CGPoint v1, CGPoint v2)
 {
     return v1.x * v2.y - v1.y * v2.x;
 }
+
+extern CGFloat CGSizeScalarToAspectFit(CGSize sizeToFit, CGSize container)
+{
+    CGSize sizeMultiplier = CGSizeMake(sizeToFit.width / container.width,
+                                       sizeToFit.height / container.height);
+
+    return sizeMultiplier.width < sizeMultiplier.height ? sizeMultiplier.width : sizeMultiplier.height;
+}
+
+extern CGFloat CGSizeScalarToAspectFill(CGSize sizeToFill, CGSize container)
+{
+    CGSize sizeMultiplier = CGSizeMake(sizeToFill.width / container.width,
+                                       sizeToFill.height / container.height);
+
+    return sizeMultiplier.width > sizeMultiplier.height ? sizeMultiplier.width : sizeMultiplier.height;
+}
+
+extern CGPoint CGPointSubtract(CGPoint p1, CGPoint p2)
+{
+    return (CGPoint){p1.x - p2.x, p1.y - p2.y};
+}
+
+extern CGPoint CGPointAdd(CGPoint p1, CGPoint p2)
+{
+    return (CGPoint){p1.x + p2.x, p1.y + p2.y};
+}
+
+extern CGPoint CGPointMultiply(CGPoint p1, CGFloat factor)
+{
+    return (CGPoint){p1.x * factor, p1.y * factor};
+}
+
+extern CGPoint CGPointDivide(CGPoint p1, CGFloat factor)
+{
+    return (CGPoint){p1.x / factor, p1.y / factor};
+}
+
+extern CGFloat CGPointDotProduct(CGPoint p1, CGPoint p2)
+{
+    return (p1.x * p2.x) + (p1.y * p2.y);
+}
+
+extern CGFloat CGPointCrossProduct(CGPoint p1, CGPoint p2)
+{
+    return (p1.x * p2.y) - (p1.y * p2.x);
+}
+
+extern CGPoint CGPointRotate(CGPoint point, CGFloat angle)
+{
+    return CGPointRotateAroundOrigin(point, angle, CGPointZero);
+}
+
+extern CGPoint CGPointRotateAroundOrigin(CGPoint point, CGFloat angle, CGPoint origin)
+{
+    point = CGPointSubtract(point, origin);
+
+    CGFloat cosa = cosf(angle);
+    CGFloat sina = sinf(angle);
+
+    CGPoint r;
+	r.x = point.x*cosa - point.y*sina;
+	r.y = point.x*sina + point.y*cosa;
+
+    return CGPointAdd(r, origin);
+}
+
+extern CGPoint CGPointRotate90DegreesCW(CGPoint point)
+{
+    return CGPointRotate90DegreesCWAroundPoint(point, CGPointZero);
+}
+
+extern CGPoint CGPointRotate90DegreesCWAroundPoint(CGPoint point, CGPoint origin)
+{
+    point = CGPointSubtract(point, origin);
+    point = CGPointMake(point.y, -point.x);
+    return CGPointAdd(point, origin);
+}
+
+extern CGPoint CGPointRotate90DegreesCC(CGPoint point)
+{
+    return CGPointRotate90DegreesCCAroundPoint(point, CGPointZero);
+}
+
+extern CGPoint CGPointRotate90DegreesCCAroundPoint(CGPoint point, CGPoint origin)
+{
+    point = CGPointSubtract(point, origin);
+    point = CGPointMake(-point.y, point.x);
+    return CGPointAdd(point, origin);
+}
+
+
+
+

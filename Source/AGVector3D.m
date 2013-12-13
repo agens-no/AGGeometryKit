@@ -93,3 +93,30 @@ AGVector3D AGVector3DGetTriangleNormal(AGVector3D v1, AGVector3D v2, AGVector3D 
     AGVector3D surfaceNormal = AGVector3DCrossProduct(edge1, edge2);    
     return surfaceNormal;
 }
+
+AGVector3D AGVector3DPositionFromTransform(CATransform3D m)
+{
+    return AGVector3DMake(m.m41, m.m42, m.m43);
+}
+
+AGVector3D AGVector3DApplyTransform(AGVector3D vector, CATransform3D m)
+{
+    AGVector3D p;
+
+    p.x = (m.m11 * vector.x + m.m21 * vector.y + m.m31 * vector.z + m.m41);
+    p.y = (m.m12 * vector.x + m.m22 * vector.y + m.m32 * vector.z + m.m42);
+    p.z = (m.m13 * vector.x + m.m23 * vector.y + m.m33 * vector.z + m.m43);
+
+    return p;
+}
+
+AGVector3D AGVector3DApplyTransformWithNoTranslate(AGVector3D vector, CATransform3D m)
+{
+    AGVector3D p;
+
+    p.x = (m.m11 * vector.x + m.m21 * vector.y + m.m31 * vector.z);
+    p.y = (m.m12 * vector.x + m.m22 * vector.y + m.m32 * vector.z);
+    p.z = (m.m13 * vector.x + m.m23 * vector.y + m.m33 * vector.z);
+
+    return p;
+}

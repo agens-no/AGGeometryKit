@@ -25,11 +25,13 @@
 
 // http://processingjs.nihongoresources.com/bezierinfo/
 
+
+
+
 CGPoint CGPointGetPointForAnchorPointInRect(CGPoint anchor, CGRect rect);
 CGPoint CGPointGetAnchorPointForPointInRect(CGPoint point, CGRect rect);
 CGPoint CGPointForCenterInRect(CGRect rect);
 inline CGFloat CGPointDistanceBetweenPoints(CGPoint p1, CGPoint p2);
-inline CGPoint CGPointNormalizedDistance(CGPoint p1, CGPoint p2);
 inline double CGSizeGetAspectRatio(CGSize size);
 inline BOOL CGSizeAspectIsWiderThanCGSize(CGSize size1, CGSize size2);
 CGSize CGSizeAdjustOuterSizeToFitInnerSize(CGSize outer, CGSize inner);
@@ -55,12 +57,29 @@ inline CGRect CGRectApply(CGRect rect, CGRect (^block)(CGRect rect));
 inline CGSize CGSizeApply(CGSize size, CGSize (^block)(CGSize size));
 inline CGPoint CGPointApply(CGPoint point, CGPoint (^block)(CGPoint point));
 CGRect CGRectSmallestWithCGPoints(CGPoint pointsArray[], int numberOfPoints);
+CGSize CGSizeDistanceBetweenRects(CGRect rect1, CGRect rect2);
 CGSize CGSizeInterpolate(CGSize size1, CGSize size2, double progress);
 CGPoint CGPointInterpolate(CGPoint point1, CGPoint point2, double progress);
 CGRect CGRectInterpolate(CGRect rect1, CGRect rect2, double progress);
-CGPoint CGPointApplyCATransform3D(CGPoint point, CATransform3D transform, CGPoint anchorPoint, CATransform3D parentSublayerTransform);
+CGPoint CGPointApplyCATransform3D(CGPoint point,
+                                  CATransform3D transform,
+                                  CGPoint anchorPoint,
+                                  CATransform3D parentSublayerTransform);
 inline CGPoint CGPointVectorNormalize(CGPoint v);
 inline CGFloat CGPointVectorGetLength(CGPoint v);
 inline CGFloat CGPointVectorDotProduct(CGPoint v1, CGPoint v2);
 inline CGFloat CGPointVectorCrossProductZComponent(CGPoint v1, CGPoint v2);
-
+inline CGFloat CGSizeScalarToAspectFit(CGSize sizeToFit, CGSize container);
+inline CGFloat CGSizeScalarToAspectFill(CGSize sizeToFill, CGSize container);
+inline CGPoint CGPointSubtract(CGPoint p1, CGPoint p2);
+inline CGPoint CGPointAdd(CGPoint p1, CGPoint p2);
+inline CGPoint CGPointMultiply(CGPoint p1, CGFloat factor);
+inline CGPoint CGPointDivide(CGPoint p1, CGFloat factor);
+inline CGFloat CGPointDotProduct(CGPoint p1, CGPoint p2);
+inline CGFloat CGPointCrossProduct(CGPoint p1, CGPoint p2);
+inline CGPoint CGPointRotate(CGPoint point, CGFloat angle);
+inline CGPoint CGPointRotateAroundOrigin(CGPoint point, CGFloat angle, CGPoint origin);
+inline CGPoint CGPointRotate90DegreesCW(CGPoint point);
+inline CGPoint CGPointRotate90DegreesCWAroundPoint(CGPoint point, CGPoint origin);
+inline CGPoint CGPointRotate90DegreesCC(CGPoint point);
+inline CGPoint CGPointRotate90DegreesCCAroundPoint(CGPoint point, CGPoint origin);

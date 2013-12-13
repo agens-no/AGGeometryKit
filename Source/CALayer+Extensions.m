@@ -23,6 +23,7 @@
 
 #import "CALayer+Extensions.h"
 #import <objc/runtime.h>
+#import "AGVector3D.h"
 
 @implementation CALayer (Extensions)
 
@@ -88,6 +89,56 @@
     }
     
     return outerPoint;
+}
+
+- (CATransform3D)transformToOffsetRotationWithVirtualAnchorPoint:(CGPoint)virtualAnchor
+{
+    CGPoint anchorDiff = CGPointMake((virtualAnchor.x-self.anchorPoint.x)*-1.0f,
+                                     virtualAnchor.y-self.anchorPoint.y);
+
+    if (CGPointEqualToPoint(anchorDiff, CGPointMake(0.0f, 0.0f)))
+    {
+        return self.transform;
+    }
+
+    AGVector3D vec3D = AGVector3DMake(self.bounds.size.width*anchorDiff.x,
+                                      self.bounds.size.height*anchorDiff.y, 0.0f);
+    vec3D = AGVector3DApplyTransformWithNoTranslate(vec3D, self.transform);
+
+    CATransform3D translation = CATransform3DMakeTranslation(vec3D.x-anchorDiff.x*self.bounds.size.width,
+                                                vec3D.y-anchorDiff.y*self.bounds.size.height, vec3D.z);
+
+    return CATransform3DConcat(self.transform, translation);
+}
+
+- (void)applyTransformToOffsetRotationWithVirtualAnchorPoint:(CGPoint)virtualAnchor
+{
+    CATransform3D translate = [self transformToOffsetRotationWithVirtualAnchorPoint:virtualAnchor];
+    self.transform = CATransform3DConcat(self.transform, translate);
+}
+
+- (CGPoint)offsetForXRotation:(CGFloat)angle virtualAnchorPoint:(CGPoint)virtualAnchor
+{
+    CGPoint anchorDiff = CGPointMake(virtualAnchor.x-self.anchorPoint.x,
+                                     self.anchorPoint.y-virtualAnchor.y);
+
+    CGPoint t;
+    t.x = (self.bounds.size.height-self.bounds.size.height*cosf(angle))*anchorDiff.y;
+    t.y = -self.bounds.size.height*anchorDiff.y*sinf(angle);
+
+    return t;
+}
+
+- (CGPoint)offsetForYRotation:(CGFloat)angle virtualAnchorPoint:(CGPoint)virtualAnchor
+{
+    CGPoint anchorDiff = CGPointMake(virtualAnchor.x-self.anchorPoint.x,
+                                     self.anchorPoint.y-virtualAnchor.y);
+
+    CGPoint t;
+    t.x = (self.bounds.size.width-self.bounds.size.width*cosf(angle))*anchorDiff.x;
+    t.y = -self.bounds.size.width*anchorDiff.x*sinf(angle);
+
+    return t;
 }
 
 @end

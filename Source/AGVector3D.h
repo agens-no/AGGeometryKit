@@ -44,3 +44,7 @@ CGFloat AGVector3DDotProduct(AGVector3D v1, AGVector3D v2);
 AGVector3D AGVector3DCrossProduct(AGVector3D v1, AGVector3D v2);
 AGVector3D AGVector3DGetTriangleNormal(AGVector3D v1, AGVector3D v2, AGVector3D v3);
 AGVector3D AGVector3DForGLKVector3(GLKVector3);
+
+AGVector3D AGVector3DPositionFromTransform(CATransform3D m);
+AGVector3D AGVector3DApplyTransform(AGVector3D vector, CATransform3D m);
+AGVector3D AGVector3DApplyTransformWithNoTranslate(AGVector3D vector, CATransform3D m);
