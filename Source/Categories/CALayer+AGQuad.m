@@ -22,7 +22,7 @@
 // THE SOFTWARE.
 
 #import "CALayer+AGQuad.h"
-#import "CAAnimationBlockDelegate.h"
+#import "AGCAAnimationBlockDelegate.h"
 
 @implementation CALayer (AGQuad)
 
@@ -56,7 +56,7 @@
     }
     
     animation.values = values;
-    animation.delegate = [CAAnimationBlockDelegate newWithAnimationDidStop:onComplete];
+    animation.delegate = [AGCAAnimationBlockDelegate newWithAnimationDidStop:onComplete];
     
     return animation;
 }

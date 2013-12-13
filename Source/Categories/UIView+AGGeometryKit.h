@@ -23,7 +23,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (FrameExtra)
+@interface UIView (AGGeometryKit)
 
 @property (nonatomic, assign) CGSize frameSize;
 @property (nonatomic, readonly) CGSize frameSizeHalf;

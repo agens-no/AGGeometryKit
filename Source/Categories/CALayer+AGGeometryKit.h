@@ -1,5 +1,7 @@
 //
-// Author: Odd Magne Hågensen <oddmagne@agens.no>
+// Authors:
+// Håvard Fossli <hfossli@agens.no>
+// Marcus Eckert <marcuseckert@gmail.com>
 //
 // Copyright (c) 2013 Agens AS (http://agens.no/)
 //
@@ -21,40 +23,20 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "UIView+AngleConverter.h"
-#import "CGGeometry+Extra.h"
+#import <QuartzCore/QuartzCore.h>
 
-@implementation UIView (AngleConverter)
+@interface CALayer (AGGeometryKit)
 
-- (CGFloat)convertAngle:(CGFloat)angle toView:(UIView *)view
-{
-    CGPoint p1n = CGPointMake(0, 0);
-    CGPoint p2n = CGPointMake(0, 1000);
-    
-    CGPoint p1r = [self convertPoint:p1n toView:view];
-    CGPoint p2r = [self convertPoint:p2n toView:view];
-    
-    CGPoint v1 = CGPointMake(p2n.x - p1n.x, p2n.y - p1n.y);
-    CGPoint v2 = CGPointMake(p2r.x - p1r.x, p2r.y - p1r.y);
-    
-    CGPoint v1Normalized = CGPointVectorNormalize(v1);
-    CGPoint v2Normalized = CGPointVectorNormalize(v2);
-    
-    CGFloat crossZ = CGPointVectorCrossProductZComponent(v1Normalized, v2Normalized);
-    CGFloat cosAngleInRelation = CGPointVectorDotProduct(v1Normalized, v2Normalized);
-    CGFloat angleInRelation = acosf(cosAngleInRelation) + angle;
-    
-    if (crossZ > 0.0f)
-    {
-        angleInRelation = -angleInRelation;
-    }
-    
-    return angleInRelation;
-}
+- (void)setNullAsActionForKeys:(NSArray *)keys;
+- (void)removeAllSublayers;
+- (void)ensureAnchorPointIsSetToZero;
+- (void)ensureAnchorPointIs:(CGPoint)point;
+- (CGPoint)outerPointForInnerPoint:(CGPoint)innerPoint;
 
-- (CGFloat)convertAngleOfViewInRelationToView:(UIView *)view
-{
-    return [self convertAngle:0.0 toView:view];
-}
+- (CATransform3D)transformToOffsetRotationWithVirtualAnchorPoint:(CGPoint)virtualAnchor;
+- (void)applyTransformToOffsetRotationWithVirtualAnchorPoint:(CGPoint)virtualAnchor;
+- (CGPoint)offsetForXRotation:(CGFloat)angle virtualAnchorPoint:(CGPoint)virtualAnchor;
+- (CGPoint)offsetForYRotation:(CGFloat)angle virtualAnchorPoint:(CGPoint)virtualAnchor;
 
 @end
+

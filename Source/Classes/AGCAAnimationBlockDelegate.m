@@ -1,7 +1,5 @@
 //
-// Authors:
-// Håvard Fossli <hfossli@agens.no>
-// Marcus Eckert <marcuseckert@gmail.com>
+// Author: Håvard Fossli <hfossli@agens.no>
 //
 // Copyright (c) 2013 Agens AS (http://agens.no/)
 //
@@ -23,19 +21,60 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <QuartzCore/QuartzCore.h>
+#import "AGCAAnimationBlockDelegate.h"
 
-@interface CALayer (Extensions)
+@interface AGCAAnimationBlockDelegate ()
+@end
 
-- (void)setNullAsActionForKeys:(NSArray *)keys;
-- (void)removeAllSublayers;
-- (void)ensureAnchorPointIsSetToZero;
-- (void)ensureAnchorPointIs:(CGPoint)point;
-- (CGPoint)outerPointForInnerPoint:(CGPoint)innerPoint;
+@implementation AGCAAnimationBlockDelegate
 
-- (CATransform3D)transformToOffsetRotationWithVirtualAnchorPoint:(CGPoint)virtualAnchor;
-- (void)applyTransformToOffsetRotationWithVirtualAnchorPoint:(CGPoint)virtualAnchor;
-- (CGPoint)offsetForXRotation:(CGFloat)angle virtualAnchorPoint:(CGPoint)virtualAnchor;
-- (CGPoint)offsetForYRotation:(CGFloat)angle virtualAnchorPoint:(CGPoint)virtualAnchor;
++ (instancetype)newWithAnimationDidStart:(void(^)(void))onStart didStop:(void(^)(BOOL completed))onStop
+{
+    AGCAAnimationBlockDelegate *instance = [[self alloc] init];
+    instance.onStart = onStart;
+    instance.onStop = onStop;
+    return instance;
+}
+
++ (instancetype)newWithAnimationDidStop:(void(^)(BOOL completed))onStop
+{
+    AGCAAnimationBlockDelegate *instance = [[self alloc] init];
+    instance.onStop = onStop;
+    return instance;
+}
+
+- (id)init
+{
+    self = [super init];
+    if(self)
+    {
+        _autoRemoveBlocks = YES;
+    }
+    return self;
+}
+
+- (void)animationDidStart:(CAAnimation *)anim
+{
+    if(self.onStart)
+    {
+        self.onStart();
+    }
+    if(self.autoRemoveBlocks)
+    {
+        self.onStart = nil;
+    }
+}
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
+{
+    if(self.onStop)
+    {
+        self.onStop(flag);
+    }
+    if(self.autoRemoveBlocks)
+    {
+        self.onStop = nil;
+    }
+}
 
 @end

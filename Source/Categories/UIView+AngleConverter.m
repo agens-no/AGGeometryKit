@@ -1,5 +1,5 @@
 //
-// Author: Håvard Fossli <hfossli@agens.no>
+// Author: Odd Magne Hågensen <oddmagne@agens.no>
 //
 // Copyright (c) 2013 Agens AS (http://agens.no/)
 //
@@ -21,60 +21,40 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "CAAnimationBlockDelegate.h"
+#import "UIView+AngleConverter.h"
+#import "CGGeometry+AGGeometryKit.h"
 
-@interface CAAnimationBlockDelegate ()
-@end
+@implementation UIView (AngleConverter)
 
-@implementation CAAnimationBlockDelegate
-
-+ (instancetype)newWithAnimationDidStart:(void(^)(void))onStart didStop:(void(^)(BOOL completed))onStop
+- (CGFloat)convertAngle:(CGFloat)angle toView:(UIView *)view
 {
-    CAAnimationBlockDelegate *instance = [[self alloc] init];
-    instance.onStart = onStart;
-    instance.onStop = onStop;
-    return instance;
+    CGPoint p1n = CGPointMake(0, 0);
+    CGPoint p2n = CGPointMake(0, 1000);
+    
+    CGPoint p1r = [self convertPoint:p1n toView:view];
+    CGPoint p2r = [self convertPoint:p2n toView:view];
+    
+    CGPoint v1 = CGPointMake(p2n.x - p1n.x, p2n.y - p1n.y);
+    CGPoint v2 = CGPointMake(p2r.x - p1r.x, p2r.y - p1r.y);
+    
+    CGPoint v1Normalized = CGPointVectorNormalize(v1);
+    CGPoint v2Normalized = CGPointVectorNormalize(v2);
+    
+    CGFloat crossZ = CGPointVectorCrossProductZComponent(v1Normalized, v2Normalized);
+    CGFloat cosAngleInRelation = CGPointVectorDotProduct(v1Normalized, v2Normalized);
+    CGFloat angleInRelation = acosf(cosAngleInRelation) + angle;
+    
+    if (crossZ > 0.0f)
+    {
+        angleInRelation = -angleInRelation;
+    }
+    
+    return angleInRelation;
 }
 
-+ (instancetype)newWithAnimationDidStop:(void(^)(BOOL completed))onStop
+- (CGFloat)convertAngleOfViewInRelationToView:(UIView *)view
 {
-    CAAnimationBlockDelegate *instance = [[self alloc] init];
-    instance.onStop = onStop;
-    return instance;
-}
-
-- (id)init
-{
-    self = [super init];
-    if(self)
-    {
-        _autoRemoveBlocks = YES;
-    }
-    return self;
-}
-
-- (void)animationDidStart:(CAAnimation *)anim
-{
-    if(self.onStart)
-    {
-        self.onStart();
-    }
-    if(self.autoRemoveBlocks)
-    {
-        self.onStart = nil;
-    }
-}
-
-- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
-{
-    if(self.onStop)
-    {
-        self.onStop(flag);
-    }
-    if(self.autoRemoveBlocks)
-    {
-        self.onStop = nil;
-    }
+    return [self convertAngle:0.0 toView:view];
 }
 
 @end

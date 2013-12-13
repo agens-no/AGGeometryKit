@@ -22,7 +22,9 @@
 // THE SOFTWARE.
 
 #import "AGRenderingSample.h"
-#import "AGQuadKit.h"
+#import "AGQuad.h"
+#import "CALayer+AGQuad.h"
+#import "UIImage+AGQuad.h"
 #import "JAValueToString.h"
 
 @interface AGRenderingSample ()

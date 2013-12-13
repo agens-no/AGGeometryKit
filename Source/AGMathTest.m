@@ -30,7 +30,7 @@
 
 @implementation AGMathTest
 
-- (void)testinterpolate
+- (void)testInterpolate
 {
     {
         CGFloat value = agInterpolate(100, 200, 0.7);
@@ -129,7 +129,7 @@
 }
 
 - (void)testMakeProgressPingPong
-{;
+{
     STAssertEquals(agMakeProgressPingPong(-1), (CGFloat)0.0, nil);
     STAssertEquals(agMakeProgressPingPong(0.0), (CGFloat)0.0, nil);
     STAssertEquals(agMakeProgressPingPong(0.25), (CGFloat)0.5, nil);

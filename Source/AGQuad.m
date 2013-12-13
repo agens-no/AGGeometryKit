@@ -25,7 +25,7 @@
 #import "AGQuad.h"
 #import "AGMath.h"
 #import "AGLine.h"
-#import "CGGeometry+Extra.h"
+#import "CGGeometry+AGGeometryKit.h"
 
 /*
  

@@ -27,7 +27,6 @@
 		A3270F4C16D5675800A92C03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3270F3316D5675800A92C03 /* main.m */; };
 		A3270F4D16D5675800A92C03 /* sampleimg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3270F3416D5675800A92C03 /* sampleimg.jpg */; };
 		A3270F4E16D5675800A92C03 /* sampleimg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3270F3416D5675800A92C03 /* sampleimg.jpg */; };
-		A3270F5216D5675800A92C03 /* AGQuadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3270F3816D5675800A92C03 /* AGQuadTests.m */; };
 		A3270F5316D5675800A92C03 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3270F3916D5675800A92C03 /* InfoPlist.strings */; };
 		A3270F5416D5675800A92C03 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3270F3916D5675800A92C03 /* InfoPlist.strings */; };
 		A333A59516A9A3BD00E334AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A59416A9A3BD00E334AD /* UIKit.framework */; };
@@ -57,33 +56,33 @@
 		A3762F681728914700E7A2AB /* AGGeometryKitApplication.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3762F661728914500E7A2AB /* AGGeometryKitApplication.xib */; };
 		A3762FB4172932B200E7A2AB /* sampleimg_enhanced.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3762FB3172932B100E7A2AB /* sampleimg_enhanced.jpg */; };
 		A3762FB5172932B200E7A2AB /* sampleimg_enhanced.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3762FB3172932B100E7A2AB /* sampleimg_enhanced.jpg */; };
-		A38F9ED7185B3BF400F49AD7 /* AGCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9EA9185B3BF400F49AD7 /* AGCorner.m */; };
-		A38F9ED9185B3BF400F49AD7 /* AGLine.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9EAD185B3BF400F49AD7 /* AGLine.m */; };
-		A38F9EDA185B3BF400F49AD7 /* AGMath.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9EAF185B3BF400F49AD7 /* AGMath.m */; };
-		A38F9EDC185B3BF400F49AD7 /* AGPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9EB2185B3BF400F49AD7 /* AGPoint.m */; };
-		A38F9EDD185B3BF400F49AD7 /* AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9EB4185B3BF400F49AD7 /* AGQuad.m */; };
-		A38F9EDF185B3BF400F49AD7 /* AGTransformPixelMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9EB8185B3BF400F49AD7 /* AGTransformPixelMapper.m */; };
-		A38F9EE0185B3BF400F49AD7 /* AGVector3D.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9EBA185B3BF400F49AD7 /* AGVector3D.m */; };
-		A38F9EE2185B3BF400F49AD7 /* CAAnimationBlockDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9EBD185B3BF400F49AD7 /* CAAnimationBlockDelegate.m */; };
-		A38F9EE3185B3BF400F49AD7 /* CALayer+AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9EBF185B3BF400F49AD7 /* CALayer+AGQuad.m */; };
-		A38F9EE4185B3BF400F49AD7 /* CALayer+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9EC1185B3BF400F49AD7 /* CALayer+Extensions.m */; };
-		A38F9EE5185B3BF400F49AD7 /* CGGeometry+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9EC3185B3BF400F49AD7 /* CGGeometry+Extra.m */; };
-		A38F9EE7185B3BF400F49AD7 /* CGImageRef+CATransform3D.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9EC6185B3BF400F49AD7 /* CGImageRef+CATransform3D.m */; };
-		A38F9EE8185B3BF400F49AD7 /* NSValue+AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9EC8185B3BF400F49AD7 /* NSValue+AGQuad.m */; };
-		A38F9EEA185B3BF400F49AD7 /* UIBezierPath+AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9ECB185B3BF400F49AD7 /* UIBezierPath+AGQuad.m */; };
-		A38F9EEB185B3BF400F49AD7 /* UIImage+AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9ECD185B3BF400F49AD7 /* UIImage+AGQuad.m */; };
-		A38F9EEC185B3BF400F49AD7 /* UIImage+CATransform3D.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9ECF185B3BF400F49AD7 /* UIImage+CATransform3D.m */; };
-		A38F9EED185B3BF400F49AD7 /* UIView+AngleConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9ED1185B3BF400F49AD7 /* UIView+AngleConverter.m */; };
-		A38F9EEF185B3BF400F49AD7 /* UIView+FrameExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9ED4185B3BF400F49AD7 /* UIView+FrameExtra.m */; };
-		A38F9EFC185B3C6E00F49AD7 /* UIView+AngleConverterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9ED2185B3BF400F49AD7 /* UIView+AngleConverterTest.m */; };
-		A38F9EFD185B3C6E00F49AD7 /* UIView+FrameExtraTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9ED5185B3BF400F49AD7 /* UIView+FrameExtraTest.m */; };
-		A38F9EFE185B3C6E00F49AD7 /* CGGeometry+ExtraTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9EC4185B3BF400F49AD7 /* CGGeometry+ExtraTest.m */; };
-		A38F9EFF185B3C6E00F49AD7 /* AGBitOperationsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9EA7185B3BF400F49AD7 /* AGBitOperationsTest.m */; };
-		A38F9F00185B3C6E00F49AD7 /* AGCornerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9EAA185B3BF400F49AD7 /* AGCornerTest.m */; };
-		A38F9F01185B3C6E00F49AD7 /* NSValue+AGQuadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9EC9185B3BF400F49AD7 /* NSValue+AGQuadTest.m */; };
-		A38F9F02185B3C6E00F49AD7 /* AGMathTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9EB0185B3BF400F49AD7 /* AGMathTest.m */; };
-		A38F9F03185B3C6E00F49AD7 /* AGQuadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9EB6185B3BF400F49AD7 /* AGQuadTest.m */; };
-		A38F9F04185B3C6E00F49AD7 /* AGVector3DTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9EBB185B3BF400F49AD7 /* AGVector3DTest.m */; };
+		A38F9F38185B3F5C00F49AD7 /* AGCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F08185B3F5C00F49AD7 /* AGCorner.m */; };
+		A38F9F3A185B3F5C00F49AD7 /* AGLine.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F0C185B3F5C00F49AD7 /* AGLine.m */; };
+		A38F9F3B185B3F5C00F49AD7 /* AGMath.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F0E185B3F5C00F49AD7 /* AGMath.m */; };
+		A38F9F3D185B3F5C00F49AD7 /* AGPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F11185B3F5C00F49AD7 /* AGPoint.m */; };
+		A38F9F3E185B3F5C00F49AD7 /* AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F13185B3F5C00F49AD7 /* AGQuad.m */; };
+		A38F9F41185B3F5C00F49AD7 /* AGVector3D.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F19185B3F5C00F49AD7 /* AGVector3D.m */; };
+		A38F9F43185B3F5C00F49AD7 /* CALayer+AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F1D185B3F5C00F49AD7 /* CALayer+AGQuad.m */; };
+		A38F9F44185B3F5C00F49AD7 /* CALayer+AGGeometryKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F1F185B3F5C00F49AD7 /* CALayer+AGGeometryKit.m */; };
+		A38F9F45185B3F5C00F49AD7 /* NSValue+AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F21185B3F5C00F49AD7 /* NSValue+AGQuad.m */; };
+		A38F9F47185B3F5C00F49AD7 /* UIBezierPath+AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F24185B3F5C00F49AD7 /* UIBezierPath+AGQuad.m */; };
+		A38F9F48185B3F5C00F49AD7 /* UIImage+AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F26185B3F5C00F49AD7 /* UIImage+AGQuad.m */; };
+		A38F9F49185B3F5C00F49AD7 /* UIImage+CATransform3D.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F28185B3F5C00F49AD7 /* UIImage+CATransform3D.m */; };
+		A38F9F4A185B3F5C00F49AD7 /* UIView+AngleConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F2A185B3F5C00F49AD7 /* UIView+AngleConverter.m */; };
+		A38F9F4C185B3F5C00F49AD7 /* UIView+AGGeometryKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F2D185B3F5C00F49AD7 /* UIView+AGGeometryKit.m */; };
+		A38F9F51185B3F5C00F49AD7 /* AGCAAnimationBlockDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F36185B3F5C00F49AD7 /* AGCAAnimationBlockDelegate.m */; };
+		A38F9F52185B3F6500F49AD7 /* AGBitOperationsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F06185B3F5C00F49AD7 /* AGBitOperationsTest.m */; };
+		A38F9F53185B3F6500F49AD7 /* AGCornerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F09185B3F5C00F49AD7 /* AGCornerTest.m */; };
+		A38F9F54185B3F6500F49AD7 /* AGMathTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F0F185B3F5C00F49AD7 /* AGMathTest.m */; };
+		A38F9F55185B3F6500F49AD7 /* AGQuadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F15185B3F5C00F49AD7 /* AGQuadTest.m */; };
+		A38F9F56185B3F6500F49AD7 /* AGVector3DTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F1A185B3F5C00F49AD7 /* AGVector3DTest.m */; };
+		A38F9F57185B3F6500F49AD7 /* NSValue+AGQuadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F22185B3F5C00F49AD7 /* NSValue+AGQuadTest.m */; };
+		A38F9F58185B3F6500F49AD7 /* UIView+AngleConverterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F2B185B3F5C00F49AD7 /* UIView+AngleConverterTest.m */; };
+		A38F9F59185B3F6500F49AD7 /* UIView+AGGeometryKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F2E185B3F5C00F49AD7 /* UIView+AGGeometryKitTest.m */; };
+		A38F9F62185B419A00F49AD7 /* CGGeometry+AGGeometryKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F5E185B419A00F49AD7 /* CGGeometry+AGGeometryKit.m */; };
+		A38F9F64185B419A00F49AD7 /* CGImageRef+CATransform3D.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F61185B419A00F49AD7 /* CGImageRef+CATransform3D.m */; };
+		A38F9F65185B41A000F49AD7 /* CGGeometry+AGGeometryKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F5F185B419A00F49AD7 /* CGGeometry+AGGeometryKitTest.m */; };
+		A38F9F6B185B427D00F49AD7 /* AGTransformPixelMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F6A185B427D00F49AD7 /* AGTransformPixelMapper.m */; };
 		A39DA67E172984E9005B84D3 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = A39DA67C172984E9005B84D3 /* arrow.png */; };
 		A39DA67F172984E9005B84D3 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = A39DA67C172984E9005B84D3 /* arrow.png */; };
 		A39DA680172984E9005B84D3 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A39DA67D172984E9005B84D3 /* arrow@2x.png */; };
@@ -123,8 +122,6 @@
 		A3270F3316D5675800A92C03 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A3270F3416D5675800A92C03 /* sampleimg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sampleimg.jpg; sourceTree = "<group>"; };
 		A3270F3616D5675800A92C03 /* AGGeometryKitTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AGGeometryKitTests-Info.plist"; sourceTree = "<group>"; };
-		A3270F3716D5675800A92C03 /* AGQuadTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGQuadTests.h; sourceTree = "<group>"; };
-		A3270F3816D5675800A92C03 /* AGQuadTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGQuadTests.m; sourceTree = "<group>"; };
 		A3270F3A16D5675800A92C03 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A333A59016A9A3BD00E334AD /* AGGeometryKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AGGeometryKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A333A59416A9A3BD00E334AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -145,54 +142,56 @@
 		A3762F63172890E300E7A2AB /* tabbar_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_icon.png; sourceTree = "<group>"; };
 		A3762F661728914500E7A2AB /* AGGeometryKitApplication.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGGeometryKitApplication.xib; sourceTree = "<group>"; };
 		A3762FB3172932B100E7A2AB /* sampleimg_enhanced.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sampleimg_enhanced.jpg; sourceTree = "<group>"; };
-		A38F9EA6185B3BF400F49AD7 /* AGBitOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGBitOperations.h; sourceTree = "<group>"; };
-		A38F9EA7185B3BF400F49AD7 /* AGBitOperationsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGBitOperationsTest.m; sourceTree = "<group>"; };
-		A38F9EA8185B3BF400F49AD7 /* AGCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGCorner.h; sourceTree = "<group>"; };
-		A38F9EA9185B3BF400F49AD7 /* AGCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCorner.m; sourceTree = "<group>"; };
-		A38F9EAA185B3BF400F49AD7 /* AGCornerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCornerTest.m; sourceTree = "<group>"; };
-		A38F9EAB185B3BF400F49AD7 /* AGGeometryKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGGeometryKit.h; sourceTree = "<group>"; };
-		A38F9EAC185B3BF400F49AD7 /* AGLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGLine.h; sourceTree = "<group>"; };
-		A38F9EAD185B3BF400F49AD7 /* AGLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGLine.m; sourceTree = "<group>"; };
-		A38F9EAE185B3BF400F49AD7 /* AGMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMath.h; sourceTree = "<group>"; };
-		A38F9EAF185B3BF400F49AD7 /* AGMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMath.m; sourceTree = "<group>"; };
-		A38F9EB0185B3BF400F49AD7 /* AGMathTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMathTest.m; sourceTree = "<group>"; };
-		A38F9EB1185B3BF400F49AD7 /* AGPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPoint.h; sourceTree = "<group>"; };
-		A38F9EB2185B3BF400F49AD7 /* AGPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPoint.m; sourceTree = "<group>"; };
-		A38F9EB3185B3BF400F49AD7 /* AGQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGQuad.h; sourceTree = "<group>"; };
-		A38F9EB4185B3BF400F49AD7 /* AGQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGQuad.m; sourceTree = "<group>"; };
-		A38F9EB5185B3BF400F49AD7 /* AGQuadKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGQuadKit.h; sourceTree = "<group>"; };
-		A38F9EB6185B3BF400F49AD7 /* AGQuadTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGQuadTest.m; sourceTree = "<group>"; };
-		A38F9EB7185B3BF400F49AD7 /* AGTransformPixelMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTransformPixelMapper.h; sourceTree = "<group>"; };
-		A38F9EB8185B3BF400F49AD7 /* AGTransformPixelMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTransformPixelMapper.m; sourceTree = "<group>"; };
-		A38F9EB9185B3BF400F49AD7 /* AGVector3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGVector3D.h; sourceTree = "<group>"; };
-		A38F9EBA185B3BF400F49AD7 /* AGVector3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGVector3D.m; sourceTree = "<group>"; };
-		A38F9EBB185B3BF400F49AD7 /* AGVector3DTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGVector3DTest.m; sourceTree = "<group>"; };
-		A38F9EBC185B3BF400F49AD7 /* CAAnimationBlockDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAAnimationBlockDelegate.h; sourceTree = "<group>"; };
-		A38F9EBD185B3BF400F49AD7 /* CAAnimationBlockDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAAnimationBlockDelegate.m; sourceTree = "<group>"; };
-		A38F9EBE185B3BF400F49AD7 /* CALayer+AGQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+AGQuad.h"; sourceTree = "<group>"; };
-		A38F9EBF185B3BF400F49AD7 /* CALayer+AGQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AGQuad.m"; sourceTree = "<group>"; };
-		A38F9EC0185B3BF400F49AD7 /* CALayer+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Extensions.h"; sourceTree = "<group>"; };
-		A38F9EC1185B3BF400F49AD7 /* CALayer+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Extensions.m"; sourceTree = "<group>"; };
-		A38F9EC2185B3BF400F49AD7 /* CGGeometry+Extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGGeometry+Extra.h"; sourceTree = "<group>"; };
-		A38F9EC3185B3BF400F49AD7 /* CGGeometry+Extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+Extra.m"; sourceTree = "<group>"; };
-		A38F9EC4185B3BF400F49AD7 /* CGGeometry+ExtraTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+ExtraTest.m"; sourceTree = "<group>"; };
-		A38F9EC5185B3BF400F49AD7 /* CGImageRef+CATransform3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGImageRef+CATransform3D.h"; sourceTree = "<group>"; };
-		A38F9EC6185B3BF400F49AD7 /* CGImageRef+CATransform3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGImageRef+CATransform3D.m"; sourceTree = "<group>"; };
-		A38F9EC7185B3BF400F49AD7 /* NSValue+AGQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+AGQuad.h"; sourceTree = "<group>"; };
-		A38F9EC8185B3BF400F49AD7 /* NSValue+AGQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+AGQuad.m"; sourceTree = "<group>"; };
-		A38F9EC9185B3BF400F49AD7 /* NSValue+AGQuadTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+AGQuadTest.m"; sourceTree = "<group>"; };
-		A38F9ECA185B3BF400F49AD7 /* UIBezierPath+AGQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+AGQuad.h"; sourceTree = "<group>"; };
-		A38F9ECB185B3BF400F49AD7 /* UIBezierPath+AGQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+AGQuad.m"; sourceTree = "<group>"; };
-		A38F9ECC185B3BF400F49AD7 /* UIImage+AGQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AGQuad.h"; sourceTree = "<group>"; };
-		A38F9ECD185B3BF400F49AD7 /* UIImage+AGQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AGQuad.m"; sourceTree = "<group>"; };
-		A38F9ECE185B3BF400F49AD7 /* UIImage+CATransform3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CATransform3D.h"; sourceTree = "<group>"; };
-		A38F9ECF185B3BF400F49AD7 /* UIImage+CATransform3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CATransform3D.m"; sourceTree = "<group>"; };
-		A38F9ED0185B3BF400F49AD7 /* UIView+AngleConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AngleConverter.h"; sourceTree = "<group>"; };
-		A38F9ED1185B3BF400F49AD7 /* UIView+AngleConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AngleConverter.m"; sourceTree = "<group>"; };
-		A38F9ED2185B3BF400F49AD7 /* UIView+AngleConverterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AngleConverterTest.m"; sourceTree = "<group>"; };
-		A38F9ED3185B3BF400F49AD7 /* UIView+FrameExtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameExtra.h"; sourceTree = "<group>"; };
-		A38F9ED4185B3BF400F49AD7 /* UIView+FrameExtra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameExtra.m"; sourceTree = "<group>"; };
-		A38F9ED5185B3BF400F49AD7 /* UIView+FrameExtraTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameExtraTest.m"; sourceTree = "<group>"; };
+		A38F9F05185B3F5C00F49AD7 /* AGBitOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGBitOperations.h; sourceTree = "<group>"; };
+		A38F9F06185B3F5C00F49AD7 /* AGBitOperationsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGBitOperationsTest.m; sourceTree = "<group>"; };
+		A38F9F07185B3F5C00F49AD7 /* AGCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGCorner.h; sourceTree = "<group>"; };
+		A38F9F08185B3F5C00F49AD7 /* AGCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCorner.m; sourceTree = "<group>"; };
+		A38F9F09185B3F5C00F49AD7 /* AGCornerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCornerTest.m; sourceTree = "<group>"; };
+		A38F9F0A185B3F5C00F49AD7 /* AGGeometryKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGGeometryKit.h; sourceTree = "<group>"; };
+		A38F9F0B185B3F5C00F49AD7 /* AGLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGLine.h; sourceTree = "<group>"; };
+		A38F9F0C185B3F5C00F49AD7 /* AGLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGLine.m; sourceTree = "<group>"; };
+		A38F9F0D185B3F5C00F49AD7 /* AGMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMath.h; sourceTree = "<group>"; };
+		A38F9F0E185B3F5C00F49AD7 /* AGMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMath.m; sourceTree = "<group>"; };
+		A38F9F0F185B3F5C00F49AD7 /* AGMathTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMathTest.m; sourceTree = "<group>"; };
+		A38F9F10185B3F5C00F49AD7 /* AGPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPoint.h; sourceTree = "<group>"; };
+		A38F9F11185B3F5C00F49AD7 /* AGPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPoint.m; sourceTree = "<group>"; };
+		A38F9F12185B3F5C00F49AD7 /* AGQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGQuad.h; sourceTree = "<group>"; };
+		A38F9F13185B3F5C00F49AD7 /* AGQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGQuad.m; sourceTree = "<group>"; };
+		A38F9F15185B3F5C00F49AD7 /* AGQuadTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGQuadTest.m; sourceTree = "<group>"; };
+		A38F9F18185B3F5C00F49AD7 /* AGVector3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGVector3D.h; sourceTree = "<group>"; };
+		A38F9F19185B3F5C00F49AD7 /* AGVector3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGVector3D.m; sourceTree = "<group>"; };
+		A38F9F1A185B3F5C00F49AD7 /* AGVector3DTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGVector3DTest.m; sourceTree = "<group>"; };
+		A38F9F1C185B3F5C00F49AD7 /* CALayer+AGQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+AGQuad.h"; sourceTree = "<group>"; };
+		A38F9F1D185B3F5C00F49AD7 /* CALayer+AGQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AGQuad.m"; sourceTree = "<group>"; };
+		A38F9F1E185B3F5C00F49AD7 /* CALayer+AGGeometryKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+AGGeometryKit.h"; sourceTree = "<group>"; };
+		A38F9F1F185B3F5C00F49AD7 /* CALayer+AGGeometryKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AGGeometryKit.m"; sourceTree = "<group>"; };
+		A38F9F20185B3F5C00F49AD7 /* NSValue+AGQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+AGQuad.h"; sourceTree = "<group>"; };
+		A38F9F21185B3F5C00F49AD7 /* NSValue+AGQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+AGQuad.m"; sourceTree = "<group>"; };
+		A38F9F22185B3F5C00F49AD7 /* NSValue+AGQuadTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+AGQuadTest.m"; sourceTree = "<group>"; };
+		A38F9F23185B3F5C00F49AD7 /* UIBezierPath+AGQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+AGQuad.h"; sourceTree = "<group>"; };
+		A38F9F24185B3F5C00F49AD7 /* UIBezierPath+AGQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+AGQuad.m"; sourceTree = "<group>"; };
+		A38F9F25185B3F5C00F49AD7 /* UIImage+AGQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AGQuad.h"; sourceTree = "<group>"; };
+		A38F9F26185B3F5C00F49AD7 /* UIImage+AGQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AGQuad.m"; sourceTree = "<group>"; };
+		A38F9F27185B3F5C00F49AD7 /* UIImage+CATransform3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CATransform3D.h"; sourceTree = "<group>"; };
+		A38F9F28185B3F5C00F49AD7 /* UIImage+CATransform3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CATransform3D.m"; sourceTree = "<group>"; };
+		A38F9F29185B3F5C00F49AD7 /* UIView+AngleConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AngleConverter.h"; sourceTree = "<group>"; };
+		A38F9F2A185B3F5C00F49AD7 /* UIView+AngleConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AngleConverter.m"; sourceTree = "<group>"; };
+		A38F9F2B185B3F5C00F49AD7 /* UIView+AngleConverterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AngleConverterTest.m"; sourceTree = "<group>"; };
+		A38F9F2C185B3F5C00F49AD7 /* UIView+AGGeometryKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AGGeometryKit.h"; sourceTree = "<group>"; };
+		A38F9F2D185B3F5C00F49AD7 /* UIView+AGGeometryKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AGGeometryKit.m"; sourceTree = "<group>"; };
+		A38F9F2E185B3F5C00F49AD7 /* UIView+AGGeometryKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AGGeometryKitTest.m"; sourceTree = "<group>"; };
+		A38F9F35185B3F5C00F49AD7 /* AGCAAnimationBlockDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGCAAnimationBlockDelegate.h; sourceTree = "<group>"; };
+		A38F9F36185B3F5C00F49AD7 /* AGCAAnimationBlockDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCAAnimationBlockDelegate.m; sourceTree = "<group>"; };
+		A38F9F5B185B410C00F49AD7 /* AGGeometryKitCategories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGGeometryKitCategories.h; sourceTree = "<group>"; };
+		A38F9F5D185B419A00F49AD7 /* CGGeometry+AGGeometryKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGGeometry+AGGeometryKit.h"; sourceTree = "<group>"; };
+		A38F9F5E185B419A00F49AD7 /* CGGeometry+AGGeometryKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+AGGeometryKit.m"; sourceTree = "<group>"; };
+		A38F9F5F185B419A00F49AD7 /* CGGeometry+AGGeometryKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+AGGeometryKitTest.m"; sourceTree = "<group>"; };
+		A38F9F60185B419A00F49AD7 /* CGImageRef+CATransform3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGImageRef+CATransform3D.h"; sourceTree = "<group>"; };
+		A38F9F61185B419A00F49AD7 /* CGImageRef+CATransform3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGImageRef+CATransform3D.m"; sourceTree = "<group>"; };
+		A38F9F67185B41CB00F49AD7 /* AGGeometryKitClasses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGGeometryKitClasses.h; sourceTree = "<group>"; };
+		A38F9F68185B41E100F49AD7 /* AGGeometryKitCoreGraphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGGeometryKitCoreGraphics.h; sourceTree = "<group>"; };
+		A38F9F69185B427D00F49AD7 /* AGTransformPixelMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTransformPixelMapper.h; sourceTree = "<group>"; };
+		A38F9F6A185B427D00F49AD7 /* AGTransformPixelMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTransformPixelMapper.m; sourceTree = "<group>"; };
 		A39DA67C172984E9005B84D3 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		A39DA67D172984E9005B84D3 /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
 		A3BC981917D8A88B009B7495 /* AGGeometryKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = AGGeometryKit.podspec; path = ../AGGeometryKit.podspec; sourceTree = "<group>"; };
@@ -266,8 +265,6 @@
 			isa = PBXGroup;
 			children = (
 				A3270F3616D5675800A92C03 /* AGGeometryKitTests-Info.plist */,
-				A3270F3716D5675800A92C03 /* AGQuadTests.h */,
-				A3270F3816D5675800A92C03 /* AGQuadTests.m */,
 				A3270F3916D5675800A92C03 /* InfoPlist.strings */,
 			);
 			path = AGGeometryKitTests;
@@ -309,57 +306,83 @@
 		A333A5EF16A9A59200E334AD /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				A38F9EA6185B3BF400F49AD7 /* AGBitOperations.h */,
-				A38F9EA7185B3BF400F49AD7 /* AGBitOperationsTest.m */,
-				A38F9EA8185B3BF400F49AD7 /* AGCorner.h */,
-				A38F9EA9185B3BF400F49AD7 /* AGCorner.m */,
-				A38F9EAA185B3BF400F49AD7 /* AGCornerTest.m */,
-				A38F9EAB185B3BF400F49AD7 /* AGGeometryKit.h */,
-				A38F9EAC185B3BF400F49AD7 /* AGLine.h */,
-				A38F9EAD185B3BF400F49AD7 /* AGLine.m */,
-				A38F9EAE185B3BF400F49AD7 /* AGMath.h */,
-				A38F9EAF185B3BF400F49AD7 /* AGMath.m */,
-				A38F9EB0185B3BF400F49AD7 /* AGMathTest.m */,
-				A38F9EB1185B3BF400F49AD7 /* AGPoint.h */,
-				A38F9EB2185B3BF400F49AD7 /* AGPoint.m */,
-				A38F9EB3185B3BF400F49AD7 /* AGQuad.h */,
-				A38F9EB4185B3BF400F49AD7 /* AGQuad.m */,
-				A38F9EB5185B3BF400F49AD7 /* AGQuadKit.h */,
-				A38F9EB6185B3BF400F49AD7 /* AGQuadTest.m */,
-				A38F9EB7185B3BF400F49AD7 /* AGTransformPixelMapper.h */,
-				A38F9EB8185B3BF400F49AD7 /* AGTransformPixelMapper.m */,
-				A38F9EB9185B3BF400F49AD7 /* AGVector3D.h */,
-				A38F9EBA185B3BF400F49AD7 /* AGVector3D.m */,
-				A38F9EBB185B3BF400F49AD7 /* AGVector3DTest.m */,
-				A38F9EBC185B3BF400F49AD7 /* CAAnimationBlockDelegate.h */,
-				A38F9EBD185B3BF400F49AD7 /* CAAnimationBlockDelegate.m */,
-				A38F9EBE185B3BF400F49AD7 /* CALayer+AGQuad.h */,
-				A38F9EBF185B3BF400F49AD7 /* CALayer+AGQuad.m */,
-				A38F9EC0185B3BF400F49AD7 /* CALayer+Extensions.h */,
-				A38F9EC1185B3BF400F49AD7 /* CALayer+Extensions.m */,
-				A38F9EC2185B3BF400F49AD7 /* CGGeometry+Extra.h */,
-				A38F9EC3185B3BF400F49AD7 /* CGGeometry+Extra.m */,
-				A38F9EC4185B3BF400F49AD7 /* CGGeometry+ExtraTest.m */,
-				A38F9EC5185B3BF400F49AD7 /* CGImageRef+CATransform3D.h */,
-				A38F9EC6185B3BF400F49AD7 /* CGImageRef+CATransform3D.m */,
-				A38F9EC7185B3BF400F49AD7 /* NSValue+AGQuad.h */,
-				A38F9EC8185B3BF400F49AD7 /* NSValue+AGQuad.m */,
-				A38F9EC9185B3BF400F49AD7 /* NSValue+AGQuadTest.m */,
-				A38F9ECA185B3BF400F49AD7 /* UIBezierPath+AGQuad.h */,
-				A38F9ECB185B3BF400F49AD7 /* UIBezierPath+AGQuad.m */,
-				A38F9ECC185B3BF400F49AD7 /* UIImage+AGQuad.h */,
-				A38F9ECD185B3BF400F49AD7 /* UIImage+AGQuad.m */,
-				A38F9ECE185B3BF400F49AD7 /* UIImage+CATransform3D.h */,
-				A38F9ECF185B3BF400F49AD7 /* UIImage+CATransform3D.m */,
-				A38F9ED0185B3BF400F49AD7 /* UIView+AngleConverter.h */,
-				A38F9ED1185B3BF400F49AD7 /* UIView+AngleConverter.m */,
-				A38F9ED2185B3BF400F49AD7 /* UIView+AngleConverterTest.m */,
-				A38F9ED3185B3BF400F49AD7 /* UIView+FrameExtra.h */,
-				A38F9ED4185B3BF400F49AD7 /* UIView+FrameExtra.m */,
-				A38F9ED5185B3BF400F49AD7 /* UIView+FrameExtraTest.m */,
+				A38F9F0A185B3F5C00F49AD7 /* AGGeometryKit.h */,
+				A38F9F05185B3F5C00F49AD7 /* AGBitOperations.h */,
+				A38F9F06185B3F5C00F49AD7 /* AGBitOperationsTest.m */,
+				A38F9F07185B3F5C00F49AD7 /* AGCorner.h */,
+				A38F9F08185B3F5C00F49AD7 /* AGCorner.m */,
+				A38F9F09185B3F5C00F49AD7 /* AGCornerTest.m */,
+				A38F9F0B185B3F5C00F49AD7 /* AGLine.h */,
+				A38F9F0C185B3F5C00F49AD7 /* AGLine.m */,
+				A38F9F0D185B3F5C00F49AD7 /* AGMath.h */,
+				A38F9F0E185B3F5C00F49AD7 /* AGMath.m */,
+				A38F9F0F185B3F5C00F49AD7 /* AGMathTest.m */,
+				A38F9F10185B3F5C00F49AD7 /* AGPoint.h */,
+				A38F9F11185B3F5C00F49AD7 /* AGPoint.m */,
+				A38F9F12185B3F5C00F49AD7 /* AGQuad.h */,
+				A38F9F13185B3F5C00F49AD7 /* AGQuad.m */,
+				A38F9F15185B3F5C00F49AD7 /* AGQuadTest.m */,
+				A38F9F18185B3F5C00F49AD7 /* AGVector3D.h */,
+				A38F9F19185B3F5C00F49AD7 /* AGVector3D.m */,
+				A38F9F1A185B3F5C00F49AD7 /* AGVector3DTest.m */,
+				A38F9F1B185B3F5C00F49AD7 /* Categories */,
+				A38F9F34185B3F5C00F49AD7 /* Classes */,
+				A38F9F5C185B419A00F49AD7 /* CoreGraphics_Extensions */,
 			);
 			name = Source;
 			path = ../Source;
+			sourceTree = "<group>";
+		};
+		A38F9F1B185B3F5C00F49AD7 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A38F9F5B185B410C00F49AD7 /* AGGeometryKitCategories.h */,
+				A38F9F1C185B3F5C00F49AD7 /* CALayer+AGQuad.h */,
+				A38F9F1D185B3F5C00F49AD7 /* CALayer+AGQuad.m */,
+				A38F9F1E185B3F5C00F49AD7 /* CALayer+AGGeometryKit.h */,
+				A38F9F1F185B3F5C00F49AD7 /* CALayer+AGGeometryKit.m */,
+				A38F9F20185B3F5C00F49AD7 /* NSValue+AGQuad.h */,
+				A38F9F21185B3F5C00F49AD7 /* NSValue+AGQuad.m */,
+				A38F9F22185B3F5C00F49AD7 /* NSValue+AGQuadTest.m */,
+				A38F9F23185B3F5C00F49AD7 /* UIBezierPath+AGQuad.h */,
+				A38F9F24185B3F5C00F49AD7 /* UIBezierPath+AGQuad.m */,
+				A38F9F25185B3F5C00F49AD7 /* UIImage+AGQuad.h */,
+				A38F9F26185B3F5C00F49AD7 /* UIImage+AGQuad.m */,
+				A38F9F27185B3F5C00F49AD7 /* UIImage+CATransform3D.h */,
+				A38F9F28185B3F5C00F49AD7 /* UIImage+CATransform3D.m */,
+				A38F9F29185B3F5C00F49AD7 /* UIView+AngleConverter.h */,
+				A38F9F2A185B3F5C00F49AD7 /* UIView+AngleConverter.m */,
+				A38F9F2B185B3F5C00F49AD7 /* UIView+AngleConverterTest.m */,
+				A38F9F2C185B3F5C00F49AD7 /* UIView+AGGeometryKit.h */,
+				A38F9F2D185B3F5C00F49AD7 /* UIView+AGGeometryKit.m */,
+				A38F9F2E185B3F5C00F49AD7 /* UIView+AGGeometryKitTest.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		A38F9F34185B3F5C00F49AD7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A38F9F67185B41CB00F49AD7 /* AGGeometryKitClasses.h */,
+				A38F9F35185B3F5C00F49AD7 /* AGCAAnimationBlockDelegate.h */,
+				A38F9F36185B3F5C00F49AD7 /* AGCAAnimationBlockDelegate.m */,
+				A38F9F69185B427D00F49AD7 /* AGTransformPixelMapper.h */,
+				A38F9F6A185B427D00F49AD7 /* AGTransformPixelMapper.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A38F9F5C185B419A00F49AD7 /* CoreGraphics_Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A38F9F68185B41E100F49AD7 /* AGGeometryKitCoreGraphics.h */,
+				A38F9F5D185B419A00F49AD7 /* CGGeometry+AGGeometryKit.h */,
+				A38F9F5E185B419A00F49AD7 /* CGGeometry+AGGeometryKit.m */,
+				A38F9F5F185B419A00F49AD7 /* CGGeometry+AGGeometryKitTest.m */,
+				A38F9F60185B419A00F49AD7 /* CGImageRef+CATransform3D.h */,
+				A38F9F61185B419A00F49AD7 /* CGImageRef+CATransform3D.m */,
+			);
+			path = CoreGraphics_Extensions;
 			sourceTree = "<group>";
 		};
 		A3EA84071729898000AF716C /* Sample Controllers */ = {
@@ -522,32 +545,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A38F9EDA185B3BF400F49AD7 /* AGMath.m in Sources */,
-				A38F9EE5185B3BF400F49AD7 /* CGGeometry+Extra.m in Sources */,
-				A38F9EEC185B3BF400F49AD7 /* UIImage+CATransform3D.m in Sources */,
+				A38F9F3B185B3F5C00F49AD7 /* AGMath.m in Sources */,
 				A3270F3B16D5675800A92C03 /* AGAppDelegate.m in Sources */,
-				A38F9EEF185B3BF400F49AD7 /* UIView+FrameExtra.m in Sources */,
 				A3270F3F16D5675800A92C03 /* AGQuadSample.m in Sources */,
-				A38F9EEB185B3BF400F49AD7 /* UIImage+AGQuad.m in Sources */,
+				A38F9F45185B3F5C00F49AD7 /* NSValue+AGQuad.m in Sources */,
+				A38F9F48185B3F5C00F49AD7 /* UIImage+AGQuad.m in Sources */,
+				A38F9F62185B419A00F49AD7 /* CGGeometry+AGGeometryKit.m in Sources */,
+				A38F9F49185B3F5C00F49AD7 /* UIImage+CATransform3D.m in Sources */,
+				A38F9F44185B3F5C00F49AD7 /* CALayer+AGGeometryKit.m in Sources */,
+				A38F9F43185B3F5C00F49AD7 /* CALayer+AGQuad.m in Sources */,
 				A3270F4B16D5675800A92C03 /* main.m in Sources */,
-				A38F9EDD185B3BF400F49AD7 /* AGQuad.m in Sources */,
-				A38F9EE4185B3BF400F49AD7 /* CALayer+Extensions.m in Sources */,
+				A38F9F64185B419A00F49AD7 /* CGImageRef+CATransform3D.m in Sources */,
+				A38F9F4A185B3F5C00F49AD7 /* UIView+AngleConverter.m in Sources */,
+				A38F9F3E185B3F5C00F49AD7 /* AGQuad.m in Sources */,
 				A3EE526916EDEE83007706C6 /* easing.c in Sources */,
 				A3EE526F16F07479007706C6 /* AGAngleConverterSample.m in Sources */,
-				A38F9ED7185B3BF400F49AD7 /* AGCorner.m in Sources */,
-				A38F9EE3185B3BF400F49AD7 /* CALayer+AGQuad.m in Sources */,
+				A38F9F38185B3F5C00F49AD7 /* AGCorner.m in Sources */,
 				A3F77D3F16FA54C400415B24 /* JAValueToString.m in Sources */,
-				A38F9EDF185B3BF400F49AD7 /* AGTransformPixelMapper.m in Sources */,
-				A38F9EED185B3BF400F49AD7 /* UIView+AngleConverter.m in Sources */,
 				A3762F301728067A00E7A2AB /* AGQuadControlsSample.m in Sources */,
-				A38F9EE8185B3BF400F49AD7 /* NSValue+AGQuad.m in Sources */,
-				A38F9EE2185B3BF400F49AD7 /* CAAnimationBlockDelegate.m in Sources */,
+				A38F9F6B185B427D00F49AD7 /* AGTransformPixelMapper.m in Sources */,
+				A38F9F4C185B3F5C00F49AD7 /* UIView+AGGeometryKit.m in Sources */,
 				A3762F59172885FE00E7A2AB /* AGRenderingSample.m in Sources */,
-				A38F9EDC185B3BF400F49AD7 /* AGPoint.m in Sources */,
-				A38F9EEA185B3BF400F49AD7 /* UIBezierPath+AGQuad.m in Sources */,
-				A38F9EE0185B3BF400F49AD7 /* AGVector3D.m in Sources */,
-				A38F9ED9185B3BF400F49AD7 /* AGLine.m in Sources */,
-				A38F9EE7185B3BF400F49AD7 /* CGImageRef+CATransform3D.m in Sources */,
+				A38F9F51185B3F5C00F49AD7 /* AGCAAnimationBlockDelegate.m in Sources */,
+				A38F9F3D185B3F5C00F49AD7 /* AGPoint.m in Sources */,
+				A38F9F41185B3F5C00F49AD7 /* AGVector3D.m in Sources */,
+				A38F9F47185B3F5C00F49AD7 /* UIBezierPath+AGQuad.m in Sources */,
+				A38F9F3A185B3F5C00F49AD7 /* AGLine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,22 +579,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3270F3C16D5675800A92C03 /* AGAppDelegate.m in Sources */,
+				A38F9F54185B3F6500F49AD7 /* AGMathTest.m in Sources */,
+				A38F9F65185B41A000F49AD7 /* CGGeometry+AGGeometryKitTest.m in Sources */,
 				A3270F4016D5675800A92C03 /* AGQuadSample.m in Sources */,
-				A38F9F00185B3C6E00F49AD7 /* AGCornerTest.m in Sources */,
-				A38F9F01185B3C6E00F49AD7 /* NSValue+AGQuadTest.m in Sources */,
+				A38F9F57185B3F6500F49AD7 /* NSValue+AGQuadTest.m in Sources */,
+				A38F9F56185B3F6500F49AD7 /* AGVector3DTest.m in Sources */,
+				A38F9F53185B3F6500F49AD7 /* AGCornerTest.m in Sources */,
 				A3270F4C16D5675800A92C03 /* main.m in Sources */,
-				A38F9F04185B3C6E00F49AD7 /* AGVector3DTest.m in Sources */,
-				A38F9EFF185B3C6E00F49AD7 /* AGBitOperationsTest.m in Sources */,
-				A3270F5216D5675800A92C03 /* AGQuadTests.m in Sources */,
+				A38F9F52185B3F6500F49AD7 /* AGBitOperationsTest.m in Sources */,
+				A38F9F58185B3F6500F49AD7 /* UIView+AngleConverterTest.m in Sources */,
 				A3EE526A16EDEE83007706C6 /* easing.c in Sources */,
-				A38F9EFC185B3C6E00F49AD7 /* UIView+AngleConverterTest.m in Sources */,
-				A38F9F02185B3C6E00F49AD7 /* AGMathTest.m in Sources */,
-				A38F9EFE185B3C6E00F49AD7 /* CGGeometry+ExtraTest.m in Sources */,
 				A3EE527016F07479007706C6 /* AGAngleConverterSample.m in Sources */,
+				A38F9F55185B3F6500F49AD7 /* AGQuadTest.m in Sources */,
+				A38F9F59185B3F6500F49AD7 /* UIView+AGGeometryKitTest.m in Sources */,
 				A3F77D4016FA54C400415B24 /* JAValueToString.m in Sources */,
-				A38F9EFD185B3C6E00F49AD7 /* UIView+FrameExtraTest.m in Sources */,
 				A3762F311728067A00E7A2AB /* AGQuadControlsSample.m in Sources */,
-				A38F9F03185B3C6E00F49AD7 /* AGQuadTest.m in Sources */,
 				A3762F5A172885FE00E7A2AB /* AGRenderingSample.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

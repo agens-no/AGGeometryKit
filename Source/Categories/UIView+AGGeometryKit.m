@@ -21,11 +21,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "UIView+FrameExtra.h"
-#import "CGGeometry+Extra.h"
+#import "UIView+AGGeometryKit.h"
+#import "CGGeometry+AGGeometryKit.h"
 
 
-@implementation UIView (FrameExtra)
+@implementation UIView (AGGeometryKit)
 
 @dynamic frameSize;
 @dynamic frameWidthHalf;

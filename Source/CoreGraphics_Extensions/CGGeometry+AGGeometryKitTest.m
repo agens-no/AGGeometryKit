@@ -23,7 +23,7 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 #import <QuartzCore/QuartzCore.h>
-#import "CGGeometry+Extra.h"
+#import "CGGeometry+AGGeometryKit.h"
 
 @interface AGGeometryTest : SenTestCase
 

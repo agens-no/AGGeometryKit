@@ -23,7 +23,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import "AGQuad.h"
-#import "CALayer+Extensions.h"
+#import "CALayer+AGGeometryKit.h"
 
 @interface CALayer (AGQuad)
 

@@ -23,7 +23,7 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 #import "AGCorner.h"
-#import "CGGeometry+Extra.h"
+#import "CGGeometry+AGGeometryKit.h"
 
 @interface AGCornerTest : SenTestCase
 

@@ -22,7 +22,7 @@
 // THE SOFTWARE.
 
 #import <SenTestingKit/SenTestingKit.h>
-#import "UIView+FrameExtra.h"
+#import "UIView+AGGeometryKit.h"
 
 @interface UIView_FrameExtraTest : SenTestCase
 

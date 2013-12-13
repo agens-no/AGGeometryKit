@@ -23,11 +23,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "CALayer+Extensions.h"
+#import "CALayer+AGGeometryKit.h"
 #import <objc/runtime.h>
 #import "AGVector3D.h"
 
-@implementation CALayer (Extensions)
+@implementation CALayer (AGGeometryKit)
 
 - (void)setNullAsActionForKeys:(NSArray *)keys
 {

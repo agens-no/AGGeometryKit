@@ -25,7 +25,7 @@
 #import "AGQuad.h"
 #import "easing.h"
 #import "CALayer+AGQuad.h"
-#import "UIView+FrameExtra.h"
+#import "UIView+AGGeometryKit.h"
 #import "UIBezierPath+AGQuad.h"
 
 @interface AGControlPointView : UIView

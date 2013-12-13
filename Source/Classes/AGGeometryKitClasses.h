@@ -21,14 +21,5 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "AGBitOperations.h"
-#import "AGCorner.h"
-#import "AGLine.h"
-#import "AGMath.h"
-#import "AGPoint.h"
-#import "AGQuad.h"
-#import "AGVector3D.h"
-
-#import "AGGeometryKitCategories.h"
-#import "AGGeometryKitClasses.h"
-#import "AGGeometryKitCoreGraphics.h
+#import "AGCAAnimationBlockDelegate.h"
+#import "AGTransformPixelMapper.h"

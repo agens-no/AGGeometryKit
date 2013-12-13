@@ -24,7 +24,7 @@
 
 #import "AGTransformPixelMapper.h"
 #import <QuartzCore/QuartzCore.h>
-#import "CGGeometry+Extra.h"
+#import "CGGeometry+AGGeometryKit.h"
 
 @interface AGTransformPixelMapper ()
 
