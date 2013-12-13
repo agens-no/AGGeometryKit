@@ -76,7 +76,6 @@ inline CGPoint CGPointAdd(CGPoint p1, CGPoint p2);
 inline CGPoint CGPointMultiply(CGPoint p1, CGFloat factor);
 inline CGPoint CGPointDivide(CGPoint p1, CGFloat factor);
 inline CGFloat CGPointDotProduct(CGPoint p1, CGPoint p2);
-inline CGFloat CGPointCrossProduct(CGPoint p1, CGPoint p2);
 inline CGPoint CGPointRotate(CGPoint point, CGFloat angle);
 inline CGPoint CGPointRotateAroundOrigin(CGPoint point, CGFloat angle, CGPoint origin);
 inline CGPoint CGPointRotate90DegreesCW(CGPoint point);
