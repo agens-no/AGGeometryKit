@@ -40,13 +40,13 @@
 
 
 
-const AGQuad AGQuadZero = { (AGPoint){0, 0}, (AGPoint){0, 0}, (AGPoint){0, 0}, (AGPoint){0, 0} };
+const AGQuad AGQuadZero = { (CGPoint){0, 0}, (CGPoint){0, 0}, (CGPoint){0, 0}, (CGPoint){0, 0} };
 
 extern BOOL AGQuadEqual(AGQuad q1, AGQuad q2)
 {
     for(int i = 0; i < 4; i++)
     {
-        if(!AGPointEqual(q1.v[i], q2.v[i]))
+        if(!CGPointEqualToPoint(q1.v[i], q2.v[i]))
         {
             return NO;
         }
@@ -126,19 +126,9 @@ extern AGQuad AGQuadMirror(AGQuad q, BOOL x, BOOL y)
     return mirroredQ;
 }
 
-extern AGQuad AGQuadMake(AGPoint tl, AGPoint tr, AGPoint br, AGPoint bl)
+extern AGQuad AGQuadMake(CGPoint tl, CGPoint tr, CGPoint br, CGPoint bl)
 {
     return (AGQuad){.tl = tl, .tr = tr, .br = br, .bl = bl};
-}
-
-extern AGQuad AGQuadMakeWithCGPoints(CGPoint tl, CGPoint tr, CGPoint br, CGPoint bl)
-{
-    AGQuad q;
-    q.tl = AGPointMakeWithCGPoint(tl);
-    q.tr = AGPointMakeWithCGPoint(tr);
-    q.br = AGPointMakeWithCGPoint(br);
-    q.bl = AGPointMakeWithCGPoint(bl);
-    return q;
 }
 
 extern AGQuad AGQuadMakeWithCGRect(CGRect rect)
@@ -214,9 +204,9 @@ extern CGRect AGQuadGetBoundingRect(AGQuad q)
     return rect;
 }
 
-extern AGPoint AGQuadGetCenter(AGQuad q)
+extern CGPoint AGQuadGetCenter(AGQuad q)
 {
-    AGPoint center = AGPointZero;
+    CGPoint center = CGPointZero;
     AGLineIntersection(AGLineMake(q.bl, q.tr), AGLineMake(q.br, q.tl), &center);
     return center;
 }
@@ -231,7 +221,7 @@ void AGQuadGetXValues(AGQuad q, CGFloat *out_values)
 {
     for(int i = 0; i < 4; i++)
     {
-        AGPoint p = q.v[i];
+        CGPoint p = q.v[i];
         out_values[i] = p.x;
     }
 }
@@ -240,7 +230,7 @@ void AGQuadGetYValues(AGQuad q, CGFloat *out_values)
 {
     for(int i = 0; i < 4; i++)
     {
-        AGPoint p = q.v[i];
+        CGPoint p = q.v[i];
         out_values[i] = p.y;
     }
 }
@@ -250,7 +240,7 @@ extern AGQuad AGQuadInterpolation(AGQuad q1, AGQuad q2, CGFloat progress)
     AGQuad q;
     for(int i = 0; i < 4; i++)
     {
-        q.v[i] = AGPointInterpolate(q1.v[i], q2.v[i], progress);
+        q.v[i] = AGCGPointInterpolate(q1.v[i], q2.v[i], progress);
     }
     return q;
 }
@@ -259,11 +249,7 @@ extern AGQuad AGQuadApplyCGAffineTransform(AGQuad q, CGAffineTransform t)
 {
     for(int i = 0; i < 4; i++)
     {
-        AGPoint ap1 = q.v[i];
-        CGPoint cp1 = AGPointAsCGPoint(ap1);
-        CGPoint cp2 = CGPointApplyAffineTransform(cp1, t);
-        AGPoint ap2 = AGPointMakeWithCGPoint(cp2);
-        q.v[i] = ap2;
+        q.v[i] = CGPointApplyAffineTransform(q.v[i], t);
     }
     return q;
 }
@@ -272,11 +258,7 @@ extern AGQuad AGQuadApplyCATransform3D(AGQuad q, CATransform3D t)
 {
     for(int i = 0; i < 4; i++)
     {
-        AGPoint ap1 = q.v[i];
-        CGPoint cp1 = AGPointAsCGPoint(ap1);
-        CGPoint cp2 = AGCGPointApplyCATransform3D(cp1, t, CGPointZero, CATransform3DIdentity);
-        AGPoint ap2 = AGPointMakeWithCGPoint(cp2);
-        q.v[i] = ap2;
+        q.v[i] = AGCGPointApplyCATransform3D(q.v[i], t, CGPointZero, CATransform3DIdentity);
     }
     return q;
 }
@@ -287,12 +269,13 @@ extern NSString * NSStringFromAGQuad(AGQuad q)
             "tr: %@,\n\t"
             "br: %@,\n\t"
             "bl: %@",
-            NSStringFromAGPoint(q.tl),
-            NSStringFromAGPoint(q.tr),
-            NSStringFromAGPoint(q.br),
-            NSStringFromAGPoint(q.bl)
+            NSStringFromCGPoint(q.tl),
+            NSStringFromCGPoint(q.tr),
+            NSStringFromCGPoint(q.br),
+            NSStringFromCGPoint(q.bl)
             ];
 }
+
 
 // This have slightly less operations than CATransform3DWithQuadFromRect since origin values at rect is omitted.
 // We could of course use CGSize instead, but I don't know...
@@ -301,20 +284,20 @@ extern NSString * NSStringFromAGQuad(AGQuad q)
 
 CATransform3D CATransform3DWithQuadFromBounds(AGQuad q, CGRect rect)
 {
-    double W = rect.size.width;
-    double H = rect.size.height;
+    double W = floatToDoubleZeroFill(rect.size.width);
+    double H = floatToDoubleZeroFill(rect.size.height);
     
-    double x1a = q.tl.x;
-    double y1a = q.tl.y;
+    double x1a = floatToDoubleZeroFill(q.tl.x);
+    double y1a = floatToDoubleZeroFill(q.tl.y);
     
-    double x2a = q.tr.x;
-    double y2a = q.tr.y;
+    double x2a = floatToDoubleZeroFill(q.tr.x);
+    double y2a = floatToDoubleZeroFill(q.tr.y);
     
-    double x3a = q.bl.x;
-    double y3a = q.bl.y;
+    double x3a = floatToDoubleZeroFill(q.bl.x);
+    double y3a = floatToDoubleZeroFill(q.bl.y);
     
-    double x4a = q.br.x;
-    double y4a = q.br.y;
+    double x4a = floatToDoubleZeroFill(q.br.x);
+    double y4a = floatToDoubleZeroFill(q.br.y);
     
     double y21 = y2a - y1a;
     double y32 = y3a - y2a;
@@ -353,22 +336,22 @@ CATransform3D CATransform3DWithQuadFromBounds(AGQuad q, CGRect rect)
 
 CATransform3D CATransform3DWithQuadFromRect(AGQuad q, CGRect rect)
 {
-    double X = rect.origin.x;
-    double Y = rect.origin.y;
-    double W = rect.size.width;
-    double H = rect.size.height;
-    
-    double x1a = q.tl.x;
-    double y1a = q.tl.y;
-    
-    double x2a = q.tr.x;
-    double y2a = q.tr.y;
-    
-    double x3a = q.bl.x;
-    double y3a = q.bl.y;
-    
-    double x4a = q.br.x;
-    double y4a = q.br.y;
+    double X = floatToDoubleZeroFill(rect.origin.x);
+    double Y = floatToDoubleZeroFill(rect.origin.y);
+    double W = floatToDoubleZeroFill(rect.size.width);
+    double H = floatToDoubleZeroFill(rect.size.height);
+
+    double x1a = floatToDoubleZeroFill(q.tl.x);
+    double y1a = floatToDoubleZeroFill(q.tl.y);
+
+    double x2a = floatToDoubleZeroFill(q.tr.x);
+    double y2a = floatToDoubleZeroFill(q.tr.y);
+
+    double x3a = floatToDoubleZeroFill(q.bl.x);
+    double y3a = floatToDoubleZeroFill(q.bl.y);
+
+    double x4a = floatToDoubleZeroFill(q.br.x);
+    double y4a = floatToDoubleZeroFill(q.br.y);
     
     double y21 = y2a - y1a;
     double y32 = y3a - y2a;

@@ -69,10 +69,10 @@
      I'm working on some way to calculate these numbers. I just grabbed these from photoshop....
      */
     AGQuad quad;
-    quad.tl = AGPointMake(-90.0/2.0, -63.0/2.0);
-    quad.tr = AGPointMake(2825.0/2.0, -1127.0/2.0);
-    quad.bl = AGPointMake(-118.0/2.0, 766.0/2.0);
-    quad.br = AGPointMake(10555.0/2.0, 1679.0/2.0);
+    quad.tl = CGPointMake(-90.0/2.0, -63.0/2.0);
+    quad.tr = CGPointMake(2825.0/2.0, -1127.0/2.0);
+    quad.bl = CGPointMake(-118.0/2.0, 766.0/2.0);
+    quad.br = CGPointMake(10555.0/2.0, 1679.0/2.0);
     return quad;
 }
 
@@ -82,10 +82,10 @@
      I'm working on some way to calculate these numbers. I just grabbed these from photoshop....
      */
     AGQuad quad;
-    quad.tl = AGPointMake(-10714.0/2.0, -3700.0/2.0);
-    quad.tr = AGPointMake(1933.0/2.0, -1189.0/2.0);
-    quad.bl = AGPointMake(-1066.0/2.0, 813.0/2.0);
-    quad.br = AGPointMake(912.0/2.0, 783.0/2.0);
+    quad.tl = CGPointMake(-10714.0/2.0, -3700.0/2.0);
+    quad.tr = CGPointMake(1933.0/2.0, -1189.0/2.0);
+    quad.bl = CGPointMake(-1066.0/2.0, 813.0/2.0);
+    quad.br = CGPointMake(912.0/2.0, 783.0/2.0);
     return quad;
 }
 

@@ -283,3 +283,9 @@ extern CGFloat agMaxInArray(CGFloat values[], NSUInteger numberOfValues, NSUInte
 
     return highest;
 }
+
+extern double floatToDoubleZeroFill(float floatValue)
+{
+    double doubleValue = [[NSString stringWithFormat:@"%f", floatValue] doubleValue];
+    return doubleValue;
+}

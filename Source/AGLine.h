@@ -21,15 +21,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "AGPoint.h"
 
 typedef union AGLine {
-    struct { AGPoint start, end; };
+    struct { CGPoint start, end; };
     double v[2];
 } AGLine;
 
 extern const AGLine AGLineZero;
-inline AGLine AGLineMake(AGPoint start, AGPoint end);
-inline AGLine AGLineMakeWithCGPoint(CGPoint start, CGPoint end);
+extern AGLine AGLineMake(CGPoint start, CGPoint end);
 inline double AGLineLength(AGLine l);
-BOOL AGLineIntersection(AGLine l1, AGLine l2, AGPoint *out_pointOfIntersection);
+BOOL AGLineIntersection(AGLine l1, AGLine l2, CGPoint *out_pointOfIntersection);

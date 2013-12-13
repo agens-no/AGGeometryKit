@@ -72,3 +72,4 @@ inline CGFloat agEaseWithTwoBeziers(CGPoint tangent1,
 inline CGFloat agMinInArray(CGFloat values[], NSUInteger numberOfValues, NSUInteger *out_index);
 inline CGFloat agMaxInArray(CGFloat values[], NSUInteger numberOfValues, NSUInteger *out_index);
 
+inline double floatToDoubleZeroFill(float value);

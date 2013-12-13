@@ -43,10 +43,10 @@
 
 - (AGQuad)createSampleQuad
 {
-    AGQuad q = AGQuadMake(AGPointMake(150.00200125, 100.12462343),
-                AGPointMake(740.64351237, -20.0123131),
-                AGPointMake(50.12362, 120.7532141),
-                AGPointMake(-50.4312412, 300.643835123));
+    AGQuad q = AGQuadMake(CGPointMake(150.00200125, 100.12462343),
+                CGPointMake(740.64351237, -20.0123131),
+                CGPointMake(50.12362, 120.7532141),
+                CGPointMake(-50.4312412, 300.643835123));
         return q;
 }
 

@@ -139,4 +139,28 @@
     STAssertEquals(agMakeProgressPingPong(1.5), (CGFloat)0.0, nil);
 }
 
+- (void)testFloatToDoubleZeroFill
+{
+    double doubleValue = 1.256250;
+    float floatValue = doubleValue;
+
+    STAssertEquals(floatToDoubleZeroFill(M_PI), 3.141593000000, nil);
+    STAssertEquals(floatToDoubleZeroFill(floatValue), doubleValue, nil);
+    STAssertEquals(floatToDoubleZeroFill(0.5), 0.5, nil);
+    STAssertEquals(floatToDoubleZeroFill(1.0f / 3.0f), 0.333333000, nil);
+}
+
+- (void)testPerformanceOfFloatToDoubleZeroFill
+{
+    NSTimeInterval then = CACurrentMediaTime();
+    const int iterations = 10000;
+    for(int i = 0; i < iterations; i++)
+    {
+        floatToDoubleZeroFill(M_PI);
+    }
+    NSTimeInterval now = CACurrentMediaTime();
+    NSTimeInterval diff = now - then;
+    STAssertTrue(diff < 1.0 / 60.0, @"Performance is too bad on float to double conversion. Time used on %d iterations: %f", iterations, diff);
+}
+
 @end

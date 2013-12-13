@@ -58,7 +58,7 @@
 
 - (void)createAndApplyQuad
 {
-    AGQuad quad = AGQuadMakeWithCGPoints(self.topLeftControl.center,
+    AGQuad quad = AGQuadMake(self.topLeftControl.center,
                                          self.topRightControl.center,
                                          self.bottomRightControl.center,
                                          self.bottomLeftControl.center);

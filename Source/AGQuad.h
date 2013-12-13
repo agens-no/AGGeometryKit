@@ -23,7 +23,6 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "AGPoint.h"
 
 /*
  tl = top left
@@ -33,8 +32,8 @@
  */
 
 typedef union AGQuad {
-    struct { AGPoint tl, tr, br, bl; };
-    AGPoint v[4];
+    struct { CGPoint tl, tr, br, bl; };
+    CGPoint v[4];
 } AGQuad;
 
 extern const AGQuad AGQuadZero;
@@ -47,8 +46,7 @@ inline AGQuad AGQuadInsetRight(AGQuad q, CGFloat inset);
 inline AGQuad AGQuadInsetTop(AGQuad q, CGFloat inset);
 inline AGQuad AGQuadInsetBottom(AGQuad q, CGFloat inset);
 inline AGQuad AGQuadMirror(AGQuad q, BOOL x, BOOL y);
-inline AGQuad AGQuadMake(AGPoint tl, AGPoint tr, AGPoint br, AGPoint bl);
-inline AGQuad AGQuadMakeWithCGPoints(CGPoint tl, CGPoint tr, CGPoint br, CGPoint bl);
+inline AGQuad AGQuadMake(CGPoint tl, CGPoint tr, CGPoint br, CGPoint bl);
 inline AGQuad AGQuadMakeWithCGRect(CGRect rect);
 inline AGQuad AGQuadMakeWithCGSize(CGSize size);
 inline CGFloat AGQuadGetSmallestX(AGQuad q);
@@ -56,7 +54,7 @@ inline CGFloat AGQuadGetBiggestX(AGQuad q);
 inline CGFloat AGQuadGetSmallestY(AGQuad q);
 inline CGFloat AGQuadGetBiggestY(AGQuad q);
 inline CGRect AGQuadGetBoundingRect(AGQuad q);
-inline AGPoint AGQuadGetCenter(AGQuad q);
+inline CGPoint AGQuadGetCenter(AGQuad q);
 inline CGSize AGQuadGetSize(AGQuad q);
 void AGQuadGetXValues(AGQuad q, CGFloat *out_values);
 void AGQuadGetYValues(AGQuad q, CGFloat *out_values);

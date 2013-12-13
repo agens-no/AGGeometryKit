@@ -59,7 +59,6 @@
 		A38F9F38185B3F5C00F49AD7 /* AGCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F08185B3F5C00F49AD7 /* AGCorner.m */; };
 		A38F9F3A185B3F5C00F49AD7 /* AGLine.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F0C185B3F5C00F49AD7 /* AGLine.m */; };
 		A38F9F3B185B3F5C00F49AD7 /* AGMath.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F0E185B3F5C00F49AD7 /* AGMath.m */; };
-		A38F9F3D185B3F5C00F49AD7 /* AGPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F11185B3F5C00F49AD7 /* AGPoint.m */; };
 		A38F9F3E185B3F5C00F49AD7 /* AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F13185B3F5C00F49AD7 /* AGQuad.m */; };
 		A38F9F41185B3F5C00F49AD7 /* AGVector3D.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F19185B3F5C00F49AD7 /* AGVector3D.m */; };
 		A38F9F43185B3F5C00F49AD7 /* CALayer+AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F1D185B3F5C00F49AD7 /* CALayer+AGQuad.m */; };
@@ -153,8 +152,6 @@
 		A38F9F0D185B3F5C00F49AD7 /* AGMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMath.h; sourceTree = "<group>"; };
 		A38F9F0E185B3F5C00F49AD7 /* AGMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMath.m; sourceTree = "<group>"; };
 		A38F9F0F185B3F5C00F49AD7 /* AGMathTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMathTest.m; sourceTree = "<group>"; };
-		A38F9F10185B3F5C00F49AD7 /* AGPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPoint.h; sourceTree = "<group>"; };
-		A38F9F11185B3F5C00F49AD7 /* AGPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPoint.m; sourceTree = "<group>"; };
 		A38F9F12185B3F5C00F49AD7 /* AGQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGQuad.h; sourceTree = "<group>"; };
 		A38F9F13185B3F5C00F49AD7 /* AGQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGQuad.m; sourceTree = "<group>"; };
 		A38F9F15185B3F5C00F49AD7 /* AGQuadTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGQuadTest.m; sourceTree = "<group>"; };
@@ -317,8 +314,6 @@
 				A38F9F0D185B3F5C00F49AD7 /* AGMath.h */,
 				A38F9F0E185B3F5C00F49AD7 /* AGMath.m */,
 				A38F9F0F185B3F5C00F49AD7 /* AGMathTest.m */,
-				A38F9F10185B3F5C00F49AD7 /* AGPoint.h */,
-				A38F9F11185B3F5C00F49AD7 /* AGPoint.m */,
 				A38F9F12185B3F5C00F49AD7 /* AGQuad.h */,
 				A38F9F13185B3F5C00F49AD7 /* AGQuad.m */,
 				A38F9F15185B3F5C00F49AD7 /* AGQuadTest.m */,
@@ -567,7 +562,6 @@
 				A38F9F4C185B3F5C00F49AD7 /* UIView+AGGeometryKit.m in Sources */,
 				A3762F59172885FE00E7A2AB /* AGRenderingSample.m in Sources */,
 				A38F9F51185B3F5C00F49AD7 /* AGCAAnimationBlockDelegate.m in Sources */,
-				A38F9F3D185B3F5C00F49AD7 /* AGPoint.m in Sources */,
 				A38F9F41185B3F5C00F49AD7 /* AGVector3D.m in Sources */,
 				A38F9F47185B3F5C00F49AD7 /* UIBezierPath+AGQuad.m in Sources */,
 				A38F9F3A185B3F5C00F49AD7 /* AGLine.m in Sources */,

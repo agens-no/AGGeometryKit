@@ -44,7 +44,7 @@
 
 - (AGQuad)createSampleConvexQuad
 {
-    AGQuad q = AGQuadMakeWithCGPoints(CGPointMake(150, 100),
+    AGQuad q = AGQuadMake(CGPointMake(150, 100),
                                       CGPointMake(740, -20),
                                       CGPointMake(800, 500),
                                       CGPointMake(-50, 300));
@@ -53,7 +53,7 @@
 
 - (AGQuad)createSampleConcaveQuad
 {
-    AGQuad q = AGQuadMakeWithCGPoints(CGPointMake(150, 100),
+    AGQuad q = AGQuadMake(CGPointMake(150, 100),
                                       CGPointMake(740, -20),
                                       CGPointMake(50, 120),
                                       CGPointMake(-50, 300));
@@ -65,14 +65,14 @@
 - (void)testAGQuadZero
 {
     AGQuad zero = AGQuadZero;
-    STAssertEquals(zero.tl.x, (double)0.0, nil);
-    STAssertEquals(zero.tr.x, (double)0.0, nil);
-    STAssertEquals(zero.br.x, (double)0.0, nil);
-    STAssertEquals(zero.bl.x, (double)0.0, nil);
-    STAssertEquals(zero.tl.y, (double)0.0, nil);
-    STAssertEquals(zero.tr.y, (double)0.0, nil);
-    STAssertEquals(zero.br.y, (double)0.0, nil);
-    STAssertEquals(zero.bl.y, (double)0.0, nil);
+    STAssertEquals(zero.tl.x, (CGFloat)0.0, nil);
+    STAssertEquals(zero.tr.x, (CGFloat)0.0, nil);
+    STAssertEquals(zero.br.x, (CGFloat)0.0, nil);
+    STAssertEquals(zero.bl.x, (CGFloat)0.0, nil);
+    STAssertEquals(zero.tl.y, (CGFloat)0.0, nil);
+    STAssertEquals(zero.tr.y, (CGFloat)0.0, nil);
+    STAssertEquals(zero.br.y, (CGFloat)0.0, nil);
+    STAssertEquals(zero.bl.y, (CGFloat)0.0, nil);
 }
 
 - (void)testAGQuadIsValid
@@ -88,8 +88,8 @@
 {
     {
         AGQuad q = AGQuadMakeWithCGSize(CGSizeMake(500, 500));
-        AGPoint center = AGQuadGetCenter(q);
-        STAssertEquals(AGPointAsCGPoint(center), CGPointMake(250, 250), nil);
+        CGPoint center = AGQuadGetCenter(q);
+        STAssertEquals(center, CGPointMake(250, 250), nil);
     }
 }
 
