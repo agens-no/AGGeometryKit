@@ -1,5 +1,7 @@
 //
-// Author: Håvard Fossli <hfossli@agens.no>
+// Authors:
+// Håvard Fossli <hfossli@agens.no>
+// Marcus Eckert <marcuseckert@gmail.com>
 //
 // Copyright (c) 2013 Agens AS (http://agens.no/)
 //
@@ -35,6 +37,7 @@ typedef struct AGVector3D AGVector3D;
 const AGVector3D AGVector3DZero;
 
 AGVector3D AGVector3DMake(CGFloat x, CGFloat y, CGFloat z);
+AGVector3D AGVector3DWithGLKVector3(GLKVector3);
 CGFloat AGVector3DGetLength(AGVector3D v);
 AGVector3D AGVector3DAdd(AGVector3D v1, AGVector3D v2);
 AGVector3D AGVector3DSubtract(AGVector3D v1, AGVector3D v2);
@@ -43,8 +46,6 @@ AGVector3D AGVector3DNormalize(AGVector3D v);
 CGFloat AGVector3DDotProduct(AGVector3D v1, AGVector3D v2);
 AGVector3D AGVector3DCrossProduct(AGVector3D v1, AGVector3D v2);
 AGVector3D AGVector3DGetTriangleNormal(AGVector3D v1, AGVector3D v2, AGVector3D v3);
-AGVector3D AGVector3DForGLKVector3(GLKVector3);
-
 AGVector3D AGVector3DPositionFromTransform(CATransform3D m);
 AGVector3D AGVector3DApplyTransform(AGVector3D vector, CATransform3D m);
 AGVector3D AGVector3DApplyTransformWithNoTranslate(AGVector3D vector, CATransform3D m);

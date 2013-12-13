@@ -1,5 +1,7 @@
 //
-// Author: Håvard Fossli <hfossli@agens.no>
+// Authors:
+// Håvard Fossli <hfossli@agens.no>
+// Marcus Eckert <marcuseckert@gmail.com>
 //
 // Copyright (c) 2013 Agens AS (http://agens.no/)
 //
@@ -103,6 +105,23 @@ extern CGFloat agMakeProgressPingPongSin(CGFloat progress)
     return sinf(progress*M_PI*2.0-M_PI*0.5)*0.5+0.5;
 }
 
+extern CGFloat agDelayedProgressForItems(NSUInteger index,
+                                         NSUInteger itemCount,
+                                         CGFloat overlap,
+                                         CGFloat overallProgress)
+{
+    CGFloat multi = (1.0f-overlap) * (itemCount-1.0f);
+    multi +=1.0f;
+    overallProgress *= multi;
+
+    CGFloat min = (CGFloat)index*(1.0f-overlap);
+    CGFloat sFac = overallProgress-min;
+
+    sFac = MIN(MAX(sFac, 0.0f), 1.0f);
+
+    return sFac;
+}
+
 static CGFloat agBezierSlope(CGFloat t, CGFloat A, CGFloat B, CGFloat C)
 {
     CGFloat dtdx = 1.0/(3.0*A*t*t + 2.0*B*t + C);
@@ -190,23 +209,6 @@ extern CGFloat agEaseOutWithPower(CGFloat progress, CGFloat power)
     // power is 3.0
     // http://www.wolframalpha.com/input/?i=1.0-%281.0-x%29^3+from+0+to+1
     return 1.0f-powf(fabsf(1.0f-progress), power);
-}
-
-extern CGFloat agDelayedProgressForItems(NSUInteger index,
-                                         NSUInteger itemCount,
-                                         CGFloat overlap,
-                                         CGFloat overallProgress)
-{
-    CGFloat multi = (1.0f-overlap) * (itemCount-1.0f);
-    multi +=1.0f;
-    overallProgress *= multi;
-
-    CGFloat min = (CGFloat)index*(1.0f-overlap);
-    CGFloat sFac = overallProgress-min;
-
-    sFac = MIN(MAX(sFac, 0.0f), 1.0f);
-
-    return sFac;
 }
 
 extern CGFloat agEaseWithTwoBeziers(CGPoint tangent1,

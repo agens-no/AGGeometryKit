@@ -108,8 +108,6 @@
 		A3EE52C016F1C5C6007706C6 /* UIView+AngleConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE52BE16F1C5C6007706C6 /* UIView+AngleConverter.m */; };
 		A3EE52C216F1E02A007706C6 /* UIView+FrameExtraTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE52C116F1E029007706C6 /* UIView+FrameExtraTest.m */; };
 		A3EE52C416F1E543007706C6 /* UIView+AngleConverterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE52C316F1E542007706C6 /* UIView+AngleConverterTest.m */; };
-		A3EE52C716F3980C007706C6 /* CATransform3D+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE52C616F3980B007706C6 /* CATransform3D+Extra.m */; };
-		A3EE52C816F3980C007706C6 /* CATransform3D+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE52C616F3980B007706C6 /* CATransform3D+Extra.m */; };
 		A3EE52CB16F72973007706C6 /* UIImage+AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE52CA16F72973007706C6 /* UIImage+AGQuad.m */; };
 		A3EE52CC16F72973007706C6 /* UIImage+AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE52CA16F72973007706C6 /* UIImage+AGQuad.m */; };
 		A3F77D3B16FA3AC700415B24 /* UIBezierPath+AGQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F77D3A16FA3AC700415B24 /* UIBezierPath+AGQuad.m */; };
@@ -206,7 +204,6 @@
 		A39DA67D172984E9005B84D3 /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
 		A3BC981917D8A88B009B7495 /* AGGeometryKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = AGGeometryKit.podspec; path = ../AGGeometryKit.podspec; sourceTree = "<group>"; };
 		A3C6C4101859EB710003472C /* AGBitOperations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGBitOperations.h; sourceTree = "<group>"; };
-		A3C6C4111859F5F20003472C /* AGRemap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGRemap.h; sourceTree = "<group>"; };
 		A3C6C4121859F9F20003472C /* AGBitOperationsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGBitOperationsTest.m; sourceTree = "<group>"; };
 		A3EE526716EDEE83007706C6 /* easing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = easing.c; sourceTree = "<group>"; };
 		A3EE526816EDEE83007706C6 /* easing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = easing.h; sourceTree = "<group>"; };
@@ -218,8 +215,6 @@
 		A3EE52BE16F1C5C6007706C6 /* UIView+AngleConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AngleConverter.m"; sourceTree = "<group>"; };
 		A3EE52C116F1E029007706C6 /* UIView+FrameExtraTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameExtraTest.m"; sourceTree = "<group>"; };
 		A3EE52C316F1E542007706C6 /* UIView+AngleConverterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AngleConverterTest.m"; sourceTree = "<group>"; };
-		A3EE52C516F3980A007706C6 /* CATransform3D+Extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CATransform3D+Extra.h"; sourceTree = "<group>"; };
-		A3EE52C616F3980B007706C6 /* CATransform3D+Extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransform3D+Extra.m"; sourceTree = "<group>"; };
 		A3EE52C916F72973007706C6 /* UIImage+AGQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AGQuad.h"; sourceTree = "<group>"; };
 		A3EE52CA16F72973007706C6 /* UIImage+AGQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AGQuad.m"; sourceTree = "<group>"; };
 		A3F77D3916FA3AC700415B24 /* UIBezierPath+AGQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+AGQuad.h"; sourceTree = "<group>"; };
@@ -340,11 +335,8 @@
 				A333A5F016A9A59200E334AD /* CGGeometry+Extra.h */,
 				A333A5F116A9A59200E334AD /* CGGeometry+Extra.m */,
 				A333A5F216A9A59200E334AD /* CGGeometry+ExtraTest.m */,
-				A3EE52C516F3980A007706C6 /* CATransform3D+Extra.h */,
-				A3EE52C616F3980B007706C6 /* CATransform3D+Extra.m */,
 				A333A5F316A9A59200E334AD /* AGMath.h */,
 				A333A5F416A9A59200E334AD /* AGMath.m */,
-				A3C6C4111859F5F20003472C /* AGRemap.h */,
 				A333A60716A9A5A300E334AD /* AGMathTest.m */,
 				A3C6C4101859EB710003472C /* AGBitOperations.h */,
 				A3C6C4121859F9F20003472C /* AGBitOperationsTest.m */,
@@ -566,7 +558,6 @@
 				A3EE526916EDEE83007706C6 /* easing.c in Sources */,
 				A3EE526F16F07479007706C6 /* AGAngleConverterSample.m in Sources */,
 				A3EE52BF16F1C5C6007706C6 /* UIView+AngleConverter.m in Sources */,
-				A3EE52C716F3980C007706C6 /* CATransform3D+Extra.m in Sources */,
 				A3EE52CB16F72973007706C6 /* UIImage+AGQuad.m in Sources */,
 				A3F77D3B16FA3AC700415B24 /* UIBezierPath+AGQuad.m in Sources */,
 				A3F77D3F16FA54C400415B24 /* JAValueToString.m in Sources */,
@@ -609,7 +600,6 @@
 				A3EE52C016F1C5C6007706C6 /* UIView+AngleConverter.m in Sources */,
 				A3EE52C216F1E02A007706C6 /* UIView+FrameExtraTest.m in Sources */,
 				A3EE52C416F1E543007706C6 /* UIView+AngleConverterTest.m in Sources */,
-				A3EE52C816F3980C007706C6 /* CATransform3D+Extra.m in Sources */,
 				A3EE52CC16F72973007706C6 /* UIImage+AGQuad.m in Sources */,
 				A3F77D3C16FA3AC700415B24 /* UIBezierPath+AGQuad.m in Sources */,
 				A3F77D4016FA54C400415B24 /* JAValueToString.m in Sources */,

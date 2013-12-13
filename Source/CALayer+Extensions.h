@@ -1,5 +1,7 @@
 //
-// Author: Håvard Fossli <hfossli@agens.no>
+// Authors:
+// Håvard Fossli <hfossli@agens.no>
+// Marcus Eckert <marcuseckert@gmail.com>
 //
 // Copyright (c) 2013 Agens AS (http://agens.no/)
 //
@@ -31,5 +33,9 @@
 - (void)ensureAnchorPointIs:(CGPoint)point;
 - (CGPoint)outerPointForInnerPoint:(CGPoint)innerPoint;
 
+- (CATransform3D)transformToOffsetRotationWithVirtualAnchorPoint:(CGPoint)virtualAnchor;
+- (void)applyTransformToOffsetRotationWithVirtualAnchorPoint:(CGPoint)virtualAnchor;
+- (CGPoint)offsetForXRotation:(CGFloat)angle virtualAnchorPoint:(CGPoint)virtualAnchor;
+- (CGPoint)offsetForYRotation:(CGFloat)angle virtualAnchorPoint:(CGPoint)virtualAnchor;
 
 @end
