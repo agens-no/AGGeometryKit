@@ -18,13 +18,13 @@
 - (void)testBIT_TEST_ALL
 {
     int a = 0;
-    STAssertFalse(BIT_TEST_ALL(a, 1 << 5), nil);
+    STAssertFalse(AG_BIT_TEST_ALL(a, 1 << 5), nil);
 
-    BIT_SET(a, 1 << 5);
-    STAssertTrue(BIT_TEST_ALL(a, 1 << 5), nil);
+    AG_BIT_SET(a, 1 << 5);
+    STAssertTrue(AG_BIT_TEST_ALL(a, 1 << 5), nil);
 
-    BIT_CLEAR(a, 1 << 5);
-    STAssertFalse(BIT_TEST_ALL(a, 1 << 5), nil);
+    AG_BIT_CLEAR(a, 1 << 5);
+    STAssertFalse(AG_BIT_TEST_ALL(a, 1 << 5), nil);
 }
 
 @end
