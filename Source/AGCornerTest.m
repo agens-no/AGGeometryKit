@@ -63,16 +63,16 @@
     CGRect rect = CGRectMake(50, 80, 350, 270);
     CGPoint point;
     
-    point = CGPointGetPointForAnchorPointInRect(AGCornerConvertToAnchorPoint(AGCornerTopLeft), rect);
+    point = AGCGPointConvertFromAnchorPoint(AGCornerConvertToAnchorPoint(AGCornerTopLeft), rect);
     STAssertEquals(point, CGPointMake(50, 80), @"point is not as expected");
     
-    point = CGPointGetPointForAnchorPointInRect(AGCornerConvertToAnchorPoint(AGCornerTopRight), rect);
+    point = AGCGPointConvertFromAnchorPoint(AGCornerConvertToAnchorPoint(AGCornerTopRight), rect);
     STAssertEquals(point, CGPointMake(50 + 350, 80), @"point is not as expected");
     
-    point = CGPointGetPointForAnchorPointInRect(AGCornerConvertToAnchorPoint(AGCornerBottomRight), rect);
+    point = AGCGPointConvertFromAnchorPoint(AGCornerConvertToAnchorPoint(AGCornerBottomRight), rect);
     STAssertEquals(point, CGPointMake(50 + 350, 80 + 270), @"point is not as expected");
     
-    point = CGPointGetPointForAnchorPointInRect(AGCornerConvertToAnchorPoint(AGCornerBottomLeft), rect);
+    point = AGCGPointConvertFromAnchorPoint(AGCornerConvertToAnchorPoint(AGCornerBottomLeft), rect);
     STAssertEquals(point, CGPointMake(50, 80 + 270), @"point is not as expected");
 }
 

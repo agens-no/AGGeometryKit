@@ -274,7 +274,7 @@ extern AGQuad AGQuadApplyCATransform3D(AGQuad q, CATransform3D t)
     {
         AGPoint ap1 = q.v[i];
         CGPoint cp1 = AGPointAsCGPoint(ap1);
-        CGPoint cp2 = CGPointApplyCATransform3D(cp1, t, CGPointZero, CATransform3DIdentity);
+        CGPoint cp2 = AGCGPointApplyCATransform3D(cp1, t, CGPointZero, CATransform3DIdentity);
         AGPoint ap2 = AGPointMakeWithCGPoint(cp2);
         q.v[i] = ap2;
     }

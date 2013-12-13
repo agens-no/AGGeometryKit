@@ -49,6 +49,6 @@ CGPoint AGCornerConvertToAnchorPoint(AGCorner corner)
 CGPoint AGCornerConvertToPointForRect(AGCorner corner, CGRect rect)
 {
     CGPoint anchor = AGCornerConvertToAnchorPoint(corner);
-    CGPoint p = CGPointGetPointForAnchorPointInRect(anchor, rect);
+    CGPoint p = AGCGPointConvertFromAnchorPoint(anchor, rect);
     return p;
 }

@@ -25,60 +25,76 @@
 
 // http://processingjs.nihongoresources.com/bezierinfo/
 
+// CGPoint
+
+inline BOOL AGCGPointGotAnyNanValues(CGPoint origin);
+inline CGPoint AGCGPointModified(CGPoint point, CGPoint (^block)(CGPoint point));
+
+inline CGPoint AGCGPointAdd(CGPoint p1, CGPoint p2);
+inline CGPoint AGCGPointAddSize(CGPoint p, CGSize s);
+inline CGPoint AGCGPointSubtract(CGPoint p1, CGPoint p2);
+inline CGPoint AGCGPointMultiply(CGPoint p1, CGFloat factor);
+inline CGPoint AGCGPointDivide(CGPoint p1, CGFloat factor);
+inline CGPoint AGCGPointNormalize(CGPoint v);
+inline CGFloat AGCGPointDotProduct(CGPoint p1, CGPoint p2);
+inline CGFloat AGCGPointCrossProductZComponent(CGPoint v1, CGPoint v2);
+inline CGFloat AGCGPointLength(CGPoint v);
+inline CGFloat AGCGPointLengthBetween(CGPoint p1, CGPoint p2);
+
+CGPoint AGCGPointApplyCATransform3D(CGPoint point,
+                                    CATransform3D transform,
+                                    CGPoint anchorPoint,
+                                    CATransform3D parentSublayerTransform);
+
+inline CGPoint AGCGPointRotate(CGPoint point, CGFloat angle);
+inline CGPoint AGCGPointRotateAroundOrigin(CGPoint point, CGFloat angle, CGPoint origin);
+inline CGPoint AGCGPointRotate90DegreesCW(CGPoint point);
+inline CGPoint AGCGPointRotate90DegreesCWAroundPoint(CGPoint point, CGPoint origin);
+inline CGPoint AGCGPointRotate90DegreesCC(CGPoint point);
+inline CGPoint AGCGPointRotate90DegreesCCAroundPoint(CGPoint point, CGPoint origin);
+
+inline CGPoint AGCGPointConvertFromAnchorPoint(CGPoint anchor, CGRect rect);
+inline CGPoint AGCGPointConvertToAnchorPoint(CGPoint point, CGRect rect);
+
+inline CGPoint AGCGPointInterpolate(CGPoint point1, CGPoint point2, double progress);
 
 
+// CGSize
 
-CGPoint CGPointGetPointForAnchorPointInRect(CGPoint anchor, CGRect rect);
-CGPoint CGPointGetAnchorPointForPointInRect(CGPoint point, CGRect rect);
-CGPoint CGPointForCenterInRect(CGRect rect);
-inline CGFloat CGPointDistanceBetweenPoints(CGPoint p1, CGPoint p2);
-inline double CGSizeGetAspectRatio(CGSize size);
-inline BOOL CGSizeAspectIsWiderThanCGSize(CGSize size1, CGSize size2);
-CGSize CGSizeAdjustOuterSizeToFitInnerSize(CGSize outer, CGSize inner);
-inline BOOL CGRectGotAnyNanValues(CGRect rect);
-inline BOOL CGSizeGotAnyNanValues(CGSize size);
-inline BOOL CGPointGotAnyNanValues(CGPoint origin);
-inline CGPoint CGPointAddSize(CGPoint p, CGSize s);
-inline CGRect CGRectMakeWithSize(CGSize size);
-inline CGPoint CGRectGetMidPoint(CGRect rect);
-inline CGSize CGSizeGetHalf(CGSize size);
-inline CGSize CGSizeSwitchAxis(CGSize size);
-inline CGRect CGRectWithSize(CGRect rect, CGSize newSize);
-inline CGRect CGRectWithWidth(CGRect rect, CGFloat newWidth);
-inline CGRect CGRectWithHeight(CGRect rect, CGFloat newHeight);
-inline CGRect CGRectWithOrigin(CGRect rect, CGPoint origin);
-inline CGRect CGRectWithOriginMinX(CGRect rect, CGFloat value);
-inline CGRect CGRectWithOriginMinY(CGRect rect, CGFloat value);
-inline CGRect CGRectWithOriginMaxY(CGRect rect, CGFloat value);
-inline CGRect CGRectWithOriginMaxX(CGRect rect, CGFloat value);
-inline CGRect CGRectWithOriginMidX(CGRect rect, CGFloat value);
-inline CGRect CGRectWithOriginMidY(CGRect rect, CGFloat value);
-inline CGRect CGRectApply(CGRect rect, CGRect (^block)(CGRect rect));
-inline CGSize CGSizeApply(CGSize size, CGSize (^block)(CGSize size));
-inline CGPoint CGPointApply(CGPoint point, CGPoint (^block)(CGPoint point));
-CGRect CGRectSmallestWithCGPoints(CGPoint pointsArray[], int numberOfPoints);
-CGSize CGSizeDistanceBetweenRects(CGRect rect1, CGRect rect2);
-CGSize CGSizeInterpolate(CGSize size1, CGSize size2, double progress);
-CGPoint CGPointInterpolate(CGPoint point1, CGPoint point2, double progress);
-CGRect CGRectInterpolate(CGRect rect1, CGRect rect2, double progress);
-CGPoint CGPointApplyCATransform3D(CGPoint point,
-                                  CATransform3D transform,
-                                  CGPoint anchorPoint,
-                                  CATransform3D parentSublayerTransform);
-inline CGPoint CGPointVectorNormalize(CGPoint v);
-inline CGFloat CGPointVectorGetLength(CGPoint v);
-inline CGFloat CGPointVectorDotProduct(CGPoint v1, CGPoint v2);
-inline CGFloat CGPointVectorCrossProductZComponent(CGPoint v1, CGPoint v2);
-inline CGFloat CGSizeScalarToAspectFit(CGSize sizeToFit, CGSize container);
-inline CGFloat CGSizeScalarToAspectFill(CGSize sizeToFill, CGSize container);
-inline CGPoint CGPointSubtract(CGPoint p1, CGPoint p2);
-inline CGPoint CGPointAdd(CGPoint p1, CGPoint p2);
-inline CGPoint CGPointMultiply(CGPoint p1, CGFloat factor);
-inline CGPoint CGPointDivide(CGPoint p1, CGFloat factor);
-inline CGFloat CGPointDotProduct(CGPoint p1, CGPoint p2);
-inline CGPoint CGPointRotate(CGPoint point, CGFloat angle);
-inline CGPoint CGPointRotateAroundOrigin(CGPoint point, CGFloat angle, CGPoint origin);
-inline CGPoint CGPointRotate90DegreesCW(CGPoint point);
-inline CGPoint CGPointRotate90DegreesCWAroundPoint(CGPoint point, CGPoint origin);
-inline CGPoint CGPointRotate90DegreesCC(CGPoint point);
-inline CGPoint CGPointRotate90DegreesCCAroundPoint(CGPoint point, CGPoint origin);
+inline BOOL AGCGSizeGotAnyNanValues(CGSize size);
+inline CGSize AGCGSizeModified(CGSize size, CGSize (^block)(CGSize size));
+
+inline CGSize AGCGSizeHalf(CGSize size);
+inline CGSize AGCGSizeSwitchAxis(CGSize size);
+inline double AGCGSizeAspectRatio(CGSize size);
+inline CGSize AGCGSizeAdjustOuterSizeToFitInnerSize(CGSize outer, CGSize inner);
+inline BOOL AGCGSizeAspectIsWiderThanCGSize(CGSize size1, CGSize size2);
+inline CGFloat AGCGSizeScalarToAspectFit(CGSize sizeToFit, CGSize container);
+inline CGFloat AGCGSizeScalarToAspectFill(CGSize sizeToFill, CGSize container);
+
+inline CGSize AGCGSizeInterpolate(CGSize size1, CGSize size2, double progress);
+
+
+// CGRect
+
+inline BOOL AGCGRectGotAnyNanValues(CGRect rect);
+inline CGRect AGCGRectModified(CGRect rect, CGRect (^block)(CGRect rect));
+CGSize AGRectGapBetween(CGRect rect1, CGRect rect2);
+inline CGPoint AGCGRectGetMid(CGRect rect);
+
+CGRect AGCGRectSmallestWithCGPoints(CGPoint pointsArray[], int numberOfPoints);
+inline CGRect AGCGRectMakeWithSize(CGSize size);
+inline CGRect AGCGRectWithSize(CGRect rect, CGSize newSize);
+inline CGRect AGCGRectWithWidth(CGRect rect, CGFloat newWidth);
+inline CGRect AGCGRectWithHeight(CGRect rect, CGFloat newHeight);
+inline CGRect AGCGRectWithOrigin(CGRect rect, CGPoint origin);
+inline CGRect AGCGRectWithOriginMinX(CGRect rect, CGFloat value);
+inline CGRect AGCGRectWithOriginMinY(CGRect rect, CGFloat value);
+inline CGRect AGCGRectWithOriginMaxY(CGRect rect, CGFloat value);
+inline CGRect AGCGRectWithOriginMaxX(CGRect rect, CGFloat value);
+inline CGRect AGCGRectWithOriginMidX(CGRect rect, CGFloat value);
+inline CGRect AGCGRectWithOriginMidY(CGRect rect, CGFloat value);
+inline CGRect AGCGRectWithOriginMid(CGRect rect, CGPoint origin);
+
+inline CGRect AGCGRectInterpolate(CGRect rect1, CGRect rect2, double progress);
+

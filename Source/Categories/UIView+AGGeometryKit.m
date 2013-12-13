@@ -56,7 +56,7 @@
 
 - (void)setFrameSize:(CGSize)value
 {
-	self.frame = CGRectWithSize(self.frame, value);
+	self.frame = AGCGRectWithSize(self.frame, value);
 }
 
 - (CGFloat)frameWidth
@@ -66,7 +66,7 @@
 
 - (void)setFrameWidth:(CGFloat)value
 {
-	self.frame = CGRectWithWidth(self.frame, value);
+	self.frame = AGCGRectWithWidth(self.frame, value);
 }
 
 - (CGFloat)frameHeight
@@ -76,12 +76,12 @@
 
 - (void)setFrameHeight:(CGFloat)value
 {
-	self.frame = CGRectWithHeight(self.frame, value);
+	self.frame = AGCGRectWithHeight(self.frame, value);
 }
 
 - (CGSize)frameSizeHalf
 {
-    return CGSizeGetHalf(self.frameSize);
+    return AGCGSizeHalf(self.frameSize);
 }
 
 - (CGFloat)frameHeightHalf
@@ -101,7 +101,7 @@
 
 - (void)setFrameOrigin:(CGPoint)value
 {
-	self.frame = CGRectWithOrigin(self.frame, value);
+	self.frame = AGCGRectWithOrigin(self.frame, value);
 }
 
 - (CGFloat)frameMinX
@@ -111,7 +111,7 @@
 
 - (void)setFrameMinX:(CGFloat)value
 {
-    self.frame = CGRectWithOriginMinX(self.frame, value);
+    self.frame = AGCGRectWithOriginMinX(self.frame, value);
 }
 
 - (CGFloat)frameMinY
@@ -121,7 +121,7 @@
 
 - (void)setFrameMinY:(CGFloat)value
 {
-    self.frame = CGRectWithOriginMinY(self.frame, value);
+    self.frame = AGCGRectWithOriginMinY(self.frame, value);
 }
 
 - (CGFloat)frameMidX
@@ -131,7 +131,7 @@
 
 - (void)setFrameMidX:(CGFloat)value
 {
-    self.frame = CGRectWithOriginMidX(self.frame, value);
+    self.frame = AGCGRectWithOriginMidX(self.frame, value);
 }
 
 - (CGFloat)frameMidY
@@ -141,7 +141,7 @@
 
 - (void)setFrameMidY:(CGFloat)value
 {
-    self.frame = CGRectWithOriginMidY(self.frame, value);
+    self.frame = AGCGRectWithOriginMidY(self.frame, value);
 }
 
 - (CGFloat)frameMaxX
@@ -151,7 +151,7 @@
 
 - (void)setFrameMaxX:(CGFloat)value
 {
-    self.frame = CGRectWithOriginMaxX(self.frame, value);
+    self.frame = AGCGRectWithOriginMaxX(self.frame, value);
 }
 
 - (CGFloat)frameMaxY
@@ -161,7 +161,7 @@
 
 - (void)setFrameMaxY:(CGFloat)value
 {
-    self.frame = CGRectWithOriginMaxY(self.frame, value);
+    self.frame = AGCGRectWithOriginMaxY(self.frame, value);
 }
 
 - (CGPoint)boundsOrigin
@@ -171,7 +171,7 @@
 
 - (void)setBoundsOrigin:(CGPoint)value
 {
-	self.bounds = CGRectWithOrigin(self.bounds, value);
+	self.bounds = AGCGRectWithOrigin(self.bounds, value);
 }
 
 - (CGSize)boundsSize
@@ -181,7 +181,7 @@
 
 - (void)setBoundsSize:(CGSize)value
 {
-	self.bounds = CGRectWithSize(self.bounds, value);
+	self.bounds = AGCGRectWithSize(self.bounds, value);
 }
 
 - (CGFloat)boundsWidth
@@ -191,7 +191,7 @@
 
 - (void)setBoundsWidth:(CGFloat)value
 {
-	self.bounds = CGRectWithWidth(self.bounds, value);
+	self.bounds = AGCGRectWithWidth(self.bounds, value);
 }
 
 - (CGFloat)boundsHeight
@@ -201,7 +201,7 @@
 
 - (void)setBoundsHeight:(CGFloat)newHeight
 {
-	self.bounds = CGRectWithHeight(self.bounds, newHeight);
+	self.bounds = AGCGRectWithHeight(self.bounds, newHeight);
 }
 
 - (CGFloat)boundsHeightHalf
@@ -216,7 +216,7 @@
 
 - (CGSize)boundsSizeHalf
 {
-    return CGSizeGetHalf(self.boundsSize);
+    return AGCGSizeHalf(self.boundsSize);
 }
 
 - (CGPoint)boundsCenter
