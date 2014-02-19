@@ -35,6 +35,7 @@
                                                  delay:(NSTimeInterval)delay
                                               duration:(NSTimeInterval)duration
                                           easeFunction:(double(^)(double p))progressFunction
+                                               onStart:(void(^)(void))onStart
                                             onComplete:(void(^)(BOOL finished))onComplete
 {
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
@@ -43,9 +44,9 @@
     animation.removedOnCompletion = NO;
     animation.fillMode = kCAFillModeForwards;
     animation.beginTime = CACurrentMediaTime() + delay;
-    
+
     NSMutableArray *values = [NSMutableArray arrayWithCapacity:numberOfFrames];
-    
+
     for(int i = 0; i < numberOfFrames; i++)
     {
         double p = progressFunction((double)i / (double)numberOfFrames);
@@ -54,11 +55,31 @@
         NSValue *value = [NSValue valueWithCATransform3D:transform];
         [values addObject:value];
     }
-    
+
     animation.values = values;
-    animation.delegate = [CAAnimationBlockDelegate newWithAnimationDidStop:onComplete];
-    
+    animation.delegate = [CAAnimationBlockDelegate newWithAnimationDidStart:onStart didStop:onComplete];
+
     return animation;
+}
+
++ (CAKeyframeAnimation *)animationBetweenQuadrilateral:(AGQuad)quad1
+                                      andQuadrilateral:(AGQuad)quad2
+                                                  rect:(CGRect)rect
+                                     forNumberOfFrames:(NSUInteger)numberOfFrames
+                                                 delay:(NSTimeInterval)delay
+                                              duration:(NSTimeInterval)duration
+                                          easeFunction:(double(^)(double p))progressFunction
+                                            onComplete:(void(^)(BOOL finished))onComplete
+{
+    return [self animationBetweenQuadrilateral:quad1
+                              andQuadrilateral:quad2
+                                          rect:rect
+                             forNumberOfFrames:numberOfFrames
+                                         delay:delay
+                                      duration:duration
+                                  easeFunction:progressFunction
+                                       onStart:nil
+                                    onComplete:onComplete];
 }
 
 - (AGQuad)quadrilateral
@@ -123,7 +144,9 @@
     }
     
     [CATransaction begin];
-    
+
+    __weak __typeof__(self) wself = self;
+
     CAKeyframeAnimation *anim = [[self class] animationBetweenQuadrilateral:quad1
                                                            andQuadrilateral:quad2
                                                                        rect:self.bounds
@@ -131,10 +154,20 @@
                                                                       delay:delay
                                                                    duration:duration
                                                                easeFunction:progressFunction
-                                                                 onComplete:onComplete];
-    
+                                                                    onStart:^{
+                                                                        wself.quadrilateral = quad2;
+                                                                    } onComplete:^(BOOL finished) {
+                                                                        if(finished)
+                                                                        {
+                                                                            [wself removeAnimationForKey:animKey];
+                                                                        }
+                                                                        onComplete(finished);
+                                                                    }];
+
+    anim.removedOnCompletion = NO;
+
     [self addAnimation:anim forKey:animKey];
-    
+
     [CATransaction commit];
 }
 
