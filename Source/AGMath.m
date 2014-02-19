@@ -223,7 +223,7 @@ extern CGFloat agEaseWithTwoBeziers(CGPoint tangent1,
 
     CGPoint tangent3 = CGPointMake(x, pointOfConnection.y+ (pointOfConnection.y-tangent2.y));
 
-    if (fac1 != 1.0f)
+    if (fac1 <= 1.0)
     {
         return agBezierYForX(fac1,
                              CGPointZero,
