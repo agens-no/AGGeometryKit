@@ -144,10 +144,10 @@ extern CGFloat agBezierYForX(CGFloat x, CGPoint p0, CGPoint p1, CGPoint p2, CGPo
 {
     CGFloat y0a = p0.y; // initial y
     CGFloat x0a = p0.x; // initial x
-    CGFloat y1a = p1.y;    // 1st influence y
-    CGFloat x1a = p1.x;    // 1st influence x
-    CGFloat y2a = p2.y;    // 2nd influence y
-    CGFloat x2a = p2.x;    // 2nd influence x
+    CGFloat y1a = p1.y; // 1st influence y
+    CGFloat x1a = p1.x; // 1st influence x
+    CGFloat y2a = p2.y; // 2nd influence y
+    CGFloat x2a = p2.x; // 2nd influence x
     CGFloat y3a = p3.y; // final y
     CGFloat x3a = p3.x; // final x
 
@@ -165,12 +165,11 @@ extern CGFloat agBezierYForX(CGFloat x, CGPoint p0, CGPoint p1, CGPoint p2, CGPo
     // Assume for the first guess that t = x.
     CGFloat currentt = x;
 
-    for (NSUInteger i=0; i < 5; i++){
-
+    for (NSUInteger i = 0; i < 5; i++)
+    {
         CGFloat currentx = agBezierXFromT(currentt, A, B, C, D);
-
         CGFloat currentslope = agBezierSlope(currentt, A, B, C);
-        currentt -= (currentx - x)*(currentslope);
+        currentt -= (currentx - x) * currentslope;
         currentt = MIN(MAX(currentt, 0.0f),1.0f);
     }
 
@@ -226,7 +225,11 @@ extern CGFloat agEaseWithTwoBeziers(CGPoint tangent1,
 
     if (fac1 != 1.0f)
     {
-        return agBezierYForX(fac1, CGPointZero, tangent1, tangent2, pointOfConnection);
+        return agBezierYForX(fac1,
+                             CGPointZero,
+                             tangent1,
+                             tangent2,
+                             pointOfConnection);
     }
     else
     {
