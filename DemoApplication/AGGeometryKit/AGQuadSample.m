@@ -37,8 +37,17 @@
 
 - (void)viewDidLoad
 {
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapRecognized:)];
+    [self.imageView addGestureRecognizer:tapRecognizer];
+
     [self.imageView.layer ensureAnchorPointIsSetToZero];
+
     [super viewDidLoad];
+}
+
+- (void)tapRecognized:(UITapGestureRecognizer *)recognizer
+{
+    NSLog(@"tap recognized");
 }
 
 - (IBAction)changeToSquareShape:(id)sender
