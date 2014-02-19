@@ -73,8 +73,8 @@
     return result;
 }
 
-- (void)mapBitmap:(unsigned char *)input
-               to:(unsigned char *)output
+- (void)mapBitmap:(in unsigned char *)input
+               to:(out unsigned char *)output
            inSize:(CGSize)inSize
           outSize:(CGSize)outSize
             scale:(double)scale

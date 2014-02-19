@@ -35,8 +35,8 @@
 - (id)initWithTransform:(CATransform3D)t anchorPoint:(CGPoint)anchorPoint;
 - (CGPoint)projectedPointForModelPoint:(CGPoint)point;
 
-- (void)mapBitmap:(unsigned char *)input
-               to:(unsigned char *)output
+- (void)mapBitmap:(in unsigned char *)input
+               to:(out unsigned char *)output
            inSize:(CGSize)inSize
           outSize:(CGSize)outSize
             scale:(double)scale
