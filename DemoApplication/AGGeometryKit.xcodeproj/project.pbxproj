@@ -148,7 +148,6 @@
 		A3270F2716D5675800A92C03 /* AGAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGAppDelegate.h; sourceTree = "<group>"; };
 		A3270F2816D5675800A92C03 /* AGAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGAppDelegate.m; sourceTree = "<group>"; };
 		A3270F2916D5675800A92C03 /* AGGeometryKit-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AGGeometryKit-Info.plist"; sourceTree = "<group>"; };
-		A3270F2A16D5675800A92C03 /* AGGeometryKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AGGeometryKit-Prefix.pch"; sourceTree = "<group>"; };
 		A3270F2B16D5675800A92C03 /* AGQuadSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGQuadSample.h; sourceTree = "<group>"; };
 		A3270F2C16D5675800A92C03 /* AGQuadSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGQuadSample.m; sourceTree = "<group>"; };
 		A3270F2D16D5675800A92C03 /* AGQuadSample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGQuadSample.xib; sourceTree = "<group>"; };
@@ -184,6 +183,7 @@
 		A3467566184DEB7900AD34EC /* AGVector3DTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGVector3DTest.m; sourceTree = "<group>"; };
 		A346756B184DEC0B00AD34EC /* AGPoint3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPoint3D.h; sourceTree = "<group>"; };
 		A346756C184DEC0B00AD34EC /* AGPoint3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPoint3D.m; sourceTree = "<group>"; };
+		A371C8AB18BE2FBA00C1A9DB /* AGGeometryKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AGGeometryKit-Prefix.pch"; sourceTree = "<group>"; };
 		A3762F2D1728067900E7A2AB /* AGQuadControlsSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGQuadControlsSample.h; sourceTree = "<group>"; };
 		A3762F2E1728067900E7A2AB /* AGQuadControlsSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGQuadControlsSample.m; sourceTree = "<group>"; };
 		A3762F2F1728067A00E7A2AB /* AGQuadControlsSample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGQuadControlsSample.xib; sourceTree = "<group>"; };
@@ -263,7 +263,6 @@
 				A3270F2816D5675800A92C03 /* AGAppDelegate.m */,
 				A3762F661728914500E7A2AB /* AGGeometryKitApplication.xib */,
 				A3270F2916D5675800A92C03 /* AGGeometryKit-Info.plist */,
-				A3270F2A16D5675800A92C03 /* AGGeometryKit-Prefix.pch */,
 				A3270F2E16D5675800A92C03 /* Default-568h@2x.png */,
 				A3270F2F16D5675800A92C03 /* Default.png */,
 				A3270F3016D5675800A92C03 /* Default@2x.png */,
@@ -332,6 +331,7 @@
 		A333A5EF16A9A59200E334AD /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				A371C8AB18BE2FBA00C1A9DB /* AGGeometryKit-Prefix.pch */,
 				A3270F2116D5643800A92C03 /* AGGeometryKit.h */,
 				A3EE526B16EE63F6007706C6 /* AGQuadKit.h */,
 				A3270F1D16D5642C00A92C03 /* AGCorner.h */,
@@ -712,7 +712,7 @@
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AGGeometryKit/AGGeometryKit-Prefix.pch";
+				GCC_PREFIX_HEADER = "../Source/AGGeometryKit-Prefix.pch";
 				INFOPLIST_FILE = "AGGeometryKit/AGGeometryKit-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = AGGeometryKit;
@@ -728,7 +728,7 @@
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AGGeometryKit/AGGeometryKit-Prefix.pch";
+				GCC_PREFIX_HEADER = "../Source/AGGeometryKit-Prefix.pch";
 				INFOPLIST_FILE = "AGGeometryKit/AGGeometryKit-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = AGGeometryKit;
