@@ -46,30 +46,32 @@ It acts very similar to how `frame` relates to `center`, `transform` and `bounds
 Example code animation with AGQuad
 ------
 
-    - (IBAction)animateToOtherShape:(id)sender
-    {
-        AGQuad quad = AGQuadMakeWithCGRect(self.imageView.bounds);
-        quad.tl.x -= 40; // top left x
-        quad.tr.y -= 125; // top right y
-        quad.br.y += 65; // bottom right y
-        quad.bl.x += 40; // bottom left x
-        [self animateToQuad:quad];
-    }
-    
-    - (void)animateToQuad:(AGQuad)quad
-    {        
-        double (^interpolationFunction)(double) = ^(double p) {
-            return (double) ElasticEaseOut(p); 
-        };
-        
-        [self.imageView.layer animateFromPresentedStateToQuadrilateral:quad
-                                                     forNumberOfFrames:2.0 * 60
-                                                              duration:2.0
-                                                                 delay:0.0
-                                                               animKey:@"demo"
-                                                 interpolationFunction:interpolationFunction
-                                                            onComplete:nil];
-    }
+```
+- (IBAction)animateToOtherShape:(id)sender
+{
+    AGQuad quad = AGQuadMakeWithCGRect(self.imageView.bounds);
+    quad.tl.x -= 40; // top left x
+    quad.tr.y -= 125; // top right y
+    quad.br.y += 65; // bottom right y
+    quad.bl.x += 40; // bottom left x
+    [self animateToQuad:quad];
+}
+
+- (void)animateToQuad1:(AGQuad)quad
+{
+    double (^interpolationFunction)(double) = ^(double p) {
+        return (double) ElasticEaseOut(p);
+    };
+
+    [self.imageView.layer animateFromPresentedStateToQuadrilateral:quad
+                                                 forNumberOfFrames:2.0 * 60
+                                                          duration:2.0
+                                                             delay:0.0
+                                                           animKey:@"demo"
+                                                      easeFunction:interpolationFunction
+                                                        onComplete:nil];
+}
+```
 
 Standard CoreAnimation-animation using CATransform3D with custom interpolation between quad points.
 
