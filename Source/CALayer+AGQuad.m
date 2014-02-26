@@ -161,7 +161,10 @@
                                                                         {
                                                                             [wself removeAnimationForKey:animKey];
                                                                         }
-                                                                        onComplete(finished);
+                                                                        if(onComplete)
+                                                                        {
+                                                                            onComplete(finished);
+                                                                        }
                                                                     }];
 
     anim.removedOnCompletion = NO;
