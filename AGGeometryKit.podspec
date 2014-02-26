@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     s.name         = "AGGeometryKit"
-    s.version      = "0.1.8.4"
-    s.summary      = "A bundle of small classes which enriches your possibilities with UIKit and CoreAnimation."
+    s.version      = "0.1.8.5"
+    s.summary      = "Quadrilaterals, geometry, math and more to enrich your possibilities with UIKit and CoreAnimation."
     s.homepage     = "https://github.com/hfossli/AGGeometryKit.git"
     s.authors      = { "Håvard Fossli" => "hfossli@agens.no" }
     s.license      = 'MIT'
