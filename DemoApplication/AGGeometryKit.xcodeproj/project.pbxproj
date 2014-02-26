@@ -714,7 +714,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AGGeometryKit/AGGeometryKit-Prefix.pch";
 				INFOPLIST_FILE = "AGGeometryKit/AGGeometryKit-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = AGGeometryKit;
 				WRAPPER_EXTENSION = app;
 			};
@@ -730,7 +730,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AGGeometryKit/AGGeometryKit-Prefix.pch";
 				INFOPLIST_FILE = "AGGeometryKit/AGGeometryKit-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = AGGeometryKit;
 				WRAPPER_EXTENSION = app;
 			};

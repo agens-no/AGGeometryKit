@@ -12,6 +12,6 @@ Pod::Spec.new do |s|
     s.source_files  = 'Source/**/*.{h,m}'
     s.exclude_files = 'Source/**/*Test.{h,m}'
     s.frameworks    = 'SystemConfiguration', 'IOKit', 'CoreGraphics', 'UIKit', 'QuartzCore'
-    s.platform      = :ios
+    s.platform      = :ios, '5.0'
     s.requires_arc  = true
 end
