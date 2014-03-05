@@ -36,7 +36,7 @@
 
 @end
 
-// Code derives from http://stackoverflow.com/a/13850972/202451
+// Code and algorithms derives from http://stackoverflow.com/a/13850972/202451
 
 @implementation AGTransformPixelMapper
 
