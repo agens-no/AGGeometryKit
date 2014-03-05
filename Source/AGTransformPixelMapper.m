@@ -36,6 +36,8 @@
 
 @end
 
+// Code derives from http://stackoverflow.com/a/13850972/202451
+
 @implementation AGTransformPixelMapper
 
 - (id)initWithTransform:(CATransform3D)t anchorPoint:(CGPoint)anchorPoint
