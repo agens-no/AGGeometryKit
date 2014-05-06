@@ -27,28 +27,6 @@
 
 @implementation UIView (AGGeometryKit)
 
-@dynamic frameSize;
-@dynamic frameWidthHalf;
-@dynamic frameHeightHalf;
-@dynamic frameOrigin;
-@dynamic frameMinX;
-@dynamic frameMinY;
-@dynamic frameMidX;
-@dynamic frameMidY;
-@dynamic frameMaxX;
-@dynamic frameMaxY;
-@dynamic frameWidth;
-@dynamic frameHeight;
-@dynamic boundsOrigin;
-@dynamic boundsSize;
-@dynamic boundsWidth;
-@dynamic boundsHeight;
-@dynamic boundsCenter;
-@dynamic boundsWidthHalf;
-@dynamic boundsHeightHalf;
-@dynamic centerX;
-@dynamic centerY;
-
 - (CGSize)frameSize
 {
 	return self.frame.size;
