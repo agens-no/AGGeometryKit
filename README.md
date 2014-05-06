@@ -19,9 +19,7 @@ Usage
 I'm most curious myself about this part. You can use the quadrilateral on any view, even webviews with just as good performance as you would have not using it. 
 Send me mail or twitter me anytime if you want to discuss possibilities and things you try to acheive. :)
 
-Bartosz Ciechanowski created a [genie effect](https://github.com/Ciechan/BCGenieEffect/) around desember 2012 which derives from a fraction of the code found here. Here's what he did
-
-[![genie effect](https://raw.github.com/Ciechan/BCGenieEffect/master/Screens/genieIn.gif)](https://github.com/Ciechan/BCGenieEffect/)
+Bartosz Ciechanowski created a [genie effect](https://github.com/Ciechan/BCGenieEffect/) around desember 2012 which derives from a fraction of the code found here. 
 
 
 Example video animation with AGQuad
