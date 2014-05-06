@@ -1,5 +1,5 @@
 //
-// Author: Håvard Fossli <hfossli@agens.no>
+// Author: Odd Magne Hågensen <oddmagne@agens.no>
 //
 // Copyright (c) 2013 Agens AS (http://agens.no/)
 //
@@ -21,11 +21,40 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "CALayer+AGKQuad.h"
-#import "CALayer+AGGeometryKit.h"
-#import "NSValue+AGKQuad.h"
-#import "UIBezierPath+AGKQuad.h"
-#import "UIImage+AGKQuad.h"
-#import "UIImage+CATransform3D.h"
-#import "UIView+AngleConvert.h"
-#import "UIView+AGGeometryKit.h"
+#import "UIView+AGK+AngleConverter.h"
+#import "CGGeometry+AGGeometryKit.h"
+
+@implementation UIView (AngleConverter)
+
+- (CGFloat)convertAngle:(CGFloat)angle toView:(UIView *)view
+{
+    CGPoint p1n = CGPointMake(0, 0);
+    CGPoint p2n = CGPointMake(0, 1000);
+    
+    CGPoint p1r = [self convertPoint:p1n toView:view];
+    CGPoint p2r = [self convertPoint:p2n toView:view];
+    
+    CGPoint v1 = CGPointMake(p2n.x - p1n.x, p2n.y - p1n.y);
+    CGPoint v2 = CGPointMake(p2r.x - p1r.x, p2r.y - p1r.y);
+    
+    CGPoint v1Normalized = AGKCGPointNormalize(v1);
+    CGPoint v2Normalized = AGKCGPointNormalize(v2);
+    
+    CGFloat crossZ = AGKCGPointCrossProductZComponent(v1Normalized, v2Normalized);
+    CGFloat cosAngleInRelation = AGKCGPointDotProduct(v1Normalized, v2Normalized);
+    CGFloat angleInRelation = acosf(cosAngleInRelation) + angle;
+    
+    if (crossZ > 0.0f)
+    {
+        angleInRelation = -angleInRelation;
+    }
+    
+    return angleInRelation;
+}
+
+- (CGFloat)convertAngleOfViewInRelationToView:(UIView *)view
+{
+    return [self convertAngle:0.0 toView:view];
+}
+
+@end

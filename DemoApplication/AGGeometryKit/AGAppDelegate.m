@@ -22,10 +22,10 @@
 // THE SOFTWARE.
 
 #import "AGAppDelegate.h"
-#import "AGQuadSample.h"
-#import "AGQuadControlsSample.h"
-#import "AGAngleConverterSample.h"
-#import "AGRenderingSample.h"
+#import "AGKQuadSample.h"
+#import "AGKQuadControlsSample.h"
+#import "AGKAngleConverterSample.h"
+#import "AGKRenderingSample.h"
 
 @implementation AGAppDelegate
 

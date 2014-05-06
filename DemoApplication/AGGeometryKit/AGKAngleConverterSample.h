@@ -1,5 +1,5 @@
 //
-// Author: Håvard Fossli <hfossli@agens.no>
+// Author: Odd Magne Hågensen <oddmagne@agens.no>
 //
 // Copyright (c) 2013 Agens AS (http://agens.no/)
 //
@@ -21,11 +21,15 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "CALayer+AGKQuad.h"
-#import "CALayer+AGGeometryKit.h"
-#import "NSValue+AGKQuad.h"
-#import "UIBezierPath+AGKQuad.h"
-#import "UIImage+AGKQuad.h"
-#import "UIImage+CATransform3D.h"
-#import "UIView+AngleConvert.h"
-#import "UIView+AGGeometryKit.h"
+#import <UIKit/UIKit.h>
+
+@interface AGKAngleConverterSample : UIViewController
+
+@property (assign, nonatomic) IBOutlet UISlider *mySlider;
+
+- (IBAction)sliderValueChanged:(id)sender;
+
+@property (assign, nonatomic) IBOutlet UILabel *inputLabel;
+@property (assign, nonatomic) IBOutlet UILabel *calculatedAngleLabel;
+
+@end

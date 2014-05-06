@@ -21,11 +21,18 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "CALayer+AGKQuad.h"
-#import "CALayer+AGGeometryKit.h"
-#import "NSValue+AGKQuad.h"
-#import "UIBezierPath+AGKQuad.h"
-#import "UIImage+AGKQuad.h"
-#import "UIImage+CATransform3D.h"
-#import "UIView+AngleConvert.h"
-#import "UIView+AGGeometryKit.h"
+
+#import "UIImage+AGK+CATransform3D.h"
+#import "CGImageRef+AGK+CATransform3D.h"
+
+@implementation UIImage (CATransform3D)
+
+- (UIImage *)imageWithTransform:(CATransform3D)transform anchorPoint:(CGPoint)anchorPoint
+{
+    CGImageRef imageRef = CGImageDrawWithCATransform3D(self.CGImage, transform, anchorPoint, self.size, self.scale);
+    UIImage* image = [UIImage imageWithCGImage:imageRef];
+    CGImageRelease(imageRef);
+    return image;
+}
+
+@end

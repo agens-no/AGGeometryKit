@@ -21,11 +21,23 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "CALayer+AGKQuad.h"
-#import "CALayer+AGGeometryKit.h"
-#import "NSValue+AGKQuad.h"
 #import "UIBezierPath+AGKQuad.h"
-#import "UIImage+AGKQuad.h"
-#import "UIImage+CATransform3D.h"
-#import "UIView+AngleConvert.h"
-#import "UIView+AGGeometryKit.h"
+
+@implementation UIBezierPath (AGKQuad)
+
++ (UIBezierPath *)bezierPathWithAGKQuad:(AGKQuad)q
+{
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:q.v[0]];
+    
+    for (int i = 1; i < 4; i++)
+    {
+        [path addLineToPoint:q.v[i]];
+    }
+    
+    [path closePath];
+    
+    return path;
+}
+
+@end

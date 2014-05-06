@@ -21,11 +21,16 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "CALayer+AGKQuad.h"
-#import "CALayer+AGGeometryKit.h"
-#import "NSValue+AGKQuad.h"
-#import "UIBezierPath+AGKQuad.h"
-#import "UIImage+AGKQuad.h"
-#import "UIImage+CATransform3D.h"
-#import "UIView+AngleConvert.h"
-#import "UIView+AGGeometryKit.h"
+#import <Foundation/Foundation.h>
+#import <QuartzCore/CAAnimation.h>
+
+@interface AGKCALayerAnimationBlockDelegate : NSObject
+
+@property (nonatomic, copy) void (^onStart)();
+@property (nonatomic, copy) void (^onStop)(BOOL completed);
+@property (nonatomic, assign) BOOL autoRemoveBlocks; // defaults to YES - will clear blocks after calling onAnimationDidStop
+
++ (instancetype)newWithAnimationDidStart:(void(^)(void))onStart didStop:(void(^)(BOOL completed))onStop;
++ (instancetype)newWithAnimationDidStop:(void(^)(BOOL completed))onStop;
+
+@end

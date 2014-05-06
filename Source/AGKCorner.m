@@ -21,11 +21,34 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "CALayer+AGKQuad.h"
-#import "CALayer+AGGeometryKit.h"
-#import "NSValue+AGKQuad.h"
-#import "UIBezierPath+AGKQuad.h"
-#import "UIImage+AGKQuad.h"
-#import "UIImage+CATransform3D.h"
-#import "UIView+AngleConvert.h"
-#import "UIView+AGGeometryKit.h"
+#import "AGKCorner.h"
+
+extern BOOL AGKCornerIsOnSide(AGKCorner corner, AGKSide side)
+{
+    return (corner & side) == side;
+}
+
+CGPoint AGKCornerConvertToAnchorPoint(AGKCorner corner)
+{
+    switch (corner) {
+        case AGKCornerTopLeft:
+            return CGPointMake(0, 0);
+            break;
+        case AGKCornerTopRight:
+            return CGPointMake(1, 0);
+            break;
+        case AGKCornerBottomLeft:
+            return CGPointMake(0, 1);
+            break;
+        case AGKCornerBottomRight:
+            return CGPointMake(1, 1);
+            break;
+    }
+}
+
+CGPoint AGKCornerConvertToPointForRect(AGKCorner corner, CGRect rect)
+{
+    CGPoint anchor = AGKCornerConvertToAnchorPoint(corner);
+    CGPoint p = AGKCGPointConvertFromAnchorPoint(anchor, rect);
+    return p;
+}

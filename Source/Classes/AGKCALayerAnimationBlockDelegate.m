@@ -21,11 +21,60 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "CALayer+AGKQuad.h"
-#import "CALayer+AGGeometryKit.h"
-#import "NSValue+AGKQuad.h"
-#import "UIBezierPath+AGKQuad.h"
-#import "UIImage+AGKQuad.h"
-#import "UIImage+CATransform3D.h"
-#import "UIView+AngleConvert.h"
-#import "UIView+AGGeometryKit.h"
+#import "AGKCALayerAnimationBlockDelegate.h"
+
+@interface AGKCALayerAnimationBlockDelegate ()
+@end
+
+@implementation AGKCALayerAnimationBlockDelegate
+
++ (instancetype)newWithAnimationDidStart:(void(^)(void))onStart didStop:(void(^)(BOOL completed))onStop
+{
+    AGKCALayerAnimationBlockDelegate *instance = [[self alloc] init];
+    instance.onStart = onStart;
+    instance.onStop = onStop;
+    return instance;
+}
+
++ (instancetype)newWithAnimationDidStop:(void(^)(BOOL completed))onStop
+{
+    AGKCALayerAnimationBlockDelegate *instance = [[self alloc] init];
+    instance.onStop = onStop;
+    return instance;
+}
+
+- (id)init
+{
+    self = [super init];
+    if(self)
+    {
+        _autoRemoveBlocks = YES;
+    }
+    return self;
+}
+
+- (void)animationDidStart:(CAAnimation *)anim
+{
+    if(self.onStart)
+    {
+        self.onStart();
+    }
+    if(self.autoRemoveBlocks)
+    {
+        self.onStart = nil;
+    }
+}
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
+{
+    if(self.onStop)
+    {
+        self.onStop(flag);
+    }
+    if(self.autoRemoveBlocks)
+    {
+        self.onStop = nil;
+    }
+}
+
+@end

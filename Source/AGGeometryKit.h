@@ -21,13 +21,15 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+// Agens Geometry Kit (AGK)
+
 #import "AGBitOperations.h"
-#import "AGCorner.h"
-#import "AGLine.h"
-#import "AGMath.h"
+#import "AGKCorner.h"
+#import "AGKLine.h"
+#import "AGKMath.h"
 #import "AGPoint.h"
-#import "AGQuad.h"
-#import "AGVector3D.h"
+#import "AGKQuad.h"
+#import "AGKVector3D.h"
 
 #import "AGGeometryKitCategories.h"
 #import "AGGeometryKitClasses.h"

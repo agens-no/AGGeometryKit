@@ -21,11 +21,23 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "CALayer+AGKQuad.h"
-#import "CALayer+AGGeometryKit.h"
-#import "NSValue+AGKQuad.h"
-#import "UIBezierPath+AGKQuad.h"
 #import "UIImage+AGKQuad.h"
-#import "UIImage+CATransform3D.h"
-#import "UIView+AngleConvert.h"
-#import "UIView+AGGeometryKit.h"
+#import "pthread.h"
+#import <QuartzCore/QuartzCore.h>
+#import "CGImageRef+AGK+CATransform3D.h"
+#import "UIImage+AGK+CATransform3D.h"
+
+@implementation UIImage (AGKQuad)
+
+- (UIImage *)imageWithQuad:(AGKQuad)quad scale:(CGFloat)scale
+{
+    AGKQuad scaledQuad = AGKQuadApplyCATransform3D(quad, CATransform3DMakeScale(scale, scale, 1.0));
+    CATransform3D transform = CATransform3DWithQuadFromBounds(scaledQuad, (CGRect){CGPointZero, self.size});
+    CGImageRef imageRef = CGImageDrawWithCATransform3D(self.CGImage, transform, CGPointZero, self.size, 1.0);
+    UIImage* image = [UIImage imageWithCGImage:imageRef];
+    CGImageRelease(imageRef);
+    return image;
+}
+
+
+@end

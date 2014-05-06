@@ -1,5 +1,6 @@
 //
 // Author: Håvard Fossli <hfossli@agens.no>
+// Author: Marcos Fuentes http://stackoverflow.com/users/1637195/marcos-fuentes
 //
 // Copyright (c) 2013 Agens AS (http://agens.no/)
 //
@@ -21,11 +22,27 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "CALayer+AGKQuad.h"
-#import "CALayer+AGGeometryKit.h"
-#import "NSValue+AGKQuad.h"
-#import "UIBezierPath+AGKQuad.h"
-#import "UIImage+AGKQuad.h"
-#import "UIImage+CATransform3D.h"
-#import "UIView+AngleConvert.h"
-#import "UIView+AGGeometryKit.h"
+#import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
+
+@interface AGKTransformPixelMapper : NSObject
+
+@property (nonatomic, assign, readonly) CATransform3D transform;
+@property (nonatomic, assign, readonly) double denominatorX;
+@property (nonatomic, assign, readonly) double denominatorY;
+@property (nonatomic, assign, readonly) double denominatorW;
+
+- (id)initWithTransform:(CATransform3D)t anchorPoint:(CGPoint)anchorPoint;
+- (CGPoint)projectedPointForModelPoint:(CGPoint)point;
+
+- (void)mapBitmap:(in unsigned char *)input
+               to:(out unsigned char *)output
+           inSize:(CGSize)inSize
+          outSize:(CGSize)outSize
+            scale:(double)scale
+    bytesPerPixel:(size_t)bytesPerPixel
+      bytesPerRow:(size_t)bytesPerRow;
+
+- (CGImageRef)createMappedImageRefFrom:(CGImageRef)imageRef scale:(double)scale CF_RETURNS_RETAINED;
+
+@end

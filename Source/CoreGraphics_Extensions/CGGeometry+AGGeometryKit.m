@@ -25,50 +25,50 @@
 #import <QuartzCore/QuartzCore.h>
 #import "GLKit/GLKMatrix3.h"
 #import "GLKit/GLKVector3.h"
-#import "AGMath.h"
+#import "AGKMath.h"
 #import "pthread.h"
 
 #pragma mark - CGPoint
 
-extern BOOL AGCGPointGotAnyNanValues(CGPoint origin)
+extern BOOL AGKCGPointGotAnyNanValues(CGPoint origin)
 {
     // which is better 'a == NAN' or 'a != a'?
     return origin.x == NAN || origin.y == NAN;
 }
 
-extern CGPoint AGCGPointModified(CGPoint point, CGPoint (^block)(CGPoint point))
+extern CGPoint AGKCGPointModified(CGPoint point, CGPoint (^block)(CGPoint point))
 {
     return block(point);
 }
 
-extern CGPoint AGCGPointAdd(CGPoint p1, CGPoint p2)
+extern CGPoint AGKCGPointAdd(CGPoint p1, CGPoint p2)
 {
     return (CGPoint){p1.x + p2.x, p1.y + p2.y};
 }
 
-extern CGPoint AGCGPointAddSize(CGPoint p, CGSize s)
+extern CGPoint AGKCGPointAddSize(CGPoint p, CGSize s)
 {
     return CGPointMake(p.x + s.width, p.y + s.height);
 }
 
-extern CGPoint AGCGPointSubtract(CGPoint p1, CGPoint p2)
+extern CGPoint AGKCGPointSubtract(CGPoint p1, CGPoint p2)
 {
     return (CGPoint){p1.x - p2.x, p1.y - p2.y};
 }
 
-extern CGPoint AGCGPointMultiply(CGPoint p1, CGFloat factor)
+extern CGPoint AGKCGPointMultiply(CGPoint p1, CGFloat factor)
 {
     return (CGPoint){p1.x * factor, p1.y * factor};
 }
 
-extern CGPoint AGCGPointDivide(CGPoint p1, CGFloat factor)
+extern CGPoint AGKCGPointDivide(CGPoint p1, CGFloat factor)
 {
     return (CGPoint){p1.x / factor, p1.y / factor};
 }
 
-extern CGPoint AGCGPointNormalize(CGPoint v)
+extern CGPoint AGKCGPointNormalize(CGPoint v)
 {
-    CGFloat length = AGCGPointLength(v);
+    CGFloat length = AGKCGPointLength(v);
     if(length != 0.0)
     {
         v.x /= length;
@@ -77,28 +77,28 @@ extern CGPoint AGCGPointNormalize(CGPoint v)
     return v;
 }
 
-extern CGFloat AGCGPointDotProduct(CGPoint p1, CGPoint p2)
+extern CGFloat AGKCGPointDotProduct(CGPoint p1, CGPoint p2)
 {
     return (p1.x * p2.x) + (p1.y * p2.y);
 }
 
-extern CGFloat AGCGPointCrossProductZComponent(CGPoint v1, CGPoint v2)
+extern CGFloat AGKCGPointCrossProductZComponent(CGPoint v1, CGPoint v2)
 {
     return v1.x * v2.y - v1.y * v2.x;
 }
 
-extern CGFloat AGCGPointLength(CGPoint v)
+extern CGFloat AGKCGPointLength(CGPoint v)
 {
     return sqrtf(v.x * v.x + v.y * v.y);
 }
 
-extern CGFloat AGCGPointLengthBetween(CGPoint p1, CGPoint p2)
+extern CGFloat AGKCGPointLengthBetween(CGPoint p1, CGPoint p2)
 {
     CGPoint p = CGPointMake(p2.x - p1.x, p2.y - p1.y);
     return sqrtf(powf(p.x, 2.0f) + powf(p.y, 2.0f));
 }
 
-CGPoint AGCGPointApplyCATransform3D(CGPoint point,
+CGPoint AGKCGPointApplyCATransform3D(CGPoint point,
                                     CATransform3D transform,
                                     CGPoint anchorPoint,
                                     CATransform3D parentSublayerTransform)
@@ -132,14 +132,14 @@ CGPoint AGCGPointApplyCATransform3D(CGPoint point,
     return retval;
 }
 
-extern CGPoint AGCGPointRotate(CGPoint point, CGFloat angle)
+extern CGPoint AGKCGPointRotate(CGPoint point, CGFloat angle)
 {
-    return AGCGPointRotateAroundOrigin(point, angle, CGPointZero);
+    return AGKCGPointRotateAroundOrigin(point, angle, CGPointZero);
 }
 
-extern CGPoint AGCGPointRotateAroundOrigin(CGPoint point, CGFloat angle, CGPoint origin)
+extern CGPoint AGKCGPointRotateAroundOrigin(CGPoint point, CGFloat angle, CGPoint origin)
 {
-    point = AGCGPointSubtract(point, origin);
+    point = AGKCGPointSubtract(point, origin);
 
     CGFloat cosa = cosf(angle);
     CGFloat sina = sinf(angle);
@@ -148,34 +148,34 @@ extern CGPoint AGCGPointRotateAroundOrigin(CGPoint point, CGFloat angle, CGPoint
 	r.x = point.x*cosa - point.y*sina;
 	r.y = point.x*sina + point.y*cosa;
 
-    return AGCGPointAdd(r, origin);
+    return AGKCGPointAdd(r, origin);
 }
 
-extern CGPoint AGCGPointRotate90DegreesCW(CGPoint point)
+extern CGPoint AGKCGPointRotate90DegreesCW(CGPoint point)
 {
-    return AGCGPointRotate90DegreesCWAroundPoint(point, CGPointZero);
+    return AGKCGPointRotate90DegreesCWAroundPoint(point, CGPointZero);
 }
 
-extern CGPoint AGCGPointRotate90DegreesCWAroundPoint(CGPoint point, CGPoint origin)
+extern CGPoint AGKCGPointRotate90DegreesCWAroundPoint(CGPoint point, CGPoint origin)
 {
-    point = AGCGPointSubtract(point, origin);
+    point = AGKCGPointSubtract(point, origin);
     point = CGPointMake(point.y, -point.x);
-    return AGCGPointAdd(point, origin);
+    return AGKCGPointAdd(point, origin);
 }
 
-extern CGPoint AGCGPointRotate90DegreesCC(CGPoint point)
+extern CGPoint AGKCGPointRotate90DegreesCC(CGPoint point)
 {
-    return AGCGPointRotate90DegreesCCAroundPoint(point, CGPointZero);
+    return AGKCGPointRotate90DegreesCCAroundPoint(point, CGPointZero);
 }
 
-extern CGPoint AGCGPointRotate90DegreesCCAroundPoint(CGPoint point, CGPoint origin)
+extern CGPoint AGKCGPointRotate90DegreesCCAroundPoint(CGPoint point, CGPoint origin)
 {
-    point = AGCGPointSubtract(point, origin);
+    point = AGKCGPointSubtract(point, origin);
     point = CGPointMake(-point.y, point.x);
-    return AGCGPointAdd(point, origin);
+    return AGKCGPointAdd(point, origin);
 }
 
-extern CGPoint AGCGPointConvertFromAnchorPoint(CGPoint anchor, CGRect rect)
+extern CGPoint AGKCGPointConvertFromAnchorPoint(CGPoint anchor, CGRect rect)
 {
     CGPoint point;
     point.x = (anchor.x * rect.size.width) + rect.origin.x;
@@ -183,7 +183,7 @@ extern CGPoint AGCGPointConvertFromAnchorPoint(CGPoint anchor, CGRect rect)
     return point;
 }
 
-extern CGPoint AGCGPointConvertToAnchorPoint(CGPoint point, CGRect rect)
+extern CGPoint AGKCGPointConvertToAnchorPoint(CGPoint point, CGRect rect)
 {
     CGPoint anchor = CGPointZero;
     CGPoint minPoint = CGPointMake(CGRectGetMinX(rect), CGRectGetMinY(rect));
@@ -192,11 +192,11 @@ extern CGPoint AGCGPointConvertToAnchorPoint(CGPoint point, CGRect rect)
     return anchor;
 }
 
-extern CGPoint AGCGPointInterpolate(CGPoint point1, CGPoint point2, double progress)
+extern CGPoint AGKCGPointInterpolate(CGPoint point1, CGPoint point2, double progress)
 {
     CGPoint result;
-    result.x = agInterpolate(point1.x, point2.x, progress);
-    result.y = agInterpolate(point1.y, point2.y, progress);
+    result.x = AGKInterpolate(point1.x, point2.x, progress);
+    result.y = AGKInterpolate(point1.y, point2.y, progress);
     return result;
 }
 
@@ -207,33 +207,33 @@ extern CGPoint AGCGPointInterpolate(CGPoint point1, CGPoint point2, double progr
 #pragma mark - 
 #pragma mark CGSize
 
-extern BOOL AGCGSizeGotAnyNanValues(CGSize size)
+extern BOOL AGKCGSizeGotAnyNanValues(CGSize size)
 {
     // which is better 'a == NAN' or 'a != a'?
     return size.width == NAN || size.height == NAN;
 }
 
-extern CGSize AGCGSizeModified(CGSize size, CGSize (^block)(CGSize size))
+extern CGSize AGKCGSizeModified(CGSize size, CGSize (^block)(CGSize size))
 {
     return block(size);
 }
 
-extern CGSize AGCGSizeHalf(CGSize size)
+extern CGSize AGKCGSizeHalf(CGSize size)
 {
     return CGSizeMake(size.width / 2.0, size.height / 2.0);
 }
 
-extern CGSize AGCGSizeSwitchAxis(CGSize size)
+extern CGSize AGKCGSizeSwitchAxis(CGSize size)
 {
     return CGSizeMake(size.height, size.width);
 }
 
-extern double AGCGSizeAspectRatio(CGSize size)
+extern double AGKCGSizeAspectRatio(CGSize size)
 {
     return size.width / size.height;
 }
 
-extern CGSize AGCGSizeAdjustOuterSizeToFitInnerSize(CGSize outer, CGSize inner)
+extern CGSize AGKCGSizeAdjustOuterSizeToFitInnerSize(CGSize outer, CGSize inner)
 {
     double outerAspect = outer.width / outer.height;
     double innerAspect = inner.width / inner.height;
@@ -248,14 +248,14 @@ extern CGSize AGCGSizeAdjustOuterSizeToFitInnerSize(CGSize outer, CGSize inner)
     }
 }
 
-extern BOOL AGCGSizeAspectIsWiderThanCGSize(CGSize size1, CGSize size2)
+extern BOOL AGKCGSizeAspectIsWiderThanCGSize(CGSize size1, CGSize size2)
 {
-    double aspect1 = AGCGSizeAspectRatio(size1);
-    double aspect2 = AGCGSizeAspectRatio(size2);
+    double aspect1 = AGKCGSizeAspectRatio(size1);
+    double aspect2 = AGKCGSizeAspectRatio(size2);
     return aspect1 > aspect2;
 }
 
-extern CGFloat AGCGSizeScalarToAspectFit(CGSize sizeToFit, CGSize container)
+extern CGFloat AGKCGSizeScalarToAspectFit(CGSize sizeToFit, CGSize container)
 {
     CGSize sizeMultiplier = CGSizeMake(sizeToFit.width / container.width,
                                        sizeToFit.height / container.height);
@@ -263,7 +263,7 @@ extern CGFloat AGCGSizeScalarToAspectFit(CGSize sizeToFit, CGSize container)
     return sizeMultiplier.width < sizeMultiplier.height ? sizeMultiplier.width : sizeMultiplier.height;
 }
 
-extern CGFloat AGCGSizeScalarToAspectFill(CGSize sizeToFill, CGSize container)
+extern CGFloat AGKCGSizeScalarToAspectFill(CGSize sizeToFill, CGSize container)
 {
     CGSize sizeMultiplier = CGSizeMake(sizeToFill.width / container.width,
                                        sizeToFill.height / container.height);
@@ -271,11 +271,11 @@ extern CGFloat AGCGSizeScalarToAspectFill(CGSize sizeToFill, CGSize container)
     return sizeMultiplier.width > sizeMultiplier.height ? sizeMultiplier.width : sizeMultiplier.height;
 }
 
-extern CGSize AGCGSizeInterpolate(CGSize size1, CGSize size2, double progress)
+extern CGSize AGKCGSizeInterpolate(CGSize size1, CGSize size2, double progress)
 {
     CGSize result;
-    result.width = agInterpolate(size1.width, size2.width, progress);
-    result.height = agInterpolate(size1.height, size2.height, progress);
+    result.width = AGKInterpolate(size1.width, size2.width, progress);
+    result.height = AGKInterpolate(size1.height, size2.height, progress);
     return result;
 }
 
@@ -285,12 +285,12 @@ extern CGSize AGCGSizeInterpolate(CGSize size1, CGSize size2, double progress)
 #pragma mark -
 #pragma mark CGRect
 
-extern BOOL AGCGRectGotAnyNanValues(CGRect rect)
+extern BOOL AGKCGRectGotAnyNanValues(CGRect rect)
 {
-    return AGCGSizeGotAnyNanValues(rect.size) || AGCGPointGotAnyNanValues(rect.origin);
+    return AGKCGSizeGotAnyNanValues(rect.size) || AGKCGPointGotAnyNanValues(rect.origin);
 }
 
-extern CGRect AGCGRectModified(CGRect rect, CGRect (^block)(CGRect rect))
+extern CGRect AGKCGRectModified(CGRect rect, CGRect (^block)(CGRect rect))
 {
     return block(rect);
 }
@@ -317,12 +317,12 @@ CGSize AGRectGapBetween(CGRect rect1, CGRect rect2)
     return CGSizeMake(xDifference, yDifference);
 }
 
-extern CGPoint AGCGRectGetMid(CGRect rect)
+extern CGPoint AGKCGRectGetMid(CGRect rect)
 {
     return CGPointMake(CGRectGetMidX(rect), CGRectGetMidY(rect));
 }
 
-CGRect AGCGRectSmallestWithCGPoints(CGPoint pointsArray[], int numberOfPoints)
+CGRect AGKCGRectSmallestWithCGPoints(CGPoint pointsArray[], int numberOfPoints)
 {
     double greatestXValue = pointsArray[0].x;
     double greatestYValue = pointsArray[0].y;
@@ -346,82 +346,82 @@ CGRect AGCGRectSmallestWithCGPoints(CGPoint pointsArray[], int numberOfPoints)
     return rect;
 }
 
-extern CGRect AGCGRectMakeWithSize(CGSize size)
+extern CGRect AGKCGRectMakeWithSize(CGSize size)
 {
     return (CGRect){CGPointZero, size};
 }
 
-extern CGRect AGCGRectWithSize(CGRect rect, CGSize newSize)
+extern CGRect AGKCGRectWithSize(CGRect rect, CGSize newSize)
 {
     rect.size = newSize;
     return rect;
 }
 
-extern CGRect AGCGRectWithWidth(CGRect rect, CGFloat newWidth)
+extern CGRect AGKCGRectWithWidth(CGRect rect, CGFloat newWidth)
 {
     rect.size.width = newWidth;
     return rect;
 }
 
-extern CGRect AGCGRectWithHeight(CGRect rect, CGFloat newHeight)
+extern CGRect AGKCGRectWithHeight(CGRect rect, CGFloat newHeight)
 {
     rect.size.height = newHeight;
     return rect;
 }
 
-extern CGRect AGCGRectWithOrigin(CGRect rect, CGPoint origin)
+extern CGRect AGKCGRectWithOrigin(CGRect rect, CGPoint origin)
 {
     rect.origin = origin;
     return rect;
 }
 
-extern CGRect AGCGRectWithOriginMinX(CGRect rect, CGFloat value)
+extern CGRect AGKCGRectWithOriginMinX(CGRect rect, CGFloat value)
 {
     rect.origin.x = value;
     return rect;
 }
 
-extern CGRect AGCGRectWithOriginMinY(CGRect rect, CGFloat value)
+extern CGRect AGKCGRectWithOriginMinY(CGRect rect, CGFloat value)
 {
     rect.origin.y = value;
     return rect;
 }
 
-extern CGRect AGCGRectWithOriginMaxY(CGRect rect, CGFloat value)
+extern CGRect AGKCGRectWithOriginMaxY(CGRect rect, CGFloat value)
 {
     rect.origin.y = value - rect.size.height;
     return rect;
 }
 
-extern CGRect AGCGRectWithOriginMaxX(CGRect rect, CGFloat value)
+extern CGRect AGKCGRectWithOriginMaxX(CGRect rect, CGFloat value)
 {
     rect.origin.x = value - rect.size.width;
     return rect;
 }
 
-extern CGRect AGCGRectWithOriginMidX(CGRect rect, CGFloat value)
+extern CGRect AGKCGRectWithOriginMidX(CGRect rect, CGFloat value)
 {
     rect.origin.x = value - (rect.size.width / 2.0);
     return rect;
 }
 
-extern CGRect AGCGRectWithOriginMidY(CGRect rect, CGFloat value)
+extern CGRect AGKCGRectWithOriginMidY(CGRect rect, CGFloat value)
 {
     rect.origin.y = value - (rect.size.height / 2.0);
     return rect;
 }
 
-extern CGRect AGCGRectWithOriginMid(CGRect rect, CGPoint origin)
+extern CGRect AGKCGRectWithOriginMid(CGRect rect, CGPoint origin)
 {
     rect.origin.x = origin.x - (rect.size.width / 2.0);
     rect.origin.y = origin.y - (rect.size.height / 2.0);
     return rect;
 }
 
-extern CGRect AGCGRectInterpolate(CGRect rect1, CGRect rect2, double progress)
+extern CGRect AGKCGRectInterpolate(CGRect rect1, CGRect rect2, double progress)
 {
     CGRect result;
-    result.origin = AGCGPointInterpolate(rect1.origin, rect2.origin, progress);
-    result.size = AGCGSizeInterpolate(rect1.size, rect2.size, progress);
+    result.origin = AGKCGPointInterpolate(rect1.origin, rect2.origin, progress);
+    result.size = AGKCGSizeInterpolate(rect1.size, rect2.size, progress);
     return result;
 }

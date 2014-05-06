@@ -21,11 +21,22 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "CALayer+AGKQuad.h"
-#import "CALayer+AGGeometryKit.h"
-#import "NSValue+AGKQuad.h"
-#import "UIBezierPath+AGKQuad.h"
-#import "UIImage+AGKQuad.h"
-#import "UIImage+CATransform3D.h"
-#import "UIView+AngleConvert.h"
-#import "UIView+AGGeometryKit.h"
+#import "CGGeometry+AGGeometryKit.h"
+
+typedef enum AGKSide {
+    AGKSideTop = 1 << 0,
+    AGKSideBottom = 1 << 1,
+    AGKSideLeft = 1 << 2,
+    AGKSideRight = 1 << 3,
+} AGKSide;
+
+typedef enum {
+    AGKCornerTopLeft = AGKSideTop | AGKSideLeft,
+    AGKCornerTopRight = AGKSideTop | AGKSideRight,
+    AGKCornerBottomLeft = AGKSideBottom | AGKSideLeft,
+    AGKCornerBottomRight = AGKSideBottom | AGKSideRight,
+} AGKCorner;
+
+inline BOOL AGKCornerIsOnSide(AGKCorner corner, AGKSide side);
+CGPoint AGKCornerConvertToAnchorPoint(AGKCorner corner);
+CGPoint AGKCornerConvertToPointForRect(AGKCorner corner, CGRect rect);

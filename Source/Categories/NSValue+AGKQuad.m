@@ -21,11 +21,34 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "CALayer+AGKQuad.h"
-#import "CALayer+AGGeometryKit.h"
 #import "NSValue+AGKQuad.h"
-#import "UIBezierPath+AGKQuad.h"
-#import "UIImage+AGKQuad.h"
-#import "UIImage+CATransform3D.h"
-#import "UIView+AngleConvert.h"
-#import "UIView+AGGeometryKit.h"
+
+@implementation NSValue (AGKQuad)
+
++ (NSValue *)valueWithAGKQuad:(AGKQuad)q
+{
+    CGFloat values[8];
+    for(int i = 0; i < 4; i++)
+    {
+        CGPoint p = q.v[i];
+        values[(i*2)] = p.x;
+        values[(i*2)+1] = p.y;
+    }
+    NSValue *value = [NSValue value:&q withObjCType:@encode(CGFloat[8])];
+    return value;
+}
+
+- (AGKQuad)AGKQuadValue
+{
+    AGKQuad q = AGKQuadZero;
+    CGFloat values[8];
+    [self getValue:values];
+    for(int i = 0; i < 4; i++)
+    {
+        CGPoint p = CGPointMake(values[(i*2)], values[(i*2)+1]);
+        q.v[i] = p;
+    }
+    return q;
+}
+
+@end
