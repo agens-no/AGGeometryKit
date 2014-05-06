@@ -277,12 +277,12 @@ NSString * NSStringFromAGKQuad(AGKQuad q)
 }
 
 
-// This have slightly less operations than CATransform3DWithQuadFromRect since origin values at rect is omitted.
+// This have slightly less operations than CATransform3DWithAGKQuadFromRect since origin values at rect is omitted.
 // We could of course use CGSize instead, but I don't know...
 // Taken from https://github.com/Ciechan/BCGenieEffect/blob/master/UIView%2BGenie.m
 // Which derives from http://stackoverflow.com/a/12820877/558816
 
-CATransform3D CATransform3DWithQuadFromBounds(AGKQuad q, CGRect rect)
+CATransform3D CATransform3DWithAGKQuadFromBounds(AGKQuad q, CGRect rect)
 {
     double W = AGKFloatToDoubleZeroFill(rect.size.width);
     double H = AGKFloatToDoubleZeroFill(rect.size.height);
@@ -334,7 +334,7 @@ CATransform3D CATransform3DWithQuadFromBounds(AGKQuad q, CGRect rect)
 // The algorithm originates from this post http://stackoverflow.com/a/2352402/202451
 //     by https://github.com/kennytm
 
-CATransform3D CATransform3DWithQuadFromRect(AGKQuad q, CGRect rect)
+CATransform3D CATransform3DWithAGKQuadFromRect(AGKQuad q, CGRect rect)
 {
     double X = AGKFloatToDoubleZeroFill(rect.origin.x);
     double Y = AGKFloatToDoubleZeroFill(rect.origin.y);

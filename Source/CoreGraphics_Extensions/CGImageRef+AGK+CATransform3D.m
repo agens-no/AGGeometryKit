@@ -34,7 +34,6 @@ CGImageRef CGImageDrawWithCATransform3D_AGK(CGImageRef imageRef,
                                             CGSize size,
                                             CGFloat scale)
 {
-    
     CATransform3D translateDueToAnchor = CATransform3DMakeTranslation(size.width * (-anchorPoint.x),
                                                                       size.height * (-anchorPoint.y),
                                                                       0);
