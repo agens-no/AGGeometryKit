@@ -29,3 +29,26 @@
   __typeof__(b) __b = (b);\
   (__x & __b) == __b;\
   })
+
+#ifndef NS_OPTION_ENABLE
+# define NS_OPTION_ENABLE(x, b)   ((x) |= (b))
+#endif
+
+#ifndef NS_OPTION_CLEAR
+# define NS_OPTION_CLEAR(x, b) ((x) &= ~(b))
+#endif
+
+#ifndef NS_OPTION_ENABLED
+# define NS_OPTION_ENABLED(x, b)  (((x) & (b)) != 0)
+#endif
+
+#ifndef NS_OPTION_DISABLED
+# define NS_OPTION_DISABLED(x, b)  (((x) & (b)) == 0)
+#endif
+
+#ifndef NS_OPTION_ALL_ENABLED
+# define NS_OPTION_ALL_ENABLED(x, b)  ({\
+     __typeof__(b) __b = (b);\
+     ((x) & __b) == __b;\
+  })
+#endif
