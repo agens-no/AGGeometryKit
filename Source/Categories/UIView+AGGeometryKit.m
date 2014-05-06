@@ -222,35 +222,4 @@
 	self.center = CGPointMake(self.center.x, newY);
 }
 
-- (void)centerInSuperview
-{
-    self.frameOrigin = CGPointMake(roundf(self.superview.boundsCenter.x - self.frameWidthHalf),
-                                   roundf(self.superview.boundsCenter.y - self.frameHeightHalf));
-}
-
-- (void)centerHorizontallyInSuperview
-{
-    self.frameMinX = roundf(self.superview.boundsCenter.x - self.frameWidthHalf);
-}
-
-- (void)centerVerticallyInSuperview
-{
-    self.frameMinY = roundf(self.superview.boundsCenter.y - self.frameHeightHalf);
-}
-
-- (void)fillSuperview
-{
-    self.frame = self.superview.bounds;
-}
-
-- (void)fillHorizontallyInSuperview
-{
-    self.frame = CGRectMake(0, self.frameMinY, self.superview.boundsWidth, self.frameHeight);
-}
-
-- (void)fillVerticallyInSuperview
-{
-    self.frame = CGRectMake(self.frameMinX, 0, self.frameWidth, self.superview.boundsHeight);
-}
-
 @end

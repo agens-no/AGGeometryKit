@@ -53,11 +53,4 @@
 @property (nonatomic, assign) CGFloat centerX;
 @property (nonatomic, assign) CGFloat centerY;
 
-- (void)centerInSuperview;
-- (void)centerHorizontallyInSuperview;
-- (void)centerVerticallyInSuperview;
-- (void)fillSuperview;
-- (void)fillHorizontallyInSuperview;
-- (void)fillVerticallyInSuperview;
-
 @end
