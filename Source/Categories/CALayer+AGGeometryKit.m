@@ -24,10 +24,228 @@
 // THE SOFTWARE.
 
 #import "CALayer+AGGeometryKit.h"
+#import "CGGeometry+AGGeometryKit.h"
 #import <objc/runtime.h>
 #import "AGVector3D.h"
 
 @implementation CALayer (AGGeometryKit)
+
+- (CGSize)frameSize
+{
+	return self.frame.size;
+}
+
+- (void)setFrameSize:(CGSize)value
+{
+	self.frame = AGCGRectWithSize(self.frame, value);
+}
+
+- (CGFloat)frameWidth
+{
+	return self.frame.size.width;
+}
+
+- (void)setFrameWidth:(CGFloat)value
+{
+	self.frame = AGCGRectWithWidth(self.frame, value);
+}
+
+- (CGFloat)frameHeight
+{
+	return self.frame.size.height;
+}
+
+- (void)setFrameHeight:(CGFloat)value
+{
+	self.frame = AGCGRectWithHeight(self.frame, value);
+}
+
+- (CGSize)frameSizeHalf
+{
+    return AGCGSizeHalf(self.frameSize);
+}
+
+- (CGFloat)frameHeightHalf
+{
+	return self.frameHeight / 2.0;
+}
+
+- (CGFloat)frameWidthHalf
+{
+	return self.frameWidth / 2.0;
+}
+
+- (CGPoint)frameOrigin
+{
+	return self.frame.origin;
+}
+
+- (void)setFrameOrigin:(CGPoint)value
+{
+	self.frame = AGCGRectWithOrigin(self.frame, value);
+}
+
+- (CGFloat)frameMinX
+{
+    return CGRectGetMinX(self.frame);
+}
+
+- (void)setFrameMinX:(CGFloat)value
+{
+    self.frame = AGCGRectWithOriginMinX(self.frame, value);
+}
+
+- (CGFloat)frameMinY
+{
+    return CGRectGetMinY(self.frame);
+}
+
+- (void)setFrameMinY:(CGFloat)value
+{
+    self.frame = AGCGRectWithOriginMinY(self.frame, value);
+}
+
+- (CGFloat)frameMidX
+{
+    return CGRectGetMidX(self.frame);
+}
+
+- (void)setFrameMidX:(CGFloat)value
+{
+    self.frame = AGCGRectWithOriginMidX(self.frame, value);
+}
+
+- (CGFloat)frameMidY
+{
+    return CGRectGetMidY(self.frame);
+}
+
+- (void)setFrameMidY:(CGFloat)value
+{
+    self.frame = AGCGRectWithOriginMidY(self.frame, value);
+}
+
+- (CGFloat)frameMaxX
+{
+    return CGRectGetMaxX(self.frame);
+}
+
+- (void)setFrameMaxX:(CGFloat)value
+{
+    self.frame = AGCGRectWithOriginMaxX(self.frame, value);
+}
+
+- (CGFloat)frameMaxY
+{
+    return CGRectGetMaxY(self.frame);
+}
+
+- (void)setFrameMaxY:(CGFloat)value
+{
+    self.frame = AGCGRectWithOriginMaxY(self.frame, value);
+}
+
+- (CGPoint)boundsOrigin
+{
+	return self.bounds.origin;
+}
+
+- (void)setBoundsOrigin:(CGPoint)value
+{
+	self.bounds = AGCGRectWithOrigin(self.bounds, value);
+}
+
+- (CGSize)boundsSize
+{
+	return self.bounds.size;
+}
+
+- (void)setBoundsSize:(CGSize)value
+{
+	self.bounds = AGCGRectWithSize(self.bounds, value);
+}
+
+- (CGFloat)boundsWidth
+{
+	return self.bounds.size.width;
+}
+
+- (void)setBoundsWidth:(CGFloat)value
+{
+	self.bounds = AGCGRectWithWidth(self.bounds, value);
+}
+
+- (CGFloat)boundsHeight
+{
+	return self.bounds.size.height;
+}
+
+- (void)setBoundsHeight:(CGFloat)value
+{
+	self.bounds = AGCGRectWithHeight(self.bounds, value);
+}
+
+- (CGFloat)boundsHeightHalf
+{
+	return self.boundsHeight / 2.0;
+}
+
+- (CGFloat)boundsWidthHalf
+{
+	return self.boundsWidth / 2.0;
+}
+
+- (CGSize)boundsSizeHalf
+{
+    return AGCGSizeHalf(self.boundsSize);
+}
+
+- (CGPoint)boundsCenter
+{
+    return CGPointMake(self.boundsWidthHalf, self.boundsHeightHalf);
+}
+
+- (CGFloat)positionX
+{
+	return self.position.x;
+}
+
+- (void)setPositionX:(CGFloat)value
+{
+	self.position = CGPointMake(value, self.position.y);
+}
+
+- (CGFloat)positionY
+{
+	return self.position.y;
+}
+
+- (void)setPositionY:(CGFloat)value
+{
+	self.position = CGPointMake(self.position.x, value);
+}
+
+- (CGFloat)anchorPointX
+{
+    return self.anchorPoint.x;
+}
+
+- (void)setAnchorPointX:(CGFloat)value
+{
+    self.anchorPoint = CGPointMake(value, self.anchorPoint.y);
+}
+
+- (CGFloat)anchorPointY
+{
+    return self.anchorPoint.y;
+}
+
+- (void)setAnchorPointY:(CGFloat)value
+{
+    self.anchorPoint = CGPointMake(self.anchorPoint.x, value);
+}
+
+#pragma mark - Methods
 
 - (void)setNullAsActionForKeys:(NSArray *)keys
 {
