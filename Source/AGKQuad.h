@@ -36,32 +36,32 @@ typedef union AGKQuad {
     CGPoint v[4];
 } AGKQuad;
 
-extern const AGKQuad AGKQuadZero;
-inline BOOL AGKQuadEqual(AGKQuad q1, AGKQuad q2);
-inline BOOL AGKQuadIsConvex(AGKQuad q);
-inline BOOL AGKQuadIsValid(AGKQuad q);
-inline AGKQuad AGKQuadMove(AGKQuad q, CGFloat x, CGFloat y);
-inline AGKQuad AGKQuadInsetLeft(AGKQuad q, CGFloat inset);
-inline AGKQuad AGKQuadInsetRight(AGKQuad q, CGFloat inset);
-inline AGKQuad AGKQuadInsetTop(AGKQuad q, CGFloat inset);
-inline AGKQuad AGKQuadInsetBottom(AGKQuad q, CGFloat inset);
-inline AGKQuad AGKQuadMirror(AGKQuad q, BOOL x, BOOL y);
-inline AGKQuad AGKQuadMake(CGPoint tl, CGPoint tr, CGPoint br, CGPoint bl);
-inline AGKQuad AGKQuadMakeWithCGRect(CGRect rect);
-inline AGKQuad AGKQuadMakeWithCGSize(CGSize size);
-inline CGFloat AGKQuadGetSmallestX(AGKQuad q);
-inline CGFloat AGKQuadGetBiggestX(AGKQuad q);
-inline CGFloat AGKQuadGetSmallestY(AGKQuad q);
-inline CGFloat AGKQuadGetBiggestY(AGKQuad q);
-inline CGRect AGKQuadGetBoundingRect(AGKQuad q);
-inline CGPoint AGKQuadGetCenter(AGKQuad q);
-inline CGSize AGKQuadGetSize(AGKQuad q);
+const AGKQuad AGKQuadZero;
+BOOL AGKQuadEqual(AGKQuad q1, AGKQuad q2);
+BOOL AGKQuadIsConvex(AGKQuad q);
+BOOL AGKQuadIsValid(AGKQuad q);
+AGKQuad AGKQuadMove(AGKQuad q, CGFloat x, CGFloat y);
+AGKQuad AGKQuadInsetLeft(AGKQuad q, CGFloat inset);
+AGKQuad AGKQuadInsetRight(AGKQuad q, CGFloat inset);
+AGKQuad AGKQuadInsetTop(AGKQuad q, CGFloat inset);
+AGKQuad AGKQuadInsetBottom(AGKQuad q, CGFloat inset);
+AGKQuad AGKQuadMirror(AGKQuad q, BOOL x, BOOL y);
+AGKQuad AGKQuadMake(CGPoint tl, CGPoint tr, CGPoint br, CGPoint bl);
+AGKQuad AGKQuadMakeWithCGRect(CGRect rect);
+AGKQuad AGKQuadMakeWithCGSize(CGSize size);
+CGFloat AGKQuadGetSmallestX(AGKQuad q);
+CGFloat AGKQuadGetBiggestX(AGKQuad q);
+CGFloat AGKQuadGetSmallestY(AGKQuad q);
+CGFloat AGKQuadGetBiggestY(AGKQuad q);
+CGRect AGKQuadGetBoundingRect(AGKQuad q);
+CGPoint AGKQuadGetCenter(AGKQuad q);
+CGSize AGKQuadGetSize(AGKQuad q);
 void AGKQuadGetXValues(AGKQuad q, CGFloat *out_values);
 void AGKQuadGetYValues(AGKQuad q, CGFloat *out_values);
-inline AGKQuad AGKQuadInterpolation(AGKQuad q1, AGKQuad q2, CGFloat progress);
-inline AGKQuad AGKQuadApplyCGAffineTransform(AGKQuad q, CGAffineTransform t);
-inline AGKQuad AGKQuadApplyCATransform3D(AGKQuad q, CATransform3D t);
-inline NSString * NSStringFromAGKQuad(AGKQuad q);
+AGKQuad AGKQuadInterpolation(AGKQuad q1, AGKQuad q2, CGFloat progress);
+AGKQuad AGKQuadApplyCGAffineTransform(AGKQuad q, CGAffineTransform t);
+AGKQuad AGKQuadApplyCATransform3D(AGKQuad q, CATransform3D t);
+NSString * NSStringFromAGKQuad(AGKQuad q);
 
 /**
  * @discussion

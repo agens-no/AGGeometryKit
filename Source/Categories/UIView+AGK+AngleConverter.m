@@ -37,11 +37,11 @@
     CGPoint v1 = CGPointMake(p2n.x - p1n.x, p2n.y - p1n.y);
     CGPoint v2 = CGPointMake(p2r.x - p1r.x, p2r.y - p1r.y);
     
-    CGPoint v1Normalized = AGKCGPointNormalize(v1);
-    CGPoint v2Normalized = AGKCGPointNormalize(v2);
+    CGPoint v1Normalized = CGPointNormalize_AGK(v1);
+    CGPoint v2Normalized = CGPointNormalize_AGK(v2);
     
-    CGFloat crossZ = AGKCGPointCrossProductZComponent(v1Normalized, v2Normalized);
-    CGFloat cosAngleInRelation = AGKCGPointDotProduct(v1Normalized, v2Normalized);
+    CGFloat crossZ = CGPointCrossProductZComponent_AGK(v1Normalized, v2Normalized);
+    CGFloat cosAngleInRelation = CGPointDotProduct_AGK(v1Normalized, v2Normalized);
     CGFloat angleInRelation = acosf(cosAngleInRelation) + angle;
     
     if (crossZ > 0.0f)

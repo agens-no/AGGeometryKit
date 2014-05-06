@@ -26,7 +26,7 @@ typedef union AGKLine {
     double v[2];
 } AGKLine;
 
-extern const AGKLine AGKLineZero;
-extern AGKLine AGKLineMake(CGPoint start, CGPoint end);
-inline double AGKLineLength(AGKLine l);
+const AGKLine AGKLineZero;
+AGKLine AGKLineMake(CGPoint start, CGPoint end);
+double AGKLineLength(AGKLine l);
 BOOL AGKLineIntersection(AGKLine l1, AGKLine l2, CGPoint *out_pointOfIntersection);

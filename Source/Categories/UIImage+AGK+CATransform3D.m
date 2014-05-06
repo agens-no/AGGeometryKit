@@ -29,7 +29,7 @@
 
 - (UIImage *)imageWithTransform:(CATransform3D)transform anchorPoint:(CGPoint)anchorPoint
 {
-    CGImageRef imageRef = CGImageDrawWithCATransform3D(self.CGImage, transform, anchorPoint, self.size, self.scale);
+    CGImageRef imageRef = CGImageDrawWithCATransform3D_AGK(self.CGImage, transform, anchorPoint, self.size, self.scale);
     UIImage* image = [UIImage imageWithCGImage:imageRef];
     CGImageRelease(imageRef);
     return image;

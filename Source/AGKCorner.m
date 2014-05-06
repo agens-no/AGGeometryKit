@@ -23,7 +23,7 @@
 
 #import "AGKCorner.h"
 
-extern BOOL AGKCornerIsOnSide(AGKCorner corner, AGKSide side)
+BOOL AGKCornerIsOnSide(AGKCorner corner, AGKSide side)
 {
     return (corner & side) == side;
 }
@@ -49,6 +49,6 @@ CGPoint AGKCornerConvertToAnchorPoint(AGKCorner corner)
 CGPoint AGKCornerConvertToPointForRect(AGKCorner corner, CGRect rect)
 {
     CGPoint anchor = AGKCornerConvertToAnchorPoint(corner);
-    CGPoint p = AGKCGPointConvertFromAnchorPoint(anchor, rect);
+    CGPoint p = CGPointConvertFromAnchorPoint_AGK(anchor, rect);
     return p;
 }

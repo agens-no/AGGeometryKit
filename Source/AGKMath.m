@@ -25,12 +25,12 @@
 
 #import "AGKMath.h"
 
-extern CGFloat AGKInterpolate(CGFloat startValue, CGFloat endValue, CGFloat progress)
+CGFloat AGKInterpolate(CGFloat startValue, CGFloat endValue, CGFloat progress)
 {
     return startValue + ((endValue - startValue) * progress);
 }
 
-extern CGFloat AGKRemapToZeroOne(CGFloat value, CGFloat startValue, CGFloat endValue)
+CGFloat AGKRemapToZeroOne(CGFloat value, CGFloat startValue, CGFloat endValue)
 {
     CGFloat diff = endValue - startValue;
     
@@ -44,26 +44,26 @@ extern CGFloat AGKRemapToZeroOne(CGFloat value, CGFloat startValue, CGFloat endV
     }
 }
 
-extern CGFloat AGKRemap(CGFloat value, CGFloat oldStartValue, CGFloat oldEndValue, CGFloat newStartValue, CGFloat newEndValue)
+CGFloat AGKRemap(CGFloat value, CGFloat oldStartValue, CGFloat oldEndValue, CGFloat newStartValue, CGFloat newEndValue)
 {
     CGFloat p = AGKRemapToZeroOne(oldStartValue, oldEndValue, value);
     return AGKInterpolate(newStartValue, newEndValue, p);
 }
 
-extern CGFloat AGKRemapAndClamp(CGFloat value, CGFloat oldStartValue, CGFloat oldEndValue, CGFloat newStartValue, CGFloat newEndValue)
+CGFloat AGKRemapAndClamp(CGFloat value, CGFloat oldStartValue, CGFloat oldEndValue, CGFloat newStartValue, CGFloat newEndValue)
 {
     CGFloat p = AGKRemapToZeroOne(oldStartValue, oldEndValue, value);
     CGFloat remapped = AGKInterpolate(newStartValue, newEndValue, p);
     return AGKClamp(remapped, newStartValue, newEndValue);
 }
 
-extern CGFloat AGKRemapToZeroOneAndClamp(CGFloat value, CGFloat oldStartValue, CGFloat oldEndValue)
+CGFloat AGKRemapToZeroOneAndClamp(CGFloat value, CGFloat oldStartValue, CGFloat oldEndValue)
 {
     CGFloat remapped = AGKRemapToZeroOne(value, oldStartValue, oldEndValue);
     return AGKClamp(remapped, 0.0, 1.0);
 }
 
-extern CGFloat AGKClamp(CGFloat value, CGFloat min, CGFloat max)
+CGFloat AGKClamp(CGFloat value, CGFloat min, CGFloat max)
 {
     if(value > max)
         return max;
@@ -72,7 +72,7 @@ extern CGFloat AGKClamp(CGFloat value, CGFloat min, CGFloat max)
     return value;
 }
 
-extern BOOL AGKIsWithin(CGFloat value, CGFloat min, CGFloat max)
+BOOL AGKIsWithin(CGFloat value, CGFloat min, CGFloat max)
 {
     if(value >= max)
         return NO;
@@ -81,17 +81,17 @@ extern BOOL AGKIsWithin(CGFloat value, CGFloat min, CGFloat max)
     return YES;
 }
 
-extern CGFloat AGKRadiansToDegrees(CGFloat radians)
+CGFloat AGKRadiansToDegrees(CGFloat radians)
 {
     return radians * 180 / M_PI;
 }
 
-extern CGFloat AGKDegreesToRadians(CGFloat degrees)
+CGFloat AGKDegreesToRadians(CGFloat degrees)
 {
     return degrees * M_PI / 180;
 }
 
-extern CGFloat AGKMakeProgressPingPong(CGFloat progress)
+CGFloat AGKMakeProgressPingPong(CGFloat progress)
 {
     CGFloat fac1 = AGKRemapToZeroOneAndClamp(progress, 0.0, 0.5);
     CGFloat fac2 = 1.0 - AGKRemapToZeroOneAndClamp(progress, 0.5, 1.0);
@@ -99,16 +99,16 @@ extern CGFloat AGKMakeProgressPingPong(CGFloat progress)
     return fac2 != 1.0f ? fac2 : fac1;
 }
 
-extern CGFloat AGKMakeProgressPingPongSin(CGFloat progress)
+CGFloat AGKMakeProgressPingPongSin(CGFloat progress)
 {
     // http://www.wolframalpha.com/input/?i=sin%28x*PI*2.0-PI*0.5%29*0.5%2B0.5
     return sinf(progress*M_PI*2.0-M_PI*0.5)*0.5+0.5;
 }
 
-extern CGFloat AGKDelayedProgressForItems(NSUInteger index,
-                                         NSUInteger itemCount,
-                                         CGFloat overlap,
-                                         CGFloat overallProgress)
+CGFloat AGKDelayedProgressForItems(NSUInteger index,
+                                   NSUInteger itemCount,
+                                   CGFloat overlap,
+                                   CGFloat overallProgress)
 {
     CGFloat multi = (1.0f-overlap) * (itemCount-1.0f);
     multi +=1.0f;
@@ -140,7 +140,7 @@ static CGFloat AGKBezierYFromT(CGFloat t, CGFloat E, CGFloat F, CGFloat G, CGFlo
     return y;
 }
 
-extern CGFloat AGKBezierYForX(CGFloat x, CGPoint p0, CGPoint p1, CGPoint p2, CGPoint p3)
+CGFloat AGKBezierYForX(CGFloat x, CGPoint p0, CGPoint p1, CGPoint p2, CGPoint p3)
 {
     CGFloat y0a = p0.y; // initial y
     CGFloat x0a = p0.x; // initial x
@@ -176,41 +176,41 @@ extern CGFloat AGKBezierYForX(CGFloat x, CGPoint p0, CGPoint p1, CGPoint p2, CGP
     return AGKBezierYFromT(currentt, E, F, G, H);
 }
 
-extern CGFloat AGKBezierZeroOneYForX(CGFloat x, CGPoint p1, CGPoint p2)
+CGFloat AGKBezierZeroOneYForX(CGFloat x, CGPoint p1, CGPoint p2)
 {
     return AGKBezierYForX(x, CGPointZero, p1, p2, CGPointMake(1, 1));
 }
 
-extern CGFloat AGKEaseInWithBezier(CGFloat progress)
+CGFloat AGKEaseInWithBezier(CGFloat progress)
 {
     return AGKBezierZeroOneYForX(progress, CGPointMake(0.9, 0.0), CGPointMake(0.8, 0.6));
 }
 
-extern CGFloat AGKEaseOutWithBezier(CGFloat progress)
+CGFloat AGKEaseOutWithBezier(CGFloat progress)
 {
     return AGKBezierZeroOneYForX(progress, CGPointMake(0.2f, 0.4f), CGPointMake(0.1f, 1.0f));
 }
 
-extern CGFloat AGKEaseInOutWithBezier(CGFloat progress, CGFloat force)
+CGFloat AGKEaseInOutWithBezier(CGFloat progress, CGFloat force)
 {
     return AGKBezierZeroOneYForX(progress, CGPointMake(force, 0.0f), CGPointMake(1.0f-force, 1.0f));
 }
 
-extern CGFloat AGKEaseOutWithOverShoot(CGFloat progress, CGFloat overshoot)
+CGFloat AGKEaseOutWithOverShoot(CGFloat progress, CGFloat overshoot)
 {
     // overshoot is 2.0
     // http://www.wolframalpha.com/input/?i=%28%28x-1%29*%28x-1%29*%28%282%2B1%29*%28x-1%29+%2B+2%29+%2B+1%29+from+0+to+1
     return ((progress-1.0)*(progress-1.0)*((overshoot+1.0)*(progress-1.0) + overshoot) + 1.0);
 }
 
-extern CGFloat AGKEaseOutWithPower(CGFloat progress, CGFloat power)
+CGFloat AGKEaseOutWithPower(CGFloat progress, CGFloat power)
 {
     // power is 3.0
     // http://www.wolframalpha.com/input/?i=1.0-%281.0-x%29^3+from+0+to+1
     return 1.0f-powf(fabsf(1.0f-progress), power);
 }
 
-extern CGFloat AGKEaseWithTwoBeziers(CGPoint tangent1,
+CGFloat AGKEaseWithTwoBeziers(CGPoint tangent1,
                                     CGPoint tangent2,
                                     CGPoint pointOfConnection,
                                     CGFloat x,
@@ -241,7 +241,7 @@ extern CGFloat AGKEaseWithTwoBeziers(CGPoint tangent1,
     }
 }
 
-extern CGFloat AGKMinInArray(CGFloat values[], NSUInteger numberOfValues, NSUInteger *out_index)
+CGFloat AGKMinInArray(CGFloat values[], NSUInteger numberOfValues, NSUInteger *out_index)
 {
     CGFloat lowest = values[0];
     unsigned int index = 0;
@@ -264,7 +264,7 @@ extern CGFloat AGKMinInArray(CGFloat values[], NSUInteger numberOfValues, NSUInt
     return lowest;
 }
 
-extern CGFloat AGKMaxInArray(CGFloat values[], NSUInteger numberOfValues, NSUInteger *out_index)
+CGFloat AGKMaxInArray(CGFloat values[], NSUInteger numberOfValues, NSUInteger *out_index)
 {
     CGFloat highest = values[0];
     unsigned int index = 0;
@@ -287,7 +287,7 @@ extern CGFloat AGKMaxInArray(CGFloat values[], NSUInteger numberOfValues, NSUInt
     return highest;
 }
 
-extern double floatToDoubleZeroFill(float floatValue)
+double AGKFloatToDoubleZeroFill(float floatValue)
 {
     double doubleValue = [[NSString stringWithFormat:@"%f", floatValue] doubleValue];
     return doubleValue;

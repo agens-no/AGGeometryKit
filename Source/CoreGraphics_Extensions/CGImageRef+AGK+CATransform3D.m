@@ -28,11 +28,11 @@
 // Refactored and improved upon this answer
 // http://stackoverflow.com/a/13850972/202451
 
-CGImageRef CGImageDrawWithCATransform3D(CGImageRef imageRef,
-                                        CATransform3D transform,
-                                        CGPoint anchorPoint,
-                                        CGSize size,
-                                        CGFloat scale)
+CGImageRef CGImageDrawWithCATransform3D_AGK(CGImageRef imageRef,
+                                            CATransform3D transform,
+                                            CGPoint anchorPoint,
+                                            CGSize size,
+                                            CGFloat scale)
 {
     
     CATransform3D translateDueToAnchor = CATransform3DMakeTranslation(size.width * (-anchorPoint.x),

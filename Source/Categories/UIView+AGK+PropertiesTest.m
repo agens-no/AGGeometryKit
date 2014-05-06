@@ -22,13 +22,13 @@
 // THE SOFTWARE.
 
 #import <SenTestingKit/SenTestingKit.h>
-#import "UIView+AGGeometryKit.h"
+#import "UIView+AGK+Properties.h"
 
-@interface UIView_FrameExtraTest : SenTestCase
+@interface UIView_AGK_PropertiesTest : SenTestCase
 
 @end
 
-@implementation UIView_FrameExtraTest
+@implementation UIView_AGK_PropertiesTest
 
 #pragma mark - Construct and destruct
 
@@ -87,52 +87,6 @@
     STAssertEquals(v.frameHeightHalf, 150.0f, nil);
     STAssertEquals(v.frameWidthHalf, 200.0f, nil);
     STAssertEquals(v.frameSizeHalf, CGSizeMake(200.0f, 150.0f), nil);
-}
-
-- (void)testCenterInSuperview
-{
-    UIView *s = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1024, 768)];
-    {
-        UIView *v = [[UIView alloc] initWithFrame:CGRectMake(201, 202, 203, 204)];
-        [s addSubview:v];
-        [v centerInSuperview];
-        STAssertEquals(v.frame, CGRectMake(411, 282, 203, 204), nil);
-    }
-    {
-        UIView *v = [[UIView alloc] initWithFrame:CGRectMake(201, 202, 203, 204)];
-        [s addSubview:v];
-        [v centerHorizontallyInSuperview];
-        STAssertEquals(v.frame, CGRectMake(411, 202, 203, 204), nil);
-    }
-    {
-        UIView *v = [[UIView alloc] initWithFrame:CGRectMake(201, 202, 203, 204)];
-        [s addSubview:v];
-        [v centerVerticallyInSuperview];
-        STAssertEquals(v.frame, CGRectMake(201, 282, 203, 204), nil);
-    }
-}
-
-- (void)testFillInSuperview
-{
-    UIView *s = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1024, 768)];
-    {
-        UIView *v = [[UIView alloc] initWithFrame:CGRectMake(201, 202, 203, 204)];
-        [s addSubview:v];
-        [v fillSuperview];
-        STAssertEquals(v.frame, CGRectMake(0, 0, 1024, 768), nil);
-    }
-    {
-        UIView *v = [[UIView alloc] initWithFrame:CGRectMake(201, 202, 203, 204)];
-        [s addSubview:v];
-        [v fillHorizontallyInSuperview];
-        STAssertEquals(v.frame, CGRectMake(0, 202, 1024, 204), nil);
-    }
-    {
-        UIView *v = [[UIView alloc] initWithFrame:CGRectMake(201, 202, 203, 204)];
-        [s addSubview:v];
-        [v fillVerticallyInSuperview];
-        STAssertEquals(v.frame, CGRectMake(201, 0, 203, 768), nil);
-    }    
 }
 
 @end

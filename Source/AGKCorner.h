@@ -37,6 +37,6 @@ typedef enum {
     AGKCornerBottomRight = AGKSideBottom | AGKSideRight,
 } AGKCorner;
 
-inline BOOL AGKCornerIsOnSide(AGKCorner corner, AGKSide side);
+BOOL AGKCornerIsOnSide(AGKCorner corner, AGKSide side);
 CGPoint AGKCornerConvertToAnchorPoint(AGKCorner corner);
 CGPoint AGKCornerConvertToPointForRect(AGKCorner corner, CGRect rect);

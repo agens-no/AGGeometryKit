@@ -232,7 +232,7 @@ enum
 };
 
 
-static inline NSString *StringWithBytesLengthEncoding(const void *bytes, NSUInteger length, NSStringEncoding encoding)
+static NSString *StringWithBytesLengthEncoding(const void *bytes, NSUInteger length, NSStringEncoding encoding)
 {
 	NSString *result = [[NSString alloc] initWithBytes:bytes
 												length:length
@@ -721,7 +721,7 @@ static void DecodeStruct(DECODER_PARAMS)
 DECLARE_DISPATCH(Struct);
 
 
-static inline NSString *ExtractString(const char *strPtr, size_t maxLength)
+static NSString *ExtractString(const char *strPtr, size_t maxLength)
 {
 	if (strPtr == NULL || maxLength == 0)  return @"";
 	
@@ -1023,7 +1023,7 @@ static int CompareDispatchEntries(const DispatchEntry **a, const DispatchEntry *
 }
 
 
-static inline size_t RoundUp(size_t size, size_t factor)
+static size_t RoundUp(size_t size, size_t factor)
 {
 	size += factor - 1;
 	size -= size % factor;

@@ -37,7 +37,7 @@
     CGRect rect = CGRectMake(50, 80, 350, 270);
     CGPoint point;
     
-    point = AGKCGPointConvertFromAnchorPoint(CGPointMake(0.5, 0.8), rect);
+    point = CGPointConvertFromAnchorPoint_AGK(CGPointMake(0.5, 0.8), rect);
     STAssertEquals(point, CGPointMake(50.0 + (350.0 * 0.5), 80 + (270 * 0.8)), @"point is not as expected");
 }
 
@@ -46,30 +46,30 @@
     {
         CGRect rect = CGRectMake(200, 150, 100, 50);
         CGPoint point = CGPointMake(250, 175);
-        CGPoint anchor = AGKCGPointConvertToAnchorPoint(point, rect);
+        CGPoint anchor = CGPointConvertToAnchorPoint_AGK(point, rect);
         STAssertEquals(anchor, CGPointMake(0.5, 0.5), @"anchor is not as expected");
     }
     {
         CGRect rect = CGRectMake(200, 150, 100, 50);
         CGPoint point = CGPointMake(150, 175);
-        CGPoint anchor = AGKCGPointConvertToAnchorPoint(point, rect);
+        CGPoint anchor = CGPointConvertToAnchorPoint_AGK(point, rect);
         STAssertEquals(anchor, CGPointMake(-0.5, 0.5), @"anchor is not as expected");
     }
     {
         CGRect rect = CGRectMake(200, 150, 100, 50);
         CGPoint point = CGPointMake(300, 200);
-        CGPoint anchor = AGKCGPointConvertToAnchorPoint(point, rect);
+        CGPoint anchor = CGPointConvertToAnchorPoint_AGK(point, rect);
         STAssertEquals(anchor, CGPointMake(1.0, 1.0), @"anchor is not as expected");
     }
 }
 
-- (void)testAGKCGPointDistance
+- (void)testCGPointDistance_AGK
 {
     CGPoint p1, p2;
     p1 = CGPointMake(50, 40);
     p2 = CGPointMake(10, 70);
     
-    STAssertEquals(AGKCGPointLengthBetween(p1, p2), (CGFloat) 50.0f, @"Distance is not calculated correctly");
+    STAssertEquals(CGPointLengthBetween_AGK(p1, p2), (CGFloat) 50.0f, @"Distance is not calculated correctly");
 }
 
 - (void)testInterpolate
@@ -78,11 +78,11 @@
     {
         CGRect rect1 = CGRectMake(10, 50, 150, 100);
         CGRect rect2 = CGRectMake(70, 60, 200, 40);
-        CGRect rectp00 = AGKCGRectInterpolate(rect1, rect2, 0.0f);
-        CGRect rectp03 = AGKCGRectInterpolate(rect1, rect2, 0.3f);
-        CGRect rectp05 = AGKCGRectInterpolate(rect1, rect2, 0.5f);
-        CGRect rectp07 = AGKCGRectInterpolate(rect1, rect2, 0.7f);
-        CGRect rectp1 = AGKCGRectInterpolate(rect1, rect2, 1.0f);
+        CGRect rectp00 = CGRectInterpolate_AGK(rect1, rect2, 0.0f);
+        CGRect rectp03 = CGRectInterpolate_AGK(rect1, rect2, 0.3f);
+        CGRect rectp05 = CGRectInterpolate_AGK(rect1, rect2, 0.5f);
+        CGRect rectp07 = CGRectInterpolate_AGK(rect1, rect2, 0.7f);
+        CGRect rectp1 = CGRectInterpolate_AGK(rect1, rect2, 1.0f);
         
         STAssertEquals(rectp00, CGRectMake(10.0f, 50.0f, 150.0f, 100.0f), @"Unecpexted");
         STAssertEquals(rectp03, CGRectMake(28.0f, 53.0f, 165.0f, 82.0f), @"Unecpexted");
@@ -94,9 +94,9 @@
     {
         CGRect rect1 = CGRectMake(10, 50, 150, 100);
         CGRect rect2 = CGRectMake(-20, 60, 200, 40);
-        CGRect rectp00 = AGKCGRectInterpolate(rect1, rect2, 0.0);
-        CGRect rectp03 = AGKCGRectInterpolate(rect1, rect2, 0.3);
-        CGRect rectp1 = AGKCGRectInterpolate(rect1, rect2, 1.0);
+        CGRect rectp00 = CGRectInterpolate_AGK(rect1, rect2, 0.0);
+        CGRect rectp03 = CGRectInterpolate_AGK(rect1, rect2, 0.3);
+        CGRect rectp1 = CGRectInterpolate_AGK(rect1, rect2, 1.0);
         
         STAssertEquals(rectp00, CGRectMake(10.0f, 50.0f, 150.0f, 100.0f), @"Unecpexted");
         STAssertEquals(rectp03, CGRectMake(1.0f, 53.0f, 165.0f, 82.0f), @"Unecpexted");
@@ -109,46 +109,46 @@
 {
     {
         CGRect rectWithALongNameOrPathSinceThatsWhenItIsUsefull = CGRectMake(40, 20, 150, 100);
-        CGRect rect = AGKCGRectWithOriginMinX(rectWithALongNameOrPathSinceThatsWhenItIsUsefull, 300);
+        CGRect rect = CGRectWithOriginMinX_AGK(rectWithALongNameOrPathSinceThatsWhenItIsUsefull, 300);
         STAssertEquals(rect.origin.x, 300.0f, nil);
     }
     {
         CGRect rectWithALongNameOrPathSinceThatsWhenItIsUsefull = CGRectMake(40, 20, 150, 100);
-        CGRect rect = AGKCGRectWithOriginMinY(rectWithALongNameOrPathSinceThatsWhenItIsUsefull, 300);
+        CGRect rect = CGRectWithOriginMinY_AGK(rectWithALongNameOrPathSinceThatsWhenItIsUsefull, 300);
         STAssertEquals(rect.origin.y, 300.0f, nil);
     }
     
     
     {
         CGRect rectWithALongNameOrPathSinceThatsWhenItIsUsefull = CGRectMake(40, 20, 150, 100);
-        CGRect rect = AGKCGRectWithOriginMidX(rectWithALongNameOrPathSinceThatsWhenItIsUsefull, 300);
+        CGRect rect = CGRectWithOriginMidX_AGK(rectWithALongNameOrPathSinceThatsWhenItIsUsefull, 300);
         STAssertEquals(rect.origin.x, 225.0f, nil);
     }
     {
         CGRect rectWithALongNameOrPathSinceThatsWhenItIsUsefull = CGRectMake(40, 20, 150, 100);
-        CGRect rect = AGKCGRectWithOriginMidY(rectWithALongNameOrPathSinceThatsWhenItIsUsefull, 300);
+        CGRect rect = CGRectWithOriginMidY_AGK(rectWithALongNameOrPathSinceThatsWhenItIsUsefull, 300);
         STAssertEquals(rect.origin.y, 250.0f, nil);
     }
     
     {
         CGRect rectWithALongNameOrPathSinceThatsWhenItIsUsefull = CGRectMake(40, 20, 150, 100);
-        CGRect rect = AGKCGRectWithOriginMaxX(rectWithALongNameOrPathSinceThatsWhenItIsUsefull, 300);
+        CGRect rect = CGRectWithOriginMaxX_AGK(rectWithALongNameOrPathSinceThatsWhenItIsUsefull, 300);
         STAssertEquals(rect.origin.x, 150.0f, nil);
     }
     {
         CGRect rectWithALongNameOrPathSinceThatsWhenItIsUsefull = CGRectMake(40, 20, 150, 100);
-        CGRect rect = AGKCGRectWithOriginMaxY(rectWithALongNameOrPathSinceThatsWhenItIsUsefull, 300);
+        CGRect rect = CGRectWithOriginMaxY_AGK(rectWithALongNameOrPathSinceThatsWhenItIsUsefull, 300);
         STAssertEquals(rect.origin.y, 200.0f, nil);
     }
 }
 
-- (void)testAGKCGPointModifiedCATransform3D
+- (void)testCGPointModifiedCATransform3D_AGK
 {
     {
         CGPoint p = CGPointMake(0, 0);
         CATransform3D t = CATransform3DMakeScale(1.8, 1.4, 0.0);
         CGPoint anchorPoint = CGPointMake(0, 0);
-        CGPoint retval = AGKCGPointApplyCATransform3D(p, t, anchorPoint, CATransform3DIdentity);
+        CGPoint retval = CGPointApplyCATransform3D_AGK(p, t, anchorPoint, CATransform3DIdentity);
         CGPoint correct = CGPointMake(0, 0);
         STAssertEquals(retval, correct, nil);
     }
@@ -156,7 +156,7 @@
         CGPoint p = CGPointMake(100, 100);
         CATransform3D t = CATransform3DMakeScale(1.8, 1.4, 0.0);
         CGPoint anchorPoint = CGPointMake(0, 0);
-        CGPoint retval = AGKCGPointApplyCATransform3D(p, t, anchorPoint, CATransform3DIdentity);
+        CGPoint retval = CGPointApplyCATransform3D_AGK(p, t, anchorPoint, CATransform3DIdentity);
         CGPoint correct = CGPointMake(180, 140);
         STAssertEquals(retval, correct, nil);
     }

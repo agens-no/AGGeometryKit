@@ -80,20 +80,20 @@
 
 - (void)testCLAMP
 {
-    STAssertEquals(AG_CLAMP(0.5, 1.0, 50.0), 1.0, nil);
-    STAssertEquals(AG_CLAMP(0.5, 0.0, 50.0), 0.5, nil);
-    STAssertEquals(AG_CLAMP(-1.5, -2.0, -1.0), -1.5, nil);
-    STAssertEquals(AG_CLAMP(5, -2.0, -1.0), -1.0, nil);
-    STAssertEquals(AG_CLAMP(5, 2, 7), 5, nil);
-    STAssertEquals(AG_CLAMP(5, -2, 3), 3, nil);
+    STAssertEquals(AGK_CLAMP(0.5, 1.0, 50.0), 1.0, nil);
+    STAssertEquals(AGK_CLAMP(0.5, 0.0, 50.0), 0.5, nil);
+    STAssertEquals(AGK_CLAMP(-1.5, -2.0, -1.0), -1.5, nil);
+    STAssertEquals(AGK_CLAMP(5, -2.0, -1.0), -1.0, nil);
+    STAssertEquals(AGK_CLAMP(5, 2, 7), 5, nil);
+    STAssertEquals(AGK_CLAMP(5, -2, 3), 3, nil);
 }
 
 - (void)testIS_WITHIN
 {
-    STAssertTrue(AG_IS_WITHIN(0, -5, 2), nil);
-    STAssertTrue(AG_IS_WITHIN(10.0, -5, 20.0), nil);
-    STAssertFalse(AG_IS_WITHIN(2, 5, 7), nil);
-    STAssertFalse(AG_IS_WITHIN(12, 5, 7), nil);
+    STAssertTrue(AGK_IS_WITHIN(0, -5, 2), nil);
+    STAssertTrue(AGK_IS_WITHIN(10.0, -5, 20.0), nil);
+    STAssertFalse(AGK_IS_WITHIN(2, 5, 7), nil);
+    STAssertFalse(AGK_IS_WITHIN(12, 5, 7), nil);
 }
 
 - (void)testMinInArray_maxInArray
@@ -144,10 +144,10 @@
     double doubleValue = 1.256250;
     float floatValue = doubleValue;
 
-    STAssertEquals(floatToDoubleZeroFill(M_PI), 3.141593000000, nil);
-    STAssertEquals(floatToDoubleZeroFill(floatValue), doubleValue, nil);
-    STAssertEquals(floatToDoubleZeroFill(0.5), 0.5, nil);
-    STAssertEquals(floatToDoubleZeroFill(1.0f / 3.0f), 0.333333000, nil);
+    STAssertEquals(AGKFloatToDoubleZeroFill(M_PI), 3.141593000000, nil);
+    STAssertEquals(AGKFloatToDoubleZeroFill(floatValue), doubleValue, nil);
+    STAssertEquals(AGKFloatToDoubleZeroFill(0.5), 0.5, nil);
+    STAssertEquals(AGKFloatToDoubleZeroFill(1.0f / 3.0f), 0.333333000, nil);
 }
 
 - (void)testPerformanceOfFloatToDoubleZeroFill
@@ -156,7 +156,7 @@
     const int iterations = 10000;
     for(int i = 0; i < iterations; i++)
     {
-        floatToDoubleZeroFill(M_PI);
+        AGKFloatToDoubleZeroFill(M_PI);
     }
     NSTimeInterval now = CACurrentMediaTime();
     NSTimeInterval diff = now - then;

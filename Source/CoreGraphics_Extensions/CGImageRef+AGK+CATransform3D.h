@@ -23,8 +23,8 @@
 
 #import <CoreGraphics/CoreGraphics.h>
 
-CGImageRef CGImageDrawWithCATransform3D(CGImageRef imageRef,
-                                        CATransform3D transform,
-                                        CGPoint anchorPoint,
-                                        CGSize size,
-                                        CGFloat scale) CF_RETURNS_RETAINED;
+CGImageRef CGImageDrawWithCATransform3D_AGK(CGImageRef imageRef,
+                                            CATransform3D transform,
+                                            CGPoint anchorPoint,
+                                            CGSize size,
+                                            CGFloat scale) CF_RETURNS_RETAINED;

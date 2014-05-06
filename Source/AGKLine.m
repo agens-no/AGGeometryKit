@@ -26,12 +26,12 @@
 
 const AGKLine AGKLineZero = (AGKLine){(CGPoint){0.0, 0.0}, (CGPoint){0.0, 0.0}};
 
-extern AGKLine AGKLineMake(CGPoint start, CGPoint end)
+AGKLine AGKLineMake(CGPoint start, CGPoint end)
 {
     return (AGKLine){start, end};
 }
 
-extern double AGKLineLength(AGKLine l)
+double AGKLineLength(AGKLine l)
 {
     return sqrt(pow(l.start.x - l.end.x, 2.0f) + pow(l.start.y - l.end.y, 2.0f));
 }
@@ -42,12 +42,12 @@ BOOL AGKLineIntersection(AGKLine l1, AGKLine l2, CGPoint *out_pointOfIntersectio
 
     CGPoint p = l1.start;
     CGPoint q = l2.start;
-    CGPoint r = AGKCGPointSubtract(l1.end, l1.start);
-    CGPoint s = AGKCGPointSubtract(l2.end, l2.start);
+    CGPoint r = CGPointSubtract_AGK(l1.end, l1.start);
+    CGPoint s = CGPointSubtract_AGK(l2.end, l2.start);
     
-    double s_r_crossProduct = AGKCGPointCrossProductZComponent(r, s);
-    double t = AGKCGPointCrossProductZComponent(AGKCGPointSubtract(q, p), s) / s_r_crossProduct;
-    double u = AGKCGPointCrossProductZComponent(AGKCGPointSubtract(q, p), r) / s_r_crossProduct;
+    double s_r_crossProduct = CGPointCrossProductZComponent_AGK(r, s);
+    double t = CGPointCrossProductZComponent_AGK(CGPointSubtract_AGK(q, p), s) / s_r_crossProduct;
+    double u = CGPointCrossProductZComponent_AGK(CGPointSubtract_AGK(q, p), r) / s_r_crossProduct;
     
     if(t < 0 || t > 1.0 || u < 0 || u > 1.0)
     {
@@ -61,7 +61,7 @@ BOOL AGKLineIntersection(AGKLine l1, AGKLine l2, CGPoint *out_pointOfIntersectio
     {
         if(out_pointOfIntersection != NULL)
         {
-            CGPoint i = AGKCGPointAdd(p, AGKCGPointMultiply(r, t));
+            CGPoint i = CGPointAdd_AGK(p, CGPointMultiply_AGK(r, t));
             *out_pointOfIntersection = i;
         }
         return YES;

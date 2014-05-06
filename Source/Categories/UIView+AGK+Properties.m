@@ -34,7 +34,7 @@
 
 - (void)setFrameSize:(CGSize)value
 {
-	self.frame = AGKCGRectWithSize(self.frame, value);
+	self.frame = CGRectWithSize_AGK(self.frame, value);
 }
 
 - (CGFloat)frameWidth
@@ -44,7 +44,7 @@
 
 - (void)setFrameWidth:(CGFloat)value
 {
-	self.frame = AGKCGRectWithWidth(self.frame, value);
+	self.frame = CGRectWithWidth_AGK(self.frame, value);
 }
 
 - (CGFloat)frameHeight
@@ -54,12 +54,12 @@
 
 - (void)setFrameHeight:(CGFloat)value
 {
-	self.frame = AGKCGRectWithHeight(self.frame, value);
+	self.frame = CGRectWithHeight_AGK(self.frame, value);
 }
 
 - (CGSize)frameSizeHalf
 {
-    return AGKCGSizeHalf(self.frameSize);
+    return CGSizeHalf_AGK(self.frameSize);
 }
 
 - (CGFloat)frameHeightHalf
@@ -79,7 +79,7 @@
 
 - (void)setFrameOrigin:(CGPoint)value
 {
-	self.frame = AGKCGRectWithOrigin(self.frame, value);
+	self.frame = CGRectWithOrigin_AGK(self.frame, value);
 }
 
 - (CGFloat)frameMinX
@@ -89,7 +89,7 @@
 
 - (void)setFrameMinX:(CGFloat)value
 {
-    self.frame = AGKCGRectWithOriginMinX(self.frame, value);
+    self.frame = CGRectWithOriginMinX_AGK(self.frame, value);
 }
 
 - (CGFloat)frameMinY
@@ -99,7 +99,7 @@
 
 - (void)setFrameMinY:(CGFloat)value
 {
-    self.frame = AGKCGRectWithOriginMinY(self.frame, value);
+    self.frame = CGRectWithOriginMinY_AGK(self.frame, value);
 }
 
 - (CGFloat)frameMidX
@@ -109,7 +109,7 @@
 
 - (void)setFrameMidX:(CGFloat)value
 {
-    self.frame = AGKCGRectWithOriginMidX(self.frame, value);
+    self.frame = CGRectWithOriginMidX_AGK(self.frame, value);
 }
 
 - (CGFloat)frameMidY
@@ -119,7 +119,7 @@
 
 - (void)setFrameMidY:(CGFloat)value
 {
-    self.frame = AGKCGRectWithOriginMidY(self.frame, value);
+    self.frame = CGRectWithOriginMidY_AGK(self.frame, value);
 }
 
 - (CGFloat)frameMaxX
@@ -129,7 +129,7 @@
 
 - (void)setFrameMaxX:(CGFloat)value
 {
-    self.frame = AGKCGRectWithOriginMaxX(self.frame, value);
+    self.frame = CGRectWithOriginMaxX_AGK(self.frame, value);
 }
 
 - (CGFloat)frameMaxY
@@ -139,7 +139,7 @@
 
 - (void)setFrameMaxY:(CGFloat)value
 {
-    self.frame = AGKCGRectWithOriginMaxY(self.frame, value);
+    self.frame = CGRectWithOriginMaxY_AGK(self.frame, value);
 }
 
 - (CGPoint)boundsOrigin
@@ -149,7 +149,7 @@
 
 - (void)setBoundsOrigin:(CGPoint)value
 {
-	self.bounds = AGKCGRectWithOrigin(self.bounds, value);
+	self.bounds = CGRectWithOrigin_AGK(self.bounds, value);
 }
 
 - (CGSize)boundsSize
@@ -159,7 +159,7 @@
 
 - (void)setBoundsSize:(CGSize)value
 {
-	self.bounds = AGKCGRectWithSize(self.bounds, value);
+	self.bounds = CGRectWithSize_AGK(self.bounds, value);
 }
 
 - (CGFloat)boundsWidth
@@ -169,7 +169,7 @@
 
 - (void)setBoundsWidth:(CGFloat)value
 {
-	self.bounds = AGKCGRectWithWidth(self.bounds, value);
+	self.bounds = CGRectWithWidth_AGK(self.bounds, value);
 }
 
 - (CGFloat)boundsHeight
@@ -179,7 +179,7 @@
 
 - (void)setBoundsHeight:(CGFloat)newHeight
 {
-	self.bounds = AGKCGRectWithHeight(self.bounds, newHeight);
+	self.bounds = CGRectWithHeight_AGK(self.bounds, newHeight);
 }
 
 - (CGFloat)boundsHeightHalf
@@ -194,7 +194,7 @@
 
 - (CGSize)boundsSizeHalf
 {
-    return AGKCGSizeHalf(self.boundsSize);
+    return CGSizeHalf_AGK(self.boundsSize);
 }
 
 - (CGPoint)boundsCenter

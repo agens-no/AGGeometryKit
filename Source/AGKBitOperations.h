@@ -21,14 +21,32 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#define AGK_BIT_SET(x, b)   ((x) |= (b))
-#define AGK_BIT_CLEAR(x, b) ((x) &= ~(b))
-#define AGK_BIT_TEST_ANY(x, b)  (((x) & (b)) != 0)
-#define AGK_BIT_TEST_ALL(x, b)  ({\
-  __typeof__(x) __x = (x); \
-  __typeof__(b) __b = (b);\
-  (__x & __b) == __b;\
+// For general purpose
+
+#ifndef AGK_BIT_ENABLE
+# define AGK_BIT_ENABLE(x, b)   ((x) |= (b))
+#endif
+
+#ifndef AGK_BIT_CLEAR
+# define AGK_BIT_CLEAR(x, b) ((x) &= ~(b))
+#endif
+
+#ifndef AGK_BIT_TEST_ENABLED
+# define AGK_BIT_TEST_ENABLED(x, b)  (((x) & (b)) != 0)
+#endif
+
+#ifndef AGK_BIT_TEST_DISABLED
+# define AGK_BIT_TEST_DISABLED(x, b)  (((x) & (b)) == 0)
+#endif
+
+#ifndef AGK_BIT_TEST_ALL_ENABLED
+# define AGK_BIT_TEST_ALL_ENABLED(x, b)  ({\
+     __typeof__(b) __b = (b);\
+     ((x) & __b) == __b;\
   })
+#endif
+
+// For NS_OPTION
 
 #ifndef NS_OPTION_ENABLE
 # define NS_OPTION_ENABLE(x, b)   ((x) |= (b))
@@ -52,3 +70,4 @@
      ((x) & __b) == __b;\
   })
 #endif
+

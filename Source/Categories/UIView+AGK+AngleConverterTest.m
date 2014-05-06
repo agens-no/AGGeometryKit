@@ -22,7 +22,7 @@
 // THE SOFTWARE.
 
 #import <SenTestingKit/SenTestingKit.h>
-#import "UIView+AngleConverter.h"
+#import "UIView+AGK+AngleConverter.h"
 
 @interface UIView_AngleConverterTest : SenTestCase
 

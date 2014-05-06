@@ -42,7 +42,7 @@
 
 const AGKQuad AGKQuadZero = { (CGPoint){0, 0}, (CGPoint){0, 0}, (CGPoint){0, 0}, (CGPoint){0, 0} };
 
-extern BOOL AGKQuadEqual(AGKQuad q1, AGKQuad q2)
+BOOL AGKQuadEqual(AGKQuad q1, AGKQuad q2)
 {
     for(int i = 0; i < 4; i++)
     {
@@ -54,18 +54,18 @@ extern BOOL AGKQuadEqual(AGKQuad q1, AGKQuad q2)
     return YES;
 }
 
-extern BOOL AGKQuadIsConvex(AGKQuad q)
+BOOL AGKQuadIsConvex(AGKQuad q)
 {
     BOOL isConvex = AGKLineIntersection(AGKLineMake(q.bl, q.tr), AGKLineMake(q.br, q.tl), NULL);
     return isConvex;
 }
 
-extern BOOL AGKQuadIsValid(AGKQuad q)
+BOOL AGKQuadIsValid(AGKQuad q)
 {
     return AGKQuadIsConvex(q);
 }
 
-extern AGKQuad AGKQuadMove(AGKQuad q, CGFloat x, CGFloat y)
+AGKQuad AGKQuadMove(AGKQuad q, CGFloat x, CGFloat y)
 {
     q.tl.x += x;
     q.tr.x += x;
@@ -78,35 +78,35 @@ extern AGKQuad AGKQuadMove(AGKQuad q, CGFloat x, CGFloat y)
     return q;
 }
 
-extern AGKQuad AGKQuadInsetLeft(AGKQuad q, CGFloat inset)
+AGKQuad AGKQuadInsetLeft(AGKQuad q, CGFloat inset)
 {
     q.tl.x += inset;
     q.bl.x += inset;
     return q;
 }
 
-extern AGKQuad AGKQuadInsetRight(AGKQuad q, CGFloat inset)
+AGKQuad AGKQuadInsetRight(AGKQuad q, CGFloat inset)
 {
     q.tr.x -= inset;
     q.br.x -= inset;
     return q;
 }
 
-extern AGKQuad AGKQuadInsetTop(AGKQuad q, CGFloat inset)
+AGKQuad AGKQuadInsetTop(AGKQuad q, CGFloat inset)
 {
     q.tl.y += inset;
     q.tr.y += inset;
     return q;
 }
 
-extern AGKQuad AGKQuadInsetBottom(AGKQuad q, CGFloat inset)
+AGKQuad AGKQuadInsetBottom(AGKQuad q, CGFloat inset)
 {
     q.tl.y -= inset;
     q.tr.y -= inset;
     return q;
 }
 
-extern AGKQuad AGKQuadMirror(AGKQuad q, BOOL x, BOOL y)
+AGKQuad AGKQuadMirror(AGKQuad q, BOOL x, BOOL y)
 {
     AGKQuad mirroredQ;
     if(x)
@@ -126,12 +126,12 @@ extern AGKQuad AGKQuadMirror(AGKQuad q, BOOL x, BOOL y)
     return mirroredQ;
 }
 
-extern AGKQuad AGKQuadMake(CGPoint tl, CGPoint tr, CGPoint br, CGPoint bl)
+AGKQuad AGKQuadMake(CGPoint tl, CGPoint tr, CGPoint br, CGPoint bl)
 {
     return (AGKQuad){.tl = tl, .tr = tr, .br = br, .bl = bl};
 }
 
-extern AGKQuad AGKQuadMakeWithCGRect(CGRect rect)
+AGKQuad AGKQuadMakeWithCGRect(CGRect rect)
 {
     AGKQuad q;
     q.tl.x = CGRectGetMinX(rect);
@@ -145,7 +145,7 @@ extern AGKQuad AGKQuadMakeWithCGRect(CGRect rect)
     return q;
 }
 
-extern AGKQuad AGKQuadMakeWithCGSize(CGSize size)
+AGKQuad AGKQuadMakeWithCGSize(CGSize size)
 {
     AGKQuad q = AGKQuadZero;
     q.tr.x = size.width;
@@ -155,35 +155,35 @@ extern AGKQuad AGKQuadMakeWithCGSize(CGSize size)
     return q;
 }
 
-extern CGFloat AGKQuadGetSmallestX(AGKQuad q)
+CGFloat AGKQuadGetSmallestX(AGKQuad q)
 {
     CGFloat values[4];
     AGKQuadGetXValues(q, values);
     return AGKMinInArray(values, 4, NULL);
 }
 
-extern CGFloat AGKQuadGetBiggestX(AGKQuad q)
+CGFloat AGKQuadGetBiggestX(AGKQuad q)
 {
     CGFloat values[4];
     AGKQuadGetXValues(q, values);
     return AGKMaxInArray(values, 4, NULL);
 }
 
-extern CGFloat AGKQuadGetSmallestY(AGKQuad q)
+CGFloat AGKQuadGetSmallestY(AGKQuad q)
 {
     CGFloat values[4];
     AGKQuadGetYValues(q, values);
     return AGKMinInArray(values, 4, NULL);
 }
 
-extern CGFloat AGKQuadGetBiggestY(AGKQuad q)
+CGFloat AGKQuadGetBiggestY(AGKQuad q)
 {
     CGFloat values[4];
     AGKQuadGetYValues(q, values);
     return AGKMaxInArray(values, 4, NULL);
 }
 
-extern CGRect AGKQuadGetBoundingRect(AGKQuad q)
+CGRect AGKQuadGetBoundingRect(AGKQuad q)
 {
     CGFloat xValues[4];
     CGFloat yValues[4];
@@ -204,14 +204,14 @@ extern CGRect AGKQuadGetBoundingRect(AGKQuad q)
     return rect;
 }
 
-extern CGPoint AGKQuadGetCenter(AGKQuad q)
+CGPoint AGKQuadGetCenter(AGKQuad q)
 {
     CGPoint center = CGPointZero;
     AGKLineIntersection(AGKLineMake(q.bl, q.tr), AGKLineMake(q.br, q.tl), &center);
     return center;
 }
 
-extern CGSize AGKQuadGetSize(AGKQuad q)
+CGSize AGKQuadGetSize(AGKQuad q)
 {
     CGRect smallestRect = AGKQuadGetBoundingRect(q);
     return smallestRect.size;
@@ -235,17 +235,17 @@ void AGKQuadGetYValues(AGKQuad q, CGFloat *out_values)
     }
 }
 
-extern AGKQuad AGKQuadInterpolation(AGKQuad q1, AGKQuad q2, CGFloat progress)
+AGKQuad AGKQuadInterpolation(AGKQuad q1, AGKQuad q2, CGFloat progress)
 {
     AGKQuad q;
     for(int i = 0; i < 4; i++)
     {
-        q.v[i] = AGKCGPointInterpolate(q1.v[i], q2.v[i], progress);
+        q.v[i] = CGPointInterpolate_AGK(q1.v[i], q2.v[i], progress);
     }
     return q;
 }
 
-extern AGKQuad AGKQuadApplyCGAffineTransform(AGKQuad q, CGAffineTransform t)
+AGKQuad AGKQuadApplyCGAffineTransform(AGKQuad q, CGAffineTransform t)
 {
     for(int i = 0; i < 4; i++)
     {
@@ -254,16 +254,16 @@ extern AGKQuad AGKQuadApplyCGAffineTransform(AGKQuad q, CGAffineTransform t)
     return q;
 }
 
-extern AGKQuad AGKQuadApplyCATransform3D(AGKQuad q, CATransform3D t)
+AGKQuad AGKQuadApplyCATransform3D(AGKQuad q, CATransform3D t)
 {
     for(int i = 0; i < 4; i++)
     {
-        q.v[i] = AGKCGPointApplyCATransform3D(q.v[i], t, CGPointZero, CATransform3DIdentity);
+        q.v[i] = CGPointApplyCATransform3D_AGK(q.v[i], t, CGPointZero, CATransform3DIdentity);
     }
     return q;
 }
 
-extern NSString * NSStringFromAGKQuad(AGKQuad q)
+NSString * NSStringFromAGKQuad(AGKQuad q)
 {
     return [NSString stringWithFormat:@"tl: %@,\n\t"
             "tr: %@,\n\t"
@@ -284,20 +284,20 @@ extern NSString * NSStringFromAGKQuad(AGKQuad q)
 
 CATransform3D CATransform3DWithQuadFromBounds(AGKQuad q, CGRect rect)
 {
-    double W = floatToDoubleZeroFill(rect.size.width);
-    double H = floatToDoubleZeroFill(rect.size.height);
+    double W = AGKFloatToDoubleZeroFill(rect.size.width);
+    double H = AGKFloatToDoubleZeroFill(rect.size.height);
     
-    double x1a = floatToDoubleZeroFill(q.tl.x);
-    double y1a = floatToDoubleZeroFill(q.tl.y);
+    double x1a = AGKFloatToDoubleZeroFill(q.tl.x);
+    double y1a = AGKFloatToDoubleZeroFill(q.tl.y);
     
-    double x2a = floatToDoubleZeroFill(q.tr.x);
-    double y2a = floatToDoubleZeroFill(q.tr.y);
+    double x2a = AGKFloatToDoubleZeroFill(q.tr.x);
+    double y2a = AGKFloatToDoubleZeroFill(q.tr.y);
     
-    double x3a = floatToDoubleZeroFill(q.bl.x);
-    double y3a = floatToDoubleZeroFill(q.bl.y);
+    double x3a = AGKFloatToDoubleZeroFill(q.bl.x);
+    double y3a = AGKFloatToDoubleZeroFill(q.bl.y);
     
-    double x4a = floatToDoubleZeroFill(q.br.x);
-    double y4a = floatToDoubleZeroFill(q.br.y);
+    double x4a = AGKFloatToDoubleZeroFill(q.br.x);
+    double y4a = AGKFloatToDoubleZeroFill(q.br.y);
     
     double y21 = y2a - y1a;
     double y32 = y3a - y2a;
@@ -336,22 +336,22 @@ CATransform3D CATransform3DWithQuadFromBounds(AGKQuad q, CGRect rect)
 
 CATransform3D CATransform3DWithQuadFromRect(AGKQuad q, CGRect rect)
 {
-    double X = floatToDoubleZeroFill(rect.origin.x);
-    double Y = floatToDoubleZeroFill(rect.origin.y);
-    double W = floatToDoubleZeroFill(rect.size.width);
-    double H = floatToDoubleZeroFill(rect.size.height);
+    double X = AGKFloatToDoubleZeroFill(rect.origin.x);
+    double Y = AGKFloatToDoubleZeroFill(rect.origin.y);
+    double W = AGKFloatToDoubleZeroFill(rect.size.width);
+    double H = AGKFloatToDoubleZeroFill(rect.size.height);
 
-    double x1a = floatToDoubleZeroFill(q.tl.x);
-    double y1a = floatToDoubleZeroFill(q.tl.y);
+    double x1a = AGKFloatToDoubleZeroFill(q.tl.x);
+    double y1a = AGKFloatToDoubleZeroFill(q.tl.y);
 
-    double x2a = floatToDoubleZeroFill(q.tr.x);
-    double y2a = floatToDoubleZeroFill(q.tr.y);
+    double x2a = AGKFloatToDoubleZeroFill(q.tr.x);
+    double y2a = AGKFloatToDoubleZeroFill(q.tr.y);
 
-    double x3a = floatToDoubleZeroFill(q.bl.x);
-    double y3a = floatToDoubleZeroFill(q.bl.y);
+    double x3a = AGKFloatToDoubleZeroFill(q.bl.x);
+    double y3a = AGKFloatToDoubleZeroFill(q.bl.y);
 
-    double x4a = floatToDoubleZeroFill(q.br.x);
-    double y4a = floatToDoubleZeroFill(q.br.y);
+    double x4a = AGKFloatToDoubleZeroFill(q.br.x);
+    double y4a = AGKFloatToDoubleZeroFill(q.br.y);
     
     double y21 = y2a - y1a;
     double y32 = y3a - y2a;

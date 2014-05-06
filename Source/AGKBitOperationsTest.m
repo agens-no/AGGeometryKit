@@ -7,7 +7,7 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
-#import "AGBitOperations.h"
+#import "AGKBitOperations.h"
 
 @interface AGBitOperationsTest : SenTestCase
 
@@ -15,16 +15,19 @@
 
 @implementation AGBitOperationsTest
 
-- (void)testBIT_TEST_ALL
+- (void)testAGK_BIT_TEST
 {
     int a = 0;
-    STAssertFalse(AGK_BIT_TEST_ALL(a, 1 << 5), nil);
+    STAssertFalse(AGK_BIT_TEST_ALL_ENABLED(a, 1 << 5), nil);
 
-    AGK_BIT_SET(a, 1 << 5);
-    STAssertTrue(AGK_BIT_TEST_ALL(a, 1 << 5), nil);
+    AGK_BIT_ENABLE(a, 1 << 5);
+    STAssertTrue(AGK_BIT_TEST_ALL_ENABLED(a, 1 << 5), nil);
 
     AGK_BIT_CLEAR(a, 1 << 5);
-    STAssertFalse(AGK_BIT_TEST_ALL(a, 1 << 5), nil);
+    STAssertFalse(AGK_BIT_TEST_ALL_ENABLED(a, 1 << 5), nil);
+
+    AGK_BIT_CLEAR(a, 1 << 5);
+    STAssertFalse(AGK_BIT_TEST_ALL_ENABLED(a, 1 << 5), nil);
 }
 
 @end
