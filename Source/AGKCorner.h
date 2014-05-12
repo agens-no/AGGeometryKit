@@ -21,8 +21,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "CGGeometry+AGGeometryKit.h"
-
 typedef enum AGKSide {
     AGKSideTop = 1 << 0,
     AGKSideBottom = 1 << 1,

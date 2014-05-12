@@ -22,6 +22,7 @@
 // THE SOFTWARE.
 
 #import "AGKCorner.h"
+#import "CGGeometry+AGGeometryKit.h"
 
 BOOL AGKCornerIsOnSide(AGKCorner corner, AGKSide side)
 {

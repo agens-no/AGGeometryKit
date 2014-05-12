@@ -1,5 +1,5 @@
 //
-//  AGBitOperationsTest.m
+//  AGKBitOperationsTest.m
 //  AGGeometryKit
 //
 //  Created by Håvard Fossli on 12.12.13.
@@ -9,11 +9,11 @@
 #import <SenTestingKit/SenTestingKit.h>
 #import "AGKBitOperations.h"
 
-@interface AGBitOperationsTest : SenTestCase
+@interface AGKBitOperationsTest : SenTestCase
 
 @end
 
-@implementation AGBitOperationsTest
+@implementation AGKBitOperationsTest
 
 - (void)testAGK_BIT_TEST
 {

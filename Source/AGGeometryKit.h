@@ -23,14 +23,13 @@
 
 // Agens Geometry Kit (AGK)
 
-#import "AGBitOperations.h"
+#import "AGKBitOperations.h"
 #import "AGKCorner.h"
 #import "AGKLine.h"
 #import "AGKMath.h"
-#import "AGPoint.h"
 #import "AGKQuad.h"
 #import "AGKVector3D.h"
 
 #import "AGGeometryKitCategories.h"
 #import "AGGeometryKitClasses.h"
-#import "AGGeometryKitCoreGraphics.h
+#import "AGGeometryKitCoreGraphics.h"

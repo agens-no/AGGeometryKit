@@ -22,10 +22,11 @@
 // THE SOFTWARE.
 
 #import "CALayer+AGKQuad.h"
-#import "CALayer+AGGeometryKit.h"
+#import "CALayer+AGK+Properties.h"
+#import "CALayer+AGK+Methods.h"
 #import "NSValue+AGKQuad.h"
 #import "UIBezierPath+AGKQuad.h"
 #import "UIImage+AGKQuad.h"
-#import "UIImage+CATransform3D.h"
-#import "UIView+AngleConvert.h"
-#import "UIView+AGGeometryKit.h"
+#import "UIImage+AGK+CATransform3D.h"
+#import "UIView+AGK+AngleConverter.h"
+#import "UIView+AGK+Properties.h"
