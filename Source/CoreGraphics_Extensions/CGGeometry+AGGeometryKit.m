@@ -203,6 +203,14 @@ CGPoint CGPointInterpolate_AGK(CGPoint point1, CGPoint point2, CGFloat progress)
     return result;
 }
 
+CGPoint CGPointClamp_AGK(CGPoint p, CGFloat minX, CGFloat maxX, CGFloat minY, CGFloat maxY)
+{
+    CGPoint result;
+    result.x = AGKClamp(p.x, minX, maxX);
+    result.y = AGKClamp(p.y, minY, maxY);
+    return result;
+}
+
 
 
 
@@ -279,6 +287,14 @@ CGSize CGSizeInterpolate_AGK(CGSize size1, CGSize size2, CGFloat progress)
     CGSize result;
     result.width = AGKInterpolate(size1.width, size2.width, progress);
     result.height = AGKInterpolate(size1.height, size2.height, progress);
+    return result;
+}
+
+CGSize CGSizeClamp_AGK(CGSize s, CGFloat minWidth, CGFloat maxWidth, CGFloat minHeight, CGFloat maxHeight)
+{
+    CGSize result;
+    result.width = AGKClamp(s.width, minWidth, maxWidth);
+    result.height = AGKClamp(s.height, minHeight, maxHeight);
     return result;
 }
 
@@ -428,3 +444,4 @@ CGRect CGRectInterpolate_AGK(CGRect rect1, CGRect rect2, CGFloat progress)
     result.size = CGSizeInterpolate_AGK(rect1.size, rect2.size, progress);
     return result;
 }
+
