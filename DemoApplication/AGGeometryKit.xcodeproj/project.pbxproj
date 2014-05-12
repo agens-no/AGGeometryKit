@@ -95,6 +95,7 @@
 		A3EE527216F07479007706C6 /* AGKAngleConverterSample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3EE526E16F07479007706C6 /* AGKAngleConverterSample.xib */; };
 		A3F77D3F16FA54C400415B24 /* JAValueToString.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F77D3E16FA54C300415B24 /* JAValueToString.m */; };
 		A3F77D4016FA54C400415B24 /* JAValueToString.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F77D3E16FA54C300415B24 /* JAValueToString.m */; };
+		AC614EFA148644188ED25FD4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C194E9C1ACD34B129EBF77F9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76AB885A153B4BA2BB935C68 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		A3270F2716D5675800A92C03 /* AGAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGAppDelegate.h; sourceTree = "<group>"; };
 		A3270F2816D5675800A92C03 /* AGAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGAppDelegate.m; sourceTree = "<group>"; };
 		A3270F2916D5675800A92C03 /* AGGeometryKit-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AGGeometryKit-Info.plist"; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 		A3EE526E16F07479007706C6 /* AGKAngleConverterSample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGKAngleConverterSample.xib; sourceTree = "<group>"; };
 		A3F77D3D16FA54C300415B24 /* JAValueToString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAValueToString.h; sourceTree = "<group>"; };
 		A3F77D3E16FA54C300415B24 /* JAValueToString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAValueToString.m; sourceTree = "<group>"; };
+		C194E9C1ACD34B129EBF77F9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +216,7 @@
 				A333A59516A9A3BD00E334AD /* UIKit.framework in Frameworks */,
 				A333A59716A9A3BD00E334AD /* Foundation.framework in Frameworks */,
 				A333A59916A9A3BD00E334AD /* CoreGraphics.framework in Frameworks */,
+				AC614EFA148644188ED25FD4 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +283,7 @@
 				A333A59316A9A3BD00E334AD /* Frameworks */,
 				A333A59116A9A3BD00E334AD /* Products */,
 				A3BC981917D8A88B009B7495 /* AGGeometryKit.podspec */,
+				76AB885A153B4BA2BB935C68 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -299,6 +304,7 @@
 				A333A59616A9A3BD00E334AD /* Foundation.framework */,
 				A333A59816A9A3BD00E334AD /* CoreGraphics.framework */,
 				A333A5BE16A9A3BD00E334AD /* SenTestingKit.framework */,
+				C194E9C1ACD34B129EBF77F9 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -337,10 +343,10 @@
 				A38F9F5B185B410C00F49AD7 /* AGGeometryKitCategories.h */,
 				A38F9F1C185B3F5C00F49AD7 /* CALayer+AGKQuad.h */,
 				A38F9F1D185B3F5C00F49AD7 /* CALayer+AGKQuad.m */,
-				A38F9F1E185B3F5C00F49AD7 /* CALayer+AGK+Properties.h */,
-				A38F9F1F185B3F5C00F49AD7 /* CALayer+AGK+Properties.m */,
 				A3314479191912B700A9968C /* CALayer+AGK+Methods.h */,
 				A331447A191912B700A9968C /* CALayer+AGK+Methods.m */,
+				A38F9F1E185B3F5C00F49AD7 /* CALayer+AGK+Properties.h */,
+				A38F9F1F185B3F5C00F49AD7 /* CALayer+AGK+Properties.m */,
 				A38F9F20185B3F5C00F49AD7 /* NSValue+AGKQuad.h */,
 				A38F9F21185B3F5C00F49AD7 /* NSValue+AGKQuad.m */,
 				A38F9F22185B3F5C00F49AD7 /* NSValue+AGKQuadTest.m */,
@@ -411,9 +417,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A333A5CF16A9A3BD00E334AD /* Build configuration list for PBXNativeTarget "AGGeometryKit" */;
 			buildPhases = (
+				38E32CA9E2DF4F8B81CBBA41 /* Check Pods Manifest.lock */,
 				A333A58C16A9A3BD00E334AD /* Sources */,
 				A333A58D16A9A3BD00E334AD /* Frameworks */,
 				A333A58E16A9A3BD00E334AD /* Resources */,
+				343B2F241FF341E59AFF1532 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -525,6 +533,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		343B2F241FF341E59AFF1532 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38E32CA9E2DF4F8B81CBBA41 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		A333A5BB16A9A3BD00E334AD /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -682,6 +720,7 @@
 		};
 		A333A5D016A9A3BD00E334AD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76AB885A153B4BA2BB935C68 /* Pods.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -698,6 +737,7 @@
 		};
 		A333A5D116A9A3BD00E334AD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76AB885A153B4BA2BB935C68 /* Pods.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
