@@ -69,7 +69,8 @@
 
 + (CAKeyframeAnimation *)animationBetweenQuadrilateral:(AGKQuad)quad1
                                       andQuadrilateral:(AGKQuad)quad2
-                                                  rect:(CGRect)rect
+                                             layerSize:(CGSize)layerSize
+                                         layerPosition:(CGPoint)layerPosition
                                      forNumberOfFrames:(NSUInteger)numberOfFrames
                                                  delay:(NSTimeInterval)delay
                                               duration:(NSTimeInterval)duration
@@ -90,7 +91,8 @@
     {
         double p = progressFunction((double)i / (double)numberOfFrames);
         AGKQuad quad = AGKQuadInterpolate(quad1, quad2, p);
-        CATransform3D transform = CATransform3DWithAGKQuadFromBounds(quad, rect);
+        AGKQuad innerQuad = AGKQuadMove(quad, -layerPosition.x, -layerPosition.y);
+        CATransform3D transform = CATransform3DWithAGKQuadFromBounds(innerQuad, (CGRect){CGPointZero, layerSize});
         NSValue *value = [NSValue valueWithCATransform3D:transform];
         [values addObject:value];
     }
@@ -121,7 +123,8 @@
 
     CAKeyframeAnimation *anim = [[self class] animationBetweenQuadrilateral:quad1
                                                            andQuadrilateral:quad2
-                                                                       rect:self.bounds
+                                                                  layerSize:self.bounds.size
+                                                              layerPosition:self.position
                                                           forNumberOfFrames:numberOfFrames
                                                                       delay:delay
                                                                    duration:duration

@@ -1,19 +1,14 @@
 PODS:
   - AGGeometryKit/Dependencies (0.1.8.3)
-  - AGGeometryKit/Pop (0.1.8.3):
-    - pop
-  - pop (1.0.4)
 
 DEPENDENCIES:
   - AGGeometryKit/Dependencies (from `../AGGeometryKit.podspec`)
-  - AGGeometryKit/Pop (from `../AGGeometryKit.podspec`)
 
 EXTERNAL SOURCES:
   AGGeometryKit:
     :path: ../AGGeometryKit.podspec
 
 SPEC CHECKSUMS:
-  AGGeometryKit: 4a8fab6e8cbd18d7e81ff943fcf2566e04b07cd2
-  pop: 63a4f5e8942077fed2efe195036ecc572c71c48c
+  AGGeometryKit: 5c60ef0435a4c4aeb2a59232f9709927976795d7
 
 COCOAPODS: 0.32.1

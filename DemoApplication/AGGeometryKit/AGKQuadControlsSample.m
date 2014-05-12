@@ -22,11 +22,7 @@
 // THE SOFTWARE.
 
 #import "AGKQuadControlsSample.h"
-#import "AGKQuad.h"
-#import "easing.h"
-#import "CALayer+AGKQuad.h"
-#import "UIView+AGK+Properties.h"
-#import "UIBezierPath+AGKQuad.h"
+#import "AGGeometryKit.h"
 
 @interface AGControlPointView : UIView
 
@@ -50,23 +46,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self createAndApplyQuad];
-    
+
+    [self.imageView.layer ensureAnchorPointIsSetToZero];
+
     [self createOverlay];
+    [self createAndApplyQuad];
 }
 
 - (void)createAndApplyQuad
 {
     AGKQuad quad = AGKQuadMake(self.topLeftControl.center,
-                                         self.topRightControl.center,
-                                         self.bottomRightControl.center,
-                                         self.bottomLeftControl.center);
-    
+                               self.topRightControl.center,
+                               self.bottomRightControl.center,
+                               self.bottomLeftControl.center);
+
     if(AGKQuadIsValid(quad))
     {
         self.imageView.layer.quadrilateral = quad;
     }
+    self.maskView.layer.position = CGPointZero;
     self.maskView.layer.shadowPath = [UIBezierPath bezierPathWithAGKQuad:quad].CGPath;
 }
 
@@ -95,7 +93,7 @@
     self.maskView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.0];
     self.maskView.userInteractionEnabled = NO;
     self.maskView.hidden = !self.switchControl.on;
-    [self.view addSubview:self.maskView];
+    [self.view insertSubview:self.maskView aboveSubview:self.imageView];
 }
 	
 - (IBAction)toggleDisplayOverlay:(UISwitch *)switchControl

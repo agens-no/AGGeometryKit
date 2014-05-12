@@ -30,6 +30,7 @@
 @interface AGKQuadSample ()
 
 @property (nonatomic, strong) IBOutlet UIImageView *imageView;
+@property (nonatomic, assign) AGKQuad originalQuad;
 
 @end
 
@@ -46,22 +47,29 @@
     [super viewDidLoad];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.originalQuad = self.imageView.layer.quadrilateral;
+}
+
 - (void)tapRecognized:(UITapGestureRecognizer *)recognizer
 {
-    NSLog(@"tap recognized");
+    NSLog(@"Tap recognized");
 }
 
 - (IBAction)changeToSquareShape:(id)sender
 {
-    AGKQuad quad = AGKQuadMakeWithCGRect(self.imageView.bounds);
+    AGKQuad quad = self.originalQuad;
     [self animateToQuad:quad];
 }
 
 - (IBAction)changeToOddShape1:(id)sender
 {
-    AGKQuad quad = AGKQuadMakeWithCGRect(self.imageView.bounds);
-    quad.tr.y += 125;
-    quad.br.y -= 65;
+    AGKQuad quad = self.originalQuad;
+    quad.tr.y += 70;
+    quad.tr.x -= 20;
+    quad.br.x += 10;
+    quad.br.y -= 30;
     quad.bl.x -= 40;
     quad.tl.x += 40;
     [self animateToQuad:quad];
@@ -69,7 +77,7 @@
 
 - (IBAction)changeToOddShape2:(id)sender
 {
-    AGKQuad quad = AGKQuadMakeWithCGRect(self.imageView.bounds);
+    AGKQuad quad = self.originalQuad;
     quad.tr.y -= 125;
     quad.br.y += 65;
     quad.bl.x += 40;
@@ -80,7 +88,7 @@
 - (void)animateToQuad:(AGKQuad)quad
 {
     NSLog(@"Animating from:\n    %@", NSStringFromAGKQuad(self.imageView.layer.quadrilateral));
-    NSLog(@"Animating to:\n    %@", NSStringFromAGKQuad(quad));
+    NSLog(@"Animating to:  \n    %@", NSStringFromAGKQuad(quad));
     
     NSTimeInterval duration = 2.0;
     

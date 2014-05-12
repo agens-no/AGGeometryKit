@@ -25,11 +25,4 @@
 
 @interface AGKAngleConverterSample : UIViewController
 
-@property (assign, nonatomic) IBOutlet UISlider *mySlider;
-
-- (IBAction)sliderValueChanged:(id)sender;
-
-@property (assign, nonatomic) IBOutlet UILabel *inputLabel;
-@property (assign, nonatomic) IBOutlet UILabel *calculatedAngleLabel;
-
 @end
