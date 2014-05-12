@@ -27,7 +27,45 @@
 
 @implementation CALayer (AGKQuad)
 
-@dynamic quadrilateral;
+- (AGKQuad)quadrilateral
+{
+    AGKQuad q = [self convertAGKQuad:AGKQuadMakeWithCGSize(self.bounds.size) toLayer:self.superlayer];
+    return q;
+}
+
+- (void)setQuadrilateral:(AGKQuad)quadrilateral
+{
+    if(!AGKQuadEqual(quadrilateral, AGKQuadZero) && AGKQuadIsValid(quadrilateral))
+    {
+        AGKQuad innerQuadrilateral = AGKQuadMove(quadrilateral, -self.position.x, -self.position.y);
+        CATransform3D t = CATransform3DWithAGKQuadFromBounds(innerQuadrilateral, self.bounds);
+
+        [self ensureAnchorPointIsSetToZero];
+        self.transform = t;
+    }
+}
+
+- (AGKQuad)convertAGKQuad:(AGKQuad)quad fromLayer:(CALayer *)l
+{
+    AGKQuad q;
+    q.tl = [self convertPoint:quad.tl fromLayer:l];
+    q.tr = [self convertPoint:quad.tr fromLayer:l];
+    q.br = [self convertPoint:quad.br fromLayer:l];
+    q.bl = [self convertPoint:quad.bl fromLayer:l];
+    return q;
+}
+
+- (AGKQuad)convertAGKQuad:(AGKQuad)quad toLayer:(CALayer *)l
+{
+    AGKQuad q;
+    q.tl = [self convertPoint:quad.tl toLayer:l];
+    q.tr = [self convertPoint:quad.tr toLayer:l];
+    q.br = [self convertPoint:quad.br toLayer:l];
+    q.bl = [self convertPoint:quad.bl toLayer:l];
+    return q;
+}
+
+#pragma mark - Animation
 
 + (CAKeyframeAnimation *)animationBetweenQuadrilateral:(AGKQuad)quad1
                                       andQuadrilateral:(AGKQuad)quad2
@@ -51,7 +89,7 @@
     for(int i = 0; i < numberOfFrames; i++)
     {
         double p = progressFunction((double)i / (double)numberOfFrames);
-        AGKQuad quad = AGKQuadInterpolation(quad1, quad2, p);
+        AGKQuad quad = AGKQuadInterpolate(quad1, quad2, p);
         CATransform3D transform = CATransform3DWithAGKQuadFromBounds(quad, rect);
         NSValue *value = [NSValue valueWithCATransform3D:transform];
         [values addObject:value];
@@ -61,73 +99,6 @@
     animation.delegate = [AGKCALayerAnimationBlockDelegate newWithAnimationDidStart:onStart didStop:onComplete];
 
     return animation;
-}
-
-+ (CAKeyframeAnimation *)animationBetweenQuadrilateral:(AGKQuad)quad1
-                                      andQuadrilateral:(AGKQuad)quad2
-                                                  rect:(CGRect)rect
-                                     forNumberOfFrames:(NSUInteger)numberOfFrames
-                                                 delay:(NSTimeInterval)delay
-                                              duration:(NSTimeInterval)duration
-                                          easeFunction:(double(^)(double p))progressFunction
-                                            onComplete:(void(^)(BOOL finished))onComplete
-{
-    return [self animationBetweenQuadrilateral:quad1
-                              andQuadrilateral:quad2
-                                          rect:rect
-                             forNumberOfFrames:numberOfFrames
-                                         delay:delay
-                                      duration:duration
-                                  easeFunction:progressFunction
-                                       onStart:nil
-                                    onComplete:onComplete];
-}
-
-- (AGKQuad)quadrilateral
-{
-    CGPoint tl = [self outerPointForInnerPoint:CGPointMake(0, 0)];
-    CGPoint tr = [self outerPointForInnerPoint:CGPointMake(self.bounds.size.width, 0)];
-    CGPoint br = [self outerPointForInnerPoint:CGPointMake(self.bounds.size.width, self.bounds.size.height)];
-    CGPoint bl = [self outerPointForInnerPoint:CGPointMake(0, self.bounds.size.height)];
-    
-    AGKQuad q = AGKQuadMake(tl, tr, br, bl);
-    
-    return q;
-}
-
-- (void)setQuadrilateral:(AGKQuad)quadrilateral
-{
-    [self ensureAnchorPointIsSetToZero];
-    
-    if(!AGKQuadEqual(quadrilateral, AGKQuadZero))
-    {
-        CATransform3D t = CATransform3DWithAGKQuadFromBounds(quadrilateral, self.bounds);
-        self.transform = t;
-    }
-}
-
-- (AGKQuad)convertAGKQuad:(AGKQuad)quad fromLayer:(CALayer *)l
-{
-    CGPoint tl = [self convertPoint:quad.tl fromLayer:l];
-    CGPoint tr = [self convertPoint:quad.tr fromLayer:l];
-    CGPoint br = [self convertPoint:quad.br fromLayer:l];
-    CGPoint bl = [self convertPoint:quad.bl fromLayer:l];
-
-    AGKQuad q = AGKQuadMake(tl, tr, br, bl);
-    
-    return q;
-}
-
-- (AGKQuad)convertAGKQuad:(AGKQuad)quad toLayer:(CALayer *)l
-{
-    CGPoint tl = [self convertPoint:quad.tl toLayer:l];
-    CGPoint tr = [self convertPoint:quad.tr toLayer:l];
-    CGPoint br = [self convertPoint:quad.br toLayer:l];
-    CGPoint bl = [self convertPoint:quad.bl toLayer:l];
-    
-    AGKQuad q = AGKQuadMake(tl, tr, br, bl);
-    
-    return q;
 }
 
 - (void)animateFromQuadrilateral:(AGKQuad)quad1

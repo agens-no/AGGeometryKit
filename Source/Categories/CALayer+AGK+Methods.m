@@ -70,30 +70,6 @@
     }
 }
 
-- (CGPoint)outerPointForInnerPoint:(CGPoint)innerPoint
-{
-    if(self.superlayer == nil)
-    {
-        [NSException raise:NSInternalInconsistencyException format:@"[CALayer-Extensions] To calculate the outer point for a givven inner point it is required that the layer have a superlayer. This can hopefully be improved."];
-    }
-    
-    if(!CGPointEqualToPoint(self.anchorPoint, CGPointZero))
-    {
-        [NSException raise:NSInternalInconsistencyException format:@"[CALayer-Extensions] This method is *dumb* and currently only supports anchorpoint to be 0"];
-    }
-    
-    CGPoint outerPoint = [self convertPoint:innerPoint toLayer:self.superlayer];
-    outerPoint.x -= self.position.x;
-    outerPoint.y -= self.position.y;
-    
-    if(outerPoint.x != outerPoint.x || outerPoint.y != outerPoint.y)
-    {
-        [NSException raise:NSInternalInconsistencyException format:@"[CALayer-Extensions] Calculated NaN values from CALayer %@", self];
-    }
-    
-    return outerPoint;
-}
-
 - (CATransform3D)transformToOffsetRotationWithVirtualAnchorPoint:(CGPoint)virtualAnchor
 {
     CGPoint anchorDiff = CGPointMake((virtualAnchor.x-self.anchorPoint.x)*-1.0f,

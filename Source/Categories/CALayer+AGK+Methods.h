@@ -31,7 +31,6 @@
 - (void)removeAllSublayers;
 - (void)ensureAnchorPointIsSetToZero;
 - (void)ensureAnchorPointIs:(CGPoint)point;
-- (CGPoint)outerPointForInnerPoint:(CGPoint)innerPoint;
 
 - (CATransform3D)transformToOffsetRotationWithVirtualAnchorPoint:(CGPoint)virtualAnchor;
 - (void)applyTransformToOffsetRotationWithVirtualAnchorPoint:(CGPoint)virtualAnchor;

@@ -62,7 +62,7 @@ CGSize AGKQuadGetSize(AGKQuad q);
 CGPoint AGKQuadGetPointForCorner(AGKQuad q, AGKCorner corner);
 void AGKQuadGetXValues(AGKQuad q, CGFloat *out_values);
 void AGKQuadGetYValues(AGKQuad q, CGFloat *out_values);
-AGKQuad AGKQuadInterpolation(AGKQuad q1, AGKQuad q2, CGFloat progress);
+AGKQuad AGKQuadInterpolate(AGKQuad q1, AGKQuad q2, CGFloat progress);
 AGKQuad AGKQuadApplyCGAffineTransform(AGKQuad q, CGAffineTransform t);
 AGKQuad AGKQuadApplyCATransform3D(AGKQuad q, CATransform3D t);
 NSString * NSStringFromAGKQuad(AGKQuad q);

@@ -263,7 +263,7 @@ void AGKQuadGetYValues(AGKQuad q, CGFloat *out_values)
     }
 }
 
-AGKQuad AGKQuadInterpolation(AGKQuad q1, AGKQuad q2, CGFloat progress)
+AGKQuad AGKQuadInterpolate(AGKQuad q1, AGKQuad q2, CGFloat progress)
 {
     AGKQuad q;
     for(int i = 0; i < 4; i++)
