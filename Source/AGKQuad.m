@@ -38,7 +38,12 @@
  
  */
 
-
+static AGKCorner kAGKQuadCornersOrdered[4] = {
+    AGKCornerTopLeft,
+    AGKCornerTopRight,
+    AGKCornerBottomRight,
+    AGKCornerBottomLeft
+};
 
 const AGKQuad AGKQuadZero = { (CGPoint){0, 0}, (CGPoint){0, 0}, (CGPoint){0, 0}, (CGPoint){0, 0} };
 
@@ -63,6 +68,23 @@ BOOL AGKQuadIsConvex(AGKQuad q)
 BOOL AGKQuadIsValid(AGKQuad q)
 {
     return AGKQuadIsConvex(q);
+}
+
+int AGKQuadCornerIndexForCorner(AGKCorner corner)
+{
+    for(int i = 0; i < 4; i++)
+    {
+        if(kAGKQuadCornersOrdered[i] == corner)
+        {
+            return i;
+        }
+    }
+    return 0;
+}
+
+AGKCorner AGKQuadCornerForCornerIndex(int i)
+{
+    return kAGKQuadCornersOrdered[i];
 }
 
 AGKQuad AGKQuadMove(AGKQuad q, CGFloat x, CGFloat y)
@@ -215,6 +237,12 @@ CGSize AGKQuadGetSize(AGKQuad q)
 {
     CGRect smallestRect = AGKQuadGetBoundingRect(q);
     return smallestRect.size;
+}
+
+CGPoint AGKQuadGetPointForCorner(AGKQuad q, AGKCorner corner)
+{
+    int index = AGKQuadCornerIndexForCorner(corner);
+    return q.v[index];
 }
 
 void AGKQuadGetXValues(AGKQuad q, CGFloat *out_values)

@@ -23,6 +23,7 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
+#import "AGKCorner.h"
 
 /*
  tl = top left
@@ -40,6 +41,8 @@ const AGKQuad AGKQuadZero;
 BOOL AGKQuadEqual(AGKQuad q1, AGKQuad q2);
 BOOL AGKQuadIsConvex(AGKQuad q);
 BOOL AGKQuadIsValid(AGKQuad q);
+int AGKQuadCornerIndexForCorner(AGKCorner corner);
+AGKCorner AGKQuadCornerForCornerIndex(int i);
 AGKQuad AGKQuadMove(AGKQuad q, CGFloat x, CGFloat y);
 AGKQuad AGKQuadInsetLeft(AGKQuad q, CGFloat inset);
 AGKQuad AGKQuadInsetRight(AGKQuad q, CGFloat inset);
@@ -56,6 +59,7 @@ CGFloat AGKQuadGetBiggestY(AGKQuad q);
 CGRect AGKQuadGetBoundingRect(AGKQuad q);
 CGPoint AGKQuadGetCenter(AGKQuad q);
 CGSize AGKQuadGetSize(AGKQuad q);
+CGPoint AGKQuadGetPointForCorner(AGKQuad q, AGKCorner corner);
 void AGKQuadGetXValues(AGKQuad q, CGFloat *out_values);
 void AGKQuadGetYValues(AGKQuad q, CGFloat *out_values);
 AGKQuad AGKQuadInterpolation(AGKQuad q1, AGKQuad q2, CGFloat progress);
