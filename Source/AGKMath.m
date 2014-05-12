@@ -46,13 +46,13 @@ CGFloat AGKRemapToZeroOne(CGFloat value, CGFloat startValue, CGFloat endValue)
 
 CGFloat AGKRemap(CGFloat value, CGFloat oldStartValue, CGFloat oldEndValue, CGFloat newStartValue, CGFloat newEndValue)
 {
-    CGFloat p = AGKRemapToZeroOne(oldStartValue, oldEndValue, value);
+    CGFloat p = AGKRemapToZeroOne(value, oldStartValue, oldEndValue);
     return AGKInterpolate(newStartValue, newEndValue, p);
 }
 
 CGFloat AGKRemapAndClamp(CGFloat value, CGFloat oldStartValue, CGFloat oldEndValue, CGFloat newStartValue, CGFloat newEndValue)
 {
-    CGFloat p = AGKRemapToZeroOne(oldStartValue, oldEndValue, value);
+    CGFloat p = AGKRemapToZeroOne(value, oldStartValue, oldEndValue);
     CGFloat remapped = AGKInterpolate(newStartValue, newEndValue, p);
     return AGKClamp(remapped, newStartValue, newEndValue);
 }
