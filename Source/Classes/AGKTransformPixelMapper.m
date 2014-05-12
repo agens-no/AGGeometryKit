@@ -165,7 +165,7 @@
                                 bitsPerComponent,
                                 CGImageGetBytesPerRow(imageRef),
                                 CGImageGetColorSpace(imageRef),
-                                kCGImageAlphaPremultipliedLast
+                                (CGBitmapInfo) kCGImageAlphaPremultipliedLast
                                 );
     
     imageRef = CGBitmapContextCreateImage(ctx);
