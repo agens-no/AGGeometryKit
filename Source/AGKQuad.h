@@ -39,6 +39,7 @@ typedef union AGKQuad {
 
 const AGKQuad AGKQuadZero;
 BOOL AGKQuadEqual(AGKQuad q1, AGKQuad q2);
+BOOL AGKQuadEqualWithAccuracy(AGKQuad q1, AGKQuad q2, CGFloat accuracy);
 BOOL AGKQuadIsConvex(AGKQuad q);
 BOOL AGKQuadIsValid(AGKQuad q);
 int AGKQuadCornerIndexForCorner(AGKCorner corner);

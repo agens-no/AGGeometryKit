@@ -59,6 +59,20 @@ BOOL AGKQuadEqual(AGKQuad q1, AGKQuad q2)
     return YES;
 }
 
+BOOL AGKQuadEqualWithAccuracy(AGKQuad q1, AGKQuad q2, CGFloat accuracy)
+{
+    for(int i = 0; i < 4; i++)
+    {
+        CGFloat xDiff = fabs(q1.v[i].x - q2.v[i].x);
+        CGFloat yDiff = fabs(q1.v[i].y - q2.v[i].y);
+        if(xDiff > accuracy || yDiff > accuracy)
+        {
+            return NO;
+        }
+    }
+    return YES;
+}
+
 BOOL AGKQuadIsConvex(AGKQuad q)
 {
     BOOL isConvex = AGKLineIntersection(AGKLineMake(q.bl, q.tr), AGKLineMake(q.br, q.tl), NULL);
@@ -293,10 +307,11 @@ AGKQuad AGKQuadApplyCATransform3D(AGKQuad q, CATransform3D t)
 
 NSString * NSStringFromAGKQuad(AGKQuad q)
 {
-    return [NSString stringWithFormat:@"tl: %@,\n\t"
-            "tr: %@,\n\t"
-            "br: %@,\n\t"
-            "bl: %@",
+    return [NSString stringWithFormat:
+            @"tl: %@, "
+             "tr: %@, "
+             "br: %@, "
+             "bl: %@",
             NSStringFromCGPoint(q.tl),
             NSStringFromCGPoint(q.tr),
             NSStringFromCGPoint(q.br),
