@@ -33,7 +33,7 @@ AGKLine AGKLineMake(CGPoint start, CGPoint end)
 
 double AGKLineLength(AGKLine l)
 {
-    return sqrt(pow(l.start.x - l.end.x, 2.0f) + pow(l.start.y - l.end.y, 2.0f));
+    return CGPointLengthBetween_AGK(l.start, l.end);
 }
 
 BOOL AGKLineIntersection(AGKLine l1, AGKLine l2, CGPoint *out_pointOfIntersection)

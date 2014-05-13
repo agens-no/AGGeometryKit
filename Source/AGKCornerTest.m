@@ -31,21 +31,6 @@
 
 @implementation AGKCornerTest
 
-#pragma mark - Construct and destruct
-
-- (void)setUp
-{
-    [super setUp];
-}
-
-- (void)tearDown
-{
-    [super tearDown];
-}
-
-#pragma mark - Tests
-
-
 - (void)testAGKCornerIsOnSide
 {
     XCTAssertTrue(AGKCornerIsOnSide(AGKCornerTopLeft, AGKSideLeft), @"corner should on given side");

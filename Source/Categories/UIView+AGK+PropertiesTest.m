@@ -30,20 +30,6 @@
 
 @implementation UIView_AGK_PropertiesTest
 
-#pragma mark - Construct and destruct
-
-- (void)setUp
-{
-    [super setUp];
-}
-
-- (void)tearDown
-{
-    [super tearDown];
-}
-
-#pragma mark - Tests
-
 - (void)testBounds
 {
     UIView *v = [[UIView alloc] initWithFrame:CGRectMake(80, 50, 400, 300)];

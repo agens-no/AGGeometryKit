@@ -29,6 +29,10 @@
 
 - (AGKQuad)quadrilateral
 {
+    if(!CGPointEqualToPoint(self.anchorPoint, CGPointZero))
+    {
+        [NSException raise:NSInternalInconsistencyException format:@"When reading quadrilateral value from CALayer the anchor point must be [0.0, 0.0]. You may for convenience use `-[CALayer ensureAnchorPointIsSetToZero]`"];
+    }
     AGKQuad q = [self convertAGKQuad:AGKQuadMakeWithCGSize(self.bounds.size) toLayer:self.superlayer];
     return q;
 }
@@ -55,13 +59,13 @@
     return q;
 }
 
-- (AGKQuad)convertAGKQuad:(AGKQuad)quad toLayer:(CALayer *)l
+- (AGKQuad)convertAGKQuad:(AGKQuad)quad toLayer:(CALayer *)layer
 {
-    AGKQuad q;
-    q.tl = [self convertPoint:quad.tl toLayer:l];
-    q.tr = [self convertPoint:quad.tr toLayer:l];
-    q.br = [self convertPoint:quad.br toLayer:l];
-    q.bl = [self convertPoint:quad.bl toLayer:l];
+    AGKQuad q = quad;
+    q.tl = [self convertPoint:quad.tl toLayer:layer];
+    q.tr = [self convertPoint:quad.tr toLayer:layer];
+    q.br = [self convertPoint:quad.br toLayer:layer];
+    q.bl = [self convertPoint:quad.bl toLayer:layer];
     return q;
 }
 

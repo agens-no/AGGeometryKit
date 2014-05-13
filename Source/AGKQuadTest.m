@@ -30,33 +30,21 @@
 
 @implementation AGKQuadTest
 
-#pragma mark - Construct and destruct
-
-- (void)setUp
-{
-    [super setUp];
-}
-
-- (void)tearDown
-{
-    [super tearDown];
-}
-
 - (AGKQuad)createSampleConvexQuad
 {
     AGKQuad q = AGKQuadMake(CGPointMake(150, 100),
-                                      CGPointMake(740, -20),
-                                      CGPointMake(800, 500),
-                                      CGPointMake(-50, 300));
+                            CGPointMake(740, -20),
+                            CGPointMake(800, 500),
+                            CGPointMake(-50, 300));
     return q;
 }
 
 - (AGKQuad)createSampleConcaveQuad
 {
     AGKQuad q = AGKQuadMake(CGPointMake(150, 100),
-                                      CGPointMake(740, -20),
-                                      CGPointMake(50, 120),
-                                      CGPointMake(-50, 300));
+                            CGPointMake(740, -20),
+                            CGPointMake(50, 120),
+                            CGPointMake(-50, 300));
     return q;
 }
 
@@ -73,6 +61,39 @@
     XCTAssertEqual(zero.tr.y, (CGFloat)0.0);
     XCTAssertEqual(zero.br.y, (CGFloat)0.0);
     XCTAssertEqual(zero.bl.y, (CGFloat)0.0);
+}
+
+- (void)testAGKQuadEqual
+{
+    AGKQuad q1 = [self createSampleConvexQuad];
+    AGKQuad q2 = [self createSampleConvexQuad];
+
+    XCTAssertTrue(AGKQuadEqual(q1, q2));
+
+    q2.br.x = 10;
+    XCTAssertFalse(AGKQuadEqual(q1, q2));
+}
+
+- (void)testAGKQuadEqualWithAccuracy
+{
+    AGKQuad q1 = [self createSampleConvexQuad];
+    AGKQuad q2 = [self createSampleConvexQuad];
+
+    XCTAssertTrue(AGKQuadEqualWithAccuracy(q1, q2, 1000.0));
+    XCTAssertTrue(AGKQuadEqualWithAccuracy(q1, q2, 1.0000));
+    XCTAssertTrue(AGKQuadEqualWithAccuracy(q1, q2, 0.0001));
+
+    q2.bl.y += 0.0001;
+    XCTAssertTrue(AGKQuadEqualWithAccuracy(q1, q2, 0.0001));
+
+    q2.bl.y += 0.0001;
+    XCTAssertFalse(AGKQuadEqualWithAccuracy(q1, q2, 0.0001));
+
+    q2.bl.y += 0.1;
+    XCTAssertFalse(AGKQuadEqualWithAccuracy(q1, q2, 0.1));
+
+    q2.bl.y += 1000.0;
+    XCTAssertFalse(AGKQuadEqualWithAccuracy(q1, q2, 1000.0));
 }
 
 - (void)testAGKQuadIsValid

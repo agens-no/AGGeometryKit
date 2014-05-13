@@ -30,30 +30,33 @@
 
 @implementation UIView_AngleConverterTest
 
-#pragma mark - Construct and destruct
-
-- (void)setUp
+- (void)testAngleConverterWithSubviews
 {
-    [super setUp];
+    UIView *superview = [[UIView alloc] initWithFrame:CGRectMake(50, 50, 100, 100)];
+    UIView *subview = [[UIView alloc] initWithFrame:superview.bounds];
+    [superview addSubview:subview];
+    
+    subview.transform = CGAffineTransformMakeRotation(M_PI_4);
+    
+    XCTAssertEqualWithAccuracy([subview convertAngleOfViewInRelationToView:superview], -M_PI_4, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy([subview convertAngle:0.5 toView:superview], -M_PI_4 - 0.5, 0.0001);
 }
 
-- (void)tearDown
+- (void)testAngleConverterWithTwoViewsInSameSuperview
 {
-    [super tearDown];
-}
+    UIView *superview = [[UIView alloc] initWithFrame:CGRectMake(50, 50, 100, 100)];
 
-#pragma mark - Tests
+    UIView *view1 = [[UIView alloc] initWithFrame:CGRectMake(50, 50, 100, 100)];
+    view1.transform = CGAffineTransformMakeRotation(0.7);
+    [superview addSubview:view1];
 
-- (void)testBasicFunctionality
-{
-    UIView *v = [[UIView alloc] initWithFrame:CGRectMake(50, 50, 100, 100)];
-    UIView *s = [[UIView alloc] initWithFrame:v.bounds];
-    [v addSubview:s];
-    
-    s.transform = CGAffineTransformMakeRotation(M_PI_4);
-    
-    XCTAssertEqualWithAccuracy([s convertAngleOfViewInRelationToView:v], (CGFloat)-M_PI_4, 0.000001);
-    XCTAssertEqualWithAccuracy([s convertAngle:0.5 toView:v], (CGFloat)-M_PI_4 - 0.5f, 0.000001);
+    UIView *view2 = [[UIView alloc] initWithFrame:view1.bounds];
+    view2.transform = CGAffineTransformMakeRotation(0.4);
+    [superview addSubview:view2];
+
+    XCTAssertEqualWithAccuracy([view2 convertAngleOfViewInRelationToView:view1], 0.3, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy([view2 convertAngle:0.0 toView:view1], 0.3, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy([view2 convertAngle:0.5 toView:view1], 0.8, FLT_EPSILON);
 }
 
 @end

@@ -30,65 +30,110 @@
 
 @implementation AGKMathTest
 
-- (void)testInterpolate
+- (void)testAGKInterpolate
 {
     {
         CGFloat value = AGKInterpolate(100, 200, 0.7);
-        XCTAssertEqual(value, (CGFloat)170.0);
+        XCTAssertEqualWithAccuracy(value, 170.0, FLT_EPSILON);
     }
     {
         CGFloat value = AGKInterpolate(100, 200, 0.0);
-        XCTAssertEqual(value, (CGFloat)100.0);
+        XCTAssertEqualWithAccuracy(value, 100.0, FLT_EPSILON);
     }
     {
         CGFloat value = AGKInterpolate(100, 200, 1.0);
-        XCTAssertEqual(value, (CGFloat)200.0);
+        XCTAssertEqualWithAccuracy(value, 200.0, FLT_EPSILON);
     }
     {
         CGFloat value = AGKInterpolate(100, 200, -0.5);
-        XCTAssertEqual(value, (CGFloat)50.0);
+        XCTAssertEqualWithAccuracy(value, 50.0, FLT_EPSILON);
     }
     {
         CGFloat value = AGKInterpolate(100, 200, 1.5);
-        XCTAssertEqual(value, (CGFloat)250.0);
+        XCTAssertEqualWithAccuracy(value, 250.0, FLT_EPSILON);
     }
 }
 
-- (void)testProgressForValue
+- (void)testAGKRemapToZeroOne
 {
     {
         CGFloat progress = AGKRemapToZeroOne(170, 100, 200);
-        XCTAssertEqual(progress, (CGFloat)0.7);
+        XCTAssertEqualWithAccuracy(progress, 0.7, FLT_EPSILON);
     }
     {
         CGFloat progress = AGKRemapToZeroOne(100, 100, 200);
-        XCTAssertEqual(progress, (CGFloat)0.0);
+        XCTAssertEqualWithAccuracy(progress, 0.0, FLT_EPSILON);
     }
     {
         CGFloat progress = AGKRemapToZeroOne(200, 200, 100);
-        XCTAssertTrue(progress == 0.0);
+        XCTAssertEqualWithAccuracy(progress, 0.0, FLT_EPSILON);
     }
     {
         CGFloat progress = AGKRemapToZeroOne(50, 100, 200);
-        XCTAssertEqual(progress, (CGFloat)-0.5);
+        XCTAssertEqualWithAccuracy(progress, -0.5, FLT_EPSILON);
     }
     {
         CGFloat progress = AGKRemapToZeroOne(250, 100, 200);
-        XCTAssertEqual(progress, (CGFloat)1.5);
+        XCTAssertEqualWithAccuracy(progress, 1.5, FLT_EPSILON);
     }
 }
 
-- (void)testCLAMP
+- (void)testAGKRemap
 {
-    XCTAssertEqual(AGK_CLAMP(0.5, 1.0, 50.0), 1.0);
-    XCTAssertEqual(AGK_CLAMP(0.5, 0.0, 50.0), 0.5);
-    XCTAssertEqual(AGK_CLAMP(-1.5, -2.0, -1.0), -1.5);
-    XCTAssertEqual(AGK_CLAMP(5, -2.0, -1.0), -1.0);
-    XCTAssertEqual(AGK_CLAMP(5, 2, 7), 5);
-    XCTAssertEqual(AGK_CLAMP(5, -2, 3), 3);
+    XCTAssertEqualWithAccuracy(AGKRemap(72, 0, 100, 0.0, 1.0), 0.72, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(AGKRemap(40, 20, 60, 0.0, 1.0), 0.5, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(AGKRemap(50, 60, 20, 0.0, 1.0), 0.25, FLT_EPSILON); // reversed input range
+    XCTAssertEqualWithAccuracy(AGKRemap(50, 20, 60, 1.0, 0.0), 0.25, FLT_EPSILON); // reversed output range
+    XCTAssertEqualWithAccuracy(AGKRemap(50, 60, 20, 1.0, 0.0), 0.75, FLT_EPSILON); // reversed both ranges
 }
 
-- (void)testIS_WITHIN
+- (void)testAGKRemapAndClamp
+{
+    XCTAssertEqualWithAccuracy(AGKRemapAndClamp(5.0, 2.0, 3.0, 0.0, 1.0), 1.0, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(AGKRemapAndClamp(4.0, 2.0, 3.0, 0.0, 1.0), 1.0, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(AGKRemapAndClamp(3.0, 2.0, 3.0, 0.0, 1.0), 1.0, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(AGKRemapAndClamp(2.9, 2.0, 3.0, 0.0, 1.0), 0.9, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(AGKRemapAndClamp(0.9, 2.0, 3.0, 0.0, 1.0), 0.0, FLT_EPSILON);
+}
+
+- (void)testAGKRemapToZeroOneAndClamp
+{
+    XCTAssertEqualWithAccuracy(AGKRemapToZeroOneAndClamp(5.0, 2.0, 3.0), 1.0, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(AGKRemapToZeroOneAndClamp(4.0, 2.0, 3.0), 1.0, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(AGKRemapToZeroOneAndClamp(3.0, 2.0, 3.0), 1.0, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(AGKRemapToZeroOneAndClamp(2.9, 2.0, 3.0), 0.9, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(AGKRemapToZeroOneAndClamp(0.9, 2.0, 3.0), 0.0, FLT_EPSILON);
+}
+
+- (void)testAGKClamp
+{
+    XCTAssertEqualWithAccuracy(AGKClamp(0.5, 1.0, 50.0), 1.0, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(AGKClamp(0.5, 0.0, 50.0), 0.5, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(AGKClamp(-1.5, -2.0, -1.0), -1.5, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(AGKClamp(5, -2.0, -1.0), -1.0, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(AGKClamp(5, 2, 7), 5, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(AGKClamp(5, -2, 3), 3, FLT_EPSILON);
+}
+
+- (void)testAGK_CLAMP
+{
+    XCTAssertEqualWithAccuracy(AGK_CLAMP(0.5, 1.0, 50.0), 1.0, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(AGK_CLAMP(0.5, 0.0, 50.0), 0.5, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(AGK_CLAMP(-1.5, -2.0, -1.0), -1.5, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(AGK_CLAMP(5, -2.0, -1.0), -1.0, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(AGK_CLAMP(5, 2, 7), 5, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(AGK_CLAMP(5, -2, 3), 3, FLT_EPSILON);
+}
+
+- (void)testAGKIsWithin
+{
+    XCTAssertTrue(AGKIsWithin(0, -5, 2));
+    XCTAssertTrue(AGKIsWithin(10.0, -5, 20.0));
+    XCTAssertFalse(AGKIsWithin(2, 5, 7));
+    XCTAssertFalse(AGKIsWithin(12, 5, 7));
+}
+
+- (void)testAGK_IS_WITHIN
 {
     XCTAssertTrue(AGK_IS_WITHIN(0, -5, 2));
     XCTAssertTrue(AGK_IS_WITHIN(10.0, -5, 20.0));
@@ -109,34 +154,34 @@
     CGFloat value;
     
     value = AGKMinInArray(values, 5, &index);
-    XCTAssertEqual(value, (CGFloat)10.0);
+    XCTAssertEqual(value, 10.0);
     XCTAssertEqual(index, 0u);
     
     value = AGKMaxInArray(values, 5, &index);
-    XCTAssertEqual(value, (CGFloat)14.0);
+    XCTAssertEqual(value, 14.0);
     XCTAssertEqual(index, 4u);
     
     values[3] = 100;
     values[2] = -15;
     
     value = AGKMinInArray(values, 5, &index);
-    XCTAssertEqual(value, (CGFloat)-15.0);
+    XCTAssertEqual(value, -15.0);
     XCTAssertEqual(index, 2u);
     
     value = AGKMaxInArray(values, 5, &index);
-    XCTAssertEqual(value, (CGFloat)100.0);
+    XCTAssertEqual(value, 100.0);
     XCTAssertEqual(index, 3u);
 }
 
 - (void)testMakeProgressPingPong
 {
-    XCTAssertEqual(AGKMakeProgressPingPong(-1), (CGFloat)0.0);
-    XCTAssertEqual(AGKMakeProgressPingPong(0.0), (CGFloat)0.0);
-    XCTAssertEqual(AGKMakeProgressPingPong(0.25), (CGFloat)0.5);
-    XCTAssertEqual(AGKMakeProgressPingPong(0.5), (CGFloat)1.0);
-    XCTAssertEqual(AGKMakeProgressPingPong(0.75), (CGFloat)0.5);
-    XCTAssertEqual(AGKMakeProgressPingPong(1.0), (CGFloat)0.0);
-    XCTAssertEqual(AGKMakeProgressPingPong(1.5), (CGFloat)0.0);
+    XCTAssertEqualWithAccuracy(AGKMakeProgressPingPong(-1), 0.0, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(AGKMakeProgressPingPong(0.0), 0.0, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(AGKMakeProgressPingPong(0.25), 0.5, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(AGKMakeProgressPingPong(0.5), 1.0, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(AGKMakeProgressPingPong(0.75), 0.5, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(AGKMakeProgressPingPong(1.0), 0.0, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(AGKMakeProgressPingPong(1.5), 0.0, FLT_EPSILON);
 }
 
 - (void)testFloatToDoubleZeroFill

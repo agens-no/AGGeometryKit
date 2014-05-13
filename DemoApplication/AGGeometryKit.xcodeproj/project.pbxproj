@@ -86,12 +86,16 @@
 		A3E67B03192214B500A4CD4A /* controlpoint_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E67AFF192214B500A4CD4A /* controlpoint_h@2x.png */; };
 		A3E67B04192214B500A4CD4A /* controlpoint.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E67B00192214B500A4CD4A /* controlpoint.png */; };
 		A3E67B05192214B500A4CD4A /* controlpoint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E67B01192214B500A4CD4A /* controlpoint@2x.png */; };
+		A3E67B0F19222FDA00A4CD4A /* AGKLineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E67B0E19222FDA00A4CD4A /* AGKLineTest.m */; };
 		A3EE526916EDEE83007706C6 /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = A3EE526716EDEE83007706C6 /* easing.c */; };
 		A3EE526A16EDEE83007706C6 /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = A3EE526716EDEE83007706C6 /* easing.c */; };
 		A3EE526F16F07479007706C6 /* AGKAngleConverterExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE526D16F07479007706C6 /* AGKAngleConverterExample.m */; };
 		A3EE527016F07479007706C6 /* AGKAngleConverterExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE526D16F07479007706C6 /* AGKAngleConverterExample.m */; };
 		A3EE527116F07479007706C6 /* AGKAngleConverterExample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3EE526E16F07479007706C6 /* AGKAngleConverterExample.xib */; };
 		A3EE527216F07479007706C6 /* AGKAngleConverterExample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3EE526E16F07479007706C6 /* AGKAngleConverterExample.xib */; };
+		A3F2EFF41922331C00B6F9E8 /* CALayer+AGK+PropertiesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F2EFF31922331C00B6F9E8 /* CALayer+AGK+PropertiesTest.m */; };
+		A3F2EFF6192233AB00B6F9E8 /* CALayer+AGKQuadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F2EFF5192233AB00B6F9E8 /* CALayer+AGKQuadTest.m */; };
+		A3F2EFF819223B8700B6F9E8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A3F2EFF719223B8700B6F9E8 /* README.md */; };
 		A3F77D3F16FA54C400415B24 /* JAValueToString.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F77D3E16FA54C300415B24 /* JAValueToString.m */; };
 		A3F77D4016FA54C400415B24 /* JAValueToString.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F77D3E16FA54C300415B24 /* JAValueToString.m */; };
 		AC614EFA148644188ED25FD4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C194E9C1ACD34B129EBF77F9 /* libPods.a */; };
@@ -200,11 +204,15 @@
 		A3E67AFF192214B500A4CD4A /* controlpoint_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "controlpoint_h@2x.png"; sourceTree = "<group>"; };
 		A3E67B00192214B500A4CD4A /* controlpoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controlpoint.png; sourceTree = "<group>"; };
 		A3E67B01192214B500A4CD4A /* controlpoint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "controlpoint@2x.png"; sourceTree = "<group>"; };
+		A3E67B0E19222FDA00A4CD4A /* AGKLineTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKLineTest.m; sourceTree = "<group>"; };
 		A3EE526716EDEE83007706C6 /* easing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = easing.c; sourceTree = "<group>"; };
 		A3EE526816EDEE83007706C6 /* easing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = easing.h; sourceTree = "<group>"; };
 		A3EE526C16F07479007706C6 /* AGKAngleConverterExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKAngleConverterExample.h; sourceTree = "<group>"; };
 		A3EE526D16F07479007706C6 /* AGKAngleConverterExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKAngleConverterExample.m; sourceTree = "<group>"; };
 		A3EE526E16F07479007706C6 /* AGKAngleConverterExample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGKAngleConverterExample.xib; sourceTree = "<group>"; };
+		A3F2EFF31922331C00B6F9E8 /* CALayer+AGK+PropertiesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AGK+PropertiesTest.m"; sourceTree = "<group>"; };
+		A3F2EFF5192233AB00B6F9E8 /* CALayer+AGKQuadTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AGKQuadTest.m"; sourceTree = "<group>"; };
+		A3F2EFF719223B8700B6F9E8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		A3F77D3D16FA54C300415B24 /* JAValueToString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAValueToString.h; sourceTree = "<group>"; };
 		A3F77D3E16FA54C300415B24 /* JAValueToString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAValueToString.m; sourceTree = "<group>"; };
 		C194E9C1ACD34B129EBF77F9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -268,6 +276,7 @@
 				A3F77D3E16FA54C300415B24 /* JAValueToString.m */,
 				A3EE526716EDEE83007706C6 /* easing.c */,
 				A3EE526816EDEE83007706C6 /* easing.h */,
+				A3F2EFF719223B8700B6F9E8 /* README.md */,
 			);
 			path = AGGeometryKit;
 			sourceTree = "<group>";
@@ -326,6 +335,7 @@
 				A38F9F09185B3F5C00F49AD7 /* AGKCornerTest.m */,
 				A38F9F0B185B3F5C00F49AD7 /* AGKLine.h */,
 				A38F9F0C185B3F5C00F49AD7 /* AGKLine.m */,
+				A3E67B0E19222FDA00A4CD4A /* AGKLineTest.m */,
 				A38F9F0D185B3F5C00F49AD7 /* AGKMath.h */,
 				A38F9F0E185B3F5C00F49AD7 /* AGKMath.m */,
 				A38F9F0F185B3F5C00F49AD7 /* AGKMathTest.m */,
@@ -349,10 +359,12 @@
 				A38F9F5B185B410C00F49AD7 /* AGGeometryKitCategories.h */,
 				A38F9F1C185B3F5C00F49AD7 /* CALayer+AGKQuad.h */,
 				A38F9F1D185B3F5C00F49AD7 /* CALayer+AGKQuad.m */,
+				A3F2EFF5192233AB00B6F9E8 /* CALayer+AGKQuadTest.m */,
 				A3314479191912B700A9968C /* CALayer+AGK+Methods.h */,
 				A331447A191912B700A9968C /* CALayer+AGK+Methods.m */,
 				A38F9F1E185B3F5C00F49AD7 /* CALayer+AGK+Properties.h */,
 				A38F9F1F185B3F5C00F49AD7 /* CALayer+AGK+Properties.m */,
+				A3F2EFF31922331C00B6F9E8 /* CALayer+AGK+PropertiesTest.m */,
 				A38F9F20185B3F5C00F49AD7 /* NSValue+AGKQuad.h */,
 				A38F9F21185B3F5C00F49AD7 /* NSValue+AGKQuad.m */,
 				A38F9F22185B3F5C00F49AD7 /* NSValue+AGKQuadTest.m */,
@@ -497,6 +509,7 @@
 				A3270F4316D5675800A92C03 /* Default-568h@2x.png in Resources */,
 				A3270F4516D5675800A92C03 /* Default.png in Resources */,
 				A3270F4716D5675800A92C03 /* Default@2x.png in Resources */,
+				A3F2EFF819223B8700B6F9E8 /* README.md in Resources */,
 				A3270F4916D5675800A92C03 /* InfoPlist.strings in Resources */,
 				A3270F5316D5675800A92C03 /* InfoPlist.strings in Resources */,
 				A3E67AF5192112B400A4CD4A /* Box_Closed@2x.png in Resources */,
@@ -636,9 +649,12 @@
 				A3EE526A16EDEE83007706C6 /* easing.c in Sources */,
 				A3EE527016F07479007706C6 /* AGKAngleConverterExample.m in Sources */,
 				A38F9F55185B3F6500F49AD7 /* AGKQuadTest.m in Sources */,
+				A3E67B0F19222FDA00A4CD4A /* AGKLineTest.m in Sources */,
+				A3F2EFF6192233AB00B6F9E8 /* CALayer+AGKQuadTest.m in Sources */,
 				A38F9F59185B3F6500F49AD7 /* UIView+AGK+PropertiesTest.m in Sources */,
 				A3F77D4016FA54C400415B24 /* JAValueToString.m in Sources */,
 				A3762F311728067A00E7A2AB /* AGKQuadControlsExample.m in Sources */,
+				A3F2EFF41922331C00B6F9E8 /* CALayer+AGK+PropertiesTest.m in Sources */,
 				A3762F5A172885FE00E7A2AB /* AGKCATransform3DWithUIImageExample.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
