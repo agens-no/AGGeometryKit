@@ -150,17 +150,4 @@
     XCTAssertEqual(AGKFloatToDoubleZeroFill(1.0f / 3.0f), 0.333333000);
 }
 
-//- (void)testPerformanceOfFloatToDoubleZeroFill
-//{
-//    NSTimeInterval then = CACurrentMediaTime();
-//    const int iterations = 10000;
-//    for(int i = 0; i < iterations; i++)
-//    {
-//        AGKFloatToDoubleZeroFill(M_PI);
-//    }
-//    NSTimeInterval now = CACurrentMediaTime();
-//    NSTimeInterval diff = now - then;
-//    XCTAssertTrue(diff < 1.0 / 60.0, @"Performance is too bad on float to double conversion. Time used on %d iterations: %f", iterations, diff);
-//}
-
 @end
