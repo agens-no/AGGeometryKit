@@ -21,10 +21,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import "AGKMath.h"
 
-@interface AGKMathTest : SenTestCase
+@interface AGKMathTest : XCTestCase
 
 @end
 
@@ -34,23 +34,23 @@
 {
     {
         CGFloat value = AGKInterpolate(100, 200, 0.7);
-        STAssertEquals(value, (CGFloat)170.0, nil);
+        XCTAssertEqual(value, (CGFloat)170.0);
     }
     {
         CGFloat value = AGKInterpolate(100, 200, 0.0);
-        STAssertEquals(value, (CGFloat)100.0, nil);
+        XCTAssertEqual(value, (CGFloat)100.0);
     }
     {
         CGFloat value = AGKInterpolate(100, 200, 1.0);
-        STAssertEquals(value, (CGFloat)200.0, nil);
+        XCTAssertEqual(value, (CGFloat)200.0);
     }
     {
         CGFloat value = AGKInterpolate(100, 200, -0.5);
-        STAssertEquals(value, (CGFloat)50.0, nil);
+        XCTAssertEqual(value, (CGFloat)50.0);
     }
     {
         CGFloat value = AGKInterpolate(100, 200, 1.5);
-        STAssertEquals(value, (CGFloat)250.0, nil);
+        XCTAssertEqual(value, (CGFloat)250.0);
     }
 }
 
@@ -58,42 +58,42 @@
 {
     {
         CGFloat progress = AGKRemapToZeroOne(170, 100, 200);
-        STAssertEquals(progress, (CGFloat)0.7, nil);
+        XCTAssertEqual(progress, (CGFloat)0.7);
     }
     {
         CGFloat progress = AGKRemapToZeroOne(100, 100, 200);
-        STAssertEquals(progress, (CGFloat)0.0, nil);
+        XCTAssertEqual(progress, (CGFloat)0.0);
     }
     {
         CGFloat progress = AGKRemapToZeroOne(200, 200, 100);
-        STAssertTrue(progress == 0.0, nil);
+        XCTAssertTrue(progress == 0.0);
     }
     {
         CGFloat progress = AGKRemapToZeroOne(50, 100, 200);
-        STAssertEquals(progress, (CGFloat)-0.5, nil);
+        XCTAssertEqual(progress, (CGFloat)-0.5);
     }
     {
         CGFloat progress = AGKRemapToZeroOne(250, 100, 200);
-        STAssertEquals(progress, (CGFloat)1.5, nil);
+        XCTAssertEqual(progress, (CGFloat)1.5);
     }
 }
 
 - (void)testCLAMP
 {
-    STAssertEquals(AGK_CLAMP(0.5, 1.0, 50.0), 1.0, nil);
-    STAssertEquals(AGK_CLAMP(0.5, 0.0, 50.0), 0.5, nil);
-    STAssertEquals(AGK_CLAMP(-1.5, -2.0, -1.0), -1.5, nil);
-    STAssertEquals(AGK_CLAMP(5, -2.0, -1.0), -1.0, nil);
-    STAssertEquals(AGK_CLAMP(5, 2, 7), 5, nil);
-    STAssertEquals(AGK_CLAMP(5, -2, 3), 3, nil);
+    XCTAssertEqual(AGK_CLAMP(0.5, 1.0, 50.0), 1.0);
+    XCTAssertEqual(AGK_CLAMP(0.5, 0.0, 50.0), 0.5);
+    XCTAssertEqual(AGK_CLAMP(-1.5, -2.0, -1.0), -1.5);
+    XCTAssertEqual(AGK_CLAMP(5, -2.0, -1.0), -1.0);
+    XCTAssertEqual(AGK_CLAMP(5, 2, 7), 5);
+    XCTAssertEqual(AGK_CLAMP(5, -2, 3), 3);
 }
 
 - (void)testIS_WITHIN
 {
-    STAssertTrue(AGK_IS_WITHIN(0, -5, 2), nil);
-    STAssertTrue(AGK_IS_WITHIN(10.0, -5, 20.0), nil);
-    STAssertFalse(AGK_IS_WITHIN(2, 5, 7), nil);
-    STAssertFalse(AGK_IS_WITHIN(12, 5, 7), nil);
+    XCTAssertTrue(AGK_IS_WITHIN(0, -5, 2));
+    XCTAssertTrue(AGK_IS_WITHIN(10.0, -5, 20.0));
+    XCTAssertFalse(AGK_IS_WITHIN(2, 5, 7));
+    XCTAssertFalse(AGK_IS_WITHIN(12, 5, 7));
 }
 
 - (void)testMinInArray_maxInArray
@@ -109,34 +109,34 @@
     CGFloat value;
     
     value = AGKMinInArray(values, 5, &index);
-    STAssertEquals(value, (CGFloat)10.0, nil);
-    STAssertEquals(index, 0u, nil);
+    XCTAssertEqual(value, (CGFloat)10.0);
+    XCTAssertEqual(index, 0u);
     
     value = AGKMaxInArray(values, 5, &index);
-    STAssertEquals(value, (CGFloat)14.0, nil);
-    STAssertEquals(index, 4u, nil);
+    XCTAssertEqual(value, (CGFloat)14.0);
+    XCTAssertEqual(index, 4u);
     
     values[3] = 100;
     values[2] = -15;
     
     value = AGKMinInArray(values, 5, &index);
-    STAssertEquals(value, (CGFloat)-15.0, nil);
-    STAssertEquals(index, 2u, nil);
+    XCTAssertEqual(value, (CGFloat)-15.0);
+    XCTAssertEqual(index, 2u);
     
     value = AGKMaxInArray(values, 5, &index);
-    STAssertEquals(value, (CGFloat)100.0, nil);
-    STAssertEquals(index, 3u, nil);
+    XCTAssertEqual(value, (CGFloat)100.0);
+    XCTAssertEqual(index, 3u);
 }
 
 - (void)testMakeProgressPingPong
 {
-    STAssertEquals(AGKMakeProgressPingPong(-1), (CGFloat)0.0, nil);
-    STAssertEquals(AGKMakeProgressPingPong(0.0), (CGFloat)0.0, nil);
-    STAssertEquals(AGKMakeProgressPingPong(0.25), (CGFloat)0.5, nil);
-    STAssertEquals(AGKMakeProgressPingPong(0.5), (CGFloat)1.0, nil);
-    STAssertEquals(AGKMakeProgressPingPong(0.75), (CGFloat)0.5, nil);
-    STAssertEquals(AGKMakeProgressPingPong(1.0), (CGFloat)0.0, nil);
-    STAssertEquals(AGKMakeProgressPingPong(1.5), (CGFloat)0.0, nil);
+    XCTAssertEqual(AGKMakeProgressPingPong(-1), (CGFloat)0.0);
+    XCTAssertEqual(AGKMakeProgressPingPong(0.0), (CGFloat)0.0);
+    XCTAssertEqual(AGKMakeProgressPingPong(0.25), (CGFloat)0.5);
+    XCTAssertEqual(AGKMakeProgressPingPong(0.5), (CGFloat)1.0);
+    XCTAssertEqual(AGKMakeProgressPingPong(0.75), (CGFloat)0.5);
+    XCTAssertEqual(AGKMakeProgressPingPong(1.0), (CGFloat)0.0);
+    XCTAssertEqual(AGKMakeProgressPingPong(1.5), (CGFloat)0.0);
 }
 
 - (void)testFloatToDoubleZeroFill
@@ -144,23 +144,23 @@
     double doubleValue = 1.256250;
     float floatValue = doubleValue;
 
-    STAssertEquals(AGKFloatToDoubleZeroFill(M_PI), 3.141593000000, nil);
-    STAssertEquals(AGKFloatToDoubleZeroFill(floatValue), doubleValue, nil);
-    STAssertEquals(AGKFloatToDoubleZeroFill(0.5), 0.5, nil);
-    STAssertEquals(AGKFloatToDoubleZeroFill(1.0f / 3.0f), 0.333333000, nil);
+    XCTAssertEqual(AGKFloatToDoubleZeroFill(M_PI), 3.141593000000);
+    XCTAssertEqual(AGKFloatToDoubleZeroFill(floatValue), doubleValue);
+    XCTAssertEqual(AGKFloatToDoubleZeroFill(0.5), 0.5);
+    XCTAssertEqual(AGKFloatToDoubleZeroFill(1.0f / 3.0f), 0.333333000);
 }
 
-- (void)testPerformanceOfFloatToDoubleZeroFill
-{
-    NSTimeInterval then = CACurrentMediaTime();
-    const int iterations = 10000;
-    for(int i = 0; i < iterations; i++)
-    {
-        AGKFloatToDoubleZeroFill(M_PI);
-    }
-    NSTimeInterval now = CACurrentMediaTime();
-    NSTimeInterval diff = now - then;
-    STAssertTrue(diff < 1.0 / 60.0, @"Performance is too bad on float to double conversion. Time used on %d iterations: %f", iterations, diff);
-}
+//- (void)testPerformanceOfFloatToDoubleZeroFill
+//{
+//    NSTimeInterval then = CACurrentMediaTime();
+//    const int iterations = 10000;
+//    for(int i = 0; i < iterations; i++)
+//    {
+//        AGKFloatToDoubleZeroFill(M_PI);
+//    }
+//    NSTimeInterval now = CACurrentMediaTime();
+//    NSTimeInterval diff = now - then;
+//    XCTAssertTrue(diff < 1.0 / 60.0, @"Performance is too bad on float to double conversion. Time used on %d iterations: %f", iterations, diff);
+//}
 
 @end

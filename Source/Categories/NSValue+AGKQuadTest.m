@@ -3,7 +3,7 @@
  * @author hfossli
  */
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import "NSValue+AGKQuad.h"
 
 @interface DummyClass : NSObject <NSCoding>
@@ -31,7 +31,7 @@
 
 
 
-@interface NSValue_AGKQuad_Test : SenTestCase
+@interface NSValue_AGKQuad_Test : XCTestCase
 @end
 
 @implementation NSValue_AGKQuad_Test
@@ -59,10 +59,10 @@
 {
     AGKQuad original = [self createSampleQuad];
     NSValue *value = [NSValue valueWithAGKQuad:original];
-    STAssertNotNil(value, nil);
+    XCTAssertNotNil(value);
 
     AGKQuad decoded = [value AGKQuadValue];
-    STAssertTrue(AGKQuadEqual(decoded, original), @"Not equal after decoding");
+    XCTAssertTrue(AGKQuadEqual(decoded, original), @"Not equal after decoding");
 }
 
 - (void)testNSCoderCompliance
@@ -72,9 +72,9 @@
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:dummy1];
 
     DummyClass *dummy2 = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-    STAssertNotNil(dummy2, nil);
+    XCTAssertNotNil(dummy2);
 
-    STAssertTrue(AGKQuadEqual(dummy1.q, dummy2.q), @"Not equal after decoding");
+    XCTAssertTrue(AGKQuadEqual(dummy1.q, dummy2.q), @"Not equal after decoding");
 }
 
 @end

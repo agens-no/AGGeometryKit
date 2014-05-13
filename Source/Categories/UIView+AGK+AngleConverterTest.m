@@ -21,10 +21,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import "UIView+AGK+AngleConverter.h"
 
-@interface UIView_AngleConverterTest : SenTestCase
+@interface UIView_AngleConverterTest : XCTestCase
 
 @end
 
@@ -52,8 +52,8 @@
     
     s.transform = CGAffineTransformMakeRotation(M_PI_4);
     
-    STAssertEqualsWithAccuracy([s convertAngleOfViewInRelationToView:v], (CGFloat)-M_PI_4, 0.000001, nil);
-    STAssertEqualsWithAccuracy([s convertAngle:0.5 toView:v], (CGFloat)-M_PI_4 - 0.5f, 0.000001, nil);
+    XCTAssertEqualWithAccuracy([s convertAngleOfViewInRelationToView:v], (CGFloat)-M_PI_4, 0.000001);
+    XCTAssertEqualWithAccuracy([s convertAngle:0.5 toView:v], (CGFloat)-M_PI_4 - 0.5f, 0.000001);
 }
 
 @end

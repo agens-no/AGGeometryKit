@@ -31,7 +31,6 @@
 		A333A59516A9A3BD00E334AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A59416A9A3BD00E334AD /* UIKit.framework */; };
 		A333A59716A9A3BD00E334AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A59616A9A3BD00E334AD /* Foundation.framework */; };
 		A333A59916A9A3BD00E334AD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A59816A9A3BD00E334AD /* CoreGraphics.framework */; };
-		A333A5BF16A9A3BD00E334AD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A5BE16A9A3BD00E334AD /* SenTestingKit.framework */; };
 		A333A5C016A9A3BD00E334AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A59416A9A3BD00E334AD /* UIKit.framework */; };
 		A333A5C116A9A3BD00E334AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A59616A9A3BD00E334AD /* Foundation.framework */; };
 		A333A60B16A9A6F000E334AD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A60A16A9A6F000E334AD /* QuartzCore.framework */; };
@@ -130,8 +129,7 @@
 		A333A59416A9A3BD00E334AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A333A59616A9A3BD00E334AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A333A59816A9A3BD00E334AD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A333A5BD16A9A3BD00E334AD /* AGGeometryKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AGGeometryKitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A333A5BE16A9A3BD00E334AD /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		A333A5BD16A9A3BD00E334AD /* AGGeometryKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AGGeometryKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A333A60A16A9A6F000E334AD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A3762F2D1728067900E7A2AB /* AGKQuadControlsSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKQuadControlsSample.h; sourceTree = "<group>"; };
 		A3762F2E1728067900E7A2AB /* AGKQuadControlsSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKQuadControlsSample.m; sourceTree = "<group>"; };
@@ -227,7 +225,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A333A5BF16A9A3BD00E334AD /* SenTestingKit.framework in Frameworks */,
 				A333A5C016A9A3BD00E334AD /* UIKit.framework in Frameworks */,
 				A333A5C116A9A3BD00E334AD /* Foundation.framework in Frameworks */,
 				A30B0C4916CE932700856E00 /* QuartzCore.framework in Frameworks */,
@@ -297,7 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				A333A59016A9A3BD00E334AD /* AGGeometryKit.app */,
-				A333A5BD16A9A3BD00E334AD /* AGGeometryKitTests.octest */,
+				A333A5BD16A9A3BD00E334AD /* AGGeometryKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -309,7 +306,6 @@
 				A333A59416A9A3BD00E334AD /* UIKit.framework */,
 				A333A59616A9A3BD00E334AD /* Foundation.framework */,
 				A333A59816A9A3BD00E334AD /* CoreGraphics.framework */,
-				A333A5BE16A9A3BD00E334AD /* SenTestingKit.framework */,
 				C194E9C1ACD34B129EBF77F9 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -454,8 +450,8 @@
 			);
 			name = AGGeometryKitTests;
 			productName = AGQuadrilateralTests;
-			productReference = A333A5BD16A9A3BD00E334AD /* AGGeometryKitTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = A333A5BD16A9A3BD00E334AD /* AGGeometryKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -766,13 +762,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AGGeometryKit/AGGeometryKit-Prefix.pch";
 				INFOPLIST_FILE = "AGGeometryKitTests/AGGeometryKitTests-Info.plist";
 				PRODUCT_NAME = AGGeometryKitTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -783,13 +779,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AGGeometryKit/AGGeometryKit-Prefix.pch";
 				INFOPLIST_FILE = "AGGeometryKitTests/AGGeometryKitTests-Info.plist";
 				PRODUCT_NAME = AGGeometryKitTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

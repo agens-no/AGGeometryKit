@@ -21,10 +21,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import "AGKQuad.h"
 
-@interface AGKQuadTest : SenTestCase
+@interface AGKQuadTest : XCTestCase
 
 @end
 
@@ -65,23 +65,23 @@
 - (void)testAGKQuadZero
 {
     AGKQuad zero = AGKQuadZero;
-    STAssertEquals(zero.tl.x, (CGFloat)0.0, nil);
-    STAssertEquals(zero.tr.x, (CGFloat)0.0, nil);
-    STAssertEquals(zero.br.x, (CGFloat)0.0, nil);
-    STAssertEquals(zero.bl.x, (CGFloat)0.0, nil);
-    STAssertEquals(zero.tl.y, (CGFloat)0.0, nil);
-    STAssertEquals(zero.tr.y, (CGFloat)0.0, nil);
-    STAssertEquals(zero.br.y, (CGFloat)0.0, nil);
-    STAssertEquals(zero.bl.y, (CGFloat)0.0, nil);
+    XCTAssertEqual(zero.tl.x, (CGFloat)0.0);
+    XCTAssertEqual(zero.tr.x, (CGFloat)0.0);
+    XCTAssertEqual(zero.br.x, (CGFloat)0.0);
+    XCTAssertEqual(zero.bl.x, (CGFloat)0.0);
+    XCTAssertEqual(zero.tl.y, (CGFloat)0.0);
+    XCTAssertEqual(zero.tr.y, (CGFloat)0.0);
+    XCTAssertEqual(zero.br.y, (CGFloat)0.0);
+    XCTAssertEqual(zero.bl.y, (CGFloat)0.0);
 }
 
 - (void)testAGKQuadIsValid
 {
     AGKQuad convexQuad = [self createSampleConvexQuad];
-    STAssertTrue(AGKQuadIsValid(convexQuad), nil);
+    XCTAssertTrue(AGKQuadIsValid(convexQuad));
     
     AGKQuad concaveQuad = [self createSampleConcaveQuad];
-    STAssertFalse(AGKQuadIsValid(concaveQuad), nil);
+    XCTAssertFalse(AGKQuadIsValid(concaveQuad));
 }
 
 - (void)testAGKQuadGetCenter
@@ -89,7 +89,7 @@
     {
         AGKQuad q = AGKQuadMakeWithCGSize(CGSizeMake(500, 500));
         CGPoint center = AGKQuadGetCenter(q);
-        STAssertEquals(center, CGPointMake(250, 250), nil);
+        XCTAssertEqualObjects([NSValue valueWithCGPoint:center], [NSValue valueWithCGPoint:CGPointMake(250, 250)]);
     }
 }
 

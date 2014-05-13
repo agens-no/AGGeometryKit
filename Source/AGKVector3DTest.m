@@ -21,10 +21,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import "AGKVector3D.h"
 
-@interface AGKVector3DTest : SenTestCase
+@interface AGKVector3DTest : XCTestCase
 
 @end
 
@@ -39,9 +39,9 @@
         AGKVector3D vector =  AGKVector3DGetTriangleNormal(v1, v2, v3);
         AGKVector3D expectedVector = AGKVector3DMake(0, 0, 1);
 
-        STAssertEqualsWithAccuracy(vector.x, expectedVector.x, 0.001, @"Normal vector x is %f but was expected %f", vector.x, expectedVector.x);
-        STAssertEqualsWithAccuracy(vector.y, expectedVector.y, 0.001, @"Normal vector y is %f but was expected %f", vector.y, expectedVector.y);
-        STAssertEqualsWithAccuracy(vector.z, expectedVector.z, 0.001, @"Normal vector z is %f but was expected %f", vector.z, expectedVector.z);
+        XCTAssertEqualWithAccuracy(vector.x, expectedVector.x, 0.001, @"Normal vector x is %f but was expected %f", vector.x, expectedVector.x);
+        XCTAssertEqualWithAccuracy(vector.y, expectedVector.y, 0.001, @"Normal vector y is %f but was expected %f", vector.y, expectedVector.y);
+        XCTAssertEqualWithAccuracy(vector.z, expectedVector.z, 0.001, @"Normal vector z is %f but was expected %f", vector.z, expectedVector.z);
     }
     {
         AGKVector3D v1 = AGKVector3DMake(0, 0, 0);
@@ -50,9 +50,9 @@
         AGKVector3D vector =  AGKVector3DGetTriangleNormal(v1, v2, v3);
         AGKVector3D expectedVector = AGKVector3DMake(0, -1, 0);
 
-        STAssertEqualsWithAccuracy(vector.x, expectedVector.x, 0.001, @"Normal vector x is %f but was expected %f", vector.x, expectedVector.x);
-        STAssertEqualsWithAccuracy(vector.y, expectedVector.y, 0.001, @"Normal vector y is %f but was expected %f", vector.y, expectedVector.y);
-        STAssertEqualsWithAccuracy(vector.z, expectedVector.z, 0.001, @"Normal vector z is %f but was expected %f", vector.z, expectedVector.z);
+        XCTAssertEqualWithAccuracy(vector.x, expectedVector.x, 0.001, @"Normal vector x is %f but was expected %f", vector.x, expectedVector.x);
+        XCTAssertEqualWithAccuracy(vector.y, expectedVector.y, 0.001, @"Normal vector y is %f but was expected %f", vector.y, expectedVector.y);
+        XCTAssertEqualWithAccuracy(vector.z, expectedVector.z, 0.001, @"Normal vector z is %f but was expected %f", vector.z, expectedVector.z);
     }
 }
 

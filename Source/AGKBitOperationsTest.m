@@ -6,10 +6,10 @@
 //  Copyright 2013 Håvard Fossli. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import "AGKBitOperations.h"
 
-@interface AGKBitOperationsTest : SenTestCase
+@interface AGKBitOperationsTest : XCTestCase
 
 @end
 
@@ -18,16 +18,16 @@
 - (void)testAGK_BIT_TEST
 {
     int a = 0;
-    STAssertFalse(AGK_BIT_TEST_ALL_ENABLED(a, 1 << 5), nil);
+    XCTAssertFalse(AGK_BIT_TEST_ALL_ENABLED(a, 1 << 5));
 
     AGK_BIT_ENABLE(a, 1 << 5);
-    STAssertTrue(AGK_BIT_TEST_ALL_ENABLED(a, 1 << 5), nil);
+    XCTAssertTrue(AGK_BIT_TEST_ALL_ENABLED(a, 1 << 5));
 
     AGK_BIT_CLEAR(a, 1 << 5);
-    STAssertFalse(AGK_BIT_TEST_ALL_ENABLED(a, 1 << 5), nil);
+    XCTAssertFalse(AGK_BIT_TEST_ALL_ENABLED(a, 1 << 5));
 
     AGK_BIT_CLEAR(a, 1 << 5);
-    STAssertFalse(AGK_BIT_TEST_ALL_ENABLED(a, 1 << 5), nil);
+    XCTAssertFalse(AGK_BIT_TEST_ALL_ENABLED(a, 1 << 5));
 }
 
 @end

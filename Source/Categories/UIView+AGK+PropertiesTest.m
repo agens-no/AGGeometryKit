@@ -21,10 +21,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import "UIView+AGK+Properties.h"
 
-@interface UIView_AGK_PropertiesTest : SenTestCase
+@interface UIView_AGK_PropertiesTest : XCTestCase
 
 @end
 
@@ -47,24 +47,23 @@
 - (void)testBounds
 {
     UIView *v = [[UIView alloc] initWithFrame:CGRectMake(80, 50, 400, 300)];
-    
-    STAssertEquals(v.boundsOrigin, CGPointZero, nil);
+
+    XCTAssertEqualObjects([NSValue valueWithCGPoint:v.boundsOrigin], [NSValue valueWithCGPoint:CGPointZero]);
     
     v.boundsOrigin = CGPointMake(20, 30);
-    STAssertEquals(v.boundsOrigin, CGPointMake(20, 30), nil);
-    STAssertEquals(v.frame.origin, CGPointMake(80, 50), nil);
-    
-    STAssertEquals(v.boundsCenter, CGPointMake(200, 150), nil);
-    STAssertEquals(v.boundsWidthHalf, 200.0f, nil);
-    STAssertEquals(v.boundsHeightHalf, 150.0f, nil);
-    STAssertEquals(v.boundsSizeHalf, CGSizeMake(200.0f, 150.0f), nil);
+    XCTAssertEqualObjects([NSValue valueWithCGPoint:v.boundsOrigin], [NSValue valueWithCGPoint:CGPointMake(20, 30)]);
+
+    XCTAssertEqualObjects([NSValue valueWithCGPoint:v.boundsCenter], [NSValue valueWithCGPoint:CGPointMake(200, 150)]);
+    XCTAssertEqual(v.boundsWidthHalf, 200.0);
+    XCTAssertEqual(v.boundsHeightHalf, 150.0);
+    XCTAssertEqualObjects([NSValue valueWithCGSize:v.boundsSizeHalf], [NSValue valueWithCGSize:CGSizeMake(200.0f, 150.0f)]);
     
     v.boundsWidth = 500;
-    STAssertEquals(v.boundsSize, CGSizeMake(500, 300), nil);
-    STAssertEquals(v.boundsWidth, 500.0f, nil);
+    XCTAssertEqualObjects([NSValue valueWithCGSize:v.boundsSize], [NSValue valueWithCGSize:CGSizeMake(500, 300)]);
+    XCTAssertEqual(v.boundsWidth, 500.0);
     
     v.boundsHeight = 600;
-    STAssertEquals(v.boundsHeight, 600.0f, nil);
+    XCTAssertEqual(v.boundsHeight, 600.0f);
 }
 
 - (void)testFrame
@@ -76,17 +75,18 @@
     v.frameMaxX = 480;
     v.frameMaxY = 350;
     
-    STAssertEquals(v.frameMinX, 80.0f, nil);
-    STAssertEquals(v.frameMidX, 280.0f, nil);
-    STAssertEquals(v.frameMaxX, 480.0f, nil);
-    STAssertEquals(v.frameMinY, 50.0f, nil);
-    STAssertEquals(v.frameMidY, 200.0f, nil);
-    STAssertEquals(v.frameMaxY, 350.0f, nil);
-    STAssertEquals(v.frameWidth, 400.0f, nil);
-    STAssertEquals(v.frameHeight, 300.0f, nil);
-    STAssertEquals(v.frameHeightHalf, 150.0f, nil);
-    STAssertEquals(v.frameWidthHalf, 200.0f, nil);
-    STAssertEquals(v.frameSizeHalf, CGSizeMake(200.0f, 150.0f), nil);
+    XCTAssertEqual(v.frameMinX, 80.0f);
+    XCTAssertEqual(v.frameMidX, 280.0f);
+    XCTAssertEqual(v.frameMaxX, 480.0f);
+    XCTAssertEqual(v.frameMinY, 50.0f);
+    XCTAssertEqual(v.frameMidY, 200.0f);
+    XCTAssertEqual(v.frameMaxY, 350.0f);
+    XCTAssertEqual(v.frameWidth, 400.0f);
+    XCTAssertEqual(v.frameHeight, 300.0f);
+    XCTAssertEqual(v.frameHeightHalf, 150.0f);
+    XCTAssertEqual(v.frameWidthHalf, 200.0f);
+    XCTAssertEqual(v.frameSizeHalf.width, 200.0f);
+    XCTAssertEqual(v.frameSizeHalf.height, 150.0);
 }
 
 @end

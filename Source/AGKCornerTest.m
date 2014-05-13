@@ -21,11 +21,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import "AGKCorner.h"
 #import "CGGeometry+AGGeometryKit.h"
 
-@interface AGKCornerTest : SenTestCase
+@interface AGKCornerTest : XCTestCase
 
 @end
 
@@ -48,14 +48,14 @@
 
 - (void)testAGKCornerIsOnSide
 {
-    STAssertTrue(AGKCornerIsOnSide(AGKCornerTopLeft, AGKSideLeft), @"corner should on given side");
-    STAssertTrue(AGKCornerIsOnSide(AGKCornerBottomLeft, AGKSideLeft), @"corner should on given side");
-    STAssertTrue(AGKCornerIsOnSide(AGKCornerTopLeft, AGKSideTop), @"corner should on given side");
-    STAssertTrue(AGKCornerIsOnSide(AGKCornerTopRight, AGKSideTop), @"corner should on given side");
-    STAssertTrue(AGKCornerIsOnSide(AGKCornerTopRight, AGKSideRight), @"corner should on given side");
-    STAssertTrue(AGKCornerIsOnSide(AGKCornerBottomRight, AGKSideRight), @"corner should on given side");
-    STAssertTrue(AGKCornerIsOnSide(AGKCornerBottomRight, AGKSideBottom), @"corner should on given side");
-    STAssertTrue(AGKCornerIsOnSide(AGKCornerBottomLeft, AGKSideBottom), @"corner should on given side");
+    XCTAssertTrue(AGKCornerIsOnSide(AGKCornerTopLeft, AGKSideLeft), @"corner should on given side");
+    XCTAssertTrue(AGKCornerIsOnSide(AGKCornerBottomLeft, AGKSideLeft), @"corner should on given side");
+    XCTAssertTrue(AGKCornerIsOnSide(AGKCornerTopLeft, AGKSideTop), @"corner should on given side");
+    XCTAssertTrue(AGKCornerIsOnSide(AGKCornerTopRight, AGKSideTop), @"corner should on given side");
+    XCTAssertTrue(AGKCornerIsOnSide(AGKCornerTopRight, AGKSideRight), @"corner should on given side");
+    XCTAssertTrue(AGKCornerIsOnSide(AGKCornerBottomRight, AGKSideRight), @"corner should on given side");
+    XCTAssertTrue(AGKCornerIsOnSide(AGKCornerBottomRight, AGKSideBottom), @"corner should on given side");
+    XCTAssertTrue(AGKCornerIsOnSide(AGKCornerBottomLeft, AGKSideBottom), @"corner should on given side");
 }
 
 - (void)testCombinedUsageAnchorAndCorner
@@ -64,16 +64,16 @@
     CGPoint point;
     
     point = CGPointConvertFromAnchorPoint_AGK(AGKCornerConvertToAnchorPoint(AGKCornerTopLeft), rect);
-    STAssertEquals(point, CGPointMake(50, 80), @"point is not as expected");
+    XCTAssertEqualObjects([NSValue valueWithCGPoint:point], [NSValue valueWithCGPoint:CGPointMake(50, 80)]);
     
     point = CGPointConvertFromAnchorPoint_AGK(AGKCornerConvertToAnchorPoint(AGKCornerTopRight), rect);
-    STAssertEquals(point, CGPointMake(50 + 350, 80), @"point is not as expected");
+    XCTAssertEqualObjects([NSValue valueWithCGPoint:point], [NSValue valueWithCGPoint:CGPointMake(50 + 350, 80)]);
     
     point = CGPointConvertFromAnchorPoint_AGK(AGKCornerConvertToAnchorPoint(AGKCornerBottomRight), rect);
-    STAssertEquals(point, CGPointMake(50 + 350, 80 + 270), @"point is not as expected");
+    XCTAssertEqualObjects([NSValue valueWithCGPoint:point], [NSValue valueWithCGPoint:CGPointMake(50 + 350, 80 + 270)]);
     
     point = CGPointConvertFromAnchorPoint_AGK(AGKCornerConvertToAnchorPoint(AGKCornerBottomLeft), rect);
-    STAssertEquals(point, CGPointMake(50, 80 + 270), @"point is not as expected");
+    XCTAssertEqualObjects([NSValue valueWithCGPoint:point], [NSValue valueWithCGPoint:CGPointMake(50, 80 + 270)]);
 }
 
 @end
