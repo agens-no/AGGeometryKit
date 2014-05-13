@@ -41,7 +41,7 @@
     
     for(NSString *key in keys)
     {
-        [dict setObject:[NSNull null] forKey:key];
+        dict[key] = [NSNull null];
     }
     
     self.actions = dict;

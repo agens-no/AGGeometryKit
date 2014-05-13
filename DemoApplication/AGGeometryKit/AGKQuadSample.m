@@ -54,7 +54,7 @@
 
 - (void)tapRecognized:(UITapGestureRecognizer *)recognizer
 {
-    NSLog(@"Tap recognized");
+    NSLog(@"Tap recognized. Logging just to show that we are receiving touch correctly even when animating.");
 }
 
 - (IBAction)changeToSquareShape:(id)sender
