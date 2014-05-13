@@ -57,7 +57,7 @@ CGPoint CGPointConvertFromAnchorPoint_AGK(CGPoint anchor, CGRect rect);
 CGPoint CGPointConvertToAnchorPoint_AGK(CGPoint point, CGRect rect);
 
 CGPoint CGPointInterpolate_AGK(CGPoint point1, CGPoint point2, CGFloat progress);
-CGSize  CGSizeClamp_AGK(CGSize s, CGFloat minWidth, CGFloat maxWidth, CGFloat minHeight, CGFloat maxHeight);
+CGPoint CGPointClamp_AGK(CGPoint p, CGFloat minX, CGFloat maxX, CGFloat minY, CGFloat maxY);
 
 
 // CGSize
@@ -74,7 +74,7 @@ CGFloat CGSizeScalarToAspectFit_AGK(CGSize sizeToFit, CGSize container);
 CGFloat CGSizeScalarToAspectFill_AGK(CGSize sizeToFill, CGSize container);
 
 CGSize  CGSizeInterpolate_AGK(CGSize size1, CGSize size2, CGFloat progress);
-CGSize  CGSizeClamp_AGK(CGSize s, CGFloat minX, CGFloat maxX, CGFloat minY, CGFloat maxY);
+CGSize  CGSizeClamp_AGK(CGSize s, CGFloat minWidth, CGFloat maxWidth, CGFloat minHeight, CGFloat maxHeight);
 
 
 // CGRect
