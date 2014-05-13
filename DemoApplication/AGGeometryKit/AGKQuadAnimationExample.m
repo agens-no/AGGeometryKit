@@ -21,13 +21,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "AGKQuadSample.h"
+#import "AGKQuadAnimationExample.h"
 #import "AGKQuad.h"
 #import "easing.h"
 #import "CALayer+AGKQuad.h"
 #import "CALayer+AGK+Methods.h"
 
-@interface AGKQuadSample ()
+@interface AGKQuadAnimationExample ()
 
 @property (nonatomic, strong) IBOutlet UIImageView *imageView;
 @property (nonatomic, assign) AGKQuad originalQuad;
@@ -35,7 +35,7 @@
 @end
 
 
-@implementation AGKQuadSample
+@implementation AGKQuadAnimationExample
 
 - (void)viewDidLoad
 {

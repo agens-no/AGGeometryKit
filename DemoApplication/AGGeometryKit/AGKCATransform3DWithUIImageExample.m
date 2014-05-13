@@ -21,14 +21,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "AGKRenderingSample.h"
+#import "AGKCATransform3DWithUIImageExample.h"
 #import "AGKQuad.h"
 #import "CALayer+AGKQuad.h"
 #import "UIImage+AGKQuad.h"
 #import "JAValueToString.h"
 #import "CALayer+AGK+Methods.h"
 
-@interface AGKRenderingSample ()
+@interface AGKCATransform3DWithUIImageExample ()
 
 @property (nonatomic, strong) IBOutlet UIImageView *imageView1;
 @property (nonatomic, strong) IBOutlet UIImageView *imageView2;
@@ -36,7 +36,7 @@
 @end
 
 
-@implementation AGKRenderingSample
+@implementation AGKCATransform3DWithUIImageExample
 
 - (void)viewDidLoad
 {

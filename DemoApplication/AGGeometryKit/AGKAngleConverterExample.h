@@ -1,5 +1,5 @@
 //
-// Author: Håvard Fossli <hfossli@agens.no>
+// Author: Odd Magne Hågensen <oddmagne@agens.no>
 //
 // Copyright (c) 2013 Agens AS (http://agens.no/)
 //
@@ -21,9 +21,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface AGKQuadControlsSample : UIViewController <UIGestureRecognizerDelegate> {}
+@interface AGKAngleConverterExample : UIViewController
 
 @end

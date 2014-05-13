@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AGKAngleConverterSample">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AGKAngleConverterExample">
             <connections>
                 <outlet property="calculatedAngleLabel" destination="12" id="15"/>
                 <outlet property="sliderA" destination="4" id="PTH-yK-Zuw"/>

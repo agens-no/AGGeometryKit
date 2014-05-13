@@ -38,7 +38,7 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </tabBar>
             <viewControllers>
-                <viewController id="10" customClass="AGKQuadControlsSample">
+                <viewController id="10" customClass="AGKQuadControlsExample">
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="1" image="Box_Closed.png" id="11"/>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -47,7 +47,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <nil key="simulatedDestinationMetrics"/>
                 </viewController>
-                <viewController id="9" customClass="AGKQuadSample">
+                <viewController id="9" customClass="AGKQuadAnimationExample">
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="2" image="Box_Closed.png" id="12"/>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -56,7 +56,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <nil key="simulatedDestinationMetrics"/>
                 </viewController>
-                <viewController id="16" customClass="AGKAngleConverterSample">
+                <viewController id="16" customClass="AGKAngleConverterExample">
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="3" image="Box_Closed.png" id="17"/>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -65,7 +65,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <nil key="simulatedDestinationMetrics"/>
                 </viewController>
-                <viewController id="14" customClass="AGKRenderingSample">
+                <viewController id="14" customClass="AGKCATransform3DWithUIImageExample">
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="4" image="Box_Closed.png" id="15"/>
                     <nil key="simulatedStatusBarMetrics"/>

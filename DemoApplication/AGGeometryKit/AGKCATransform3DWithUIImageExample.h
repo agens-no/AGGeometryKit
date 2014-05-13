@@ -1,5 +1,5 @@
 //
-// Author: Odd Magne Hågensen <oddmagne@agens.no>
+// Author: Håvard Fossli <hfossli@agens.no>
 //
 // Copyright (c) 2013 Agens AS (http://agens.no/)
 //
@@ -21,8 +21,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface AGKAngleConverterSample : UIViewController
+@interface AGKCATransform3DWithUIImageExample : UIViewController
 
 @end

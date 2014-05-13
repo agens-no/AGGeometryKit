@@ -21,10 +21,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "AGKAngleConverterSample.h"
+#import "AGKAngleConverterExample.h"
 #import "UIView+AGK+AngleConverter.h"
 
-@interface AGKAngleConverterSample ()
+@interface AGKAngleConverterExample ()
 
 @property (nonatomic, strong) IBOutlet UISlider *sliderA;
 @property (nonatomic, strong) IBOutlet UISlider *sliderB;
@@ -35,7 +35,7 @@
 
 @end
 
-@implementation AGKAngleConverterSample
+@implementation AGKAngleConverterExample
 
 - (void)viewWillAppear:(BOOL)animated
 {

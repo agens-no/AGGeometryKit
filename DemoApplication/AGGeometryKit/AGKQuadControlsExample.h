@@ -24,6 +24,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface AGKRenderingSample : UIViewController {}
+@interface AGKQuadControlsExample : UIViewController
 
 @end
