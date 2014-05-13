@@ -38,10 +38,6 @@
 		A3762F311728067A00E7A2AB /* AGKQuadControlsExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3762F2E1728067900E7A2AB /* AGKQuadControlsExample.m */; };
 		A3762F321728067A00E7A2AB /* AGKQuadControlsExample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3762F2F1728067A00E7A2AB /* AGKQuadControlsExample.xib */; };
 		A3762F331728067A00E7A2AB /* AGKQuadControlsExample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3762F2F1728067A00E7A2AB /* AGKQuadControlsExample.xib */; };
-		A3762F351728138C00E7A2AB /* controlpoint.png in Resources */ = {isa = PBXBuildFile; fileRef = A3762F341728138C00E7A2AB /* controlpoint.png */; };
-		A3762F361728138C00E7A2AB /* controlpoint.png in Resources */ = {isa = PBXBuildFile; fileRef = A3762F341728138C00E7A2AB /* controlpoint.png */; };
-		A3762F38172813CE00E7A2AB /* controlpoint_h.png in Resources */ = {isa = PBXBuildFile; fileRef = A3762F37172813CD00E7A2AB /* controlpoint_h.png */; };
-		A3762F39172813CE00E7A2AB /* controlpoint_h.png in Resources */ = {isa = PBXBuildFile; fileRef = A3762F37172813CD00E7A2AB /* controlpoint_h.png */; };
 		A3762F5417287EB400E7A2AB /* crop_sample.png in Resources */ = {isa = PBXBuildFile; fileRef = A3762F5117287EB400E7A2AB /* crop_sample.png */; };
 		A3762F5517287EB400E7A2AB /* crop_sample.png in Resources */ = {isa = PBXBuildFile; fileRef = A3762F5117287EB400E7A2AB /* crop_sample.png */; };
 		A3762F59172885FE00E7A2AB /* AGKCATransform3DWithUIImageExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3762F57172885FC00E7A2AB /* AGKCATransform3DWithUIImageExample.m */; };
@@ -86,6 +82,10 @@
 		A3E67AF9192112F700A4CD4A /* sample_image6@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3E67AF7192112F700A4CD4A /* sample_image6@2x.jpg */; };
 		A3E67AFC19211B6900A4CD4A /* sample_image7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3E67AFA19211B6900A4CD4A /* sample_image7.jpg */; };
 		A3E67AFD19211B6900A4CD4A /* sample_image7@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3E67AFB19211B6900A4CD4A /* sample_image7@2x.jpg */; };
+		A3E67B02192214B500A4CD4A /* controlpoint_h.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E67AFE192214B500A4CD4A /* controlpoint_h.png */; };
+		A3E67B03192214B500A4CD4A /* controlpoint_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E67AFF192214B500A4CD4A /* controlpoint_h@2x.png */; };
+		A3E67B04192214B500A4CD4A /* controlpoint.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E67B00192214B500A4CD4A /* controlpoint.png */; };
+		A3E67B05192214B500A4CD4A /* controlpoint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E67B01192214B500A4CD4A /* controlpoint@2x.png */; };
 		A3EE526916EDEE83007706C6 /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = A3EE526716EDEE83007706C6 /* easing.c */; };
 		A3EE526A16EDEE83007706C6 /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = A3EE526716EDEE83007706C6 /* easing.c */; };
 		A3EE526F16F07479007706C6 /* AGKAngleConverterExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE526D16F07479007706C6 /* AGKAngleConverterExample.m */; };
@@ -134,8 +134,6 @@
 		A3762F2D1728067900E7A2AB /* AGKQuadControlsExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKQuadControlsExample.h; sourceTree = "<group>"; };
 		A3762F2E1728067900E7A2AB /* AGKQuadControlsExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKQuadControlsExample.m; sourceTree = "<group>"; };
 		A3762F2F1728067A00E7A2AB /* AGKQuadControlsExample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGKQuadControlsExample.xib; sourceTree = "<group>"; };
-		A3762F341728138C00E7A2AB /* controlpoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controlpoint.png; sourceTree = "<group>"; };
-		A3762F37172813CD00E7A2AB /* controlpoint_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controlpoint_h.png; sourceTree = "<group>"; };
 		A3762F5117287EB400E7A2AB /* crop_sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crop_sample.png; sourceTree = "<group>"; };
 		A3762F56172885FB00E7A2AB /* AGKCATransform3DWithUIImageExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKCATransform3DWithUIImageExample.h; sourceTree = "<group>"; };
 		A3762F57172885FC00E7A2AB /* AGKCATransform3DWithUIImageExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKCATransform3DWithUIImageExample.m; sourceTree = "<group>"; };
@@ -198,6 +196,10 @@
 		A3E67AF7192112F700A4CD4A /* sample_image6@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sample_image6@2x.jpg"; sourceTree = "<group>"; };
 		A3E67AFA19211B6900A4CD4A /* sample_image7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_image7.jpg; sourceTree = "<group>"; };
 		A3E67AFB19211B6900A4CD4A /* sample_image7@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sample_image7@2x.jpg"; sourceTree = "<group>"; };
+		A3E67AFE192214B500A4CD4A /* controlpoint_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controlpoint_h.png; sourceTree = "<group>"; };
+		A3E67AFF192214B500A4CD4A /* controlpoint_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "controlpoint_h@2x.png"; sourceTree = "<group>"; };
+		A3E67B00192214B500A4CD4A /* controlpoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controlpoint.png; sourceTree = "<group>"; };
+		A3E67B01192214B500A4CD4A /* controlpoint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "controlpoint@2x.png"; sourceTree = "<group>"; };
 		A3EE526716EDEE83007706C6 /* easing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = easing.c; sourceTree = "<group>"; };
 		A3EE526816EDEE83007706C6 /* easing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = easing.h; sourceTree = "<group>"; };
 		A3EE526C16F07479007706C6 /* AGKAngleConverterExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKAngleConverterExample.h; sourceTree = "<group>"; };
@@ -251,8 +253,10 @@
 				A3270F3316D5675800A92C03 /* main.m */,
 				A3E67AF2192112B400A4CD4A /* Box_Closed.png */,
 				A3E67AF3192112B400A4CD4A /* Box_Closed@2x.png */,
-				A3762F341728138C00E7A2AB /* controlpoint.png */,
-				A3762F37172813CD00E7A2AB /* controlpoint_h.png */,
+				A3E67AFE192214B500A4CD4A /* controlpoint_h.png */,
+				A3E67AFF192214B500A4CD4A /* controlpoint_h@2x.png */,
+				A3E67B00192214B500A4CD4A /* controlpoint.png */,
+				A3E67B01192214B500A4CD4A /* controlpoint@2x.png */,
 				A3762F5117287EB400E7A2AB /* crop_sample.png */,
 				A39DA67C172984E9005B84D3 /* arrow.png */,
 				A39DA67D172984E9005B84D3 /* arrow@2x.png */,
@@ -396,18 +400,18 @@
 		A3EA84071729898000AF716C /* Sample Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A3270F2B16D5675800A92C03 /* AGKQuadAnimationExample.h */,
-				A3270F2C16D5675800A92C03 /* AGKQuadAnimationExample.m */,
-				A3270F2D16D5675800A92C03 /* AGKQuadAnimationExample.xib */,
 				A3762F2D1728067900E7A2AB /* AGKQuadControlsExample.h */,
 				A3762F2E1728067900E7A2AB /* AGKQuadControlsExample.m */,
 				A3762F2F1728067A00E7A2AB /* AGKQuadControlsExample.xib */,
-				A3762F56172885FB00E7A2AB /* AGKCATransform3DWithUIImageExample.h */,
-				A3762F57172885FC00E7A2AB /* AGKCATransform3DWithUIImageExample.m */,
-				A3762F58172885FD00E7A2AB /* AGKCATransform3DWithUIImageExample.xib */,
+				A3270F2B16D5675800A92C03 /* AGKQuadAnimationExample.h */,
+				A3270F2C16D5675800A92C03 /* AGKQuadAnimationExample.m */,
+				A3270F2D16D5675800A92C03 /* AGKQuadAnimationExample.xib */,
 				A3EE526C16F07479007706C6 /* AGKAngleConverterExample.h */,
 				A3EE526D16F07479007706C6 /* AGKAngleConverterExample.m */,
 				A3EE526E16F07479007706C6 /* AGKAngleConverterExample.xib */,
+				A3762F56172885FB00E7A2AB /* AGKCATransform3DWithUIImageExample.h */,
+				A3762F57172885FC00E7A2AB /* AGKCATransform3DWithUIImageExample.m */,
+				A3762F58172885FD00E7A2AB /* AGKCATransform3DWithUIImageExample.xib */,
 			);
 			name = "Sample Controllers";
 			sourceTree = "<group>";
@@ -499,15 +503,17 @@
 				A3E67AF8192112F700A4CD4A /* sample_image6.jpg in Resources */,
 				A3EE527116F07479007706C6 /* AGKAngleConverterExample.xib in Resources */,
 				A3762F321728067A00E7A2AB /* AGKQuadControlsExample.xib in Resources */,
-				A3762F351728138C00E7A2AB /* controlpoint.png in Resources */,
+				A3E67B03192214B500A4CD4A /* controlpoint_h@2x.png in Resources */,
+				A3E67B05192214B500A4CD4A /* controlpoint@2x.png in Resources */,
 				A3E67AF9192112F700A4CD4A /* sample_image6@2x.jpg in Resources */,
-				A3762F38172813CE00E7A2AB /* controlpoint_h.png in Resources */,
 				A3762F5417287EB400E7A2AB /* crop_sample.png in Resources */,
 				A3E67AFC19211B6900A4CD4A /* sample_image7.jpg in Resources */,
 				A3762F5B172885FE00E7A2AB /* AGKCATransform3DWithUIImageExample.xib in Resources */,
 				A3762F671728914700E7A2AB /* AGGeometryKitApplication.xib in Resources */,
 				A39DA67E172984E9005B84D3 /* arrow.png in Resources */,
 				A39DA680172984E9005B84D3 /* arrow@2x.png in Resources */,
+				A3E67B04192214B500A4CD4A /* controlpoint.png in Resources */,
+				A3E67B02192214B500A4CD4A /* controlpoint_h.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,8 +529,6 @@
 				A3270F5416D5675800A92C03 /* InfoPlist.strings in Resources */,
 				A3EE527216F07479007706C6 /* AGKAngleConverterExample.xib in Resources */,
 				A3762F331728067A00E7A2AB /* AGKQuadControlsExample.xib in Resources */,
-				A3762F361728138C00E7A2AB /* controlpoint.png in Resources */,
-				A3762F39172813CE00E7A2AB /* controlpoint_h.png in Resources */,
 				A3762F5517287EB400E7A2AB /* crop_sample.png in Resources */,
 				A3762F5C172885FE00E7A2AB /* AGKCATransform3DWithUIImageExample.xib in Resources */,
 				A3762F681728914700E7A2AB /* AGGeometryKitApplication.xib in Resources */,
