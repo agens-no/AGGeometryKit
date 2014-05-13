@@ -43,13 +43,9 @@
     [self.imageView addGestureRecognizer:tapRecognizer];
 
     [self.imageView.layer ensureAnchorPointIsSetToZero];
+    self.originalQuad = self.imageView.layer.quadrilateral;
 
     [super viewDidLoad];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    self.originalQuad = self.imageView.layer.quadrilateral;
 }
 
 - (void)tapRecognized:(UITapGestureRecognizer *)recognizer

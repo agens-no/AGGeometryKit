@@ -37,7 +37,7 @@
 
 @implementation AGKAngleConverterExample
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)viewDidLoad
 {
     [super viewDidLoad];
     
@@ -75,8 +75,7 @@
 - (void)updateCalculationLabel
 {
     float angle = [self.viewA convertAngleOfViewInRelationToView:self.viewB];
-    self.calculatedAngleLabel.text = [NSString stringWithFormat:@"Calculated angle: %.2f", angle * 180.0f / M_PI];
+    self.calculatedAngleLabel.text = [NSString stringWithFormat:@"Calculated angle: %.2f degrees (%.3f radians)", angle * 180.0f / M_PI, angle];
 }
-
 
 @end
