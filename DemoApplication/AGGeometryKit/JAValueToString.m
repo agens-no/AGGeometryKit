@@ -198,6 +198,22 @@ enum
 	kAlignFloat				= 4,
 	kAlignDouble			= 4,
 	kAlignSelector			= 4,
+#elif __arm64__
+	kAlignPointer			= 8,
+	kAlignBool				= 1,
+	kAlignChar				= 1,
+	kAlignUnsignedChar		= 1,
+	kAlignShort				= 2,
+	kAlignUnsignedShort		= 2,
+	kAlignInt				= 4,
+	kAlignUnsignedInt		= 4,
+	kAlignLong				= 8,
+	kAlignUnsignedLong		= 8,
+	kAlignLongLong			= 8,
+	kAlignUnsignedLongLong	= 8,
+	kAlignFloat				= 4,
+	kAlignDouble			= 8,
+	kAlignSelector			= 8,
 #else
 #error Unknown architecture
 #endif
@@ -232,7 +248,7 @@ enum
 };
 
 
-static NSString *StringWithBytesLengthEncoding(const void *bytes, NSUInteger length, NSStringEncoding encoding)
+static inline NSString *StringWithBytesLengthEncoding(const void *bytes, NSUInteger length, NSStringEncoding encoding)
 {
 	NSString *result = [[NSString alloc] initWithBytes:bytes
 												length:length
@@ -721,7 +737,7 @@ static void DecodeStruct(DECODER_PARAMS)
 DECLARE_DISPATCH(Struct);
 
 
-static NSString *ExtractString(const char *strPtr, size_t maxLength)
+static inline NSString *ExtractString(const char *strPtr, size_t maxLength)
 {
 	if (strPtr == NULL || maxLength == 0)  return @"";
 	
@@ -1023,7 +1039,7 @@ static int CompareDispatchEntries(const DispatchEntry **a, const DispatchEntry *
 }
 
 
-static size_t RoundUp(size_t size, size_t factor)
+static inline size_t RoundUp(size_t size, size_t factor)
 {
 	size += factor - 1;
 	size -= size % factor;
