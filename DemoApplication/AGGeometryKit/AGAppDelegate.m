@@ -22,10 +22,6 @@
 // THE SOFTWARE.
 
 #import "AGAppDelegate.h"
-#import "AGKQuadAnimationExample.h"
-#import "AGKQuadControlsExample.h"
-#import "AGKAngleConverterExample.h"
-#import "AGKCATransform3DWithUIImageExample.h"
 
 @implementation AGAppDelegate
 
