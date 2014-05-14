@@ -126,7 +126,7 @@ Convex quadrilateral, simple quadrilateral, tangential, kite, rhombus, square, t
 
 
 
-## Who's behind it?
+## Who's behind this?
 
 Agens.no a company situated in Oslo, Norway with some help from some very clever stackoverflow.com guys.
 
