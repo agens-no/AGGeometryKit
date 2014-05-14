@@ -86,10 +86,10 @@
     
     size_t bytesInTotal = height * bytesPerRow;
     
-    for (int y = 0 ; y < height ; ++y)
-    for (int x = 0 ; x < width ; ++x)
+    for (size_t y = 0 ; y < height ; ++y)
+    for (size_t x = 0 ; x < width ; ++x)
     {
-        int indexOutput = bytesPerPixel * x + bytesPerRow * y;
+        size_t indexOutput = bytesPerPixel * x + bytesPerRow * y;
         
         CGPoint modelPoint = CGPointMake((x*2.0/scale - outSize.width/scale)/2.0,
                                          (y*2.0/scale - outSize.height/scale)/2.0);
@@ -98,19 +98,19 @@
         p.x *= scale;
         p.y *= scale;
         
-        int indexInput = bytesPerPixel*(int)p.x + (bytesPerRow*(int)p.y);
+        size_t indexInput = bytesPerPixel*(size_t)p.x + (bytesPerRow*(size_t)p.y);
         BOOL isOutOfBounds = p.x >= width || p.x < 0 || p.y >= height || p.y < 0 || indexInput > bytesInTotal;
         
         if (isOutOfBounds)
         {
-            for(int j = 0; j < bytesPerPixel; j++)
+            for(size_t j = 0; j < bytesPerPixel; j++)
             {
                 output[indexOutput+j] = 0;
             }
         }
         else
         {
-            for(int j = 0; j < bytesPerPixel; j++)
+            for(size_t j = 0; j < bytesPerPixel; j++)
             {
                 output[indexOutput+j] = input[indexInput+j];
             }
