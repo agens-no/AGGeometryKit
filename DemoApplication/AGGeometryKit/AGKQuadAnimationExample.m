@@ -48,11 +48,6 @@
     [super viewDidLoad];
 }
 
-- (void)tapRecognized:(UITapGestureRecognizer *)recognizer
-{
-    NSLog(@"Tap recognized. Logging just to show that we are receiving touch correctly even when animating.");
-}
-
 - (IBAction)changeToSquareShape:(id)sender
 {
     AGKQuad quad = self.originalQuad;
@@ -83,8 +78,8 @@
 
 - (void)animateToQuad:(AGKQuad)quad
 {
-    NSLog(@"Animating from:\n    %@", NSStringFromAGKQuad(self.imageView.layer.quadrilateral));
-    NSLog(@"Animating to:  \n    %@", NSStringFromAGKQuad(quad));
+    NSLog(@"Animating from: %@", NSStringFromAGKQuad(self.imageView.layer.quadrilateral));
+    NSLog(@"Animating to: %@", NSStringFromAGKQuad(quad));
     
     NSTimeInterval duration = 2.0;
     
@@ -94,7 +89,7 @@
     
     void (^onAnimComplete)(BOOL finished) = ^(BOOL finished) {
         NSString *quadInfoString = NSStringFromAGKQuad([[self.imageView.layer presentationLayer] quadrilateral]);
-        NSLog(@"Animation done (%@):\n    %@", finished ? @"FINISHED" : @"CANCELLED", quadInfoString);
+        NSLog(@"Animation done (%@): %@", finished ? @"FINISHED" : @"CANCELLED", quadInfoString);
     };
     
     [self.imageView.layer animateFromPresentedStateToQuadrilateral:quad
@@ -104,6 +99,11 @@
                                                            animKey:@"demo"
                                                       easeFunction:interpolationFunction
                                                         onComplete:onAnimComplete];
+}
+
+- (void)tapRecognized:(UITapGestureRecognizer *)recognizer
+{
+    NSLog(@"Tap recognized. Logging just to show that we are receiving touch correctly even when animating.");
 }
 
 @end

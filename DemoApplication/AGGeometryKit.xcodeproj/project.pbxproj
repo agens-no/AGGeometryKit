@@ -248,7 +248,7 @@
 		A3270F2616D5675800A92C03 /* AGGeometryKit */ = {
 			isa = PBXGroup;
 			children = (
-				A3EA84071729898000AF716C /* Sample Controllers */,
+				A3EA84071729898000AF716C /* Demo controllers */,
 				A3270F2716D5675800A92C03 /* AGAppDelegate.h */,
 				A3270F2816D5675800A92C03 /* AGAppDelegate.m */,
 				A3762F661728914500E7A2AB /* AGGeometryKitApplication.xib */,
@@ -409,7 +409,7 @@
 			path = CoreGraphics_Extensions;
 			sourceTree = "<group>";
 		};
-		A3EA84071729898000AF716C /* Sample Controllers */ = {
+		A3EA84071729898000AF716C /* Demo controllers */ = {
 			isa = PBXGroup;
 			children = (
 				A3762F2D1728067900E7A2AB /* AGKQuadControlsExample.h */,
@@ -425,7 +425,7 @@
 				A3762F57172885FC00E7A2AB /* AGKCATransform3DWithUIImageExample.m */,
 				A3762F58172885FD00E7A2AB /* AGKCATransform3DWithUIImageExample.xib */,
 			);
-			name = "Sample Controllers";
+			name = "Demo controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

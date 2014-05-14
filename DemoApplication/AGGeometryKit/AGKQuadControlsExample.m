@@ -49,37 +49,46 @@
 
     [self.imageView.layer ensureAnchorPointIsSetToZero];
 
+    self.imageView.layer.quadrilateral = AGKQuadMake(self.topLeftControl.center,
+                                                     self.topRightControl.center,
+                                                     self.bottomRightControl.center,
+                                                     self.bottomLeftControl.center);
+
     [self createOverlay];
-    [self createAndApplyQuad];
+    [self updateOverlay];
 }
 
-- (void)createAndApplyQuad
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
 {
-    AGKQuad quad = AGKQuadMake(self.topLeftControl.center,
-                               self.topRightControl.center,
-                               self.bottomRightControl.center,
-                               self.bottomLeftControl.center);
+    return YES;
+}
 
-    if(AGKQuadIsValid(quad))
-    {
-        self.imageView.layer.quadrilateral = quad;
-    }
-    self.maskView.layer.position = CGPointZero;
-    self.maskView.layer.shadowPath = [UIBezierPath bezierPathWithAGKQuad:quad].CGPath;
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return YES;
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    return YES;
 }
 
 - (IBAction)panGestureChanged:(UIPanGestureRecognizer *)recognizer
 {
-    UIImageView *view = (UIImageView *)[recognizer view];
-    
+    UIImageView *controlPointView = (UIImageView *)[recognizer view];
+    controlPointView.highlighted = recognizer.state == UIGestureRecognizerStateChanged;
+
     CGPoint translation = [recognizer translationInView:self.view];
-    view.centerX += translation.x;
-    view.centerY += translation.y;
+    controlPointView.centerX += translation.x;
+    controlPointView.centerY += translation.y;
     [recognizer setTranslation:CGPointZero inView:self.view];
-    
-    view.highlighted = recognizer.state == UIGestureRecognizerStateChanged;
-    
-    [self createAndApplyQuad];
+
+    self.imageView.layer.quadrilateral = AGKQuadMake(self.topLeftControl.center,
+                                                     self.topRightControl.center,
+                                                     self.bottomRightControl.center,
+                                                     self.bottomLeftControl.center);
+
+    [self updateOverlay];
 }
 
 - (void)createOverlay
@@ -94,6 +103,12 @@
     self.maskView.userInteractionEnabled = NO;
     self.maskView.hidden = !self.switchControl.on;
     [self.view insertSubview:self.maskView aboveSubview:self.imageView];
+}
+
+- (void)updateOverlay
+{
+    self.maskView.layer.position = CGPointZero;
+    self.maskView.layer.shadowPath = [UIBezierPath bezierPathWithAGKQuad:self.imageView.layer.quadrilateral].CGPath;
 }
 	
 - (IBAction)toggleDisplayOverlay:(UISwitch *)switchControl
