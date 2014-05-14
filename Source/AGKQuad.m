@@ -79,9 +79,21 @@ BOOL AGKQuadIsConvex(AGKQuad q)
     return isConvex;
 }
 
+BOOL AGKQuadContainsValidValues(AGKQuad q)
+{
+    for(int i = 0; i < 4; i++)
+    {
+        if(isnan(q.v[i].x) || isnan(q.v[i].y) || isinf(q.v[i].x) || isinf(q.v[i].y))
+        {
+            return NO;
+        }
+    }
+    return YES;
+}
+
 BOOL AGKQuadIsValid(AGKQuad q)
 {
-    return AGKQuadIsConvex(q);
+    return AGKQuadIsConvex(q) && AGKQuadContainsValidValues(q);
 }
 
 int AGKQuadCornerIndexForCorner(AGKCorner corner)
@@ -308,10 +320,12 @@ AGKQuad AGKQuadApplyCATransform3D(AGKQuad q, CATransform3D t)
 NSString * NSStringFromAGKQuad(AGKQuad q)
 {
     return [NSString stringWithFormat:
-            @"tl: %@, "
-             "tr: %@, "
-             "br: %@, "
-             "bl: %@",
+            @"AGKQuad {\n\t"
+             "tl: %@,\n\t"
+             "tr: %@,\n\t"
+             "br: %@,\n\t"
+             "bl: %@\n"
+             "}",
             NSStringFromCGPoint(q.tl),
             NSStringFromCGPoint(q.tr),
             NSStringFromCGPoint(q.br),

@@ -96,6 +96,19 @@
     XCTAssertFalse(AGKQuadEqualWithAccuracy(q1, q2, 1000.0));
 }
 
+- (void)testAGKQuadContainsValidValues
+{
+    AGKQuad quadWithInfinityValue = [self createSampleConvexQuad];
+    XCTAssertTrue(AGKQuadContainsValidValues(quadWithInfinityValue));
+
+    quadWithInfinityValue.tr.x = CGFLOAT_MAX * 2.0;
+    XCTAssertFalse(AGKQuadContainsValidValues(quadWithInfinityValue));
+
+    AGKQuad quadWithNanValue;
+    quadWithNanValue.br.y = 0.0 / 0.0;
+    XCTAssertFalse(AGKQuadContainsValidValues(quadWithNanValue));
+}
+
 - (void)testAGKQuadIsValid
 {
     AGKQuad convexQuad = [self createSampleConvexQuad];
@@ -103,6 +116,10 @@
     
     AGKQuad concaveQuad = [self createSampleConcaveQuad];
     XCTAssertFalse(AGKQuadIsValid(concaveQuad));
+
+    AGKQuad quadWithNanValue;
+    quadWithNanValue.br.y = 0.0 / 0.0;
+    XCTAssertFalse(AGKQuadContainsValidValues(quadWithNanValue));
 }
 
 - (void)testAGKQuadGetCenter
