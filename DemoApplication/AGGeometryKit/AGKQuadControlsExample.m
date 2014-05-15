@@ -107,8 +107,17 @@
 
 - (void)updateOverlay
 {
+    UIColor *redColor = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:0.5];
+    UIColor *greenColor = [UIColor colorWithRed:0.0 green:1.0 blue:0.0 alpha:0.5];
+
+    AGKQuad quad = AGKQuadMake(self.topLeftControl.center,
+                               self.topRightControl.center,
+                               self.bottomRightControl.center,
+                               self.bottomLeftControl.center);
+
     self.maskView.layer.position = CGPointZero;
-    self.maskView.layer.shadowPath = [UIBezierPath bezierPathWithAGKQuad:self.imageView.layer.quadrilateral].CGPath;
+    self.maskView.layer.shadowPath = [UIBezierPath bezierPathWithAGKQuad:quad].CGPath;
+    self.maskView.layer.shadowColor = AGKQuadIsConvex(quad) ? greenColor.CGColor : redColor.CGColor;
 }
 	
 - (IBAction)toggleDisplayOverlay:(UISwitch *)switchControl
