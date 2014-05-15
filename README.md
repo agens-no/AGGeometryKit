@@ -6,7 +6,7 @@ Quadrilaterals on CALayer (control each corner point individually), CGGeometry-f
 
 ### Installation
 
-New-school: Use the cocoa pod named `AGGeometryKit`.
+New-school: Use the cocoa pod named `AGGeometryKit`.   
 Old-school: Grab the files found in `Source`.
 
 
