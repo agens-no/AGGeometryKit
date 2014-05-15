@@ -1,6 +1,6 @@
 ![# AGGeometryKit](/logo.png?raw=true "AGGeometryKit")
 
-Quadrilaterals on CALayer (control each corner point individually), CGGeometry-functions, handy UIView/CALayer properties.
+Quadrilaterals on CALayer (control each corner point individually), CGGeometry-functions, UIView/CALayer properties and other invaluable tools.
 
 
 
