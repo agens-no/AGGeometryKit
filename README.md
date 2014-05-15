@@ -13,12 +13,12 @@ Old-school: Grab the files found in `Source`.
 
 ## Demo
 
-[![Demo video](http://i.vimeocdn.com/video/475306257_800.jpg)](https://vimeo.com/95376358)   
+[![Demo video](/video-aggeometrykit.png)](https://vimeo.com/95376358)   
 [See the video on vimeo ](https://vimeo.com/95376358)
 
 Used in conjunction with [POP](https://github.com/facebook/pop) this allows you to do really awesome stuff. Visit [AGGeometryKit+POP](https://github.com/hfossli/AGGeometryKit-Pop).   
 
-[![Demo video](https://i.vimeocdn.com/video/475306176_800.jpg)](https://vimeo.com/95383807)   
+[![Demo video](/video-aggeometrykit-pop.png)](https://vimeo.com/95383807)   
 [See the video on vimeo ](https://vimeo.com/95383807)
 
 
