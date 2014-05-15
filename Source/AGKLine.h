@@ -21,15 +21,12 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-// Agens Geometry Kit (AGK)
+typedef union AGKLine {
+    struct { CGPoint start, end; };
+    double v[2];
+} AGKLine;
 
-#import "AGKBitOperations.h"
-#import "AGKCorner.h"
-#import "AGKLine.h"
-#import "AGKMath.h"
-#import "AGKQuad.h"
-#import "AGKVector3D.h"
-
-#import "AGGeometryKitCategories.h"
-#import "AGGeometryKitClasses.h"
-#import "AGGeometryKitCoreGraphics.h"
+const AGKLine AGKLineZero;
+AGKLine AGKLineMake(CGPoint start, CGPoint end);
+double AGKLineLength(AGKLine l);
+BOOL AGKLineIntersection(AGKLine l1, AGKLine l2, CGPoint *out_pointOfIntersection);

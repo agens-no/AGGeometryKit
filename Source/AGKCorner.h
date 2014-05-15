@@ -21,15 +21,20 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-// Agens Geometry Kit (AGK)
+typedef enum AGKSide {
+    AGKSideTop = 1 << 0,
+    AGKSideBottom = 1 << 1,
+    AGKSideLeft = 1 << 2,
+    AGKSideRight = 1 << 3,
+} AGKSide;
 
-#import "AGKBitOperations.h"
-#import "AGKCorner.h"
-#import "AGKLine.h"
-#import "AGKMath.h"
-#import "AGKQuad.h"
-#import "AGKVector3D.h"
+typedef enum {
+    AGKCornerTopLeft = AGKSideTop | AGKSideLeft,
+    AGKCornerTopRight = AGKSideTop | AGKSideRight,
+    AGKCornerBottomLeft = AGKSideBottom | AGKSideLeft,
+    AGKCornerBottomRight = AGKSideBottom | AGKSideRight,
+} AGKCorner;
 
-#import "AGGeometryKitCategories.h"
-#import "AGGeometryKitClasses.h"
-#import "AGGeometryKitCoreGraphics.h"
+BOOL AGKCornerIsOnSide(AGKCorner corner, AGKSide side);
+CGPoint AGKCornerConvertToAnchorPoint(AGKCorner corner);
+CGPoint AGKCornerConvertToPointForRect(AGKCorner corner, CGRect rect);

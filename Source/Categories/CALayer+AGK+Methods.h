@@ -1,5 +1,7 @@
 //
-// Author: Håvard Fossli <hfossli@agens.no>
+// Authors:
+// Håvard Fossli <hfossli@agens.no>
+// Marcus Eckert <marcuseckert@gmail.com>
 //
 // Copyright (c) 2013 Agens AS (http://agens.no/)
 //
@@ -21,15 +23,19 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-// Agens Geometry Kit (AGK)
+#import <QuartzCore/QuartzCore.h>
 
-#import "AGKBitOperations.h"
-#import "AGKCorner.h"
-#import "AGKLine.h"
-#import "AGKMath.h"
-#import "AGKQuad.h"
-#import "AGKVector3D.h"
+@interface CALayer (AGK_Methods)
 
-#import "AGGeometryKitCategories.h"
-#import "AGGeometryKitClasses.h"
-#import "AGGeometryKitCoreGraphics.h"
+- (void)setNullAsActionForKeys:(NSArray *)keys;
+- (void)removeAllSublayers;
+- (void)ensureAnchorPointIsSetToZero;
+- (void)ensureAnchorPointIs:(CGPoint)point;
+
+- (CATransform3D)transformToOffsetRotationWithVirtualAnchorPoint:(CGPoint)virtualAnchor;
+- (void)applyTransformToOffsetRotationWithVirtualAnchorPoint:(CGPoint)virtualAnchor;
+- (CGPoint)offsetForXRotation:(CGFloat)angle virtualAnchorPoint:(CGPoint)virtualAnchor;
+- (CGPoint)offsetForYRotation:(CGFloat)angle virtualAnchorPoint:(CGPoint)virtualAnchor;
+
+@end
+

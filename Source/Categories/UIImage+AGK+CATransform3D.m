@@ -21,15 +21,18 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-// Agens Geometry Kit (AGK)
 
-#import "AGKBitOperations.h"
-#import "AGKCorner.h"
-#import "AGKLine.h"
-#import "AGKMath.h"
-#import "AGKQuad.h"
-#import "AGKVector3D.h"
+#import "UIImage+AGK+CATransform3D.h"
+#import "CGImageRef+AGK+CATransform3D.h"
 
-#import "AGGeometryKitCategories.h"
-#import "AGGeometryKitClasses.h"
-#import "AGGeometryKitCoreGraphics.h"
+@implementation UIImage (CATransform3D)
+
+- (UIImage *)imageWithTransform:(CATransform3D)transform anchorPoint:(CGPoint)anchorPoint
+{
+    CGImageRef imageRef = CGImageDrawWithCATransform3D_AGK(self.CGImage, transform, anchorPoint, self.size, self.scale);
+    UIImage* image = [UIImage imageWithCGImage:imageRef];
+    CGImageRelease(imageRef);
+    return image;
+}
+
+@end

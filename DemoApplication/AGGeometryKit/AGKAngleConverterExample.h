@@ -1,5 +1,5 @@
 //
-// Author: Håvard Fossli <hfossli@agens.no>
+// Author: Odd Magne Hågensen <oddmagne@agens.no>
 //
 // Copyright (c) 2013 Agens AS (http://agens.no/)
 //
@@ -21,15 +21,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-// Agens Geometry Kit (AGK)
+#import <UIKit/UIKit.h>
 
-#import "AGKBitOperations.h"
-#import "AGKCorner.h"
-#import "AGKLine.h"
-#import "AGKMath.h"
-#import "AGKQuad.h"
-#import "AGKVector3D.h"
+@interface AGKAngleConverterExample : UIViewController
 
-#import "AGGeometryKitCategories.h"
-#import "AGGeometryKitClasses.h"
-#import "AGGeometryKitCoreGraphics.h"
+@end

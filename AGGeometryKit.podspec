@@ -1,19 +1,20 @@
 Pod::Spec.new do |s|
     s.name         = "AGGeometryKit"
-    s.version      = "0.1.8.6"
-    s.summary      = "Quadrilaterals, geometry, math and more to enrich your possibilities with UIKit and CoreAnimation."
-    s.homepage     = "https://github.com/hfossli/AGGeometryKit.git"
-    s.authors      = { "Håvard Fossli" => "hfossli@agens.no" }
+    s.version      = "1.0"
+    s.summary      = "Quadrilaterals on CALayer, CGGeometry-functions, UIView/CALayer properties and other invaluable tools."
+    s.homepage     = "https://github.com/hfossli/AGGeometryKit"
     s.license      = 'MIT'
-    s.source       = { 
-        :git => "https://github.com/hfossli/AGGeometryKit.git", 
-        :tag => s.version.to_s
-        }
-
-    s.frameworks    = 'SystemConfiguration', 'IOKit', 'CoreGraphics', 'UIKit', 'QuartzCore'
     s.platform      = :ios, '5.0'
     s.requires_arc  = true
-
+    s.authors      = { 
+    	"Håvard Fossli" => "hfossli@agens.no",
+    	"Marcus Eckert" => "marcuseckert@gmail.com"
+    	}
+    s.source       = { 
+        :git => "https://github.com/hfossli/AGGeometryKit.git",  
+        :tag => s.version.to_s
+        }
+        
     s.default_subspec = 'Default'
 
     s.subspec 'Default' do |ss|
@@ -21,7 +22,8 @@ Pod::Spec.new do |s|
     end
 
     s.subspec 'Core' do |ss|
-        ss.source_files  = 'Source/**/*.{h,m}'
-        ss.exclude_files = 'Source/**/*Test.{h,m}'
-    end    
+        ss.frameworks    = 'SystemConfiguration', 'IOKit', 'CoreGraphics', 'UIKit', 'QuartzCore'
+        ss.source_files        = 'Source/**/*.{h,m}'
+        ss.exclude_files       = 'Source/**/*Test.{h,m}'  
+    end
 end

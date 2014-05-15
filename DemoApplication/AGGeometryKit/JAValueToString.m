@@ -198,6 +198,22 @@ enum
 	kAlignFloat				= 4,
 	kAlignDouble			= 4,
 	kAlignSelector			= 4,
+#elif __arm64__
+	kAlignPointer			= 8,
+	kAlignBool				= 1,
+	kAlignChar				= 1,
+	kAlignUnsignedChar		= 1,
+	kAlignShort				= 2,
+	kAlignUnsignedShort		= 2,
+	kAlignInt				= 4,
+	kAlignUnsignedInt		= 4,
+	kAlignLong				= 8,
+	kAlignUnsignedLong		= 8,
+	kAlignLongLong			= 8,
+	kAlignUnsignedLongLong	= 8,
+	kAlignFloat				= 4,
+	kAlignDouble			= 8,
+	kAlignSelector			= 8,
 #else
 #error Unknown architecture
 #endif

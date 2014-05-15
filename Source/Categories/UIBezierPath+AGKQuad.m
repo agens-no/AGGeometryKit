@@ -21,15 +21,23 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-// Agens Geometry Kit (AGK)
+#import "UIBezierPath+AGKQuad.h"
 
-#import "AGKBitOperations.h"
-#import "AGKCorner.h"
-#import "AGKLine.h"
-#import "AGKMath.h"
-#import "AGKQuad.h"
-#import "AGKVector3D.h"
+@implementation UIBezierPath (AGKQuad)
 
-#import "AGGeometryKitCategories.h"
-#import "AGGeometryKitClasses.h"
-#import "AGGeometryKitCoreGraphics.h"
++ (UIBezierPath *)bezierPathWithAGKQuad:(AGKQuad)q
+{
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:q.v[0]];
+    
+    for (int i = 1; i < 4; i++)
+    {
+        [path addLineToPoint:q.v[i]];
+    }
+    
+    [path closePath];
+    
+    return path;
+}
+
+@end

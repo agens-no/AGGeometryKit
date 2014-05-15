@@ -21,15 +21,53 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-// Agens Geometry Kit (AGK)
+// For general purpose
 
-#import "AGKBitOperations.h"
-#import "AGKCorner.h"
-#import "AGKLine.h"
-#import "AGKMath.h"
-#import "AGKQuad.h"
-#import "AGKVector3D.h"
+#ifndef AGK_BIT_ENABLE
+# define AGK_BIT_ENABLE(x, b)   ((x) |= (b))
+#endif
 
-#import "AGGeometryKitCategories.h"
-#import "AGGeometryKitClasses.h"
-#import "AGGeometryKitCoreGraphics.h"
+#ifndef AGK_BIT_CLEAR
+# define AGK_BIT_CLEAR(x, b) ((x) &= ~(b))
+#endif
+
+#ifndef AGK_BIT_TEST_ENABLED
+# define AGK_BIT_TEST_ENABLED(x, b)  (((x) & (b)) != 0)
+#endif
+
+#ifndef AGK_BIT_TEST_DISABLED
+# define AGK_BIT_TEST_DISABLED(x, b)  (((x) & (b)) == 0)
+#endif
+
+#ifndef AGK_BIT_TEST_ALL_ENABLED
+# define AGK_BIT_TEST_ALL_ENABLED(x, b)  ({\
+     __typeof__(b) __b = (b);\
+     ((x) & __b) == __b;\
+  })
+#endif
+
+// For NS_OPTION
+
+#ifndef NS_OPTION_ENABLE
+# define NS_OPTION_ENABLE(x, b)   ((x) |= (b))
+#endif
+
+#ifndef NS_OPTION_CLEAR
+# define NS_OPTION_CLEAR(x, b) ((x) &= ~(b))
+#endif
+
+#ifndef NS_OPTION_ENABLED
+# define NS_OPTION_ENABLED(x, b)  (((x) & (b)) != 0)
+#endif
+
+#ifndef NS_OPTION_DISABLED
+# define NS_OPTION_DISABLED(x, b)  (((x) & (b)) == 0)
+#endif
+
+#ifndef NS_OPTION_ALL_ENABLED
+# define NS_OPTION_ALL_ENABLED(x, b)  ({\
+     __typeof__(b) __b = (b);\
+     ((x) & __b) == __b;\
+  })
+#endif
+

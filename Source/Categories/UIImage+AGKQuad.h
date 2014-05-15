@@ -21,15 +21,12 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-// Agens Geometry Kit (AGK)
-
-#import "AGKBitOperations.h"
-#import "AGKCorner.h"
-#import "AGKLine.h"
-#import "AGKMath.h"
+#import <UIKit/UIKit.h>
 #import "AGKQuad.h"
-#import "AGKVector3D.h"
+#import "UIImage+AGK+CATransform3D.h"
 
-#import "AGGeometryKitCategories.h"
-#import "AGGeometryKitClasses.h"
-#import "AGGeometryKitCoreGraphics.h"
+@interface UIImage (AGKQuad)
+
+- (UIImage *)imageWithQuad:(AGKQuad)quad scale:(CGFloat)scale;
+
+@end

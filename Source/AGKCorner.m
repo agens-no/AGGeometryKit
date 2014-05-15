@@ -21,15 +21,35 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-// Agens Geometry Kit (AGK)
-
-#import "AGKBitOperations.h"
 #import "AGKCorner.h"
-#import "AGKLine.h"
-#import "AGKMath.h"
-#import "AGKQuad.h"
-#import "AGKVector3D.h"
+#import "CGGeometry+AGGeometryKit.h"
 
-#import "AGGeometryKitCategories.h"
-#import "AGGeometryKitClasses.h"
-#import "AGGeometryKitCoreGraphics.h"
+BOOL AGKCornerIsOnSide(AGKCorner corner, AGKSide side)
+{
+    return (corner & side) == side;
+}
+
+CGPoint AGKCornerConvertToAnchorPoint(AGKCorner corner)
+{
+    switch (corner) {
+        case AGKCornerTopLeft:
+            return CGPointMake(0, 0);
+            break;
+        case AGKCornerTopRight:
+            return CGPointMake(1, 0);
+            break;
+        case AGKCornerBottomLeft:
+            return CGPointMake(0, 1);
+            break;
+        case AGKCornerBottomRight:
+            return CGPointMake(1, 1);
+            break;
+    }
+}
+
+CGPoint AGKCornerConvertToPointForRect(AGKCorner corner, CGRect rect)
+{
+    CGPoint anchor = AGKCornerConvertToAnchorPoint(corner);
+    CGPoint p = CGPointConvertFromAnchorPoint_AGK(anchor, rect);
+    return p;
+}
