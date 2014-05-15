@@ -34,13 +34,13 @@ CGFloat AGKRemapToZeroOne(CGFloat value, CGFloat startValue, CGFloat endValue)
 {
     CGFloat diff = endValue - startValue;
     
-    if(diff != 0.0f)
+    if(diff != 0.0)
     {
         return (value - startValue) / diff;
     }
     else
     {
-        return 0.0f;
+        return 0.0;
     }
 }
 
