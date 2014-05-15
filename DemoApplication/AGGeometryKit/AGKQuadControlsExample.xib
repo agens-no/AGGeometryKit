@@ -68,7 +68,7 @@
                     </connections>
                 </imageView>
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="controlpoint.png" highlightedImage="controlpoint_h.png" id="uXL-g3-GaO">
-                    <rect key="frame" x="923" y="23" width="75" height="75"/>
+                    <rect key="frame" x="926" y="23" width="75" height="75"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="30" appends="YES" id="0Mn-bX-vpO"/>
