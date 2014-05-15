@@ -13,11 +13,11 @@ Old-school: Grab the files found in `Source`.
 
 ## Demo
 
-[![Demo video](http://i.vimeocdn.com/video/475275616_800.jpg)](https://vimeo.com/95376358)
+[![Demo video](http://i.vimeocdn.com/video/475283358_800.jpg)](https://vimeo.com/95383913)
 
 Used in conjunction with [POP](https://github.com/facebook/pop) this allows you to do really awesome stuff. Visit [AGGeometryKit+POP](https://github.com/hfossli/AGGeometryKit).
 
-[![Demo video](http://i.vimeocdn.com/video/475269317_800.jpg)](https://vimeo.com/95289118)
+[![Demo video](https://i.vimeocdn.com/video/475283082_800.jpg)](https://vimeo.com/95383807)
 
 
 
