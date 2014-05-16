@@ -1,0 +1,10 @@
+PODS:
+  - AGAssert (1.0.SNAPSHOT)
+
+DEPENDENCIES:
+  - AGAssert
+
+SPEC CHECKSUMS:
+  AGAssert: c2f3f3fb9b225e2e138fb8b595963eafc05ee41f
+
+COCOAPODS: 0.32.1
