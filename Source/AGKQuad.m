@@ -299,6 +299,32 @@ AGKQuad AGKQuadInterpolate(AGKQuad q1, AGKQuad q2, CGFloat progress)
     return q;
 }
 
+CGPoint CGPointRotatedAroundPoint(CGPoint point, CGPoint pivot, CGFloat radians) {
+    CGAffineTransform translation, rotation;
+    translation	= CGAffineTransformMakeTranslation(-pivot.x, -pivot.y);
+    point		= CGPointApplyAffineTransform(point, translation);
+    rotation	= CGAffineTransformMakeRotation(radians);
+    point		= CGPointApplyAffineTransform(point, rotation);
+    translation	= CGAffineTransformMakeTranslation(pivot.x, pivot.y);
+    point		= CGPointApplyAffineTransform(point, translation);
+    return point;
+}
+
+AGKQuad AGKQuadRotate(AGKQuad q, CGFloat radians)
+{
+    CGPoint center = AGKQuadGetCenter(q);
+    return AGKQuadRotateAroundPoint(q, center, radians);
+}
+
+AGKQuad AGKQuadRotateAroundPoint(AGKQuad q, CGPoint point, CGFloat radians)
+{
+    for(int i = 0; i < 4; i++)
+    {
+        q.v[i] = CGPointRotatedAroundPoint(q.v[i], point, radians);
+    }
+    return q;
+}
+
 AGKQuad AGKQuadApplyCGAffineTransform(AGKQuad q, CGAffineTransform t)
 {
     for(int i = 0; i < 4; i++)

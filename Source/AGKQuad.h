@@ -65,6 +65,8 @@ CGPoint AGKQuadGetPointForCorner(AGKQuad q, AGKCorner corner);
 void AGKQuadGetXValues(AGKQuad q, CGFloat *out_values);
 void AGKQuadGetYValues(AGKQuad q, CGFloat *out_values);
 AGKQuad AGKQuadInterpolate(AGKQuad q1, AGKQuad q2, CGFloat progress);
+AGKQuad AGKQuadRotate(AGKQuad q, CGFloat radians);
+AGKQuad AGKQuadRotateAroundPoint(AGKQuad q, CGPoint point, CGFloat radians);
 AGKQuad AGKQuadApplyCGAffineTransform(AGKQuad q, CGAffineTransform t);
 AGKQuad AGKQuadApplyCATransform3D(AGKQuad q, CATransform3D t);
 NSString * NSStringFromAGKQuad(AGKQuad q);
