@@ -149,8 +149,8 @@ AGKQuad AGKQuadInsetTop(AGKQuad q, CGFloat inset)
 
 AGKQuad AGKQuadInsetBottom(AGKQuad q, CGFloat inset)
 {
-    q.tl.y -= inset;
-    q.tr.y -= inset;
+    q.bl.y -= inset;
+    q.br.y -= inset;
     return q;
 }
 
