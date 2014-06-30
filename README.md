@@ -96,7 +96,6 @@ Some of the most useful functions
 - don't modify the frame, but instead use `layer.position` or `view.center` and `layer.bounds` or `view.bounds`
 - quadrilateral can not be used in conjunction with other CATransform3D-things like perspective, scale, rotate etc
 - remember the coordinate system for the `quadrilateral`-property is in the same coordinate as `frame` and `position`
-- don't make your values too extreme - they might cause application crash.
 - check if the autoresizing mask might be altering the frame (to be 100% sure it is good for debugging to turn off `autoresizesSubviews`)
 
 It can also be useful to create a representation of the quadrilateral you are trying to display using a UIBezierPath:
