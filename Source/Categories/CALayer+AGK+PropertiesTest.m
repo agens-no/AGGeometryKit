@@ -22,6 +22,9 @@
 // THE SOFTWARE.
 
 #import <XCTest/XCTest.h>
+#import <CoreGraphics/CoreGraphics.h>
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "CALayer+AGK+Properties.h"
 
 @interface CALayer_AGK_PropertiesTest : XCTestCase

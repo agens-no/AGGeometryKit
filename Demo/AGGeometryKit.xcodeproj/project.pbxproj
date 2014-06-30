@@ -192,6 +192,7 @@
 		A38F9F68185B41E100F49AD7 /* AGGeometryKitCoreGraphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGGeometryKitCoreGraphics.h; sourceTree = "<group>"; };
 		A38F9F69185B427D00F49AD7 /* AGKTransformPixelMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKTransformPixelMapper.h; sourceTree = "<group>"; };
 		A38F9F6A185B427D00F49AD7 /* AGKTransformPixelMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKTransformPixelMapper.m; sourceTree = "<group>"; };
+		A392379A19616BD40096D58D /* AGGeometryKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AGGeometryKit-Prefix.pch"; path = "AGGeometryKit/AGGeometryKit-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		A39DA67C172984E9005B84D3 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		A39DA67D172984E9005B84D3 /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
 		A3BC981917D8A88B009B7495 /* AGGeometryKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = AGGeometryKit.podspec; path = ../AGGeometryKit.podspec; sourceTree = "<group>"; };
@@ -331,6 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				A38F9F0A185B3F5C00F49AD7 /* AGGeometryKit.h */,
+				A392379A19616BD40096D58D /* AGGeometryKit-Prefix.pch */,
 				A38F9F05185B3F5C00F49AD7 /* AGKBitOperations.h */,
 				A38F9F06185B3F5C00F49AD7 /* AGKBitOperationsTest.m */,
 				A38F9F07185B3F5C00F49AD7 /* AGKCorner.h */,

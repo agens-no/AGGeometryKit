@@ -24,6 +24,7 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
+#import <CoreGraphics/CoreGraphics.h>
 
 #define AGK_CLAMP(x, low, high) ({\
   __typeof__(x) __x = (x); \

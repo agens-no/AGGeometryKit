@@ -22,6 +22,7 @@
 // THE SOFTWARE.
 
 #import <XCTest/XCTest.h>
+#import "NSValue+AGKQuad.h"
 #import "AGKQuad.h"
 
 @interface AGKQuadTest : XCTestCase

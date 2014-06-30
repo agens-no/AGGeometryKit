@@ -24,6 +24,9 @@
 
 #import <Foundation/Foundation.h>
 #import "AGKCorner.h"
+#import <CoreGraphics/CoreGraphics.h>
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 /*
  tl = top left

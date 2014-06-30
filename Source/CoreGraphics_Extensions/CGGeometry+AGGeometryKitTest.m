@@ -24,6 +24,10 @@
 #import <XCTest/XCTest.h>
 #import <QuartzCore/QuartzCore.h>
 #import "CGGeometry+AGGeometryKit.h"
+#import <CoreGraphics/CoreGraphics.h>
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <XCTest/XCTest.h>
 
 @interface AGGeometryTest : XCTestCase
 

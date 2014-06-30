@@ -21,14 +21,3 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <CoreGraphics/CoreGraphics.h>
-
-typedef union AGKLine {
-    struct { CGPoint start, end; };
-    double v[2];
-} AGKLine;
-
-const AGKLine AGKLineZero;
-AGKLine AGKLineMake(CGPoint start, CGPoint end);
-double AGKLineLength(AGKLine l);
-BOOL AGKLineIntersection(AGKLine l1, AGKLine l2, CGPoint *out_pointOfIntersection);
