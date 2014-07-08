@@ -25,6 +25,13 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import <QuartzCore/QuartzCore.h>
 
+// CGFloat
+
+CGFloat CGFloatRound_AGK(CGFloat v);
+CGFloat CGFloatCeil_AGK(CGFloat v);
+CGFloat CGFloatFloor_AGK(CGFloat v);
+
+
 // CGPoint
 
 BOOL    CGPointGotAnyNanValues_AGK(CGPoint origin);
@@ -97,6 +104,10 @@ CGRect  CGRectWithOriginMaxX_AGK(CGRect rect, CGFloat value);
 CGRect  CGRectWithOriginMidX_AGK(CGRect rect, CGFloat value);
 CGRect  CGRectWithOriginMidY_AGK(CGRect rect, CGFloat value);
 CGRect  CGRectWithOriginMid_AGK(CGRect rect, CGPoint origin);
+
+CGRect CGRectFloor_AGK(CGRect rect);
+CGRect CGRectCeil_AGK(CGRect rect);
+CGRect CGRectRound_AGK(CGRect rect);
 
 CGRect  CGRectInterpolate_AGK(CGRect rect1, CGRect rect2, CGFloat progress);
 

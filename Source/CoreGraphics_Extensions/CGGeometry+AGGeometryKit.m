@@ -31,6 +31,37 @@
 // Usefull resources for further development:
 // http://processingjs.nihongoresources.com/bezierinfo/
 
+#pragma mark - CGFloat
+
+CGFloat CGFloatRound_AGK(CGFloat v)
+{
+    #if CGFLOAT_IS_DOUBLE
+        return round(v);
+    #else
+        return roundf(v);
+    #endif
+}
+
+CGFloat CGFloatCeil_AGK(CGFloat v)
+{
+    #if CGFLOAT_IS_DOUBLE
+        return ceil(v);
+    #else
+        return ceilf(v);
+    #endif
+}
+
+CGFloat CGFloatFloor_AGK(CGFloat v)
+{
+    #if CGFLOAT_IS_DOUBLE
+        return floor(v);
+    #else
+        return floorf(v);
+    #endif
+}
+
+
+
 #pragma mark - CGPoint
 
 BOOL CGPointGotAnyNanValues_AGK(CGPoint origin)
@@ -435,6 +466,30 @@ CGRect CGRectWithOriginMid_AGK(CGRect rect, CGPoint origin)
     rect.origin.x = origin.x - (rect.size.width / 2.0);
     rect.origin.y = origin.y - (rect.size.height / 2.0);
     return rect;
+}
+
+CGRect CGRectFloor_AGK(CGRect rect)
+{
+    return CGRectMake(CGFloatFloor_AGK(rect.origin.x),
+                      CGFloatFloor_AGK(rect.origin.y),
+                      CGFloatFloor_AGK(rect.size.width),
+                      CGFloatFloor_AGK(rect.size.height));
+}
+
+CGRect CGRectCeil_AGK(CGRect rect)
+{
+    return CGRectMake(CGFloatCeil_AGK(rect.origin.x),
+                      CGFloatCeil_AGK(rect.origin.y),
+                      CGFloatCeil_AGK(rect.size.width),
+                      CGFloatCeil_AGK(rect.size.height));
+}
+
+CGRect CGRectRound_AGK(CGRect rect)
+{
+    return CGRectMake(CGFloatRound_AGK(rect.origin.x),
+                      CGFloatRound_AGK(rect.origin.y),
+                      CGFloatRound_AGK(rect.size.width),
+                      CGFloatRound_AGK(rect.size.height));
 }
 
 CGRect CGRectInterpolate_AGK(CGRect rect1, CGRect rect2, CGFloat progress)

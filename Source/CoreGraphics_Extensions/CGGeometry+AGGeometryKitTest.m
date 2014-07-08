@@ -123,8 +123,6 @@
         CGRect rect = CGRectWithOriginMinY_AGK(rectWithALongNameOrPathSinceThatsWhenItIsUsefull, 300);
         XCTAssertEqual(rect.origin.y, 300.0f);
     }
-    
-    
     {
         CGRect rectWithALongNameOrPathSinceThatsWhenItIsUsefull = CGRectMake(40, 20, 150, 100);
         CGRect rect = CGRectWithOriginMidX_AGK(rectWithALongNameOrPathSinceThatsWhenItIsUsefull, 300);
@@ -135,7 +133,6 @@
         CGRect rect = CGRectWithOriginMidY_AGK(rectWithALongNameOrPathSinceThatsWhenItIsUsefull, 300);
         XCTAssertEqual(rect.origin.y, 250.0f);
     }
-    
     {
         CGRect rectWithALongNameOrPathSinceThatsWhenItIsUsefull = CGRectMake(40, 20, 150, 100);
         CGRect rect = CGRectWithOriginMaxX_AGK(rectWithALongNameOrPathSinceThatsWhenItIsUsefull, 300);
@@ -165,6 +162,66 @@
         CGPoint retval = CGPointApplyCATransform3D_AGK(p, t, anchorPoint, CATransform3DIdentity);
         CGPoint expected = CGPointMake(180, 140);
         XCTAssertEqualObjects([NSValue valueWithCGPoint:retval], [NSValue valueWithCGPoint:expected]);
+    }
+}
+
+- (void)testCGFloatRound_AGK
+{
+    XCTAssertEqual(CGFloatRound_AGK(-0.2), 0.0, @"");
+    XCTAssertEqual(CGFloatRound_AGK(0.0), 0.0, @"");
+    XCTAssertEqual(CGFloatRound_AGK(0.4), 0.0, @"");
+    XCTAssertEqual(CGFloatRound_AGK(0.5), 1.0, @"");
+    XCTAssertEqual(CGFloatRound_AGK(0.6), 1.0, @"");
+    XCTAssertEqual(CGFloatRound_AGK(1.0), 1.0, @"");
+    XCTAssertEqual(CGFloatRound_AGK(1.3), 1.0, @"");
+}
+
+- (void)testCGFloatCeil_AGK
+{
+    XCTAssertEqual(CGFloatCeil_AGK(-0.2), 0.0, @"");
+    XCTAssertEqual(CGFloatCeil_AGK(0.0), 0.0, @"");
+    XCTAssertEqual(CGFloatCeil_AGK(0.4), 1.0, @"");
+    XCTAssertEqual(CGFloatCeil_AGK(0.5), 1.0, @"");
+    XCTAssertEqual(CGFloatCeil_AGK(0.6), 1.0, @"");
+    XCTAssertEqual(CGFloatCeil_AGK(1.0), 1.0, @"");
+    XCTAssertEqual(CGFloatCeil_AGK(1.3), 2.0, @"");
+}
+
+- (void)testCGFloatFloor_AGK
+{
+    XCTAssertEqual(CGFloatFloor_AGK(-0.2), -1.0, @"");
+    XCTAssertEqual(CGFloatFloor_AGK(0.0), 0.0, @"");
+    XCTAssertEqual(CGFloatFloor_AGK(0.4), 0.0, @"");
+    XCTAssertEqual(CGFloatFloor_AGK(0.5), 0.0, @"");
+    XCTAssertEqual(CGFloatFloor_AGK(0.6), 0.0, @"");
+    XCTAssertEqual(CGFloatFloor_AGK(1.0), 1.0, @"");
+    XCTAssertEqual(CGFloatFloor_AGK(1.3), 1.0, @"");
+}
+
+- (void)testCGRectFloor_AGK
+{
+    {
+        CGRect rect = CGRectFloor_AGK(CGRectMake(40.9, 20.1, 150.0, 100.0005));
+        CGRect expected = CGRectMake(40, 20, 150, 100);
+        XCTAssertEqualObjects([NSValue valueWithCGRect:rect], [NSValue valueWithCGRect:expected]);
+    }
+}
+
+- (void)testCGRectCeil_AGK
+{
+    {
+        CGRect rect = CGRectCeil_AGK(CGRectMake(40.9, 20.1, 150.0, 100.0005));
+        CGRect expected = CGRectMake(41, 21, 150, 101);
+        XCTAssertEqualObjects([NSValue valueWithCGRect:rect], [NSValue valueWithCGRect:expected]);
+    }
+}
+
+- (void)testCGRectRound_AGK
+{
+    {
+        CGRect rect = CGRectRound_AGK(CGRectMake(40.9, 20.1, 150.0, 100.0005));
+        CGRect expected = CGRectMake(41, 20, 150, 100);
+        XCTAssertEqualObjects([NSValue valueWithCGRect:rect], [NSValue valueWithCGRect:expected]);
     }
 }
 
