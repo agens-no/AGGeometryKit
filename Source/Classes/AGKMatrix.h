@@ -83,6 +83,21 @@
  */
 - (instancetype)initWithColumns:(NSUInteger)columnCount rows:(NSUInteger)rowCount members:(NSArray *)members; // Designated Initializer
 
+#pragma mark - Comparing Matrices
+///-----------------------------------------------------------------------------
+/// @name Comparing Matrices
+///-----------------------------------------------------------------------------
+
+/**
+ *  Compares the recieving matrix to another matrix.
+ *
+ *  @param otherMatrix The matrix to compare against.
+ *
+ *  @return `YES` if the contents of `otherMatrix` are equal to the contents of 
+ *  the receiving matrix, otherwise `NO`.
+ */
+- (BOOL)isEqualToMatrix:(AGKMatrix *)otherMatrix;
+
 #pragma mark Counting Entries
 ///-----------------------------------------------------------------------------
 /// @name Counting Entries

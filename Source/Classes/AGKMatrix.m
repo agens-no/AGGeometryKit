@@ -53,6 +53,47 @@ typedef NS_ENUM(NSUInteger, AGKMatrixDimension) {
     return [self initWithColumns:0 rows:0 members:nil];
 }
 
+#pragma mark - Comparing Matrices
+
+- (BOOL)isEqualToMatrix:(AGKMatrix *)otherMatrix {
+    BOOL result = NO;
+    
+    if ([otherMatrix isKindOfClass:[AGKMatrix class]]) {
+        result = YES;
+        
+        if (otherMatrix.columnCount != self.columnCount) {
+            result = NO;
+        }
+        
+        if (otherMatrix.rowCount != self.rowCount) {
+            result = NO;
+        }
+        
+        if (![[otherMatrix allMembers] isEqualToArray:[self allMembers]]) {
+            result = NO;
+        }
+    }
+    
+    return result;
+}
+
+- (BOOL)isEqual:(id)other
+{
+    if (other == self) {
+        return YES;
+    } else {
+        return [self isEqualToMatrix:other];
+    }
+}
+
+#define NSUINT_BIT (CHAR_BIT * sizeof(NSUInteger))
+#define NSUINTROTATE(val, howmuch) ((((NSUInteger)val) << howmuch) | (((NSUInteger)val) >> (NSUINT_BIT - howmuch)))
+
+- (NSUInteger)hash {
+    return NSUINTROTATE(self.columnCount, NSUINT_BIT / 2) ^ self.rowCount ^ [[self allMembers] hash];
+}
+
+
 #pragma mark - Describing the Matrix
 - (NSString *)description {
     NSMutableString *result = [NSMutableString stringWithFormat:@"<%@ %lux%lu>[\n", NSStringFromClass([self class]), (unsigned long)self.columnCount, (unsigned long)self.rowCount];
@@ -244,6 +285,15 @@ typedef NS_ENUM(NSUInteger, AGKMatrixDimension) {
 	
 	
 	return result;
+}
+
+- (NSArray *)allMembers {
+    NSMutableArray *allMembers = [NSMutableArray arrayWithCapacity:self.count];
+    for (NSUInteger index = 0; index < self.count; index++) {
+        [allMembers addObject:self[index]];
+    }
+    
+    return allMembers;
 }
 
 - (NSArray *)getDimension:(AGKMatrixDimension)dimension {
