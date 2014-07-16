@@ -61,6 +61,17 @@
     XCTAssertEqualObjects(matrix.members, @[], @"Resulting matrix does not return an empty array as expected");
 }
 
+- (void)testDefaultMember {
+    AGKMatrix *matrix = [[AGKMatrix alloc] initWithColumns:3 rows:4 members:nil];
+    
+    XCTAssertEqualObjects(matrix.defaultMember, @0, @"Matrix should default to 0 by default");
+    XCTAssertEqualObjects(matrix.members, @[], @"No members should have been set yet");
+    XCTAssertEqualObjects([matrix objectAtColumnIndex:0 rowIndex:0], @0, @"Matrix should return the default value for any valid unfilled member position");
+    
+    matrix.defaultMember = @1;
+    XCTAssertEqualObjects([matrix objectAtColumnIndex:0 rowIndex:0], @1, @"Matrix should substitute in the new defaultMember @1 for any valid unfilled member position");
+}
+
 - (void)testMatrixCompareIsEqual
 {
     NSMutableArray *members = [NSMutableArray arrayWithArray:@[@1, @2, @3, @4, @4, @3, @2, @1]];
@@ -153,6 +164,75 @@
     NSArray *comparisonColumn = @[@2, @6, @0];
     NSArray *column = [matrix rowAtIndex:1];
     XCTAssert([column isEqualToArray:comparisonColumn], @"Row 1 should be %@", comparisonColumn);
+}
+
+- (void)testObjectAtIndexedSubscript {
+    NSMutableArray *members = [NSMutableArray arrayWithArray:@[@1, @2, @3, @4, @5, @6, @7, @8]];
+    AGKMatrix *matrix = [[AGKMatrix alloc] initWithColumns:3 rows:4 members:members];
+    
+    XCTAssertEqualObjects(matrix[2], @3, @"Subscripting should access the matrix as an index list of column first members.");
+    XCTAssertEqualObjects(matrix[8], matrix.defaultMember, @"Subscripting should return the default value if no other value has been specified.");
+}
+
+- (void)testEnumerateMembersUsingBlock {
+    NSMutableArray *members = [NSMutableArray arrayWithArray:@[@1, @2, @3, @4, @5, @6, @7, @8]];
+    AGKMatrix *matrix = [[AGKMatrix alloc] initWithColumns:3 rows:4 members:members];
+    
+    __block NSUInteger defaultValuesRecieved = 0;
+    [matrix enumerateMembersUsingBlock:^(NSNumber *member, NSUInteger index, NSUInteger columnIndex, NSUInteger rowIndex, BOOL *stop) {
+        XCTAssertEqual(columnIndex, index / 4, @"Column index should be %d for absolute index %d on a 3x4 matrix", index / 4, index);
+        XCTAssertEqual(rowIndex, index % 4, @"Row index should be %d for absolute index %d on a 3x4 matrix", index % 4, index);
+        
+        if (index < members.count) {
+            XCTAssertEqualObjects(member, members[index], @"The returned member should be the same as the one passed in: %@", members[index]);
+        } else {
+            defaultValuesRecieved++;
+            if (defaultValuesRecieved < 3) {
+                XCTAssertEqualObjects(member, matrix.defaultMember, @"Member at index %d has not been assigned yet, and therefore should return the default member: %@", index, matrix.defaultMember);
+                if (defaultValuesRecieved > 1) {
+                    *stop = YES;
+                }
+            } else {
+                XCTAssertEqual(*stop, YES, @"The stop argument should have been set to YES");
+                XCTFail(@"The stop argument has been set to YES, and should have stopped execution of the block");
+            }
+        }
+    }];
+}
+
+- (void)testEnumerateColumnsUsingBlock {
+    NSMutableArray *members = [NSMutableArray arrayWithArray:@[@1, @2, @3, @4, @5, @6, @7, @8]];
+    AGKMatrix *matrix = [[AGKMatrix alloc] initWithColumns:4 rows:4 members:members];
+    
+    NSArray *comparisonArray = @[@[@1, @2, @3, @4], @[@5, @6, @7, @8], @[@0, @0, @0, @0], @[@0, @0, @0, @0], @[@0, @0, @0, @0]];
+    [matrix enumerateColumnsUsingBlock:^(NSArray *column, NSUInteger columnIndex, BOOL *stop) {
+        if (columnIndex < 2) {
+            XCTAssertEqualObjects(column, comparisonArray[columnIndex], @"Column %d should be the same as comparisonArray[%d]: %@", columnIndex, columnIndex, comparisonArray[columnIndex]);
+        } else if (columnIndex < 4) {
+            NSNumber *defaultMember = matrix.defaultMember;
+            NSArray *defaultArray = @[defaultMember, defaultMember, defaultMember, defaultMember];
+            XCTAssertEqualObjects(column, defaultArray, @"Column %d should generate an array of default members equal to the number of rows: @%@ x 4", columnIndex, defaultMember);
+            
+            if (columnIndex == 3) {
+                *stop = YES;
+            }
+        } else {
+            XCTAssertEqual(*stop, YES, @"The stop argument should have been set to YES");
+            XCTFail(@"The stop argument has been set to YES, and should have stopped execution of the block");
+        }
+    }];
+}
+
+- (void)testEnumerateRowsUsingBlock {
+    NSMutableArray *members = [NSMutableArray arrayWithArray:@[@1, @2, @3, @4, @5, @6, @7, @8]];
+    AGKMatrix *matrix = [[AGKMatrix alloc] initWithColumns:3 rows:4 members:members];
+    
+    NSArray *comparisonArray = @[@[@1, @5, @0], @[@2, @6, @0], @[@3, @7, @0], @[@4, @8, @0]];
+    [matrix enumerateRowsUsingBlock:^(NSArray *row, NSUInteger rowIndex, BOOL *stop) {
+        if (rowIndex) {
+            XCTAssertEqualObjects(row, comparisonArray[rowIndex], @"Row %d should be the same as comparisonArray[%d]: %@", rowIndex, rowIndex, comparisonArray[rowIndex]);
+        }
+    }];
 }
 
 @end
