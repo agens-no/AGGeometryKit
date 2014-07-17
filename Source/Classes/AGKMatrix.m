@@ -378,6 +378,28 @@ typedef NS_ENUM(NSUInteger, AGKMatrixDimension) {
 	}
 }
 
+- (void)insertColumnAtIndex:(NSUInteger)columnIndex withArray:(NSArray *)columnMembers {
+    if (columnIndex < self.columnCount) {
+        for (NSUInteger reverseColumnIndex = self.columnCount; reverseColumnIndex > columnIndex; reverseColumnIndex--) {
+            NSArray *currentColumn = [[self getDimension:AGKMatrixDimensionColumn withRange:NSMakeRange(reverseColumnIndex - 1, 1) andDefaults:NO] firstObject];
+            [self setColumnAtIndex:reverseColumnIndex withArray:currentColumn];
+        }
+    }
+    
+    [self setColumnAtIndex:columnIndex withArray:columnMembers];
+}
+
+- (void)insertRowAtIndex:(NSUInteger)rowIndex withArray:(NSArray *)rowMembers {
+    if (rowIndex < self.rowCount) {
+        for (NSUInteger reverseRowIndex = self.rowCount; reverseRowIndex > rowIndex; reverseRowIndex--) {
+            NSArray *currentRow = [[self getDimension:AGKMatrixDimensionRow withRange:NSMakeRange(reverseRowIndex - 1, 1) andDefaults:NO] firstObject];
+            [self setRowAtIndex:reverseRowIndex withArray:currentRow];
+        }
+    }
+    
+    [self setRowAtIndex:rowIndex withArray:rowMembers];
+}
+
 - (void)fillColumn:(NSUInteger)columnIndex withObject:(NSNumber *)initialMember {
     for (NSUInteger rowIndex = 0; rowIndex < self.rowCount; rowIndex++) {
         [self setObject:initialMember atColumnIndex:columnIndex rowIndex:rowIndex];

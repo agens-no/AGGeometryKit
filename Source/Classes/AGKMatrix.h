@@ -380,13 +380,31 @@
  *
  *  @param rowIndex   The row index where the new `columnMembers` should be
  *  placed.
- *  @param rowMembers The array of number object to become the specified row.
+ *  @param rowMembers The array of number objects to become the specified row.
  *
  *  @see setColumnAtIndex:withArray:
  *  @see fillRow:withObject:
  *  @see setObject:atColumnIndex:rowIndex:
  */
 - (void)setRowAtIndex:(NSUInteger)rowIndex withArray:(NSArray *)rowMembers;
+
+/**
+ *  Inserts a column at the given index filled with the given members.
+ *
+ *  @param columnIndex   The column index number where the new column should be 
+ *  inserted.
+ *  @param columnMembers The array of number objects to be inserted as a new 
+ *  column.
+ */
+- (void)insertColumnAtIndex:(NSUInteger)columnIndex withArray:(NSArray *)columnMembers;
+
+/**
+ *  Inserts a row at the given index filled with the given members.
+ *
+ *  @param rowIndex   The row index number where the new row should be inserted.
+ *  @param rowMembers The array of number objects to be inserted as a new row.
+ */
+- (void)insertRowAtIndex:(NSUInteger)rowIndex withArray:(NSArray *)rowMembers;
 
 /**
  *  Replaces the given column's rows with the given member.

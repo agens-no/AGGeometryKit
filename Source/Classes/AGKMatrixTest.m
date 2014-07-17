@@ -268,6 +268,30 @@
     XCTAssertEqualObjects([self.testMatrix objectAtColumnIndex:3 rowIndex:4], self.testMatrix.defaultMember, @"Member at 3x4 should return the defaultMember, as that postion was not specified before the matrix expansion.");
 }
 
+- (void)testInsertColumnAtIndexWithArray {
+    [self.testMatrix insertColumnAtIndex:1 withArray:@[@9, @9, @9, @9]];
+    NSNumber *defaultMember = self.testMatrix.defaultMember;
+    NSArray *comparisonColumns = @[@[@1, @2, @3, @4], @[@9, @9, @9, @9], @[@5, @6, @7, @8], @[defaultMember, defaultMember, defaultMember, defaultMember]];
+    XCTAssertEqualObjects(self.testMatrix.columns, comparisonColumns, @"Matrix should have a column of 9s at index 1, the rest of the columns shifted up.");
+    
+    self.testMatrix.defaultMember = @10;
+    defaultMember = self.testMatrix.defaultMember;
+    comparisonColumns = @[@[@1, @2, @3, @4], @[@9, @9, @9, @9], @[@5, @6, @7, @8], @[defaultMember, defaultMember, defaultMember, defaultMember]];
+    XCTAssertEqualObjects(self.testMatrix.columns, comparisonColumns, @"The last column should still be filled with default placeholders");
+}
+
+- (void)testInsertRowAtIndexWithArray {
+    [self.testMatrix insertRowAtIndex:1 withArray:@[@9, @9, @9]];
+    NSNumber *defaultMember = self.testMatrix.defaultMember;
+    NSArray *comparisonRows = @[@[@1, @5, defaultMember], @[@9, @9, @9], @[@2, @6, defaultMember], @[@3, @7, defaultMember], @[@4, @8, defaultMember]];
+    XCTAssertEqualObjects(self.testMatrix.rows, comparisonRows, @"Matrix should have a row of 9s at index 1, the rest of the rows shifted.");
+    
+    self.testMatrix.defaultMember = @10;
+    defaultMember = self.testMatrix.defaultMember;
+    comparisonRows = @[@[@1, @5, defaultMember], @[@9, @9, @9], @[@2, @6, defaultMember], @[@3, @7, defaultMember], @[@4, @8, defaultMember]];
+    XCTAssertEqualObjects(self.testMatrix.rows, comparisonRows, @"The last member in rows indexes 0, 2, 3, 4 should still be default placeholders");
+}
+
 - (void)testFillColumnWithObject {
     [self.testMatrix fillColumn:2 withObject:@9];
     NSArray *nineArray = @[@9, @9, @9, @9];
