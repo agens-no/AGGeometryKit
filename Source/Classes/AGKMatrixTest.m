@@ -374,7 +374,32 @@
     
     NSArray *comparisonRowArray = @[@[@1, @2, @3, @4], @[@5, @6, @7, @8], @[@0, @0, @0, @0]];
     XCTAssertEqualObjects(matrix.rows, comparisonRowArray, @"Rows after transpose should be: %@", comparisonRowArray);
+}
+
+#pragma mark - Deriving New Matrices
+
+- (void)testMatrixWithColumnSizeRowSize {
+    NSMutableArray *members = [NSMutableArray arrayWithArray:@[@1, @2, @3, @4, @5, @6, @7, @8]];
+    AGKMatrix *matrix = [[AGKMatrix alloc] initWithColumns:3 rows:4 members:members];
+    AGKMatrix *newMatrix = [matrix matrixWithColumnSize:2 rowSize:2];
     
+    NSArray *comparisonColumns = @[@[@1, @2], @[@3, @4]];
+    XCTAssertEqual(newMatrix.columnCount, 2, @"There should be 2 columns in the new matrix");
+    XCTAssertEqual(newMatrix.rowCount, 2, @"There should be 2 rows in the new matrix");
+    
+    XCTAssertEqualObjects(newMatrix.columns, comparisonColumns, @"Columns in new 2x2 matrix should be: %@", comparisonColumns);
+}
+
+- (void)testMatrixWithColumnSizeRowSizeAndTranspose {
+    NSMutableArray *members = [NSMutableArray arrayWithArray:@[@1, @2, @3, @4, @5, @6, @7, @8]];
+    AGKMatrix *matrix = [[AGKMatrix alloc] initWithColumns:3 rows:4 members:members];
+    AGKMatrix *newMatrix = [matrix matrixWithColumnSize:2 rowSize:2 andTranspose:YES];
+    
+    NSArray *comparisonColumns = @[@[@1, @5], @[@0, @2]];
+    XCTAssertEqual(newMatrix.columnCount, 2, @"There should be 2 columns in the new transposed matrix");
+    XCTAssertEqual(newMatrix.rowCount, 2, @"There should be 2 rows in the new transposed matrix");
+    
+    XCTAssertEqualObjects(newMatrix.columns, comparisonColumns, @"Columns in new transposed 2x2 matrix should be: %@", comparisonColumns);
 }
 
 @end

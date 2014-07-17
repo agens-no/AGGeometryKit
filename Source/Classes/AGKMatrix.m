@@ -422,31 +422,15 @@ typedef NS_ENUM(NSUInteger, AGKMatrixDimension) {
 }
 
 - (AGKMatrix *)matrixWithColumnSize:(NSUInteger)columns rowSize:(NSUInteger)rows andTranspose:(BOOL)transpose {
-	AGKMatrix *resultMatrix = [AGKMatrix matrixWithColumns:columns rows:rows];
-	
 	AGKMatrixDimension dimension = transpose ? AGKMatrixDimensionRow : AGKMatrixDimensionColumn;
-	
-	NSUInteger memberCount = self.members.count;
-	NSUInteger majorCount = (dimension == AGKMatrixDimensionColumn) ? columns : rows;
-	NSUInteger minorCount = (dimension == AGKMatrixDimensionColumn) ? rows : columns;
-	
-	for (NSUInteger majorIndex = 0; majorIndex < majorCount; majorIndex++) {
-		for (NSUInteger minorIndex = 0; minorIndex < minorCount; minorIndex++) {
-			id member;
-			NSUInteger absoluteIndex = (dimension == AGKMatrixDimensionColumn) ? (majorIndex * minorCount) + minorIndex : (minorIndex * minorCount) + majorIndex;
-			if (absoluteIndex < memberCount) {
-				member = [self.members objectAtIndex:absoluteIndex];
-			} else {
-				// If new matrix is larger than current, fill remaining members
-				// with NSNull to indicate default value will be needed.
-				member = [NSNull null];
-			}
-			
-			[resultMatrix setObject:member atColumnIndex:majorIndex rowIndex:minorIndex];
-		}
-	}
-	
-	return resultMatrix;
+    NSUInteger rangeLength = transpose ? self.rowCount : self.columnCount;
+    NSArray *allColumns = [self getDimension:dimension withRange:NSMakeRange(0, rangeLength) andDefaults:NO];
+    NSMutableArray *members = [NSMutableArray array];
+    for (NSArray *column in allColumns) {
+        [members addObjectsFromArray:column];
+    }
+    
+    return [[AGKMatrix alloc] initWithColumns:columns rows:rows members:[members subarrayWithRange:NSMakeRange(0, MIN((columns * rows), members.count))]];
 }
 
 #pragma mark - Matrix Operations
