@@ -350,4 +350,21 @@
     XCTAssertEqualObjects(newMatrix.columns, comparisonColumns, @"Columns in new transposed 2x2 matrix should be: %@", comparisonColumns);
 }
 
+#pragma mark - Matrix Operations
+
+- (void)testPerformGivensRotationOnRowAndRowWithCosineSine {
+    AGKMatrix *matrix = [[AGKMatrix alloc] initWithColumns:8 rows:8 members:nil];
+    for (NSUInteger index = 0; index < 8; index++) {
+        [matrix setObject:@1 atColumnIndex:index rowIndex:index];
+    }
+    
+    NSNumber *cosine = @(0.67474840847595285);
+    NSNumber *sine = @(0.73804782044198791);
+    [matrix performGivensRotationOnRow:0 andRow:1 withCosine:cosine sine:sine];
+    
+    NSArray *row0Comparison = @[cosine, sine, @0, @0, @0, @0, @0, @0];
+    NSArray *row1Comparison = @[@(-1 * [sine doubleValue]), cosine, @0, @0, @0, @0, @0, @0];
+    XCTAssertEqualObjects([matrix rowAtIndex:0], row0Comparison, @"After givens rotation on the first two rows of an 8x8 identity style matrix, and values cosine[%@] sine[%@], the first two rows should be:\n Row 0: %@\nRow1: %@", cosine, sine, row0Comparison, row1Comparison);
+}
+
 @end
