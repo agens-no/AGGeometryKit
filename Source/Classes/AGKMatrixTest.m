@@ -367,11 +367,23 @@
 - (void)testMatrixWithColumnSizeRowSizeAndTranspose {
     AGKMatrix *newMatrix = [self.testMatrix matrixWithColumnSize:2 rowSize:2 andTranspose:YES];
     
-    NSArray *comparisonColumns = @[@[@1, @5], @[@0, @2]];
+    NSArray *comparisonColumns = @[@[@1, @3], @[@2, @4]];
     XCTAssertEqual(newMatrix.columnCount, 2, @"There should be 2 columns in the new transposed matrix");
     XCTAssertEqual(newMatrix.rowCount, 2, @"There should be 2 rows in the new transposed matrix");
     
     XCTAssertEqualObjects(newMatrix.columns, comparisonColumns, @"Columns in new transposed 2x2 matrix should be: %@", comparisonColumns);
+}
+
+- (void)testMatrixWithColumnSizeRowSizeAndTranspose_SingleDimensionTo4x4 {
+    NSArray *testMembers = @[@(0.696871), @(-0.369984), @(0.0), @(-0.000617), @(0.000447), @(0.990249), @(0.0), @(-0.000506), @(0.0), @(0.0), @(1.0), @(0.0), @(-53.266510), @(-59.347954), @(0.0), @(1.0)];
+    AGKMatrix *matrix = [[AGKMatrix alloc] initWithColumns:testMembers.count rows:1 members:testMembers];
+    AGKMatrix *newMatrix = [matrix matrixWithColumnSize:4 rowSize:4 andTranspose:YES];
+    
+    NSArray *comparisonColumns = @[@[@(0.696871), @(0.000447), @(0.0), @(-53.266510)], @[@(-0.369984), @(0.990249), @(0.0), @(-59.347954)], @[@(0.0), @(0.0), @(1.0), @(0.0)], @[@(-0.000617), @(-0.000506), @(0.0), @(1.0)]];
+    XCTAssertEqual(newMatrix.columnCount, 4, @"There should be 4 columns in the new transposed matrix");
+    XCTAssertEqual(newMatrix.rowCount, 4, @"There should be 4 rows in the new transposed matrix");
+    
+    XCTAssertEqualObjects(newMatrix.columns, comparisonColumns, @"Columns in new transposed 4x4 matrix should be: %@", comparisonColumns);
 }
 
 #pragma mark - Matrix Operations

@@ -491,9 +491,8 @@
  *  Returns a new matrix containing the recieving matrix's members that fall
  *  within the column and row limits given.
  *
- *  The reciever's members are copied in a column first manner. This is the same
- *  as calling `matrixWithColumns:rows:andTranspose:` with the `transpose`
- *  parameter set to `NO`.
+ *  The reciever's members are flattened into a single array with column
+ *  priority, then passed into the new matrix.
  *
  *  If the specified columns or rows are larger than the reciever, the remaining
  *  slots will be filled with the default placeholder.
@@ -511,10 +510,13 @@
 
 /**
  *  Returns a new matrix containing the recieving matrix's members that fall
- *  within the column and row limits given after transposing if desired.
+ *  within the column and row limits given. Then transposed if desired.
  *
- *  If `transpose` is `NO` reciever's members are copied in a column first
- *  manner. If `YES` they are copied in a row first manner.
+ *  The reciever's members are flattened into a single array with column 
+ *  priority, then passed into the new matrix.
+ *
+ *  If `transpose` is `YES` the resulting matrix will be transposed, turning 
+ *  columns into rows.
  *
  *  If the specified columns or rows are larger than the reciever, the remaining
  *  slots will be filled with the default placeholder.
@@ -526,6 +528,9 @@
  *
  *  @return A New matrix with the specified columns and rows dimensions, and
  *  filled with the reciever's members as much as possible.
+ *
+ *  @see matrixWithColumnSize:rowSize:
+ *  @see transpose
  */
 - (AGKMatrix *)matrixWithColumnSize:(NSUInteger)columns rowSize:(NSUInteger)rows andTranspose:(BOOL)transpose;
 

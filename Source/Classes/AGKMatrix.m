@@ -452,15 +452,19 @@ typedef NS_ENUM(NSUInteger, AGKMatrixDimension) {
 }
 
 - (AGKMatrix *)matrixWithColumnSize:(NSUInteger)columns rowSize:(NSUInteger)rows andTranspose:(BOOL)transpose {
-	AGKMatrixDimension dimension = transpose ? AGKMatrixDimensionRow : AGKMatrixDimensionColumn;
-    NSUInteger rangeLength = transpose ? self.rowCount : self.columnCount;
-    NSArray *allColumns = [self getDimension:dimension withRange:NSMakeRange(0, rangeLength) andDefaults:NO];
-    NSMutableArray *members = [NSMutableArray array];
-    for (NSArray *column in allColumns) {
-        [members addObjectsFromArray:column];
+    NSArray *rawColumns = [self getDimension:AGKMatrixDimensionColumn withRange:NSMakeRange(0, self.columnCount) andDefaults:NO];
+    NSMutableArray *allMembers = [NSMutableArray arrayWithCapacity:self.count];
+    for (NSArray *column in rawColumns) {
+        [allMembers addObjectsFromArray:column];
     }
     
-    return [[AGKMatrix alloc] initWithColumns:columns rows:rows members:[members subarrayWithRange:NSMakeRange(0, MIN((columns * rows), members.count))]];
+    AGKMatrix *resultMatrix = [[AGKMatrix alloc] initWithColumns:columns rows:rows members:[allMembers subarrayWithRange:NSMakeRange(0, MIN((columns * rows), self.count))]];
+    
+    if (transpose) {
+        [resultMatrix transpose];
+    }
+    
+    return resultMatrix;
 }
 
 #pragma mark - Matrix Operations

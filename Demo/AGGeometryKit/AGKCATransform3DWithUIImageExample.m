@@ -49,7 +49,8 @@
 {
     AGKQuad quad = [self quadForBlueToFill];
     
-    self.imageView2.image = [[self originalImage] imageWithQuad:quad scale:2.0];
+    self.imageView2.image = [[self originalImage] imageWithPerspectiveCorrectionFromQuad:quad];
+//    self.imageView2.image = [[self originalImage] imageWithQuad:quad scale:2.0];
 }
 
 - (IBAction)makePurpleFill:(id)sender
@@ -70,10 +71,16 @@
      I'm working on some way to calculate these numbers. I just grabbed these from photoshop....
      */
     AGKQuad quad;
-    quad.tl = CGPointMake(-90.0/2.0, -63.0/2.0);
-    quad.tr = CGPointMake(2825.0/2.0, -1127.0/2.0);
-    quad.bl = CGPointMake(-118.0/2.0, 766.0/2.0);
-    quad.br = CGPointMake(10555.0/2.0, 1679.0/2.0);
+//    quad.tl = CGPointMake(-90.0/2.0, -63.0/2.0);
+//    quad.tr = CGPointMake(2825.0/2.0, -1127.0/2.0);
+//    quad.bl = CGPointMake(-118.0/2.0, 766.0/2.0);
+//    quad.br = CGPointMake(10555.0/2.0, 1679.0/2.0);
+    
+    quad.tl = CGPointMake(76.38, 88.47);
+    quad.tr = CGPointMake(537.99, 260.94);
+    quad.br = CGPointMake(467.15, 509.66);
+    quad.bl = CGPointMake(76.11, 509.67);
+    
     return quad;
 }
 
