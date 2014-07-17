@@ -278,4 +278,74 @@
     XCTAssertEqualObjects([matrix objectAtColumnIndex:3 rowIndex:4], matrix.defaultMember, @"Member at 3x4 should return the defaultMember, as that postion was not specified before the matrix expansion.");
 }
 
+- (void)testSetRowAtIndexWithArray {
+    NSMutableArray *members = [NSMutableArray arrayWithArray:@[@1, @2, @3, @4, @5, @6, @7, @8]];
+    AGKMatrix *matrix = [[AGKMatrix alloc] initWithColumns:3 rows:4 members:members];
+    
+    NSArray *fifthRow = @[@9, @9, @9];
+    [matrix setRowAtIndex:4 withArray:fifthRow];
+    XCTAssertEqualObjects([matrix rowAtIndex:4], fifthRow, @"A fifth row at index 3 should have been added with members: %@", fifthRow);
+    
+    [matrix setRowAtIndex:1 withArray:@[@10]];
+    for (NSUInteger columnIndex = 0; columnIndex < 3; columnIndex++) {
+        if (columnIndex == 0) {
+            XCTAssertEqualObjects([matrix objectAtColumnIndex:columnIndex rowIndex:1], @10, @"Member at %dx1 should have been replaced with 10", columnIndex);
+        } else {
+            XCTAssertEqualObjects([matrix objectAtColumnIndex:columnIndex rowIndex:1], matrix.defaultMember, @"Member at %dx1 should return the defaultMember, as that postion was not specified.", columnIndex);
+        }
+    }
+    
+    [matrix setRowAtIndex:5 withArray:@[@11, @12, @13, @14]];
+    XCTAssertEqual(matrix.columnCount, 4, @"Matrix should have expanded to 4 columns to fit the incoming row array");
+    XCTAssertEqualObjects([matrix objectAtColumnIndex:3 rowIndex:5], @14, @"Member at 3x5 should return the new member 15.");
+    XCTAssertEqualObjects([matrix objectAtColumnIndex:3 rowIndex:4], matrix.defaultMember, @"Member at 3x4 should return the defaultMember, as that postion was not specified before the matrix expansion.");
+}
+
+- (void)testFillColumnWithObject {
+    NSMutableArray *members = [NSMutableArray arrayWithArray:@[@1, @2, @3, @4, @5, @6, @7, @8]];
+    AGKMatrix *matrix = [[AGKMatrix alloc] initWithColumns:3 rows:4 members:members];
+    
+    [matrix fillColumn:2 withObject:@9];
+    NSArray *nineArray = @[@9, @9, @9, @9];
+    XCTAssertEqualObjects([matrix columnAtIndex:2], nineArray, @"Column at index 2 should now be %@", nineArray);
+    
+    NSArray *tenArray = @[@10, @10, @10, @10];
+    NSArray *defaultArray = @[matrix.defaultMember, matrix.defaultMember, matrix.defaultMember, matrix.defaultMember];
+    [matrix fillColumn:4 withObject:@10];
+    XCTAssertEqualObjects([matrix columnAtIndex:3], defaultArray, @"Column at index 3 should be filled with default members after matrix expansion.");
+    XCTAssertEqualObjects([matrix columnAtIndex:4], tenArray, @"Column at index 4 should be filled with members of value 10");
+}
+
+- (void)testFillRowWithObject {
+    NSMutableArray *members = [NSMutableArray arrayWithArray:@[@1, @2, @3, @4, @5, @6, @7, @8]];
+    AGKMatrix *matrix = [[AGKMatrix alloc] initWithColumns:3 rows:4 members:members];
+    
+    [matrix fillRow:2 withObject:@9];
+    NSArray *nineArray = @[@9, @9, @9];
+    XCTAssertEqualObjects([matrix rowAtIndex:2], nineArray, @"Row at index 2 should now be %@", nineArray);
+    
+    NSArray *tenArray = @[@10, @10, @10];
+    NSArray *defaultArray = @[matrix.defaultMember, matrix.defaultMember, matrix.defaultMember];
+    [matrix fillRow:5 withObject:@10];
+    XCTAssertEqualObjects([matrix rowAtIndex:4], defaultArray, @"Column at index 4 should be filled with default members after matrix expansion.");
+    XCTAssertEqualObjects([matrix rowAtIndex:5], tenArray, @"Column at index 5 should be filled with members of value 10");
+    
+    NSArray *columnIdx1 = @[@5, @6, @9, @8, matrix.defaultMember, @10];
+    XCTAssertEqualObjects([matrix columnAtIndex:1], columnIdx1, @"Column at index 1 should now be: %@", columnIdx1);
+}
+
+- (void)testSetObjectAtIndexedSubscript {
+    NSMutableArray *members = [NSMutableArray arrayWithArray:@[@1, @2, @3, @4, @5, @6, @7, @8]];
+    AGKMatrix *matrix = [[AGKMatrix alloc] initWithColumns:3 rows:4 members:members];
+    
+    matrix[0] = @11;
+    XCTAssertEqualObjects([matrix objectAtColumnIndex:0 rowIndex:0], @11, @"Member at position 0x0 should be 11");
+    XCTAssertEqualObjects([matrix objectAtColumnIndex:0 rowIndex:1], @2, @"Member at position 0x1 should be unchanged (@2)");
+    
+    matrix[12] = @13;
+    NSArray *comparisonArray = @[@13, matrix.defaultMember, matrix.defaultMember, matrix.defaultMember];
+    XCTAssertEqual(matrix.columnCount, 4, @"Matrix should have been expanded to 4 columns");
+    XCTAssertEqualObjects([matrix columnAtIndex:3], comparisonArray, @"Column at index 3 should be: %@", comparisonArray);
+}
+
 @end
