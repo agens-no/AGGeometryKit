@@ -348,4 +348,33 @@
     XCTAssertEqualObjects([matrix columnAtIndex:3], comparisonArray, @"Column at index 3 should be: %@", comparisonArray);
 }
 
+#pragma mark - Rearranging Members
+
+- (void)testExchangeMemberAtColumnRowWithColumnRow {
+    NSMutableArray *members = [NSMutableArray arrayWithArray:@[@1, @2, @3, @4, @5, @6, @7, @8]];
+    AGKMatrix *matrix = [[AGKMatrix alloc] initWithColumns:3 rows:4 members:members];
+    
+    [matrix exchangeMemberAtColumn:2 row:1 withColumn:1 row:2];
+    XCTAssertEqualObjects([matrix objectAtColumnIndex:2 rowIndex:1], @7, @"Member at position 2x1 should now be 7");
+    XCTAssertEqualObjects([matrix objectAtColumnIndex:1 rowIndex:2], matrix.defaultMember, @"Member at position 1x2 should now be: %@", matrix.defaultMember);
+    matrix.defaultMember = @100;
+    XCTAssertEqualObjects([matrix objectAtColumnIndex:1 rowIndex:2], @100, @"Member at position 1x2 should now be a default placeholder (%@)", matrix.defaultMember);
+}
+
+- (void)testTranspose {
+    NSMutableArray *members = [NSMutableArray arrayWithArray:@[@1, @2, @3, @4, @5, @6, @7, @8]];
+    AGKMatrix *matrix = [[AGKMatrix alloc] initWithColumns:3 rows:4 members:members];
+    
+    [matrix transpose];
+    XCTAssertEqual(matrix.columnCount, 4, @"Matrix should have 4 columns after transpose");
+    XCTAssertEqual(matrix.rowCount, 3, @"Matrix should have 3 rows after transpose");
+    
+    NSArray *comparisonColumnArray = @[@[@1, @5, @0], @[@2, @6, @0], @[@3, @7, @0], @[@4, @8, @0]];
+    XCTAssertEqualObjects(matrix.columns, comparisonColumnArray, @"Columns after transpose should be: %@", comparisonColumnArray);
+    
+    NSArray *comparisonRowArray = @[@[@1, @2, @3, @4], @[@5, @6, @7, @8], @[@0, @0, @0, @0]];
+    XCTAssertEqualObjects(matrix.rows, comparisonRowArray, @"Rows after transpose should be: %@", comparisonRowArray);
+    
+}
+
 @end
