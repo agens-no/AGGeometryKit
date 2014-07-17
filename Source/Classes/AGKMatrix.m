@@ -350,8 +350,12 @@ typedef NS_ENUM(NSUInteger, AGKMatrixDimension) {
 	[self.members replaceObjectAtIndex:memberIndex withObject:object];
 }
 
+// TODO: Add test for nil members
 - (void)setColumnAtIndex:(NSUInteger)columnIndex withArray:(NSArray *)columnMembers {
-	
+	if (!columnMembers) {
+        columnMembers = @[];
+    }
+    
 	for (NSUInteger rowIndex = 0; rowIndex < MAX(columnMembers.count, self.rowCount); rowIndex++) {
 		id member = nil;
 		if (rowIndex < columnMembers.count) {
@@ -364,7 +368,11 @@ typedef NS_ENUM(NSUInteger, AGKMatrixDimension) {
 	}
 }
 
+// TODO: Add test for nil members
 - (void)setRowAtIndex:(NSUInteger)rowIndex withArray:(NSArray *)rowMembers {
+    if (!rowMembers) {
+        rowMembers = @[];
+    }
 	
 	for (NSUInteger columnIndex = 0; columnIndex < MAX(rowMembers.count, self.columnCount); columnIndex++) {
 		id member = nil;
