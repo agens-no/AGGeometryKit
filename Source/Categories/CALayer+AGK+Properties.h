@@ -42,6 +42,8 @@
 @property (nonatomic, assign) CGFloat frameWidth;
 @property (nonatomic, assign) CGFloat frameHeight;
 
+@property (nonatomic, readonly) CGRect frameAsIfNoTransformIsApplied;
+
 @property (nonatomic, assign) CGPoint boundsOrigin;
 @property (nonatomic, assign) CGSize boundsSize;
 @property (nonatomic, assign) CGFloat boundsWidth;
