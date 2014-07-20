@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AGKVector3D.h"
 
 @interface AGKMatrix : NSObject
 
@@ -570,6 +571,16 @@
  *  matrix is not square.
  */
 - (AGKMatrix *)inverseMatrix;
+
+/**
+ *  Returns a matrix multiplied by the given 3D vector.
+ *
+ *  @param vector The vector to multipy against.
+ *
+ *  @return A 1x3 matrix resulting from multiplying the reciver with the 
+ *  specified vector.
+ */
+- (AGKMatrix *)matrixByMultiplyingWithVector3D:(AGKVector3D)vector;
 
 #pragma mark Matrix Operations
 ///-----------------------------------------------------------------------------

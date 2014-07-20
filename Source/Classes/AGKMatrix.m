@@ -516,6 +516,24 @@ typedef NS_ENUM(NSUInteger, AGKMatrixDimension) {
     return matrix;
 }
 
+- (AGKMatrix *)matrixByMultiplyingWithVector3D:(AGKVector3D)vector {
+    if (self.columnCount != 3) {
+        return nil;
+    }
+    
+    AGKMatrix *matrix = [AGKMatrix matrixWithColumns:1 rows:self.rowCount];
+    [self enumerateRowsUsingBlock:^(NSArray *row, NSUInteger rowIndex, BOOL *stop) {
+        double member = 0.0;
+        member += [row[0] doubleValue] * (double)vector.x;
+        member += [row[1] doubleValue] * (double)vector.y;
+        member += [row[2] doubleValue] * (double)vector.z;
+        
+        [matrix setObject:@(member) atColumnIndex:0 rowIndex:rowIndex];
+    }];
+    
+    return matrix;
+}
+
 #pragma mark Private
 
 - (AGKMatrix *)matrixByDeletingColumn:(NSUInteger)columnIndex {
