@@ -516,22 +516,33 @@ typedef NS_ENUM(NSUInteger, AGKMatrixDimension) {
     return matrix;
 }
 
+- (AGKMatrix *)matrixByMultiplyingWithMatrix:(AGKMatrix *)otherMatrix {
+    if (self.columnCount != otherMatrix.rowCount) {
+        return nil;
+    }
+    
+    AGKMatrix *matrix = [AGKMatrix matrix];
+    
+    for (NSUInteger rowIndex = 0; rowIndex < self.rowCount; rowIndex++) {
+        for (NSUInteger otherColumnIndex = 0; otherColumnIndex < otherMatrix.columnCount; otherColumnIndex++) {
+            double member = 0.0;
+            for (NSUInteger memberIndex = 0; memberIndex < self.columnCount; memberIndex++) {
+                    member += [[self objectAtColumnIndex:memberIndex rowIndex:rowIndex] doubleValue] * [[otherMatrix objectAtColumnIndex:otherColumnIndex rowIndex:memberIndex] doubleValue];
+            }
+            [matrix setObject:@(member) atColumnIndex:otherColumnIndex rowIndex:rowIndex];
+        }
+    }
+    
+    return matrix;
+}
+
 - (AGKMatrix *)matrixByMultiplyingWithVector3D:(AGKVector3D)vector {
     if (self.columnCount != 3) {
         return nil;
     }
     
-    AGKMatrix *matrix = [AGKMatrix matrixWithColumns:1 rows:self.rowCount];
-    [self enumerateRowsUsingBlock:^(NSArray *row, NSUInteger rowIndex, BOOL *stop) {
-        double member = 0.0;
-        member += [row[0] doubleValue] * (double)vector.x;
-        member += [row[1] doubleValue] * (double)vector.y;
-        member += [row[2] doubleValue] * (double)vector.z;
-        
-        [matrix setObject:@(member) atColumnIndex:0 rowIndex:rowIndex];
-    }];
-    
-    return matrix;
+    AGKMatrix *vectorMatrix = [[AGKMatrix alloc] initWithColumns:1 rows:3 members:@[@(vector.x), @(vector.y), @(vector.z)]];
+    return [self matrixByMultiplyingWithMatrix:vectorMatrix];
 }
 
 #pragma mark Private

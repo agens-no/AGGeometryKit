@@ -573,6 +573,15 @@
 - (AGKMatrix *)inverseMatrix;
 
 /**
+ *  Returns a new matrix from multiplying the reciver by the given matrix.
+ *
+ *  @param otherMatrix The matrix to multiply against.
+ *
+ *  @return A new matrix that is the result of multiplying the two matrices.
+ */
+- (AGKMatrix *)matrixByMultiplyingWithMatrix:(AGKMatrix *)otherMatrix;
+
+/**
  *  Returns a matrix multiplied by the given 3D vector.
  *
  *  @param vector The vector to multipy against.

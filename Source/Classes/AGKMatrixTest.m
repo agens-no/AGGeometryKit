@@ -408,6 +408,14 @@
     }];
 }
 
+- (void)testMatrixByMultiplyingWithMatrix {
+    AGKMatrix *leftMatrix = [[AGKMatrix alloc] initWithColumns:2 rows:3 members:@[@0, @(-2), @0, @3, @(-1), @4]];
+    AGKMatrix *rightMatrix = [[AGKMatrix alloc] initWithColumns:3 rows:2 members:@[@1, @0, @0, @3, @(-2), @(-1)]];
+    AGKMatrix *matrix = [leftMatrix matrixByMultiplyingWithMatrix:rightMatrix];
+    NSArray *comparisonColumns = @[@[@0, @(-2), @0], @[@9, @(-3), @12], @[@(-3), @5, @(-4)]];
+    XCTAssertEqualObjects([matrix columns], comparisonColumns, @"After multiplying the left and right matrices, the result matrix's columns should be: %@", comparisonColumns);
+}
+
 - (void)testMatrixByMultiplyingWithVector3D {
     AGKMatrix *matrix = [self.testMatrix matrixByMultiplyingWithVector3D:AGKVector3DMake(2.0, 10.0, -1.0)];
     NSArray *comparisonColumns = @[@[@52.0, @64.0, @76.0, @88.0]];
