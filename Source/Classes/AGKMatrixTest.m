@@ -386,7 +386,47 @@
     XCTAssertEqualObjects(newMatrix.columns, comparisonColumns, @"Columns in new transposed 4x4 matrix should be: %@", comparisonColumns);
 }
 
+- (void)testCofactorMatrix {
+    AGKMatrix *matrix = [[AGKMatrix alloc] initWithColumns:3 rows:3 members:@[@1, @0, @1, @2, @4, @0, @3, @5, @6]];
+    NSArray *comparisonColumns = @[@[@24, @(-12), @(-2)], @[@5, @3, @(-5)], @[@(-4), @2, @4]];
+    XCTAssertEqualObjects([[matrix cofactorMatrix] columns], comparisonColumns, @"Matrix columns after cofactor should be: %@", comparisonColumns);
+}
+
+- (void)testAdjointMatrix {
+    AGKMatrix *matrix = [[AGKMatrix alloc] initWithColumns:3 rows:3 members:@[@1, @0, @1, @2, @4, @0, @3, @5, @6]];
+    NSArray *comparisonColumns = @[@[@24, @(5), @(-4)], @[@(-12), @3, @(2)], @[@(-2), @(-5), @4]];
+    XCTAssertEqualObjects([[matrix adjointMatrix] columns], comparisonColumns, @"Matrix rows after adjoint should be: %@", comparisonColumns);
+}
+
+- (void)testInverseMatrix {
+    AGKMatrix *matrix = [[AGKMatrix alloc] initWithColumns:3 rows:3 members:@[@1, @0, @5, @2, @1, @6, @3, @4, @0]];
+    AGKMatrix *inverseMatrix = [matrix inverseMatrix];
+    NSArray *comparisonMembers = @[@(-24.0), @(20.0), @(-5), @(18.0), @(-15.0), @(4.0), @(5.0), @(-4.0), @(1.0)];
+    
+    [inverseMatrix enumerateMembersUsingBlock:^(NSNumber *member, NSUInteger index, NSUInteger columnIndex, NSUInteger rowIndex, BOOL *stop) {
+        XCTAssertEqualObjects(member, comparisonMembers[index], @"Member at column %d row %d should be %@", columnIndex, rowIndex, comparisonMembers[index]);
+    }];
+}
+
 #pragma mark - Matrix Operations
+
+- (void)testMultiplyByNumber {
+    [self.testMatrix multiplyByNumber:@10];
+    NSArray *comparisonColumns = @[@[@10, @20, @30, @40], @[@50, @60, @70, @80], @[@0, @0, @0, @0]];
+    XCTAssertEqualObjects([self.testMatrix columns], comparisonColumns, @"Every member in the matrix should have been multiplied by 10.");
+}
+
+- (void)testDeterminant {
+    AGKMatrix *matrix = [[AGKMatrix alloc] initWithColumns:3 rows:3 members:@[@1, @2, @3, @4, @5, @6, @7, @8, @9]];
+    NSNumber *determinant = [matrix determinant];
+    XCTAssertEqual([determinant doubleValue], 0.0, @"Determinant of a 3x3 matrix where the members increment from 1 to 9 should be 0");
+}
+
+- (void)testCofactorAtColumnRow {
+    AGKMatrix *matrix = [[AGKMatrix alloc] initWithColumns:4 rows:4 members:@[@1, @0, @0, @0, @2, @5, @8, @0, @3, @6, @9, @0, @4, @7, @10, @11]];
+    NSNumber *cofactor = [matrix cofactorAtColumn:2 row:1];
+    XCTAssertEqualObjects(cofactor, @(-88), @"Cofactor for position 2x1 should be -88");
+}
 
 - (void)testPerformGivensRotationOnRowAndRowWithCosineSine {
     AGKMatrix *matrix = [[AGKMatrix alloc] initWithColumns:8 rows:8 members:nil];

@@ -424,6 +424,16 @@ typedef NS_ENUM(NSUInteger, AGKMatrixDimension) {
 	[self setObject:obj atColumnIndex:(index / self.rowCount) rowIndex:(index % self.rowCount)];
 }
 
+#pragma mark Private
+
+- (void)addColumnWithMembers:(NSArray *)columnMembers {
+    [self setColumnAtIndex:self.columnCount withArray:columnMembers];
+}
+
+- (void)addRowWithMembers:(NSArray *)rowMembers {
+    [self setRowAtIndex:self.rowCount withArray:rowMembers];
+}
+
 #pragma mark - Rearranging Members
 
 - (void)exchangeMemberAtColumn:(NSUInteger)firstColumnIndex row:(NSUInteger)firstRowIndex withColumn:(NSUInteger)secondColumnIndex row:(NSUInteger)secondRowIndex {
@@ -467,7 +477,118 @@ typedef NS_ENUM(NSUInteger, AGKMatrixDimension) {
     return resultMatrix;
 }
 
+- (AGKMatrix *)cofactorMatrix {
+    if (self.columnCount != self.rowCount) {
+        return nil;
+    }
+    
+    AGKMatrix *cofactorMatrix = [AGKMatrix matrix];
+    for (NSUInteger columnIndex = 0; columnIndex < self.columnCount; columnIndex++) {
+        for (NSUInteger rowIndex = 0; rowIndex < self.rowCount; rowIndex++) {
+            NSNumber *cofactor = [self cofactorAtColumn:columnIndex row:rowIndex];
+            [cofactorMatrix setObject:cofactor atColumnIndex:columnIndex rowIndex:rowIndex];
+        }
+    }
+    
+    return cofactorMatrix;
+}
+
+- (AGKMatrix *)adjointMatrix {
+    if (self.columnCount != self.rowCount) {
+        return nil;
+    }
+    
+    AGKMatrix *matrix = [self cofactorMatrix];
+    [matrix transpose];
+    
+    return matrix;
+}
+
+- (AGKMatrix *)inverseMatrix {
+    if (self.columnCount != self.rowCount) {
+        return nil;
+    }
+    
+    double determinant = [[self determinant] doubleValue];
+    AGKMatrix *matrix = [self adjointMatrix];
+    [matrix multiplyByNumber:@(1.0 / determinant)];
+    
+    return matrix;
+}
+
+#pragma mark Private
+
+- (AGKMatrix *)matrixByDeletingColumn:(NSUInteger)columnIndex {
+    AGKMatrix *resultMatrix = [[AGKMatrix alloc] initWithColumns:0 rows:0 members:nil];
+    
+    [self enumerateColumnsUsingBlock:^(NSArray *column, NSUInteger innerColumnIndex, BOOL *stop) {
+        if (innerColumnIndex != columnIndex) {
+            [resultMatrix addColumnWithMembers:column];
+        }
+    }];
+    
+    return resultMatrix;
+}
+
+- (AGKMatrix *)matrixByDeletingRow:(NSUInteger)rowIndex {
+    AGKMatrix *resultMatrix = [[AGKMatrix alloc] initWithColumns:0 rows:0 members:nil];
+    
+    [self enumerateRowsUsingBlock:^(NSArray *row, NSUInteger innerRowIndex, BOOL *stop) {
+        if (innerRowIndex != rowIndex) {
+            [resultMatrix addRowWithMembers:row];
+        }
+    }];
+    
+    return resultMatrix;
+}
+
 #pragma mark - Matrix Operations
+
+- (void)multiplyByNumber:(NSNumber *)multiplier {
+    [self enumerateMembersUsingBlock:^(NSNumber *member, NSUInteger index, NSUInteger columnIndex, NSUInteger rowIndex, BOOL *stop) {
+        [self setObject:@([member doubleValue] * [multiplier doubleValue]) atColumnIndex:columnIndex rowIndex:rowIndex];
+    }];
+}
+
+- (NSNumber *)determinant {
+    if (self.rowCount != self.columnCount) {
+        return nil;
+    }
+    
+    if (self.rowCount == 2 && self.columnCount == 2) {
+        return @(([self[0] doubleValue] * [self[3] doubleValue]) - ([self[1] doubleValue] * [self[2] doubleValue]));
+    } else {
+        double determinant = 0.0;
+        
+        NSArray *row = [self rowAtIndex:0];
+        AGKMatrix *matrix = [self matrixByDeletingRow:0];
+        for (NSUInteger columnIndex = 0; columnIndex < self.columnCount; columnIndex++) {
+            AGKMatrix *subMatrix = [matrix matrixByDeletingColumn:columnIndex];
+            double subDeterminant = [[subMatrix determinant] doubleValue];
+            double columnDeterminant = [[row objectAtIndex:columnIndex] doubleValue] * subDeterminant;
+            if (columnIndex % 2 == 1) {
+                columnDeterminant *= -1.0;
+            }
+            
+            determinant += columnDeterminant;
+        }
+        
+        return @(determinant);
+    }
+}
+
+- (NSNumber *)cofactorAtColumn:(NSUInteger)columnIndex row:(NSUInteger)rowIndex {
+    if (self.rowCount != self.columnCount) {
+        return nil;
+    }
+    
+    AGKMatrix *matrix = [[self matrixByDeletingColumn:columnIndex] matrixByDeletingRow:rowIndex];
+    double cofactorSign = (columnIndex % 2) == 1 ? -1.0 : 1.0;
+    cofactorSign *= (rowIndex % 2) == 1 ? -1.0 : 1.0;
+    NSNumber *determinant = [matrix determinant];
+    
+    return @(cofactorSign * [determinant doubleValue]);
+}
 
 - (void)performGivensRotationOnRow:(NSUInteger)firstRow andRow:(NSUInteger)secondRow withCosine:(NSNumber *)cosine sine:(NSNumber *)sine {
 	double dCosine = [cosine doubleValue];

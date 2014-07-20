@@ -534,10 +534,80 @@
  */
 - (AGKMatrix *)matrixWithColumnSize:(NSUInteger)columns rowSize:(NSUInteger)rows andTranspose:(BOOL)transpose;
 
+/**
+ *  Returns a matrix of the same size as the recipeint, but filled with 
+ *  cofactors of each of the reciever's members.
+ *
+ *  @return A matrix filled with cofactor members, or `nil` if matrix is not 
+ *  square.
+ *
+ *  @see cofactorAtColumn:row:
+ *  @see determinant
+ *  @see adjointMatrix
+ */
+- (AGKMatrix *)cofactorMatrix;
+
+/**
+ *  Returns the adjoint matrix of the reciver.
+ *
+ *  An adjoint matrix is the same as a cofactor matrix, but transposed.
+ *
+ *  @return The adjoint matrix of the reciever, or `nil` if matrix is not 
+ *  square.
+ *
+ *  @see cofactorMatrix
+ *  @see transpose
+ */
+- (AGKMatrix *)adjointMatrix;
+
+/**
+ *  Returns the inverse matrix of the reciever.
+ *
+ *  An inverse matrix is defined by the fact that when multiplied by the 
+ *  original matrix, you will get an identity matrix in return.
+ *
+ *  @return A new matrix that is the inverse of the reciever, or `nil` if the 
+ *  matrix is not square.
+ */
+- (AGKMatrix *)inverseMatrix;
+
 #pragma mark Matrix Operations
 ///-----------------------------------------------------------------------------
 /// @name Matrix Operations
 ///-----------------------------------------------------------------------------
+
+/**
+ *  Multiply the matrix by a given number.
+ *
+ *  @param multiplier The number to multiply the matrix by.
+ */
+- (void)multiplyByNumber:(NSNumber *)multiplier;
+
+/**
+ *  Returns the determinant of a square matrix.
+ *
+ *  If the matrix is not square, method will return `nil`.
+ *
+ *  @return The determinant of the reciever matrix, or `nil` if no determinant 
+ *  is available.
+ *
+ *  @see cofactorMatrix
+ */
+- (NSNumber *)determinant;
+
+/**
+ *  Returns the matrix cofactor at a given location.
+ *
+ *  @param columnIndex The column index with which to calculate the cofactor.
+ *  @param rowIndex    The row index with which to calculation the cofactor
+ *
+ *  @return The cofactor calculated from the specified column and row location. 
+ *  Or `nil` if matrix isn't square.
+ *
+ *  @see cofactorMatrix
+ *  @see determinant
+ */
+- (NSNumber *)cofactorAtColumn:(NSUInteger)columnIndex row:(NSUInteger)rowIndex;
 
 /**
  *  Executes a Givens rotation on the given rows, for the given cos*θ* and
