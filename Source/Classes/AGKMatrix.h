@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AGKVector3D.h"
+//#import "AGKVector3D.h"
 
 @interface AGKMatrix : NSObject
 
@@ -40,7 +40,8 @@
  *  @param otherMatrix A matrix containing the members and dimensions with which
  *  to initialize the new matrix.
  *
- *  @return A new matrix containing the keys and values found in `otherMatrix`
+ *  @return A new matrix containing the members found in `otherMatrix`, and 
+ *  sized to match `otherMatrix`.
  */
 + (instancetype)matrixWithMatrix:(AGKMatrix *)otherMatrix;
 
@@ -580,16 +581,6 @@
  *  @return A new matrix that is the result of multiplying the two matrices.
  */
 - (AGKMatrix *)matrixByMultiplyingWithMatrix:(AGKMatrix *)otherMatrix;
-
-/**
- *  Returns a matrix multiplied by the given 3D vector.
- *
- *  @param vector The vector to multipy against.
- *
- *  @return A 1x3 matrix resulting from multiplying the reciver with the 
- *  specified vector.
- */
-- (AGKMatrix *)matrixByMultiplyingWithVector3D:(AGKVector3D)vector;
 
 #pragma mark Matrix Operations
 ///-----------------------------------------------------------------------------

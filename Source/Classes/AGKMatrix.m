@@ -536,15 +536,6 @@ typedef NS_ENUM(NSUInteger, AGKMatrixDimension) {
     return matrix;
 }
 
-- (AGKMatrix *)matrixByMultiplyingWithVector3D:(AGKVector3D)vector {
-    if (self.columnCount != 3) {
-        return nil;
-    }
-    
-    AGKMatrix *vectorMatrix = [[AGKMatrix alloc] initWithColumns:1 rows:3 members:@[@(vector.x), @(vector.y), @(vector.z)]];
-    return [self matrixByMultiplyingWithMatrix:vectorMatrix];
-}
-
 #pragma mark Private
 
 - (AGKMatrix *)matrixByDeletingColumn:(NSUInteger)columnIndex {

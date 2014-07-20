@@ -416,12 +416,6 @@
     XCTAssertEqualObjects([matrix columns], comparisonColumns, @"After multiplying the left and right matrices, the result matrix's columns should be: %@", comparisonColumns);
 }
 
-- (void)testMatrixByMultiplyingWithVector3D {
-    AGKMatrix *matrix = [self.testMatrix matrixByMultiplyingWithVector3D:AGKVector3DMake(2.0, 10.0, -1.0)];
-    NSArray *comparisonColumns = @[@[@52.0, @64.0, @76.0, @88.0]];
-    XCTAssertEqualObjects([matrix columns], comparisonColumns, @"The vector multiplied matrix should be a 1x3 matrix with the following columns: %@", comparisonColumns);
-}
-
 #pragma mark - Matrix Operations
 
 - (void)testMultiplyByNumber {

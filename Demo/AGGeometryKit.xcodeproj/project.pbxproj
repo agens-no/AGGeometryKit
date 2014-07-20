@@ -12,6 +12,8 @@
 		0CC8079E1978254500001F80 /* AGKMatrix+GLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC8079D1978254500001F80 /* AGKMatrix+GLKit.m */; };
 		0CC807A1197827B900001F80 /* AGKMatrix+CATransform3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC807A0197827B900001F80 /* AGKMatrix+CATransform3D.m */; };
 		0CC807A31978375400001F80 /* AGKMatrix+CATransform3DTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC807A21978375400001F80 /* AGKMatrix+CATransform3DTest.m */; };
+		0CC807A6197C54E600001F80 /* AGKMatrix+AGKVector3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC807A5197C54E600001F80 /* AGKMatrix+AGKVector3D.m */; };
+		0CC807A8197C569100001F80 /* AGKMatrix+AGKVector3DTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC807A7197C569100001F80 /* AGKMatrix+AGKVector3DTest.m */; };
 		A30B0C4916CE932700856E00 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A60A16A9A6F000E334AD /* QuartzCore.framework */; };
 		A30B0C4B16CE932D00856E00 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A59816A9A3BD00E334AD /* CoreGraphics.framework */; };
 		A3270F3B16D5675800A92C03 /* AGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3270F2816D5675800A92C03 /* AGAppDelegate.m */; };
@@ -126,6 +128,9 @@
 		0CC8079F197827B900001F80 /* AGKMatrix+CATransform3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AGKMatrix+CATransform3D.h"; sourceTree = "<group>"; };
 		0CC807A0197827B900001F80 /* AGKMatrix+CATransform3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AGKMatrix+CATransform3D.m"; sourceTree = "<group>"; };
 		0CC807A21978375400001F80 /* AGKMatrix+CATransform3DTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AGKMatrix+CATransform3DTest.m"; sourceTree = "<group>"; };
+		0CC807A4197C54E600001F80 /* AGKMatrix+AGKVector3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AGKMatrix+AGKVector3D.h"; sourceTree = "<group>"; };
+		0CC807A5197C54E600001F80 /* AGKMatrix+AGKVector3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AGKMatrix+AGKVector3D.m"; sourceTree = "<group>"; };
+		0CC807A7197C569100001F80 /* AGKMatrix+AGKVector3DTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AGKMatrix+AGKVector3DTest.m"; sourceTree = "<group>"; };
 		76AB885A153B4BA2BB935C68 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		A3270F2716D5675800A92C03 /* AGAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGAppDelegate.h; sourceTree = "<group>"; };
 		A3270F2816D5675800A92C03 /* AGAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGAppDelegate.m; sourceTree = "<group>"; };
@@ -403,6 +408,9 @@
 				0CC8079F197827B900001F80 /* AGKMatrix+CATransform3D.h */,
 				0CC807A0197827B900001F80 /* AGKMatrix+CATransform3D.m */,
 				0CC807A21978375400001F80 /* AGKMatrix+CATransform3DTest.m */,
+				0CC807A4197C54E600001F80 /* AGKMatrix+AGKVector3D.h */,
+				0CC807A5197C54E600001F80 /* AGKMatrix+AGKVector3D.m */,
+				0CC807A7197C569100001F80 /* AGKMatrix+AGKVector3DTest.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -673,6 +681,7 @@
 				A331447B191912B700A9968C /* CALayer+AGK+Methods.m in Sources */,
 				A38F9F41185B3F5C00F49AD7 /* AGKVector3D.m in Sources */,
 				A38F9F47185B3F5C00F49AD7 /* UIBezierPath+AGKQuad.m in Sources */,
+				0CC807A6197C54E600001F80 /* AGKMatrix+AGKVector3D.m in Sources */,
 				A38F9F3A185B3F5C00F49AD7 /* AGKLine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -695,6 +704,7 @@
 				A3EE527016F07479007706C6 /* AGKAngleConverterExample.m in Sources */,
 				A38F9F55185B3F6500F49AD7 /* AGKQuadTest.m in Sources */,
 				A3E67B0F19222FDA00A4CD4A /* AGKLineTest.m in Sources */,
+				0CC807A8197C569100001F80 /* AGKMatrix+AGKVector3DTest.m in Sources */,
 				A3F2EFF6192233AB00B6F9E8 /* CALayer+AGKQuadTest.m in Sources */,
 				A38F9F59185B3F6500F49AD7 /* UIView+AGK+PropertiesTest.m in Sources */,
 				A3F77D4016FA54C400415B24 /* JAValueToString.m in Sources */,
