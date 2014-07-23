@@ -57,7 +57,8 @@
 {
     AGKQuad quad = [self quadForPurpleFill];
     
-    self.imageView2.image = [[self originalImage] imageWithQuad:quad scale:2.0];
+    self.imageView2.image = [[self originalImage] imageWithPerspectiveCorrectionFromQuad:quad];
+//    self.imageView2.image = [[self originalImage] imageWithQuad:quad scale:2.0];
 }
 
 - (UIImage *)originalImage
@@ -76,6 +77,9 @@
 //    quad.bl = CGPointMake(-118.0/2.0, 766.0/2.0);
 //    quad.br = CGPointMake(10555.0/2.0, 1679.0/2.0);
     
+    // These points are the four corners of the sub quadrilateral that we want
+    // to perspective correct. They could be gathered by dragging control points
+    // to those corners like in the "Quad Controls" example.
     quad.tl = CGPointMake(76.38, 88.47);
     quad.tr = CGPointMake(537.99, 260.94);
     quad.br = CGPointMake(467.15, 509.66);
@@ -90,10 +94,19 @@
      I'm working on some way to calculate these numbers. I just grabbed these from photoshop....
      */
     AGKQuad quad;
-    quad.tl = CGPointMake(-10714.0/2.0, -3700.0/2.0);
-    quad.tr = CGPointMake(1933.0/2.0, -1189.0/2.0);
-    quad.bl = CGPointMake(-1066.0/2.0, 813.0/2.0);
-    quad.br = CGPointMake(912.0/2.0, 783.0/2.0);
+//    quad.tl = CGPointMake(-10714.0/2.0, -3700.0/2.0);
+//    quad.tr = CGPointMake(1933.0/2.0, -1189.0/2.0);
+//    quad.bl = CGPointMake(-1066.0/2.0, 813.0/2.0);
+//    quad.br = CGPointMake(912.0/2.0, 783.0/2.0);
+    
+    // These points are the four corners of the sub quadrilateral that we want
+    // to perspective correct. They could be gathered by dragging control points
+    // to those corners like in the "Quad Controls" example.
+    quad.tl = CGPointMake(632.15, 196.54);
+    quad.tr = CGPointMake(903.2, 184.89);
+    quad.br = CGPointMake(996.01, 439.05);
+    quad.bl = CGPointMake(542.13, 453.15);
+    
     return quad;
 }
 

@@ -26,8 +26,16 @@
 #import <QuartzCore/QuartzCore.h>
 #import "CGImageRef+AGK+CATransform3D.h"
 #import "UIImage+AGK+CATransform3D.h"
+#import "AGKLine.h"
+#import "CGGeometry+AGGeometryKit.h"
 #import "AGKMatrix.h"
 #import "AGKMatrix+CATransform3D.h"
+#import "AGKMatrix+AGKVector3D.h"
+#import "AGKVector3D.h"
+
+CGFloat square(CGFloat number) {
+    return number * number;
+}
 
 @implementation UIImage (AGKQuad)
 
@@ -46,14 +54,109 @@
     return [UIImage imageWithCGImage:croppedImage scale:self.scale orientation:self.imageOrientation];
 }
 
+
+// Aspect Ratio estimation from:
+//     Stack Overflow: http://stackoverflow.com/a/1222855/327471
+//     And Reference Paper: http://research.microsoft.com/en-us/um/people/zhang/papers/tr03-39.pdf
+- (CGFloat)aspectRatioForQuad:(AGKQuad)quad {
+    // Image principle point
+    CGFloat u0 = self.size.width / 2.0;
+    CGFloat v0 = self.size.height / 2.0;
+    
+    // Pixel aspect ratio
+    CGFloat s = 1.0;
+    
+    // Set up corner vectors. m1 = (0,0), m2 = (w,0) , m3 = (0,h), m4 = (w,h)
+    AGKVector3D m1 = AGKVector3DMake(quad.tl.x, quad.tl.y, 1.0);
+    AGKVector3D m2 = AGKVector3DMake(quad.tr.x, quad.tr.y, 1.0);
+    AGKVector3D m3 = AGKVector3DMake(quad.bl.x, quad.bl.y, 1.0);
+    AGKVector3D m4 = AGKVector3DMake(quad.br.x, quad.br.y, 1.0);
+    
+    // Calculate k2 (Equation #11)
+    AGKVector3D crossM14 = AGKVector3DCrossProduct(m1, m4);
+    AGKVector3D crossM24 = AGKVector3DCrossProduct(m2, m4);
+    CGFloat dotOfCrossM14andM3 = AGKVector3DDotProduct(crossM14, m3);
+    CGFloat dotOfCrossM24andM3 = AGKVector3DDotProduct(crossM24, m3);
+    CGFloat k2 = dotOfCrossM14andM3 / dotOfCrossM24andM3;
+    
+    // Calculate k3 (Equation #12)
+    AGKVector3D crossM34 = AGKVector3DCrossProduct(m3, m4);
+    CGFloat dotOfCrossM14andM2 = AGKVector3DDotProduct(crossM14, m2);
+    CGFloat dotOfCrossM34andM2 = AGKVector3DDotProduct(crossM34, m2);
+    CGFloat k3 = dotOfCrossM14andM2 / dotOfCrossM34andM2;
+    
+    // Calculate n2 and n3 (Equations #14, #16)
+    AGKVector3D k2MulM2 = AGKVector3DMake(k2 * m2.x, k2 * m2.y, k2 * m2.z);
+    AGKVector3D k3MulM3 = AGKVector3DMake(k3 * m3.x, k3 * m3.y, k3 * m3.z);
+    AGKVector3D n2 = AGKVector3DSubtract(k2MulM2, m1);
+    AGKVector3D n3 = AGKVector3DSubtract(k3MulM3, m1);
+    
+    // Calculate Focal Length (Equation #21)
+    //  This equation is based off a numbe of assumptions, if the image
+    //  originated from the device camera, it might be better to try to pull the
+    //  focal length from the image EXIF data via the CGImageProperties EXIF
+    //  Dictionary Key "kCGImagePropertyExifFocalLength"
+    CGFloat step1 = -(1.0 / (n2.z * n3.z * (s * s)));
+    CGFloat step2 = (((n2.x * n3.x) - (((n2.x * n3.z) + (n2.z * n2.x)) * u0)) + (n2.z * n3.z * (u0 * u0))) * (s * s);
+    CGFloat step3 = ((n2.y * n3.y) - (((n2.y * n3.z) + (n2.z * n3.y)) * v0) + (n2.z * n3.z * (v0 * v0)));
+    CGFloat f2 = step1 * (step2 + step3);
+    CGFloat f;
+    if (CGFLOAT_IS_DOUBLE) {
+        f = sqrt(f2);
+    } else {
+        f = sqrtf(f2);
+    }
+    
+    // Pinhole camera matrix (Equation #1)
+    AGKMatrix *A = [AGKMatrix matrixWithRows:@[@[@(f), @0,       @(u0)],
+                                               @[@0,   @(s * f), @(v0)],
+                                               @[@0,   @0,       @1]]];
+    
+    AGKMatrix *Ai = [A inverseMatrix];
+    AGKMatrix *Ait = [[AGKMatrix matrixWithMatrix:Ai] transpose];
+    
+    // Transpose n2 and n3
+    AGKMatrix *n2t = [[AGKMatrix matrixWithVector3D:n2] transpose];
+    AGKMatrix *n3T = [[AGKMatrix matrixWithVector3D:n3] transpose];
+    
+    // Setup and calculate w/h ratio (Equation #20)
+    AGKMatrix *w1 = [n2t matrixByMultiplyingWithMatrix:Ait];
+    AGKMatrix *w2 = [Ai matrixByMultiplyingWithVector3D:n2];
+    CGFloat numerator = AGKVector3DDotProduct([w1 agkVector3DValue], [w2 agkVector3DValue]);
+    
+    AGKMatrix *h1 = [n3T matrixByMultiplyingWithMatrix:Ait];
+    AGKMatrix *h2 = [Ai matrixByMultiplyingWithVector3D:n3];
+    CGFloat denominator = AGKVector3DDotProduct([h1 agkVector3DValue], [h2 agkVector3DValue]);
+    
+    CGFloat ratio = sqrt(numerator / denominator);
+    return ratio;
+}
+
+
 - (UIImage *)imageWithPerspectiveCorrectionFromQuad:(AGKQuad)quad
 {
-    AGKQuad destinationQuad = AGKQuadMakeWithCGRect(CGRectMake(0.0, 0.0, 600.0, 600.0));
-//    AGKQuad destinationQuad = AGKQuadMakeWithCGSize(self.size);
+    CGFloat imageRatio = self.size.width / self.size.height;
+    
+    // Estimate the aspect ratio of the original quadrilateral
+    CGFloat targetRatio = [self aspectRatioForQuad:quad];
+//    CGFloat targetRatio = 1.0;
+    
+    CGRect destinationRect = CGRectZero;
+    if (targetRatio <= imageRatio) {
+        // Height limited
+        destinationRect.size.width = self.size.height * targetRatio;
+        destinationRect.size.height = self.size.height;
+    } else {
+        // Width limited
+        destinationRect.size.width = self.size.width;
+        destinationRect.size.height = self.size.width * (1.0 / targetRatio);
+    }
+    
+    AGKQuad destinationQuad = AGKQuadMakeWithCGRect(destinationRect);
     CATransform3D transform = [self generatePerspectiveTransformMatrixFromQuad:quad toQuad:destinationQuad];
     
     UIImage *correctedImage = [self imageWithTransform:transform anchorPoint:CGPointZero];
-    UIImage *resultImage = [correctedImage imageByCroppingToRect:CGRectMake(0.0, 0.0, 600.0, 600.0)];
+    UIImage *resultImage = [correctedImage imageByCroppingToRect:destinationRect];
     
     return resultImage;
 }
