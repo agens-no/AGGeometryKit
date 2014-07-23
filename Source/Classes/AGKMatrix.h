@@ -34,6 +34,26 @@
 + (instancetype)matrixWithColumns:(NSUInteger)columnCount rows:(NSUInteger)rowCount;
 
 /**
+ *  Creates and returns a matrix from the given array of columns.
+ *
+ *  @param columns An array of column member arrays with which to initialize the
+ *  matrix.
+ *
+ *  @return A new matrix initialized with the specified columns.
+ */
++ (instancetype)matrixWithColumns:(NSArray *)columns;
+
+/**
+ *  Creates and returns a matrix from the given array of rows.
+ *
+ *  @param rows An array of row member arrays with which to initialize the 
+ *  matrix.
+ *
+ *  @return A new matrix initialized with the specified rows.
+ */
++ (instancetype)matrixWithRows:(NSArray *)rows;
+
+/**
  *  Creates and returns a matrix containing the members and dimensions from 
  *  another given matrix.
  *
@@ -481,8 +501,10 @@
  *
  *  If the matrix's dimensions are not equal, the sizes are swapped. For example
  *  if your matrix is 3x4, it will become a 4x3 matrix after this method.
+ *
+ *  @return Returns the matrix after transposing for chaining purposes.
  */
-- (void)transpose;
+- (AGKMatrix *)transpose;
 
 #pragma mark Deriving New Matrices
 ///-----------------------------------------------------------------------------

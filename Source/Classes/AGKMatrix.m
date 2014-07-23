@@ -31,6 +31,32 @@ typedef NS_ENUM(NSUInteger, AGKMatrixDimension) {
 	return [(AGKMatrix *)[self alloc] initWithColumns:columnCount rows:rowCount members:nil];
 }
 
++ (instancetype)matrixWithColumns:(NSArray *)columns {
+    NSMutableArray *members = [NSMutableArray array];
+    NSUInteger rowCount = 0;
+    for (NSArray *column in columns) {
+        rowCount = MAX(rowCount, column.count);
+        [members addObjectsFromArray:column];
+    }
+    return [(AGKMatrix *)[self alloc] initWithColumns:columns.count rows:rowCount members:members];
+}
+
++ (instancetype)matrixWithRows:(NSArray *)rows {
+    NSUInteger columnCount = 0;
+    for (NSArray *row in rows) {
+        columnCount = MAX(columnCount, row.count);
+    }
+    
+    NSMutableArray *members = [NSMutableArray array];
+    for (NSUInteger columnIndex = 0; columnIndex < columnCount ; columnIndex++) {
+        for (NSArray *row in rows) {
+            [members addObject:row[columnIndex]];
+        }
+    }
+    
+    return [(AGKMatrix *)[self alloc] initWithColumns:columnCount rows:rows.count members:members];
+}
+
 + (instancetype)matrixWithMatrix:(AGKMatrix *)otherMatrix {
 	return [(AGKMatrix *)[self alloc] initWithColumns:otherMatrix.columnCount rows:otherMatrix.rowCount members:otherMatrix.members];
 }
@@ -444,7 +470,7 @@ typedef NS_ENUM(NSUInteger, AGKMatrixDimension) {
 	[self setObject:member2 atColumnIndex:firstColumnIndex rowIndex:firstRowIndex];
 }
 
-- (void)transpose {
+- (AGKMatrix *)transpose {
 	NSArray *allRows = [self getDimension:AGKMatrixDimensionRow withRange:NSMakeRange(0, self.count) andDefaults:NO];
 	self.members = nil;
 	self.rowCount = 0;
@@ -453,6 +479,8 @@ typedef NS_ENUM(NSUInteger, AGKMatrixDimension) {
 	for (NSUInteger columnIndex = 0; columnIndex < allRows.count; columnIndex++) {
 		[self setColumnAtIndex:columnIndex withArray:allRows[columnIndex]];
 	}
+    
+    return self;
 }
 
 #pragma mark - Deriving New Matrices
