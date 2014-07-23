@@ -23,4 +23,8 @@
     return [self matrixByMultiplyingWithMatrix:vectorMatrix];
 }
 
+- (AGKVector3D)agkVector3DValue {
+    return AGKVector3DMake([self[0] doubleValue], [self[1] doubleValue], [self[2] doubleValue]);
+}
+
 @end

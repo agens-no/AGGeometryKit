@@ -31,4 +31,6 @@
  */
 - (AGKMatrix *)matrixByMultiplyingWithVector3D:(AGKVector3D)vector;
 
+- (AGKVector3D)agkVector3DValue;
+
 @end
