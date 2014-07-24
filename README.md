@@ -24,7 +24,7 @@ Used in conjunction with [POP](https://github.com/facebook/pop) this allows you 
 
 ## Quadrilaterals
 
-A quadrilateral is a polygon with four sides (or edges) and four vertices or corners. AGGeometryKit gives you lets you control each corner point individually.
+A quadrilateral is a polygon with four sides (or edges) and four vertices or corners. AGGeometryKit lets you control each corner point individually.
 
 You can access `quadrilateral` as a property just like you would do with `frame`, `center` or `bounds`. The coordinates is in same coordinate system as `frame` and `position`. You can use the quadrilateral on any UIView or CALayer - even webviews - with just as good performance as you would have not using it. The underlying technology is CATransform3D. More about quadrilaterals: http://en.wikipedia.org/wiki/Quadrilateral
 
