@@ -35,10 +35,6 @@
 #import "AGKMatrix+AGKVector3D.h"
 #import "AGKVector3D.h"
 
-CGFloat square(CGFloat number) {
-    return number * number;
-}
-
 @implementation UIImage (AGKQuad)
 
 - (UIImage *)imageWithQuad:(AGKQuad)quad scale:(CGFloat)scale
