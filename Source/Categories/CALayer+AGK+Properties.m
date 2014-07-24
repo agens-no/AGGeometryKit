@@ -145,6 +145,14 @@
     self.frame = CGRectWithOriginMaxY_AGK(self.frame, value);
 }
 
+- (CGRect)frameAsIfNoTransformIsApplied
+{
+    return CGRectMake(self.position.x - (self.bounds.size.width * self.anchorPoint.x),
+                      self.position.y - (self.bounds.size.height * self.anchorPoint.y),
+                      self.bounds.size.width,
+                      self.bounds.size.height);
+}
+
 - (CGPoint)boundsOrigin
 {
 	return self.bounds.origin;
