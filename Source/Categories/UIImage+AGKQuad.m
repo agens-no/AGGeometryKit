@@ -1,5 +1,7 @@
 //
-// Author: Håvard Fossli <hfossli@agens.no>
+// Authors:
+// Håvard Fossli <hfossli@agens.no>
+// Logan Holmes @snown
 //
 // Copyright (c) 2013 Agens AS (http://agens.no/)
 //
