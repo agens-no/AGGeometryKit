@@ -14,3 +14,5 @@ DemoApplication/WorkspaceSettings.xcsettings
 /Demo/AGGeometryKit.xcodeproj/xcuserdata/
 
 /Demo/AGGeometryKit.xcworkspace/xcuserdata/
+
+.DS_Store
