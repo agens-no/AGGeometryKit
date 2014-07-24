@@ -10,12 +10,15 @@
 
 @implementation AGKMatrix (AGKVector3D)
 
-+ (instancetype)matrixWithVector3D:(AGKVector3D)vector {
++ (instancetype)matrixWithVector3D:(AGKVector3D)vector
+{
     return [(AGKMatrix *)[self alloc] initWithColumns:1 rows:3 members:@[@(vector.x), @(vector.y), @(vector.z)]];
 }
 
-- (AGKMatrix *)matrixByMultiplyingWithVector3D:(AGKVector3D)vector {
-    if (self.columnCount != 3) {
+- (AGKMatrix *)matrixByMultiplyingWithVector3D:(AGKVector3D)vector
+{
+    if (self.columnCount != 3)
+    {
         return nil;
     }
     
@@ -23,7 +26,8 @@
     return [self matrixByMultiplyingWithMatrix:vectorMatrix];
 }
 
-- (AGKVector3D)agkVector3DValue {
+- (AGKVector3D)agkVector3DValue
+{
     return AGKVector3DMake([self[0] doubleValue], [self[1] doubleValue], [self[2] doubleValue]);
 }
 

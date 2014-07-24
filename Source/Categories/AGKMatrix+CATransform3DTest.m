@@ -16,7 +16,8 @@
 
 @end
 
-NSString* NSStringFromCATransform3D(CATransform3D transform) {
+NSString *NSStringFromCATransform3D(CATransform3D transform)
+{
 	NSMutableString *output = [NSMutableString stringWithFormat:@"<CATransform3D>[\n"];
 	[output appendFormat:@"%f, %f, %f, %f\n", transform.m11, transform.m21, transform.m31, transform.m41];
 	[output appendFormat:@"%f, %f, %f, %f\n", transform.m12, transform.m22, transform.m32, transform.m42];
@@ -62,11 +63,14 @@ NSString* NSStringFromCATransform3D(CATransform3D transform) {
     [super tearDown];
 }
 
-- (AGKMatrix *)generateMatrixWithColumns:(NSUInteger)columnCount rows:(NSUInteger)rowCount {
+- (AGKMatrix *)generateMatrixWithColumns:(NSUInteger)columnCount rows:(NSUInteger)rowCount
+{
     NSMutableArray *members = [NSMutableArray array];
-    for (NSUInteger columnIndex = 0; columnIndex < columnCount; columnIndex++) {
+    for (NSUInteger columnIndex = 0; columnIndex < columnCount; columnIndex++)
+    {
         NSUInteger columnIdentifier = (columnIndex + 1) * 10;
-        for (NSUInteger rowIndex = 0; rowIndex < rowCount; rowIndex++) {
+        for (NSUInteger rowIndex = 0; rowIndex < rowCount; rowIndex++)
+        {
             members[(columnIndex * rowCount) + rowIndex] = @(columnIdentifier + (rowIndex + 1));
         }
     }
@@ -74,7 +78,8 @@ NSString* NSStringFromCATransform3D(CATransform3D transform) {
     return [[AGKMatrix alloc] initWithColumns:columnCount rows:rowCount members:members];
 }
 
-- (void)testMatrixWithCATransform3D {
+- (void)testMatrixWithCATransform3D
+{
     AGKMatrix *matrix = [AGKMatrix matrixWithCATransform3D:self.transform];
     NSArray *comparisonColumns = @[
                                    @[@11, @12, @13, @14],

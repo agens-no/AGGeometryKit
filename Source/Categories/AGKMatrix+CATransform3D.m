@@ -14,10 +14,14 @@
 
 @implementation NSNumber (AGKCGFloat)
 
-- (CGFloat)CGFloatValue {
-    if (CGFLOAT_IS_DOUBLE) {
+- (CGFloat)CGFloatValue
+{
+    if (CGFLOAT_IS_DOUBLE)
+    {
         return (CGFloat)[self doubleValue];
-    } else {
+    }
+    else
+    {
         return (CGFloat)[self floatValue];
     }
 }
@@ -26,7 +30,8 @@
 
 @implementation AGKMatrix (CATransform3D)
 
-+ (instancetype)matrixWithCATransform3D:(CATransform3D)transform {
++ (instancetype)matrixWithCATransform3D:(CATransform3D)transform
+{
     AGKMatrix *myself = [(AGKMatrix *)[self alloc] initWithColumns:4 rows:4 members:nil];
     myself[0] = @(transform.m11);
     myself[1] = @(transform.m12);
@@ -48,25 +53,32 @@
     return myself;
 }
 
-- (CATransform3D)caTransform3DValue {
+- (CATransform3D)caTransform3DValue
+{
     CATransform3D transform = CATransform3DIdentity;
-    if (self.columnCount > 2 && self.rowCount > 2) {
+    if (self.columnCount > 2 && self.rowCount > 2)
+    {
         AGKMatrix *internalMatrix;
-        if (self.columnCount == 3 || self.rowCount == 3) {
+        if (self.columnCount == 3 || self.rowCount == 3)
+        {
             NSUInteger columnCount = self.columnCount;
             NSUInteger rowCount = self.rowCount;
             
             internalMatrix = [AGKMatrix matrixWithMatrix:self];
             internalMatrix.defaultMember = @0;
-            if (columnCount == 3) {
+            if (columnCount == 3)
+            {
                 [internalMatrix insertColumnAtIndex:2 withArray:nil];
             }
-            if (rowCount == 3) {
+            if (rowCount == 3)
+            {
                 [internalMatrix insertRowAtIndex:2 withArray:nil];
             }
             
             [internalMatrix setObject:@1 atColumnIndex:2 rowIndex:2];
-        } else {
+        }
+        else
+        {
             internalMatrix = self;
         }
         
