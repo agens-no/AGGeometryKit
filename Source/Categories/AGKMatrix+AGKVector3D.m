@@ -1,6 +1,5 @@
 //
 // Authors:
-// Håvard Fossli <hfossli@agens.no>
 // Logan Holmes @snown
 //
 // Copyright (c) 2013 Agens AS (http://agens.no/)
@@ -23,13 +22,29 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
-#import "AGKQuad.h"
-#import "UIImage+AGK+CATransform3D.h"
+#import "AGKMatrix+AGKVector3D.h"
 
-@interface UIImage (AGKQuad)
+@implementation AGKMatrix (AGKVector3D)
 
-- (UIImage *)imageWithQuad:(AGKQuad)quad scale:(CGFloat)scale;
-- (UIImage *)imageWithPerspectiveCorrectionFromQuad:(AGKQuad)quad;
++ (instancetype)matrixWithVector3D:(AGKVector3D)vector
+{
+    return [(AGKMatrix *)[self alloc] initWithColumns:1 rows:3 members:@[@(vector.x), @(vector.y), @(vector.z)]];
+}
+
+- (AGKMatrix *)matrixByMultiplyingWithVector3D:(AGKVector3D)vector
+{
+    if (self.columnCount != 3)
+    {
+        return nil;
+    }
+    
+    AGKMatrix *vectorMatrix = [[AGKMatrix alloc] initWithColumns:1 rows:3 members:@[@(vector.x), @(vector.y), @(vector.z)]];
+    return [self matrixByMultiplyingWithMatrix:vectorMatrix];
+}
+
+- (AGKVector3D)agkVector3DValue
+{
+    return AGKVector3DMake([self[0] doubleValue], [self[1] doubleValue], [self[2] doubleValue]);
+}
 
 @end

@@ -1,6 +1,5 @@
 //
 // Authors:
-// Håvard Fossli <hfossli@agens.no>
 // Logan Holmes @snown
 //
 // Copyright (c) 2013 Agens AS (http://agens.no/)
@@ -23,13 +22,17 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
-#import "AGKQuad.h"
-#import "UIImage+AGK+CATransform3D.h"
+#import "AGKMatrix.h"
+#import <GLKit/GLKit.h>
 
-@interface UIImage (AGKQuad)
+@interface AGKMatrix (GLKit)
 
-- (UIImage *)imageWithQuad:(AGKQuad)quad scale:(CGFloat)scale;
-- (UIImage *)imageWithPerspectiveCorrectionFromQuad:(AGKQuad)quad;
++ (instancetype)matrixWithGLKMatrix2:(GLKMatrix2)glkMatrix;
++ (instancetype)matrixWithGLKMatrix3:(GLKMatrix3)glkMatrix;
++ (instancetype)matrixWithGLKMatrix4:(GLKMatrix4)glkMatrix;
+
+- (GLKMatrix2)glkMatrix2Value;
+- (GLKMatrix3)glkMatrix3Value;
+- (GLKMatrix4)glkMatrix4Value;
 
 @end

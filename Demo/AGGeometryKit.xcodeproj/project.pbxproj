@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C2491FE197602A1008838AE /* AGKMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2491FD197602A1008838AE /* AGKMatrix.m */; };
+		0C249200197602D4008838AE /* AGKMatrixTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2491FF197602D4008838AE /* AGKMatrixTest.m */; };
+		0CC8079E1978254500001F80 /* AGKMatrix+GLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC8079D1978254500001F80 /* AGKMatrix+GLKit.m */; };
+		0CC807A1197827B900001F80 /* AGKMatrix+CATransform3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC807A0197827B900001F80 /* AGKMatrix+CATransform3D.m */; };
+		0CC807A31978375400001F80 /* AGKMatrix+CATransform3DTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC807A21978375400001F80 /* AGKMatrix+CATransform3DTest.m */; };
+		0CC807A6197C54E600001F80 /* AGKMatrix+AGKVector3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC807A5197C54E600001F80 /* AGKMatrix+AGKVector3D.m */; };
+		0CC807A8197C569100001F80 /* AGKMatrix+AGKVector3DTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC807A7197C569100001F80 /* AGKMatrix+AGKVector3DTest.m */; };
 		A30B0C4916CE932700856E00 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A60A16A9A6F000E334AD /* QuartzCore.framework */; };
 		A30B0C4B16CE932D00856E00 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A59816A9A3BD00E334AD /* CoreGraphics.framework */; };
 		A3270F3B16D5675800A92C03 /* AGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3270F2816D5675800A92C03 /* AGAppDelegate.m */; };
@@ -113,6 +120,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C2491FC197602A1008838AE /* AGKMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKMatrix.h; sourceTree = "<group>"; };
+		0C2491FD197602A1008838AE /* AGKMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKMatrix.m; sourceTree = "<group>"; };
+		0C2491FF197602D4008838AE /* AGKMatrixTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKMatrixTest.m; sourceTree = "<group>"; };
+		0CC8079C1978254500001F80 /* AGKMatrix+GLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AGKMatrix+GLKit.h"; sourceTree = "<group>"; };
+		0CC8079D1978254500001F80 /* AGKMatrix+GLKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AGKMatrix+GLKit.m"; sourceTree = "<group>"; };
+		0CC8079F197827B900001F80 /* AGKMatrix+CATransform3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AGKMatrix+CATransform3D.h"; sourceTree = "<group>"; };
+		0CC807A0197827B900001F80 /* AGKMatrix+CATransform3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AGKMatrix+CATransform3D.m"; sourceTree = "<group>"; };
+		0CC807A21978375400001F80 /* AGKMatrix+CATransform3DTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AGKMatrix+CATransform3DTest.m"; sourceTree = "<group>"; };
+		0CC807A4197C54E600001F80 /* AGKMatrix+AGKVector3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AGKMatrix+AGKVector3D.h"; sourceTree = "<group>"; };
+		0CC807A5197C54E600001F80 /* AGKMatrix+AGKVector3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AGKMatrix+AGKVector3D.m"; sourceTree = "<group>"; };
+		0CC807A7197C569100001F80 /* AGKMatrix+AGKVector3DTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AGKMatrix+AGKVector3DTest.m"; sourceTree = "<group>"; };
 		76AB885A153B4BA2BB935C68 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		A3270F2716D5675800A92C03 /* AGAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGAppDelegate.h; sourceTree = "<group>"; };
 		A3270F2816D5675800A92C03 /* AGAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGAppDelegate.m; sourceTree = "<group>"; };
@@ -362,23 +380,31 @@
 			isa = PBXGroup;
 			children = (
 				A38F9F5B185B410C00F49AD7 /* AGGeometryKitCategories.h */,
-				A38F9F1C185B3F5C00F49AD7 /* CALayer+AGKQuad.h */,
-				A38F9F1D185B3F5C00F49AD7 /* CALayer+AGKQuad.m */,
-				A3F2EFF5192233AB00B6F9E8 /* CALayer+AGKQuadTest.m */,
+				0CC807A4197C54E600001F80 /* AGKMatrix+AGKVector3D.h */,
+				0CC807A5197C54E600001F80 /* AGKMatrix+AGKVector3D.m */,
+				0CC807A7197C569100001F80 /* AGKMatrix+AGKVector3DTest.m */,
+				0CC8079F197827B900001F80 /* AGKMatrix+CATransform3D.h */,
+				0CC807A0197827B900001F80 /* AGKMatrix+CATransform3D.m */,
+				0CC807A21978375400001F80 /* AGKMatrix+CATransform3DTest.m */,
+				0CC8079C1978254500001F80 /* AGKMatrix+GLKit.h */,
+				0CC8079D1978254500001F80 /* AGKMatrix+GLKit.m */,
 				A3314479191912B700A9968C /* CALayer+AGK+Methods.h */,
 				A331447A191912B700A9968C /* CALayer+AGK+Methods.m */,
 				A38F9F1E185B3F5C00F49AD7 /* CALayer+AGK+Properties.h */,
 				A38F9F1F185B3F5C00F49AD7 /* CALayer+AGK+Properties.m */,
 				A3F2EFF31922331C00B6F9E8 /* CALayer+AGK+PropertiesTest.m */,
+				A38F9F1C185B3F5C00F49AD7 /* CALayer+AGKQuad.h */,
+				A38F9F1D185B3F5C00F49AD7 /* CALayer+AGKQuad.m */,
+				A3F2EFF5192233AB00B6F9E8 /* CALayer+AGKQuadTest.m */,
 				A38F9F20185B3F5C00F49AD7 /* NSValue+AGKQuad.h */,
 				A38F9F21185B3F5C00F49AD7 /* NSValue+AGKQuad.m */,
 				A38F9F22185B3F5C00F49AD7 /* NSValue+AGKQuadTest.m */,
 				A38F9F23185B3F5C00F49AD7 /* UIBezierPath+AGKQuad.h */,
 				A38F9F24185B3F5C00F49AD7 /* UIBezierPath+AGKQuad.m */,
-				A38F9F25185B3F5C00F49AD7 /* UIImage+AGKQuad.h */,
-				A38F9F26185B3F5C00F49AD7 /* UIImage+AGKQuad.m */,
 				A38F9F27185B3F5C00F49AD7 /* UIImage+AGK+CATransform3D.h */,
 				A38F9F28185B3F5C00F49AD7 /* UIImage+AGK+CATransform3D.m */,
+				A38F9F25185B3F5C00F49AD7 /* UIImage+AGKQuad.h */,
+				A38F9F26185B3F5C00F49AD7 /* UIImage+AGKQuad.m */,
 				A38F9F29185B3F5C00F49AD7 /* UIView+AGK+AngleConverter.h */,
 				A38F9F2A185B3F5C00F49AD7 /* UIView+AGK+AngleConverter.m */,
 				A38F9F2B185B3F5C00F49AD7 /* UIView+AGK+AngleConverterTest.m */,
@@ -395,6 +421,9 @@
 				A38F9F67185B41CB00F49AD7 /* AGGeometryKitClasses.h */,
 				A38F9F35185B3F5C00F49AD7 /* AGKCALayerAnimationBlockDelegate.h */,
 				A38F9F36185B3F5C00F49AD7 /* AGKCALayerAnimationBlockDelegate.m */,
+				0C2491FC197602A1008838AE /* AGKMatrix.h */,
+				0C2491FD197602A1008838AE /* AGKMatrix.m */,
+				0C2491FF197602D4008838AE /* AGKMatrixTest.m */,
 				A38F9F69185B427D00F49AD7 /* AGKTransformPixelMapper.h */,
 				A38F9F6A185B427D00F49AD7 /* AGKTransformPixelMapper.m */,
 			);
@@ -483,7 +512,7 @@
 				CLASSPREFIX = AG;
 				LastTestingUpgradeCheck = 0510;
 				LastUpgradeCheck = 0450;
-				ORGANIZATIONNAME = "Håvard Fossli";
+				ORGANIZATIONNAME = "H√•vard Fossli";
 			};
 			buildConfigurationList = A333A58A16A9A3BD00E334AD /* Build configuration list for PBXProject "AGGeometryKit" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -615,6 +644,7 @@
 				A38F9F45185B3F5C00F49AD7 /* NSValue+AGKQuad.m in Sources */,
 				A38F9F48185B3F5C00F49AD7 /* UIImage+AGKQuad.m in Sources */,
 				A38F9F62185B419A00F49AD7 /* CGGeometry+AGGeometryKit.m in Sources */,
+				0CC807A1197827B900001F80 /* AGKMatrix+CATransform3D.m in Sources */,
 				A38F9F49185B3F5C00F49AD7 /* UIImage+AGK+CATransform3D.m in Sources */,
 				A38F9F44185B3F5C00F49AD7 /* CALayer+AGK+Properties.m in Sources */,
 				A38F9F43185B3F5C00F49AD7 /* CALayer+AGKQuad.m in Sources */,
@@ -629,11 +659,14 @@
 				A3762F301728067A00E7A2AB /* AGKQuadControlsExample.m in Sources */,
 				A38F9F6B185B427D00F49AD7 /* AGKTransformPixelMapper.m in Sources */,
 				A38F9F4C185B3F5C00F49AD7 /* UIView+AGK+Properties.m in Sources */,
+				0C2491FE197602A1008838AE /* AGKMatrix.m in Sources */,
 				A3762F59172885FE00E7A2AB /* AGKCATransform3DWithUIImageExample.m in Sources */,
+				0CC8079E1978254500001F80 /* AGKMatrix+GLKit.m in Sources */,
 				A38F9F51185B3F5C00F49AD7 /* AGKCALayerAnimationBlockDelegate.m in Sources */,
 				A331447B191912B700A9968C /* CALayer+AGK+Methods.m in Sources */,
 				A38F9F41185B3F5C00F49AD7 /* AGKVector3D.m in Sources */,
 				A38F9F47185B3F5C00F49AD7 /* UIBezierPath+AGKQuad.m in Sources */,
+				0CC807A6197C54E600001F80 /* AGKMatrix+AGKVector3D.m in Sources */,
 				A38F9F3A185B3F5C00F49AD7 /* AGKLine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -656,11 +689,14 @@
 				A3EE527016F07479007706C6 /* AGKAngleConverterExample.m in Sources */,
 				A38F9F55185B3F6500F49AD7 /* AGKQuadTest.m in Sources */,
 				A3E67B0F19222FDA00A4CD4A /* AGKLineTest.m in Sources */,
+				0CC807A8197C569100001F80 /* AGKMatrix+AGKVector3DTest.m in Sources */,
 				A3F2EFF6192233AB00B6F9E8 /* CALayer+AGKQuadTest.m in Sources */,
 				A38F9F59185B3F6500F49AD7 /* UIView+AGK+PropertiesTest.m in Sources */,
 				A3F77D4016FA54C400415B24 /* JAValueToString.m in Sources */,
 				A3762F311728067A00E7A2AB /* AGKQuadControlsExample.m in Sources */,
+				0CC807A31978375400001F80 /* AGKMatrix+CATransform3DTest.m in Sources */,
 				A3F2EFF41922331C00B6F9E8 /* CALayer+AGK+PropertiesTest.m in Sources */,
+				0C249200197602D4008838AE /* AGKMatrixTest.m in Sources */,
 				A3762F5A172885FE00E7A2AB /* AGKCATransform3DWithUIImageExample.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

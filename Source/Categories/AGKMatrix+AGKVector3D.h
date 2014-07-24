@@ -1,6 +1,5 @@
 //
 // Authors:
-// Håvard Fossli <hfossli@agens.no>
 // Logan Holmes @snown
 //
 // Copyright (c) 2013 Agens AS (http://agens.no/)
@@ -23,13 +22,31 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
-#import "AGKQuad.h"
-#import "UIImage+AGK+CATransform3D.h"
+#import "AGKMatrix.h"
+#import "AGKVector3D.h"
 
-@interface UIImage (AGKQuad)
+@interface AGKMatrix (AGKVector3D)
 
-- (UIImage *)imageWithQuad:(AGKQuad)quad scale:(CGFloat)scale;
-- (UIImage *)imageWithPerspectiveCorrectionFromQuad:(AGKQuad)quad;
+/**
+ *  Creates and returns a 1x3 matrix containing the members and from the given 
+ *  vector.
+ *
+ *  @param vector The vector with which to initialize the matrix's members.
+ *
+ *  @return A new matrix containing the values found in `vector`
+ */
++ (instancetype)matrixWithVector3D:(AGKVector3D)vector;
+
+/**
+ *  Returns a matrix multiplied by the given 3D vector.
+ *
+ *  @param vector The vector to multipy against.
+ *
+ *  @return A 1x3 matrix resulting from multiplying the reciver with the
+ *  specified vector.
+ */
+- (AGKMatrix *)matrixByMultiplyingWithVector3D:(AGKVector3D)vector;
+
+- (AGKVector3D)agkVector3DValue;
 
 @end
