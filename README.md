@@ -31,7 +31,7 @@ You can access `quadrilateral` as a property just like you would do with `frame`
     UIView *view = ...; // create a view
     [view.layer ensureAnchorPointIsSetToZero]; // set the anchor point to [0, 0] (this method keeps the same position)
     
-    AGQuad quad = view.layer.quadrilateral; 
+    AGKQuad quad = view.layer.quadrilateral; 
     quad.br.x += 20; // shift bottom right x-value with 20 pixels
     quad.br.y += 50; // shift bottom right y-value with 50 pixels
     
