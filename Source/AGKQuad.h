@@ -35,9 +35,11 @@
  bl = bottom left
  */
 
-typedef union AGKQuad {
-    struct { CGPoint tl, tr, br, bl; };
-    CGPoint v[4];
+typedef struct {
+    CGPoint tl;
+    CGPoint tr;
+    CGPoint br;
+    CGPoint bl;
 } AGKQuad;
 
 const AGKQuad AGKQuadZero;
