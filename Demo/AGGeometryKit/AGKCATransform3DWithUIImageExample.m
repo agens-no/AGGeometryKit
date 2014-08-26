@@ -96,8 +96,8 @@
 
 - (void)cropImage:(UIImage *)image toQuad:(AGKQuad)quad
 {
+    static int count = 0;
     static dispatch_queue_t queue;
-    static int count;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         queue = dispatch_queue_create("agk.cropImageToQuad", 0);
