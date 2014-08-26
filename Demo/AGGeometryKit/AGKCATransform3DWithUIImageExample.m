@@ -24,16 +24,20 @@
 // THE SOFTWARE.
 
 #import "AGKCATransform3DWithUIImageExample.h"
-#import "AGKQuad.h"
-#import "CALayer+AGKQuad.h"
-#import "UIImage+AGKQuad.h"
+#import "AGGeometryKit.h"
 #import "JAValueToString.h"
-#import "CALayer+AGK+Methods.h"
 
-@interface AGKCATransform3DWithUIImageExample ()
+@interface AGKCATransform3DWithUIImageExample ()  <UIGestureRecognizerDelegate>
 
-@property (nonatomic, strong) IBOutlet UIImageView *imageView1;
-@property (nonatomic, strong) IBOutlet UIImageView *imageView2;
+@property (nonatomic, strong) IBOutlet UIView *topLeftControl;
+@property (nonatomic, strong) IBOutlet UIView *topRightControl;
+@property (nonatomic, strong) IBOutlet UIView *bottomLeftControl;
+@property (nonatomic, strong) IBOutlet UIView *bottomRightControl;
+@property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (nonatomic, strong) CAShapeLayer *shapeLayer;
+
+@property (nonatomic, strong) IBOutlet UIImageView *source;
+@property (nonatomic, strong) IBOutlet UIImageView *result;
 
 @end
 
@@ -43,55 +47,134 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self.imageView1.layer ensureAnchorPointIsSetToZero];
+
+    [self.source.layer ensureAnchorPointIsSetToZero];
+
+    [self createOverlay];
+
+    [self cropSampleTwo];
 }
 
-- (IBAction)makeBlueFill:(id)sender
+- (IBAction)cropSampleOne
 {
-    AGKQuad quad = [self quadForBlueToFill];
-    
-    self.imageView2.image = [[self originalImage] imageWithPerspectiveCorrectionFromQuad:quad];
+    self.topLeftControl.center = CGPointMake(13.5, 166.5);
+    self.topRightControl.center = CGPointMake(257.5, 178.5);
+    self.bottomLeftControl.center = CGPointMake(1.5, 345.5);
+    self.bottomRightControl.center = CGPointMake(251.5, 332.5);
+
+    [self updateOverlay];
+    [self produce];
 }
 
-- (IBAction)makePurpleFill:(id)sender
+- (IBAction)cropSampleTwo
 {
-    AGKQuad quad = [self quadForPurpleFill];
-    
-    self.imageView2.image = [[self originalImage] imageWithPerspectiveCorrectionFromQuad:quad];
+    self.topLeftControl.center = CGPointMake(272.5, 31.5);
+    self.topRightControl.center = CGPointMake(434.5, 53.5);
+    self.bottomLeftControl.center = CGPointMake(271.5, 181.5);
+    self.bottomRightControl.center = CGPointMake(435.5, 187.5);
+
+    [self updateOverlay];
+    [self produce];
 }
 
-- (UIImage *)originalImage
+- (void)produce
 {
-    return self.imageView1.image;
-}
+    UIImage *image = self.source.image;
 
-- (AGKQuad)quadForBlueToFill
-{
-    // These points are the four corners of the sub quadrilateral that we want
-    // to perspective correct. They could be gathered by dragging control points
-    // to those corners like in the "Quad Controls" example.
     AGKQuad quad;
-    quad.tl = CGPointMake(76.38, 88.47);
-    quad.tr = CGPointMake(537.99, 260.94);
-    quad.br = CGPointMake(467.15, 509.66);
-    quad.bl = CGPointMake(76.11, 509.67);
-    
-    return quad;
+    quad.tl.x = AGKRemap(self.topLeftControl.center.x, 0, self.source.boundsWidth, 0, image.size.width);
+    quad.tl.y = AGKRemap(self.topLeftControl.center.y, 0, self.source.boundsHeight, 0, image.size.height);
+    quad.tr.x = AGKRemap(self.topRightControl.center.x, 0, self.source.boundsWidth, 0, image.size.width);
+    quad.tr.y = AGKRemap(self.topRightControl.center.y, 0, self.source.boundsHeight, 0, image.size.height);
+    quad.bl.x = AGKRemap(self.bottomLeftControl.center.x, 0, self.source.boundsWidth, 0, image.size.width);
+    quad.bl.y = AGKRemap(self.bottomLeftControl.center.y, 0, self.source.boundsHeight, 0, image.size.height);
+    quad.br.x = AGKRemap(self.bottomRightControl.center.x, 0, self.source.boundsWidth, 0, image.size.width);
+    quad.br.y = AGKRemap(self.bottomRightControl.center.y, 0, self.source.boundsHeight, 0, image.size.height);
+
+    [self cropImage:image toQuad:quad];
 }
 
-- (AGKQuad)quadForPurpleFill
+- (void)cropImage:(UIImage *)image toQuad:(AGKQuad)quad
 {
-    // These points are the four corners of the sub quadrilateral that we want
-    // to perspective correct. They could be gathered by dragging control points
-    // to those corners like in the "Quad Controls" example.
-    AGKQuad quad;
-    quad.tl = CGPointMake(632.15, 196.54);
-    quad.tr = CGPointMake(903.2, 184.89);
-    quad.br = CGPointMake(996.01, 439.05);
-    quad.bl = CGPointMake(542.13, 453.15);
-    
-    return quad;
+    static dispatch_queue_t queue;
+    static int count;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        queue = dispatch_queue_create("agk.cropImageToQuad", 0);
+    });
+
+    count++;
+    [self.activityIndicator startAnimating];
+
+    dispatch_async(queue, ^{
+
+        UIImage *result = [image imageByCroppingToQuad:quad destinationSize:self.result.boundsSize];
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.result.image = result;
+
+            count--;
+
+            if(count == 0)
+            {
+                [self.activityIndicator stopAnimating];
+            }
+        });
+    });
+}
+
+- (void)createOverlay
+{
+    self.shapeLayer = [CAShapeLayer layer];
+    self.shapeLayer.anchorPoint = CGPointZero;
+    [self.shapeLayer setNullAsActionForKeys:@[@"transform"]];
+    self.shapeLayer.frame = self.source.frame;
+    self.shapeLayer.backgroundColor = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:0.5].CGColor;
+    [self.source.superview.layer insertSublayer:self.shapeLayer above:self.source.layer];
+}
+
+- (void)updateOverlay
+{
+    AGKQuad quad = AGKQuadMake(self.topLeftControl.center,
+                               self.topRightControl.center,
+                               self.bottomRightControl.center,
+                               self.bottomLeftControl.center);
+
+    self.shapeLayer.position = CGPointZero;
+    self.shapeLayer.quadrilateral = quad;
+}
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    return YES;
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return YES;
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    return YES;
+}
+
+- (IBAction)panGestureChanged:(UIPanGestureRecognizer *)recognizer
+{
+    UIImageView *controlPointView = (UIImageView *)[recognizer view];
+    controlPointView.highlighted = recognizer.state == UIGestureRecognizerStateChanged;
+
+    CGPoint translation = [recognizer translationInView:self.view];
+    controlPointView.centerX += translation.x;
+    controlPointView.centerY += translation.y;
+    [recognizer setTranslation:CGPointZero inView:self.view];
+
+    [self updateOverlay];
+
+    if(recognizer.state == UIGestureRecognizerStateEnded)
+    {
+        [self produce];
+    }
 }
 
 @end

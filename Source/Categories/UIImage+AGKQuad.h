@@ -29,7 +29,8 @@
 
 @interface UIImage (AGKQuad)
 
-- (UIImage *)imageWithQuad:(AGKQuad)quad scale:(CGFloat)scale;
+- (UIImage *)imageByCroppingToQuad:(AGKQuad)quad destinationSize:(CGSize)destinationSize;
+- (UIImage *)imageByCroppingToRect:(CGRect)rect;
 - (UIImage *)imageWithPerspectiveCorrectionFromQuad:(AGKQuad)quad;
-
+ 
 @end
