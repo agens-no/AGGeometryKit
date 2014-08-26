@@ -10,7 +10,7 @@ If you need to access the AGKQuad values by index you may use this swift extensi
 extension AGKQuad {
   var v: [CGPoint] {
     get {
-      return [tl, tr, bl, br]
+      return [tl, tr, br, bl]
     }
     set {
       tl = newValue[0]
