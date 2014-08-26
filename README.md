@@ -112,13 +112,17 @@ It can also be useful to create a representation of the quadrilateral you are tr
 
 
 
+## Swift
+
+For swift support see this branch: https://github.com/hfossli/AGGeometryKit/tree/swift
+
+
+
 ## Useful links
 
 * Bartosz Ciechanowski created a [genie effect](https://github.com/Ciechan/BCGenieEffect/) around desember 2012 using quadrilaterals
 * [Quadrilaterals on stackoverflow](http://stackoverflow.com/a/12820877/558816)
 * Want to work with us? Visit [agens.no](http://agens.no/)
-
-
 
 
 
