@@ -171,38 +171,50 @@
     AGKMatrix *firstMatrix = [AGKMatrix matrixWithColumns:8 rows:8];
     AGKMatrix *secondMatrix = [AGKMatrix matrixWithColumns:1 rows:8];
     
+    CGPoint sourceQuadV[4];
+    sourceQuadV[0] = sourceQuad.tl;
+    sourceQuadV[1] = sourceQuad.tr;
+    sourceQuadV[2] = sourceQuad.br;
+    sourceQuadV[3] = sourceQuad.br;
+    
+    CGPoint destinationQuadV[4];
+    destinationQuadV[0] = destinationQuad.tl;
+    destinationQuadV[1] = destinationQuad.tr;
+    destinationQuadV[2] = destinationQuad.br;
+    destinationQuadV[3] = destinationQuad.bl;
+    
     for (NSInteger i = 0; i < 4; i++)
     {
-		[firstMatrix setObject:@(sourceQuad.v[i].x) atColumnIndex:0 rowIndex:i];
-		[firstMatrix setObject:@(sourceQuad.v[i].y) atColumnIndex:1 rowIndex:i];
-		[firstMatrix setObject:@1.0 atColumnIndex:2 rowIndex:i];
-		[firstMatrix setObject:@(sourceQuad.v[i].x) atColumnIndex:3 rowIndex:i + 4];
-		[firstMatrix setObject:@(sourceQuad.v[i].y) atColumnIndex:4 rowIndex:i + 4];
-		[firstMatrix setObject:@1.0 atColumnIndex:5 rowIndex:i + 4];
-		
-		[firstMatrix setObject:@0.0 atColumnIndex:3 rowIndex:i];
-		[firstMatrix setObject:@0.0 atColumnIndex:4 rowIndex:i];
-		[firstMatrix setObject:@0.0 atColumnIndex:5 rowIndex:i];
-		[firstMatrix setObject:@0.0 atColumnIndex:0 rowIndex:i + 4];
-		[firstMatrix setObject:@0.0 atColumnIndex:1 rowIndex:i + 4];
-		[firstMatrix setObject:@0.0 atColumnIndex:2 rowIndex:i + 4];
-		
-		[firstMatrix setObject:@(-sourceQuad.v[i].x * destinationQuad.v[i].x) atColumnIndex:6 rowIndex:i];
-		[firstMatrix setObject:@(-sourceQuad.v[i].y * destinationQuad.v[i].x) atColumnIndex:7 rowIndex:i];
-		[firstMatrix setObject:@(-sourceQuad.v[i].x * destinationQuad.v[i].y) atColumnIndex:6 rowIndex:i + 4];
-		[firstMatrix setObject:@(-sourceQuad.v[i].y * destinationQuad.v[i].y) atColumnIndex:7 rowIndex:i + 4];
-		
-		[secondMatrix setObject:@(destinationQuad.v[i].x) atColumnIndex:0 rowIndex:i];
-		[secondMatrix setObject:@(destinationQuad.v[i].y) atColumnIndex:0 rowIndex:i + 4];
-	}
+        [firstMatrix setObject:@(sourceQuadV[i].x) atColumnIndex:0 rowIndex:i];
+        [firstMatrix setObject:@(sourceQuadV[i].y) atColumnIndex:1 rowIndex:i];
+        [firstMatrix setObject:@1.0 atColumnIndex:2 rowIndex:i];
+        [firstMatrix setObject:@(sourceQuadV[i].x) atColumnIndex:3 rowIndex:i + 4];
+        [firstMatrix setObject:@(sourceQuadV[i].y) atColumnIndex:4 rowIndex:i + 4];
+        [firstMatrix setObject:@1.0 atColumnIndex:5 rowIndex:i + 4];
+        
+        [firstMatrix setObject:@0.0 atColumnIndex:3 rowIndex:i];
+        [firstMatrix setObject:@0.0 atColumnIndex:4 rowIndex:i];
+        [firstMatrix setObject:@0.0 atColumnIndex:5 rowIndex:i];
+        [firstMatrix setObject:@0.0 atColumnIndex:0 rowIndex:i + 4];
+        [firstMatrix setObject:@0.0 atColumnIndex:1 rowIndex:i + 4];
+        [firstMatrix setObject:@0.0 atColumnIndex:2 rowIndex:i + 4];
+        
+        [firstMatrix setObject:@(-sourceQuadV[i].x * destinationQuadV[i].x) atColumnIndex:6 rowIndex:i];
+        [firstMatrix setObject:@(-sourceQuadV[i].y * destinationQuadV[i].x) atColumnIndex:7 rowIndex:i];
+        [firstMatrix setObject:@(-sourceQuadV[i].x * destinationQuadV[i].y) atColumnIndex:6 rowIndex:i + 4];
+        [firstMatrix setObject:@(-sourceQuadV[i].y * destinationQuadV[i].y) atColumnIndex:7 rowIndex:i + 4];
+        
+        [secondMatrix setObject:@(destinationQuadV[i].x) atColumnIndex:0 rowIndex:i];
+        [secondMatrix setObject:@(destinationQuadV[i].y) atColumnIndex:0 rowIndex:i + 4];
+    }
     
     // Solve for the two matrices
     AGKMatrix *matrixA = [AGKMatrix matrixWithMatrix:firstMatrix];
     [matrixA transpose];
     NSUInteger rowCount = matrixA.rowCount;
     AGKMatrix *matrixV = [AGKMatrix matrixWithColumns:rowCount rows:rowCount];
-	AGKMatrix *matrixW = [self jacobiSVDForMatrixA:matrixA matrixV:matrixV];
-	AGKMatrix *matrixX = [self singleValueBackSubstitutionForColumns:matrixA.columnCount rows:rowCount wMatrix:matrixW uMatrix:matrixA vMatrix:matrixV bMatrix:secondMatrix];
+    AGKMatrix *matrixW = [self jacobiSVDForMatrixA:matrixA matrixV:matrixV];
+    AGKMatrix *matrixX = [self singleValueBackSubstitutionForColumns:matrixA.columnCount rows:rowCount wMatrix:matrixW uMatrix:matrixA vMatrix:matrixV bMatrix:secondMatrix];
     
     AGKMatrix *perspectiveMatrix = [matrixX matrixWithColumnSize:3 rowSize:3 andTranspose:YES];
     [perspectiveMatrix setObject:@1 atIndexedSubscript:(perspectiveMatrix.count - 1)];

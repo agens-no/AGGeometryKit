@@ -28,12 +28,16 @@
 + (NSValue *)valueWithAGKQuad:(AGKQuad)q
 {
     CGFloat values[8];
-    for(int i = 0; i < 4; i++)
-    {
-        CGPoint p = q.v[i];
-        values[(i*2)] = p.x;
-        values[(i*2)+1] = p.y;
-    }
+    
+    values[0] = q.tl.x;
+    values[1] = q.tl.y;
+    values[2] = q.tr.x;
+    values[3] = q.tr.y;
+    values[4] = q.br.x;
+    values[5] = q.br.y;
+    values[6] = q.bl.x;
+    values[7] = q.bl.y;
+    
     NSValue *value = [NSValue value:&q withObjCType:@encode(CGFloat[8])];
     return value;
 }
@@ -43,11 +47,12 @@
     AGKQuad q = AGKQuadZero;
     CGFloat values[8];
     [self getValue:values];
-    for(int i = 0; i < 4; i++)
-    {
-        CGPoint p = CGPointMake(values[(i*2)], values[(i*2)+1]);
-        q.v[i] = p;
-    }
+    
+    q.tl = CGPointMake(values[0], values[1]);
+    q.tr = CGPointMake(values[2], values[3]);
+    q.br = CGPointMake(values[4], values[5]);
+    q.bl = CGPointMake(values[6], values[7]);
+    
     return q;
 }
 

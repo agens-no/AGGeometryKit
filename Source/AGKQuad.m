@@ -49,26 +49,45 @@ const AGKQuad AGKQuadZero = { (CGPoint){0, 0}, (CGPoint){0, 0}, (CGPoint){0, 0},
 
 BOOL AGKQuadEqual(AGKQuad q1, AGKQuad q2)
 {
-    for(int i = 0; i < 4; i++)
+    if (!CGPointEqualToPoint(q1.tl, q2.tl)) {
+        return NO;
+    }
+    if (!CGPointEqualToPoint(q1.tr, q2.tr)) {
+        return NO;
+    }
+    if (!CGPointEqualToPoint(q1.br, q2.br)) {
+        return NO;
+    }
+    if (!CGPointEqualToPoint(q1.bl, q2.bl)) {
+        return NO;
+    }
+    return YES;
+}
+
+BOOL CGPointEqualWithAccuracy(CGPoint p1, CGPoint p2, CGFloat accuracy)
+{
+    CGFloat xDiff = fabs(p1.x - p2.x);
+    CGFloat yDiff = fabs(p1.y - p2.y);
+    if(xDiff > accuracy || yDiff > accuracy)
     {
-        if(!CGPointEqualToPoint(q1.v[i], q2.v[i]))
-        {
-            return NO;
-        }
+        return NO;
     }
     return YES;
 }
 
 BOOL AGKQuadEqualWithAccuracy(AGKQuad q1, AGKQuad q2, CGFloat accuracy)
 {
-    for(int i = 0; i < 4; i++)
-    {
-        CGFloat xDiff = fabs(q1.v[i].x - q2.v[i].x);
-        CGFloat yDiff = fabs(q1.v[i].y - q2.v[i].y);
-        if(xDiff > accuracy || yDiff > accuracy)
-        {
-            return NO;
-        }
+    if (!CGPointEqualWithAccuracy(q1.tl, q2.tl, accuracy)) {
+        return NO;
+    }
+    else if (!CGPointEqualWithAccuracy(q1.tr, q2.tr, accuracy)) {
+        return NO;
+    }
+    else if (!CGPointEqualWithAccuracy(q1.br, q2.br, accuracy)) {
+        return NO;
+    }
+    else if (!CGPointEqualWithAccuracy(q1.bl, q2.bl, accuracy)) {
+        return NO;
     }
     return YES;
 }
@@ -79,14 +98,28 @@ BOOL AGKQuadIsConvex(AGKQuad q)
     return isConvex;
 }
 
+BOOL CGPointContainsValidValues(CGPoint p)
+{
+    if(isnan(p.x) || isnan(p.y) || isinf(p.x) || isinf(p.y))
+    {
+        return NO;
+    }
+    return YES;
+}
+
 BOOL AGKQuadContainsValidValues(AGKQuad q)
 {
-    for(int i = 0; i < 4; i++)
-    {
-        if(isnan(q.v[i].x) || isnan(q.v[i].y) || isinf(q.v[i].x) || isinf(q.v[i].y))
-        {
-            return NO;
-        }
+    if (!CGPointContainsValidValues(q.tl)) {
+        return NO;
+    }
+    else if (!CGPointContainsValidValues(q.tr)) {
+        return NO;
+    }
+    else if (!CGPointContainsValidValues(q.bl)) {
+        return NO;
+    }
+    else if (!CGPointContainsValidValues(q.br)) {
+        return NO;
     }
     return YES;
 }
@@ -268,34 +301,48 @@ CGSize AGKQuadGetSize(AGKQuad q)
 CGPoint AGKQuadGetPointForCorner(AGKQuad q, AGKCorner corner)
 {
     int index = AGKQuadCornerIndexForCorner(corner);
-    return q.v[index];
+    switch (index) {
+        case 0:
+            return q.tl;
+            break;
+        case 1:
+            return q.tr;
+            break;
+        case 2:
+            return q.br;
+            break;
+        case 3:
+            return q.bl;
+            break;
+        default:
+            return CGPointZero;
+            break;
+    }
 }
 
 void AGKQuadGetXValues(AGKQuad q, CGFloat *out_values)
 {
-    for(int i = 0; i < 4; i++)
-    {
-        CGPoint p = q.v[i];
-        out_values[i] = p.x;
-    }
+    out_values[0] = q.tl.x;
+    out_values[1] = q.tr.x;
+    out_values[2] = q.br.x;
+    out_values[3] = q.bl.x;
 }
 
 void AGKQuadGetYValues(AGKQuad q, CGFloat *out_values)
 {
-    for(int i = 0; i < 4; i++)
-    {
-        CGPoint p = q.v[i];
-        out_values[i] = p.y;
-    }
+    out_values[0] = q.tl.y;
+    out_values[1] = q.tr.y;
+    out_values[2] = q.br.y;
+    out_values[3] = q.bl.y;
 }
 
 AGKQuad AGKQuadInterpolate(AGKQuad q1, AGKQuad q2, CGFloat progress)
 {
     AGKQuad q;
-    for(int i = 0; i < 4; i++)
-    {
-        q.v[i] = CGPointInterpolate_AGK(q1.v[i], q2.v[i], progress);
-    }
+    q.tl = CGPointInterpolate_AGK(q1.tl, q2.tl, progress);
+    q.tr = CGPointInterpolate_AGK(q1.tr, q2.tr, progress);
+    q.br = CGPointInterpolate_AGK(q1.br, q2.br, progress);
+    q.bl = CGPointInterpolate_AGK(q1.bl, q2.bl, progress);
     return q;
 }
 
@@ -307,28 +354,28 @@ AGKQuad AGKQuadRotate(AGKQuad q, CGFloat radians)
 
 AGKQuad AGKQuadRotateAroundPoint(AGKQuad q, CGPoint point, CGFloat radians)
 {
-    for(int i = 0; i < 4; i++)
-    {
-        q.v[i] = CGPointRotateAroundOrigin_AGK(q.v[i], radians, point);
-    }
+    q.tl = CGPointRotateAroundOrigin_AGK(q.tl, radians, point);
+    q.tr = CGPointRotateAroundOrigin_AGK(q.tr, radians, point);
+    q.br = CGPointRotateAroundOrigin_AGK(q.br, radians, point);
+    q.bl = CGPointRotateAroundOrigin_AGK(q.bl, radians, point);
     return q;
 }
 
 AGKQuad AGKQuadApplyCGAffineTransform(AGKQuad q, CGAffineTransform t)
 {
-    for(int i = 0; i < 4; i++)
-    {
-        q.v[i] = CGPointApplyAffineTransform(q.v[i], t);
-    }
+    q.tl = CGPointApplyAffineTransform(q.tl, t);
+    q.tr = CGPointApplyAffineTransform(q.tr, t);
+    q.br = CGPointApplyAffineTransform(q.br, t);
+    q.bl = CGPointApplyAffineTransform(q.bl, t);
     return q;
 }
 
 AGKQuad AGKQuadApplyCATransform3D(AGKQuad q, CATransform3D t)
 {
-    for(int i = 0; i < 4; i++)
-    {
-        q.v[i] = CGPointApplyCATransform3D_AGK(q.v[i], t, CGPointZero, CATransform3DIdentity);
-    }
+    q.tl = CGPointApplyCATransform3D_AGK(q.tl, t, CGPointZero, CATransform3DIdentity);
+    q.tr = CGPointApplyCATransform3D_AGK(q.tr, t, CGPointZero, CATransform3DIdentity);
+    q.br = CGPointApplyCATransform3D_AGK(q.br, t, CGPointZero, CATransform3DIdentity);
+    q.bl = CGPointApplyCATransform3D_AGK(q.bl, t, CGPointZero, CATransform3DIdentity);
     return q;
 }
 
