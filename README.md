@@ -1,14 +1,37 @@
 ![# AGGeometryKit](/logo.png?raw=true "AGGeometryKit")
 
+# !! Swift version !!
+
+This branch supports swift. The changes from the master branch can be seen here: https://github.com/hfossli/AGGeometryKit/compare/master...swift
+
+If you need to access the AGKQuad values by index you may use this swift extensions
+
+```
+extension AGKQuad {
+  var v: [CGPoint] {
+    get {
+      return [tl, tr, bl, br]
+    }
+    set {
+      tl = newValue[0]
+      tr = newValue[1] 
+      br = newValue[2]
+      bl = newValue[3]
+    }
+  }
+}
+```
+
+
+### Description
+
 Quadrilaterals on CALayer (control each corner point individually), CGGeometry-functions, UIView/CALayer properties and other invaluable tools.
 
 
 
 ### Installation
 
-New-school: Use the cocoa pod named `AGGeometryKit`.   
-Old-school: Grab the files found in `Source`.
-
+Grab the files found in `Source`. Exclude any tests at will.
 
 
 ## Demo
