@@ -175,7 +175,7 @@
     sourceQuadV[0] = sourceQuad.tl;
     sourceQuadV[1] = sourceQuad.tr;
     sourceQuadV[2] = sourceQuad.br;
-    sourceQuadV[3] = sourceQuad.br;
+    sourceQuadV[3] = sourceQuad.bl;
     
     CGPoint destinationQuadV[4];
     destinationQuadV[0] = destinationQuad.tl;
