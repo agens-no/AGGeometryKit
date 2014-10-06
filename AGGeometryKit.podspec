@@ -8,7 +8,8 @@ Pod::Spec.new do |s|
     s.requires_arc  = true
     s.authors      = { 
     	"Håvard Fossli" => "hfossli@agens.no",
-    	"Marcus Eckert" => "marcuseckert@gmail.com"
+    	"Marcus Eckert" => "marcuseckert@gmail.com",
+    	"Logan Holmes"  => "snown27@gmail.com"
     	}
     s.source       = { 
         :git => "https://github.com/hfossli/AGGeometryKit.git",  
