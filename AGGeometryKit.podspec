@@ -33,4 +33,8 @@ Pod::Spec.new do |s|
         ss.source_files        = 'Source/**/*.{h,m}'
         ss.exclude_files       = 'Source/**/*Test.{h,m}'  
     end
+
+    s.subspec 'FrameAccessor' do |ss|
+        ss.source_files        = 'Source/Categories/UIView+AGK+Properties.{h,m}', 'Source/CoreGraphics_Extensions/CGGeometry+AGGeometryKit.{h,m}'
+    end
 end
