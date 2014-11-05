@@ -32,24 +32,33 @@
 
 - (void)testBounds
 {
-    UIView *v = [[UIView alloc] initWithFrame:CGRectMake(80, 50, 400, 300)];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(80, 50, 400, 300)];
 
-    XCTAssertEqualObjects([NSValue valueWithCGPoint:v.boundsOrigin], [NSValue valueWithCGPoint:CGPointZero]);
-    
-    v.boundsOrigin = CGPointMake(20, 30);
-    XCTAssertEqualObjects([NSValue valueWithCGPoint:v.boundsOrigin], [NSValue valueWithCGPoint:CGPointMake(20, 30)]);
+    XCTAssertEqualObjects([NSValue valueWithCGPoint:view.boundsOrigin], [NSValue valueWithCGPoint:CGPointZero]);
 
-    XCTAssertEqualObjects([NSValue valueWithCGPoint:v.boundsCenter], [NSValue valueWithCGPoint:CGPointMake(200, 150)]);
-    XCTAssertEqual(v.boundsWidthHalf, 200.0);
-    XCTAssertEqual(v.boundsHeightHalf, 150.0);
-    XCTAssertEqualObjects([NSValue valueWithCGSize:v.boundsSizeHalf], [NSValue valueWithCGSize:CGSizeMake(200.0f, 150.0f)]);
+    XCTAssertEqualObjects([NSValue valueWithCGPoint:view.boundsOrigin], [NSValue valueWithCGPoint:CGPointMake(0, 0)]);
+    view.boundsOrigin = CGPointMake(20, 30);
+    XCTAssertEqualObjects([NSValue valueWithCGPoint:view.boundsOrigin], [NSValue valueWithCGPoint:CGPointMake(20, 30)]);
+
+    XCTAssertEqualObjects([NSValue valueWithCGPoint:view.boundsCenter], [NSValue valueWithCGPoint:CGPointMake(200, 150)]);
+    XCTAssertEqual(view.boundsWidthHalf, 200);
+    XCTAssertEqual(view.boundsHeightHalf, 150);
+    XCTAssertEqualObjects([NSValue valueWithCGSize:view.boundsSizeHalf], [NSValue valueWithCGSize:CGSizeMake(200, 150)]);
     
-    v.boundsWidth = 500;
-    XCTAssertEqualObjects([NSValue valueWithCGSize:v.boundsSize], [NSValue valueWithCGSize:CGSizeMake(500, 300)]);
-    XCTAssertEqual(v.boundsWidth, 500.0);
-    
-    v.boundsHeight = 600;
-    XCTAssertEqual(v.boundsHeight, 600.0f);
+    view.boundsWidth = 500;
+    XCTAssertEqualObjects([NSValue valueWithCGSize:view.boundsSize], [NSValue valueWithCGSize:CGSizeMake(500, 300)]);
+    XCTAssertEqual(view.boundsWidth, 500);
+
+    XCTAssertEqual(view.boundsHeight, 300);
+    view.boundsHeight = 600;
+    XCTAssertEqual(view.boundsHeight, 600);
+
+    XCTAssertEqualObjects([NSValue valueWithCGPoint:view.boundsCenter], [NSValue valueWithCGPoint:CGPointMake(250, 300)]);
+
+    XCTAssertEqualObjects([NSValue valueWithCGSize:view.boundsSize], [NSValue valueWithCGSize:CGSizeMake(500, 600)]);
+    view.boundsSize = CGSizeMake(123, 321);
+    XCTAssertEqualObjects([NSValue valueWithCGSize:view.boundsSize], [NSValue valueWithCGSize:CGSizeMake(123, 321)]);
+
 }
 
 - (void)testFrame
@@ -61,18 +70,18 @@
     v.frameMaxX = 480;
     v.frameMaxY = 350;
     
-    XCTAssertEqual(v.frameMinX, 80.0f);
-    XCTAssertEqual(v.frameMidX, 280.0f);
-    XCTAssertEqual(v.frameMaxX, 480.0f);
-    XCTAssertEqual(v.frameMinY, 50.0f);
-    XCTAssertEqual(v.frameMidY, 200.0f);
-    XCTAssertEqual(v.frameMaxY, 350.0f);
-    XCTAssertEqual(v.frameWidth, 400.0f);
-    XCTAssertEqual(v.frameHeight, 300.0f);
-    XCTAssertEqual(v.frameHeightHalf, 150.0f);
-    XCTAssertEqual(v.frameWidthHalf, 200.0f);
-    XCTAssertEqual(v.frameSizeHalf.width, 200.0f);
-    XCTAssertEqual(v.frameSizeHalf.height, 150.0);
+    XCTAssertEqual(v.frameMinX, 80);
+    XCTAssertEqual(v.frameMidX, 280);
+    XCTAssertEqual(v.frameMaxX, 480);
+    XCTAssertEqual(v.frameMinY, 50);
+    XCTAssertEqual(v.frameMidY, 200);
+    XCTAssertEqual(v.frameMaxY, 350);
+    XCTAssertEqual(v.frameWidth, 400);
+    XCTAssertEqual(v.frameHeight, 300);
+    XCTAssertEqual(v.frameWidthHalf, 200);
+    XCTAssertEqual(v.frameHeightHalf, 150);
+    XCTAssertEqual(v.frameSizeHalf.width, 200.0);
+    XCTAssertEqual(v.frameSizeHalf.height, 150);
 }
 
 @end

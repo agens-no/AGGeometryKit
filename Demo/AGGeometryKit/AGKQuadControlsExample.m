@@ -24,11 +24,11 @@
 #import "AGKQuadControlsExample.h"
 #import "AGGeometryKit.h"
 
-@interface AGControlPointView : UIView <UIGestureRecognizerDelegate>
+@interface AGControlPointView : UIView
 
 @end
 
-@interface AGKQuadControlsExample ()
+@interface AGKQuadControlsExample () <UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) IBOutlet UIImageView *imageView;
 @property (nonatomic, strong) IBOutlet UIView *topLeftControl;

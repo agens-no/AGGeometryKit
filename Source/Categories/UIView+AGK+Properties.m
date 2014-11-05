@@ -22,64 +22,70 @@
 // THE SOFTWARE.
 
 #import "UIView+AGK+Properties.h"
-#import "CGGeometry+AGGeometryKit.h"
-
 
 @implementation UIView (AGGeometryKit)
 
 - (CGSize)frameSize
 {
-	return self.frame.size;
+    return self.frame.size;
 }
 
 - (void)setFrameSize:(CGSize)value
 {
-	self.frame = CGRectWithSize_AGK(self.frame, value);
+    CGRect rect = self.frame;
+    rect.size = value;
+    self.frame = rect;
 }
 
 - (CGFloat)frameWidth
 {
-	return self.frame.size.width;
+    return self.frame.size.width;
 }
 
 - (void)setFrameWidth:(CGFloat)value
 {
-	self.frame = CGRectWithWidth_AGK(self.frame, value);
+    CGRect rect = self.frame;
+    rect.size.width = value;
+    self.frame = rect;
 }
 
 - (CGFloat)frameHeight
 {
-	return self.frame.size.height;
+    return self.frame.size.height;
 }
 
 - (void)setFrameHeight:(CGFloat)value
 {
-	self.frame = CGRectWithHeight_AGK(self.frame, value);
+    CGRect rect = self.frame;
+    rect.size.height = value;
+    self.frame = rect;
 }
 
 - (CGSize)frameSizeHalf
 {
-    return CGSizeHalf_AGK(self.frameSize);
+    return CGSizeMake(self.frameWidthHalf, self.frameHeightHalf);
 }
 
 - (CGFloat)frameHeightHalf
 {
-	return self.frameHeight / 2.0;
+    return self.frameHeight / 2.0;
 }
 
 - (CGFloat)frameWidthHalf
 {
-	return self.frameWidth / 2.0;
+    return self.frameWidth / 2.0;
 }
 
 - (CGPoint)frameOrigin
 {
-	return self.frame.origin;
+    return self.frame.origin;
 }
 
 - (void)setFrameOrigin:(CGPoint)value
 {
-	self.frame = CGRectWithOrigin_AGK(self.frame, value);
+    CGRect rect = self.frame;
+    rect.origin = value;
+    self.frame = rect;
 }
 
 - (CGFloat)frameMinX
@@ -89,7 +95,9 @@
 
 - (void)setFrameMinX:(CGFloat)value
 {
-    self.frame = CGRectWithOriginMinX_AGK(self.frame, value);
+    CGRect rect = self.frame;
+    rect.origin.x = value;
+    self.frame = rect;
 }
 
 - (CGFloat)frameMinY
@@ -99,7 +107,9 @@
 
 - (void)setFrameMinY:(CGFloat)value
 {
-    self.frame = CGRectWithOriginMinY_AGK(self.frame, value);
+    CGRect rect = self.frame;
+    rect.origin.y = value;
+    self.frame = rect;
 }
 
 - (CGFloat)frameMidX
@@ -109,7 +119,9 @@
 
 - (void)setFrameMidX:(CGFloat)value
 {
-    self.frame = CGRectWithOriginMidX_AGK(self.frame, value);
+    CGRect rect = self.frame;
+    rect.origin.x = value - (rect.size.width / 2.0);
+    self.frame = rect;
 }
 
 - (CGFloat)frameMidY
@@ -119,7 +131,9 @@
 
 - (void)setFrameMidY:(CGFloat)value
 {
-    self.frame = CGRectWithOriginMidY_AGK(self.frame, value);
+    CGRect rect = self.frame;
+    rect.origin.y = value - (rect.size.height / 2.0);
+    self.frame = rect;
 }
 
 - (CGFloat)frameMaxX
@@ -129,7 +143,9 @@
 
 - (void)setFrameMaxX:(CGFloat)value
 {
-    self.frame = CGRectWithOriginMaxX_AGK(self.frame, value);
+    CGRect rect = self.frame;
+    rect.origin.x = value - rect.size.width;
+    self.frame = rect;
 }
 
 - (CGFloat)frameMaxY
@@ -139,7 +155,9 @@
 
 - (void)setFrameMaxY:(CGFloat)value
 {
-    self.frame = CGRectWithOriginMaxY_AGK(self.frame, value);
+    CGRect rect = self.frame;
+    rect.origin.y = value - rect.size.height;
+    self.frame = rect;
 }
 
 - (CGRect)frameAsIfNoTransformIsApplied
@@ -152,57 +170,65 @@
 
 - (CGPoint)boundsOrigin
 {
-	return self.bounds.origin;
+    return self.bounds.origin;
 }
 
 - (void)setBoundsOrigin:(CGPoint)value
 {
-	self.bounds = CGRectWithOrigin_AGK(self.bounds, value);
+    CGRect rect = self.bounds;
+    rect.origin = value;
+    self.bounds = rect;
 }
 
 - (CGSize)boundsSize
 {
-	return self.bounds.size;
+    return self.bounds.size;
 }
 
 - (void)setBoundsSize:(CGSize)value
 {
-	self.bounds = CGRectWithSize_AGK(self.bounds, value);
+    CGRect rect = self.bounds;
+    rect.size = value;
+    self.bounds = rect;
 }
 
 - (CGFloat)boundsWidth
 {
-	return self.bounds.size.width;
+    return self.bounds.size.width;
 }
 
 - (void)setBoundsWidth:(CGFloat)value
 {
-	self.bounds = CGRectWithWidth_AGK(self.bounds, value);
+    CGRect rect = self.bounds;
+    rect.size.width = value;
+    self.bounds = rect;
 }
 
 - (CGFloat)boundsHeight
 {
-	return self.bounds.size.height;
+    return self.bounds.size.height;
 }
 
-- (void)setBoundsHeight:(CGFloat)newHeight
+- (void)setBoundsHeight:(CGFloat)value
 {
-	self.bounds = CGRectWithHeight_AGK(self.bounds, newHeight);
+    CGRect rect = self.bounds;
+    rect.size.height = value;
+    self.bounds = rect;
 }
 
 - (CGFloat)boundsHeightHalf
 {
-	return self.boundsHeight / 2.0;
+    return self.boundsHeight / 2.0;
 }
 
 - (CGFloat)boundsWidthHalf
 {
-	return self.boundsWidth / 2.0;
+    return self.boundsWidth / 2.0;
 }
 
 - (CGSize)boundsSizeHalf
 {
-    return CGSizeHalf_AGK(self.boundsSize);
+    return CGSizeMake(self.boundsWidthHalf, self.boundsHeightHalf);
 }
 
 - (CGPoint)boundsCenter
@@ -212,22 +238,22 @@
 
 - (CGFloat)centerX
 {
-	return self.center.x;
+    return self.center.x;
 }
 
-- (void)setCenterX:(CGFloat)newX
+- (void)setCenterX:(CGFloat)value
 {
-	self.center = CGPointMake(newX, self.center.y);
+    self.center = CGPointMake(value, self.center.y);
 }
 
 - (CGFloat)centerY
 {
-	return self.center.y;
+    return self.center.y;
 }
 
-- (void)setCenterY:(CGFloat)newY
+- (void)setCenterY:(CGFloat)value
 {
-	self.center = CGPointMake(self.center.x, newY);
+    self.center = CGPointMake(self.center.x, value);
 }
 
 @end

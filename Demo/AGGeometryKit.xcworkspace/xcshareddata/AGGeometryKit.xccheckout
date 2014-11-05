@@ -10,29 +10,29 @@
 	<string>AGGeometryKit</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>49F42943-BB0D-487F-8BAF-F19C256E4922</key>
-		<string>ssh://github.com/hfossli/AGGeometryKit.git</string>
+		<key>AE247051AC914EE583CB0BE8F9BDB49BF3A1ADA2</key>
+		<string>github.com:hfossli/AGGeometryKit.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>DemoApplication/AGGeometryKit.xcworkspace</string>
+	<string>Demo/AGGeometryKit.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>49F42943-BB0D-487F-8BAF-F19C256E4922</key>
+		<key>AE247051AC914EE583CB0BE8F9BDB49BF3A1ADA2</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/hfossli/AGGeometryKit.git</string>
+	<string>github.com:hfossli/AGGeometryKit.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>49F42943-BB0D-487F-8BAF-F19C256E4922</string>
+	<string>AE247051AC914EE583CB0BE8F9BDB49BF3A1ADA2</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>49F42943-BB0D-487F-8BAF-F19C256E4922</string>
+			<string>AE247051AC914EE583CB0BE8F9BDB49BF3A1ADA2</string>
 			<key>IDESourceControlWCCName</key>
 			<string>AGGeometryKit</string>
 		</dict>

@@ -37,19 +37,22 @@
 
 @implementation UIImage (AGKQuad)
 
-- (UIImage *)imageWithQuad:(AGKQuad)quad scale:(CGFloat)scale
+- (UIImage *)imageByCroppingToQuad:(AGKQuad)quad destinationSize:(CGSize)destinationSize
 {
-    AGKQuad scaledQuad = AGKQuadApplyCATransform3D(quad, CATransform3DMakeScale(scale, scale, 1.0));
-    CATransform3D transform = CATransform3DWithAGKQuadFromBounds(scaledQuad, (CGRect){CGPointZero, self.size});
-    CGImageRef imageRef = CGImageDrawWithCATransform3D_AGK(self.CGImage, transform, CGPointZero, self.size, 1.0);
-    UIImage* image = [UIImage imageWithCGImage:imageRef];
-    CGImageRelease(imageRef);
-    return image;
+    CGRect destinationRect = (CGRect){CGPointZero, destinationSize};
+
+    AGKQuad destinationQuad = AGKQuadMakeWithCGRect(destinationRect);
+    CATransform3D transform = [self generatePerspectiveTransformMatrixFromQuad:quad toQuad:destinationQuad];
+
+    UIImage *correctedImage = [self imageWithTransform:transform anchorPoint:CGPointZero];
+    UIImage *resultImage = [correctedImage imageByCroppingToRect:destinationRect];
+
+    return resultImage;
 }
 
-- (UIImage *)imageByCroppingToRect:(CGRect)cropRect
+- (UIImage *)imageByCroppingToRect:(CGRect)rect
 {
-    CGImageRef croppedImage = CGImageCreateWithImageInRect([self CGImage], cropRect);
+    CGImageRef croppedImage = CGImageCreateWithImageInRect([self CGImage], rect);
     return [UIImage imageWithCGImage:croppedImage scale:self.scale orientation:self.imageOrientation];
 }
 
@@ -140,7 +143,6 @@
     
     // Estimate the aspect ratio of the original quadrilateral
     CGFloat targetRatio = [self aspectRatioForQuad:quad];
-//    CGFloat targetRatio = 1.0;
     
     CGRect destinationRect = CGRectZero;
     if (targetRatio <= imageRatio)
