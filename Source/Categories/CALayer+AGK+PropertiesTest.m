@@ -39,7 +39,8 @@
     layer.frame = CGRectMake(80, 50, 400, 300);
 
     XCTAssertEqualObjects([NSValue valueWithCGPoint:layer.boundsOrigin], [NSValue valueWithCGPoint:CGPointZero]);
-    
+
+    XCTAssertEqualObjects([NSValue valueWithCGPoint:layer.boundsOrigin], [NSValue valueWithCGPoint:CGPointMake(0, 0)]);
     layer.boundsOrigin = CGPointMake(20, 30);
     XCTAssertEqualObjects([NSValue valueWithCGPoint:layer.boundsOrigin], [NSValue valueWithCGPoint:CGPointMake(20, 30)]);
 
@@ -47,13 +48,21 @@
     XCTAssertEqual(layer.boundsWidthHalf, 200.0);
     XCTAssertEqual(layer.boundsHeightHalf, 150.0);
     XCTAssertEqualObjects([NSValue valueWithCGSize:layer.boundsSizeHalf], [NSValue valueWithCGSize:CGSizeMake(200.0f, 150.0f)]);
-    
+
+
     layer.boundsWidth = 500;
     XCTAssertEqualObjects([NSValue valueWithCGSize:layer.boundsSize], [NSValue valueWithCGSize:CGSizeMake(500, 300)]);
-    XCTAssertEqual(layer.boundsWidth, 500.0);
-    
+    XCTAssertEqual(layer.boundsWidth, 500);
+
+    XCTAssertEqual(layer.boundsHeight, 300);
     layer.boundsHeight = 600;
-    XCTAssertEqual(layer.boundsHeight, 600.0f);
+    XCTAssertEqual(layer.boundsHeight, 600);
+
+    XCTAssertEqualObjects([NSValue valueWithCGPoint:layer.boundsCenter], [NSValue valueWithCGPoint:CGPointMake(250, 300)]);
+
+    XCTAssertEqualObjects([NSValue valueWithCGSize:layer.boundsSize], [NSValue valueWithCGSize:CGSizeMake(500, 600)]);
+    layer.boundsSize = CGSizeMake(123, 321);
+    XCTAssertEqualObjects([NSValue valueWithCGSize:layer.boundsSize], [NSValue valueWithCGSize:CGSizeMake(123, 321)]);
 }
 
 - (void)testFrame
