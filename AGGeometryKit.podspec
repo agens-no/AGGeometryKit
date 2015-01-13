@@ -6,16 +6,16 @@ Pod::Spec.new do |s|
     s.license      = 'MIT'
     s.platform      = :ios, '5.0'
     s.requires_arc  = true
-    s.authors      = { 
+    s.authors      = {
     	"Håvard Fossli" => "hfossli@agens.no",
     	"Logan Holmes"  => "snown27@gmail.com",
     	"Marcus Eckert" => "marcuseckert@gmail.com"
     	}
-    s.source       = { 
-        :git => "https://github.com/hfossli/AGGeometryKit.git",  
+    s.source       = {
+        :git => "https://github.com/hfossli/AGGeometryKit.git",
         :tag => s.version.to_s
         }
-        
+
     s.default_subspec = 'Default'
 
     s.subspec 'Default' do |ss|
@@ -25,13 +25,13 @@ Pod::Spec.new do |s|
 
     s.subspec 'Dependencies' do |ss|
         ss.dependency      'JRSwizzle', '~> 1.0'
-        ss.dependency      'AGAssert', '~> 0.2'
+        ss.dependency      'AGAssert', '~> 1.0'
     end
 
     s.subspec 'Core' do |ss|
         ss.frameworks    = 'SystemConfiguration', 'CoreGraphics', 'UIKit', 'QuartzCore'
         ss.source_files  = 'Source/**/*.{h,m}'
-        ss.exclude_files = 'Source/**/*Test.{h,m}'  
+        ss.exclude_files = 'Source/**/*Test.{h,m}'
     end
 
     s.subspec 'UIViewProperties' do |ss|
