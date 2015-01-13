@@ -43,8 +43,7 @@
                     __LINE__, \
                     __PRETTY_FUNCTION__, \
                     description]; \
-                NSLog(@"Description: %@", description); \
-                NSLog(@"Reason: %@", reason); \
+                NSLog(@"%@", reason); \
                 [[NSException exceptionWithName:NSInternalInconsistencyException reason:reason userInfo:nil] raise]; \
                 abort(); \
         } \
@@ -61,8 +60,7 @@
                     __LINE__, \
                     __PRETTY_FUNCTION__, \
                     description]; \
-                NSLog(@"Description: %@", description); \
-                NSLog(@"Reason: %@", reason); \
+                NSLog(@"%@", reason); \
                 [[NSException exceptionWithName:NSInternalInconsistencyException reason:reason userInfo:nil] raise]; \
                 abort(); \
         } \
