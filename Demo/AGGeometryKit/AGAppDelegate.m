@@ -27,12 +27,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
-
-    // hack: tabbar is not laying out subviews as expected
-    self.tabBarController.selectedIndex = 1;
-    self.tabBarController.selectedIndex = 0;
-
+    
     return YES;
 }
 
