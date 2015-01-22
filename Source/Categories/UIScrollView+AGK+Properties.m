@@ -25,6 +25,11 @@
 
 @implementation UIScrollView (AGGeometryKit)
 
+- (CGFloat)contentSizeWidth
+{
+  return self.contentSize.width;
+}
+
 - (void)setContentSizeWidth:(CGFloat)contentSizeWidth
 {
     CGSize size = self.contentSize;
@@ -32,22 +37,21 @@
     self.contentSize = size;
 }
 
-- (CGFloat)contentSizeWidth
+- (CGFloat)contentSizeHeight
 {
-    return self.contentSize.width;
+  return self.contentSize.height;
 }
 
 - (void)setContentSizeHeight:(CGFloat)contentSizeHeight
 {
     CGSize size = self.contentSize;
     size.height = contentSizeHeight;
-    
     self.contentSize = size;
 }
 
-- (CGFloat)contentSizeHeight
+- (CGFloat)contentOffsetX
 {
-    return self.contentSize.height;
+  return self.contentOffset.x;
 }
 
 - (void)setContentOffsetX:(CGFloat)contentOffsetX
@@ -57,9 +61,9 @@
     self.contentOffset = offset;
 }
 
-- (CGFloat)contentOffsetX
+- (CGFloat)contentOffsetY
 {
-    return self.contentOffset.x;
+  return self.contentOffset.y;
 }
 
 - (void)setContentOffsetY:(CGFloat)contentOffsetY
@@ -69,57 +73,52 @@
     self.contentOffset = offset;
 }
 
-- (CGFloat)contentOffsetY
+- (CGFloat)contentInsetTop
 {
-    return self.contentOffset.y;
+  return self.contentInset.top;
 }
 
 - (void)setContentInsetTop:(CGFloat)contentInsetTop
 {
     UIEdgeInsets inset = self.contentInset;
-    insets.top = contentInsetTop;
-    self.contentInset = inset;
-}
-
-- (CGFloat)contentInsetTop
-{
-    return self.contentInset.top;
-}
-
-- (void)setContentInsetLeft:(CGFloat)contentInsetLeft
-{
-    UIEdgeInsets inset = self.contentInset;
-    insets.left = contentInsetLeft;
+    inset.top = contentInsetTop;
     self.contentInset = inset;
 }
 
 - (CGFloat)contentInsetLeft
 {
-    return self.contentInset.left;
+  return self.contentInset.left;
 }
 
-- (void)setContentInsetBottom:(CGFloat)contentInsetBottom
+- (void)setContentInsetLeft:(CGFloat)contentInsetLeft
 {
     UIEdgeInsets inset = self.contentInset;
-    insets.bottom = contentInsetBottom;
+    inset.left = contentInsetLeft;
     self.contentInset = inset;
 }
 
 - (CGFloat)contentInsetBottom
 {
-    return self.contentInset.bottom;
+  return self.contentInset.bottom;
 }
 
-- (void)setContentInsetRight:(CGFloat)contentInsetRight
+- (void)setContentInsetBottom:(CGFloat)contentInsetBottom
 {
     UIEdgeInsets inset = self.contentInset;
-    insets.right = contentInsetRight;
+    inset.bottom = contentInsetBottom;
     self.contentInset = inset;
 }
 
 - (CGFloat)contentInsetRight
 {
-    return self.contentInset.right;
+  return self.contentInset.right;
+}
+
+- (void)setContentInsetRight:(CGFloat)contentInsetRight
+{
+    UIEdgeInsets inset = self.contentInset;
+    inset.right = contentInsetRight;
+    self.contentInset = inset;
 }
 
 @end
