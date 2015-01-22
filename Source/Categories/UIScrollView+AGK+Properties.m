@@ -77,7 +77,7 @@
 - (void)setContentInsetTop:(CGFloat)contentInsetTop
 {
     UIEdgeInsets inset = self.contentInset;
-    insets.top = contentInsetTop;
+    inset.top = contentInsetTop;
     self.contentInset = inset;
 }
 
@@ -89,7 +89,7 @@
 - (void)setContentInsetLeft:(CGFloat)contentInsetLeft
 {
     UIEdgeInsets inset = self.contentInset;
-    insets.left = contentInsetLeft;
+    inset.left = contentInsetLeft;
     self.contentInset = inset;
 }
 
@@ -101,7 +101,7 @@
 - (void)setContentInsetBottom:(CGFloat)contentInsetBottom
 {
     UIEdgeInsets inset = self.contentInset;
-    insets.bottom = contentInsetBottom;
+    inset.bottom = contentInsetBottom;
     self.contentInset = inset;
 }
 
@@ -113,7 +113,7 @@
 - (void)setContentInsetRight:(CGFloat)contentInsetRight
 {
     UIEdgeInsets inset = self.contentInset;
-    insets.right = contentInsetRight;
+    inset.right = contentInsetRight;
     self.contentInset = inset;
 }
 
