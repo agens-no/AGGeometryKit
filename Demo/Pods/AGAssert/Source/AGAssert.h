@@ -45,7 +45,6 @@
                     description]; \
                 NSLog(@"%@", reason); \
                 [[NSException exceptionWithName:NSInternalInconsistencyException reason:reason userInfo:nil] raise]; \
-                abort(); \
         } \
     } while(0)
 
@@ -62,7 +61,6 @@
                     description]; \
                 NSLog(@"%@", reason); \
                 [[NSException exceptionWithName:NSInternalInconsistencyException reason:reason userInfo:nil] raise]; \
-                abort(); \
         } \
     } while(0)
 
@@ -71,6 +69,5 @@
 #else
 # define AGAssert(condition, desc, ...)
 # define AGCAssert(condition, desc, ...)
-# define AGParameterAssert(condition) 
+# define AGParameterAssert(condition)
 #endif
-

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "AGGeometryKit"
-    s.version      = "1.1"
+    s.version      = "1.1.1"
     s.summary      = "Quadrilaterals on CALayer, CGGeometry-functions, UIView/CALayer properties and other invaluable tools."
     s.homepage     = "https://github.com/hfossli/AGGeometryKit"
     s.license      = 'MIT'
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
 
     s.subspec 'Dependencies' do |ss|
         ss.dependency      'JRSwizzle', '~> 1.0'
-        ss.dependency      'AGAssert', '~> 1.0'
+        ss.dependency      'AGAssert', '~> 2.0'
     end
 
     s.subspec 'Core' do |ss|

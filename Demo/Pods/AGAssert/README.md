@@ -10,6 +10,7 @@ Benefits of using this over NSAssert:
 - Fewer macros and less mess.
 - Does not require any description string as second parameter
 
+The assert will raise an exception.
 
 Recommended reading about asserts http://www.mikeash.com/pyblog/friday-qa-2013-05-03-proper-use-of-asserts.html
 

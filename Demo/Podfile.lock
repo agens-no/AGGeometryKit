@@ -1,7 +1,7 @@
 PODS:
-  - AGAssert (1.0)
-  - AGGeometryKit/Dependencies (1.1):
-    - AGAssert (~> 1.0)
+  - AGAssert (2.0)
+  - AGGeometryKit/Dependencies (1.1.1):
+    - AGAssert (~> 2.0)
     - JRSwizzle (~> 1.0)
   - JRSwizzle (1.0)
 
@@ -13,8 +13,8 @@ EXTERNAL SOURCES:
     :path: ../AGGeometryKit.podspec
 
 SPEC CHECKSUMS:
-  AGAssert: 6ceea67dffd23fc2825475cd5b58d11162e5003e
-  AGGeometryKit: f43663776b1d5aab2e0e41ac8a63a0e303a988a7
-  JRSwizzle: 30da7a2c539a4ebf954b16d15f6dd8221c9f6fa5
+  AGAssert: a80ba4dfbc56a0bc7434d362fa8ff5b8dc61cf8d
+  AGGeometryKit: c1516d27bfad4e0611ebe98130ea6afa3967fbcb
+  JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3
 
 COCOAPODS: 0.35.0
