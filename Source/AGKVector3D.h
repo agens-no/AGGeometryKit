@@ -34,7 +34,7 @@ struct AGKVector3D {
 };
 typedef struct AGKVector3D AGKVector3D;
 
-const AGKVector3D AGKVector3DZero;
+extern const AGKVector3D AGKVector3DZero;
 
 AGKVector3D AGKVector3DMake(CGFloat x, CGFloat y, CGFloat z);
 AGKVector3D AGKVector3DWithGLKVector3(GLKVector3);
