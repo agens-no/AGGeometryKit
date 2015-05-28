@@ -207,7 +207,7 @@ CGFloat AGKEaseOutWithPower(CGFloat progress, CGFloat power)
 {
     // power is 3.0
     // http://www.wolframalpha.com/input/?i=1.0-%281.0-x%29^3+from+0+to+1
-    return 1.0f-powf(fabsf(1.0f-progress), power);
+    return 1.0f-powf(fabs(1.0f-progress), power);
 }
 
 CGFloat AGKEaseWithTwoBeziers(CGPoint tangent1,
