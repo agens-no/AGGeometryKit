@@ -40,7 +40,7 @@ typedef union AGKQuad {
     CGPoint v[4];
 } AGKQuad;
 
-const AGKQuad AGKQuadZero;
+extern const AGKQuad AGKQuadZero;
 BOOL AGKQuadEqual(AGKQuad q1, AGKQuad q2);
 BOOL AGKQuadEqualWithAccuracy(AGKQuad q1, AGKQuad q2, CGFloat accuracy);
 BOOL AGKQuadIsConvex(AGKQuad q);
