@@ -150,7 +150,7 @@
         values[i] = i + 10;
     }
     
-    unsigned int index;
+    NSUInteger index;
     CGFloat value;
     
     value = AGKMinInArray(values, 5, &index);

@@ -141,7 +141,7 @@
     
     XCTAssertEqual(columns.count, comparisonArray.count, @"Columns method is not returning the correct number of column arrays.");
     for (NSUInteger index = 0; index < columns.count; index++) {
-        XCTAssert([(NSArray *)columns[index] isEqualToArray:comparisonArray[index]], @"Returned column at index %d should be: %@", index, comparisonArray[index]);
+        XCTAssert([(NSArray *)columns[index] isEqualToArray:comparisonArray[index]], @"Returned column at index %lu should be: %@", (unsigned long)index, comparisonArray[index]);
     }
 }
 
@@ -151,7 +151,7 @@
     
     XCTAssertEqual(rows.count, comparisonArray.count, @"Rows method is not returning the correct number of row arrays.");
     for (NSUInteger index = 0; index < rows.count; index++) {
-        XCTAssert([(NSArray *)rows[index] isEqualToArray:comparisonArray[index]], @"Returned row at index %d should be: %@", index, comparisonArray[index]);
+        XCTAssert([(NSArray *)rows[index] isEqualToArray:comparisonArray[index]], @"Returned row at index %lu should be: %@", (unsigned long)index, comparisonArray[index]);
     }
 }
 
@@ -175,15 +175,15 @@
 - (void)testEnumerateMembersUsingBlock {
     __block NSUInteger defaultValuesRecieved = 0;
     [self.testMatrix enumerateMembersUsingBlock:^(NSNumber *member, NSUInteger index, NSUInteger columnIndex, NSUInteger rowIndex, BOOL *stop) {
-        XCTAssertEqual(columnIndex, index / 4, @"Column index should be %d for absolute index %d on a 3x4 matrix", index / 4, index);
-        XCTAssertEqual(rowIndex, index % 4, @"Row index should be %d for absolute index %d on a 3x4 matrix", index % 4, index);
+        XCTAssertEqual(columnIndex, index / 4, @"Column index should be %lu for absolute index %lu on a 3x4 matrix", index / 4, (unsigned long)index);
+        XCTAssertEqual(rowIndex, index % 4, @"Row index should be %lu for absolute index %lu on a 3x4 matrix", index % 4, (unsigned long)index);
         
         if (index < self.initialMembers.count) {
             XCTAssertEqualObjects(member, self.initialMembers[index], @"The returned member should be the same as the one passed in: %@", self.initialMembers[index]);
         } else {
             defaultValuesRecieved++;
             if (defaultValuesRecieved < 3) {
-                XCTAssertEqualObjects(member, self.testMatrix.defaultMember, @"Member at index %d has not been assigned yet, and therefore should return the default member: %@", index, self.testMatrix.defaultMember);
+                XCTAssertEqualObjects(member, self.testMatrix.defaultMember, @"Member at index %lu has not been assigned yet, and therefore should return the default member: %@", (unsigned long)index, self.testMatrix.defaultMember);
                 if (defaultValuesRecieved > 1) {
                     *stop = YES;
                 }
@@ -201,11 +201,11 @@
     NSArray *comparisonArray = @[@[@1, @2, @3, @4], @[@5, @6, @7, @8], @[@0, @0, @0, @0], @[@0, @0, @0, @0], @[@0, @0, @0, @0]];
     [matrix enumerateColumnsUsingBlock:^(NSArray *column, NSUInteger columnIndex, BOOL *stop) {
         if (columnIndex < 2) {
-            XCTAssertEqualObjects(column, comparisonArray[columnIndex], @"Column %d should be the same as comparisonArray[%d]: %@", columnIndex, columnIndex, comparisonArray[columnIndex]);
+            XCTAssertEqualObjects(column, comparisonArray[columnIndex], @"Column %lu should be the same as comparisonArray[%lu]: %@", (unsigned long)columnIndex, (unsigned long)columnIndex, comparisonArray[columnIndex]);
         } else if (columnIndex < 4) {
             NSNumber *defaultMember = matrix.defaultMember;
             NSArray *defaultArray = @[defaultMember, defaultMember, defaultMember, defaultMember];
-            XCTAssertEqualObjects(column, defaultArray, @"Column %d should generate an array of default members equal to the number of rows: @%@ x 4", columnIndex, defaultMember);
+            XCTAssertEqualObjects(column, defaultArray, @"Column %lu should generate an array of default members equal to the number of rows: @%@ x 4", (unsigned long)columnIndex, defaultMember);
             
             if (columnIndex == 3) {
                 *stop = YES;
@@ -221,7 +221,7 @@
     NSArray *comparisonArray = @[@[@1, @5, @0], @[@2, @6, @0], @[@3, @7, @0], @[@4, @8, @0]];
     [self.testMatrix enumerateRowsUsingBlock:^(NSArray *row, NSUInteger rowIndex, BOOL *stop) {
         if (rowIndex) {
-            XCTAssertEqualObjects(row, comparisonArray[rowIndex], @"Row %d should be the same as comparisonArray[%d]: %@", rowIndex, rowIndex, comparisonArray[rowIndex]);
+            XCTAssertEqualObjects(row, comparisonArray[rowIndex], @"Row %lu should be the same as comparisonArray[%lu]: %@", (unsigned long)rowIndex, (unsigned long)rowIndex, comparisonArray[rowIndex]);
         }
     }];
 }
@@ -252,9 +252,9 @@
     [self.testMatrix setColumnAtIndex:1 withArray:@[@10]];
     for (NSUInteger rowIndex = 0; rowIndex < 4; rowIndex++) {
         if (rowIndex == 0) {
-            XCTAssertEqualObjects([self.testMatrix objectAtColumnIndex:1 rowIndex:rowIndex], @10, @"Member at 1x%d should have been replaced with 10", rowIndex);
+            XCTAssertEqualObjects([self.testMatrix objectAtColumnIndex:1 rowIndex:rowIndex], @10, @"Member at 1x%lu should have been replaced with 10", (unsigned long)rowIndex);
         } else {
-            XCTAssertEqualObjects([self.testMatrix objectAtColumnIndex:1 rowIndex:rowIndex], self.testMatrix.defaultMember, @"Member at 1x%d should return the defaultMember, as that postion was not specified.", rowIndex);
+            XCTAssertEqualObjects([self.testMatrix objectAtColumnIndex:1 rowIndex:rowIndex], self.testMatrix.defaultMember, @"Member at 1x%lu should return the defaultMember, as that postion was not specified.", (unsigned long)rowIndex);
         }
     }
     
@@ -272,9 +272,9 @@
     [self.testMatrix setRowAtIndex:1 withArray:@[@10]];
     for (NSUInteger columnIndex = 0; columnIndex < 3; columnIndex++) {
         if (columnIndex == 0) {
-            XCTAssertEqualObjects([self.testMatrix objectAtColumnIndex:columnIndex rowIndex:1], @10, @"Member at %dx1 should have been replaced with 10", columnIndex);
+            XCTAssertEqualObjects([self.testMatrix objectAtColumnIndex:columnIndex rowIndex:1], @10, @"Member at %lux1 should have been replaced with 10", (unsigned long)columnIndex);
         } else {
-            XCTAssertEqualObjects([self.testMatrix objectAtColumnIndex:columnIndex rowIndex:1], self.testMatrix.defaultMember, @"Member at %dx1 should return the defaultMember, as that postion was not specified.", columnIndex);
+            XCTAssertEqualObjects([self.testMatrix objectAtColumnIndex:columnIndex rowIndex:1], self.testMatrix.defaultMember, @"Member at %lux1 should return the defaultMember, as that postion was not specified.", (unsigned long)columnIndex);
         }
     }
     
@@ -420,7 +420,7 @@
     NSArray *comparisonMembers = @[@(-24.0), @(20.0), @(-5), @(18.0), @(-15.0), @(4.0), @(5.0), @(-4.0), @(1.0)];
     
     [inverseMatrix enumerateMembersUsingBlock:^(NSNumber *member, NSUInteger index, NSUInteger columnIndex, NSUInteger rowIndex, BOOL *stop) {
-        XCTAssertEqualObjects(member, comparisonMembers[index], @"Member at column %d row %d should be %@", columnIndex, rowIndex, comparisonMembers[index]);
+        XCTAssertEqualObjects(member, comparisonMembers[index], @"Member at column %lu row %lu should be %@", (unsigned long)columnIndex, (unsigned long)rowIndex, comparisonMembers[index]);
     }];
 }
 
