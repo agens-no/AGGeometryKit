@@ -14,6 +14,61 @@
 		0CC807A31978375400001F80 /* AGKMatrix+CATransform3DTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC807A21978375400001F80 /* AGKMatrix+CATransform3DTest.m */; };
 		0CC807A6197C54E600001F80 /* AGKMatrix+AGKVector3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC807A5197C54E600001F80 /* AGKMatrix+AGKVector3D.m */; };
 		0CC807A8197C569100001F80 /* AGKMatrix+AGKVector3DTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC807A7197C569100001F80 /* AGKMatrix+AGKVector3DTest.m */; };
+		1A818C9F1B5C0E6100FD4FAC /* AGGeometryKitiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A818C9E1B5C0E6100FD4FAC /* AGGeometryKitiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CA61B5C0E6100FD4FAC /* AGGeometryKitiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A818C9C1B5C0E6100FD4FAC /* AGGeometryKitiOS.framework */; };
+		1A818CAD1B5C0E6100FD4FAC /* AGGeometryKitiOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A818CAC1B5C0E6100FD4FAC /* AGGeometryKitiOSTests.m */; };
+		1A818CBA1B5C0E9300FD4FAC /* AGGeometryKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A38F9F0A185B3F5C00F49AD7 /* AGGeometryKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CBB1B5C0E9300FD4FAC /* AGGeometryKit-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = A392379A19616BD40096D58D /* AGGeometryKit-Prefix.pch */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CBC1B5C0E9300FD4FAC /* AGKBitOperations.h in Headers */ = {isa = PBXBuildFile; fileRef = A38F9F05185B3F5C00F49AD7 /* AGKBitOperations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CBE1B5C0E9300FD4FAC /* AGKCorner.h in Headers */ = {isa = PBXBuildFile; fileRef = A38F9F07185B3F5C00F49AD7 /* AGKCorner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CBF1B5C0E9300FD4FAC /* AGKCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F08185B3F5C00F49AD7 /* AGKCorner.m */; };
+		1A818CC11B5C0E9300FD4FAC /* AGKLine.h in Headers */ = {isa = PBXBuildFile; fileRef = A38F9F0B185B3F5C00F49AD7 /* AGKLine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CC21B5C0E9300FD4FAC /* AGKLine.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F0C185B3F5C00F49AD7 /* AGKLine.m */; };
+		1A818CC41B5C0E9300FD4FAC /* AGKMath.h in Headers */ = {isa = PBXBuildFile; fileRef = A38F9F0D185B3F5C00F49AD7 /* AGKMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CC51B5C0E9300FD4FAC /* AGKMath.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F0E185B3F5C00F49AD7 /* AGKMath.m */; };
+		1A818CC71B5C0E9300FD4FAC /* AGKQuad.h in Headers */ = {isa = PBXBuildFile; fileRef = A38F9F12185B3F5C00F49AD7 /* AGKQuad.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CC81B5C0E9300FD4FAC /* AGKQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F13185B3F5C00F49AD7 /* AGKQuad.m */; };
+		1A818CCA1B5C0E9300FD4FAC /* AGKVector3D.h in Headers */ = {isa = PBXBuildFile; fileRef = A38F9F18185B3F5C00F49AD7 /* AGKVector3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CCB1B5C0E9300FD4FAC /* AGKVector3D.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F19185B3F5C00F49AD7 /* AGKVector3D.m */; };
+		1A818CCD1B5C0E9300FD4FAC /* AGGeometryKitCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = A38F9F5B185B410C00F49AD7 /* AGGeometryKitCategories.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CCE1B5C0E9300FD4FAC /* AGKMatrix+AGKVector3D.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CC807A4197C54E600001F80 /* AGKMatrix+AGKVector3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CCF1B5C0E9300FD4FAC /* AGKMatrix+AGKVector3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC807A5197C54E600001F80 /* AGKMatrix+AGKVector3D.m */; };
+		1A818CD11B5C0E9300FD4FAC /* AGKMatrix+CATransform3D.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CC8079F197827B900001F80 /* AGKMatrix+CATransform3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CD21B5C0E9300FD4FAC /* AGKMatrix+CATransform3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC807A0197827B900001F80 /* AGKMatrix+CATransform3D.m */; };
+		1A818CD41B5C0E9300FD4FAC /* AGKMatrix+GLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CC8079C1978254500001F80 /* AGKMatrix+GLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CD51B5C0E9300FD4FAC /* AGKMatrix+GLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC8079D1978254500001F80 /* AGKMatrix+GLKit.m */; };
+		1A818CD61B5C0E9300FD4FAC /* CALayer+AGK+Methods.h in Headers */ = {isa = PBXBuildFile; fileRef = A3314479191912B700A9968C /* CALayer+AGK+Methods.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CD71B5C0E9300FD4FAC /* CALayer+AGK+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = A331447A191912B700A9968C /* CALayer+AGK+Methods.m */; };
+		1A818CD81B5C0E9300FD4FAC /* CALayer+AGK+Properties.h in Headers */ = {isa = PBXBuildFile; fileRef = A38F9F1E185B3F5C00F49AD7 /* CALayer+AGK+Properties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CD91B5C0E9300FD4FAC /* CALayer+AGK+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F1F185B3F5C00F49AD7 /* CALayer+AGK+Properties.m */; };
+		1A818CDB1B5C0E9300FD4FAC /* CALayer+AGKQuad.h in Headers */ = {isa = PBXBuildFile; fileRef = A38F9F1C185B3F5C00F49AD7 /* CALayer+AGKQuad.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CDC1B5C0E9300FD4FAC /* CALayer+AGKQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F1D185B3F5C00F49AD7 /* CALayer+AGKQuad.m */; };
+		1A818CDE1B5C0E9300FD4FAC /* NSValue+AGKQuad.h in Headers */ = {isa = PBXBuildFile; fileRef = A38F9F20185B3F5C00F49AD7 /* NSValue+AGKQuad.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CDF1B5C0E9300FD4FAC /* NSValue+AGKQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F21185B3F5C00F49AD7 /* NSValue+AGKQuad.m */; };
+		1A818CE11B5C0E9300FD4FAC /* UIBezierPath+AGKQuad.h in Headers */ = {isa = PBXBuildFile; fileRef = A38F9F23185B3F5C00F49AD7 /* UIBezierPath+AGKQuad.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CE21B5C0E9300FD4FAC /* UIBezierPath+AGKQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F24185B3F5C00F49AD7 /* UIBezierPath+AGKQuad.m */; };
+		1A818CE31B5C0E9300FD4FAC /* UIImage+AGK+CATransform3D.h in Headers */ = {isa = PBXBuildFile; fileRef = A38F9F27185B3F5C00F49AD7 /* UIImage+AGK+CATransform3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CE41B5C0E9300FD4FAC /* UIImage+AGK+CATransform3D.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F28185B3F5C00F49AD7 /* UIImage+AGK+CATransform3D.m */; };
+		1A818CE51B5C0E9300FD4FAC /* UIImage+AGKQuad.h in Headers */ = {isa = PBXBuildFile; fileRef = A38F9F25185B3F5C00F49AD7 /* UIImage+AGKQuad.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CE61B5C0E9300FD4FAC /* UIImage+AGKQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F26185B3F5C00F49AD7 /* UIImage+AGKQuad.m */; };
+		1A818CE71B5C0E9300FD4FAC /* UIView+AGK+AngleConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = A38F9F29185B3F5C00F49AD7 /* UIView+AGK+AngleConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CE81B5C0E9300FD4FAC /* UIView+AGK+AngleConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F2A185B3F5C00F49AD7 /* UIView+AGK+AngleConverter.m */; };
+		1A818CEA1B5C0E9300FD4FAC /* UIView+AGK+Properties.h in Headers */ = {isa = PBXBuildFile; fileRef = A38F9F2C185B3F5C00F49AD7 /* UIView+AGK+Properties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CEB1B5C0E9300FD4FAC /* UIView+AGK+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F2D185B3F5C00F49AD7 /* UIView+AGK+Properties.m */; };
+		1A818CED1B5C0E9300FD4FAC /* UIScrollView+AGK+Properties.h in Headers */ = {isa = PBXBuildFile; fileRef = A36D88371A71093200C6DBB3 /* UIScrollView+AGK+Properties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CEE1B5C0E9300FD4FAC /* UIScrollView+AGK+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D88381A71093200C6DBB3 /* UIScrollView+AGK+Properties.m */; };
+		1A818CEF1B5C0E9300FD4FAC /* AGGeometryKitClasses.h in Headers */ = {isa = PBXBuildFile; fileRef = A38F9F67185B41CB00F49AD7 /* AGGeometryKitClasses.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CF01B5C0E9300FD4FAC /* AGKCALayerAnimationBlockDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A38F9F35185B3F5C00F49AD7 /* AGKCALayerAnimationBlockDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CF11B5C0E9300FD4FAC /* AGKCALayerAnimationBlockDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F36185B3F5C00F49AD7 /* AGKCALayerAnimationBlockDelegate.m */; };
+		1A818CF21B5C0E9300FD4FAC /* AGKMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C2491FC197602A1008838AE /* AGKMatrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CF31B5C0E9300FD4FAC /* AGKMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2491FD197602A1008838AE /* AGKMatrix.m */; };
+		1A818CF51B5C0E9300FD4FAC /* AGKTransformPixelMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = A38F9F69185B427D00F49AD7 /* AGKTransformPixelMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CF61B5C0E9300FD4FAC /* AGKTransformPixelMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F6A185B427D00F49AD7 /* AGKTransformPixelMapper.m */; };
+		1A818CF71B5C0E9300FD4FAC /* AGGeometryKitCoreGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = A38F9F68185B41E100F49AD7 /* AGGeometryKitCoreGraphics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CF81B5C0E9300FD4FAC /* CGGeometry+AGGeometryKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A38F9F5D185B419A00F49AD7 /* CGGeometry+AGGeometryKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CF91B5C0E9300FD4FAC /* CGGeometry+AGGeometryKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F5E185B419A00F49AD7 /* CGGeometry+AGGeometryKit.m */; };
+		1A818CFB1B5C0E9300FD4FAC /* CGImageRef+AGK+CATransform3D.h in Headers */ = {isa = PBXBuildFile; fileRef = A38F9F60185B419A00F49AD7 /* CGImageRef+AGK+CATransform3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A818CFC1B5C0E9300FD4FAC /* CGImageRef+AGK+CATransform3D.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F9F61185B419A00F49AD7 /* CGImageRef+AGK+CATransform3D.m */; };
 		A30B0C4916CE932700856E00 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A60A16A9A6F000E334AD /* QuartzCore.framework */; };
 		A30B0C4B16CE932D00856E00 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A59816A9A3BD00E334AD /* CoreGraphics.framework */; };
 		A3270F3B16D5675800A92C03 /* AGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3270F2816D5675800A92C03 /* AGAppDelegate.m */; };
@@ -112,6 +167,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1A818CA71B5C0E6100FD4FAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A333A58716A9A3BD00E334AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A818C9B1B5C0E6100FD4FAC;
+			remoteInfo = AGGeometryKitiOS;
+		};
+		1A818CA91B5C0E6100FD4FAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A333A58716A9A3BD00E334AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A333A58F16A9A3BD00E334AD;
+			remoteInfo = AGGeometryKit;
+		};
 		A333A5C216A9A3BD00E334AD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A333A58716A9A3BD00E334AD /* Project object */;
@@ -120,6 +189,19 @@
 			remoteInfo = AGQuadrilateral;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1A818CB81B5C0E6100FD4FAC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0866E65E4D7BBE650AAAEC30 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +216,12 @@
 		0CC807A4197C54E600001F80 /* AGKMatrix+AGKVector3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AGKMatrix+AGKVector3D.h"; sourceTree = "<group>"; };
 		0CC807A5197C54E600001F80 /* AGKMatrix+AGKVector3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AGKMatrix+AGKVector3D.m"; sourceTree = "<group>"; };
 		0CC807A7197C569100001F80 /* AGKMatrix+AGKVector3DTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AGKMatrix+AGKVector3DTest.m"; sourceTree = "<group>"; };
+		1A818C9C1B5C0E6100FD4FAC /* AGGeometryKitiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AGGeometryKitiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A818C9E1B5C0E6100FD4FAC /* AGGeometryKitiOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGGeometryKitiOS.h; sourceTree = "<group>"; };
+		1A818CA01B5C0E6100FD4FAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A818CA51B5C0E6100FD4FAC /* AGGeometryKitiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AGGeometryKitiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A818CAC1B5C0E6100FD4FAC /* AGGeometryKitiOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGGeometryKitiOSTests.m; sourceTree = "<group>"; };
+		1A818CAE1B5C0E6100FD4FAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F56AD3A0E2B5973BF5C631B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A3270F2716D5675800A92C03 /* AGAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGAppDelegate.h; sourceTree = "<group>"; };
 		A3270F2816D5675800A92C03 /* AGAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGAppDelegate.m; sourceTree = "<group>"; };
@@ -246,6 +334,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1A818C981B5C0E6100FD4FAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A818CA21B5C0E6100FD4FAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A818CA61B5C0E6100FD4FAC /* AGGeometryKitiOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A333A58D16A9A3BD00E334AD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -272,6 +375,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A818C9D1B5C0E6100FD4FAC /* AGGeometryKitiOS */ = {
+			isa = PBXGroup;
+			children = (
+				1A818C9E1B5C0E6100FD4FAC /* AGGeometryKitiOS.h */,
+				1A818CA01B5C0E6100FD4FAC /* Info.plist */,
+			);
+			path = AGGeometryKitiOS;
+			sourceTree = "<group>";
+		};
+		1A818CAB1B5C0E6100FD4FAC /* AGGeometryKitiOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				1A818CAC1B5C0E6100FD4FAC /* AGGeometryKitiOSTests.m */,
+				1A818CAE1B5C0E6100FD4FAC /* Info.plist */,
+			);
+			path = AGGeometryKitiOSTests;
+			sourceTree = "<group>";
+		};
 		282F1EBBA354A9FEC8160A52 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +454,8 @@
 				A333A5EF16A9A59200E334AD /* Source */,
 				A3270F2616D5675800A92C03 /* AGGeometryKit */,
 				A3270F3516D5675800A92C03 /* AGGeometryKitTests */,
+				1A818C9D1B5C0E6100FD4FAC /* AGGeometryKitiOS */,
+				1A818CAB1B5C0E6100FD4FAC /* AGGeometryKitiOSTests */,
 				A333A59316A9A3BD00E334AD /* Frameworks */,
 				A333A59116A9A3BD00E334AD /* Products */,
 				A3BC981917D8A88B009B7495 /* AGGeometryKit.podspec */,
@@ -346,6 +469,8 @@
 			children = (
 				A333A59016A9A3BD00E334AD /* AGGeometryKit.app */,
 				A333A5BD16A9A3BD00E334AD /* AGGeometryKitTests.xctest */,
+				1A818C9C1B5C0E6100FD4FAC /* AGGeometryKitiOS.framework */,
+				1A818CA51B5C0E6100FD4FAC /* AGGeometryKitiOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -482,7 +607,84 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		1A818C991B5C0E6100FD4FAC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A818C9F1B5C0E6100FD4FAC /* AGGeometryKitiOS.h in Headers */,
+				1A818CBA1B5C0E9300FD4FAC /* AGGeometryKit.h in Headers */,
+				1A818CE51B5C0E9300FD4FAC /* UIImage+AGKQuad.h in Headers */,
+				1A818CFB1B5C0E9300FD4FAC /* CGImageRef+AGK+CATransform3D.h in Headers */,
+				1A818CE11B5C0E9300FD4FAC /* UIBezierPath+AGKQuad.h in Headers */,
+				1A818CF21B5C0E9300FD4FAC /* AGKMatrix.h in Headers */,
+				1A818CDB1B5C0E9300FD4FAC /* CALayer+AGKQuad.h in Headers */,
+				1A818CF51B5C0E9300FD4FAC /* AGKTransformPixelMapper.h in Headers */,
+				1A818CEA1B5C0E9300FD4FAC /* UIView+AGK+Properties.h in Headers */,
+				1A818CF81B5C0E9300FD4FAC /* CGGeometry+AGGeometryKit.h in Headers */,
+				1A818CD81B5C0E9300FD4FAC /* CALayer+AGK+Properties.h in Headers */,
+				1A818CD61B5C0E9300FD4FAC /* CALayer+AGK+Methods.h in Headers */,
+				1A818CD11B5C0E9300FD4FAC /* AGKMatrix+CATransform3D.h in Headers */,
+				1A818CBC1B5C0E9300FD4FAC /* AGKBitOperations.h in Headers */,
+				1A818CBB1B5C0E9300FD4FAC /* AGGeometryKit-Prefix.pch in Headers */,
+				1A818CC41B5C0E9300FD4FAC /* AGKMath.h in Headers */,
+				1A818CF01B5C0E9300FD4FAC /* AGKCALayerAnimationBlockDelegate.h in Headers */,
+				1A818CED1B5C0E9300FD4FAC /* UIScrollView+AGK+Properties.h in Headers */,
+				1A818CC71B5C0E9300FD4FAC /* AGKQuad.h in Headers */,
+				1A818CCA1B5C0E9300FD4FAC /* AGKVector3D.h in Headers */,
+				1A818CE71B5C0E9300FD4FAC /* UIView+AGK+AngleConverter.h in Headers */,
+				1A818CDE1B5C0E9300FD4FAC /* NSValue+AGKQuad.h in Headers */,
+				1A818CCE1B5C0E9300FD4FAC /* AGKMatrix+AGKVector3D.h in Headers */,
+				1A818CE31B5C0E9300FD4FAC /* UIImage+AGK+CATransform3D.h in Headers */,
+				1A818CD41B5C0E9300FD4FAC /* AGKMatrix+GLKit.h in Headers */,
+				1A818CCD1B5C0E9300FD4FAC /* AGGeometryKitCategories.h in Headers */,
+				1A818CC11B5C0E9300FD4FAC /* AGKLine.h in Headers */,
+				1A818CEF1B5C0E9300FD4FAC /* AGGeometryKitClasses.h in Headers */,
+				1A818CBE1B5C0E9300FD4FAC /* AGKCorner.h in Headers */,
+				1A818CF71B5C0E9300FD4FAC /* AGGeometryKitCoreGraphics.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		1A818C9B1B5C0E6100FD4FAC /* AGGeometryKitiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A818CB71B5C0E6100FD4FAC /* Build configuration list for PBXNativeTarget "AGGeometryKitiOS" */;
+			buildPhases = (
+				1A818C971B5C0E6100FD4FAC /* Sources */,
+				1A818C981B5C0E6100FD4FAC /* Frameworks */,
+				1A818C991B5C0E6100FD4FAC /* Headers */,
+				1A818C9A1B5C0E6100FD4FAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AGGeometryKitiOS;
+			productName = AGGeometryKitiOS;
+			productReference = 1A818C9C1B5C0E6100FD4FAC /* AGGeometryKitiOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1A818CA41B5C0E6100FD4FAC /* AGGeometryKitiOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A818CB91B5C0E6100FD4FAC /* Build configuration list for PBXNativeTarget "AGGeometryKitiOSTests" */;
+			buildPhases = (
+				1A818CA11B5C0E6100FD4FAC /* Sources */,
+				1A818CA21B5C0E6100FD4FAC /* Frameworks */,
+				1A818CA31B5C0E6100FD4FAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A818CA81B5C0E6100FD4FAC /* PBXTargetDependency */,
+				1A818CAA1B5C0E6100FD4FAC /* PBXTargetDependency */,
+			);
+			name = AGGeometryKitiOSTests;
+			productName = AGGeometryKitiOSTests;
+			productReference = 1A818CA51B5C0E6100FD4FAC /* AGGeometryKitiOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A333A58F16A9A3BD00E334AD /* AGGeometryKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A333A5CF16A9A3BD00E334AD /* Build configuration list for PBXNativeTarget "AGGeometryKit" */;
@@ -492,6 +694,7 @@
 				A333A58D16A9A3BD00E334AD /* Frameworks */,
 				A333A58E16A9A3BD00E334AD /* Resources */,
 				343B2F241FF341E59AFF1532 /* Copy Pods Resources */,
+				1A818CB81B5C0E6100FD4FAC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -531,6 +734,15 @@
 				LastTestingUpgradeCheck = 0510;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "H√•vard Fossli";
+				TargetAttributes = {
+					1A818C9B1B5C0E6100FD4FAC = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					1A818CA41B5C0E6100FD4FAC = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = A333A58F16A9A3BD00E334AD;
+					};
+				};
 			};
 			buildConfigurationList = A333A58A16A9A3BD00E334AD /* Build configuration list for PBXProject "AGGeometryKit" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -546,11 +758,27 @@
 			targets = (
 				A333A58F16A9A3BD00E334AD /* AGGeometryKit */,
 				A333A5BC16A9A3BD00E334AD /* AGGeometryKitTests */,
+				1A818C9B1B5C0E6100FD4FAC /* AGGeometryKitiOS */,
+				1A818CA41B5C0E6100FD4FAC /* AGGeometryKitiOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1A818C9A1B5C0E6100FD4FAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A818CA31B5C0E6100FD4FAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A333A58E16A9A3BD00E334AD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -653,6 +881,44 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1A818C971B5C0E6100FD4FAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A818CD21B5C0E9300FD4FAC /* AGKMatrix+CATransform3D.m in Sources */,
+				1A818CFC1B5C0E9300FD4FAC /* CGImageRef+AGK+CATransform3D.m in Sources */,
+				1A818CBF1B5C0E9300FD4FAC /* AGKCorner.m in Sources */,
+				1A818CCB1B5C0E9300FD4FAC /* AGKVector3D.m in Sources */,
+				1A818CC51B5C0E9300FD4FAC /* AGKMath.m in Sources */,
+				1A818CC81B5C0E9300FD4FAC /* AGKQuad.m in Sources */,
+				1A818CD91B5C0E9300FD4FAC /* CALayer+AGK+Properties.m in Sources */,
+				1A818CEB1B5C0E9300FD4FAC /* UIView+AGK+Properties.m in Sources */,
+				1A818CDC1B5C0E9300FD4FAC /* CALayer+AGKQuad.m in Sources */,
+				1A818CF91B5C0E9300FD4FAC /* CGGeometry+AGGeometryKit.m in Sources */,
+				1A818CE41B5C0E9300FD4FAC /* UIImage+AGK+CATransform3D.m in Sources */,
+				1A818CE81B5C0E9300FD4FAC /* UIView+AGK+AngleConverter.m in Sources */,
+				1A818CD51B5C0E9300FD4FAC /* AGKMatrix+GLKit.m in Sources */,
+				1A818CF31B5C0E9300FD4FAC /* AGKMatrix.m in Sources */,
+				1A818CEE1B5C0E9300FD4FAC /* UIScrollView+AGK+Properties.m in Sources */,
+				1A818CF11B5C0E9300FD4FAC /* AGKCALayerAnimationBlockDelegate.m in Sources */,
+				1A818CF61B5C0E9300FD4FAC /* AGKTransformPixelMapper.m in Sources */,
+				1A818CE21B5C0E9300FD4FAC /* UIBezierPath+AGKQuad.m in Sources */,
+				1A818CC21B5C0E9300FD4FAC /* AGKLine.m in Sources */,
+				1A818CD71B5C0E9300FD4FAC /* CALayer+AGK+Methods.m in Sources */,
+				1A818CDF1B5C0E9300FD4FAC /* NSValue+AGKQuad.m in Sources */,
+				1A818CCF1B5C0E9300FD4FAC /* AGKMatrix+AGKVector3D.m in Sources */,
+				1A818CE61B5C0E9300FD4FAC /* UIImage+AGKQuad.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A818CA11B5C0E6100FD4FAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A818CAD1B5C0E6100FD4FAC /* AGGeometryKitiOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A333A58C16A9A3BD00E334AD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -724,6 +990,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1A818CA81B5C0E6100FD4FAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A818C9B1B5C0E6100FD4FAC /* AGGeometryKitiOS */;
+			targetProxy = 1A818CA71B5C0E6100FD4FAC /* PBXContainerItemProxy */;
+		};
+		1A818CAA1B5C0E6100FD4FAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A333A58F16A9A3BD00E334AD /* AGGeometryKit */;
+			targetProxy = 1A818CA91B5C0E6100FD4FAC /* PBXContainerItemProxy */;
+		};
 		A333A5C316A9A3BD00E334AD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A333A58F16A9A3BD00E334AD /* AGGeometryKit */;
@@ -751,6 +1027,146 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1A818CB31B5C0E6100FD4FAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = AGGeometryKitiOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamztang.AGGeometryKitiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1A818CB41B5C0E6100FD4FAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = AGGeometryKitiOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamztang.AGGeometryKitiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1A818CB51B5C0E6100FD4FAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = AGGeometryKitiOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamztang.AGGeometryKitiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AGGeometryKit.app/AGGeometryKit";
+			};
+			name = Debug;
+		};
+		1A818CB61B5C0E6100FD4FAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = AGGeometryKitiOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamztang.AGGeometryKitiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AGGeometryKit.app/AGGeometryKit";
+			};
+			name = Release;
+		};
 		A333A5CD16A9A3BD00E334AD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -817,6 +1233,7 @@
 				GCC_PREFIX_HEADER = "../Source/AGGeometryKit-Prefix.pch";
 				INFOPLIST_FILE = "AGGeometryKit/AGGeometryKit-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = AGGeometryKit;
 				WRAPPER_EXTENSION = app;
 			};
@@ -836,6 +1253,7 @@
 				GCC_PREFIX_HEADER = "../Source/AGGeometryKit-Prefix.pch";
 				INFOPLIST_FILE = "AGGeometryKit/AGGeometryKit-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = AGGeometryKit;
 				WRAPPER_EXTENSION = app;
 			};
@@ -878,6 +1296,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1A818CB71B5C0E6100FD4FAC /* Build configuration list for PBXNativeTarget "AGGeometryKitiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A818CB31B5C0E6100FD4FAC /* Debug */,
+				1A818CB41B5C0E6100FD4FAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1A818CB91B5C0E6100FD4FAC /* Build configuration list for PBXNativeTarget "AGGeometryKitiOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A818CB51B5C0E6100FD4FAC /* Debug */,
+				1A818CB61B5C0E6100FD4FAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		A333A58A16A9A3BD00E334AD /* Build configuration list for PBXProject "AGGeometryKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
