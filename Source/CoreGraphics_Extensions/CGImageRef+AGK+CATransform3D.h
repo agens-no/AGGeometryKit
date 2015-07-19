@@ -22,6 +22,7 @@
 // THE SOFTWARE.
 
 #import <CoreGraphics/CoreGraphics.h>
+#import <QuartzCore/QuartzCore.h>
 
 CGImageRef CGImageDrawWithCATransform3D_AGK(CGImageRef imageRef,
                                             CATransform3D transform,

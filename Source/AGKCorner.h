@@ -22,6 +22,7 @@
 // THE SOFTWARE.
 
 #import <CoreGraphics/CoreGraphics.h>
+#import <Foundation/Foundation.h>
 
 typedef enum AGKSide {
     AGKSideTop = 1 << 0,

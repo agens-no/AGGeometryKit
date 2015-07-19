@@ -22,6 +22,7 @@
 // THE SOFTWARE.
 
 #import <CoreGraphics/CoreGraphics.h>
+#import <Foundation/Foundation.h>
 
 typedef union AGKLine {
     struct { CGPoint start, end; };

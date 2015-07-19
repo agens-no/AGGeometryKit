@@ -23,6 +23,7 @@
 // THE SOFTWARE.
 
 #import "AGKMatrix.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface AGKMatrix (CATransform3D)
 
