@@ -32,15 +32,7 @@
       }
     },
     {
-      "name": "Dependencies",
-      "dependencies": {
-        "JRSwizzle": [
-          "~> 1.0"
-        ],
-        "AGAssert": [
-          "~> 2.0"
-        ]
-      }
+      "name": "Dependencies"
     },
     {
       "name": "Core",
