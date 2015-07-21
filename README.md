@@ -10,12 +10,17 @@ Quadrilaterals on CALayer (control each corner point individually), CGGeometry-f
 pod 'AGGeometryKit'
 ```
 
-If you want to use this in Swift remember to add this to your `<Target>-Bridging-Header.h`
+##### Import in swift
+
+```
+import AGGeometryKit
+```
+
+##### Import in Objective-C
 
 ```
 #import <AGGeometryKit/AGGeometryKit.h>
 ```
-
 
 ## Demo
 

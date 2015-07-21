@@ -1,4 +1,8 @@
-platform :ios, '5.0'
-#use_frameworks!
+use_frameworks!
 
 pod 'AGGeometryKit', :path => '../AGGeometryKit.podspec'
+
+
+target :AGGeometryKitDemoTests do
+  pod 'Expecta', :inhibit_warnings => true
+end

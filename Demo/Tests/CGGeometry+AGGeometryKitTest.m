@@ -29,6 +29,11 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
+#define EXP_SHORTHAND
+#import "Expecta.h"
+
+static double E = 0.001;
+
 @interface AGGeometryTest : XCTestCase
 
 @end
@@ -80,7 +85,6 @@
 
 - (void)testInterpolate
 {
-
     {
         CGRect rect1 = CGRectMake(10, 50, 150, 100);
         CGRect rect2 = CGRectMake(70, 60, 200, 40);
@@ -89,12 +93,31 @@
         CGRect rectp05 = CGRectInterpolate_AGK(rect1, rect2, 0.5f);
         CGRect rectp07 = CGRectInterpolate_AGK(rect1, rect2, 0.7f);
         CGRect rectp1 = CGRectInterpolate_AGK(rect1, rect2, 1.0f);
-
-        XCTAssertEqualObjects([NSValue valueWithCGRect:rectp00], [NSValue valueWithCGRect:CGRectMake(10.0f, 50.0f, 150.0f, 100.0f)]);
-        XCTAssertEqualObjects([NSValue valueWithCGRect:rectp03], [NSValue valueWithCGRect:CGRectMake(28.0f, 53.0f, 165.0f, 82.0f)]);
-        XCTAssertEqualObjects([NSValue valueWithCGRect:rectp05], [NSValue valueWithCGRect:CGRectMake(40.0f, 55.0f, 175.0f, 70.0f)]);
-        XCTAssertEqualObjects([NSValue valueWithCGRect:rectp07], [NSValue valueWithCGRect:CGRectMake(52.0f, 57.0f, 185.0f, 58.0f)]);
-        XCTAssertEqualObjects([NSValue valueWithCGRect:rectp1], [NSValue valueWithCGRect:CGRectMake(70.0f, 60.0f, 200.0f, 40.0f)]);
+        
+        expect(rectp00.origin.x).to.beCloseToWithin(10, E);
+        expect(rectp00.origin.y).to.beCloseToWithin(50, E);
+        expect(rectp00.size.width).to.beCloseToWithin(150, E);
+        expect(rectp00.size.height).to.beCloseToWithin(100, E);
+        
+        expect(rectp03.origin.x).to.beCloseToWithin(28, E);
+        expect(rectp03.origin.y).to.beCloseToWithin(53, E);
+        expect(rectp03.size.width).to.beCloseToWithin(165, E);
+        expect(rectp03.size.height).to.beCloseToWithin(82, E);
+        
+        expect(rectp05.origin.x).to.beCloseToWithin(40, E);
+        expect(rectp05.origin.y).to.beCloseToWithin(55, E);
+        expect(rectp05.size.width).to.beCloseToWithin(175, E);
+        expect(rectp05.size.height).to.beCloseToWithin(70, E);
+        
+        expect(rectp07.origin.x).to.beCloseToWithin(52, E);
+        expect(rectp07.origin.y).to.beCloseToWithin(57, E);
+        expect(rectp07.size.width).to.beCloseToWithin(185, E);
+        expect(rectp07.size.height).to.beCloseToWithin(58, E);
+        
+        expect(rectp1.origin.x).to.beCloseToWithin(70, E);
+        expect(rectp1.origin.y).to.beCloseToWithin(60, E);
+        expect(rectp1.size.width).to.beCloseToWithin(200, E);
+        expect(rectp1.size.height).to.beCloseToWithin(40, E);
     }
     
     {
@@ -103,10 +126,21 @@
         CGRect rectp00 = CGRectInterpolate_AGK(rect1, rect2, 0.0);
         CGRect rectp03 = CGRectInterpolate_AGK(rect1, rect2, 0.3);
         CGRect rectp1 = CGRectInterpolate_AGK(rect1, rect2, 1.0);
-
-        XCTAssertEqualObjects([NSValue valueWithCGRect:rectp00], [NSValue valueWithCGRect:CGRectMake(10.0f, 50.0f, 150.0f, 100.0f)]);
-        XCTAssertEqualObjects([NSValue valueWithCGRect:rectp03], [NSValue valueWithCGRect:CGRectMake(1.0f, 53.0f, 165.0f, 82.0f)]);
-        XCTAssertEqualObjects([NSValue valueWithCGRect:rectp1], [NSValue valueWithCGRect:CGRectMake(-20.0f, 60.0f, 200.0f, 40.0f)]);
+        
+        expect(rectp00.origin.x).to.beCloseToWithin(10, E);
+        expect(rectp00.origin.y).to.beCloseToWithin(50, E);
+        expect(rectp00.size.width).to.beCloseToWithin(150, E);
+        expect(rectp00.size.height).to.beCloseToWithin(100, E);
+        
+        expect(rectp03.origin.x).to.beCloseToWithin(1, E);
+        expect(rectp03.origin.y).to.beCloseToWithin(53, E);
+        expect(rectp03.size.width).to.beCloseToWithin(165, E);
+        expect(rectp03.size.height).to.beCloseToWithin(82, E);
+        
+        expect(rectp1.origin.x).to.beCloseToWithin(-20, E);
+        expect(rectp1.origin.y).to.beCloseToWithin(60, E);
+        expect(rectp1.size.width).to.beCloseToWithin(200, E);
+        expect(rectp1.size.height).to.beCloseToWithin(40, E);
     }
 
 }
