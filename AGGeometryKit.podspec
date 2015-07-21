@@ -17,27 +17,17 @@ Pod::Spec.new do |s|
         :tag => s.version.to_s
         }
 
-    s.default_subspec = 'Default'
+    s.frameworks    = 'CoreGraphics', 'UIKit', 'QuartzCore'
+    s.source_files  = 'Source/**/*.{h,m}'
+    s.exclude_files = 'Source/**/*Test.{h,m}'
 
-    s.subspec 'Default' do |ss|
-        ss.dependency      'AGGeometryKit/Core'
-        ss.dependency      'AGGeometryKit/Dependencies'
-    end
-
-    s.subspec 'Dependencies' do |ss|
-    end
-
-    s.subspec 'Core' do |ss|
-        ss.frameworks    = 'SystemConfiguration', 'CoreGraphics', 'UIKit', 'QuartzCore'
-        ss.source_files  = 'Source/**/*.{h,m}'
-        ss.exclude_files = 'Source/**/*Test.{h,m}'
-    end
-
+    # Some users of this library prefers to only use this subspec
     s.subspec 'UIViewProperties' do |ss|
         ss.frameworks    = 'CoreGraphics', 'UIKit', 'QuartzCore'
         ss.source_files  = 'Source/**/UIView+AGK+Properties.{h,m}'
     end
 
+    # Some users of this library prefers to only use this subspec
     s.subspec 'CALayerProperties' do |ss|
         ss.frameworks    = 'CoreGraphics', 'QuartzCore'
         ss.source_files  = 'Source/**/CALayer+AGK+Properties.{h,m}'

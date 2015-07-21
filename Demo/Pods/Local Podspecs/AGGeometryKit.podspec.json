@@ -18,33 +18,14 @@
     "git": "https://github.com/hfossli/AGGeometryKit.git",
     "tag": "1.1.2"
   },
-  "default_subspecs": "Default",
+  "frameworks": [
+    "CoreGraphics",
+    "UIKit",
+    "QuartzCore"
+  ],
+  "source_files": "Source/**/*.{h,m}",
+  "exclude_files": "Source/**/*Test.{h,m}",
   "subspecs": [
-    {
-      "name": "Default",
-      "dependencies": {
-        "AGGeometryKit/Core": [
-
-        ],
-        "AGGeometryKit/Dependencies": [
-
-        ]
-      }
-    },
-    {
-      "name": "Dependencies"
-    },
-    {
-      "name": "Core",
-      "frameworks": [
-        "SystemConfiguration",
-        "CoreGraphics",
-        "UIKit",
-        "QuartzCore"
-      ],
-      "source_files": "Source/**/*.{h,m}",
-      "exclude_files": "Source/**/*Test.{h,m}"
-    },
     {
       "name": "UIViewProperties",
       "frameworks": [

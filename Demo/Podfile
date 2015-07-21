@@ -1,1 +1,4 @@
-pod 'AGGeometryKit/Dependencies', :path => '../AGGeometryKit.podspec'
+platform :ios, '5.0'
+use_frameworks!
+
+pod 'AGGeometryKit', :path => '../AGGeometryKit.podspec'

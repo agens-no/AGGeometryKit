@@ -1,14 +1,18 @@
 PODS:
-  - AGGeometryKit/Dependencies (1.1.2)
+  - AGGeometryKit (1.1.2):
+    - AGGeometryKit/CALayerProperties (= 1.1.2)
+    - AGGeometryKit/UIViewProperties (= 1.1.2)
+  - AGGeometryKit/CALayerProperties (1.1.2)
+  - AGGeometryKit/UIViewProperties (1.1.2)
 
 DEPENDENCIES:
-  - AGGeometryKit/Dependencies (from `../AGGeometryKit.podspec`)
+  - AGGeometryKit (from `../AGGeometryKit.podspec`)
 
 EXTERNAL SOURCES:
   AGGeometryKit:
     :path: ../AGGeometryKit.podspec
 
 SPEC CHECKSUMS:
-  AGGeometryKit: 08e05c49d5fa7c6869fd54f4595f89851e968ff1
+  AGGeometryKit: 343291979afcccc3199ab0612ed4e82b1ee7a81e
 
 COCOAPODS: 0.37.2

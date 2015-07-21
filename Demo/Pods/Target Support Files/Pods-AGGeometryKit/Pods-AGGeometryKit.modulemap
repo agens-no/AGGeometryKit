@@ -1,0 +1,6 @@
+framework module AGGeometryKit {
+  umbrella header "Pods-AGGeometryKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
