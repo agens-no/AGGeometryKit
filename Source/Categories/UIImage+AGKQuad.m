@@ -175,11 +175,14 @@
     
     for (NSInteger i = 0; i < 4; i++)
     {
-		[firstMatrix setObject:@(sourceQuad.v[i].x) atColumnIndex:0 rowIndex:i];
-		[firstMatrix setObject:@(sourceQuad.v[i].y) atColumnIndex:1 rowIndex:i];
+        CGPoint source = AGKQuadGet(sourceQuad, (int)i);
+        CGPoint destination = AGKQuadGet(destinationQuad, (int)i);
+        
+		[firstMatrix setObject:@(source.x) atColumnIndex:0 rowIndex:i];
+		[firstMatrix setObject:@(source.y) atColumnIndex:1 rowIndex:i];
 		[firstMatrix setObject:@1.0 atColumnIndex:2 rowIndex:i];
-		[firstMatrix setObject:@(sourceQuad.v[i].x) atColumnIndex:3 rowIndex:i + 4];
-		[firstMatrix setObject:@(sourceQuad.v[i].y) atColumnIndex:4 rowIndex:i + 4];
+		[firstMatrix setObject:@(source.x) atColumnIndex:3 rowIndex:i + 4];
+		[firstMatrix setObject:@(source.y) atColumnIndex:4 rowIndex:i + 4];
 		[firstMatrix setObject:@1.0 atColumnIndex:5 rowIndex:i + 4];
 		
 		[firstMatrix setObject:@0.0 atColumnIndex:3 rowIndex:i];
@@ -189,13 +192,13 @@
 		[firstMatrix setObject:@0.0 atColumnIndex:1 rowIndex:i + 4];
 		[firstMatrix setObject:@0.0 atColumnIndex:2 rowIndex:i + 4];
 		
-		[firstMatrix setObject:@(-sourceQuad.v[i].x * destinationQuad.v[i].x) atColumnIndex:6 rowIndex:i];
-		[firstMatrix setObject:@(-sourceQuad.v[i].y * destinationQuad.v[i].x) atColumnIndex:7 rowIndex:i];
-		[firstMatrix setObject:@(-sourceQuad.v[i].x * destinationQuad.v[i].y) atColumnIndex:6 rowIndex:i + 4];
-		[firstMatrix setObject:@(-sourceQuad.v[i].y * destinationQuad.v[i].y) atColumnIndex:7 rowIndex:i + 4];
+		[firstMatrix setObject:@(-source.x * destination.x) atColumnIndex:6 rowIndex:i];
+		[firstMatrix setObject:@(-source.y * destination.x) atColumnIndex:7 rowIndex:i];
+		[firstMatrix setObject:@(-source.x * destination.y) atColumnIndex:6 rowIndex:i + 4];
+		[firstMatrix setObject:@(-source.y * destination.y) atColumnIndex:7 rowIndex:i + 4];
 		
-		[secondMatrix setObject:@(destinationQuad.v[i].x) atColumnIndex:0 rowIndex:i];
-		[secondMatrix setObject:@(destinationQuad.v[i].y) atColumnIndex:0 rowIndex:i + 4];
+		[secondMatrix setObject:@(destination.x) atColumnIndex:0 rowIndex:i];
+		[secondMatrix setObject:@(destination.y) atColumnIndex:0 rowIndex:i + 4];
 	}
     
     // Solve for the two matrices

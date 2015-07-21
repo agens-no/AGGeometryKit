@@ -51,7 +51,7 @@ BOOL AGKQuadEqual(AGKQuad q1, AGKQuad q2)
 {
     for(int i = 0; i < 4; i++)
     {
-        if(!CGPointEqualToPoint(q1.v[i], q2.v[i]))
+        if(!CGPointEqualToPoint(AGKQuadGet(q1, i), AGKQuadGet(q2, i)))
         {
             return NO;
         }
@@ -63,8 +63,10 @@ BOOL AGKQuadEqualWithAccuracy(AGKQuad q1, AGKQuad q2, CGFloat accuracy)
 {
     for(int i = 0; i < 4; i++)
     {
-        CGFloat xDiff = fabs(q1.v[i].x - q2.v[i].x);
-        CGFloat yDiff = fabs(q1.v[i].y - q2.v[i].y);
+        CGPoint p1 = AGKQuadGet(q1, i);
+        CGPoint p2 = AGKQuadGet(q2, i);
+        CGFloat xDiff = fabs(p1.x - p2.x);
+        CGFloat yDiff = fabs(p1.y - p2.y);
         if(xDiff > accuracy || yDiff > accuracy)
         {
             return NO;
@@ -83,7 +85,8 @@ BOOL AGKQuadContainsValidValues(AGKQuad q)
 {
     for(int i = 0; i < 4; i++)
     {
-        if(isnan(q.v[i].x) || isnan(q.v[i].y) || isinf(q.v[i].x) || isinf(q.v[i].y))
+        CGPoint p = AGKQuadGet(q, i);
+        if(isnan(p.x) || isnan(p.y) || isinf(p.x) || isinf(p.y))
         {
             return NO;
         }
@@ -203,6 +206,16 @@ AGKQuad AGKQuadMakeWithCGSize(CGSize size)
     return q;
 }
 
+AGKQuad AGKQuadMakeWithPoints(CGPoint *values)
+{
+    AGKQuad q;
+    q.tl = values[0];
+    q.tr = values[1];
+    q.br = values[2];
+    q.bl = values[3];
+    return q;
+}
+
 CGFloat AGKQuadGetSmallestX(AGKQuad q)
 {
     CGFloat values[4];
@@ -268,14 +281,39 @@ CGSize AGKQuadGetSize(AGKQuad q)
 CGPoint AGKQuadGetPointForCorner(AGKQuad q, AGKCorner corner)
 {
     int index = AGKQuadCornerIndexForCorner(corner);
-    return q.v[index];
+    return AGKQuadGet(q, index);
+}
+
+CGPoint AGKQuadGet(AGKQuad q, int index)
+{
+    switch (index) {
+        case 0:
+            return q.tl;
+        case 1:
+            return q.tr;
+        case 2:
+            return q.br;
+        case 3:
+            return q.bl;
+        default:
+            [NSException raise:NSInternalInconsistencyException format:@"Index beyond scope"];
+            return CGPointZero;
+    }
+}
+
+void AGKQuadGetValues(AGKQuad q, CGPoint *out_values)
+{
+    out_values[0] = q.tl;
+    out_values[1] = q.tr;
+    out_values[2] = q.br;
+    out_values[3] = q.bl;
 }
 
 void AGKQuadGetXValues(AGKQuad q, CGFloat *out_values)
 {
     for(int i = 0; i < 4; i++)
     {
-        CGPoint p = q.v[i];
+        CGPoint p = AGKQuadGet(q, i);
         out_values[i] = p.x;
     }
 }
@@ -284,19 +322,19 @@ void AGKQuadGetYValues(AGKQuad q, CGFloat *out_values)
 {
     for(int i = 0; i < 4; i++)
     {
-        CGPoint p = q.v[i];
+        CGPoint p = AGKQuadGet(q, i);
         out_values[i] = p.y;
     }
 }
 
 AGKQuad AGKQuadInterpolate(AGKQuad q1, AGKQuad q2, CGFloat progress)
 {
-    AGKQuad q;
+    CGPoint points[4];
     for(int i = 0; i < 4; i++)
     {
-        q.v[i] = CGPointInterpolate_AGK(q1.v[i], q2.v[i], progress);
+        points[i] = CGPointInterpolate_AGK(AGKQuadGet(q1, i), AGKQuadGet(q2, i), progress);
     }
-    return q;
+    return AGKQuadMakeWithPoints(points);
 }
 
 AGKQuad AGKQuadRotate(AGKQuad q, CGFloat radians)
@@ -307,29 +345,32 @@ AGKQuad AGKQuadRotate(AGKQuad q, CGFloat radians)
 
 AGKQuad AGKQuadRotateAroundPoint(AGKQuad q, CGPoint point, CGFloat radians)
 {
+    CGPoint points[4];
     for(int i = 0; i < 4; i++)
     {
-        q.v[i] = CGPointRotateAroundOrigin_AGK(q.v[i], radians, point);
+        points[i] = CGPointRotateAroundOrigin_AGK(AGKQuadGet(q, i), radians, point);
     }
-    return q;
+    return AGKQuadMakeWithPoints(points);
 }
 
 AGKQuad AGKQuadApplyCGAffineTransform(AGKQuad q, CGAffineTransform t)
 {
+    CGPoint points[4];
     for(int i = 0; i < 4; i++)
     {
-        q.v[i] = CGPointApplyAffineTransform(q.v[i], t);
+        points[i] = CGPointApplyAffineTransform(AGKQuadGet(q, i), t);
     }
-    return q;
+    return AGKQuadMakeWithPoints(points);
 }
 
 AGKQuad AGKQuadApplyCATransform3D(AGKQuad q, CATransform3D t)
 {
+    CGPoint points[4];
     for(int i = 0; i < 4; i++)
     {
-        q.v[i] = CGPointApplyCATransform3D_AGK(q.v[i], t, CGPointZero, CATransform3DIdentity);
+        points[i] = CGPointApplyCATransform3D_AGK(AGKQuadGet(q, i), t, CGPointZero, CATransform3DIdentity);
     }
-    return q;
+    return AGKQuadMakeWithPoints(points);
 }
 
 NSString * NSStringFromAGKQuad(AGKQuad q)

@@ -35,9 +35,8 @@
  bl = bottom left
  */
 
-typedef union AGKQuad {
-    struct { CGPoint tl, tr, br, bl; };
-    CGPoint v[4];
+typedef struct AGKQuad {
+    CGPoint tl, tr, br, bl;
 } AGKQuad;
 
 extern const AGKQuad AGKQuadZero;
@@ -57,6 +56,7 @@ AGKQuad AGKQuadMirror(AGKQuad q, BOOL x, BOOL y);
 AGKQuad AGKQuadMake(CGPoint tl, CGPoint tr, CGPoint br, CGPoint bl);
 AGKQuad AGKQuadMakeWithCGRect(CGRect rect);
 AGKQuad AGKQuadMakeWithCGSize(CGSize size);
+AGKQuad AGKQuadMakeWithPoints(CGPoint *values);
 CGFloat AGKQuadGetSmallestX(AGKQuad q);
 CGFloat AGKQuadGetBiggestX(AGKQuad q);
 CGFloat AGKQuadGetSmallestY(AGKQuad q);
@@ -65,6 +65,8 @@ CGRect AGKQuadGetBoundingRect(AGKQuad q);
 CGPoint AGKQuadGetCenter(AGKQuad q);
 CGSize AGKQuadGetSize(AGKQuad q);
 CGPoint AGKQuadGetPointForCorner(AGKQuad q, AGKCorner corner);
+CGPoint AGKQuadGet(AGKQuad q, int index);
+void AGKQuadGetValues(AGKQuad q, CGPoint *out_values);
 void AGKQuadGetXValues(AGKQuad q, CGFloat *out_values);
 void AGKQuadGetYValues(AGKQuad q, CGFloat *out_values);
 AGKQuad AGKQuadInterpolate(AGKQuad q1, AGKQuad q2, CGFloat progress);

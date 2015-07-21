@@ -30,7 +30,7 @@
     CGFloat values[8];
     for(int i = 0; i < 4; i++)
     {
-        CGPoint p = q.v[i];
+        CGPoint p = AGKQuadGet(q, i);
         values[(i*2)] = p.x;
         values[(i*2)+1] = p.y;
     }
@@ -40,15 +40,15 @@
 
 - (AGKQuad)AGKQuadValue
 {
-    AGKQuad q = AGKQuadZero;
+    CGPoint points[4];
     CGFloat values[8];
     [self getValue:values];
     for(int i = 0; i < 4; i++)
     {
         CGPoint p = CGPointMake(values[(i*2)], values[(i*2)+1]);
-        q.v[i] = p;
+        points[i] = p;
     }
-    return q;
+    return AGKQuadMakeWithPoints(points);
 }
 
 @end

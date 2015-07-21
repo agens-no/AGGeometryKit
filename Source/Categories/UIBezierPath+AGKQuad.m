@@ -28,11 +28,11 @@
 + (UIBezierPath *)bezierPathWithAGKQuad:(AGKQuad)q
 {
     UIBezierPath *path = [UIBezierPath bezierPath];
-    [path moveToPoint:q.v[0]];
+    [path moveToPoint:AGKQuadGet(q, 0)];
     
     for (int i = 1; i < 4; i++)
     {
-        [path addLineToPoint:q.v[i]];
+        [path addLineToPoint:AGKQuadGet(q, i)];
     }
     
     [path closePath];

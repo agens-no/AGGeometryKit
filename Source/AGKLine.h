@@ -23,9 +23,8 @@
 
 #import <CoreGraphics/CoreGraphics.h>
 
-typedef union AGKLine {
-    struct { CGPoint start, end; };
-    double v[2];
+typedef struct AGKLine {
+    CGPoint start, end;
 } AGKLine;
 
 extern const AGKLine AGKLineZero;
