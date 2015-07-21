@@ -21,14 +21,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "AGKQuadControlsExample.h"
+#import "QuadControlsExample.h"
 #import "AGGeometryKit.h"
 
 @interface AGControlPointView : UIView
 
 @end
 
-@interface AGKQuadControlsExample () <UIGestureRecognizerDelegate>
+@interface QuadControlsExample () <UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) IBOutlet UIImageView *imageView;
 @property (nonatomic, strong) IBOutlet UIView *topLeftControl;
@@ -41,7 +41,7 @@
 @end
 
 
-@implementation AGKQuadControlsExample
+@implementation QuadControlsExample
 
 - (void)viewDidLoad
 {

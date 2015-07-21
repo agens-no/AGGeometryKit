@@ -23,11 +23,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "AGKCATransform3DWithUIImageExample.h"
+#import "CATransform3DWithUIImageExample.h"
 #import "AGGeometryKit.h"
 #import "JAValueToString.h"
 
-@interface AGKCATransform3DWithUIImageExample ()  <UIGestureRecognizerDelegate>
+@interface CATransform3DWithUIImageExample ()  <UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) IBOutlet UIView *topLeftControl;
 @property (nonatomic, strong) IBOutlet UIView *topRightControl;
@@ -42,7 +42,7 @@
 @end
 
 
-@implementation AGKCATransform3DWithUIImageExample
+@implementation CATransform3DWithUIImageExample
 
 - (void)viewDidLoad
 {

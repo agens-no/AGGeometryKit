@@ -1,7 +1,5 @@
 //
-// Authors:
-// Håvard Fossli <hfossli@agens.no>
-// Logan Holmes @snown
+// Author: Håvard Fossli <hfossli@agens.no>
 //
 // Copyright (c) 2013 Agens AS (http://agens.no/)
 //
@@ -26,6 +24,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface AGKCATransform3DWithUIImageExample : UIViewController
+@interface QuadControlsExample : UIViewController
 
 @end

@@ -3,3 +3,4 @@
 //
 
 #import <AGGeometryKit/AGGeometryKit.h>
+#import "easing.h"

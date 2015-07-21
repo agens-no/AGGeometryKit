@@ -25,11 +25,11 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </tabBar>
             <viewControllers>
-                <viewController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="10" customClass="AGKQuadControlsExample">
+                <viewController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="10" customClass="QuadControlsExample">
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="1" image="Box_Closed.png" id="11"/>
                 </viewController>
-                <viewController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="9" customClass="AGKQuadAnimationExample">
+                <viewController nibName="QuadAnimationExample" wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="9" customClass="QuadAnimationExample" customModule="AGGeometryKit" customModuleProvider="target">
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="2" image="Box_Closed.png" id="12"/>
                 </viewController>
@@ -37,7 +37,7 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="3" image="Box_Closed.png" id="17"/>
                 </viewController>
-                <viewController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="14" customClass="AGKCATransform3DWithUIImageExample">
+                <viewController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="14" customClass="CATransform3DWithUIImageExample">
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="4" image="Box_Closed.png" id="15"/>
                 </viewController>
