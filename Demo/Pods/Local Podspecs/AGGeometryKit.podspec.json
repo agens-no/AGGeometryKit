@@ -24,7 +24,6 @@
     "QuartzCore"
   ],
   "source_files": "Source/**/*.{h,m}",
-  "exclude_files": "Source/**/*Test.{h,m}",
   "subspecs": [
     {
       "name": "UIViewProperties",

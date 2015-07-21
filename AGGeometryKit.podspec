@@ -19,7 +19,6 @@ Pod::Spec.new do |s|
 
     s.frameworks    = 'CoreGraphics', 'UIKit', 'QuartzCore'
     s.source_files  = 'Source/**/*.{h,m}'
-    s.exclude_files = 'Source/**/*Test.{h,m}'
 
     # Some users of this library prefers to only use this subspec
     s.subspec 'UIViewProperties' do |ss|

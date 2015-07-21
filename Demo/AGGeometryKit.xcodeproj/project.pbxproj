@@ -11,10 +11,6 @@
 		A30B0C4B16CE932D00856E00 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A59816A9A3BD00E334AD /* CoreGraphics.framework */; };
 		A3270F3B16D5675800A92C03 /* AGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3270F2816D5675800A92C03 /* AGAppDelegate.m */; };
 		A3270F3C16D5675800A92C03 /* AGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3270F2816D5675800A92C03 /* AGAppDelegate.m */; };
-		A3270F3F16D5675800A92C03 /* AGKQuadAnimationExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3270F2C16D5675800A92C03 /* AGKQuadAnimationExample.m */; };
-		A3270F4016D5675800A92C03 /* AGKQuadAnimationExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3270F2C16D5675800A92C03 /* AGKQuadAnimationExample.m */; };
-		A3270F4116D5675800A92C03 /* AGKQuadAnimationExample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3270F2D16D5675800A92C03 /* AGKQuadAnimationExample.xib */; };
-		A3270F4216D5675800A92C03 /* AGKQuadAnimationExample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3270F2D16D5675800A92C03 /* AGKQuadAnimationExample.xib */; };
 		A3270F4316D5675800A92C03 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3270F2E16D5675800A92C03 /* Default-568h@2x.png */; };
 		A3270F4416D5675800A92C03 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3270F2E16D5675800A92C03 /* Default-568h@2x.png */; };
 		A3270F4516D5675800A92C03 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A3270F2F16D5675800A92C03 /* Default.png */; };
@@ -33,42 +29,53 @@
 		A333A5C016A9A3BD00E334AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A59416A9A3BD00E334AD /* UIKit.framework */; };
 		A333A5C116A9A3BD00E334AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A59616A9A3BD00E334AD /* Foundation.framework */; };
 		A333A60B16A9A6F000E334AD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333A60A16A9A6F000E334AD /* QuartzCore.framework */; };
-		A3418C0C1B5E3B7D00DF6809 /* AngleConverterExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3418C0B1B5E3B7D00DF6809 /* AngleConverterExample.swift */; };
-		A3418C0E1B5E3DA700DF6809 /* AngleConverterExample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3418C0D1B5E3DA700DF6809 /* AngleConverterExample.xib */; };
-		A3762F301728067A00E7A2AB /* AGKQuadControlsExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3762F2E1728067900E7A2AB /* AGKQuadControlsExample.m */; };
-		A3762F311728067A00E7A2AB /* AGKQuadControlsExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3762F2E1728067900E7A2AB /* AGKQuadControlsExample.m */; };
-		A3762F321728067A00E7A2AB /* AGKQuadControlsExample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3762F2F1728067A00E7A2AB /* AGKQuadControlsExample.xib */; };
-		A3762F331728067A00E7A2AB /* AGKQuadControlsExample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3762F2F1728067A00E7A2AB /* AGKQuadControlsExample.xib */; };
-		A3762F5417287EB400E7A2AB /* crop_sample.png in Resources */ = {isa = PBXBuildFile; fileRef = A3762F5117287EB400E7A2AB /* crop_sample.png */; };
-		A3762F5517287EB400E7A2AB /* crop_sample.png in Resources */ = {isa = PBXBuildFile; fileRef = A3762F5117287EB400E7A2AB /* crop_sample.png */; };
-		A3762F59172885FE00E7A2AB /* AGKCATransform3DWithUIImageExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3762F57172885FC00E7A2AB /* AGKCATransform3DWithUIImageExample.m */; };
-		A3762F5A172885FE00E7A2AB /* AGKCATransform3DWithUIImageExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3762F57172885FC00E7A2AB /* AGKCATransform3DWithUIImageExample.m */; };
-		A3762F5B172885FE00E7A2AB /* AGKCATransform3DWithUIImageExample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3762F58172885FD00E7A2AB /* AGKCATransform3DWithUIImageExample.xib */; };
-		A3762F5C172885FE00E7A2AB /* AGKCATransform3DWithUIImageExample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3762F58172885FD00E7A2AB /* AGKCATransform3DWithUIImageExample.xib */; };
+		A3418C221B5E50E300DF6809 /* AGKBitOperationsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3418C131B5E50E300DF6809 /* AGKBitOperationsTest.m */; };
+		A3418C231B5E50E300DF6809 /* AGKCornerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3418C141B5E50E300DF6809 /* AGKCornerTest.m */; };
+		A3418C241B5E50E300DF6809 /* AGKLineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3418C151B5E50E300DF6809 /* AGKLineTest.m */; };
+		A3418C251B5E50E300DF6809 /* AGKMathTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3418C161B5E50E300DF6809 /* AGKMathTest.m */; };
+		A3418C261B5E50E300DF6809 /* AGKMatrix+AGKVector3DTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3418C171B5E50E300DF6809 /* AGKMatrix+AGKVector3DTest.m */; };
+		A3418C271B5E50E300DF6809 /* AGKMatrix+CATransform3DTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3418C181B5E50E300DF6809 /* AGKMatrix+CATransform3DTest.m */; };
+		A3418C281B5E50E300DF6809 /* AGKMatrixTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3418C191B5E50E300DF6809 /* AGKMatrixTest.m */; };
+		A3418C291B5E50E300DF6809 /* AGKQuadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3418C1A1B5E50E300DF6809 /* AGKQuadTest.m */; };
+		A3418C2A1B5E50E300DF6809 /* AGKVector3DTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3418C1B1B5E50E300DF6809 /* AGKVector3DTest.m */; };
+		A3418C2B1B5E50E300DF6809 /* CALayer+AGK+PropertiesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3418C1C1B5E50E300DF6809 /* CALayer+AGK+PropertiesTest.m */; };
+		A3418C2C1B5E50E300DF6809 /* CALayer+AGKQuadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3418C1D1B5E50E300DF6809 /* CALayer+AGKQuadTest.m */; };
+		A3418C2D1B5E50E300DF6809 /* CGGeometry+AGGeometryKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3418C1E1B5E50E300DF6809 /* CGGeometry+AGGeometryKitTest.m */; };
+		A3418C2E1B5E50E300DF6809 /* NSValue+AGKQuadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3418C1F1B5E50E300DF6809 /* NSValue+AGKQuadTest.m */; };
+		A3418C2F1B5E50E300DF6809 /* UIView+AGK+AngleConverterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3418C201B5E50E300DF6809 /* UIView+AGK+AngleConverterTest.m */; };
+		A3418C301B5E50E300DF6809 /* UIView+AGK+PropertiesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3418C211B5E50E300DF6809 /* UIView+AGK+PropertiesTest.m */; };
+		A3418C3D1B5E540E00DF6809 /* AGKCATransform3DWithUIImageExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3418C331B5E540E00DF6809 /* AGKCATransform3DWithUIImageExample.m */; };
+		A3418C3E1B5E540E00DF6809 /* AGKCATransform3DWithUIImageExample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3418C341B5E540E00DF6809 /* AGKCATransform3DWithUIImageExample.xib */; };
+		A3418C3F1B5E540E00DF6809 /* AGKQuadAnimationExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3418C361B5E540E00DF6809 /* AGKQuadAnimationExample.m */; };
+		A3418C401B5E540E00DF6809 /* AGKQuadAnimationExample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3418C371B5E540E00DF6809 /* AGKQuadAnimationExample.xib */; };
+		A3418C411B5E540E00DF6809 /* AGKQuadControlsExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3418C391B5E540E00DF6809 /* AGKQuadControlsExample.m */; };
+		A3418C421B5E540E00DF6809 /* AGKQuadControlsExample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3418C3A1B5E540E00DF6809 /* AGKQuadControlsExample.xib */; };
+		A3418C431B5E540E00DF6809 /* AngleConverterExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3418C3B1B5E540E00DF6809 /* AngleConverterExample.swift */; };
+		A3418C441B5E540E00DF6809 /* AngleConverterExample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3418C3C1B5E540E00DF6809 /* AngleConverterExample.xib */; };
+		A3418C551B5E541C00DF6809 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = A3418C461B5E541C00DF6809 /* arrow.png */; };
+		A3418C561B5E541C00DF6809 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3418C471B5E541C00DF6809 /* arrow@2x.png */; };
+		A3418C571B5E541C00DF6809 /* art-gallery.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3418C481B5E541C00DF6809 /* art-gallery.jpg */; };
+		A3418C581B5E541C00DF6809 /* Box_Closed.png in Resources */ = {isa = PBXBuildFile; fileRef = A3418C491B5E541C00DF6809 /* Box_Closed.png */; };
+		A3418C591B5E541C00DF6809 /* Box_Closed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3418C4A1B5E541C00DF6809 /* Box_Closed@2x.png */; };
+		A3418C5A1B5E541C00DF6809 /* controlpoint.png in Resources */ = {isa = PBXBuildFile; fileRef = A3418C4B1B5E541C00DF6809 /* controlpoint.png */; };
+		A3418C5B1B5E541C00DF6809 /* controlpoint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3418C4C1B5E541C00DF6809 /* controlpoint@2x.png */; };
+		A3418C5C1B5E541C00DF6809 /* controlpoint_h.png in Resources */ = {isa = PBXBuildFile; fileRef = A3418C4D1B5E541C00DF6809 /* controlpoint_h.png */; };
+		A3418C5D1B5E541C00DF6809 /* controlpoint_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3418C4E1B5E541C00DF6809 /* controlpoint_h@2x.png */; };
+		A3418C5E1B5E541C00DF6809 /* crop_sample.png in Resources */ = {isa = PBXBuildFile; fileRef = A3418C4F1B5E541C00DF6809 /* crop_sample.png */; };
+		A3418C5F1B5E541C00DF6809 /* crop_sample@2x copy.png in Resources */ = {isa = PBXBuildFile; fileRef = A3418C501B5E541C00DF6809 /* crop_sample@2x copy.png */; };
+		A3418C601B5E541C00DF6809 /* sample_image6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3418C511B5E541C00DF6809 /* sample_image6.jpg */; };
+		A3418C611B5E541C00DF6809 /* sample_image6@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3418C521B5E541C00DF6809 /* sample_image6@2x.jpg */; };
+		A3418C621B5E541C00DF6809 /* sample_image7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3418C531B5E541C00DF6809 /* sample_image7.jpg */; };
+		A3418C631B5E541C00DF6809 /* sample_image7@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3418C541B5E541C00DF6809 /* sample_image7@2x.jpg */; };
 		A3762F671728914700E7A2AB /* AGGeometryKitApplication.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3762F661728914500E7A2AB /* AGGeometryKitApplication.xib */; };
 		A3762F681728914700E7A2AB /* AGGeometryKitApplication.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3762F661728914500E7A2AB /* AGGeometryKitApplication.xib */; };
 		A38C8386192383020057C225 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A38C8385192383020057C225 /* Images.xcassets */; };
-		A39DA67E172984E9005B84D3 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = A39DA67C172984E9005B84D3 /* arrow.png */; };
-		A39DA67F172984E9005B84D3 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = A39DA67C172984E9005B84D3 /* arrow.png */; };
-		A39DA680172984E9005B84D3 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A39DA67D172984E9005B84D3 /* arrow@2x.png */; };
-		A39DA681172984E9005B84D3 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A39DA67D172984E9005B84D3 /* arrow@2x.png */; };
-		A3A0F61819ACC0E3003E8894 /* art-gallery.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3A0F61719ACC0E3003E8894 /* art-gallery.jpg */; };
-		A3E67AF4192112B400A4CD4A /* Box_Closed.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E67AF2192112B400A4CD4A /* Box_Closed.png */; };
-		A3E67AF5192112B400A4CD4A /* Box_Closed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E67AF3192112B400A4CD4A /* Box_Closed@2x.png */; };
-		A3E67AF8192112F700A4CD4A /* sample_image6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3E67AF6192112F700A4CD4A /* sample_image6.jpg */; };
-		A3E67AF9192112F700A4CD4A /* sample_image6@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3E67AF7192112F700A4CD4A /* sample_image6@2x.jpg */; };
-		A3E67AFC19211B6900A4CD4A /* sample_image7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3E67AFA19211B6900A4CD4A /* sample_image7.jpg */; };
-		A3E67AFD19211B6900A4CD4A /* sample_image7@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3E67AFB19211B6900A4CD4A /* sample_image7@2x.jpg */; };
-		A3E67B02192214B500A4CD4A /* controlpoint_h.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E67AFE192214B500A4CD4A /* controlpoint_h.png */; };
-		A3E67B03192214B500A4CD4A /* controlpoint_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E67AFF192214B500A4CD4A /* controlpoint_h@2x.png */; };
-		A3E67B04192214B500A4CD4A /* controlpoint.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E67B00192214B500A4CD4A /* controlpoint.png */; };
-		A3E67B05192214B500A4CD4A /* controlpoint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E67B01192214B500A4CD4A /* controlpoint@2x.png */; };
 		A3EE526916EDEE83007706C6 /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = A3EE526716EDEE83007706C6 /* easing.c */; };
 		A3EE526A16EDEE83007706C6 /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = A3EE526716EDEE83007706C6 /* easing.c */; };
 		A3F2EFFA192243BC00B6F9E8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A3F2EFF9192243BC00B6F9E8 /* README.md */; };
 		A3F77D3F16FA54C400415B24 /* JAValueToString.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F77D3E16FA54C300415B24 /* JAValueToString.m */; };
 		A3F77D4016FA54C400415B24 /* JAValueToString.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F77D3E16FA54C300415B24 /* JAValueToString.m */; };
-		D5C28E313D7662784596A6E7 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F399D4CD3B8146F86692968F /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B51CACA2A1ACA650834494BE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0D6FB64DF65EA3CA8363485 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,9 +94,6 @@
 		A3270F2716D5675800A92C03 /* AGAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGAppDelegate.h; sourceTree = "<group>"; };
 		A3270F2816D5675800A92C03 /* AGAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGAppDelegate.m; sourceTree = "<group>"; };
 		A3270F2916D5675800A92C03 /* AGGeometryKit-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AGGeometryKit-Info.plist"; sourceTree = "<group>"; };
-		A3270F2B16D5675800A92C03 /* AGKQuadAnimationExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKQuadAnimationExample.h; sourceTree = "<group>"; };
-		A3270F2C16D5675800A92C03 /* AGKQuadAnimationExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKQuadAnimationExample.m; sourceTree = "<group>"; };
-		A3270F2D16D5675800A92C03 /* AGKQuadAnimationExample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGKQuadAnimationExample.xib; sourceTree = "<group>"; };
 		A3270F2E16D5675800A92C03 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A3270F2F16D5675800A92C03 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		A3270F3016D5675800A92C03 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -104,38 +108,57 @@
 		A333A5BD16A9A3BD00E334AD /* AGGeometryKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AGGeometryKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A333A60A16A9A6F000E334AD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A3418C0A1B5E3B7D00DF6809 /* AGGeometryKit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AGGeometryKit-Bridging-Header.h"; sourceTree = "<group>"; };
-		A3418C0B1B5E3B7D00DF6809 /* AngleConverterExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AngleConverterExample.swift; sourceTree = "<group>"; };
-		A3418C0D1B5E3DA700DF6809 /* AngleConverterExample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AngleConverterExample.xib; sourceTree = "<group>"; };
-		A3762F2D1728067900E7A2AB /* AGKQuadControlsExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKQuadControlsExample.h; sourceTree = "<group>"; };
-		A3762F2E1728067900E7A2AB /* AGKQuadControlsExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKQuadControlsExample.m; sourceTree = "<group>"; };
-		A3762F2F1728067A00E7A2AB /* AGKQuadControlsExample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGKQuadControlsExample.xib; sourceTree = "<group>"; };
-		A3762F5117287EB400E7A2AB /* crop_sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crop_sample.png; sourceTree = "<group>"; };
-		A3762F56172885FB00E7A2AB /* AGKCATransform3DWithUIImageExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKCATransform3DWithUIImageExample.h; sourceTree = "<group>"; };
-		A3762F57172885FC00E7A2AB /* AGKCATransform3DWithUIImageExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKCATransform3DWithUIImageExample.m; sourceTree = "<group>"; };
-		A3762F58172885FD00E7A2AB /* AGKCATransform3DWithUIImageExample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGKCATransform3DWithUIImageExample.xib; sourceTree = "<group>"; };
+		A3418C131B5E50E300DF6809 /* AGKBitOperationsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKBitOperationsTest.m; sourceTree = "<group>"; };
+		A3418C141B5E50E300DF6809 /* AGKCornerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKCornerTest.m; sourceTree = "<group>"; };
+		A3418C151B5E50E300DF6809 /* AGKLineTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKLineTest.m; sourceTree = "<group>"; };
+		A3418C161B5E50E300DF6809 /* AGKMathTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKMathTest.m; sourceTree = "<group>"; };
+		A3418C171B5E50E300DF6809 /* AGKMatrix+AGKVector3DTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AGKMatrix+AGKVector3DTest.m"; sourceTree = "<group>"; };
+		A3418C181B5E50E300DF6809 /* AGKMatrix+CATransform3DTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AGKMatrix+CATransform3DTest.m"; sourceTree = "<group>"; };
+		A3418C191B5E50E300DF6809 /* AGKMatrixTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKMatrixTest.m; sourceTree = "<group>"; };
+		A3418C1A1B5E50E300DF6809 /* AGKQuadTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKQuadTest.m; sourceTree = "<group>"; };
+		A3418C1B1B5E50E300DF6809 /* AGKVector3DTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKVector3DTest.m; sourceTree = "<group>"; };
+		A3418C1C1B5E50E300DF6809 /* CALayer+AGK+PropertiesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AGK+PropertiesTest.m"; sourceTree = "<group>"; };
+		A3418C1D1B5E50E300DF6809 /* CALayer+AGKQuadTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AGKQuadTest.m"; sourceTree = "<group>"; };
+		A3418C1E1B5E50E300DF6809 /* CGGeometry+AGGeometryKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+AGGeometryKitTest.m"; sourceTree = "<group>"; };
+		A3418C1F1B5E50E300DF6809 /* NSValue+AGKQuadTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+AGKQuadTest.m"; sourceTree = "<group>"; };
+		A3418C201B5E50E300DF6809 /* UIView+AGK+AngleConverterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AGK+AngleConverterTest.m"; sourceTree = "<group>"; };
+		A3418C211B5E50E300DF6809 /* UIView+AGK+PropertiesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AGK+PropertiesTest.m"; sourceTree = "<group>"; };
+		A3418C321B5E540E00DF6809 /* AGKCATransform3DWithUIImageExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKCATransform3DWithUIImageExample.h; sourceTree = "<group>"; };
+		A3418C331B5E540E00DF6809 /* AGKCATransform3DWithUIImageExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKCATransform3DWithUIImageExample.m; sourceTree = "<group>"; };
+		A3418C341B5E540E00DF6809 /* AGKCATransform3DWithUIImageExample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGKCATransform3DWithUIImageExample.xib; sourceTree = "<group>"; };
+		A3418C351B5E540E00DF6809 /* AGKQuadAnimationExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKQuadAnimationExample.h; sourceTree = "<group>"; };
+		A3418C361B5E540E00DF6809 /* AGKQuadAnimationExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKQuadAnimationExample.m; sourceTree = "<group>"; };
+		A3418C371B5E540E00DF6809 /* AGKQuadAnimationExample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGKQuadAnimationExample.xib; sourceTree = "<group>"; };
+		A3418C381B5E540E00DF6809 /* AGKQuadControlsExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKQuadControlsExample.h; sourceTree = "<group>"; };
+		A3418C391B5E540E00DF6809 /* AGKQuadControlsExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKQuadControlsExample.m; sourceTree = "<group>"; };
+		A3418C3A1B5E540E00DF6809 /* AGKQuadControlsExample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGKQuadControlsExample.xib; sourceTree = "<group>"; };
+		A3418C3B1B5E540E00DF6809 /* AngleConverterExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AngleConverterExample.swift; sourceTree = "<group>"; };
+		A3418C3C1B5E540E00DF6809 /* AngleConverterExample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AngleConverterExample.xib; sourceTree = "<group>"; };
+		A3418C461B5E541C00DF6809 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		A3418C471B5E541C00DF6809 /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
+		A3418C481B5E541C00DF6809 /* art-gallery.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "art-gallery.jpg"; sourceTree = "<group>"; };
+		A3418C491B5E541C00DF6809 /* Box_Closed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Box_Closed.png; sourceTree = "<group>"; };
+		A3418C4A1B5E541C00DF6809 /* Box_Closed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Box_Closed@2x.png"; sourceTree = "<group>"; };
+		A3418C4B1B5E541C00DF6809 /* controlpoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controlpoint.png; sourceTree = "<group>"; };
+		A3418C4C1B5E541C00DF6809 /* controlpoint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "controlpoint@2x.png"; sourceTree = "<group>"; };
+		A3418C4D1B5E541C00DF6809 /* controlpoint_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controlpoint_h.png; sourceTree = "<group>"; };
+		A3418C4E1B5E541C00DF6809 /* controlpoint_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "controlpoint_h@2x.png"; sourceTree = "<group>"; };
+		A3418C4F1B5E541C00DF6809 /* crop_sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crop_sample.png; sourceTree = "<group>"; };
+		A3418C501B5E541C00DF6809 /* crop_sample@2x copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crop_sample@2x copy.png"; sourceTree = "<group>"; };
+		A3418C511B5E541C00DF6809 /* sample_image6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_image6.jpg; sourceTree = "<group>"; };
+		A3418C521B5E541C00DF6809 /* sample_image6@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sample_image6@2x.jpg"; sourceTree = "<group>"; };
+		A3418C531B5E541C00DF6809 /* sample_image7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_image7.jpg; sourceTree = "<group>"; };
+		A3418C541B5E541C00DF6809 /* sample_image7@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sample_image7@2x.jpg"; sourceTree = "<group>"; };
 		A3762F661728914500E7A2AB /* AGGeometryKitApplication.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGGeometryKitApplication.xib; sourceTree = "<group>"; };
 		A38C8385192383020057C225 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		A39DA67C172984E9005B84D3 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
-		A39DA67D172984E9005B84D3 /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
-		A3A0F61719ACC0E3003E8894 /* art-gallery.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "art-gallery.jpg"; sourceTree = "<group>"; };
 		A3BC981917D8A88B009B7495 /* AGGeometryKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = AGGeometryKit.podspec; path = ../AGGeometryKit.podspec; sourceTree = "<group>"; };
-		A3E67AF2192112B400A4CD4A /* Box_Closed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Box_Closed.png; sourceTree = "<group>"; };
-		A3E67AF3192112B400A4CD4A /* Box_Closed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Box_Closed@2x.png"; sourceTree = "<group>"; };
-		A3E67AF6192112F700A4CD4A /* sample_image6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_image6.jpg; sourceTree = "<group>"; };
-		A3E67AF7192112F700A4CD4A /* sample_image6@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sample_image6@2x.jpg"; sourceTree = "<group>"; };
-		A3E67AFA19211B6900A4CD4A /* sample_image7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_image7.jpg; sourceTree = "<group>"; };
-		A3E67AFB19211B6900A4CD4A /* sample_image7@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sample_image7@2x.jpg"; sourceTree = "<group>"; };
-		A3E67AFE192214B500A4CD4A /* controlpoint_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controlpoint_h.png; sourceTree = "<group>"; };
-		A3E67AFF192214B500A4CD4A /* controlpoint_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "controlpoint_h@2x.png"; sourceTree = "<group>"; };
-		A3E67B00192214B500A4CD4A /* controlpoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controlpoint.png; sourceTree = "<group>"; };
-		A3E67B01192214B500A4CD4A /* controlpoint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "controlpoint@2x.png"; sourceTree = "<group>"; };
 		A3EE526716EDEE83007706C6 /* easing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = easing.c; sourceTree = "<group>"; };
 		A3EE526816EDEE83007706C6 /* easing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = easing.h; sourceTree = "<group>"; };
 		A3F2EFF719223B8700B6F9E8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		A3F2EFF9192243BC00B6F9E8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A3F77D3D16FA54C300415B24 /* JAValueToString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAValueToString.h; sourceTree = "<group>"; };
 		A3F77D3E16FA54C300415B24 /* JAValueToString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAValueToString.m; sourceTree = "<group>"; };
-		F399D4CD3B8146F86692968F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0D6FB64DF65EA3CA8363485 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +170,7 @@
 				A333A59516A9A3BD00E334AD /* UIKit.framework in Frameworks */,
 				A333A59716A9A3BD00E334AD /* Foundation.framework in Frameworks */,
 				A333A59916A9A3BD00E334AD /* CoreGraphics.framework in Frameworks */,
-				D5C28E313D7662784596A6E7 /* Pods.framework in Frameworks */,
+				B51CACA2A1ACA650834494BE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,8 +200,10 @@
 		A3270F2616D5675800A92C03 /* AGGeometryKit */ = {
 			isa = PBXGroup;
 			children = (
-				A3EA84071729898000AF716C /* Demo controllers */,
+				A3418C311B5E540E00DF6809 /* Demos */,
+				A3418C451B5E541C00DF6809 /* Resources */,
 				A3270F2716D5675800A92C03 /* AGAppDelegate.h */,
+				A3418C0A1B5E3B7D00DF6809 /* AGGeometryKit-Bridging-Header.h */,
 				A3270F2816D5675800A92C03 /* AGAppDelegate.m */,
 				A3762F661728914500E7A2AB /* AGGeometryKitApplication.xib */,
 				A3270F2916D5675800A92C03 /* AGGeometryKit-Info.plist */,
@@ -187,20 +212,6 @@
 				A3270F3016D5675800A92C03 /* Default@2x.png */,
 				A3270F3116D5675800A92C03 /* InfoPlist.strings */,
 				A3270F3316D5675800A92C03 /* main.m */,
-				A3E67AF2192112B400A4CD4A /* Box_Closed.png */,
-				A3E67AF3192112B400A4CD4A /* Box_Closed@2x.png */,
-				A3E67AFE192214B500A4CD4A /* controlpoint_h.png */,
-				A3E67AFF192214B500A4CD4A /* controlpoint_h@2x.png */,
-				A3E67B00192214B500A4CD4A /* controlpoint.png */,
-				A3E67B01192214B500A4CD4A /* controlpoint@2x.png */,
-				A3762F5117287EB400E7A2AB /* crop_sample.png */,
-				A3A0F61719ACC0E3003E8894 /* art-gallery.jpg */,
-				A39DA67C172984E9005B84D3 /* arrow.png */,
-				A39DA67D172984E9005B84D3 /* arrow@2x.png */,
-				A3E67AF6192112F700A4CD4A /* sample_image6.jpg */,
-				A3E67AF7192112F700A4CD4A /* sample_image6@2x.jpg */,
-				A3E67AFA19211B6900A4CD4A /* sample_image7.jpg */,
-				A3E67AFB19211B6900A4CD4A /* sample_image7@2x.jpg */,
 				A3F77D3D16FA54C300415B24 /* JAValueToString.h */,
 				A3F77D3E16FA54C300415B24 /* JAValueToString.m */,
 				A3EE526716EDEE83007706C6 /* easing.c */,
@@ -229,6 +240,7 @@
 				A333A59116A9A3BD00E334AD /* Products */,
 				A3BC981917D8A88B009B7495 /* AGGeometryKit.podspec */,
 				A3F2EFF9192243BC00B6F9E8 /* README.md */,
+				A3418C121B5E50E300DF6809 /* Tests */,
 				282F1EBBA354A9FEC8160A52 /* Pods */,
 			);
 			sourceTree = "<group>";
@@ -249,28 +261,71 @@
 				A333A59416A9A3BD00E334AD /* UIKit.framework */,
 				A333A59616A9A3BD00E334AD /* Foundation.framework */,
 				A333A59816A9A3BD00E334AD /* CoreGraphics.framework */,
-				F399D4CD3B8146F86692968F /* Pods.framework */,
+				B0D6FB64DF65EA3CA8363485 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A3EA84071729898000AF716C /* Demo controllers */ = {
+		A3418C121B5E50E300DF6809 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A3762F2D1728067900E7A2AB /* AGKQuadControlsExample.h */,
-				A3762F2E1728067900E7A2AB /* AGKQuadControlsExample.m */,
-				A3762F2F1728067A00E7A2AB /* AGKQuadControlsExample.xib */,
-				A3270F2B16D5675800A92C03 /* AGKQuadAnimationExample.h */,
-				A3270F2C16D5675800A92C03 /* AGKQuadAnimationExample.m */,
-				A3270F2D16D5675800A92C03 /* AGKQuadAnimationExample.xib */,
-				A3418C0B1B5E3B7D00DF6809 /* AngleConverterExample.swift */,
-				A3418C0D1B5E3DA700DF6809 /* AngleConverterExample.xib */,
-				A3762F56172885FB00E7A2AB /* AGKCATransform3DWithUIImageExample.h */,
-				A3762F57172885FC00E7A2AB /* AGKCATransform3DWithUIImageExample.m */,
-				A3762F58172885FD00E7A2AB /* AGKCATransform3DWithUIImageExample.xib */,
-				A3418C0A1B5E3B7D00DF6809 /* AGGeometryKit-Bridging-Header.h */,
+				A3418C131B5E50E300DF6809 /* AGKBitOperationsTest.m */,
+				A3418C141B5E50E300DF6809 /* AGKCornerTest.m */,
+				A3418C151B5E50E300DF6809 /* AGKLineTest.m */,
+				A3418C161B5E50E300DF6809 /* AGKMathTest.m */,
+				A3418C171B5E50E300DF6809 /* AGKMatrix+AGKVector3DTest.m */,
+				A3418C181B5E50E300DF6809 /* AGKMatrix+CATransform3DTest.m */,
+				A3418C191B5E50E300DF6809 /* AGKMatrixTest.m */,
+				A3418C1A1B5E50E300DF6809 /* AGKQuadTest.m */,
+				A3418C1B1B5E50E300DF6809 /* AGKVector3DTest.m */,
+				A3418C1C1B5E50E300DF6809 /* CALayer+AGK+PropertiesTest.m */,
+				A3418C1D1B5E50E300DF6809 /* CALayer+AGKQuadTest.m */,
+				A3418C1E1B5E50E300DF6809 /* CGGeometry+AGGeometryKitTest.m */,
+				A3418C1F1B5E50E300DF6809 /* NSValue+AGKQuadTest.m */,
+				A3418C201B5E50E300DF6809 /* UIView+AGK+AngleConverterTest.m */,
+				A3418C211B5E50E300DF6809 /* UIView+AGK+PropertiesTest.m */,
 			);
-			name = "Demo controllers";
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		A3418C311B5E540E00DF6809 /* Demos */ = {
+			isa = PBXGroup;
+			children = (
+				A3418C321B5E540E00DF6809 /* AGKCATransform3DWithUIImageExample.h */,
+				A3418C331B5E540E00DF6809 /* AGKCATransform3DWithUIImageExample.m */,
+				A3418C341B5E540E00DF6809 /* AGKCATransform3DWithUIImageExample.xib */,
+				A3418C351B5E540E00DF6809 /* AGKQuadAnimationExample.h */,
+				A3418C361B5E540E00DF6809 /* AGKQuadAnimationExample.m */,
+				A3418C371B5E540E00DF6809 /* AGKQuadAnimationExample.xib */,
+				A3418C381B5E540E00DF6809 /* AGKQuadControlsExample.h */,
+				A3418C391B5E540E00DF6809 /* AGKQuadControlsExample.m */,
+				A3418C3A1B5E540E00DF6809 /* AGKQuadControlsExample.xib */,
+				A3418C3B1B5E540E00DF6809 /* AngleConverterExample.swift */,
+				A3418C3C1B5E540E00DF6809 /* AngleConverterExample.xib */,
+			);
+			path = Demos;
+			sourceTree = "<group>";
+		};
+		A3418C451B5E541C00DF6809 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A3418C461B5E541C00DF6809 /* arrow.png */,
+				A3418C471B5E541C00DF6809 /* arrow@2x.png */,
+				A3418C481B5E541C00DF6809 /* art-gallery.jpg */,
+				A3418C491B5E541C00DF6809 /* Box_Closed.png */,
+				A3418C4A1B5E541C00DF6809 /* Box_Closed@2x.png */,
+				A3418C4B1B5E541C00DF6809 /* controlpoint.png */,
+				A3418C4C1B5E541C00DF6809 /* controlpoint@2x.png */,
+				A3418C4D1B5E541C00DF6809 /* controlpoint_h.png */,
+				A3418C4E1B5E541C00DF6809 /* controlpoint_h@2x.png */,
+				A3418C4F1B5E541C00DF6809 /* crop_sample.png */,
+				A3418C501B5E541C00DF6809 /* crop_sample@2x copy.png */,
+				A3418C511B5E541C00DF6809 /* sample_image6.jpg */,
+				A3418C521B5E541C00DF6809 /* sample_image6@2x.jpg */,
+				A3418C531B5E541C00DF6809 /* sample_image7.jpg */,
+				A3418C541B5E541C00DF6809 /* sample_image7@2x.jpg */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,7 +340,6 @@
 				A333A58D16A9A3BD00E334AD /* Frameworks */,
 				A333A58E16A9A3BD00E334AD /* Resources */,
 				343B2F241FF341E59AFF1532 /* Copy Pods Resources */,
-				414838AB585C897A46A90F01 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -349,32 +403,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3E67AFD19211B6900A4CD4A /* sample_image7@2x.jpg in Resources */,
-				A3418C0E1B5E3DA700DF6809 /* AngleConverterExample.xib in Resources */,
-				A3270F4116D5675800A92C03 /* AGKQuadAnimationExample.xib in Resources */,
-				A3E67AF4192112B400A4CD4A /* Box_Closed.png in Resources */,
+				A3418C571B5E541C00DF6809 /* art-gallery.jpg in Resources */,
 				A3270F4316D5675800A92C03 /* Default-568h@2x.png in Resources */,
+				A3418C5A1B5E541C00DF6809 /* controlpoint.png in Resources */,
 				A3270F4516D5675800A92C03 /* Default.png in Resources */,
+				A3418C581B5E541C00DF6809 /* Box_Closed.png in Resources */,
+				A3418C591B5E541C00DF6809 /* Box_Closed@2x.png in Resources */,
+				A3418C401B5E540E00DF6809 /* AGKQuadAnimationExample.xib in Resources */,
+				A3418C3E1B5E540E00DF6809 /* AGKCATransform3DWithUIImageExample.xib in Resources */,
 				A3270F4716D5675800A92C03 /* Default@2x.png in Resources */,
-				A3A0F61819ACC0E3003E8894 /* art-gallery.jpg in Resources */,
+				A3418C551B5E541C00DF6809 /* arrow.png in Resources */,
 				A3270F4916D5675800A92C03 /* InfoPlist.strings in Resources */,
+				A3418C5E1B5E541C00DF6809 /* crop_sample.png in Resources */,
 				A38C8386192383020057C225 /* Images.xcassets in Resources */,
+				A3418C5F1B5E541C00DF6809 /* crop_sample@2x copy.png in Resources */,
+				A3418C5D1B5E541C00DF6809 /* controlpoint_h@2x.png in Resources */,
+				A3418C621B5E541C00DF6809 /* sample_image7.jpg in Resources */,
+				A3418C421B5E540E00DF6809 /* AGKQuadControlsExample.xib in Resources */,
+				A3418C611B5E541C00DF6809 /* sample_image6@2x.jpg in Resources */,
 				A3270F5316D5675800A92C03 /* InfoPlist.strings in Resources */,
-				A3E67AF5192112B400A4CD4A /* Box_Closed@2x.png in Resources */,
-				A3E67AF8192112F700A4CD4A /* sample_image6.jpg in Resources */,
+				A3418C561B5E541C00DF6809 /* arrow@2x.png in Resources */,
+				A3418C601B5E541C00DF6809 /* sample_image6.jpg in Resources */,
+				A3418C631B5E541C00DF6809 /* sample_image7@2x.jpg in Resources */,
+				A3418C5B1B5E541C00DF6809 /* controlpoint@2x.png in Resources */,
+				A3418C441B5E540E00DF6809 /* AngleConverterExample.xib in Resources */,
 				A3F2EFFA192243BC00B6F9E8 /* README.md in Resources */,
-				A3762F321728067A00E7A2AB /* AGKQuadControlsExample.xib in Resources */,
-				A3E67B03192214B500A4CD4A /* controlpoint_h@2x.png in Resources */,
-				A3E67B05192214B500A4CD4A /* controlpoint@2x.png in Resources */,
-				A3E67AF9192112F700A4CD4A /* sample_image6@2x.jpg in Resources */,
-				A3762F5417287EB400E7A2AB /* crop_sample.png in Resources */,
-				A3E67AFC19211B6900A4CD4A /* sample_image7.jpg in Resources */,
-				A3762F5B172885FE00E7A2AB /* AGKCATransform3DWithUIImageExample.xib in Resources */,
 				A3762F671728914700E7A2AB /* AGGeometryKitApplication.xib in Resources */,
-				A39DA67E172984E9005B84D3 /* arrow.png in Resources */,
-				A39DA680172984E9005B84D3 /* arrow@2x.png in Resources */,
-				A3E67B04192214B500A4CD4A /* controlpoint.png in Resources */,
-				A3E67B02192214B500A4CD4A /* controlpoint_h.png in Resources */,
+				A3418C5C1B5E541C00DF6809 /* controlpoint_h.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,18 +437,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3270F4216D5675800A92C03 /* AGKQuadAnimationExample.xib in Resources */,
 				A3270F4416D5675800A92C03 /* Default-568h@2x.png in Resources */,
 				A3270F4616D5675800A92C03 /* Default.png in Resources */,
 				A3270F4816D5675800A92C03 /* Default@2x.png in Resources */,
 				A3270F4A16D5675800A92C03 /* InfoPlist.strings in Resources */,
 				A3270F5416D5675800A92C03 /* InfoPlist.strings in Resources */,
-				A3762F331728067A00E7A2AB /* AGKQuadControlsExample.xib in Resources */,
-				A3762F5517287EB400E7A2AB /* crop_sample.png in Resources */,
-				A3762F5C172885FE00E7A2AB /* AGKCATransform3DWithUIImageExample.xib in Resources */,
 				A3762F681728914700E7A2AB /* AGGeometryKitApplication.xib in Resources */,
-				A39DA67F172984E9005B84D3 /* arrow.png in Resources */,
-				A39DA681172984E9005B84D3 /* arrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,21 +479,6 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		414838AB585C897A46A90F01 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A333A5BB16A9A3BD00E334AD /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -465,14 +499,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3418C3F1B5E540E00DF6809 /* AGKQuadAnimationExample.m in Sources */,
+				A3418C431B5E540E00DF6809 /* AngleConverterExample.swift in Sources */,
 				A3270F3B16D5675800A92C03 /* AGAppDelegate.m in Sources */,
-				A3270F3F16D5675800A92C03 /* AGKQuadAnimationExample.m in Sources */,
 				A3270F4B16D5675800A92C03 /* main.m in Sources */,
-				A3418C0C1B5E3B7D00DF6809 /* AngleConverterExample.swift in Sources */,
 				A3EE526916EDEE83007706C6 /* easing.c in Sources */,
+				A3418C411B5E540E00DF6809 /* AGKQuadControlsExample.m in Sources */,
 				A3F77D3F16FA54C400415B24 /* JAValueToString.m in Sources */,
-				A3762F301728067A00E7A2AB /* AGKQuadControlsExample.m in Sources */,
-				A3762F59172885FE00E7A2AB /* AGKCATransform3DWithUIImageExample.m in Sources */,
+				A3418C3D1B5E540E00DF6809 /* AGKCATransform3DWithUIImageExample.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,13 +514,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3418C221B5E50E300DF6809 /* AGKBitOperationsTest.m in Sources */,
 				A3270F3C16D5675800A92C03 /* AGAppDelegate.m in Sources */,
-				A3270F4016D5675800A92C03 /* AGKQuadAnimationExample.m in Sources */,
+				A3418C291B5E50E300DF6809 /* AGKQuadTest.m in Sources */,
+				A3418C2F1B5E50E300DF6809 /* UIView+AGK+AngleConverterTest.m in Sources */,
+				A3418C241B5E50E300DF6809 /* AGKLineTest.m in Sources */,
 				A3270F4C16D5675800A92C03 /* main.m in Sources */,
+				A3418C271B5E50E300DF6809 /* AGKMatrix+CATransform3DTest.m in Sources */,
+				A3418C2D1B5E50E300DF6809 /* CGGeometry+AGGeometryKitTest.m in Sources */,
 				A3EE526A16EDEE83007706C6 /* easing.c in Sources */,
+				A3418C2C1B5E50E300DF6809 /* CALayer+AGKQuadTest.m in Sources */,
+				A3418C251B5E50E300DF6809 /* AGKMathTest.m in Sources */,
+				A3418C2B1B5E50E300DF6809 /* CALayer+AGK+PropertiesTest.m in Sources */,
+				A3418C2E1B5E50E300DF6809 /* NSValue+AGKQuadTest.m in Sources */,
+				A3418C281B5E50E300DF6809 /* AGKMatrixTest.m in Sources */,
+				A3418C2A1B5E50E300DF6809 /* AGKVector3DTest.m in Sources */,
+				A3418C301B5E50E300DF6809 /* UIView+AGK+PropertiesTest.m in Sources */,
+				A3418C231B5E50E300DF6809 /* AGKCornerTest.m in Sources */,
 				A3F77D4016FA54C400415B24 /* JAValueToString.m in Sources */,
-				A3762F311728067A00E7A2AB /* AGKQuadControlsExample.m in Sources */,
-				A3762F5A172885FE00E7A2AB /* AGKCATransform3DWithUIImageExample.m in Sources */,
+				A3418C261B5E50E300DF6809 /* AGKMatrix+AGKVector3DTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,6 +665,7 @@
 		};
 		A333A5D316A9A3BD00E334AD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0866E65E4D7BBE650AAAEC30 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AGGeometryKit.app/AGGeometryKit";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -636,6 +683,7 @@
 		};
 		A333A5D416A9A3BD00E334AD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0866E65E4D7BBE650AAAEC30 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AGGeometryKit.app/AGGeometryKit";
 				FRAMEWORK_SEARCH_PATHS = (

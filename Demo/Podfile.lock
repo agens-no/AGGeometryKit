@@ -13,6 +13,6 @@ EXTERNAL SOURCES:
     :path: ../AGGeometryKit.podspec
 
 SPEC CHECKSUMS:
-  AGGeometryKit: 343291979afcccc3199ab0612ed4e82b1ee7a81e
+  AGGeometryKit: 72311884ccbf79eb35b428d98ef975e313aaa88c
 
 COCOAPODS: 0.37.2
