@@ -40,9 +40,9 @@
 /**
  *  Returns a matrix multiplied by the given 3D vector.
  *
- *  @param vector The vector to multipy against.
+ *  @param vector The vector to multiply against.
  *
- *  @return A 1x3 matrix resulting from multiplying the reciver with the
+ *  @return A 1x3 matrix resulting from multiplying the receiver with the
  *  specified vector.
  */
 - (AGKMatrix *)matrixByMultiplyingWithVector3D:(AGKVector3D)vector;
