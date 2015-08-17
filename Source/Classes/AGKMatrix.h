@@ -82,7 +82,7 @@
 + (instancetype)matrixWithMatrix:(AGKMatrix *)otherMatrix;
 
 /**
- *  Initilized a newly allocated matrix with the given column and row 
+ *  Initialized a newly allocated matrix with the given column and row 
  *  dimensions, and filled with the given members.
  *  
  *  This method is the designated initializer of AGKMatrix.
@@ -127,7 +127,7 @@
 ///-----------------------------------------------------------------------------
 
 /**
- *  Compares the recieving matrix to another matrix.
+ *  Compares the receiving matrix to another matrix.
  *
  *  @param otherMatrix The matrix to compare against.
  *
@@ -232,7 +232,7 @@
  *  @param column The column index number at which the member is stored.
  *  @param row    The row index number at which the member is stored.
  *
- *  @return The number object associated with the specifed column and row. Or
+ *  @return The number object associated with the specified column and row. Or
  *  `defaultMember` if no other number has been provided. Returns nil if `row`
  *  or `column` are beyond the matrix's bounds.
  *
@@ -528,20 +528,20 @@
 ///-----------------------------------------------------------------------------
 
 /**
- *  Returns a new matrix containing the recieving matrix's members that fall
+ *  Returns a new matrix containing the receiving matrix's members that fall
  *  within the column and row limits given.
  *
- *  The reciever's members are flattened into a single array with column
+ *  The receiver's members are flattened into a single array with column
  *  priority, then passed into the new matrix.
  *
- *  If the specified columns or rows are larger than the reciever, the remaining
+ *  If the specified columns or rows are larger than the receiver, the remaining
  *  slots will be filled with the default placeholder.
  *
  *  @param columns The number of columns in the desired matrix.
  *  @param rows    The number of rows in the desired matrix.
  *
  *  @return A new matrix with the specified columns and rows dimensions, and
- *  filled with the reciever's members as much as possible.
+ *  filled with the receiver's members as much as possible.
  *
  *  @see matrixWithColumnSize:rowSize:andTranspose:
  *  @see matrixWithColumns:rows:
@@ -549,16 +549,16 @@
 - (AGKMatrix *)matrixWithColumnSize:(NSUInteger)columns rowSize:(NSUInteger)rows;
 
 /**
- *  Returns a new matrix containing the recieving matrix's members that fall
+ *  Returns a new matrix containing the receiving matrix's members that fall
  *  within the column and row limits given. Then transposed if desired.
  *
- *  The reciever's members are flattened into a single array with column 
+ *  The receiver's members are flattened into a single array with column 
  *  priority, then passed into the new matrix.
  *
  *  If `transpose` is `YES` the resulting matrix will be transposed, turning 
  *  columns into rows.
  *
- *  If the specified columns or rows are larger than the reciever, the remaining
+ *  If the specified columns or rows are larger than the receiver, the remaining
  *  slots will be filled with the default placeholder.
  *
  *  @param columns   The number of columns in the desired matrix.
@@ -567,7 +567,7 @@
  *  otherwise they are copied as column first.
  *
  *  @return A New matrix with the specified columns and rows dimensions, and
- *  filled with the reciever's members as much as possible.
+ *  filled with the receiver's members as much as possible.
  *
  *  @see matrixWithColumnSize:rowSize:
  *  @see transpose
@@ -575,8 +575,8 @@
 - (AGKMatrix *)matrixWithColumnSize:(NSUInteger)columns rowSize:(NSUInteger)rows andTranspose:(BOOL)transpose;
 
 /**
- *  Returns a matrix of the same size as the recipeint, but filled with 
- *  cofactors of each of the reciever's members.
+ *  Returns a matrix of the same size as the recipient, but filled with 
+ *  cofactors of each of the receiver's members.
  *
  *  @return A matrix filled with cofactor members, or `nil` if matrix is not 
  *  square.
@@ -588,11 +588,11 @@
 - (AGKMatrix *)cofactorMatrix;
 
 /**
- *  Returns the adjoint matrix of the reciver.
+ *  Returns the adjoint matrix of the receiver.
  *
  *  An adjoint matrix is the same as a cofactor matrix, but transposed.
  *
- *  @return The adjoint matrix of the reciever, or `nil` if matrix is not 
+ *  @return The adjoint matrix of the receiver, or `nil` if matrix is not 
  *  square.
  *
  *  @see cofactorMatrix
@@ -601,18 +601,18 @@
 - (AGKMatrix *)adjointMatrix;
 
 /**
- *  Returns the inverse matrix of the reciever.
+ *  Returns the inverse matrix of the receiver.
  *
  *  An inverse matrix is defined by the fact that when multiplied by the 
  *  original matrix, you will get an identity matrix in return.
  *
- *  @return A new matrix that is the inverse of the reciever, or `nil` if the 
+ *  @return A new matrix that is the inverse of the receiver, or `nil` if the 
  *  matrix is not square.
  */
 - (AGKMatrix *)inverseMatrix;
 
 /**
- *  Returns a new matrix from multiplying the reciver by the given matrix.
+ *  Returns a new matrix from multiplying the receiver by the given matrix.
  *
  *  @param otherMatrix The matrix to multiply against.
  *
@@ -637,7 +637,7 @@
  *
  *  If the matrix is not square, method will return `nil`.
  *
- *  @return The determinant of the reciever matrix, or `nil` if no determinant 
+ *  @return The determinant of the receiver matrix, or `nil` if no determinant 
  *  is available.
  *
  *  @see cofactorMatrix
