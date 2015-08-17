@@ -26,6 +26,8 @@
 #import "AGKVector3D.h"
 #import <QuartzCore/QuartzCore.h>
 
+const AGKVector3D AGKVector3DZero = { 0, 0, 0 };
+
 AGKVector3D AGKVector3DMake(CGFloat x, CGFloat y, CGFloat z)
 {
     AGKVector3D vector;
