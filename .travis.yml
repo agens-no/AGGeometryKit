@@ -1,4 +1,4 @@
 language: objective-c
 podfile: Demo/Podfile
-xcode_workspace: Demo/AGGeometryKit.xcworkspace
-xcode_scheme: AGGeometryKit
+xcode_workspace: Demo/AGGeometryKitDemo.xcworkspace
+xcode_scheme: AGGeometryKitDemo
