@@ -8,8 +8,6 @@ env:
     - TEST_TYPE=cocoapods
 before_install:
 - gem install cocoapods --pre --quiet --no-ri --no-rdoc
-- brew update
-- brew install xctool
 script:
 - |
     if [ "$TEST_TYPE" = ios ]; then
