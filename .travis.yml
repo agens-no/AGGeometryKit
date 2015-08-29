@@ -2,4 +2,4 @@ language: objective-c
 podfile: Demo/Podfile
 xcode_workspace: Demo/AGGeometryKitDemo.xcworkspace
 xcode_scheme: AGGeometryKitDemo
-script: xctool -workspace Demo/AGGeometryKitDemo.xcworkspace -scheme AGGeometryKitDemo build test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+script: xctool -workspace Demo/AGGeometryKitDemo.xcworkspace -scheme AGGeometryKitDemo -sdk iphonesimulator build test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
