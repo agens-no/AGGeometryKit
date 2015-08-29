@@ -1,20 +1,4 @@
 language: objective-c
-cache: 
-  - bundler
-  - cocoapods
-env:
-  matrix:
-    - TEST_TYPE=ios
-    - TEST_TYPE=cocoapods
-before_install:
-- gem install cocoapods --pre --quiet --no-ri --no-rdoc
-script:
-- |
-    if [ "$TEST_TYPE" = ios ]; then
-      set -o pipefail
-      pod install --project-directory='Demo'
-      xctool -workspace Demo/AGGeometryKit.xcworkspace -scheme AGGeometryKit test
-    elif [ "$TEST_TYPE" = cocoapods ]; then
-      pod lib lint AGGeometryKit.podspec
-      pod lib lint --use-libraries AGGeometryKit.podspec    
-    fi
+podfile: Demo/Podfile
+xcode_workspace: Demo/AGGeometryKit.xcworkspace
+xcode_scheme: AGGeometryKit
