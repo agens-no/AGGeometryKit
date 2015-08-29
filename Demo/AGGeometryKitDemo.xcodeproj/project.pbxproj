@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C7794601B924B79003290EE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C77945F1B924B79003290EE /* LaunchScreen.xib */; };
 		61FF9DF99F887B91B1DF3078 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 060A54D4EE5A1EB1E42AE66E /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		99CC50876887B6E1CB999BCF /* Pods_AGGeometryKitDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E939167969D5D0301DD2EF70 /* Pods_AGGeometryKitDemoTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A36D53EF1B5E7BAC0040BDDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D53EE1B5E7BAC0040BDDC /* main.m */; };
@@ -14,7 +15,6 @@
 		A36D53F51B5E7BAC0040BDDC /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D53F41B5E7BAC0040BDDC /* FirstViewController.m */; };
 		A36D53FB1B5E7BAC0040BDDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A36D53F91B5E7BAC0040BDDC /* Main.storyboard */; };
 		A36D53FD1B5E7BAC0040BDDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A36D53FC1B5E7BAC0040BDDC /* Assets.xcassets */; };
-		A36D54001B5E7BAC0040BDDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A36D53FE1B5E7BAC0040BDDC /* LaunchScreen.storyboard */; };
 		A36D540B1B5E7BAC0040BDDC /* AGGeometryKitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D540A1B5E7BAC0040BDDC /* AGGeometryKitDemoTests.m */; };
 		A36D54171B5E7C010040BDDC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36D54161B5E7C010040BDDC /* SecondViewController.swift */; };
 		A36D54231B5E7C650040BDDC /* AngleConverterExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36D54191B5E7C650040BDDC /* AngleConverterExample.swift */; };
@@ -69,6 +69,7 @@
 		060A54D4EE5A1EB1E42AE66E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19F52806333C6AF2C9C69C97 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		231FA881FD76B5DBAA64A071 /* Pods-AGGeometryKitDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AGGeometryKitDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AGGeometryKitDemoTests/Pods-AGGeometryKitDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		4C77945F1B924B79003290EE /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		5A77438F161BDFDCE9EF9F6F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7BAD5A6856D30B8B0EF12AA0 /* Pods-AGGeometryKitDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AGGeometryKitDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AGGeometryKitDemoTests/Pods-AGGeometryKitDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A36D53EA1B5E7BAC0040BDDC /* AGGeometryKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AGGeometryKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,7 +80,6 @@
 		A36D53F41B5E7BAC0040BDDC /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		A36D53FA1B5E7BAC0040BDDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A36D53FC1B5E7BAC0040BDDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A36D53FF1B5E7BAC0040BDDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A36D54011B5E7BAC0040BDDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A36D54061B5E7BAC0040BDDC /* AGGeometryKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AGGeometryKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A36D540A1B5E7BAC0040BDDC /* AGGeometryKitDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGGeometryKitDemoTests.m; sourceTree = "<group>"; };
@@ -196,8 +196,8 @@
 				A36D542E1B5E7C740040BDDC /* Resources */,
 				A36D54161B5E7C010040BDDC /* SecondViewController.swift */,
 				A36D53F91B5E7BAC0040BDDC /* Main.storyboard */,
+				4C77945F1B924B79003290EE /* LaunchScreen.xib */,
 				A36D53FC1B5E7BAC0040BDDC /* Assets.xcassets */,
-				A36D53FE1B5E7BAC0040BDDC /* LaunchScreen.storyboard */,
 				A36D54011B5E7BAC0040BDDC /* Info.plist */,
 				A36D53ED1B5E7BAC0040BDDC /* Supporting Files */,
 				A36D54151B5E7C010040BDDC /* AGGeometryKitDemo-Bridging-Header.h */,
@@ -378,7 +378,6 @@
 				A36D54421B5E7C740040BDDC /* Box_Closed@2x.png in Resources */,
 				A36D54401B5E7C740040BDDC /* art-gallery.jpg in Resources */,
 				A36D54411B5E7C740040BDDC /* Box_Closed.png in Resources */,
-				A36D54001B5E7BAC0040BDDC /* LaunchScreen.storyboard in Resources */,
 				A36D54461B5E7C740040BDDC /* controlpoint_h@2x.png in Resources */,
 				A36D54451B5E7C740040BDDC /* controlpoint_h.png in Resources */,
 				A36D544C1B5E7C740040BDDC /* sample_image7@2x.jpg in Resources */,
@@ -392,6 +391,7 @@
 				A36D54481B5E7C740040BDDC /* crop_sample@2x copy.png in Resources */,
 				A36D543E1B5E7C740040BDDC /* arrow.png in Resources */,
 				A36D54471B5E7C740040BDDC /* crop_sample.png in Resources */,
+				4C7794601B924B79003290EE /* LaunchScreen.xib in Resources */,
 				A36D543F1B5E7C740040BDDC /* arrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,14 +558,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		A36D53FE1B5E7BAC0040BDDC /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A36D53FF1B5E7BAC0040BDDC /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -658,6 +650,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AGGeometryKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.agens.AGGeometryKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -674,6 +667,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AGGeometryKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.agens.AGGeometryKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
