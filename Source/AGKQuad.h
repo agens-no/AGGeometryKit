@@ -27,6 +27,9 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "AGKBaseDefines.h"
+
+AGK_EXTERN_C_BEGIN
 
 /*
  tl = top left
@@ -84,4 +87,6 @@ NSString * NSStringFromAGKQuad(AGKQuad q);
  */
 CATransform3D CATransform3DWithAGKQuadFromBounds(AGKQuad q, CGRect rect);
 CATransform3D CATransform3DWithAGKQuadFromRect(AGKQuad q, CGRect rect);
+
+AGK_EXTERN_C_END
 

@@ -1,6 +1,6 @@
 {
   "name": "AGGeometryKit",
-  "version": "1.1.2",
+  "version": "1.2.2",
   "summary": "Quadrilaterals on CALayer, CGGeometry-functions, UIView/CALayer properties and other invaluable tools.",
   "homepage": "https://github.com/hfossli/AGGeometryKit",
   "license": "MIT",
@@ -16,7 +16,7 @@
   },
   "source": {
     "git": "https://github.com/hfossli/AGGeometryKit.git",
-    "tag": "1.1.2"
+    "tag": "1.2.2"
   },
   "frameworks": [
     "CoreGraphics",

@@ -24,6 +24,9 @@
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <QuartzCore/QuartzCore.h>
+#import "AGKBaseDefines.h"
+
+AGK_EXTERN_C_BEGIN
 
 // CGFloat
 
@@ -111,3 +114,4 @@ CGRect CGRectRound_AGK(CGRect rect);
 
 CGRect  CGRectInterpolate_AGK(CGRect rect1, CGRect rect2, CGFloat progress);
 
+AGK_EXTERN_C_END

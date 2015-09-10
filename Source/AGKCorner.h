@@ -22,6 +22,9 @@
 // THE SOFTWARE.
 
 #import <CoreGraphics/CoreGraphics.h>
+#import "AGKBaseDefines.h"
+
+AGK_EXTERN_C_BEGIN
 
 typedef enum AGKSide {
     AGKSideTop = 1 << 0,
@@ -40,3 +43,5 @@ typedef enum {
 BOOL AGKCornerIsOnSide(AGKCorner corner, AGKSide side);
 CGPoint AGKCornerConvertToAnchorPoint(AGKCorner corner);
 CGPoint AGKCornerConvertToPointForRect(AGKCorner corner, CGRect rect);
+
+AGK_EXTERN_C_END

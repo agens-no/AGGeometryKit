@@ -1,6 +1,7 @@
 #import <UIKit/UIKit.h>
 
 #import "AGGeometryKit.h"
+#import "AGKBaseDefines.h"
 #import "AGKBitOperations.h"
 #import "AGKCorner.h"
 #import "AGKLine.h"

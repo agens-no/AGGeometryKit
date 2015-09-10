@@ -26,6 +26,9 @@
 #import <Foundation/Foundation.h>
 #import <GLKit/GLKit.h>
 #import "GLKit/GLKVector3.h"
+#import "AGKBaseDefines.h"
+
+AGK_EXTERN_C_BEGIN
 
 struct AGKVector3D {
     CGFloat x;
@@ -49,4 +52,6 @@ AGKVector3D AGKVector3DGetTriangleNormal(AGKVector3D v1, AGKVector3D v2, AGKVect
 AGKVector3D AGKVector3DPositionFromTransform(CATransform3D m);
 AGKVector3D AGKVector3DApplyTransform(AGKVector3D vector, CATransform3D m);
 AGKVector3D AGKVector3DApplyTransformWithNoTranslate(AGKVector3D vector, CATransform3D m);
+
+AGK_EXTERN_C_END
 

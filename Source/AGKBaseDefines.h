@@ -21,15 +21,23 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <CoreGraphics/CoreGraphics.h>
-#import "AGKBaseDefines.h"
 
-AGK_EXTERN_C_BEGIN
+#ifndef AGKBaseDefines
+#define AGKBaseDefines
 
-CGImageRef CGImageDrawWithCATransform3D_AGK(CGImageRef imageRef,
-                                            CATransform3D transform,
-                                            CGPoint anchorPoint,
-                                            CGSize size,
-                                            CGFloat scale) CF_RETURNS_RETAINED;
+// The C++ compiler mangles C function names. extern "C" { /* your C functions */ } prevents this.
+// You should wrap all C function prototypes declared in headers with ASDISPLAYNODE_EXTERN_C_BEGIN/END, even if
+// they are included only from .m (Objective-C) files. It's common for .m files to start using C++
+// features and become .mm (Objective-C++) files. Always wrapping the prototypes with
+// AGK_EXTERN_C_BEGIN/END will save someone a headache once they need to do this. You do not need to
+// wrap constants, only C functions. See StackOverflow for more details:
+// http://stackoverflow.com/questions/1041866/in-c-source-what-is-the-effect-of-extern-c
+#ifdef __cplusplus
+# define AGK_EXTERN_C_BEGIN extern "C" {
+# define AGK_EXTERN_C_END   }
+#else
+# define AGK_EXTERN_C_BEGIN
+# define AGK_EXTERN_C_END
+#endif
 
-AGK_EXTERN_C_END
+#endif

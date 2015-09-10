@@ -25,6 +25,9 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
+#import "AGKBaseDefines.h"
+
+AGK_EXTERN_C_BEGIN
 
 #define AGK_CLAMP(x, low, high) ({\
   __typeof__(x) __x = (x); \
@@ -79,3 +82,5 @@ CGFloat AGKMinInArray(CGFloat values[], NSUInteger numberOfValues, NSUInteger *o
 CGFloat AGKMaxInArray(CGFloat values[], NSUInteger numberOfValues, NSUInteger *out_index);
 
 double AGKFloatToDoubleZeroFill(float value);
+
+AGK_EXTERN_C_END

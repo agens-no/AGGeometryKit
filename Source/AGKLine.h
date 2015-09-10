@@ -22,6 +22,9 @@
 // THE SOFTWARE.
 
 #import <CoreGraphics/CoreGraphics.h>
+#import "AGKBaseDefines.h"
+
+AGK_EXTERN_C_BEGIN
 
 typedef struct AGKLine {
     CGPoint start, end;
@@ -31,3 +34,5 @@ extern const AGKLine AGKLineZero;
 AGKLine AGKLineMake(CGPoint start, CGPoint end);
 double AGKLineLength(AGKLine l);
 BOOL AGKLineIntersection(AGKLine l1, AGKLine l2, CGPoint *out_pointOfIntersection);
+
+AGK_EXTERN_C_END
