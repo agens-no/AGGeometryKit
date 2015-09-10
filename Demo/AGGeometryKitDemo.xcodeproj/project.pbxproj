@@ -12,15 +12,13 @@
 		99CC50876887B6E1CB999BCF /* Pods_AGGeometryKitDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E939167969D5D0301DD2EF70 /* Pods_AGGeometryKitDemoTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A36D53EF1B5E7BAC0040BDDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D53EE1B5E7BAC0040BDDC /* main.m */; };
 		A36D53F21B5E7BAC0040BDDC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D53F11B5E7BAC0040BDDC /* AppDelegate.m */; };
-		A36D53F51B5E7BAC0040BDDC /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D53F41B5E7BAC0040BDDC /* FirstViewController.m */; };
 		A36D53FB1B5E7BAC0040BDDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A36D53F91B5E7BAC0040BDDC /* Main.storyboard */; };
 		A36D53FD1B5E7BAC0040BDDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A36D53FC1B5E7BAC0040BDDC /* Assets.xcassets */; };
 		A36D540B1B5E7BAC0040BDDC /* AGGeometryKitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D540A1B5E7BAC0040BDDC /* AGGeometryKitDemoTests.m */; };
-		A36D54171B5E7C010040BDDC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36D54161B5E7C010040BDDC /* SecondViewController.swift */; };
 		A36D54231B5E7C650040BDDC /* AngleConverterExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36D54191B5E7C650040BDDC /* AngleConverterExample.swift */; };
 		A36D54251B5E7C650040BDDC /* CATransform3DWithUIImageExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D541C1B5E7C650040BDDC /* CATransform3DWithUIImageExample.m */; };
 		A36D54271B5E7C650040BDDC /* QuadAnimationExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36D541E1B5E7C650040BDDC /* QuadAnimationExample.swift */; };
-		A36D54291B5E7C650040BDDC /* QuadControlsExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D54211B5E7C650040BDDC /* QuadControlsExample.m */; };
+		A36D54291B5E7C650040BDDC /* QuadControlsExample.mm in Sources */ = {isa = PBXBuildFile; fileRef = A36D54211B5E7C650040BDDC /* QuadControlsExample.mm */; };
 		A36D542D1B5E7C6E0040BDDC /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = A36D542B1B5E7C6E0040BDDC /* easing.c */; };
 		A36D543E1B5E7C740040BDDC /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = A36D542F1B5E7C740040BDDC /* arrow.png */; };
 		A36D543F1B5E7C740040BDDC /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A36D54301B5E7C740040BDDC /* arrow@2x.png */; };
@@ -76,8 +74,6 @@
 		A36D53EE1B5E7BAC0040BDDC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A36D53F01B5E7BAC0040BDDC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A36D53F11B5E7BAC0040BDDC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A36D53F31B5E7BAC0040BDDC /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		A36D53F41B5E7BAC0040BDDC /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		A36D53FA1B5E7BAC0040BDDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A36D53FC1B5E7BAC0040BDDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A36D54011B5E7BAC0040BDDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,13 +81,12 @@
 		A36D540A1B5E7BAC0040BDDC /* AGGeometryKitDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGGeometryKitDemoTests.m; sourceTree = "<group>"; };
 		A36D540C1B5E7BAC0040BDDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A36D54151B5E7C010040BDDC /* AGGeometryKitDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AGGeometryKitDemo-Bridging-Header.h"; sourceTree = "<group>"; };
-		A36D54161B5E7C010040BDDC /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		A36D54191B5E7C650040BDDC /* AngleConverterExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AngleConverterExample.swift; sourceTree = "<group>"; };
 		A36D541B1B5E7C650040BDDC /* CATransform3DWithUIImageExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransform3DWithUIImageExample.h; sourceTree = "<group>"; };
 		A36D541C1B5E7C650040BDDC /* CATransform3DWithUIImageExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATransform3DWithUIImageExample.m; sourceTree = "<group>"; };
 		A36D541E1B5E7C650040BDDC /* QuadAnimationExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuadAnimationExample.swift; sourceTree = "<group>"; };
 		A36D54201B5E7C650040BDDC /* QuadControlsExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadControlsExample.h; sourceTree = "<group>"; };
-		A36D54211B5E7C650040BDDC /* QuadControlsExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadControlsExample.m; sourceTree = "<group>"; };
+		A36D54211B5E7C650040BDDC /* QuadControlsExample.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = QuadControlsExample.mm; sourceTree = "<group>"; };
 		A36D542B1B5E7C6E0040BDDC /* easing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = easing.c; sourceTree = "<group>"; };
 		A36D542C1B5E7C6E0040BDDC /* easing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = easing.h; sourceTree = "<group>"; };
 		A36D542F1B5E7C740040BDDC /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
@@ -191,10 +186,7 @@
 				A36D542C1B5E7C6E0040BDDC /* easing.h */,
 				A36D544D1B5E7C8A0040BDDC /* JAValueToString.h */,
 				A36D544E1B5E7C8A0040BDDC /* JAValueToString.m */,
-				A36D53F31B5E7BAC0040BDDC /* FirstViewController.h */,
-				A36D53F41B5E7BAC0040BDDC /* FirstViewController.m */,
 				A36D542E1B5E7C740040BDDC /* Resources */,
-				A36D54161B5E7C010040BDDC /* SecondViewController.swift */,
 				A36D53F91B5E7BAC0040BDDC /* Main.storyboard */,
 				4C77945F1B924B79003290EE /* LaunchScreen.xib */,
 				A36D53FC1B5E7BAC0040BDDC /* Assets.xcassets */,
@@ -230,7 +222,7 @@
 				A36D541C1B5E7C650040BDDC /* CATransform3DWithUIImageExample.m */,
 				A36D541E1B5E7C650040BDDC /* QuadAnimationExample.swift */,
 				A36D54201B5E7C650040BDDC /* QuadControlsExample.h */,
-				A36D54211B5E7C650040BDDC /* QuadControlsExample.m */,
+				A36D54211B5E7C650040BDDC /* QuadControlsExample.mm */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -503,11 +495,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A36D54171B5E7C010040BDDC /* SecondViewController.swift in Sources */,
 				A36D53F21B5E7BAC0040BDDC /* AppDelegate.m in Sources */,
 				A36D544F1B5E7C8A0040BDDC /* JAValueToString.m in Sources */,
-				A36D53F51B5E7BAC0040BDDC /* FirstViewController.m in Sources */,
-				A36D54291B5E7C650040BDDC /* QuadControlsExample.m in Sources */,
+				A36D54291B5E7C650040BDDC /* QuadControlsExample.mm in Sources */,
 				A36D54271B5E7C650040BDDC /* QuadAnimationExample.swift in Sources */,
 				A36D53EF1B5E7BAC0040BDDC /* main.m in Sources */,
 				A36D542D1B5E7C6E0040BDDC /* easing.c in Sources */,
