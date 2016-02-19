@@ -98,10 +98,10 @@
     //  originated from the device camera, it might be better to try to pull the
     //  focal length from the image EXIF data via the CGImageProperties EXIF
     //  Dictionary Key "kCGImagePropertyExifFocalLength"
-    CGFloat step1 = -(1.0 / (n2.z * n3.z * (s * s)));
+    CGFloat step1 = MIN(CGFLOAT_MAX, 1.0 / (n2.z * n3.z * (s * s)));
     CGFloat step2 = (((n2.x * n3.x) - (((n2.x * n3.z) + (n2.z * n2.x)) * u0)) + (n2.z * n3.z * (u0 * u0))) * (s * s);
     CGFloat step3 = ((n2.y * n3.y) - (((n2.y * n3.z) + (n2.z * n3.y)) * v0) + (n2.z * n3.z * (v0 * v0)));
-    CGFloat f2 = step1 * (step2 + step3);
+    CGFloat f2 = ABS(step1 * (step2 + step3));
     CGFloat f;
     if (CGFLOAT_IS_DOUBLE)
     {
