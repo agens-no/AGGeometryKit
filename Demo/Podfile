@@ -2,7 +2,6 @@ use_frameworks!
 
 pod 'AGGeometryKit', :path => '../AGGeometryKit.podspec'
 
-
 target :AGGeometryKitDemoTests do
   pod 'Expecta', :inhibit_warnings => true
 end

@@ -22,7 +22,7 @@
 // THE SOFTWARE.
 
 #import "QuadControlsExample.h"
-#import "AGGeometryKit.h"
+#import <AGGeometryKit/AGGeometryKit.h>
 
 @interface AGControlPointView : UIView
 

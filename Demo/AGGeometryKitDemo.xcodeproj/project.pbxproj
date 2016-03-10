@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4C7794601B924B79003290EE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C77945F1B924B79003290EE /* LaunchScreen.xib */; };
-		61FF9DF99F887B91B1DF3078 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 060A54D4EE5A1EB1E42AE66E /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		99CC50876887B6E1CB999BCF /* Pods_AGGeometryKitDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E939167969D5D0301DD2EF70 /* Pods_AGGeometryKitDemoTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		61FF9DF99F887B91B1DF3078 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 060A54D4EE5A1EB1E42AE66E /* Pods.framework */; };
+		99CC50876887B6E1CB999BCF /* Pods_AGGeometryKitDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E939167969D5D0301DD2EF70 /* Pods_AGGeometryKitDemoTests.framework */; };
 		A36D53EF1B5E7BAC0040BDDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D53EE1B5E7BAC0040BDDC /* main.m */; };
 		A36D53F21B5E7BAC0040BDDC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D53F11B5E7BAC0040BDDC /* AppDelegate.m */; };
 		A36D53FB1B5E7BAC0040BDDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A36D53F91B5E7BAC0040BDDC /* Main.storyboard */; };
