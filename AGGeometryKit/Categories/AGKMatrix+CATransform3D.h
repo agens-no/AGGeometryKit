@@ -1,5 +1,6 @@
 //
-// Author: Håvard Fossli <hfossli@agens.no>
+// Authors:
+// Logan Holmes @snown
 //
 // Copyright (c) 2013 Agens AS (http://agens.no/)
 //
@@ -21,27 +22,16 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <CoreGraphics/CoreGraphics.h>
-#import "AGKBaseDefines.h"
+@import Foundation;
+@import CoreGraphics;
+@import UIKit;
 
-AGK_EXTERN_C_BEGIN
+#import "AGKMatrix.h"
 
-typedef enum AGKSide {
-    AGKSideTop = 1 << 0,
-    AGKSideBottom = 1 << 1,
-    AGKSideLeft = 1 << 2,
-    AGKSideRight = 1 << 3,
-} AGKSide;
+@interface AGKMatrix (CATransform3D)
 
-typedef enum {
-    AGKCornerTopLeft = AGKSideTop | AGKSideLeft,
-    AGKCornerTopRight = AGKSideTop | AGKSideRight,
-    AGKCornerBottomLeft = AGKSideBottom | AGKSideLeft,
-    AGKCornerBottomRight = AGKSideBottom | AGKSideRight,
-} AGKCorner;
++ (instancetype)matrixWithCATransform3D:(CATransform3D)transform;
 
-BOOL AGKCornerIsOnSide(AGKCorner corner, AGKSide side);
-CGPoint AGKCornerConvertToAnchorPoint(AGKCorner corner);
-CGPoint AGKCornerConvertToPointForRect(AGKCorner corner, CGRect rect);
+- (CATransform3D)caTransform3DValue;
 
-AGK_EXTERN_C_END
+@end

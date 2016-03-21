@@ -1,0 +1,619 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A009D07F1C9FC89200966B6D /* AGGeometryKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D07E1C9FC89200966B6D /* AGGeometryKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0861C9FC89200966B6D /* AGGeometryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A009D07B1C9FC89200966B6D /* AGGeometryKit.framework */; };
+		A009D08B1C9FC89200966B6D /* AGGeometryKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D08A1C9FC89200966B6D /* AGGeometryKitTests.m */; };
+		A009D0CB1C9FC92C00966B6D /* AGKBaseDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0951C9FC92C00966B6D /* AGKBaseDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0CC1C9FC92C00966B6D /* AGKBitOperations.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0961C9FC92C00966B6D /* AGKBitOperations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0CD1C9FC92C00966B6D /* AGKCorner.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0971C9FC92C00966B6D /* AGKCorner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0CE1C9FC92C00966B6D /* AGKCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D0981C9FC92C00966B6D /* AGKCorner.m */; };
+		A009D0CF1C9FC92C00966B6D /* AGKLine.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0991C9FC92C00966B6D /* AGKLine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0D01C9FC92C00966B6D /* AGKLine.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D09A1C9FC92C00966B6D /* AGKLine.m */; };
+		A009D0D11C9FC92C00966B6D /* AGKMath.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D09B1C9FC92C00966B6D /* AGKMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0D21C9FC92C00966B6D /* AGKMath.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D09C1C9FC92C00966B6D /* AGKMath.m */; };
+		A009D0D31C9FC92C00966B6D /* AGKQuad.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D09D1C9FC92C00966B6D /* AGKQuad.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0D41C9FC92C00966B6D /* AGKQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D09E1C9FC92C00966B6D /* AGKQuad.m */; };
+		A009D0D51C9FC92C00966B6D /* AGKVector3D.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D09F1C9FC92C00966B6D /* AGKVector3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0D61C9FC92C00966B6D /* AGKVector3D.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D0A01C9FC92C00966B6D /* AGKVector3D.m */; };
+		A009D0D71C9FC92C00966B6D /* AGGeometryKitCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0A21C9FC92C00966B6D /* AGGeometryKitCategories.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0D81C9FC92C00966B6D /* AGKMatrix+AGKVector3D.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0A31C9FC92C00966B6D /* AGKMatrix+AGKVector3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0D91C9FC92C00966B6D /* AGKMatrix+AGKVector3D.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D0A41C9FC92C00966B6D /* AGKMatrix+AGKVector3D.m */; };
+		A009D0DA1C9FC92C00966B6D /* AGKMatrix+CATransform3D.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0A51C9FC92C00966B6D /* AGKMatrix+CATransform3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0DB1C9FC92C00966B6D /* AGKMatrix+CATransform3D.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D0A61C9FC92C00966B6D /* AGKMatrix+CATransform3D.m */; };
+		A009D0DC1C9FC92C00966B6D /* AGKMatrix+GLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0A71C9FC92C00966B6D /* AGKMatrix+GLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0DD1C9FC92C00966B6D /* AGKMatrix+GLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D0A81C9FC92C00966B6D /* AGKMatrix+GLKit.m */; };
+		A009D0DE1C9FC92C00966B6D /* CALayer+AGK+Methods.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0A91C9FC92C00966B6D /* CALayer+AGK+Methods.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0DF1C9FC92C00966B6D /* CALayer+AGK+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D0AA1C9FC92C00966B6D /* CALayer+AGK+Methods.m */; };
+		A009D0E01C9FC92C00966B6D /* CALayer+AGK+Properties.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0AB1C9FC92C00966B6D /* CALayer+AGK+Properties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0E11C9FC92C00966B6D /* CALayer+AGK+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D0AC1C9FC92C00966B6D /* CALayer+AGK+Properties.m */; };
+		A009D0E21C9FC92C00966B6D /* CALayer+AGKQuad.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0AD1C9FC92C00966B6D /* CALayer+AGKQuad.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0E31C9FC92C00966B6D /* CALayer+AGKQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D0AE1C9FC92C00966B6D /* CALayer+AGKQuad.m */; };
+		A009D0E41C9FC92C00966B6D /* NSValue+AGKQuad.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0AF1C9FC92C00966B6D /* NSValue+AGKQuad.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0E51C9FC92C00966B6D /* NSValue+AGKQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D0B01C9FC92C00966B6D /* NSValue+AGKQuad.m */; };
+		A009D0E61C9FC92C00966B6D /* UIBezierPath+AGKQuad.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0B11C9FC92C00966B6D /* UIBezierPath+AGKQuad.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0E71C9FC92C00966B6D /* UIBezierPath+AGKQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D0B21C9FC92C00966B6D /* UIBezierPath+AGKQuad.m */; };
+		A009D0E81C9FC92C00966B6D /* UIImage+AGK+CATransform3D.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0B31C9FC92C00966B6D /* UIImage+AGK+CATransform3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0E91C9FC92C00966B6D /* UIImage+AGK+CATransform3D.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D0B41C9FC92C00966B6D /* UIImage+AGK+CATransform3D.m */; };
+		A009D0EA1C9FC92C00966B6D /* UIImage+AGKQuad.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0B51C9FC92C00966B6D /* UIImage+AGKQuad.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0EB1C9FC92C00966B6D /* UIImage+AGKQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D0B61C9FC92C00966B6D /* UIImage+AGKQuad.m */; };
+		A009D0EC1C9FC92C00966B6D /* UIScrollView+AGK+Properties.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0B71C9FC92C00966B6D /* UIScrollView+AGK+Properties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0ED1C9FC92C00966B6D /* UIScrollView+AGK+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D0B81C9FC92C00966B6D /* UIScrollView+AGK+Properties.m */; };
+		A009D0EE1C9FC92C00966B6D /* UIView+AGK+AngleConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0B91C9FC92C00966B6D /* UIView+AGK+AngleConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0EF1C9FC92C00966B6D /* UIView+AGK+AngleConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D0BA1C9FC92C00966B6D /* UIView+AGK+AngleConverter.m */; };
+		A009D0F01C9FC92C00966B6D /* UIView+AGK+Properties.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0BB1C9FC92C00966B6D /* UIView+AGK+Properties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0F11C9FC92C00966B6D /* UIView+AGK+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D0BC1C9FC92C00966B6D /* UIView+AGK+Properties.m */; };
+		A009D0F21C9FC92C00966B6D /* AGGeometryKitClasses.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0BE1C9FC92C00966B6D /* AGGeometryKitClasses.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0F31C9FC92C00966B6D /* AGKCALayerAnimationBlockDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0BF1C9FC92C00966B6D /* AGKCALayerAnimationBlockDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0F41C9FC92C00966B6D /* AGKCALayerAnimationBlockDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D0C01C9FC92C00966B6D /* AGKCALayerAnimationBlockDelegate.m */; };
+		A009D0F51C9FC92C00966B6D /* AGKMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0C11C9FC92C00966B6D /* AGKMatrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0F61C9FC92C00966B6D /* AGKMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D0C21C9FC92C00966B6D /* AGKMatrix.m */; };
+		A009D0F71C9FC92C00966B6D /* AGKTransformPixelMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0C31C9FC92C00966B6D /* AGKTransformPixelMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0F81C9FC92C00966B6D /* AGKTransformPixelMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D0C41C9FC92C00966B6D /* AGKTransformPixelMapper.m */; };
+		A009D0F91C9FC92C00966B6D /* AGGeometryKitCoreGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0C61C9FC92C00966B6D /* AGGeometryKitCoreGraphics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0FA1C9FC92C00966B6D /* CGGeometry+AGGeometryKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0C71C9FC92C00966B6D /* CGGeometry+AGGeometryKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0FB1C9FC92C00966B6D /* CGGeometry+AGGeometryKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D0C81C9FC92C00966B6D /* CGGeometry+AGGeometryKit.m */; };
+		A009D0FC1C9FC92C00966B6D /* CGImageRef+AGK+CATransform3D.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0C91C9FC92C00966B6D /* CGImageRef+AGK+CATransform3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A009D0FD1C9FC92C00966B6D /* CGImageRef+AGK+CATransform3D.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D0CA1C9FC92C00966B6D /* CGImageRef+AGK+CATransform3D.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A009D0871C9FC89200966B6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A009D0721C9FC89200966B6D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A009D07A1C9FC89200966B6D;
+			remoteInfo = AGGeometryKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A009D07B1C9FC89200966B6D /* AGGeometryKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AGGeometryKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A009D07E1C9FC89200966B6D /* AGGeometryKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGGeometryKit.h; sourceTree = "<group>"; };
+		A009D0801C9FC89200966B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A009D0851C9FC89200966B6D /* AGGeometryKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AGGeometryKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A009D08A1C9FC89200966B6D /* AGGeometryKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGGeometryKitTests.m; sourceTree = "<group>"; };
+		A009D08C1C9FC89200966B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A009D0951C9FC92C00966B6D /* AGKBaseDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKBaseDefines.h; sourceTree = "<group>"; };
+		A009D0961C9FC92C00966B6D /* AGKBitOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKBitOperations.h; sourceTree = "<group>"; };
+		A009D0971C9FC92C00966B6D /* AGKCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKCorner.h; sourceTree = "<group>"; };
+		A009D0981C9FC92C00966B6D /* AGKCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKCorner.m; sourceTree = "<group>"; };
+		A009D0991C9FC92C00966B6D /* AGKLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKLine.h; sourceTree = "<group>"; };
+		A009D09A1C9FC92C00966B6D /* AGKLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKLine.m; sourceTree = "<group>"; };
+		A009D09B1C9FC92C00966B6D /* AGKMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKMath.h; sourceTree = "<group>"; };
+		A009D09C1C9FC92C00966B6D /* AGKMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKMath.m; sourceTree = "<group>"; };
+		A009D09D1C9FC92C00966B6D /* AGKQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKQuad.h; sourceTree = "<group>"; };
+		A009D09E1C9FC92C00966B6D /* AGKQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKQuad.m; sourceTree = "<group>"; };
+		A009D09F1C9FC92C00966B6D /* AGKVector3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKVector3D.h; sourceTree = "<group>"; };
+		A009D0A01C9FC92C00966B6D /* AGKVector3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKVector3D.m; sourceTree = "<group>"; };
+		A009D0A21C9FC92C00966B6D /* AGGeometryKitCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGGeometryKitCategories.h; sourceTree = "<group>"; };
+		A009D0A31C9FC92C00966B6D /* AGKMatrix+AGKVector3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AGKMatrix+AGKVector3D.h"; sourceTree = "<group>"; };
+		A009D0A41C9FC92C00966B6D /* AGKMatrix+AGKVector3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AGKMatrix+AGKVector3D.m"; sourceTree = "<group>"; };
+		A009D0A51C9FC92C00966B6D /* AGKMatrix+CATransform3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AGKMatrix+CATransform3D.h"; sourceTree = "<group>"; };
+		A009D0A61C9FC92C00966B6D /* AGKMatrix+CATransform3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AGKMatrix+CATransform3D.m"; sourceTree = "<group>"; };
+		A009D0A71C9FC92C00966B6D /* AGKMatrix+GLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AGKMatrix+GLKit.h"; sourceTree = "<group>"; };
+		A009D0A81C9FC92C00966B6D /* AGKMatrix+GLKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AGKMatrix+GLKit.m"; sourceTree = "<group>"; };
+		A009D0A91C9FC92C00966B6D /* CALayer+AGK+Methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+AGK+Methods.h"; sourceTree = "<group>"; };
+		A009D0AA1C9FC92C00966B6D /* CALayer+AGK+Methods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AGK+Methods.m"; sourceTree = "<group>"; };
+		A009D0AB1C9FC92C00966B6D /* CALayer+AGK+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+AGK+Properties.h"; sourceTree = "<group>"; };
+		A009D0AC1C9FC92C00966B6D /* CALayer+AGK+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AGK+Properties.m"; sourceTree = "<group>"; };
+		A009D0AD1C9FC92C00966B6D /* CALayer+AGKQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+AGKQuad.h"; sourceTree = "<group>"; };
+		A009D0AE1C9FC92C00966B6D /* CALayer+AGKQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AGKQuad.m"; sourceTree = "<group>"; };
+		A009D0AF1C9FC92C00966B6D /* NSValue+AGKQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+AGKQuad.h"; sourceTree = "<group>"; };
+		A009D0B01C9FC92C00966B6D /* NSValue+AGKQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+AGKQuad.m"; sourceTree = "<group>"; };
+		A009D0B11C9FC92C00966B6D /* UIBezierPath+AGKQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+AGKQuad.h"; sourceTree = "<group>"; };
+		A009D0B21C9FC92C00966B6D /* UIBezierPath+AGKQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+AGKQuad.m"; sourceTree = "<group>"; };
+		A009D0B31C9FC92C00966B6D /* UIImage+AGK+CATransform3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AGK+CATransform3D.h"; sourceTree = "<group>"; };
+		A009D0B41C9FC92C00966B6D /* UIImage+AGK+CATransform3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AGK+CATransform3D.m"; sourceTree = "<group>"; };
+		A009D0B51C9FC92C00966B6D /* UIImage+AGKQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AGKQuad.h"; sourceTree = "<group>"; };
+		A009D0B61C9FC92C00966B6D /* UIImage+AGKQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AGKQuad.m"; sourceTree = "<group>"; };
+		A009D0B71C9FC92C00966B6D /* UIScrollView+AGK+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+AGK+Properties.h"; sourceTree = "<group>"; };
+		A009D0B81C9FC92C00966B6D /* UIScrollView+AGK+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+AGK+Properties.m"; sourceTree = "<group>"; };
+		A009D0B91C9FC92C00966B6D /* UIView+AGK+AngleConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AGK+AngleConverter.h"; sourceTree = "<group>"; };
+		A009D0BA1C9FC92C00966B6D /* UIView+AGK+AngleConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AGK+AngleConverter.m"; sourceTree = "<group>"; };
+		A009D0BB1C9FC92C00966B6D /* UIView+AGK+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AGK+Properties.h"; sourceTree = "<group>"; };
+		A009D0BC1C9FC92C00966B6D /* UIView+AGK+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AGK+Properties.m"; sourceTree = "<group>"; };
+		A009D0BE1C9FC92C00966B6D /* AGGeometryKitClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGGeometryKitClasses.h; sourceTree = "<group>"; };
+		A009D0BF1C9FC92C00966B6D /* AGKCALayerAnimationBlockDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKCALayerAnimationBlockDelegate.h; sourceTree = "<group>"; };
+		A009D0C01C9FC92C00966B6D /* AGKCALayerAnimationBlockDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKCALayerAnimationBlockDelegate.m; sourceTree = "<group>"; };
+		A009D0C11C9FC92C00966B6D /* AGKMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKMatrix.h; sourceTree = "<group>"; };
+		A009D0C21C9FC92C00966B6D /* AGKMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKMatrix.m; sourceTree = "<group>"; };
+		A009D0C31C9FC92C00966B6D /* AGKTransformPixelMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKTransformPixelMapper.h; sourceTree = "<group>"; };
+		A009D0C41C9FC92C00966B6D /* AGKTransformPixelMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKTransformPixelMapper.m; sourceTree = "<group>"; };
+		A009D0C61C9FC92C00966B6D /* AGGeometryKitCoreGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGGeometryKitCoreGraphics.h; sourceTree = "<group>"; };
+		A009D0C71C9FC92C00966B6D /* CGGeometry+AGGeometryKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGGeometry+AGGeometryKit.h"; sourceTree = "<group>"; };
+		A009D0C81C9FC92C00966B6D /* CGGeometry+AGGeometryKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+AGGeometryKit.m"; sourceTree = "<group>"; };
+		A009D0C91C9FC92C00966B6D /* CGImageRef+AGK+CATransform3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGImageRef+AGK+CATransform3D.h"; sourceTree = "<group>"; };
+		A009D0CA1C9FC92C00966B6D /* CGImageRef+AGK+CATransform3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGImageRef+AGK+CATransform3D.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A009D0771C9FC89200966B6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A009D0821C9FC89200966B6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A009D0861C9FC89200966B6D /* AGGeometryKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A009D0711C9FC89200966B6D = {
+			isa = PBXGroup;
+			children = (
+				A009D07D1C9FC89200966B6D /* AGGeometryKit */,
+				A009D0891C9FC89200966B6D /* AGGeometryKitTests */,
+				A009D07C1C9FC89200966B6D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A009D07C1C9FC89200966B6D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A009D07B1C9FC89200966B6D /* AGGeometryKit.framework */,
+				A009D0851C9FC89200966B6D /* AGGeometryKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A009D07D1C9FC89200966B6D /* AGGeometryKit */ = {
+			isa = PBXGroup;
+			children = (
+				A009D07E1C9FC89200966B6D /* AGGeometryKit.h */,
+				A009D0951C9FC92C00966B6D /* AGKBaseDefines.h */,
+				A009D0961C9FC92C00966B6D /* AGKBitOperations.h */,
+				A009D0971C9FC92C00966B6D /* AGKCorner.h */,
+				A009D0981C9FC92C00966B6D /* AGKCorner.m */,
+				A009D0991C9FC92C00966B6D /* AGKLine.h */,
+				A009D09A1C9FC92C00966B6D /* AGKLine.m */,
+				A009D09B1C9FC92C00966B6D /* AGKMath.h */,
+				A009D09C1C9FC92C00966B6D /* AGKMath.m */,
+				A009D09D1C9FC92C00966B6D /* AGKQuad.h */,
+				A009D09E1C9FC92C00966B6D /* AGKQuad.m */,
+				A009D09F1C9FC92C00966B6D /* AGKVector3D.h */,
+				A009D0A01C9FC92C00966B6D /* AGKVector3D.m */,
+				A009D0A11C9FC92C00966B6D /* Categories */,
+				A009D0BD1C9FC92C00966B6D /* Classes */,
+				A009D0C51C9FC92C00966B6D /* CoreGraphics_Extensions */,
+				A009D0801C9FC89200966B6D /* Info.plist */,
+			);
+			path = AGGeometryKit;
+			sourceTree = "<group>";
+		};
+		A009D0891C9FC89200966B6D /* AGGeometryKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				A009D08A1C9FC89200966B6D /* AGGeometryKitTests.m */,
+				A009D08C1C9FC89200966B6D /* Info.plist */,
+			);
+			path = AGGeometryKitTests;
+			sourceTree = "<group>";
+		};
+		A009D0A11C9FC92C00966B6D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A009D0A21C9FC92C00966B6D /* AGGeometryKitCategories.h */,
+				A009D0A31C9FC92C00966B6D /* AGKMatrix+AGKVector3D.h */,
+				A009D0A41C9FC92C00966B6D /* AGKMatrix+AGKVector3D.m */,
+				A009D0A51C9FC92C00966B6D /* AGKMatrix+CATransform3D.h */,
+				A009D0A61C9FC92C00966B6D /* AGKMatrix+CATransform3D.m */,
+				A009D0A71C9FC92C00966B6D /* AGKMatrix+GLKit.h */,
+				A009D0A81C9FC92C00966B6D /* AGKMatrix+GLKit.m */,
+				A009D0A91C9FC92C00966B6D /* CALayer+AGK+Methods.h */,
+				A009D0AA1C9FC92C00966B6D /* CALayer+AGK+Methods.m */,
+				A009D0AB1C9FC92C00966B6D /* CALayer+AGK+Properties.h */,
+				A009D0AC1C9FC92C00966B6D /* CALayer+AGK+Properties.m */,
+				A009D0AD1C9FC92C00966B6D /* CALayer+AGKQuad.h */,
+				A009D0AE1C9FC92C00966B6D /* CALayer+AGKQuad.m */,
+				A009D0AF1C9FC92C00966B6D /* NSValue+AGKQuad.h */,
+				A009D0B01C9FC92C00966B6D /* NSValue+AGKQuad.m */,
+				A009D0B11C9FC92C00966B6D /* UIBezierPath+AGKQuad.h */,
+				A009D0B21C9FC92C00966B6D /* UIBezierPath+AGKQuad.m */,
+				A009D0B31C9FC92C00966B6D /* UIImage+AGK+CATransform3D.h */,
+				A009D0B41C9FC92C00966B6D /* UIImage+AGK+CATransform3D.m */,
+				A009D0B51C9FC92C00966B6D /* UIImage+AGKQuad.h */,
+				A009D0B61C9FC92C00966B6D /* UIImage+AGKQuad.m */,
+				A009D0B71C9FC92C00966B6D /* UIScrollView+AGK+Properties.h */,
+				A009D0B81C9FC92C00966B6D /* UIScrollView+AGK+Properties.m */,
+				A009D0B91C9FC92C00966B6D /* UIView+AGK+AngleConverter.h */,
+				A009D0BA1C9FC92C00966B6D /* UIView+AGK+AngleConverter.m */,
+				A009D0BB1C9FC92C00966B6D /* UIView+AGK+Properties.h */,
+				A009D0BC1C9FC92C00966B6D /* UIView+AGK+Properties.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		A009D0BD1C9FC92C00966B6D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A009D0BE1C9FC92C00966B6D /* AGGeometryKitClasses.h */,
+				A009D0BF1C9FC92C00966B6D /* AGKCALayerAnimationBlockDelegate.h */,
+				A009D0C01C9FC92C00966B6D /* AGKCALayerAnimationBlockDelegate.m */,
+				A009D0C11C9FC92C00966B6D /* AGKMatrix.h */,
+				A009D0C21C9FC92C00966B6D /* AGKMatrix.m */,
+				A009D0C31C9FC92C00966B6D /* AGKTransformPixelMapper.h */,
+				A009D0C41C9FC92C00966B6D /* AGKTransformPixelMapper.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A009D0C51C9FC92C00966B6D /* CoreGraphics_Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A009D0C61C9FC92C00966B6D /* AGGeometryKitCoreGraphics.h */,
+				A009D0C71C9FC92C00966B6D /* CGGeometry+AGGeometryKit.h */,
+				A009D0C81C9FC92C00966B6D /* CGGeometry+AGGeometryKit.m */,
+				A009D0C91C9FC92C00966B6D /* CGImageRef+AGK+CATransform3D.h */,
+				A009D0CA1C9FC92C00966B6D /* CGImageRef+AGK+CATransform3D.m */,
+			);
+			path = CoreGraphics_Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A009D0781C9FC89200966B6D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A009D0F51C9FC92C00966B6D /* AGKMatrix.h in Headers */,
+				A009D0D51C9FC92C00966B6D /* AGKVector3D.h in Headers */,
+				A009D0EC1C9FC92C00966B6D /* UIScrollView+AGK+Properties.h in Headers */,
+				A009D0F31C9FC92C00966B6D /* AGKCALayerAnimationBlockDelegate.h in Headers */,
+				A009D0DC1C9FC92C00966B6D /* AGKMatrix+GLKit.h in Headers */,
+				A009D0CB1C9FC92C00966B6D /* AGKBaseDefines.h in Headers */,
+				A009D0F21C9FC92C00966B6D /* AGGeometryKitClasses.h in Headers */,
+				A009D0F71C9FC92C00966B6D /* AGKTransformPixelMapper.h in Headers */,
+				A009D0F01C9FC92C00966B6D /* UIView+AGK+Properties.h in Headers */,
+				A009D0D71C9FC92C00966B6D /* AGGeometryKitCategories.h in Headers */,
+				A009D0F91C9FC92C00966B6D /* AGGeometryKitCoreGraphics.h in Headers */,
+				A009D0E81C9FC92C00966B6D /* UIImage+AGK+CATransform3D.h in Headers */,
+				A009D0D81C9FC92C00966B6D /* AGKMatrix+AGKVector3D.h in Headers */,
+				A009D0DE1C9FC92C00966B6D /* CALayer+AGK+Methods.h in Headers */,
+				A009D0CD1C9FC92C00966B6D /* AGKCorner.h in Headers */,
+				A009D07F1C9FC89200966B6D /* AGGeometryKit.h in Headers */,
+				A009D0DA1C9FC92C00966B6D /* AGKMatrix+CATransform3D.h in Headers */,
+				A009D0D31C9FC92C00966B6D /* AGKQuad.h in Headers */,
+				A009D0E21C9FC92C00966B6D /* CALayer+AGKQuad.h in Headers */,
+				A009D0FC1C9FC92C00966B6D /* CGImageRef+AGK+CATransform3D.h in Headers */,
+				A009D0EE1C9FC92C00966B6D /* UIView+AGK+AngleConverter.h in Headers */,
+				A009D0CF1C9FC92C00966B6D /* AGKLine.h in Headers */,
+				A009D0FA1C9FC92C00966B6D /* CGGeometry+AGGeometryKit.h in Headers */,
+				A009D0D11C9FC92C00966B6D /* AGKMath.h in Headers */,
+				A009D0EA1C9FC92C00966B6D /* UIImage+AGKQuad.h in Headers */,
+				A009D0E61C9FC92C00966B6D /* UIBezierPath+AGKQuad.h in Headers */,
+				A009D0CC1C9FC92C00966B6D /* AGKBitOperations.h in Headers */,
+				A009D0E41C9FC92C00966B6D /* NSValue+AGKQuad.h in Headers */,
+				A009D0E01C9FC92C00966B6D /* CALayer+AGK+Properties.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A009D07A1C9FC89200966B6D /* AGGeometryKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A009D08F1C9FC89200966B6D /* Build configuration list for PBXNativeTarget "AGGeometryKit" */;
+			buildPhases = (
+				A009D0761C9FC89200966B6D /* Sources */,
+				A009D0771C9FC89200966B6D /* Frameworks */,
+				A009D0781C9FC89200966B6D /* Headers */,
+				A009D0791C9FC89200966B6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AGGeometryKit;
+			productName = AGGeometryKit;
+			productReference = A009D07B1C9FC89200966B6D /* AGGeometryKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A009D0841C9FC89200966B6D /* AGGeometryKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A009D0921C9FC89200966B6D /* Build configuration list for PBXNativeTarget "AGGeometryKitTests" */;
+			buildPhases = (
+				A009D0811C9FC89200966B6D /* Sources */,
+				A009D0821C9FC89200966B6D /* Frameworks */,
+				A009D0831C9FC89200966B6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A009D0881C9FC89200966B6D /* PBXTargetDependency */,
+			);
+			name = AGGeometryKitTests;
+			productName = AGGeometryKitTests;
+			productReference = A009D0851C9FC89200966B6D /* AGGeometryKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A009D0721C9FC89200966B6D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = hfossli;
+				TargetAttributes = {
+					A009D07A1C9FC89200966B6D = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					A009D0841C9FC89200966B6D = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = A009D0751C9FC89200966B6D /* Build configuration list for PBXProject "AGGeometryKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A009D0711C9FC89200966B6D;
+			productRefGroup = A009D07C1C9FC89200966B6D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A009D07A1C9FC89200966B6D /* AGGeometryKit */,
+				A009D0841C9FC89200966B6D /* AGGeometryKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A009D0791C9FC89200966B6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A009D0831C9FC89200966B6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A009D0761C9FC89200966B6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A009D0DB1C9FC92C00966B6D /* AGKMatrix+CATransform3D.m in Sources */,
+				A009D0EB1C9FC92C00966B6D /* UIImage+AGKQuad.m in Sources */,
+				A009D0FD1C9FC92C00966B6D /* CGImageRef+AGK+CATransform3D.m in Sources */,
+				A009D0CE1C9FC92C00966B6D /* AGKCorner.m in Sources */,
+				A009D0EF1C9FC92C00966B6D /* UIView+AGK+AngleConverter.m in Sources */,
+				A009D0DD1C9FC92C00966B6D /* AGKMatrix+GLKit.m in Sources */,
+				A009D0E51C9FC92C00966B6D /* NSValue+AGKQuad.m in Sources */,
+				A009D0F41C9FC92C00966B6D /* AGKCALayerAnimationBlockDelegate.m in Sources */,
+				A009D0D61C9FC92C00966B6D /* AGKVector3D.m in Sources */,
+				A009D0FB1C9FC92C00966B6D /* CGGeometry+AGGeometryKit.m in Sources */,
+				A009D0ED1C9FC92C00966B6D /* UIScrollView+AGK+Properties.m in Sources */,
+				A009D0DF1C9FC92C00966B6D /* CALayer+AGK+Methods.m in Sources */,
+				A009D0F61C9FC92C00966B6D /* AGKMatrix.m in Sources */,
+				A009D0D21C9FC92C00966B6D /* AGKMath.m in Sources */,
+				A009D0E11C9FC92C00966B6D /* CALayer+AGK+Properties.m in Sources */,
+				A009D0F11C9FC92C00966B6D /* UIView+AGK+Properties.m in Sources */,
+				A009D0F81C9FC92C00966B6D /* AGKTransformPixelMapper.m in Sources */,
+				A009D0D41C9FC92C00966B6D /* AGKQuad.m in Sources */,
+				A009D0E91C9FC92C00966B6D /* UIImage+AGK+CATransform3D.m in Sources */,
+				A009D0E71C9FC92C00966B6D /* UIBezierPath+AGKQuad.m in Sources */,
+				A009D0D91C9FC92C00966B6D /* AGKMatrix+AGKVector3D.m in Sources */,
+				A009D0D01C9FC92C00966B6D /* AGKLine.m in Sources */,
+				A009D0E31C9FC92C00966B6D /* CALayer+AGKQuad.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A009D0811C9FC89200966B6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A009D08B1C9FC89200966B6D /* AGGeometryKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A009D0881C9FC89200966B6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A009D07A1C9FC89200966B6D /* AGGeometryKit */;
+			targetProxy = A009D0871C9FC89200966B6D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A009D08D1C9FC89200966B6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A009D08E1C9FC89200966B6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A009D0901C9FC89200966B6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AGGeometryKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hfossli.AGGeometryKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A009D0911C9FC89200966B6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AGGeometryKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hfossli.AGGeometryKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A009D0931C9FC89200966B6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AGGeometryKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hfossli.AGGeometryKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A009D0941C9FC89200966B6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AGGeometryKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hfossli.AGGeometryKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A009D0751C9FC89200966B6D /* Build configuration list for PBXProject "AGGeometryKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A009D08D1C9FC89200966B6D /* Debug */,
+				A009D08E1C9FC89200966B6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A009D08F1C9FC89200966B6D /* Build configuration list for PBXNativeTarget "AGGeometryKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A009D0901C9FC89200966B6D /* Debug */,
+				A009D0911C9FC89200966B6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A009D0921C9FC89200966B6D /* Build configuration list for PBXNativeTarget "AGGeometryKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A009D0931C9FC89200966B6D /* Debug */,
+				A009D0941C9FC89200966B6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A009D0721C9FC89200966B6D /* Project object */;
+}

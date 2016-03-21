@@ -1,7 +1,7 @@
 //
-// Author: Jørund Almås <jalmaas@agens.no>
+// Author: Håvard Fossli <hfossli@agens.no>
 //
-// Copyright (c) 2015 Agens AS (http://agens.no/)
+// Copyright (c) 2013 Agens AS (http://agens.no/)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -21,17 +21,30 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+@import CoreGraphics;
+@import UIKit;
 
-@interface UIScrollView (AGGeometryKit)
+#import "AGKBaseDefines.h"
 
-@property (nonatomic, assign) CGFloat contentSizeWidth;
-@property (nonatomic, assign) CGFloat contentSizeHeight;
-@property (nonatomic, assign) CGFloat contentOffsetX;
-@property (nonatomic, assign) CGFloat contentOffsetY;
-@property (nonatomic, assign) CGFloat contentInsetTop;
-@property (nonatomic, assign) CGFloat contentInsetLeft;
-@property (nonatomic, assign) CGFloat contentInsetBottom;
-@property (nonatomic, assign) CGFloat contentInsetRight;
+AGK_EXTERN_C_BEGIN
 
-@end
+typedef enum AGKSide {
+    AGKSideTop = 1 << 0,
+    AGKSideBottom = 1 << 1,
+    AGKSideLeft = 1 << 2,
+    AGKSideRight = 1 << 3,
+} AGKSide;
+
+typedef enum {
+    AGKCornerTopLeft = AGKSideTop | AGKSideLeft,
+    AGKCornerTopRight = AGKSideTop | AGKSideRight,
+    AGKCornerBottomLeft = AGKSideBottom | AGKSideLeft,
+    AGKCornerBottomRight = AGKSideBottom | AGKSideRight,
+} AGKCorner;
+
+BOOL AGKCornerIsOnSide(AGKCorner corner, AGKSide side);
+CGPoint AGKCornerConvertToAnchorPoint(AGKCorner corner);
+CGPoint AGKCornerConvertToPointForRect(AGKCorner corner, CGRect rect);
+
+AGK_EXTERN_C_END

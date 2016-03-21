@@ -1,6 +1,5 @@
 //
-// Authors:
-// Logan Holmes @snown
+// Author: Håvard Fossli <hfossli@agens.no>
 //
 // Copyright (c) 2013 Agens AS (http://agens.no/)
 //
@@ -22,12 +21,18 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "AGKMatrix.h"
+@import Foundation;
+@import CoreGraphics;
+@import UIKit;
 
-@interface AGKMatrix (CATransform3D)
+#import "AGKBaseDefines.h"
 
-+ (instancetype)matrixWithCATransform3D:(CATransform3D)transform;
+AGK_EXTERN_C_BEGIN
 
-- (CATransform3D)caTransform3DValue;
+CGImageRef CGImageDrawWithCATransform3D_AGK(CGImageRef imageRef,
+                                            CATransform3D transform,
+                                            CGPoint anchorPoint,
+                                            CGSize size,
+                                            CGFloat scale) CF_RETURNS_RETAINED;
 
-@end
+AGK_EXTERN_C_END
