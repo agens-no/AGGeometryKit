@@ -61,6 +61,7 @@
 		A009D0FB1C9FC92C00966B6D /* CGGeometry+AGGeometryKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D0C81C9FC92C00966B6D /* CGGeometry+AGGeometryKit.m */; };
 		A009D0FC1C9FC92C00966B6D /* CGImageRef+AGK+CATransform3D.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0C91C9FC92C00966B6D /* CGImageRef+AGK+CATransform3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A009D0FD1C9FC92C00966B6D /* CGImageRef+AGK+CATransform3D.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D0CA1C9FC92C00966B6D /* CGImageRef+AGK+CATransform3D.m */; };
+		A0B744361CBFEEFE0017A9BC /* AGGeometryKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A009D07B1C9FC89200966B6D /* AGGeometryKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A0F6914B1CBF5DE400EBC692 /* AGKBitOperationsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F6913C1CBF5DE400EBC692 /* AGKBitOperationsTest.m */; };
 		A0F6914C1CBF5DE400EBC692 /* AGKCornerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F6913D1CBF5DE400EBC692 /* AGKCornerTest.m */; };
 		A0F6914D1CBF5DE400EBC692 /* AGKLineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F6913E1CBF5DE400EBC692 /* AGKLineTest.m */; };
@@ -87,6 +88,19 @@
 			remoteInfo = AGGeometryKit;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A0B744351CBFEEEF0017A9BC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A0B744361CBFEEFE0017A9BC /* AGGeometryKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A009D07B1C9FC89200966B6D /* AGGeometryKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AGGeometryKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -375,6 +389,7 @@
 				A009D0811C9FC89200966B6D /* Sources */,
 				A009D0821C9FC89200966B6D /* Frameworks */,
 				A009D0831C9FC89200966B6D /* Resources */,
+				A0B744351CBFEEEF0017A9BC /* CopyFiles */,
 			);
 			buildRules = (
 			);
