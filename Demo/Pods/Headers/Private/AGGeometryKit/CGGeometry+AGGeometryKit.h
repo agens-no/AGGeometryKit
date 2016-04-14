@@ -1,1 +1,1 @@
-../../../../../Source/CoreGraphics_Extensions/CGGeometry+AGGeometryKit.h
+../../../../../AGGeometryKit/CoreGraphics_Extensions/CGGeometry+AGGeometryKit.h

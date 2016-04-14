@@ -1,1 +1,1 @@
-../../../../../Source/Categories/UIView+AGK+Properties.h
+../../../../../AGGeometryKit/Categories/UIView+AGK+Properties.h

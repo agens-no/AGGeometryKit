@@ -9,12 +9,10 @@
 /* Begin PBXBuildFile section */
 		4C7794601B924B79003290EE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C77945F1B924B79003290EE /* LaunchScreen.xib */; };
 		61FF9DF99F887B91B1DF3078 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 060A54D4EE5A1EB1E42AE66E /* Pods.framework */; };
-		99CC50876887B6E1CB999BCF /* Pods_AGGeometryKitDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E939167969D5D0301DD2EF70 /* Pods_AGGeometryKitDemoTests.framework */; };
 		A36D53EF1B5E7BAC0040BDDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D53EE1B5E7BAC0040BDDC /* main.m */; };
 		A36D53F21B5E7BAC0040BDDC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D53F11B5E7BAC0040BDDC /* AppDelegate.m */; };
 		A36D53FB1B5E7BAC0040BDDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A36D53F91B5E7BAC0040BDDC /* Main.storyboard */; };
 		A36D53FD1B5E7BAC0040BDDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A36D53FC1B5E7BAC0040BDDC /* Assets.xcassets */; };
-		A36D540B1B5E7BAC0040BDDC /* AGGeometryKitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D540A1B5E7BAC0040BDDC /* AGGeometryKitDemoTests.m */; };
 		A36D54231B5E7C650040BDDC /* AngleConverterExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36D54191B5E7C650040BDDC /* AngleConverterExample.swift */; };
 		A36D54251B5E7C650040BDDC /* CATransform3DWithUIImageExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D541C1B5E7C650040BDDC /* CATransform3DWithUIImageExample.m */; };
 		A36D54271B5E7C650040BDDC /* QuadAnimationExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36D541E1B5E7C650040BDDC /* QuadAnimationExample.swift */; };
@@ -36,32 +34,7 @@
 		A36D544B1B5E7C740040BDDC /* sample_image7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A36D543C1B5E7C740040BDDC /* sample_image7.jpg */; };
 		A36D544C1B5E7C740040BDDC /* sample_image7@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A36D543D1B5E7C740040BDDC /* sample_image7@2x.jpg */; };
 		A36D544F1B5E7C8A0040BDDC /* JAValueToString.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D544E1B5E7C8A0040BDDC /* JAValueToString.m */; };
-		A36D546F1B5E823C0040BDDC /* AGKBitOperationsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D54511B5E822D0040BDDC /* AGKBitOperationsTest.m */; };
-		A36D54701B5E823C0040BDDC /* AGKCornerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D54521B5E822D0040BDDC /* AGKCornerTest.m */; };
-		A36D54711B5E823C0040BDDC /* AGKLineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D54531B5E822D0040BDDC /* AGKLineTest.m */; };
-		A36D54721B5E823C0040BDDC /* AGKMathTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D54541B5E822D0040BDDC /* AGKMathTest.m */; };
-		A36D54731B5E823C0040BDDC /* AGKMatrix+AGKVector3DTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D54551B5E822D0040BDDC /* AGKMatrix+AGKVector3DTest.m */; };
-		A36D54741B5E823C0040BDDC /* AGKMatrix+CATransform3DTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D54561B5E822D0040BDDC /* AGKMatrix+CATransform3DTest.m */; };
-		A36D54751B5E823C0040BDDC /* AGKMatrixTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D54571B5E822D0040BDDC /* AGKMatrixTest.m */; };
-		A36D54761B5E823C0040BDDC /* AGKQuadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D54581B5E822D0040BDDC /* AGKQuadTest.m */; };
-		A36D54771B5E823C0040BDDC /* AGKVector3DTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D54591B5E822D0040BDDC /* AGKVector3DTest.m */; };
-		A36D54781B5E823C0040BDDC /* CALayer+AGK+PropertiesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D545A1B5E822D0040BDDC /* CALayer+AGK+PropertiesTest.m */; };
-		A36D54791B5E823C0040BDDC /* CALayer+AGKQuadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D545B1B5E822D0040BDDC /* CALayer+AGKQuadTest.m */; };
-		A36D547A1B5E823C0040BDDC /* CGGeometry+AGGeometryKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D545C1B5E822D0040BDDC /* CGGeometry+AGGeometryKitTest.m */; };
-		A36D547B1B5E823C0040BDDC /* NSValue+AGKQuadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D545D1B5E822D0040BDDC /* NSValue+AGKQuadTest.m */; };
-		A36D547C1B5E823C0040BDDC /* UIView+AGK+AngleConverterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D545E1B5E822D0040BDDC /* UIView+AGK+AngleConverterTest.m */; };
-		A36D547D1B5E823C0040BDDC /* UIView+AGK+PropertiesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A36D545F1B5E822D0040BDDC /* UIView+AGK+PropertiesTest.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A36D54071B5E7BAC0040BDDC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A36D53E21B5E7BAC0040BDDC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A36D53E91B5E7BAC0040BDDC;
-			remoteInfo = AGGeometryKitDemo;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		060A54D4EE5A1EB1E42AE66E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,9 +50,6 @@
 		A36D53FA1B5E7BAC0040BDDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A36D53FC1B5E7BAC0040BDDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A36D54011B5E7BAC0040BDDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A36D54061B5E7BAC0040BDDC /* AGGeometryKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AGGeometryKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A36D540A1B5E7BAC0040BDDC /* AGGeometryKitDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGGeometryKitDemoTests.m; sourceTree = "<group>"; };
-		A36D540C1B5E7BAC0040BDDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A36D54151B5E7C010040BDDC /* AGGeometryKitDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AGGeometryKitDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		A36D54191B5E7C650040BDDC /* AngleConverterExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AngleConverterExample.swift; sourceTree = "<group>"; };
 		A36D541B1B5E7C650040BDDC /* CATransform3DWithUIImageExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransform3DWithUIImageExample.h; sourceTree = "<group>"; };
@@ -121,7 +91,6 @@
 		A36D545D1B5E822D0040BDDC /* NSValue+AGKQuadTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+AGKQuadTest.m"; sourceTree = "<group>"; };
 		A36D545E1B5E822D0040BDDC /* UIView+AGK+AngleConverterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AGK+AngleConverterTest.m"; sourceTree = "<group>"; };
 		A36D545F1B5E822D0040BDDC /* UIView+AGK+PropertiesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AGK+PropertiesTest.m"; sourceTree = "<group>"; };
-		E939167969D5D0301DD2EF70 /* Pods_AGGeometryKitDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AGGeometryKitDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,14 +99,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				61FF9DF99F887B91B1DF3078 /* Pods.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A36D54031B5E7BAC0040BDDC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				99CC50876887B6E1CB999BCF /* Pods_AGGeometryKitDemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				A36D53EC1B5E7BAC0040BDDC /* AGGeometryKitDemo */,
-				A36D54091B5E7BAC0040BDDC /* AGGeometryKitDemoTests */,
 				A36D53EB1B5E7BAC0040BDDC /* Products */,
 				4B9B27F170401D778F2EC02E /* Pods */,
 				CA6F6D58C54EA622F09FA915 /* Frameworks */,
@@ -170,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				A36D53EA1B5E7BAC0040BDDC /* AGGeometryKitDemo.app */,
-				A36D54061B5E7BAC0040BDDC /* AGGeometryKitDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,15 +162,6 @@
 				A36D53EE1B5E7BAC0040BDDC /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A36D54091B5E7BAC0040BDDC /* AGGeometryKitDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				A36D540A1B5E7BAC0040BDDC /* AGGeometryKitDemoTests.m */,
-				A36D540C1B5E7BAC0040BDDC /* Info.plist */,
-			);
-			path = AGGeometryKitDemoTests;
 			sourceTree = "<group>";
 		};
 		A36D54181B5E7C650040BDDC /* Demos */ = {
@@ -275,7 +225,6 @@
 			isa = PBXGroup;
 			children = (
 				060A54D4EE5A1EB1E42AE66E /* Pods.framework */,
-				E939167969D5D0301DD2EF70 /* Pods_AGGeometryKitDemoTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -303,27 +252,6 @@
 			productReference = A36D53EA1B5E7BAC0040BDDC /* AGGeometryKitDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A36D54051B5E7BAC0040BDDC /* AGGeometryKitDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A36D54121B5E7BAC0040BDDC /* Build configuration list for PBXNativeTarget "AGGeometryKitDemoTests" */;
-			buildPhases = (
-				CA1AE931742F0AD275216B5B /* Check Pods Manifest.lock */,
-				A36D54021B5E7BAC0040BDDC /* Sources */,
-				A36D54031B5E7BAC0040BDDC /* Frameworks */,
-				A36D54041B5E7BAC0040BDDC /* Resources */,
-				04381086531882F1225B4693 /* Embed Pods Frameworks */,
-				83F66186028F5BDF260D1284 /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A36D54081B5E7BAC0040BDDC /* PBXTargetDependency */,
-			);
-			name = AGGeometryKitDemoTests;
-			productName = AGGeometryKitDemoTests;
-			productReference = A36D54061B5E7BAC0040BDDC /* AGGeometryKitDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -336,10 +264,6 @@
 				TargetAttributes = {
 					A36D53E91B5E7BAC0040BDDC = {
 						CreatedOnToolsVersion = 7.0;
-					};
-					A36D54051B5E7BAC0040BDDC = {
-						CreatedOnToolsVersion = 7.0;
-						TestTargetID = A36D53E91B5E7BAC0040BDDC;
 					};
 				};
 			};
@@ -357,7 +281,6 @@
 			projectRoot = "";
 			targets = (
 				A36D53E91B5E7BAC0040BDDC /* AGGeometryKitDemo */,
-				A36D54051B5E7BAC0040BDDC /* AGGeometryKitDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -388,13 +311,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A36D54041B5E7BAC0040BDDC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -413,21 +329,6 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		04381086531882F1225B4693 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AGGeometryKitDemoTests/Pods-AGGeometryKitDemoTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		787992AAAF3F7564DF122DBF /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -443,21 +344,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		83F66186028F5BDF260D1284 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AGGeometryKitDemoTests/Pods-AGGeometryKitDemoTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AEA48B94B72316D2DC80C97E /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -471,21 +357,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CA1AE931742F0AD275216B5B /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -506,38 +377,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A36D54021B5E7BAC0040BDDC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A36D54741B5E823C0040BDDC /* AGKMatrix+CATransform3DTest.m in Sources */,
-				A36D540B1B5E7BAC0040BDDC /* AGGeometryKitDemoTests.m in Sources */,
-				A36D54751B5E823C0040BDDC /* AGKMatrixTest.m in Sources */,
-				A36D547B1B5E823C0040BDDC /* NSValue+AGKQuadTest.m in Sources */,
-				A36D54771B5E823C0040BDDC /* AGKVector3DTest.m in Sources */,
-				A36D547D1B5E823C0040BDDC /* UIView+AGK+PropertiesTest.m in Sources */,
-				A36D54701B5E823C0040BDDC /* AGKCornerTest.m in Sources */,
-				A36D54781B5E823C0040BDDC /* CALayer+AGK+PropertiesTest.m in Sources */,
-				A36D54731B5E823C0040BDDC /* AGKMatrix+AGKVector3DTest.m in Sources */,
-				A36D54761B5E823C0040BDDC /* AGKQuadTest.m in Sources */,
-				A36D546F1B5E823C0040BDDC /* AGKBitOperationsTest.m in Sources */,
-				A36D54711B5E823C0040BDDC /* AGKLineTest.m in Sources */,
-				A36D547A1B5E823C0040BDDC /* CGGeometry+AGGeometryKitTest.m in Sources */,
-				A36D547C1B5E823C0040BDDC /* UIView+AGK+AngleConverterTest.m in Sources */,
-				A36D54791B5E823C0040BDDC /* CALayer+AGKQuadTest.m in Sources */,
-				A36D54721B5E823C0040BDDC /* AGKMathTest.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A36D54081B5E7BAC0040BDDC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A36D53E91B5E7BAC0040BDDC /* AGGeometryKitDemo */;
-			targetProxy = A36D54071B5E7BAC0040BDDC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A36D53F91B5E7BAC0040BDDC /* Main.storyboard */ = {
@@ -595,44 +435,6 @@
 			};
 			name = Debug;
 		};
-		A36D540E1B5E7BAC0040BDDC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		A36D54101B5E7BAC0040BDDC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5A77438F161BDFDCE9EF9F6F /* Pods.debug.xcconfig */;
@@ -650,48 +452,6 @@
 			};
 			name = Debug;
 		};
-		A36D54111B5E7BAC0040BDDC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19F52806333C6AF2C9C69C97 /* Pods.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = AGGeometryKitDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = no.agens.AGGeometryKitDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "AGGeometryKitDemo/AGGeometryKitDemo-Bridging-Header.h";
-				TARGETED_DEVICE_FAMILY = 2;
-			};
-			name = Release;
-		};
-		A36D54131B5E7BAC0040BDDC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7BAD5A6856D30B8B0EF12AA0 /* Pods-AGGeometryKitDemoTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = AGGeometryKitDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = no.agens.AGGeometryKitDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AGGeometryKitDemo.app/AGGeometryKitDemo";
-			};
-			name = Debug;
-		};
-		A36D54141B5E7BAC0040BDDC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 231FA881FD76B5DBAA64A071 /* Pods-AGGeometryKitDemoTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = AGGeometryKitDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = no.agens.AGGeometryKitDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AGGeometryKitDemo.app/AGGeometryKitDemo";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -699,28 +459,17 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A36D540D1B5E7BAC0040BDDC /* Debug */,
-				A36D540E1B5E7BAC0040BDDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		A36D540F1B5E7BAC0040BDDC /* Build configuration list for PBXNativeTarget "AGGeometryKitDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A36D54101B5E7BAC0040BDDC /* Debug */,
-				A36D54111B5E7BAC0040BDDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A36D54121B5E7BAC0040BDDC /* Build configuration list for PBXNativeTarget "AGGeometryKitDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A36D54131B5E7BAC0040BDDC /* Debug */,
-				A36D54141B5E7BAC0040BDDC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

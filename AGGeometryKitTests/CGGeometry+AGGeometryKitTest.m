@@ -27,10 +27,6 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <XCTest/XCTest.h>
-
-#define EXP_SHORTHAND
-#import "Expecta.h"
 
 static double E = 0.001;
 
@@ -42,7 +38,7 @@ static double E = 0.001;
 @implementation AGGeometryTest
 
 - (void)testCGPointForAnchorPointInRect
-{    
+{
     CGRect rect = CGRectMake(50, 80, 350, 270);
     CGPoint point = CGPointConvertFromAnchorPoint_AGK(CGPointMake(0.5, 0.8), rect);
     CGPoint expected = CGPointMake(50.0 + (350.0 * 0.5), 80 + (270 * 0.8));
@@ -94,30 +90,30 @@ static double E = 0.001;
         CGRect rectp07 = CGRectInterpolate_AGK(rect1, rect2, 0.7f);
         CGRect rectp1 = CGRectInterpolate_AGK(rect1, rect2, 1.0f);
         
-        expect(rectp00.origin.x).to.beCloseToWithin(10, E);
-        expect(rectp00.origin.y).to.beCloseToWithin(50, E);
-        expect(rectp00.size.width).to.beCloseToWithin(150, E);
-        expect(rectp00.size.height).to.beCloseToWithin(100, E);
+        XCTAssertEqualWithAccuracy(rectp00.origin.x, 10, E);
+        XCTAssertEqualWithAccuracy(rectp00.origin.y, 50, E);
+        XCTAssertEqualWithAccuracy(rectp00.size.width, 150, E);
+        XCTAssertEqualWithAccuracy(rectp00.size.height, 100, E);
         
-        expect(rectp03.origin.x).to.beCloseToWithin(28, E);
-        expect(rectp03.origin.y).to.beCloseToWithin(53, E);
-        expect(rectp03.size.width).to.beCloseToWithin(165, E);
-        expect(rectp03.size.height).to.beCloseToWithin(82, E);
+        XCTAssertEqualWithAccuracy(rectp03.origin.x, 28, E);
+        XCTAssertEqualWithAccuracy(rectp03.origin.y, 53, E);
+        XCTAssertEqualWithAccuracy(rectp03.size.width, 165, E);
+        XCTAssertEqualWithAccuracy(rectp03.size.height, 82, E);
         
-        expect(rectp05.origin.x).to.beCloseToWithin(40, E);
-        expect(rectp05.origin.y).to.beCloseToWithin(55, E);
-        expect(rectp05.size.width).to.beCloseToWithin(175, E);
-        expect(rectp05.size.height).to.beCloseToWithin(70, E);
+        XCTAssertEqualWithAccuracy(rectp05.origin.x, 40, E);
+        XCTAssertEqualWithAccuracy(rectp05.origin.y, 55, E);
+        XCTAssertEqualWithAccuracy(rectp05.size.width, 175, E);
+        XCTAssertEqualWithAccuracy(rectp05.size.height, 70, E);
         
-        expect(rectp07.origin.x).to.beCloseToWithin(52, E);
-        expect(rectp07.origin.y).to.beCloseToWithin(57, E);
-        expect(rectp07.size.width).to.beCloseToWithin(185, E);
-        expect(rectp07.size.height).to.beCloseToWithin(58, E);
+        XCTAssertEqualWithAccuracy(rectp07.origin.x, 52, E);
+        XCTAssertEqualWithAccuracy(rectp07.origin.y, 57, E);
+        XCTAssertEqualWithAccuracy(rectp07.size.width, 185, E);
+        XCTAssertEqualWithAccuracy(rectp07.size.height, 58, E);
         
-        expect(rectp1.origin.x).to.beCloseToWithin(70, E);
-        expect(rectp1.origin.y).to.beCloseToWithin(60, E);
-        expect(rectp1.size.width).to.beCloseToWithin(200, E);
-        expect(rectp1.size.height).to.beCloseToWithin(40, E);
+        XCTAssertEqualWithAccuracy(rectp1.origin.x, 70, E);
+        XCTAssertEqualWithAccuracy(rectp1.origin.y, 60, E);
+        XCTAssertEqualWithAccuracy(rectp1.size.width, 200, E);
+        XCTAssertEqualWithAccuracy(rectp1.size.height, 40, E);
     }
     
     {
@@ -127,22 +123,22 @@ static double E = 0.001;
         CGRect rectp03 = CGRectInterpolate_AGK(rect1, rect2, 0.3);
         CGRect rectp1 = CGRectInterpolate_AGK(rect1, rect2, 1.0);
         
-        expect(rectp00.origin.x).to.beCloseToWithin(10, E);
-        expect(rectp00.origin.y).to.beCloseToWithin(50, E);
-        expect(rectp00.size.width).to.beCloseToWithin(150, E);
-        expect(rectp00.size.height).to.beCloseToWithin(100, E);
+        XCTAssertEqualWithAccuracy(rectp00.origin.x, 10, E);
+        XCTAssertEqualWithAccuracy(rectp00.origin.y, 50, E);
+        XCTAssertEqualWithAccuracy(rectp00.size.width, 150, E);
+        XCTAssertEqualWithAccuracy(rectp00.size.height, 100, E);
         
-        expect(rectp03.origin.x).to.beCloseToWithin(1, E);
-        expect(rectp03.origin.y).to.beCloseToWithin(53, E);
-        expect(rectp03.size.width).to.beCloseToWithin(165, E);
-        expect(rectp03.size.height).to.beCloseToWithin(82, E);
+        XCTAssertEqualWithAccuracy(rectp03.origin.x, 1, E);
+        XCTAssertEqualWithAccuracy(rectp03.origin.y, 53, E);
+        XCTAssertEqualWithAccuracy(rectp03.size.width, 165, E);
+        XCTAssertEqualWithAccuracy(rectp03.size.height, 82, E);
         
-        expect(rectp1.origin.x).to.beCloseToWithin(-20, E);
-        expect(rectp1.origin.y).to.beCloseToWithin(60, E);
-        expect(rectp1.size.width).to.beCloseToWithin(200, E);
-        expect(rectp1.size.height).to.beCloseToWithin(40, E);
+        XCTAssertEqualWithAccuracy(rectp1.origin.x, -20, E);
+        XCTAssertEqualWithAccuracy(rectp1.origin.y, 60, E);
+        XCTAssertEqualWithAccuracy(rectp1.size.width, 200, E);
+        XCTAssertEqualWithAccuracy(rectp1.size.height, 40, E);
     }
-
+    
 }
 
 - (void)testCGRectWith

@@ -1,6 +1,0 @@
-framework module Pods_AGGeometryKitDemoTests {
-  umbrella header "Pods-AGGeometryKitDemoTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

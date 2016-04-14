@@ -7,164 +7,70 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		030F74C441A1E63AA26F702FFB72357E /* AGKMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B583016251DAE85A23C50C18491BA8 /* AGKMatrix.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		06B1FC90B61BF117E8475C51E9048A6A /* EXPBlockDefinedMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A033EE7ABCC5A5BC3354694725ABAB4 /* EXPBlockDefinedMatcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		0848A95EEA9D2EF61A88F4D2E85A0CD0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76669D20C66CFE668C0163420439A9A /* UIKit.framework */; };
-		0D16B556212D317A0D4FEB71E102E207 /* EXPMatchers+beLessThan.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C6AABAAE186FD1A93F5A48A733A300 /* EXPMatchers+beLessThan.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0D268E2CEC5ACA7D8EE973770129610B /* AGKMatrix+CATransform3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 6211636F0DF3077B47CDC10B624E3E68 /* AGKMatrix+CATransform3D.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0F94F5B0ABB3252B9275B7C129EC7A26 /* EXPMatchers+equal.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A56CCBF9579638DE849C8293E26A40B /* EXPMatchers+equal.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		112B5AAC1A183984484B3C376409308C /* EXPMatchers+beNil.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A814B6BAC2637A4C72DD58D3A3F6D5 /* EXPMatchers+beNil.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		1156343DE52AA2E1E014BA2044F7D507 /* UIImage+AGKQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8263654D49B4A1CE97D0C60C40C7B540 /* UIImage+AGKQuad.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		11C1AEB289C1EB80089349B71F09D04B /* EXPMatchers+raiseWithReason.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E8ED5614D7865BE2F67E691FBC0A2C5 /* EXPMatchers+raiseWithReason.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		123EBAAC712690F9F6A44695AFF934F9 /* NSValue+Expecta.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EBE870CB86D696FF73A06166F4611B /* NSValue+Expecta.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		131532787AD40BE1F35DF288D2E6FFD7 /* EXPMatchers+beInTheRangeOf.h in Headers */ = {isa = PBXBuildFile; fileRef = 6787F862E0C6FA806BFA3176926EA7DC /* EXPMatchers+beInTheRangeOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		160FDA46EE919AAF97E0E4EC04C9E232 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6316FD76AE65B17F6E2411856FE450D7 /* Foundation.framework */; };
-		184017B1C7A1AA1AEA8DFBB519C8CB89 /* EXPExpect.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFB25E2127009C7A4413FCD9706A811 /* EXPExpect.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		1A1AB2EC52323C5EA28DAA99F1E1A90D /* EXPMatchers+endWith.h in Headers */ = {isa = PBXBuildFile; fileRef = AC2C8DB97F3BCB3088B5DAF423BA6AE4 /* EXPMatchers+endWith.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D04CCB9397050E14CF8433E610A0296 /* AGKMatrix+AGKVector3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 3515D92589EC232870034F4D0573C07E /* AGKMatrix+AGKVector3D.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		1FFB3B0092164D66020CE6E1B7AD709F /* UIView+AGK+AngleConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = B16A84D5E4185A92C79A60DC2337E9C6 /* UIView+AGK+AngleConverter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		204D694B03BFF3B244A6AB73FACFFC43 /* Expecta-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3605FFA3D1F953E8A85CA19FAFBED453 /* Expecta-dummy.m */; };
-		20C19A51EA3C9B95413751B78909FD9C /* AGKCorner.h in Headers */ = {isa = PBXBuildFile; fileRef = 6322482EAE86315E45BDE496A8F35375 /* AGKCorner.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		25747E29F598A4D2967B7C95C9D2686D /* EXPMatchers+beFalsy.m in Sources */ = {isa = PBXBuildFile; fileRef = A6047985D8C9050F0BEB234F033C9E5F /* EXPMatchers+beFalsy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		260BC7EED9289AF321A6F791964CE472 /* EXPMatchers+respondTo.h in Headers */ = {isa = PBXBuildFile; fileRef = B7FAE48F422878C5EA9B8EB57609C940 /* EXPMatchers+respondTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2916A0606136A9DC67F2463AB230868B /* EXPMatchers+match.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E80EA960F63CB730879A43F1CCD9A68 /* EXPMatchers+match.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C11572F376F1D0198AE22B204B4BD2C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E99C1F23BA5D896A3894A9D9AD28653 /* QuartzCore.framework */; };
-		2E14619153A453BB8DF389FB6EA147BE /* ExpectaObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 5855E5CCD72B409E24B7599CB886EBCA /* ExpectaObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2F427490ACABC4408D57CC0592276678 /* EXPDoubleTuple.h in Headers */ = {isa = PBXBuildFile; fileRef = F0008BC2B1AB1C1B16039E48EF732B20 /* EXPDoubleTuple.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		306935CB639A3C689540489E5155A2FD /* UIView+AGK+Properties.h in Headers */ = {isa = PBXBuildFile; fileRef = E19B037B731F15FA2870A2BA4C26132C /* UIView+AGK+Properties.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		323201D5C037F4514FD0122AA6FD12E7 /* EXPMatchers+beCloseTo.m in Sources */ = {isa = PBXBuildFile; fileRef = F032E7CEE92D253DC61B4BA01E27866E /* EXPMatchers+beCloseTo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		32D1DDE7E245F85DC32DE81A6F22E907 /* AGKCALayerAnimationBlockDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32898239734D8A452D784ABE8866DAB8 /* AGKCALayerAnimationBlockDelegate.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		34B1EF379095882759C7DD4163477FAE /* AGKLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 14B487D977397B7FDBE9DD2913AD4445 /* AGKLine.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		34B6E9A30603BEBBD87BA535B7D384CA /* EXPMatchers+beInstanceOf.h in Headers */ = {isa = PBXBuildFile; fileRef = 09222F871BB4CFBBE6E72F237785A029 /* EXPMatchers+beInstanceOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		35C1AA97AEA6190B3328DBB61EFCF8CE /* AGGeometryKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0906F66F5114E2DE200AC6115FD9BCBD /* AGGeometryKit-dummy.m */; };
-		363EB8DCEF89422AD65214142D13A181 /* EXPMatchers+beLessThan.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EDCF2B98620A1C011CEB80F0F7E19E /* EXPMatchers+beLessThan.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		372F7A9CCE59CE86316CF436F832A3FC /* EXPMatchers+beGreaterThanOrEqualTo.h in Headers */ = {isa = PBXBuildFile; fileRef = 25503178A5E6A7B0404067888C7DFC26 /* EXPMatchers+beGreaterThanOrEqualTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3753FE44D14FA8D555E0A3E19005F615 /* AGKLine.m in Sources */ = {isa = PBXBuildFile; fileRef = E33F3EA0D1A4488901246AC52F7EB710 /* AGKLine.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		37A2D0F8493469EF2495FC689440F079 /* EXPMatchers+beLessThanOrEqualTo.h in Headers */ = {isa = PBXBuildFile; fileRef = CB3328318D0C8E82980CA6CAA57C6CE1 /* EXPMatchers+beLessThanOrEqualTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		397B320B7C59C168CC5B62E18ED8DEA0 /* EXPMatchers+beSubclassOf.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EB6EBD122AE82CD94D0E711C7CD6FE0 /* EXPMatchers+beSubclassOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B5B7495707BF7133B9FB3F834045611 /* EXPBlockDefinedMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = AF3EC40325152DC94E302B20DA019B29 /* EXPBlockDefinedMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BAFB8A4C64454ADE895F427E4AA7376 /* UIImage+AGKQuad.h in Headers */ = {isa = PBXBuildFile; fileRef = 583FC87723B7B5BEA09BE4480F76BBA7 /* UIImage+AGKQuad.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3C2700C7DAA15C6AF84A595865C42F4D /* EXPMatchers+contain.h in Headers */ = {isa = PBXBuildFile; fileRef = C7464F84E8E0BF54E8E912078882BAF5 /* EXPMatchers+contain.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CA2619B7B98794A5E4006CAE3DF5A2D /* AGKTransformPixelMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 93596A07182C4DC5D92050B4934D5889 /* AGKTransformPixelMapper.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		45782334B39C6B9B4E52B34B2B9B4413 /* EXPMatcherHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1E5E11FD164C5B0D5919467C4F4B7C /* EXPMatcherHelpers.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		46137F5CC368BF38BAF0D0AF81DD8FFE /* EXPMatchers+raise.h in Headers */ = {isa = PBXBuildFile; fileRef = 18B274E941197899518C8E7F8DEDAA75 /* EXPMatchers+raise.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		471FD4F68E27AB26FA2AEBB8B245CEE4 /* NSValue+Expecta.h in Headers */ = {isa = PBXBuildFile; fileRef = B253400CE301563B739F3E1FE4A5D22F /* NSValue+Expecta.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4762F9550CF409B0B4577238B43DE7E6 /* EXPMatchers+haveCountOf.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF546BCF49FEAA6797E255C48C2EFB7 /* EXPMatchers+haveCountOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4AE32B31421EE73D587383EBAF27B2C3 /* AGKMatrix+AGKVector3D.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD7F126DAEEDB2B4E71478023086E2 /* AGKMatrix+AGKVector3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4D099399F94AAD9151493AAD10D4A809 /* EXPMatchers+beGreaterThanOrEqualTo.m in Sources */ = {isa = PBXBuildFile; fileRef = E067B6347C8EB667120505466C406764 /* EXPMatchers+beGreaterThanOrEqualTo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		504AB3CD7D70064A552DFDCB428C01A7 /* EXPMatchers+beInstanceOf.m in Sources */ = {isa = PBXBuildFile; fileRef = E14BC612F4288375DD2CEFEF81887C93 /* EXPMatchers+beInstanceOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		51DDDB0FB4899757CF6A826B531B940D /* EXPUnsupportedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 54B6B5B7797EC9A413D5569BCAB10E74 /* EXPUnsupportedObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5208A3B7EFA0DA3920BFB9ECF9DB554F /* EXPMatchers+equal.m in Sources */ = {isa = PBXBuildFile; fileRef = 75993EFBD5151EC151700E742B0405A3 /* EXPMatchers+equal.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		54CE243C0EEF90C052823F7E9195E911 /* AGGeometryKitClasses.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BF3D5A248F4A6D46324DF0F5561B6AA /* AGGeometryKitClasses.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		55553C15705BB759C13FE09D6526ACFF /* EXPMatchers+endWith.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD6673D25002504F2F312D808837535 /* EXPMatchers+endWith.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		556AC2242A92DE6B451959D8B5FC7AE8 /* CGGeometry+AGGeometryKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 386EF31F241C0EBEBBB54B23ABE31233 /* CGGeometry+AGGeometryKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		565D3987D1DB73341F3BA1F9473A9F54 /* EXPMatchers+beKindOf.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D2BA49E443734F87A2B9A59FC74085 /* EXPMatchers+beKindOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		578E962F121322CF6BE4655B96CDF771 /* NSValue+AGKQuad.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F3F3E294BAA2CFE008ED7FB22AC6AB /* NSValue+AGKQuad.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5B24DD80DB6F71F3D0522CA288A36A09 /* ExpectaSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1F6F9FD380F76D8C05789FFA133341 /* ExpectaSupport.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		5C346E1E1BB0FF58B9606AB6681357E9 /* CALayer+AGKQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C9FD780E267390F5B10F01B5740FA /* CALayer+AGKQuad.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		5C6CAA7BBCEE2A72664CAFAF8CDAE91B /* EXPMatchers+respondTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E93CA50D7A62B2820C327EEABE75CF /* EXPMatchers+respondTo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		5C8F2AD48B357E7B71DBBA7DFABA29C6 /* EXPMatchers+beLessThanOrEqualTo.m in Sources */ = {isa = PBXBuildFile; fileRef = B29C4AE8360D00362D16C279BA36A9B4 /* EXPMatchers+beLessThanOrEqualTo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		5D784BCBB3BD586C0028F3EB50CE7E33 /* CALayer+AGK+Properties.h in Headers */ = {isa = PBXBuildFile; fileRef = CA27C2C163D3AE0B1EA4485611833AE2 /* CALayer+AGK+Properties.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5DE7FB17D6D551E7D6A503C70CF3111F /* AGGeometryKitCoreGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C4F25F3021B71606F64028BA41E7DF8 /* AGGeometryKitCoreGraphics.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5EA7043FE10E75D02F3C3052AF8B8318 /* EXPDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = D113EACFC4966C1454525EB638BBE6DD /* EXPDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		61A88575D4DFECB59DB033EB7F01B650 /* AGKCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 389DA7B198E97C13DA6A5F071C469A0A /* AGKCorner.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		62CD7E0CAB273ACB93EDA9A09BCCADD9 /* AGKMatrix+GLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BCAE439BAF09D26507985826D7704D26 /* AGKMatrix+GLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		630E8A8465B1479864D65B888D46EF4B /* CGGeometry+AGGeometryKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C95EF21AE87A304D6CE142455293B800 /* CGGeometry+AGGeometryKit.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		65BC31095CCDFC80CBF6BBA843751F23 /* EXPMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 81C99F5086D026F047EE5DF1A693FB99 /* EXPMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		67459AD239EF669A365519E06B45DCFE /* EXPExpect.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DB3C0C9FD85E0D4F2AB8DAC0B334719 /* EXPExpect.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6AC3A9A1825CEA7B5A6CAC3DBBDF9D93 /* EXPMatchers+raiseWithReason.m in Sources */ = {isa = PBXBuildFile; fileRef = 6733A6F5D8C14C06C16979A2895391B4 /* EXPMatchers+raiseWithReason.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		6BE7DD872FA8D68B235E3F3AC1564529 /* EXPMatchers+beSupersetOf.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC489D1B0EC0BCB1C7CB645DEE5B0A /* EXPMatchers+beSupersetOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		6E1D978790705E137FDE439AA68DD3AA /* EXPFloatTuple.h in Headers */ = {isa = PBXBuildFile; fileRef = 00BFB3BEB4CC0EABA602269CB7C92AF5 /* EXPFloatTuple.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6EEA015C4E0A0EAEC5ACD1287ECEC05B /* ExpectaObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E1F24CB1A19C7B94D19EF5572CE013 /* ExpectaObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		6EFC63A5CED45BB39FC79D87F2C47D6B /* EXPMatchers+beGreaterThan.h in Headers */ = {isa = PBXBuildFile; fileRef = B96F9AC9A5D92D5FAA882BDA10E625AD /* EXPMatchers+beGreaterThan.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6F0525ACAA7F5D60B3640901D0767A5A /* CALayer+AGKQuad.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AFE1DEE1DA61F45CF067C7CDA08EE15 /* CALayer+AGKQuad.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		706A41DDC289EAF1F2D211D800D91C87 /* EXPMatchers+beginWith.m in Sources */ = {isa = PBXBuildFile; fileRef = EF541BD46D7F9484642797AF0ECDD9DE /* EXPMatchers+beginWith.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		71A00CA11DAE301910D10444EBFE1359 /* AGKBaseDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 44D4C95304D082C87DE473A09B8E8C3A /* AGKBaseDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7266003290F86669D5CFA5681CC16C35 /* CGImageRef+AGK+CATransform3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 295E5FDB0CB8221C14E38C5450AEC0D2 /* CGImageRef+AGK+CATransform3D.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		75BED09B8AEF0CC29E2C92D287D342A2 /* Pods-AGGeometryKitDemoTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 901ED4081DFD5ABCF14784ADE4C662B4 /* Pods-AGGeometryKitDemoTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		76CCABE79C04444450153424D7CE1DC1 /* EXPMatchers+beSupersetOf.h in Headers */ = {isa = PBXBuildFile; fileRef = E5109D768F2152F06D794A3B5D0B193E /* EXPMatchers+beSupersetOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		77BB658CBF622911090C5FCB2491463B /* UIBezierPath+AGKQuad.h in Headers */ = {isa = PBXBuildFile; fileRef = 17581C82B689C041B9AF1DA17B902FDB /* UIBezierPath+AGKQuad.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		78EA5F68E43A41A78CD2927DCB4F3F11 /* CGImageRef+AGK+CATransform3D.h in Headers */ = {isa = PBXBuildFile; fileRef = B75D205B961C8F2AB1C29D76D3D072B1 /* CGImageRef+AGK+CATransform3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		79558B1F97ABE4AB8942DC18BEBD4B82 /* EXPMatchers+beKindOf.h in Headers */ = {isa = PBXBuildFile; fileRef = D25A62AEC3335FE81EF934F0336FED65 /* EXPMatchers+beKindOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7A211860F672261C1522DCDF1FFC9ED0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06333A9647D4E1EDC2B4ABF615AA5C5 /* XCTest.framework */; };
-		7B223B4E6EF14BA12DA113F7EE10B96C /* NSObject+Expecta.h in Headers */ = {isa = PBXBuildFile; fileRef = FFCE207DF048375415A8EFAB26F84239 /* NSObject+Expecta.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B3FA860B8561A33BE99C6A3B4877BAE /* AGKQuad.h in Headers */ = {isa = PBXBuildFile; fileRef = 14FC96B49851CE6AACDA813532A16ABE /* AGKQuad.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7CB973DF5A9CB23C4AADC8B0B725DD9B /* UIImage+AGK+CATransform3D.h in Headers */ = {isa = PBXBuildFile; fileRef = E634A6B164F2416E43CA2136FBD448C8 /* UIImage+AGK+CATransform3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7D82B0C5540324B5703CD6744AEEDD88 /* UIImage+AGK+CATransform3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 4954998AD226AAB74F3C832D2173ECFB /* UIImage+AGK+CATransform3D.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		7DB11DC35FCBBA89F2A7F34A6EB0382C /* UIBezierPath+AGKQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = D85924686FB898F6E556C6A4BE8C8B0D /* UIBezierPath+AGKQuad.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		837B593D7C1D01B4EA400247309D6AB0 /* Expecta-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B2E7555083AB844017C19A68FD3592E1 /* Expecta-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		85E31076D5530AEEB45ACF16B2B8A983 /* EXPMatchers.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D18D156B8BE514E47D2ACA15539C103 /* EXPMatchers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		85EB2F216487CB2E8F3FCCFBC4D69912 /* EXPMatchers+beTruthy.h in Headers */ = {isa = PBXBuildFile; fileRef = BE3E51EE850C3E396A71748F3B3DDD84 /* EXPMatchers+beTruthy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		86796410252A533F47E87609A1FF2157 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EBD5DA90AE2429FCBBB719AFEC199E /* Pods-dummy.m */; };
-		8C0DC20B6887006C2F7D15A5DEB84B73 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB0AF86F2FF551F509F855316F7637B /* CoreGraphics.framework */; };
-		8C8C1B0D83FE6A4352F15154DB16372C /* EXPMatcherHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E64CA92CCC936FE74DEB553477F597F /* EXPMatcherHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8D80D25AAEFC8F089F5CEAB8DA7A93FD /* UIView+AGK+AngleConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = B26B6DAB25546B056E58C11DE672D4FD /* UIView+AGK+AngleConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8F42D46F9EBCCAFB4CF4ADDDCC7CAC72 /* Pods-AGGeometryKitDemoTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFA730333D3ADCA56D0606F7F4FBE0A /* Pods-AGGeometryKitDemoTests-dummy.m */; };
-		966DFB1E44EE8B9D2467DD4B4D281BBC /* AGKTransformPixelMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = BF32E5A8CD62F0607C42461DCFFAAFB6 /* AGKTransformPixelMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9994A5E74DC0A1A4A19018A558FA2D92 /* NSValue+AGKQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = 092637C4BC0931743ED01D4D0FD8E075 /* NSValue+AGKQuad.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		9A50CB8A16B6279E47FA8ECEAF61E367 /* AGKVector3D.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D9F6107643E72A39906D368E4E36FA /* AGKVector3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9B2E761A064459F77EA9870BEF03ACC3 /* EXPMatchers+postNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = AAEAFBBF2382A5EA98F009EAE338F865 /* EXPMatchers+postNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A12142A2CD5FEBCC39225A32721B219E /* UIScrollView+AGK+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = A197F2C050A40A6A54F6A3E9A96DE7CB /* UIScrollView+AGK+Properties.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		A1429C9FBD493DB475D65AF00963556E /* AGGeometryKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 472091DE6E9523E820223E1D3AA0CF25 /* AGGeometryKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A1F6B0C0F210F55C9E2BEFF28372BBAA /* EXPMatchers+conformTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4704845B8042F662EA5B8B2CA67A0FAB /* EXPMatchers+conformTo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		AB242ADE244FC4D0B8DE25EB79B6022A /* AGGeometryKitCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = B0676945AABDBE763F5AD0DC7FF32C2B /* AGGeometryKitCategories.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ADB9B72E9E91E3BB2F8198D39D3EE54C /* EXPMatchers+postNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = C483971EA7004317734E4D8C796E78EA /* EXPMatchers+postNotification.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		AF1F46668D4591602887998C6E9C10AD /* EXPMatchers+beCloseTo.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE144CD3E1FCA440357AD6BDE1DCEC0 /* EXPMatchers+beCloseTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AFFC8900E52BBEC72059334132F3A8F3 /* ExpectaSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 01CB68466B55B2EBAD59BC749D5A87E0 /* ExpectaSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B25D9AA674596B773907A81AFA9AC02D /* EXPMatchers+contain.m in Sources */ = {isa = PBXBuildFile; fileRef = A36B91EAA2287224D10AFA194D3A6246 /* EXPMatchers+contain.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		BAFFF80A18766610AC3B270873C07073 /* AGKVector3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 2210B23823B875AB5CD7EBBFFA62DE1C /* AGKVector3D.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		C199190EA02F05FC8ED7D270CA5316CF /* EXPUnsupportedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F704AB9471B3186D5B25046F08C73FB /* EXPUnsupportedObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C217ABA97E49193B686C1591675399D3 /* EXPMatchers+match.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB4CAB7D838E1F841A2C601FFF0368F /* EXPMatchers+match.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C2EC13DBA57B1920D20719B7A3518826 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6316FD76AE65B17F6E2411856FE450D7 /* Foundation.framework */; };
-		C32723DFA07604BBE370E4B1928A325C /* EXPMatchers+beInTheRangeOf.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F393FBBF6639DD58BF90C81000B6DA7 /* EXPMatchers+beInTheRangeOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C489F9EA9925FF7AF49C859DCCC83591 /* UIScrollView+AGK+Properties.h in Headers */ = {isa = PBXBuildFile; fileRef = AB5F9816CA9B7659269211B036F498CB /* UIScrollView+AGK+Properties.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C8B9359A3DEB402D4F69C4A1E8E84BAC /* AGKMatrix+GLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35DB37A20FE45E354542119852DC6C /* AGKMatrix+GLKit.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		C9CC5E647084400EDFCCA53321A61C2B /* EXPMatchers+beSubclassOf.m in Sources */ = {isa = PBXBuildFile; fileRef = A545B6D2EFFA185DD7B5A7F95B643198 /* EXPMatchers+beSubclassOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		CC497BB4AF96DCD030ED2665E3BFFD31 /* CALayer+AGK+Methods.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E159C9E118A1EC6BEB06CFC3D5218A /* CALayer+AGK+Methods.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CD452A4ACAEFD816FFACC64D3660A546 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6316FD76AE65B17F6E2411856FE450D7 /* Foundation.framework */; };
-		CD8DB5757437B5327AEE25F059BE03E4 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D5D64724EF0431F5453B0307FF0CEF1 /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D2712B685114DCB3CFADD71414758F36 /* EXPMatchers+beGreaterThan.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C169E91919D5ABB3273DE71826224 /* EXPMatchers+beGreaterThan.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D6353328B03179610CF5FCFAFC2E803A /* AGKMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 0632556AEB5A07B4B15E06E3A0B5B27D /* AGKMatrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D872901ADBD8C446DEF6553A2D06C600 /* EXPFloatTuple.m in Sources */ = {isa = PBXBuildFile; fileRef = 08BD6C6A68BB7A6936E3E191A6FD5190 /* EXPFloatTuple.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D9DCD93729822795A959D2428CDF9C0A /* UIView+AGK+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A8A3B1DF614D3053EEEA45CA630DD2 /* UIView+AGK+Properties.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -DOS_OBJECT_USE_OBJC=0"; }; };
-		DE84FA8FEE57B11CDCC44E0CAE60AE2D /* AGKBitOperations.h in Headers */ = {isa = PBXBuildFile; fileRef = 513697751DAD7BB49DA5636C610B9E26 /* AGKBitOperations.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFFA2CE14088C21D18583A0FFABA0005 /* EXPDoubleTuple.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A22AB649520A3A0E9F049501597F28 /* EXPDoubleTuple.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E0AAF49134A0505DF00E20E7B62087E1 /* EXPMatchers+beIdenticalTo.h in Headers */ = {isa = PBXBuildFile; fileRef = 056A7F47A8E41C81A1B129A1E21151D7 /* EXPMatchers+beIdenticalTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E1EC4532663CA75DE5BD00CB0A56814D /* Expecta.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CFB8AFCB2BADA8703719025832F267A /* Expecta.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E2C397E5496A5BC894189116EFA75E53 /* AGGeometryKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0ABA987F4EE4BEDA37F3FC05A0350E /* AGGeometryKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E735386085CE344F6A01178CF4763852 /* EXPMatchers+beNil.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CF001FF318CDA327D501173701E563E /* EXPMatchers+beNil.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E7EFBC887102F68FC5166AF8B94D632E /* EXPMatchers+raise.m in Sources */ = {isa = PBXBuildFile; fileRef = DB956D9AA65000A4F8EB8CD19E3832E9 /* EXPMatchers+raise.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E94A62888B3298BF87DC74073DB3B3C5 /* CALayer+AGK+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3506F2167FF5C9BE12337833A1514CAC /* CALayer+AGK+Properties.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -DOS_OBJECT_USE_OBJC=0"; }; };
-		EAD00EBB13812289F4BD0C7A81815A27 /* EXPMatchers+beIdenticalTo.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7C8497641515670C5EF8AC9501805A /* EXPMatchers+beIdenticalTo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		EEE211E5465B4A1DCF9A8B23A0EF1140 /* AGKCALayerAnimationBlockDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 94A39A41FC6FB4C907CA16F4E7FB057F /* AGKCALayerAnimationBlockDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F00E79A27ED93E0F1D506ED0E9B8DA09 /* EXPMatchers+beTruthy.m in Sources */ = {isa = PBXBuildFile; fileRef = 448FDB73380D3BDC8ED9990F3AA1EC29 /* EXPMatchers+beTruthy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		F0DDF02A078B917997FF025BB33BB842 /* EXPMatchers+conformTo.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AB46DDEEB46EE0D39FE3FC50F5B8D61 /* EXPMatchers+conformTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F19174CD5D8F37A1946CB2039377BBB1 /* AGKMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C92C3340B0A1B64E4B216AC1A6B413 /* AGKMath.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		F2B81EB7B25FCA149D79387D988DB623 /* AGKMatrix+CATransform3D.h in Headers */ = {isa = PBXBuildFile; fileRef = DB51D7C5B85F03B400C5CF0049B0B5DF /* AGKMatrix+CATransform3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F33831CB0963008B896998FCED88B5BC /* CALayer+AGK+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EADC18654A27ED243771421EF963879 /* CALayer+AGK+Methods.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		F41209A94070904A00BDF24ACB6336B6 /* EXPMatchers+beFalsy.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AD4C6AC5609235C04F5BF165C4171CC /* EXPMatchers+beFalsy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F4CEE02B2F8E5ABC0782D9F530B8699C /* AGKMath.h in Headers */ = {isa = PBXBuildFile; fileRef = FB4C5B0E9203D8F0DE331B97734E58FA /* AGKMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F75CB2A727F678C9A848A3A11EA7979B /* EXPMatchers+haveCountOf.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F0194C4DFD25C5A04AB810A057CB943 /* EXPMatchers+haveCountOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FADAD569C23B03E3A9C7666FD708F8FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6316FD76AE65B17F6E2411856FE450D7 /* Foundation.framework */; };
-		FC883CCEB8640FD6946B427D8519E947 /* AGKQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0B12CD5091F916A7515AB87B775404 /* AGKQuad.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		FD2D4497BC41412128C2D87C1BDE7398 /* EXPMatchers+beginWith.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C31F0F1641A92888F54DF4F45085BBD /* EXPMatchers+beginWith.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		030F74C441A1E63AA26F702FFB72357E /* AGKMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5C765D0BF850E5A1FEE12F970F529F /* AGKMatrix.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0848A95EEA9D2EF61A88F4D2E85A0CD0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED04AE2201316F6590E7AD9952706C7B /* UIKit.framework */; };
+		0D268E2CEC5ACA7D8EE973770129610B /* AGKMatrix+CATransform3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA819894C769AEE39A5EFF4F6C32A5E /* AGKMatrix+CATransform3D.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1156343DE52AA2E1E014BA2044F7D507 /* UIImage+AGKQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB5C06179F8409522889A1A86906E5 /* UIImage+AGKQuad.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1D04CCB9397050E14CF8433E610A0296 /* AGKMatrix+AGKVector3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 3496F2279FD1E6158FB9B62AC5DCB455 /* AGKMatrix+AGKVector3D.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1FFB3B0092164D66020CE6E1B7AD709F /* UIView+AGK+AngleConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = D54A955F3F7CC396FCAD59C6BD6C8E11 /* UIView+AGK+AngleConverter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		20C19A51EA3C9B95413751B78909FD9C /* AGKCorner.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E3A7DBE385AF2B65D91729339178FB1 /* AGKCorner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C11572F376F1D0198AE22B204B4BD2C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD25CA4A497622D5ABF4C433D79E4DE /* QuartzCore.framework */; };
+		306935CB639A3C689540489E5155A2FD /* UIView+AGK+Properties.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F29D8DBE516C575308A4B882D2B305B /* UIView+AGK+Properties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32D1DDE7E245F85DC32DE81A6F22E907 /* AGKCALayerAnimationBlockDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51648C05628E63E6A82A1CB0E38C4051 /* AGKCALayerAnimationBlockDelegate.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		34B1EF379095882759C7DD4163477FAE /* AGKLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 899CAE750EB454B311FAE8908E424E51 /* AGKLine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35C1AA97AEA6190B3328DBB61EFCF8CE /* AGGeometryKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 145BCF3FE2318FBEA33EF8A03FDD9D84 /* AGGeometryKit-dummy.m */; };
+		3753FE44D14FA8D555E0A3E19005F615 /* AGKLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 8215C87826E8B633B765CECCD9397929 /* AGKLine.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3BAFB8A4C64454ADE895F427E4AA7376 /* UIImage+AGKQuad.h in Headers */ = {isa = PBXBuildFile; fileRef = 774F846C70288AC3F7622599C573C028 /* UIImage+AGKQuad.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CA2619B7B98794A5E4006CAE3DF5A2D /* AGKTransformPixelMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D7E3E82EB6F6F46DB1156F5F5FCB47 /* AGKTransformPixelMapper.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4AE32B31421EE73D587383EBAF27B2C3 /* AGKMatrix+AGKVector3D.h in Headers */ = {isa = PBXBuildFile; fileRef = D2A1B04D2B9DC1AE20DD5C7986962BB0 /* AGKMatrix+AGKVector3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54CE243C0EEF90C052823F7E9195E911 /* AGGeometryKitClasses.h in Headers */ = {isa = PBXBuildFile; fileRef = CBD7BEF14CC1CC0AAAA16C04B3875BB9 /* AGGeometryKitClasses.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		556AC2242A92DE6B451959D8B5FC7AE8 /* CGGeometry+AGGeometryKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C50DDE73C073136980A555730715442E /* CGGeometry+AGGeometryKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		578E962F121322CF6BE4655B96CDF771 /* NSValue+AGKQuad.h in Headers */ = {isa = PBXBuildFile; fileRef = A922B4A76FC55D72A94289E2C41B5760 /* NSValue+AGKQuad.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C346E1E1BB0FF58B9606AB6681357E9 /* CALayer+AGKQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = 806498EFB1BFB6AE431571B20E8C82C3 /* CALayer+AGKQuad.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5D784BCBB3BD586C0028F3EB50CE7E33 /* CALayer+AGK+Properties.h in Headers */ = {isa = PBXBuildFile; fileRef = 5861FE913B675A604441FE27EA962625 /* CALayer+AGK+Properties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DE7FB17D6D551E7D6A503C70CF3111F /* AGGeometryKitCoreGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = 126A9AFC91F878CC7B9DFB389EC49D6B /* AGGeometryKitCoreGraphics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61A88575D4DFECB59DB033EB7F01B650 /* AGKCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC735BF79970C1D12745FDBC67BA91 /* AGKCorner.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		62CD7E0CAB273ACB93EDA9A09BCCADD9 /* AGKMatrix+GLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DA03A3F59EF1F837CFEE8ADAFB73473 /* AGKMatrix+GLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		630E8A8465B1479864D65B888D46EF4B /* CGGeometry+AGGeometryKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E576E65C4FECC8726169E597DFC25D95 /* CGGeometry+AGGeometryKit.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6F0525ACAA7F5D60B3640901D0767A5A /* CALayer+AGKQuad.h in Headers */ = {isa = PBXBuildFile; fileRef = D726C8A97505FF0E4BD2866B629B44D2 /* CALayer+AGKQuad.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71A00CA11DAE301910D10444EBFE1359 /* AGKBaseDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 447BE2F4B717487CE105081711244B24 /* AGKBaseDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7266003290F86669D5CFA5681CC16C35 /* CGImageRef+AGK+CATransform3D.m in Sources */ = {isa = PBXBuildFile; fileRef = A75B94DD4C1990032F0AB81A2D059BCE /* CGImageRef+AGK+CATransform3D.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		77BB658CBF622911090C5FCB2491463B /* UIBezierPath+AGKQuad.h in Headers */ = {isa = PBXBuildFile; fileRef = A485CCBF82E254459C7E848ED5F70B4F /* UIBezierPath+AGKQuad.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78EA5F68E43A41A78CD2927DCB4F3F11 /* CGImageRef+AGK+CATransform3D.h in Headers */ = {isa = PBXBuildFile; fileRef = D38442A56ED4E2098A2CD223E1B6185A /* CGImageRef+AGK+CATransform3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B3FA860B8561A33BE99C6A3B4877BAE /* AGKQuad.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AECCC29CC4F3D75EAB9236DC59899D0 /* AGKQuad.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7CB973DF5A9CB23C4AADC8B0B725DD9B /* UIImage+AGK+CATransform3D.h in Headers */ = {isa = PBXBuildFile; fileRef = E7690EFE9FD414769136CE439152DAEB /* UIImage+AGK+CATransform3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D82B0C5540324B5703CD6744AEEDD88 /* UIImage+AGK+CATransform3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 06545B6189B5347064271F29DA9071D8 /* UIImage+AGK+CATransform3D.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7DB11DC35FCBBA89F2A7F34A6EB0382C /* UIBezierPath+AGKQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BA8BFA7FCC21D92C8D6D2AE0F651FE /* UIBezierPath+AGKQuad.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		86796410252A533F47E87609A1FF2157 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */; };
+		8C0DC20B6887006C2F7D15A5DEB84B73 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE7FD0E16F3FACCFE19068F1E872D9F /* CoreGraphics.framework */; };
+		8D80D25AAEFC8F089F5CEAB8DA7A93FD /* UIView+AGK+AngleConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 781F3E9CB7806B48F46637A1C4C6E0C9 /* UIView+AGK+AngleConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		966DFB1E44EE8B9D2467DD4B4D281BBC /* AGKTransformPixelMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 9263893FDBCF5D02FEC54A361E9F8F57 /* AGKTransformPixelMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9994A5E74DC0A1A4A19018A558FA2D92 /* NSValue+AGKQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = 9246CF7FB40B348B9E8E7728DEE02144 /* NSValue+AGKQuad.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9A50CB8A16B6279E47FA8ECEAF61E367 /* AGKVector3D.h in Headers */ = {isa = PBXBuildFile; fileRef = 988C6E726DD598D2FDE576631948F31A /* AGKVector3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A12142A2CD5FEBCC39225A32721B219E /* UIScrollView+AGK+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AF978F27D60E1062828282A73AA697 /* UIScrollView+AGK+Properties.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A1429C9FBD493DB475D65AF00963556E /* AGGeometryKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F74C4613524C51166759273B7396B73E /* AGGeometryKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB242ADE244FC4D0B8DE25EB79B6022A /* AGGeometryKitCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = 68474732526783EB926AB6C292E7BAAF /* AGGeometryKitCategories.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BAFFF80A18766610AC3B270873C07073 /* AGKVector3D.m in Sources */ = {isa = PBXBuildFile; fileRef = F156A5C98DBB6CFFDB2AF65B91ADA73E /* AGKVector3D.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C2EC13DBA57B1920D20719B7A3518826 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE437620300D81EED04DF8C0301AF9D9 /* Foundation.framework */; };
+		C489F9EA9925FF7AF49C859DCCC83591 /* UIScrollView+AGK+Properties.h in Headers */ = {isa = PBXBuildFile; fileRef = A99052BFBF5190A12C40B7836E969AC6 /* UIScrollView+AGK+Properties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8B9359A3DEB402D4F69C4A1E8E84BAC /* AGKMatrix+GLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 88956140C5C41C86A5B23FD518206660 /* AGKMatrix+GLKit.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CC497BB4AF96DCD030ED2665E3BFFD31 /* CALayer+AGK+Methods.h in Headers */ = {isa = PBXBuildFile; fileRef = 74A952DC4E6751513A8E5F4C249339E8 /* CALayer+AGK+Methods.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD8DB5757437B5327AEE25F059BE03E4 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6353328B03179610CF5FCFAFC2E803A /* AGKMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = E7474AEC9EE5510040E5CAD6BEBEE781 /* AGKMatrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9DCD93729822795A959D2428CDF9C0A /* UIView+AGK+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 150C2B0731EE311374A1D11DC033C478 /* UIView+AGK+Properties.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -DOS_OBJECT_USE_OBJC=0"; }; };
+		DE84FA8FEE57B11CDCC44E0CAE60AE2D /* AGKBitOperations.h in Headers */ = {isa = PBXBuildFile; fileRef = 3567741F1FD7820E07C0880B88D874A0 /* AGKBitOperations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E2C397E5496A5BC894189116EFA75E53 /* AGGeometryKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EA3B2DE9D01269E1C9691596A02E9859 /* AGGeometryKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E94A62888B3298BF87DC74073DB3B3C5 /* CALayer+AGK+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F59C4C92D95A7A30A5526F3B8725B3E /* CALayer+AGK+Properties.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -DOS_OBJECT_USE_OBJC=0"; }; };
+		EEE211E5465B4A1DCF9A8B23A0EF1140 /* AGKCALayerAnimationBlockDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CDDC5B51EA6A1237FCA9176F17682A4 /* AGKCALayerAnimationBlockDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F19174CD5D8F37A1946CB2039377BBB1 /* AGKMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 5627D5D81BB93F8509E55C7CA81ADD22 /* AGKMath.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F2B81EB7B25FCA149D79387D988DB623 /* AGKMatrix+CATransform3D.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F8A241C4D9C74DA62F3C2CEFB5D95C9 /* AGKMatrix+CATransform3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F33831CB0963008B896998FCED88B5BC /* CALayer+AGK+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = A55DB77CAD4BFA102DBFE9A4E6CB1362 /* CALayer+AGK+Methods.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F4CEE02B2F8E5ABC0782D9F530B8699C /* AGKMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4AB397F0E823338AF0221FBAFB99DF /* AGKMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FADAD569C23B03E3A9C7666FD708F8FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE437620300D81EED04DF8C0301AF9D9 /* Foundation.framework */; };
+		FC883CCEB8640FD6946B427D8519E947 /* AGKQuad.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A7FC2989366FFE5774FE254040F8AC /* AGKQuad.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6C7786D53B37ADA25A6F6A8D9183076A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0D888F29E05E498D0CD91A51D28599A5;
-			remoteInfo = Expecta;
-		};
-		8CA560FA6AD6AEBD8B36E6E7B71E0DB9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4EE23B5F68C9FF908330426BF9C591EA;
-			remoteInfo = AGGeometryKit;
-		};
 		902FB0772F36D12E439D0D41D5233DD0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -175,173 +81,81 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00BFB3BEB4CC0EABA602269CB7C92AF5 /* EXPFloatTuple.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPFloatTuple.h; path = Expecta/EXPFloatTuple.h; sourceTree = "<group>"; };
-		00F3F3E294BAA2CFE008ED7FB22AC6AB /* NSValue+AGKQuad.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSValue+AGKQuad.h"; sourceTree = "<group>"; };
-		013E0D14133FA3154B7B032AF71E6AE3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		01CB68466B55B2EBAD59BC749D5A87E0 /* ExpectaSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ExpectaSupport.h; path = Expecta/ExpectaSupport.h; sourceTree = "<group>"; };
-		0415EAEF78C0D4CD2CD7BA08BFC93B4E /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		056A7F47A8E41C81A1B129A1E21151D7 /* EXPMatchers+beIdenticalTo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beIdenticalTo.h"; path = "Expecta/Matchers/EXPMatchers+beIdenticalTo.h"; sourceTree = "<group>"; };
-		05D2BA49E443734F87A2B9A59FC74085 /* EXPMatchers+beKindOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beKindOf.m"; path = "Expecta/Matchers/EXPMatchers+beKindOf.m"; sourceTree = "<group>"; };
-		0632556AEB5A07B4B15E06E3A0B5B27D /* AGKMatrix.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGKMatrix.h; sourceTree = "<group>"; };
-		08BD6C6A68BB7A6936E3E191A6FD5190 /* EXPFloatTuple.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXPFloatTuple.m; path = Expecta/EXPFloatTuple.m; sourceTree = "<group>"; };
-		0906F66F5114E2DE200AC6115FD9BCBD /* AGGeometryKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AGGeometryKit-dummy.m"; sourceTree = "<group>"; };
-		09222F871BB4CFBBE6E72F237785A029 /* EXPMatchers+beInstanceOf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beInstanceOf.h"; path = "Expecta/Matchers/EXPMatchers+beInstanceOf.h"; sourceTree = "<group>"; };
-		092637C4BC0931743ED01D4D0FD8E075 /* NSValue+AGKQuad.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSValue+AGKQuad.m"; sourceTree = "<group>"; };
-		0C4F25F3021B71606F64028BA41E7DF8 /* AGGeometryKitCoreGraphics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGGeometryKitCoreGraphics.h; sourceTree = "<group>"; };
-		0CF001FF318CDA327D501173701E563E /* EXPMatchers+beNil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beNil.h"; path = "Expecta/Matchers/EXPMatchers+beNil.h"; sourceTree = "<group>"; };
-		0E0B12CD5091F916A7515AB87B775404 /* AGKQuad.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGKQuad.m; sourceTree = "<group>"; };
-		0F0194C4DFD25C5A04AB810A057CB943 /* EXPMatchers+haveCountOf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+haveCountOf.h"; path = "Expecta/Matchers/EXPMatchers+haveCountOf.h"; sourceTree = "<group>"; };
-		14B487D977397B7FDBE9DD2913AD4445 /* AGKLine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGKLine.h; sourceTree = "<group>"; };
-		14FC96B49851CE6AACDA813532A16ABE /* AGKQuad.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGKQuad.h; sourceTree = "<group>"; };
-		17581C82B689C041B9AF1DA17B902FDB /* UIBezierPath+AGKQuad.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+AGKQuad.h"; sourceTree = "<group>"; };
-		18B274E941197899518C8E7F8DEDAA75 /* EXPMatchers+raise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+raise.h"; path = "Expecta/Matchers/EXPMatchers+raise.h"; sourceTree = "<group>"; };
-		1AD4C6AC5609235C04F5BF165C4171CC /* EXPMatchers+beFalsy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beFalsy.h"; path = "Expecta/Matchers/EXPMatchers+beFalsy.h"; sourceTree = "<group>"; };
-		1B3186916D66C815B580C984CC7C1C6B /* Pods-AGGeometryKitDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AGGeometryKitDemoTests.release.xcconfig"; sourceTree = "<group>"; };
-		1D18D156B8BE514E47D2ACA15539C103 /* EXPMatchers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPMatchers.h; path = Expecta/Matchers/EXPMatchers.h; sourceTree = "<group>"; };
-		1DA3D3EFE1957CCB1D44D98AB6803B34 /* Pods-AGGeometryKitDemoTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AGGeometryKitDemoTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		1DAC2CD3A547183CAA6B83F34BFBE4A7 /* Pods-AGGeometryKitDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AGGeometryKitDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
-		1E8ED5614D7865BE2F67E691FBC0A2C5 /* EXPMatchers+raiseWithReason.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+raiseWithReason.h"; path = "Expecta/Matchers/EXPMatchers+raiseWithReason.h"; sourceTree = "<group>"; };
-		1E99C1F23BA5D896A3894A9D9AD28653 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		1EB6EBD122AE82CD94D0E711C7CD6FE0 /* EXPMatchers+beSubclassOf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beSubclassOf.h"; path = "Expecta/Matchers/EXPMatchers+beSubclassOf.h"; sourceTree = "<group>"; };
-		2210B23823B875AB5CD7EBBFFA62DE1C /* AGKVector3D.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGKVector3D.m; sourceTree = "<group>"; };
-		22EBE870CB86D696FF73A06166F4611B /* NSValue+Expecta.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSValue+Expecta.m"; path = "Expecta/NSValue+Expecta.m"; sourceTree = "<group>"; };
-		24D37131A0CD1E69EB5CD92AB6ED2BC8 /* Pods-AGGeometryKitDemoTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AGGeometryKitDemoTests-resources.sh"; sourceTree = "<group>"; };
-		25503178A5E6A7B0404067888C7DFC26 /* EXPMatchers+beGreaterThanOrEqualTo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beGreaterThanOrEqualTo.h"; path = "Expecta/Matchers/EXPMatchers+beGreaterThanOrEqualTo.h"; sourceTree = "<group>"; };
-		295E5FDB0CB8221C14E38C5450AEC0D2 /* CGImageRef+AGK+CATransform3D.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CGImageRef+AGK+CATransform3D.m"; sourceTree = "<group>"; };
-		29B813803C6073CC5EDF456AF192DE9D /* Pods-AGGeometryKitDemoTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AGGeometryKitDemoTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2A033EE7ABCC5A5BC3354694725ABAB4 /* EXPBlockDefinedMatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXPBlockDefinedMatcher.m; path = Expecta/EXPBlockDefinedMatcher.m; sourceTree = "<group>"; };
-		2A1E5E11FD164C5B0D5919467C4F4B7C /* EXPMatcherHelpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXPMatcherHelpers.m; path = Expecta/Matchers/EXPMatcherHelpers.m; sourceTree = "<group>"; };
-		2AFE1DEE1DA61F45CF067C7CDA08EE15 /* CALayer+AGKQuad.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CALayer+AGKQuad.h"; sourceTree = "<group>"; };
-		2E64CA92CCC936FE74DEB553477F597F /* EXPMatcherHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPMatcherHelpers.h; path = Expecta/Matchers/EXPMatcherHelpers.h; sourceTree = "<group>"; };
-		2F704AB9471B3186D5B25046F08C73FB /* EXPUnsupportedObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXPUnsupportedObject.m; path = Expecta/EXPUnsupportedObject.m; sourceTree = "<group>"; };
-		2FFA730333D3ADCA56D0606F7F4FBE0A /* Pods-AGGeometryKitDemoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AGGeometryKitDemoTests-dummy.m"; sourceTree = "<group>"; };
-		32898239734D8A452D784ABE8866DAB8 /* AGKCALayerAnimationBlockDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGKCALayerAnimationBlockDelegate.m; sourceTree = "<group>"; };
-		32C6AABAAE186FD1A93F5A48A733A300 /* EXPMatchers+beLessThan.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beLessThan.h"; path = "Expecta/Matchers/EXPMatchers+beLessThan.h"; sourceTree = "<group>"; };
-		3506F2167FF5C9BE12337833A1514CAC /* CALayer+AGK+Properties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AGK+Properties.m"; sourceTree = "<group>"; };
-		3515D92589EC232870034F4D0573C07E /* AGKMatrix+AGKVector3D.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AGKMatrix+AGKVector3D.m"; sourceTree = "<group>"; };
-		3605FFA3D1F953E8A85CA19FAFBED453 /* Expecta-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Expecta-dummy.m"; sourceTree = "<group>"; };
-		386EF31F241C0EBEBBB54B23ABE31233 /* CGGeometry+AGGeometryKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CGGeometry+AGGeometryKit.h"; sourceTree = "<group>"; };
-		389DA7B198E97C13DA6A5F071C469A0A /* AGKCorner.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGKCorner.m; sourceTree = "<group>"; };
-		38EBD5DA90AE2429FCBBB719AFEC199E /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		3B0ABA987F4EE4BEDA37F3FC05A0350E /* AGGeometryKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AGGeometryKit-umbrella.h"; sourceTree = "<group>"; };
-		3CFB8AFCB2BADA8703719025832F267A /* Expecta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Expecta.h; path = Expecta/Expecta.h; sourceTree = "<group>"; };
-		3DDD2E171FA442D06A022A0A6A1AB32F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		3FE144CD3E1FCA440357AD6BDE1DCEC0 /* EXPMatchers+beCloseTo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beCloseTo.h"; path = "Expecta/Matchers/EXPMatchers+beCloseTo.h"; sourceTree = "<group>"; };
-		42798681699817FD75813DF828D7FBD3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		448FDB73380D3BDC8ED9990F3AA1EC29 /* EXPMatchers+beTruthy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beTruthy.m"; path = "Expecta/Matchers/EXPMatchers+beTruthy.m"; sourceTree = "<group>"; };
-		44D4C95304D082C87DE473A09B8E8C3A /* AGKBaseDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGKBaseDefines.h; sourceTree = "<group>"; };
-		4704845B8042F662EA5B8B2CA67A0FAB /* EXPMatchers+conformTo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+conformTo.m"; path = "Expecta/Matchers/EXPMatchers+conformTo.m"; sourceTree = "<group>"; };
-		472091DE6E9523E820223E1D3AA0CF25 /* AGGeometryKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGGeometryKit.h; sourceTree = "<group>"; };
-		4954998AD226AAB74F3C832D2173ECFB /* UIImage+AGK+CATransform3D.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AGK+CATransform3D.m"; sourceTree = "<group>"; };
-		4A5AA85A0A1C305F9B8D544AFE8D7BF8 /* AGGeometryKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AGGeometryKit.xcconfig; sourceTree = "<group>"; };
-		4AF534FEE8042AD8C306EDF54F02E115 /* AGGeometryKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AGGeometryKit.modulemap; sourceTree = "<group>"; };
-		4D5D64724EF0431F5453B0307FF0CEF1 /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
-		4EADC18654A27ED243771421EF963879 /* CALayer+AGK+Methods.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AGK+Methods.m"; sourceTree = "<group>"; };
-		4FFC489D1B0EC0BCB1C7CB645DEE5B0A /* EXPMatchers+beSupersetOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beSupersetOf.m"; path = "Expecta/Matchers/EXPMatchers+beSupersetOf.m"; sourceTree = "<group>"; };
-		513697751DAD7BB49DA5636C610B9E26 /* AGKBitOperations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGKBitOperations.h; sourceTree = "<group>"; };
-		54B6B5B7797EC9A413D5569BCAB10E74 /* EXPUnsupportedObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPUnsupportedObject.h; path = Expecta/EXPUnsupportedObject.h; sourceTree = "<group>"; };
-		583FC87723B7B5BEA09BE4480F76BBA7 /* UIImage+AGKQuad.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+AGKQuad.h"; sourceTree = "<group>"; };
-		5855E5CCD72B409E24B7599CB886EBCA /* ExpectaObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ExpectaObject.h; path = Expecta/ExpectaObject.h; sourceTree = "<group>"; };
-		5A56CCBF9579638DE849C8293E26A40B /* EXPMatchers+equal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+equal.h"; path = "Expecta/Matchers/EXPMatchers+equal.h"; sourceTree = "<group>"; };
-		5E80EA960F63CB730879A43F1CCD9A68 /* EXPMatchers+match.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+match.h"; path = "Expecta/Matchers/EXPMatchers+match.h"; sourceTree = "<group>"; };
-		5ED9016BF9F1E7D765A9B5CCFCB0C0B5 /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
-		5FB4CAB7D838E1F841A2C601FFF0368F /* EXPMatchers+match.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+match.m"; path = "Expecta/Matchers/EXPMatchers+match.m"; sourceTree = "<group>"; };
-		62088E9FB13519852D93B4DA7D8E2865 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		6211636F0DF3077B47CDC10B624E3E68 /* AGKMatrix+CATransform3D.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AGKMatrix+CATransform3D.m"; sourceTree = "<group>"; };
-		62DD7F126DAEEDB2B4E71478023086E2 /* AGKMatrix+AGKVector3D.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AGKMatrix+AGKVector3D.h"; sourceTree = "<group>"; };
-		6316FD76AE65B17F6E2411856FE450D7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6322482EAE86315E45BDE496A8F35375 /* AGKCorner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGKCorner.h; sourceTree = "<group>"; };
-		671694C4F708B67D05A9C2CB36235A04 /* AGGeometryKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AGGeometryKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6733A6F5D8C14C06C16979A2895391B4 /* EXPMatchers+raiseWithReason.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+raiseWithReason.m"; path = "Expecta/Matchers/EXPMatchers+raiseWithReason.m"; sourceTree = "<group>"; };
-		6787F862E0C6FA806BFA3176926EA7DC /* EXPMatchers+beInTheRangeOf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beInTheRangeOf.h"; path = "Expecta/Matchers/EXPMatchers+beInTheRangeOf.h"; sourceTree = "<group>"; };
-		6AB46DDEEB46EE0D39FE3FC50F5B8D61 /* EXPMatchers+conformTo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+conformTo.h"; path = "Expecta/Matchers/EXPMatchers+conformTo.h"; sourceTree = "<group>"; };
-		6C31F0F1641A92888F54DF4F45085BBD /* EXPMatchers+beginWith.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beginWith.h"; path = "Expecta/Matchers/EXPMatchers+beginWith.h"; sourceTree = "<group>"; };
-		75993EFBD5151EC151700E742B0405A3 /* EXPMatchers+equal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+equal.m"; path = "Expecta/Matchers/EXPMatchers+equal.m"; sourceTree = "<group>"; };
-		7777971A30991B32D6B41BCE124F7345 /* Expecta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Expecta.xcconfig; sourceTree = "<group>"; };
-		79E93CA50D7A62B2820C327EEABE75CF /* EXPMatchers+respondTo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+respondTo.m"; path = "Expecta/Matchers/EXPMatchers+respondTo.m"; sourceTree = "<group>"; };
-		7BF3D5A248F4A6D46324DF0F5561B6AA /* AGGeometryKitClasses.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGGeometryKitClasses.h; sourceTree = "<group>"; };
-		7CB0AF86F2FF551F509F855316F7637B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		7EF9770386FC8703EF55A87D4ABFBF1A /* Expecta.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Expecta.modulemap; sourceTree = "<group>"; };
-		7F41F8980B7BD59DD3A45FABF3B6CA16 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7FF546BCF49FEAA6797E255C48C2EFB7 /* EXPMatchers+haveCountOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+haveCountOf.m"; path = "Expecta/Matchers/EXPMatchers+haveCountOf.m"; sourceTree = "<group>"; };
-		81C99F5086D026F047EE5DF1A693FB99 /* EXPMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPMatcher.h; path = Expecta/EXPMatcher.h; sourceTree = "<group>"; };
-		8263654D49B4A1CE97D0C60C40C7B540 /* UIImage+AGKQuad.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AGKQuad.m"; sourceTree = "<group>"; };
-		84C92C3340B0A1B64E4B216AC1A6B413 /* AGKMath.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGKMath.m; sourceTree = "<group>"; };
-		84E1F24CB1A19C7B94D19EF5572CE013 /* ExpectaObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ExpectaObject.m; path = Expecta/ExpectaObject.m; sourceTree = "<group>"; };
-		87A3EC5EE79BB74E397938F5CD6C1231 /* Pods-AGGeometryKitDemoTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-AGGeometryKitDemoTests.modulemap"; sourceTree = "<group>"; };
-		88B583016251DAE85A23C50C18491BA8 /* AGKMatrix.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGKMatrix.m; sourceTree = "<group>"; };
-		8CD6673D25002504F2F312D808837535 /* EXPMatchers+endWith.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+endWith.m"; path = "Expecta/Matchers/EXPMatchers+endWith.m"; sourceTree = "<group>"; };
-		8D0C169E91919D5ABB3273DE71826224 /* EXPMatchers+beGreaterThan.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beGreaterThan.m"; path = "Expecta/Matchers/EXPMatchers+beGreaterThan.m"; sourceTree = "<group>"; };
-		8F393FBBF6639DD58BF90C81000B6DA7 /* EXPMatchers+beInTheRangeOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beInTheRangeOf.m"; path = "Expecta/Matchers/EXPMatchers+beInTheRangeOf.m"; sourceTree = "<group>"; };
-		901ED4081DFD5ABCF14784ADE4C662B4 /* Pods-AGGeometryKitDemoTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AGGeometryKitDemoTests-umbrella.h"; sourceTree = "<group>"; };
-		92A22AB649520A3A0E9F049501597F28 /* EXPDoubleTuple.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXPDoubleTuple.m; path = Expecta/EXPDoubleTuple.m; sourceTree = "<group>"; };
-		93596A07182C4DC5D92050B4934D5889 /* AGKTransformPixelMapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGKTransformPixelMapper.m; sourceTree = "<group>"; };
-		94A39A41FC6FB4C907CA16F4E7FB057F /* AGKCALayerAnimationBlockDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGKCALayerAnimationBlockDelegate.h; sourceTree = "<group>"; };
-		97A8A3B1DF614D3053EEEA45CA630DD2 /* UIView+AGK+Properties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+AGK+Properties.m"; sourceTree = "<group>"; };
-		9DB3C0C9FD85E0D4F2AB8DAC0B334719 /* EXPExpect.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPExpect.h; path = Expecta/EXPExpect.h; sourceTree = "<group>"; };
-		9F7C9FD780E267390F5B10F01B5740FA /* CALayer+AGKQuad.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AGKQuad.m"; sourceTree = "<group>"; };
-		A197F2C050A40A6A54F6A3E9A96DE7CB /* UIScrollView+AGK+Properties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+AGK+Properties.m"; sourceTree = "<group>"; };
-		A202E46F18DB28423DB08D6ECD549BA6 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
-		A36B91EAA2287224D10AFA194D3A6246 /* EXPMatchers+contain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+contain.m"; path = "Expecta/Matchers/EXPMatchers+contain.m"; sourceTree = "<group>"; };
-		A402ACFC257705B2D38B38D34E344FC4 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A4D10D7F9D52C1C919ECC2675C2AA120 /* Pods-AGGeometryKitDemoTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AGGeometryKitDemoTests-frameworks.sh"; sourceTree = "<group>"; };
-		A545B6D2EFFA185DD7B5A7F95B643198 /* EXPMatchers+beSubclassOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beSubclassOf.m"; path = "Expecta/Matchers/EXPMatchers+beSubclassOf.m"; sourceTree = "<group>"; };
-		A6047985D8C9050F0BEB234F033C9E5F /* EXPMatchers+beFalsy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beFalsy.m"; path = "Expecta/Matchers/EXPMatchers+beFalsy.m"; sourceTree = "<group>"; };
-		A703D554CD983DE31B306969F2E44BB2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AAEAFBBF2382A5EA98F009EAE338F865 /* EXPMatchers+postNotification.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+postNotification.h"; path = "Expecta/Matchers/EXPMatchers+postNotification.h"; sourceTree = "<group>"; };
-		AB5F9816CA9B7659269211B036F498CB /* UIScrollView+AGK+Properties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+AGK+Properties.h"; sourceTree = "<group>"; };
-		AC2C8DB97F3BCB3088B5DAF423BA6AE4 /* EXPMatchers+endWith.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+endWith.h"; path = "Expecta/Matchers/EXPMatchers+endWith.h"; sourceTree = "<group>"; };
-		AD4E81C1B4CB07B6BED9894553423A4D /* Expecta-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Expecta-prefix.pch"; sourceTree = "<group>"; };
-		AD84BAF356DF7DC2A73AE416D4089158 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF3EC40325152DC94E302B20DA019B29 /* EXPBlockDefinedMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPBlockDefinedMatcher.h; path = Expecta/EXPBlockDefinedMatcher.h; sourceTree = "<group>"; };
-		B0676945AABDBE763F5AD0DC7FF32C2B /* AGGeometryKitCategories.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGGeometryKitCategories.h; sourceTree = "<group>"; };
-		B16A84D5E4185A92C79A60DC2337E9C6 /* UIView+AGK+AngleConverter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+AGK+AngleConverter.m"; sourceTree = "<group>"; };
-		B253400CE301563B739F3E1FE4A5D22F /* NSValue+Expecta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSValue+Expecta.h"; path = "Expecta/NSValue+Expecta.h"; sourceTree = "<group>"; };
-		B26B6DAB25546B056E58C11DE672D4FD /* UIView+AGK+AngleConverter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+AGK+AngleConverter.h"; sourceTree = "<group>"; };
-		B29C4AE8360D00362D16C279BA36A9B4 /* EXPMatchers+beLessThanOrEqualTo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beLessThanOrEqualTo.m"; path = "Expecta/Matchers/EXPMatchers+beLessThanOrEqualTo.m"; sourceTree = "<group>"; };
-		B2E7555083AB844017C19A68FD3592E1 /* Expecta-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Expecta-umbrella.h"; sourceTree = "<group>"; };
-		B5BF28EB8CF37A569FA2688422EAC4EE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B75D205B961C8F2AB1C29D76D3D072B1 /* CGImageRef+AGK+CATransform3D.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CGImageRef+AGK+CATransform3D.h"; sourceTree = "<group>"; };
-		B7FAE48F422878C5EA9B8EB57609C940 /* EXPMatchers+respondTo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+respondTo.h"; path = "Expecta/Matchers/EXPMatchers+respondTo.h"; sourceTree = "<group>"; };
-		B96F9AC9A5D92D5FAA882BDA10E625AD /* EXPMatchers+beGreaterThan.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beGreaterThan.h"; path = "Expecta/Matchers/EXPMatchers+beGreaterThan.h"; sourceTree = "<group>"; };
-		B9EDCF2B98620A1C011CEB80F0F7E19E /* EXPMatchers+beLessThan.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beLessThan.m"; path = "Expecta/Matchers/EXPMatchers+beLessThan.m"; sourceTree = "<group>"; };
+		06545B6189B5347064271F29DA9071D8 /* UIImage+AGK+CATransform3D.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AGK+CATransform3D.m"; sourceTree = "<group>"; };
+		06CB5C06179F8409522889A1A86906E5 /* UIImage+AGKQuad.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AGKQuad.m"; sourceTree = "<group>"; };
+		0DD25CA4A497622D5ABF4C433D79E4DE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		0E3A7DBE385AF2B65D91729339178FB1 /* AGKCorner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGKCorner.h; sourceTree = "<group>"; };
+		126A9AFC91F878CC7B9DFB389EC49D6B /* AGGeometryKitCoreGraphics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGGeometryKitCoreGraphics.h; sourceTree = "<group>"; };
+		145BCF3FE2318FBEA33EF8A03FDD9D84 /* AGGeometryKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AGGeometryKit-dummy.m"; sourceTree = "<group>"; };
+		150C2B0731EE311374A1D11DC033C478 /* UIView+AGK+Properties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+AGK+Properties.m"; sourceTree = "<group>"; };
+		1D4AB397F0E823338AF0221FBAFB99DF /* AGKMath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGKMath.h; sourceTree = "<group>"; };
+		1EAC735BF79970C1D12745FDBC67BA91 /* AGKCorner.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGKCorner.m; sourceTree = "<group>"; };
+		25AF978F27D60E1062828282A73AA697 /* UIScrollView+AGK+Properties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+AGK+Properties.m"; sourceTree = "<group>"; };
+		2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
+		307DD969B036BEDF58FF813E432D1858 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		341FAA05A1305F65AF793438387A348D /* AGGeometryKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AGGeometryKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3496F2279FD1E6158FB9B62AC5DCB455 /* AGKMatrix+AGKVector3D.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AGKMatrix+AGKVector3D.m"; sourceTree = "<group>"; };
+		3567741F1FD7820E07C0880B88D874A0 /* AGKBitOperations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGKBitOperations.h; sourceTree = "<group>"; };
+		3CDDC5B51EA6A1237FCA9176F17682A4 /* AGKCALayerAnimationBlockDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGKCALayerAnimationBlockDelegate.h; sourceTree = "<group>"; };
+		3E0D383DB7E462DAF417D4D8330CF547 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F29D8DBE516C575308A4B882D2B305B /* UIView+AGK+Properties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+AGK+Properties.h"; sourceTree = "<group>"; };
+		3F59C4C92D95A7A30A5526F3B8725B3E /* CALayer+AGK+Properties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AGK+Properties.m"; sourceTree = "<group>"; };
+		3F8A241C4D9C74DA62F3C2CEFB5D95C9 /* AGKMatrix+CATransform3D.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AGKMatrix+CATransform3D.h"; sourceTree = "<group>"; };
+		447BE2F4B717487CE105081711244B24 /* AGKBaseDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGKBaseDefines.h; sourceTree = "<group>"; };
+		4AE7FD0E16F3FACCFE19068F1E872D9F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		4FA819894C769AEE39A5EFF4F6C32A5E /* AGKMatrix+CATransform3D.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AGKMatrix+CATransform3D.m"; sourceTree = "<group>"; };
+		51648C05628E63E6A82A1CB0E38C4051 /* AGKCALayerAnimationBlockDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGKCALayerAnimationBlockDelegate.m; sourceTree = "<group>"; };
+		5627D5D81BB93F8509E55C7CA81ADD22 /* AGKMath.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGKMath.m; sourceTree = "<group>"; };
+		56D7E3E82EB6F6F46DB1156F5F5FCB47 /* AGKTransformPixelMapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGKTransformPixelMapper.m; sourceTree = "<group>"; };
+		5861FE913B675A604441FE27EA962625 /* CALayer+AGK+Properties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CALayer+AGK+Properties.h"; sourceTree = "<group>"; };
+		5DA03A3F59EF1F837CFEE8ADAFB73473 /* AGKMatrix+GLKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AGKMatrix+GLKit.h"; sourceTree = "<group>"; };
+		68474732526783EB926AB6C292E7BAAF /* AGGeometryKitCategories.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGGeometryKitCategories.h; sourceTree = "<group>"; };
+		6AECCC29CC4F3D75EAB9236DC59899D0 /* AGKQuad.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGKQuad.h; sourceTree = "<group>"; };
+		6D2B22A83FB61A3B0C0CEBCB1C38F387 /* AGGeometryKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AGGeometryKit-prefix.pch"; sourceTree = "<group>"; };
+		6ED40EF3526BA9E678342E0A5A7DDF15 /* AGGeometryKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AGGeometryKit.modulemap; sourceTree = "<group>"; };
+		74A952DC4E6751513A8E5F4C249339E8 /* CALayer+AGK+Methods.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CALayer+AGK+Methods.h"; sourceTree = "<group>"; };
+		774F846C70288AC3F7622599C573C028 /* UIImage+AGKQuad.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+AGKQuad.h"; sourceTree = "<group>"; };
+		781F3E9CB7806B48F46637A1C4C6E0C9 /* UIView+AGK+AngleConverter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+AGK+AngleConverter.h"; sourceTree = "<group>"; };
+		79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
+		806498EFB1BFB6AE431571B20E8C82C3 /* CALayer+AGKQuad.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AGKQuad.m"; sourceTree = "<group>"; };
+		8215C87826E8B633B765CECCD9397929 /* AGKLine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGKLine.m; sourceTree = "<group>"; };
+		87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		88956140C5C41C86A5B23FD518206660 /* AGKMatrix+GLKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AGKMatrix+GLKit.m"; sourceTree = "<group>"; };
+		894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		899CAE750EB454B311FAE8908E424E51 /* AGKLine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGKLine.h; sourceTree = "<group>"; };
+		9246CF7FB40B348B9E8E7728DEE02144 /* NSValue+AGKQuad.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSValue+AGKQuad.m"; sourceTree = "<group>"; };
+		9263893FDBCF5D02FEC54A361E9F8F57 /* AGKTransformPixelMapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGKTransformPixelMapper.h; sourceTree = "<group>"; };
+		977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		988C6E726DD598D2FDE576631948F31A /* AGKVector3D.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGKVector3D.h; sourceTree = "<group>"; };
+		A485CCBF82E254459C7E848ED5F70B4F /* UIBezierPath+AGKQuad.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+AGKQuad.h"; sourceTree = "<group>"; };
+		A55DB77CAD4BFA102DBFE9A4E6CB1362 /* CALayer+AGK+Methods.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AGK+Methods.m"; sourceTree = "<group>"; };
+		A75B94DD4C1990032F0AB81A2D059BCE /* CGImageRef+AGK+CATransform3D.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CGImageRef+AGK+CATransform3D.m"; sourceTree = "<group>"; };
+		A922B4A76FC55D72A94289E2C41B5760 /* NSValue+AGKQuad.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSValue+AGKQuad.h"; sourceTree = "<group>"; };
+		A99052BFBF5190A12C40B7836E969AC6 /* UIScrollView+AGK+Properties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+AGK+Properties.h"; sourceTree = "<group>"; };
+		B4BA8BFA7FCC21D92C8D6D2AE0F651FE /* UIBezierPath+AGKQuad.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+AGKQuad.m"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BCAE439BAF09D26507985826D7704D26 /* AGKMatrix+GLKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AGKMatrix+GLKit.h"; sourceTree = "<group>"; };
-		BE3E51EE850C3E396A71748F3B3DDD84 /* EXPMatchers+beTruthy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beTruthy.h"; path = "Expecta/Matchers/EXPMatchers+beTruthy.h"; sourceTree = "<group>"; };
-		BEFB25E2127009C7A4413FCD9706A811 /* EXPExpect.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXPExpect.m; path = Expecta/EXPExpect.m; sourceTree = "<group>"; };
-		BF32E5A8CD62F0607C42461DCFFAAFB6 /* AGKTransformPixelMapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGKTransformPixelMapper.h; sourceTree = "<group>"; };
-		C45F6741617D59463DE8C8780AD3D359 /* AGGeometryKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AGGeometryKit-prefix.pch"; sourceTree = "<group>"; };
-		C483971EA7004317734E4D8C796E78EA /* EXPMatchers+postNotification.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+postNotification.m"; path = "Expecta/Matchers/EXPMatchers+postNotification.m"; sourceTree = "<group>"; };
-		C7464F84E8E0BF54E8E912078882BAF5 /* EXPMatchers+contain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+contain.h"; path = "Expecta/Matchers/EXPMatchers+contain.h"; sourceTree = "<group>"; };
-		C76669D20C66CFE668C0163420439A9A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		C95EF21AE87A304D6CE142455293B800 /* CGGeometry+AGGeometryKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+AGGeometryKit.m"; sourceTree = "<group>"; };
-		C9F9BFC27CE0C0DF21A2F9F92813D4B9 /* Expecta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Expecta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA27C2C163D3AE0B1EA4485611833AE2 /* CALayer+AGK+Properties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CALayer+AGK+Properties.h"; sourceTree = "<group>"; };
-		CB3328318D0C8E82980CA6CAA57C6CE1 /* EXPMatchers+beLessThanOrEqualTo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beLessThanOrEqualTo.h"; path = "Expecta/Matchers/EXPMatchers+beLessThanOrEqualTo.h"; sourceTree = "<group>"; };
-		D06333A9647D4E1EDC2B4ABF615AA5C5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		D113EACFC4966C1454525EB638BBE6DD /* EXPDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPDefines.h; path = Expecta/EXPDefines.h; sourceTree = "<group>"; };
-		D25A62AEC3335FE81EF934F0336FED65 /* EXPMatchers+beKindOf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beKindOf.h"; path = "Expecta/Matchers/EXPMatchers+beKindOf.h"; sourceTree = "<group>"; };
-		D638947797EFE803EBFA666BDAEDEB3F /* Pods_AGGeometryKitDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AGGeometryKitDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D85924686FB898F6E556C6A4BE8C8B0D /* UIBezierPath+AGKQuad.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+AGKQuad.m"; sourceTree = "<group>"; };
-		DB51D7C5B85F03B400C5CF0049B0B5DF /* AGKMatrix+CATransform3D.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AGKMatrix+CATransform3D.h"; sourceTree = "<group>"; };
-		DB956D9AA65000A4F8EB8CD19E3832E9 /* EXPMatchers+raise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+raise.m"; path = "Expecta/Matchers/EXPMatchers+raise.m"; sourceTree = "<group>"; };
-		DF1F6F9FD380F76D8C05789FFA133341 /* ExpectaSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ExpectaSupport.m; path = Expecta/ExpectaSupport.m; sourceTree = "<group>"; };
-		E067B6347C8EB667120505466C406764 /* EXPMatchers+beGreaterThanOrEqualTo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beGreaterThanOrEqualTo.m"; path = "Expecta/Matchers/EXPMatchers+beGreaterThanOrEqualTo.m"; sourceTree = "<group>"; };
-		E14BC612F4288375DD2CEFEF81887C93 /* EXPMatchers+beInstanceOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beInstanceOf.m"; path = "Expecta/Matchers/EXPMatchers+beInstanceOf.m"; sourceTree = "<group>"; };
-		E19B037B731F15FA2870A2BA4C26132C /* UIView+AGK+Properties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+AGK+Properties.h"; sourceTree = "<group>"; };
-		E33F3EA0D1A4488901246AC52F7EB710 /* AGKLine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGKLine.m; sourceTree = "<group>"; };
-		E3A814B6BAC2637A4C72DD58D3A3F6D5 /* EXPMatchers+beNil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beNil.m"; path = "Expecta/Matchers/EXPMatchers+beNil.m"; sourceTree = "<group>"; };
-		E5109D768F2152F06D794A3B5D0B193E /* EXPMatchers+beSupersetOf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beSupersetOf.h"; path = "Expecta/Matchers/EXPMatchers+beSupersetOf.h"; sourceTree = "<group>"; };
-		E5E159C9E118A1EC6BEB06CFC3D5218A /* CALayer+AGK+Methods.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CALayer+AGK+Methods.h"; sourceTree = "<group>"; };
-		E634A6B164F2416E43CA2136FBD448C8 /* UIImage+AGK+CATransform3D.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+AGK+CATransform3D.h"; sourceTree = "<group>"; };
-		E8D9F6107643E72A39906D368E4E36FA /* AGKVector3D.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGKVector3D.h; sourceTree = "<group>"; };
-		EE35DB37A20FE45E354542119852DC6C /* AGKMatrix+GLKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AGKMatrix+GLKit.m"; sourceTree = "<group>"; };
-		EF541BD46D7F9484642797AF0ECDD9DE /* EXPMatchers+beginWith.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beginWith.m"; path = "Expecta/Matchers/EXPMatchers+beginWith.m"; sourceTree = "<group>"; };
-		F0008BC2B1AB1C1B16039E48EF732B20 /* EXPDoubleTuple.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPDoubleTuple.h; path = Expecta/EXPDoubleTuple.h; sourceTree = "<group>"; };
-		F032E7CEE92D253DC61B4BA01E27866E /* EXPMatchers+beCloseTo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beCloseTo.m"; path = "Expecta/Matchers/EXPMatchers+beCloseTo.m"; sourceTree = "<group>"; };
-		FB4C5B0E9203D8F0DE331B97734E58FA /* AGKMath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGKMath.h; sourceTree = "<group>"; };
-		FB7C8497641515670C5EF8AC9501805A /* EXPMatchers+beIdenticalTo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beIdenticalTo.m"; path = "Expecta/Matchers/EXPMatchers+beIdenticalTo.m"; sourceTree = "<group>"; };
-		FFCE207DF048375415A8EFAB26F84239 /* NSObject+Expecta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+Expecta.h"; path = "Expecta/NSObject+Expecta.h"; sourceTree = "<group>"; };
+		C50DDE73C073136980A555730715442E /* CGGeometry+AGGeometryKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CGGeometry+AGGeometryKit.h"; sourceTree = "<group>"; };
+		CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		CBD7BEF14CC1CC0AAAA16C04B3875BB9 /* AGGeometryKitClasses.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGGeometryKitClasses.h; sourceTree = "<group>"; };
+		CE437620300D81EED04DF8C0301AF9D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D2A1B04D2B9DC1AE20DD5C7986962BB0 /* AGKMatrix+AGKVector3D.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AGKMatrix+AGKVector3D.h"; sourceTree = "<group>"; };
+		D38442A56ED4E2098A2CD223E1B6185A /* CGImageRef+AGK+CATransform3D.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CGImageRef+AGK+CATransform3D.h"; sourceTree = "<group>"; };
+		D54A955F3F7CC396FCAD59C6BD6C8E11 /* UIView+AGK+AngleConverter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+AGK+AngleConverter.m"; sourceTree = "<group>"; };
+		D726C8A97505FF0E4BD2866B629B44D2 /* CALayer+AGKQuad.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CALayer+AGKQuad.h"; sourceTree = "<group>"; };
+		DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		E1A7FC2989366FFE5774FE254040F8AC /* AGKQuad.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGKQuad.m; sourceTree = "<group>"; };
+		E576E65C4FECC8726169E597DFC25D95 /* CGGeometry+AGGeometryKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+AGGeometryKit.m"; sourceTree = "<group>"; };
+		E7474AEC9EE5510040E5CAD6BEBEE781 /* AGKMatrix.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGKMatrix.h; sourceTree = "<group>"; };
+		E7690EFE9FD414769136CE439152DAEB /* UIImage+AGK+CATransform3D.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+AGK+CATransform3D.h"; sourceTree = "<group>"; };
+		E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+		E8287A336B465FD578BF0E78B5C73A69 /* AGGeometryKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AGGeometryKit.xcconfig; sourceTree = "<group>"; };
+		E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA3B2DE9D01269E1C9691596A02E9859 /* AGGeometryKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AGGeometryKit-umbrella.h"; sourceTree = "<group>"; };
+		EB5C765D0BF850E5A1FEE12F970F529F /* AGKMatrix.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGKMatrix.m; sourceTree = "<group>"; };
+		ED04AE2201316F6590E7AD9952706C7B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		F156A5C98DBB6CFFDB2AF65B91ADA73E /* AGKVector3D.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGKVector3D.m; sourceTree = "<group>"; };
+		F74C4613524C51166759273B7396B73E /* AGGeometryKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGGeometryKit.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -364,207 +178,104 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		955273B41254E9BFA010DFF63AA318B1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CD452A4ACAEFD816FFACC64D3660A546 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E6B836B352B13C63D3C0FA0E500C98A4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				160FDA46EE919AAF97E0E4EC04C9E232 /* Foundation.framework in Frameworks */,
-				7A211860F672261C1522DCDF1FFC9ED0 /* XCTest.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		052E157918C65C6216808D52B77C9234 /* AGGeometryKit */ = {
+		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				40B8AF4DE1DB72A799AECF99F2078907 /* CALayerProperties */,
-				9623AA494525E919FCDDC2FE6FD95498 /* Source */,
-				65EF3C1312ADA6F2E7E8242A4BC9683D /* Support Files */,
-				5BCC3CBB7D4430E867CEAE664C5B39C2 /* UIViewProperties */,
-			);
-			name = AGGeometryKit;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		0660B5C42044E6AA59BDB1CBE8712CDE /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7EF9770386FC8703EF55A87D4ABFBF1A /* Expecta.modulemap */,
-				7777971A30991B32D6B41BCE124F7345 /* Expecta.xcconfig */,
-				3605FFA3D1F953E8A85CA19FAFBED453 /* Expecta-dummy.m */,
-				AD4E81C1B4CB07B6BED9894553423A4D /* Expecta-prefix.pch */,
-				B2E7555083AB844017C19A68FD3592E1 /* Expecta-umbrella.h */,
-				013E0D14133FA3154B7B032AF71E6AE3 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Expecta";
-			sourceTree = "<group>";
-		};
-		155B14D90C1BB336D68A7E8723BA01E4 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				7BF3D5A248F4A6D46324DF0F5561B6AA /* AGGeometryKitClasses.h */,
-				94A39A41FC6FB4C907CA16F4E7FB057F /* AGKCALayerAnimationBlockDelegate.h */,
-				32898239734D8A452D784ABE8866DAB8 /* AGKCALayerAnimationBlockDelegate.m */,
-				0632556AEB5A07B4B15E06E3A0B5B27D /* AGKMatrix.h */,
-				88B583016251DAE85A23C50C18491BA8 /* AGKMatrix.m */,
-				BF32E5A8CD62F0607C42461DCFFAAFB6 /* AGKTransformPixelMapper.h */,
-				93596A07182C4DC5D92050B4934D5889 /* AGKTransformPixelMapper.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		20B56609144CE204DFA8221F742B2D76 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				CD08E6987096D62193ED6A096D7C4E97 /* iOS */,
+				A9203A0FF197B8764CD853B6EE3A159E /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		28E7FC8353C8B27F98F315F5A3C136B9 /* Pods-AGGeometryKitDemoTests */ = {
+		2347BBFDECA5EFCA619152A57DB806BD /* CALayerProperties */ = {
 			isa = PBXGroup;
 			children = (
-				7F41F8980B7BD59DD3A45FABF3B6CA16 /* Info.plist */,
-				87A3EC5EE79BB74E397938F5CD6C1231 /* Pods-AGGeometryKitDemoTests.modulemap */,
-				29B813803C6073CC5EDF456AF192DE9D /* Pods-AGGeometryKitDemoTests-acknowledgements.markdown */,
-				1DA3D3EFE1957CCB1D44D98AB6803B34 /* Pods-AGGeometryKitDemoTests-acknowledgements.plist */,
-				2FFA730333D3ADCA56D0606F7F4FBE0A /* Pods-AGGeometryKitDemoTests-dummy.m */,
-				A4D10D7F9D52C1C919ECC2675C2AA120 /* Pods-AGGeometryKitDemoTests-frameworks.sh */,
-				24D37131A0CD1E69EB5CD92AB6ED2BC8 /* Pods-AGGeometryKitDemoTests-resources.sh */,
-				901ED4081DFD5ABCF14784ADE4C662B4 /* Pods-AGGeometryKitDemoTests-umbrella.h */,
-				1DAC2CD3A547183CAA6B83F34BFBE4A7 /* Pods-AGGeometryKitDemoTests.debug.xcconfig */,
-				1B3186916D66C815B580C984CC7C1C6B /* Pods-AGGeometryKitDemoTests.release.xcconfig */,
-			);
-			name = "Pods-AGGeometryKitDemoTests";
-			path = "Target Support Files/Pods-AGGeometryKitDemoTests";
-			sourceTree = "<group>";
-		};
-		2C212CDC4B22CF51422FF7C8D4BF9E56 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				DD321F5DED2BDD562647A6B3E802F058 /* Expecta */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		2E26762E292C0524092ED4B6E3ED0EA6 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		40B8AF4DE1DB72A799AECF99F2078907 /* CALayerProperties */ = {
-			isa = PBXGroup;
-			children = (
-				5EE8D41A04F23FDE057B09BF56CE1694 /* Source */,
+				A3E08CFF5ED74332CEC08786A0C958BD /* AGGeometryKit */,
 			);
 			name = CALayerProperties;
 			sourceTree = "<group>";
 		};
-		5327E107635C1119359E49B3161AB78D /* CoreGraphics_Extensions */ = {
+		23BACA4C1CE9482BB053D03DF09054AD /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				0C4F25F3021B71606F64028BA41E7DF8 /* AGGeometryKitCoreGraphics.h */,
-				386EF31F241C0EBEBBB54B23ABE31233 /* CGGeometry+AGGeometryKit.h */,
-				C95EF21AE87A304D6CE142455293B800 /* CGGeometry+AGGeometryKit.m */,
-				B75D205B961C8F2AB1C29D76D3D072B1 /* CGImageRef+AGK+CATransform3D.h */,
-				295E5FDB0CB8221C14E38C5450AEC0D2 /* CGImageRef+AGK+CATransform3D.m */,
+				68474732526783EB926AB6C292E7BAAF /* AGGeometryKitCategories.h */,
+				D2A1B04D2B9DC1AE20DD5C7986962BB0 /* AGKMatrix+AGKVector3D.h */,
+				3496F2279FD1E6158FB9B62AC5DCB455 /* AGKMatrix+AGKVector3D.m */,
+				3F8A241C4D9C74DA62F3C2CEFB5D95C9 /* AGKMatrix+CATransform3D.h */,
+				4FA819894C769AEE39A5EFF4F6C32A5E /* AGKMatrix+CATransform3D.m */,
+				5DA03A3F59EF1F837CFEE8ADAFB73473 /* AGKMatrix+GLKit.h */,
+				88956140C5C41C86A5B23FD518206660 /* AGKMatrix+GLKit.m */,
+				74A952DC4E6751513A8E5F4C249339E8 /* CALayer+AGK+Methods.h */,
+				A55DB77CAD4BFA102DBFE9A4E6CB1362 /* CALayer+AGK+Methods.m */,
+				5861FE913B675A604441FE27EA962625 /* CALayer+AGK+Properties.h */,
+				3F59C4C92D95A7A30A5526F3B8725B3E /* CALayer+AGK+Properties.m */,
+				D726C8A97505FF0E4BD2866B629B44D2 /* CALayer+AGKQuad.h */,
+				806498EFB1BFB6AE431571B20E8C82C3 /* CALayer+AGKQuad.m */,
+				A922B4A76FC55D72A94289E2C41B5760 /* NSValue+AGKQuad.h */,
+				9246CF7FB40B348B9E8E7728DEE02144 /* NSValue+AGKQuad.m */,
+				A485CCBF82E254459C7E848ED5F70B4F /* UIBezierPath+AGKQuad.h */,
+				B4BA8BFA7FCC21D92C8D6D2AE0F651FE /* UIBezierPath+AGKQuad.m */,
+				E7690EFE9FD414769136CE439152DAEB /* UIImage+AGK+CATransform3D.h */,
+				06545B6189B5347064271F29DA9071D8 /* UIImage+AGK+CATransform3D.m */,
+				774F846C70288AC3F7622599C573C028 /* UIImage+AGKQuad.h */,
+				06CB5C06179F8409522889A1A86906E5 /* UIImage+AGKQuad.m */,
+				A99052BFBF5190A12C40B7836E969AC6 /* UIScrollView+AGK+Properties.h */,
+				25AF978F27D60E1062828282A73AA697 /* UIScrollView+AGK+Properties.m */,
+				781F3E9CB7806B48F46637A1C4C6E0C9 /* UIView+AGK+AngleConverter.h */,
+				D54A955F3F7CC396FCAD59C6BD6C8E11 /* UIView+AGK+AngleConverter.m */,
+				3F29D8DBE516C575308A4B882D2B305B /* UIView+AGK+Properties.h */,
+				150C2B0731EE311374A1D11DC033C478 /* UIView+AGK+Properties.m */,
 			);
-			path = CoreGraphics_Extensions;
+			path = Categories;
 			sourceTree = "<group>";
 		};
-		535259F7AFDF880AB0FBA2B58E16438C /* Pods */ = {
+		4E06A13D8F56B2DDA8D8D19F8CCF7300 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A703D554CD983DE31B306969F2E44BB2 /* Info.plist */,
-				5ED9016BF9F1E7D765A9B5CCFCB0C0B5 /* Pods.modulemap */,
-				A402ACFC257705B2D38B38D34E344FC4 /* Pods-acknowledgements.markdown */,
-				62088E9FB13519852D93B4DA7D8E2865 /* Pods-acknowledgements.plist */,
-				38EBD5DA90AE2429FCBBB719AFEC199E /* Pods-dummy.m */,
-				A202E46F18DB28423DB08D6ECD549BA6 /* Pods-frameworks.sh */,
-				0415EAEF78C0D4CD2CD7BA08BFC93B4E /* Pods-resources.sh */,
-				4D5D64724EF0431F5453B0307FF0CEF1 /* Pods-umbrella.h */,
-				42798681699817FD75813DF828D7FBD3 /* Pods.debug.xcconfig */,
-				3DDD2E171FA442D06A022A0A6A1AB32F /* Pods.release.xcconfig */,
+				341FAA05A1305F65AF793438387A348D /* AGGeometryKit.framework */,
+				3E0D383DB7E462DAF417D4D8330CF547 /* Pods.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4EA01D272C481C9440135ECDB65960EA /* UIViewProperties */ = {
+			isa = PBXGroup;
+			children = (
+				819BF03CAF4C64353C952D3126D5A881 /* AGGeometryKit */,
+			);
+			name = UIViewProperties;
+			sourceTree = "<group>";
+		};
+		75D98FF52E597A11900E131B6C4E1ADA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */,
+				79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */,
+				D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */,
+				87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */,
+				894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */,
+				E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */,
+				CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */,
+				2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */,
+				977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */,
+				DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
-		5BCC3CBB7D4430E867CEAE664C5B39C2 /* UIViewProperties */ = {
+		7693D675BA7FADF8672CC00472B5FB38 /* AGGeometryKit */ = {
 			isa = PBXGroup;
 			children = (
-				A31F98BC587C4F1BBE82A4767E2DAC0E /* Source */,
+				E39D1B7ACCF84014D56215997E199EA2 /* AGGeometryKit */,
+				2347BBFDECA5EFCA619152A57DB806BD /* CALayerProperties */,
+				D857F55D8DB84AE0DE0A67BF73EC97C2 /* Support Files */,
+				4EA01D272C481C9440135ECDB65960EA /* UIViewProperties */,
 			);
-			name = UIViewProperties;
-			sourceTree = "<group>";
-		};
-		5EE8D41A04F23FDE057B09BF56CE1694 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				A8BE06E7261E3A6BB225516A519A360B /* Categories */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		65EF3C1312ADA6F2E7E8242A4BC9683D /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				4AF534FEE8042AD8C306EDF54F02E115 /* AGGeometryKit.modulemap */,
-				4A5AA85A0A1C305F9B8D544AFE8D7BF8 /* AGGeometryKit.xcconfig */,
-				0906F66F5114E2DE200AC6115FD9BCBD /* AGGeometryKit-dummy.m */,
-				C45F6741617D59463DE8C8780AD3D359 /* AGGeometryKit-prefix.pch */,
-				3B0ABA987F4EE4BEDA37F3FC05A0350E /* AGGeometryKit-umbrella.h */,
-				AD84BAF356DF7DC2A73AE416D4089158 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "Demo/Pods/Target Support Files/AGGeometryKit";
-			sourceTree = "<group>";
-		};
-		69F03D1D1CBBE9AA45C0F3ED8672F2A5 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				B0676945AABDBE763F5AD0DC7FF32C2B /* AGGeometryKitCategories.h */,
-				62DD7F126DAEEDB2B4E71478023086E2 /* AGKMatrix+AGKVector3D.h */,
-				3515D92589EC232870034F4D0573C07E /* AGKMatrix+AGKVector3D.m */,
-				DB51D7C5B85F03B400C5CF0049B0B5DF /* AGKMatrix+CATransform3D.h */,
-				6211636F0DF3077B47CDC10B624E3E68 /* AGKMatrix+CATransform3D.m */,
-				BCAE439BAF09D26507985826D7704D26 /* AGKMatrix+GLKit.h */,
-				EE35DB37A20FE45E354542119852DC6C /* AGKMatrix+GLKit.m */,
-				E5E159C9E118A1EC6BEB06CFC3D5218A /* CALayer+AGK+Methods.h */,
-				4EADC18654A27ED243771421EF963879 /* CALayer+AGK+Methods.m */,
-				CA27C2C163D3AE0B1EA4485611833AE2 /* CALayer+AGK+Properties.h */,
-				3506F2167FF5C9BE12337833A1514CAC /* CALayer+AGK+Properties.m */,
-				2AFE1DEE1DA61F45CF067C7CDA08EE15 /* CALayer+AGKQuad.h */,
-				9F7C9FD780E267390F5B10F01B5740FA /* CALayer+AGKQuad.m */,
-				00F3F3E294BAA2CFE008ED7FB22AC6AB /* NSValue+AGKQuad.h */,
-				092637C4BC0931743ED01D4D0FD8E075 /* NSValue+AGKQuad.m */,
-				17581C82B689C041B9AF1DA17B902FDB /* UIBezierPath+AGKQuad.h */,
-				D85924686FB898F6E556C6A4BE8C8B0D /* UIBezierPath+AGKQuad.m */,
-				E634A6B164F2416E43CA2136FBD448C8 /* UIImage+AGK+CATransform3D.h */,
-				4954998AD226AAB74F3C832D2173ECFB /* UIImage+AGK+CATransform3D.m */,
-				583FC87723B7B5BEA09BE4480F76BBA7 /* UIImage+AGKQuad.h */,
-				8263654D49B4A1CE97D0C60C40C7B540 /* UIImage+AGKQuad.m */,
-				AB5F9816CA9B7659269211B036F498CB /* UIScrollView+AGK+Properties.h */,
-				A197F2C050A40A6A54F6A3E9A96DE7CB /* UIScrollView+AGK+Properties.m */,
-				B26B6DAB25546B056E58C11DE672D4FD /* UIView+AGK+AngleConverter.h */,
-				B16A84D5E4185A92C79A60DC2337E9C6 /* UIView+AGK+AngleConverter.m */,
-				E19B037B731F15FA2870A2BA4C26132C /* UIView+AGK+Properties.h */,
-				97A8A3B1DF614D3053EEEA45CA630DD2 /* UIView+AGK+Properties.m */,
-			);
-			path = Categories;
+			name = AGGeometryKit;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -572,170 +283,130 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				B81F6EC8A98CD1B7187EE0F3D0F099A8 /* Development Pods */,
-				20B56609144CE204DFA8221F742B2D76 /* Frameworks */,
-				2C212CDC4B22CF51422FF7C8D4BF9E56 /* Pods */,
-				851FB8C66EFFD6F21BFAED6969F45E1A /* Products */,
-				CBED55E260997F964534F6B5FFA7A384 /* Targets Support Files */,
+				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
+				4E06A13D8F56B2DDA8D8D19F8CCF7300 /* Products */,
+				B7B80995527643776607AFFA75B91E24 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		851FB8C66EFFD6F21BFAED6969F45E1A /* Products */ = {
+		819BF03CAF4C64353C952D3126D5A881 /* AGGeometryKit */ = {
 			isa = PBXGroup;
 			children = (
-				671694C4F708B67D05A9C2CB36235A04 /* AGGeometryKit.framework */,
-				C9F9BFC27CE0C0DF21A2F9F92813D4B9 /* Expecta.framework */,
-				B5BF28EB8CF37A569FA2688422EAC4EE /* Pods.framework */,
-				D638947797EFE803EBFA666BDAEDEB3F /* Pods_AGGeometryKitDemoTests.framework */,
+				CC291E4C72A06FEC2BA3AF5466440A70 /* Categories */,
 			);
-			name = Products;
+			path = AGGeometryKit;
 			sourceTree = "<group>";
 		};
-		9623AA494525E919FCDDC2FE6FD95498 /* Source */ = {
+		A3E08CFF5ED74332CEC08786A0C958BD /* AGGeometryKit */ = {
 			isa = PBXGroup;
 			children = (
-				472091DE6E9523E820223E1D3AA0CF25 /* AGGeometryKit.h */,
-				44D4C95304D082C87DE473A09B8E8C3A /* AGKBaseDefines.h */,
-				513697751DAD7BB49DA5636C610B9E26 /* AGKBitOperations.h */,
-				6322482EAE86315E45BDE496A8F35375 /* AGKCorner.h */,
-				389DA7B198E97C13DA6A5F071C469A0A /* AGKCorner.m */,
-				14B487D977397B7FDBE9DD2913AD4445 /* AGKLine.h */,
-				E33F3EA0D1A4488901246AC52F7EB710 /* AGKLine.m */,
-				FB4C5B0E9203D8F0DE331B97734E58FA /* AGKMath.h */,
-				84C92C3340B0A1B64E4B216AC1A6B413 /* AGKMath.m */,
-				14FC96B49851CE6AACDA813532A16ABE /* AGKQuad.h */,
-				0E0B12CD5091F916A7515AB87B775404 /* AGKQuad.m */,
-				E8D9F6107643E72A39906D368E4E36FA /* AGKVector3D.h */,
-				2210B23823B875AB5CD7EBBFFA62DE1C /* AGKVector3D.m */,
-				69F03D1D1CBBE9AA45C0F3ED8672F2A5 /* Categories */,
-				155B14D90C1BB336D68A7E8723BA01E4 /* Classes */,
-				5327E107635C1119359E49B3161AB78D /* CoreGraphics_Extensions */,
+				B50B677A4A401765B0A61828239E832E /* Categories */,
 			);
-			path = Source;
+			path = AGGeometryKit;
 			sourceTree = "<group>";
 		};
-		A31F98BC587C4F1BBE82A4767E2DAC0E /* Source */ = {
+		A76F2FCC66BAC279C160E9A1489ABD78 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				2E26762E292C0524092ED4B6E3ED0EA6 /* Categories */,
+				CBD7BEF14CC1CC0AAAA16C04B3875BB9 /* AGGeometryKitClasses.h */,
+				3CDDC5B51EA6A1237FCA9176F17682A4 /* AGKCALayerAnimationBlockDelegate.h */,
+				51648C05628E63E6A82A1CB0E38C4051 /* AGKCALayerAnimationBlockDelegate.m */,
+				E7474AEC9EE5510040E5CAD6BEBEE781 /* AGKMatrix.h */,
+				EB5C765D0BF850E5A1FEE12F970F529F /* AGKMatrix.m */,
+				9263893FDBCF5D02FEC54A361E9F8F57 /* AGKTransformPixelMapper.h */,
+				56D7E3E82EB6F6F46DB1156F5F5FCB47 /* AGKTransformPixelMapper.m */,
 			);
-			path = Source;
+			path = Classes;
 			sourceTree = "<group>";
 		};
-		A8BE06E7261E3A6BB225516A519A360B /* Categories */ = {
+		A9203A0FF197B8764CD853B6EE3A159E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4AE7FD0E16F3FACCFE19068F1E872D9F /* CoreGraphics.framework */,
+				CE437620300D81EED04DF8C0301AF9D9 /* Foundation.framework */,
+				0DD25CA4A497622D5ABF4C433D79E4DE /* QuartzCore.framework */,
+				ED04AE2201316F6590E7AD9952706C7B /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		B50B677A4A401765B0A61828239E832E /* Categories */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Categories;
 			sourceTree = "<group>";
 		};
-		B81F6EC8A98CD1B7187EE0F3D0F099A8 /* Development Pods */ = {
+		B7B80995527643776607AFFA75B91E24 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				052E157918C65C6216808D52B77C9234 /* AGGeometryKit */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		CBED55E260997F964534F6B5FFA7A384 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				535259F7AFDF880AB0FBA2B58E16438C /* Pods */,
-				28E7FC8353C8B27F98F315F5A3C136B9 /* Pods-AGGeometryKitDemoTests */,
+				75D98FF52E597A11900E131B6C4E1ADA /* Pods */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		CD08E6987096D62193ED6A096D7C4E97 /* iOS */ = {
+		B81F6EC8A98CD1B7187EE0F3D0F099A8 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7CB0AF86F2FF551F509F855316F7637B /* CoreGraphics.framework */,
-				6316FD76AE65B17F6E2411856FE450D7 /* Foundation.framework */,
-				1E99C1F23BA5D896A3894A9D9AD28653 /* QuartzCore.framework */,
-				C76669D20C66CFE668C0163420439A9A /* UIKit.framework */,
-				D06333A9647D4E1EDC2B4ABF615AA5C5 /* XCTest.framework */,
+				7693D675BA7FADF8672CC00472B5FB38 /* AGGeometryKit */,
 			);
-			name = iOS;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		DD321F5DED2BDD562647A6B3E802F058 /* Expecta */ = {
+		C5062CA4C6A9C5D820CA209737349940 /* CoreGraphics_Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				AF3EC40325152DC94E302B20DA019B29 /* EXPBlockDefinedMatcher.h */,
-				2A033EE7ABCC5A5BC3354694725ABAB4 /* EXPBlockDefinedMatcher.m */,
-				D113EACFC4966C1454525EB638BBE6DD /* EXPDefines.h */,
-				F0008BC2B1AB1C1B16039E48EF732B20 /* EXPDoubleTuple.h */,
-				92A22AB649520A3A0E9F049501597F28 /* EXPDoubleTuple.m */,
-				3CFB8AFCB2BADA8703719025832F267A /* Expecta.h */,
-				5855E5CCD72B409E24B7599CB886EBCA /* ExpectaObject.h */,
-				84E1F24CB1A19C7B94D19EF5572CE013 /* ExpectaObject.m */,
-				01CB68466B55B2EBAD59BC749D5A87E0 /* ExpectaSupport.h */,
-				DF1F6F9FD380F76D8C05789FFA133341 /* ExpectaSupport.m */,
-				9DB3C0C9FD85E0D4F2AB8DAC0B334719 /* EXPExpect.h */,
-				BEFB25E2127009C7A4413FCD9706A811 /* EXPExpect.m */,
-				00BFB3BEB4CC0EABA602269CB7C92AF5 /* EXPFloatTuple.h */,
-				08BD6C6A68BB7A6936E3E191A6FD5190 /* EXPFloatTuple.m */,
-				81C99F5086D026F047EE5DF1A693FB99 /* EXPMatcher.h */,
-				2E64CA92CCC936FE74DEB553477F597F /* EXPMatcherHelpers.h */,
-				2A1E5E11FD164C5B0D5919467C4F4B7C /* EXPMatcherHelpers.m */,
-				1D18D156B8BE514E47D2ACA15539C103 /* EXPMatchers.h */,
-				3FE144CD3E1FCA440357AD6BDE1DCEC0 /* EXPMatchers+beCloseTo.h */,
-				F032E7CEE92D253DC61B4BA01E27866E /* EXPMatchers+beCloseTo.m */,
-				1AD4C6AC5609235C04F5BF165C4171CC /* EXPMatchers+beFalsy.h */,
-				A6047985D8C9050F0BEB234F033C9E5F /* EXPMatchers+beFalsy.m */,
-				6C31F0F1641A92888F54DF4F45085BBD /* EXPMatchers+beginWith.h */,
-				EF541BD46D7F9484642797AF0ECDD9DE /* EXPMatchers+beginWith.m */,
-				B96F9AC9A5D92D5FAA882BDA10E625AD /* EXPMatchers+beGreaterThan.h */,
-				8D0C169E91919D5ABB3273DE71826224 /* EXPMatchers+beGreaterThan.m */,
-				25503178A5E6A7B0404067888C7DFC26 /* EXPMatchers+beGreaterThanOrEqualTo.h */,
-				E067B6347C8EB667120505466C406764 /* EXPMatchers+beGreaterThanOrEqualTo.m */,
-				056A7F47A8E41C81A1B129A1E21151D7 /* EXPMatchers+beIdenticalTo.h */,
-				FB7C8497641515670C5EF8AC9501805A /* EXPMatchers+beIdenticalTo.m */,
-				09222F871BB4CFBBE6E72F237785A029 /* EXPMatchers+beInstanceOf.h */,
-				E14BC612F4288375DD2CEFEF81887C93 /* EXPMatchers+beInstanceOf.m */,
-				6787F862E0C6FA806BFA3176926EA7DC /* EXPMatchers+beInTheRangeOf.h */,
-				8F393FBBF6639DD58BF90C81000B6DA7 /* EXPMatchers+beInTheRangeOf.m */,
-				D25A62AEC3335FE81EF934F0336FED65 /* EXPMatchers+beKindOf.h */,
-				05D2BA49E443734F87A2B9A59FC74085 /* EXPMatchers+beKindOf.m */,
-				32C6AABAAE186FD1A93F5A48A733A300 /* EXPMatchers+beLessThan.h */,
-				B9EDCF2B98620A1C011CEB80F0F7E19E /* EXPMatchers+beLessThan.m */,
-				CB3328318D0C8E82980CA6CAA57C6CE1 /* EXPMatchers+beLessThanOrEqualTo.h */,
-				B29C4AE8360D00362D16C279BA36A9B4 /* EXPMatchers+beLessThanOrEqualTo.m */,
-				0CF001FF318CDA327D501173701E563E /* EXPMatchers+beNil.h */,
-				E3A814B6BAC2637A4C72DD58D3A3F6D5 /* EXPMatchers+beNil.m */,
-				1EB6EBD122AE82CD94D0E711C7CD6FE0 /* EXPMatchers+beSubclassOf.h */,
-				A545B6D2EFFA185DD7B5A7F95B643198 /* EXPMatchers+beSubclassOf.m */,
-				E5109D768F2152F06D794A3B5D0B193E /* EXPMatchers+beSupersetOf.h */,
-				4FFC489D1B0EC0BCB1C7CB645DEE5B0A /* EXPMatchers+beSupersetOf.m */,
-				BE3E51EE850C3E396A71748F3B3DDD84 /* EXPMatchers+beTruthy.h */,
-				448FDB73380D3BDC8ED9990F3AA1EC29 /* EXPMatchers+beTruthy.m */,
-				6AB46DDEEB46EE0D39FE3FC50F5B8D61 /* EXPMatchers+conformTo.h */,
-				4704845B8042F662EA5B8B2CA67A0FAB /* EXPMatchers+conformTo.m */,
-				C7464F84E8E0BF54E8E912078882BAF5 /* EXPMatchers+contain.h */,
-				A36B91EAA2287224D10AFA194D3A6246 /* EXPMatchers+contain.m */,
-				AC2C8DB97F3BCB3088B5DAF423BA6AE4 /* EXPMatchers+endWith.h */,
-				8CD6673D25002504F2F312D808837535 /* EXPMatchers+endWith.m */,
-				5A56CCBF9579638DE849C8293E26A40B /* EXPMatchers+equal.h */,
-				75993EFBD5151EC151700E742B0405A3 /* EXPMatchers+equal.m */,
-				0F0194C4DFD25C5A04AB810A057CB943 /* EXPMatchers+haveCountOf.h */,
-				7FF546BCF49FEAA6797E255C48C2EFB7 /* EXPMatchers+haveCountOf.m */,
-				5E80EA960F63CB730879A43F1CCD9A68 /* EXPMatchers+match.h */,
-				5FB4CAB7D838E1F841A2C601FFF0368F /* EXPMatchers+match.m */,
-				AAEAFBBF2382A5EA98F009EAE338F865 /* EXPMatchers+postNotification.h */,
-				C483971EA7004317734E4D8C796E78EA /* EXPMatchers+postNotification.m */,
-				18B274E941197899518C8E7F8DEDAA75 /* EXPMatchers+raise.h */,
-				DB956D9AA65000A4F8EB8CD19E3832E9 /* EXPMatchers+raise.m */,
-				1E8ED5614D7865BE2F67E691FBC0A2C5 /* EXPMatchers+raiseWithReason.h */,
-				6733A6F5D8C14C06C16979A2895391B4 /* EXPMatchers+raiseWithReason.m */,
-				B7FAE48F422878C5EA9B8EB57609C940 /* EXPMatchers+respondTo.h */,
-				79E93CA50D7A62B2820C327EEABE75CF /* EXPMatchers+respondTo.m */,
-				54B6B5B7797EC9A413D5569BCAB10E74 /* EXPUnsupportedObject.h */,
-				2F704AB9471B3186D5B25046F08C73FB /* EXPUnsupportedObject.m */,
-				FFCE207DF048375415A8EFAB26F84239 /* NSObject+Expecta.h */,
-				B253400CE301563B739F3E1FE4A5D22F /* NSValue+Expecta.h */,
-				22EBE870CB86D696FF73A06166F4611B /* NSValue+Expecta.m */,
-				0660B5C42044E6AA59BDB1CBE8712CDE /* Support Files */,
+				126A9AFC91F878CC7B9DFB389EC49D6B /* AGGeometryKitCoreGraphics.h */,
+				C50DDE73C073136980A555730715442E /* CGGeometry+AGGeometryKit.h */,
+				E576E65C4FECC8726169E597DFC25D95 /* CGGeometry+AGGeometryKit.m */,
+				D38442A56ED4E2098A2CD223E1B6185A /* CGImageRef+AGK+CATransform3D.h */,
+				A75B94DD4C1990032F0AB81A2D059BCE /* CGImageRef+AGK+CATransform3D.m */,
 			);
-			path = Expecta;
+			path = CoreGraphics_Extensions;
+			sourceTree = "<group>";
+		};
+		CC291E4C72A06FEC2BA3AF5466440A70 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		D857F55D8DB84AE0DE0A67BF73EC97C2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6ED40EF3526BA9E678342E0A5A7DDF15 /* AGGeometryKit.modulemap */,
+				E8287A336B465FD578BF0E78B5C73A69 /* AGGeometryKit.xcconfig */,
+				145BCF3FE2318FBEA33EF8A03FDD9D84 /* AGGeometryKit-dummy.m */,
+				6D2B22A83FB61A3B0C0CEBCB1C38F387 /* AGGeometryKit-prefix.pch */,
+				EA3B2DE9D01269E1C9691596A02E9859 /* AGGeometryKit-umbrella.h */,
+				307DD969B036BEDF58FF813E432D1858 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Demo/Pods/Target Support Files/AGGeometryKit";
+			sourceTree = "<group>";
+		};
+		E39D1B7ACCF84014D56215997E199EA2 /* AGGeometryKit */ = {
+			isa = PBXGroup;
+			children = (
+				F74C4613524C51166759273B7396B73E /* AGGeometryKit.h */,
+				447BE2F4B717487CE105081711244B24 /* AGKBaseDefines.h */,
+				3567741F1FD7820E07C0880B88D874A0 /* AGKBitOperations.h */,
+				0E3A7DBE385AF2B65D91729339178FB1 /* AGKCorner.h */,
+				1EAC735BF79970C1D12745FDBC67BA91 /* AGKCorner.m */,
+				899CAE750EB454B311FAE8908E424E51 /* AGKLine.h */,
+				8215C87826E8B633B765CECCD9397929 /* AGKLine.m */,
+				1D4AB397F0E823338AF0221FBAFB99DF /* AGKMath.h */,
+				5627D5D81BB93F8509E55C7CA81ADD22 /* AGKMath.m */,
+				6AECCC29CC4F3D75EAB9236DC59899D0 /* AGKQuad.h */,
+				E1A7FC2989366FFE5774FE254040F8AC /* AGKQuad.m */,
+				988C6E726DD598D2FDE576631948F31A /* AGKVector3D.h */,
+				F156A5C98DBB6CFFDB2AF65B91ADA73E /* AGKVector3D.m */,
+				23BACA4C1CE9482BB053D03DF09054AD /* Categories */,
+				A76F2FCC66BAC279C160E9A1489ABD78 /* Classes */,
+				C5062CA4C6A9C5D820CA209737349940 /* CoreGraphics_Extensions */,
+			);
+			path = AGGeometryKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -786,81 +457,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		966427BD32145AD621F074D1691342B8 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3B5B7495707BF7133B9FB3F834045611 /* EXPBlockDefinedMatcher.h in Headers */,
-				5EA7043FE10E75D02F3C3052AF8B8318 /* EXPDefines.h in Headers */,
-				2F427490ACABC4408D57CC0592276678 /* EXPDoubleTuple.h in Headers */,
-				837B593D7C1D01B4EA400247309D6AB0 /* Expecta-umbrella.h in Headers */,
-				E1EC4532663CA75DE5BD00CB0A56814D /* Expecta.h in Headers */,
-				2E14619153A453BB8DF389FB6EA147BE /* ExpectaObject.h in Headers */,
-				AFFC8900E52BBEC72059334132F3A8F3 /* ExpectaSupport.h in Headers */,
-				67459AD239EF669A365519E06B45DCFE /* EXPExpect.h in Headers */,
-				6E1D978790705E137FDE439AA68DD3AA /* EXPFloatTuple.h in Headers */,
-				65BC31095CCDFC80CBF6BBA843751F23 /* EXPMatcher.h in Headers */,
-				8C8C1B0D83FE6A4352F15154DB16372C /* EXPMatcherHelpers.h in Headers */,
-				AF1F46668D4591602887998C6E9C10AD /* EXPMatchers+beCloseTo.h in Headers */,
-				F41209A94070904A00BDF24ACB6336B6 /* EXPMatchers+beFalsy.h in Headers */,
-				FD2D4497BC41412128C2D87C1BDE7398 /* EXPMatchers+beginWith.h in Headers */,
-				6EFC63A5CED45BB39FC79D87F2C47D6B /* EXPMatchers+beGreaterThan.h in Headers */,
-				372F7A9CCE59CE86316CF436F832A3FC /* EXPMatchers+beGreaterThanOrEqualTo.h in Headers */,
-				E0AAF49134A0505DF00E20E7B62087E1 /* EXPMatchers+beIdenticalTo.h in Headers */,
-				34B6E9A30603BEBBD87BA535B7D384CA /* EXPMatchers+beInstanceOf.h in Headers */,
-				131532787AD40BE1F35DF288D2E6FFD7 /* EXPMatchers+beInTheRangeOf.h in Headers */,
-				79558B1F97ABE4AB8942DC18BEBD4B82 /* EXPMatchers+beKindOf.h in Headers */,
-				0D16B556212D317A0D4FEB71E102E207 /* EXPMatchers+beLessThan.h in Headers */,
-				37A2D0F8493469EF2495FC689440F079 /* EXPMatchers+beLessThanOrEqualTo.h in Headers */,
-				E735386085CE344F6A01178CF4763852 /* EXPMatchers+beNil.h in Headers */,
-				397B320B7C59C168CC5B62E18ED8DEA0 /* EXPMatchers+beSubclassOf.h in Headers */,
-				76CCABE79C04444450153424D7CE1DC1 /* EXPMatchers+beSupersetOf.h in Headers */,
-				85EB2F216487CB2E8F3FCCFBC4D69912 /* EXPMatchers+beTruthy.h in Headers */,
-				F0DDF02A078B917997FF025BB33BB842 /* EXPMatchers+conformTo.h in Headers */,
-				3C2700C7DAA15C6AF84A595865C42F4D /* EXPMatchers+contain.h in Headers */,
-				1A1AB2EC52323C5EA28DAA99F1E1A90D /* EXPMatchers+endWith.h in Headers */,
-				0F94F5B0ABB3252B9275B7C129EC7A26 /* EXPMatchers+equal.h in Headers */,
-				F75CB2A727F678C9A848A3A11EA7979B /* EXPMatchers+haveCountOf.h in Headers */,
-				2916A0606136A9DC67F2463AB230868B /* EXPMatchers+match.h in Headers */,
-				9B2E761A064459F77EA9870BEF03ACC3 /* EXPMatchers+postNotification.h in Headers */,
-				46137F5CC368BF38BAF0D0AF81DD8FFE /* EXPMatchers+raise.h in Headers */,
-				11C1AEB289C1EB80089349B71F09D04B /* EXPMatchers+raiseWithReason.h in Headers */,
-				260BC7EED9289AF321A6F791964CE472 /* EXPMatchers+respondTo.h in Headers */,
-				85E31076D5530AEEB45ACF16B2B8A983 /* EXPMatchers.h in Headers */,
-				51DDDB0FB4899757CF6A826B531B940D /* EXPUnsupportedObject.h in Headers */,
-				7B223B4E6EF14BA12DA113F7EE10B96C /* NSObject+Expecta.h in Headers */,
-				471FD4F68E27AB26FA2AEBB8B245CEE4 /* NSValue+Expecta.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DB8F22BDC365AA2A18A6FB076302DBFE /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				75BED09B8AEF0CC29E2C92D287D342A2 /* Pods-AGGeometryKitDemoTests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0D888F29E05E498D0CD91A51D28599A5 /* Expecta */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DC61702A42844E4ED762A73E8893436B /* Build configuration list for PBXNativeTarget "Expecta" */;
-			buildPhases = (
-				B239BD93C67DE976C7F3A1AD982A0A58 /* Sources */,
-				E6B836B352B13C63D3C0FA0E500C98A4 /* Frameworks */,
-				966427BD32145AD621F074D1691342B8 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Expecta;
-			productName = Expecta;
-			productReference = C9F9BFC27CE0C0DF21A2F9F92813D4B9 /* Expecta.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		4C90DA097D03C6E0CA96BD48118A7140 /* Pods */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50E71A567D779D6AB1E7140885A8FB29 /* Build configuration list for PBXNativeTarget "Pods" */;
@@ -876,7 +475,7 @@
 			);
 			name = Pods;
 			productName = Pods;
-			productReference = B5BF28EB8CF37A569FA2688422EAC4EE /* Pods.framework */;
+			productReference = 3E0D383DB7E462DAF417D4D8330CF547 /* Pods.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		4EE23B5F68C9FF908330426BF9C591EA /* AGGeometryKit */ = {
@@ -893,26 +492,7 @@
 			);
 			name = AGGeometryKit;
 			productName = AGGeometryKit;
-			productReference = 671694C4F708B67D05A9C2CB36235A04 /* AGGeometryKit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		779D164010374AF87CD72F4D21E5DFC1 /* Pods-AGGeometryKitDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A54FFFDE06D1853B0935497E74AE7541 /* Build configuration list for PBXNativeTarget "Pods-AGGeometryKitDemoTests" */;
-			buildPhases = (
-				662DA6EEBB036D6DA3470B1254DA2829 /* Sources */,
-				955273B41254E9BFA010DFF63AA318B1 /* Frameworks */,
-				DB8F22BDC365AA2A18A6FB076302DBFE /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3828DBFC10D973AB4F4972465562AE3E /* PBXTargetDependency */,
-				9E8936613EC9915B3EF778088F4F3DD4 /* PBXTargetDependency */,
-			);
-			name = "Pods-AGGeometryKitDemoTests";
-			productName = "Pods-AGGeometryKitDemoTests";
-			productReference = D638947797EFE803EBFA666BDAEDEB3F /* Pods_AGGeometryKitDemoTests.framework */;
+			productReference = 341FAA05A1305F65AF793438387A348D /* AGGeometryKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -932,69 +512,17 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 851FB8C66EFFD6F21BFAED6969F45E1A /* Products */;
+			productRefGroup = 4E06A13D8F56B2DDA8D8D19F8CCF7300 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				4EE23B5F68C9FF908330426BF9C591EA /* AGGeometryKit */,
-				0D888F29E05E498D0CD91A51D28599A5 /* Expecta */,
 				4C90DA097D03C6E0CA96BD48118A7140 /* Pods */,
-				779D164010374AF87CD72F4D21E5DFC1 /* Pods-AGGeometryKitDemoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		662DA6EEBB036D6DA3470B1254DA2829 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8F42D46F9EBCCAFB4CF4ADDDCC7CAC72 /* Pods-AGGeometryKitDemoTests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B239BD93C67DE976C7F3A1AD982A0A58 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				06B1FC90B61BF117E8475C51E9048A6A /* EXPBlockDefinedMatcher.m in Sources */,
-				DFFA2CE14088C21D18583A0FFABA0005 /* EXPDoubleTuple.m in Sources */,
-				204D694B03BFF3B244A6AB73FACFFC43 /* Expecta-dummy.m in Sources */,
-				6EEA015C4E0A0EAEC5ACD1287ECEC05B /* ExpectaObject.m in Sources */,
-				5B24DD80DB6F71F3D0522CA288A36A09 /* ExpectaSupport.m in Sources */,
-				184017B1C7A1AA1AEA8DFBB519C8CB89 /* EXPExpect.m in Sources */,
-				D872901ADBD8C446DEF6553A2D06C600 /* EXPFloatTuple.m in Sources */,
-				45782334B39C6B9B4E52B34B2B9B4413 /* EXPMatcherHelpers.m in Sources */,
-				323201D5C037F4514FD0122AA6FD12E7 /* EXPMatchers+beCloseTo.m in Sources */,
-				25747E29F598A4D2967B7C95C9D2686D /* EXPMatchers+beFalsy.m in Sources */,
-				706A41DDC289EAF1F2D211D800D91C87 /* EXPMatchers+beginWith.m in Sources */,
-				D2712B685114DCB3CFADD71414758F36 /* EXPMatchers+beGreaterThan.m in Sources */,
-				4D099399F94AAD9151493AAD10D4A809 /* EXPMatchers+beGreaterThanOrEqualTo.m in Sources */,
-				EAD00EBB13812289F4BD0C7A81815A27 /* EXPMatchers+beIdenticalTo.m in Sources */,
-				504AB3CD7D70064A552DFDCB428C01A7 /* EXPMatchers+beInstanceOf.m in Sources */,
-				C32723DFA07604BBE370E4B1928A325C /* EXPMatchers+beInTheRangeOf.m in Sources */,
-				565D3987D1DB73341F3BA1F9473A9F54 /* EXPMatchers+beKindOf.m in Sources */,
-				363EB8DCEF89422AD65214142D13A181 /* EXPMatchers+beLessThan.m in Sources */,
-				5C8F2AD48B357E7B71DBBA7DFABA29C6 /* EXPMatchers+beLessThanOrEqualTo.m in Sources */,
-				112B5AAC1A183984484B3C376409308C /* EXPMatchers+beNil.m in Sources */,
-				C9CC5E647084400EDFCCA53321A61C2B /* EXPMatchers+beSubclassOf.m in Sources */,
-				6BE7DD872FA8D68B235E3F3AC1564529 /* EXPMatchers+beSupersetOf.m in Sources */,
-				F00E79A27ED93E0F1D506ED0E9B8DA09 /* EXPMatchers+beTruthy.m in Sources */,
-				A1F6B0C0F210F55C9E2BEFF28372BBAA /* EXPMatchers+conformTo.m in Sources */,
-				B25D9AA674596B773907A81AFA9AC02D /* EXPMatchers+contain.m in Sources */,
-				55553C15705BB759C13FE09D6526ACFF /* EXPMatchers+endWith.m in Sources */,
-				5208A3B7EFA0DA3920BFB9ECF9DB554F /* EXPMatchers+equal.m in Sources */,
-				4762F9550CF409B0B4577238B43DE7E6 /* EXPMatchers+haveCountOf.m in Sources */,
-				C217ABA97E49193B686C1591675399D3 /* EXPMatchers+match.m in Sources */,
-				ADB9B72E9E91E3BB2F8198D39D3EE54C /* EXPMatchers+postNotification.m in Sources */,
-				E7EFBC887102F68FC5166AF8B94D632E /* EXPMatchers+raise.m in Sources */,
-				6AC3A9A1825CEA7B5A6CAC3DBBDF9D93 /* EXPMatchers+raiseWithReason.m in Sources */,
-				5C6CAA7BBCEE2A72664CAFAF8CDAE91B /* EXPMatchers+respondTo.m in Sources */,
-				C199190EA02F05FC8ED7D270CA5316CF /* EXPUnsupportedObject.m in Sources */,
-				123EBAAC712690F9F6A44695AFF934F9 /* NSValue+Expecta.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C24F9761B604FB7DD1AE12B9AAD301BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1037,18 +565,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3828DBFC10D973AB4F4972465562AE3E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AGGeometryKit;
-			target = 4EE23B5F68C9FF908330426BF9C591EA /* AGGeometryKit */;
-			targetProxy = 8CA560FA6AD6AEBD8B36E6E7B71E0DB9 /* PBXContainerItemProxy */;
-		};
-		9E8936613EC9915B3EF778088F4F3DD4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Expecta;
-			target = 0D888F29E05E498D0CD91A51D28599A5 /* Expecta */;
-			targetProxy = 6C7786D53B37ADA25A6F6A8D9183076A /* PBXContainerItemProxy */;
-		};
 		9FD4FAB09853A2471BA6C17CC9306D3E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AGGeometryKit;
@@ -1060,7 +576,7 @@
 /* Begin XCBuildConfiguration section */
 		802642DEE1D3087B98C3D4D5B1A7E908 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A5AA85A0A1C305F9B8D544AFE8D7BF8 /* AGGeometryKit.xcconfig */;
+			baseConfigurationReference = E8287A336B465FD578BF0E78B5C73A69 /* AGGeometryKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1087,7 +603,7 @@
 		};
 		813F8E658CA4BEBDC3CEB94E97DA70ED /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 42798681699817FD75813DF828D7FBD3 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1117,7 +633,7 @@
 		};
 		8C4400D112D6458623CE304131EB1DD0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DDD2E171FA442D06A022A0A6A1AB32F /* Pods.release.xcconfig */;
+			baseConfigurationReference = DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1147,7 +663,7 @@
 		};
 		8F033D7D21D3423EB27B5D50D68386C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A5AA85A0A1C305F9B8D544AFE8D7BF8 /* AGGeometryKit.xcconfig */;
+			baseConfigurationReference = E8287A336B465FD578BF0E78B5C73A69 /* AGGeometryKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1211,120 +727,6 @@
 			};
 			name = Debug;
 		};
-		D3034092B1063D76A4852A624824F911 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B3186916D66C815B580C984CC7C1C6B /* Pods-AGGeometryKitDemoTests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-AGGeometryKitDemoTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AGGeometryKitDemoTests/Pods-AGGeometryKitDemoTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_AGGeometryKitDemoTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D95ABB670BF106714613BF606E7FF6DC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7777971A30991B32D6B41BCE124F7345 /* Expecta.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Expecta/Expecta-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Expecta/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Expecta/Expecta.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Expecta;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D9D9F52BC6BE0344E53A83433CE5C963 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7777971A30991B32D6B41BCE124F7345 /* Expecta.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Expecta/Expecta-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Expecta/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Expecta/Expecta.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Expecta;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E49A823D636ED0A4CA2F213F05A33158 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1DAC2CD3A547183CAA6B83F34BFBE4A7 /* Pods-AGGeometryKitDemoTests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-AGGeometryKitDemoTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AGGeometryKitDemoTests/Pods-AGGeometryKitDemoTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_AGGeometryKitDemoTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1385,24 +787,6 @@
 			buildConfigurations = (
 				8F033D7D21D3423EB27B5D50D68386C7 /* Debug */,
 				802642DEE1D3087B98C3D4D5B1A7E908 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A54FFFDE06D1853B0935497E74AE7541 /* Build configuration list for PBXNativeTarget "Pods-AGGeometryKitDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E49A823D636ED0A4CA2F213F05A33158 /* Debug */,
-				D3034092B1063D76A4852A624824F911 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DC61702A42844E4ED762A73E8893436B /* Build configuration list for PBXNativeTarget "Expecta" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D95ABB670BF106714613BF606E7FF6DC /* Debug */,
-				D9D9F52BC6BE0344E53A83433CE5C963 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

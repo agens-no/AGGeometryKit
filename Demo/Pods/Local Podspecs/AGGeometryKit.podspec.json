@@ -1,6 +1,6 @@
 {
   "name": "AGGeometryKit",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "summary": "Quadrilaterals on CALayer, CGGeometry-functions, UIView/CALayer properties and other invaluable tools.",
   "homepage": "https://github.com/hfossli/AGGeometryKit",
   "license": "MIT",
@@ -16,14 +16,14 @@
   },
   "source": {
     "git": "https://github.com/hfossli/AGGeometryKit.git",
-    "tag": "1.2.2"
+    "tag": "1.2.3"
   },
   "frameworks": [
     "CoreGraphics",
     "UIKit",
     "QuartzCore"
   ],
-  "source_files": "Source/**/*.{h,m}",
+  "source_files": "AGGeometryKit/**/*.{h,m}",
   "subspecs": [
     {
       "name": "UIViewProperties",
@@ -32,7 +32,7 @@
         "UIKit",
         "QuartzCore"
       ],
-      "source_files": "Source/**/UIView+AGK+Properties.{h,m}"
+      "source_files": "AGGeometryKit/**/UIView+AGK+Properties.{h,m}"
     },
     {
       "name": "CALayerProperties",
@@ -40,7 +40,7 @@
         "CoreGraphics",
         "QuartzCore"
       ],
-      "source_files": "Source/**/CALayer+AGK+Properties.{h,m}"
+      "source_files": "AGGeometryKit/**/CALayer+AGK+Properties.{h,m}"
     }
   ]
 }

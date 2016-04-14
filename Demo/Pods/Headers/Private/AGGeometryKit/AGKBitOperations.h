@@ -1,1 +1,1 @@
-../../../../../Source/AGKBitOperations.h
+../../../../../AGGeometryKit/AGKBitOperations.h

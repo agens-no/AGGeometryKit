@@ -1,1 +1,1 @@
-../../../../../Source/Categories/UIScrollView+AGK+Properties.h
+../../../../../AGGeometryKit/Categories/UIScrollView+AGK+Properties.h

@@ -1,1 +1,1 @@
-../../../../../Source/Categories/UIBezierPath+AGKQuad.h
+../../../../../AGGeometryKit/Categories/UIBezierPath+AGKQuad.h
