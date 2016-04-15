@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '42129EE0C32708719EE23260'
+               BlueprintIdentifier = 'F92BBCF3CD1EAB1C05AE4646'
                BlueprintName = 'AGGeometryKit'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'AGGeometryKit.framework'>

@@ -76,21 +76,6 @@
 		A36D543D1B5E7C740040BDDC /* sample_image7@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sample_image7@2x.jpg"; sourceTree = "<group>"; };
 		A36D544D1B5E7C8A0040BDDC /* JAValueToString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAValueToString.h; sourceTree = "<group>"; };
 		A36D544E1B5E7C8A0040BDDC /* JAValueToString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAValueToString.m; sourceTree = "<group>"; };
-		A36D54511B5E822D0040BDDC /* AGKBitOperationsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKBitOperationsTest.m; sourceTree = "<group>"; };
-		A36D54521B5E822D0040BDDC /* AGKCornerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKCornerTest.m; sourceTree = "<group>"; };
-		A36D54531B5E822D0040BDDC /* AGKLineTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKLineTest.m; sourceTree = "<group>"; };
-		A36D54541B5E822D0040BDDC /* AGKMathTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKMathTest.m; sourceTree = "<group>"; };
-		A36D54551B5E822D0040BDDC /* AGKMatrix+AGKVector3DTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AGKMatrix+AGKVector3DTest.m"; sourceTree = "<group>"; };
-		A36D54561B5E822D0040BDDC /* AGKMatrix+CATransform3DTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AGKMatrix+CATransform3DTest.m"; sourceTree = "<group>"; };
-		A36D54571B5E822D0040BDDC /* AGKMatrixTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKMatrixTest.m; sourceTree = "<group>"; };
-		A36D54581B5E822D0040BDDC /* AGKQuadTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKQuadTest.m; sourceTree = "<group>"; };
-		A36D54591B5E822D0040BDDC /* AGKVector3DTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKVector3DTest.m; sourceTree = "<group>"; };
-		A36D545A1B5E822D0040BDDC /* CALayer+AGK+PropertiesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AGK+PropertiesTest.m"; sourceTree = "<group>"; };
-		A36D545B1B5E822D0040BDDC /* CALayer+AGKQuadTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AGKQuadTest.m"; sourceTree = "<group>"; };
-		A36D545C1B5E822D0040BDDC /* CGGeometry+AGGeometryKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+AGGeometryKitTest.m"; sourceTree = "<group>"; };
-		A36D545D1B5E822D0040BDDC /* NSValue+AGKQuadTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+AGKQuadTest.m"; sourceTree = "<group>"; };
-		A36D545E1B5E822D0040BDDC /* UIView+AGK+AngleConverterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AGK+AngleConverterTest.m"; sourceTree = "<group>"; };
-		A36D545F1B5E822D0040BDDC /* UIView+AGK+PropertiesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AGK+PropertiesTest.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +124,6 @@
 			children = (
 				A36D53F01B5E7BAC0040BDDC /* AppDelegate.h */,
 				A36D53F11B5E7BAC0040BDDC /* AppDelegate.m */,
-				A36D54501B5E822D0040BDDC /* Tests */,
 				A36D54181B5E7C650040BDDC /* Demos */,
 				A36D542B1B5E7C6E0040BDDC /* easing.c */,
 				A36D542C1B5E7C6E0040BDDC /* easing.h */,
@@ -198,28 +182,6 @@
 			);
 			path = Resources;
 			sourceTree = "<group>";
-		};
-		A36D54501B5E822D0040BDDC /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				A36D54511B5E822D0040BDDC /* AGKBitOperationsTest.m */,
-				A36D54521B5E822D0040BDDC /* AGKCornerTest.m */,
-				A36D54531B5E822D0040BDDC /* AGKLineTest.m */,
-				A36D54541B5E822D0040BDDC /* AGKMathTest.m */,
-				A36D54551B5E822D0040BDDC /* AGKMatrix+AGKVector3DTest.m */,
-				A36D54561B5E822D0040BDDC /* AGKMatrix+CATransform3DTest.m */,
-				A36D54571B5E822D0040BDDC /* AGKMatrixTest.m */,
-				A36D54581B5E822D0040BDDC /* AGKQuadTest.m */,
-				A36D54591B5E822D0040BDDC /* AGKVector3DTest.m */,
-				A36D545A1B5E822D0040BDDC /* CALayer+AGK+PropertiesTest.m */,
-				A36D545B1B5E822D0040BDDC /* CALayer+AGKQuadTest.m */,
-				A36D545C1B5E822D0040BDDC /* CGGeometry+AGGeometryKitTest.m */,
-				A36D545D1B5E822D0040BDDC /* NSValue+AGKQuadTest.m */,
-				A36D545E1B5E822D0040BDDC /* UIView+AGK+AngleConverterTest.m */,
-				A36D545F1B5E822D0040BDDC /* UIView+AGK+PropertiesTest.m */,
-			);
-			path = Tests;
-			sourceTree = SOURCE_ROOT;
 		};
 		CA6F6D58C54EA622F09FA915 /* Frameworks */ = {
 			isa = PBXGroup;

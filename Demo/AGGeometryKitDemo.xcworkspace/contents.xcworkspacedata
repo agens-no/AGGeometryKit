@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:AGGeometryKit-iOS.playground">
-   </FileRef>
-   <FileRef
       location = "group:AGGeometryKitDemo.xcodeproj">
    </FileRef>
    <FileRef
