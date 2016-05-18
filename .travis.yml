@@ -1,2 +1,2 @@
 language: objective-c
-script: xctool -workspace AGGeometryKitDemo.xcworkspace -scheme AGGeometryKitDemo -sdk iphonesimulator build test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+script: xctool -workspace Demo/AGGeometryKitDemo.xcworkspace -scheme AGGeometryKitDemo -sdk iphonesimulator build test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
