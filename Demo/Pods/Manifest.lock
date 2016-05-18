@@ -1,9 +1,9 @@
 PODS:
-  - AGGeometryKit (1.2.3):
-    - AGGeometryKit/CALayerProperties (= 1.2.3)
-    - AGGeometryKit/UIViewProperties (= 1.2.3)
-  - AGGeometryKit/CALayerProperties (1.2.3)
-  - AGGeometryKit/UIViewProperties (1.2.3)
+  - AGGeometryKit (1.2.4):
+    - AGGeometryKit/CALayerProperties (= 1.2.4)
+    - AGGeometryKit/UIViewProperties (= 1.2.4)
+  - AGGeometryKit/CALayerProperties (1.2.4)
+  - AGGeometryKit/UIViewProperties (1.2.4)
 
 DEPENDENCIES:
   - AGGeometryKit (from `../AGGeometryKit.podspec`)
@@ -13,6 +13,8 @@ EXTERNAL SOURCES:
     :path: "../AGGeometryKit.podspec"
 
 SPEC CHECKSUMS:
-  AGGeometryKit: 28b82e926a68f89a8bd982a2e03d54195ba97a4b
+  AGGeometryKit: 2c2c39c9f99eb7a966f0aa16b2a97027dacc4761
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 874d119eba7215abe33215abc140c1d34b94fc4b
+
+COCOAPODS: 1.0.0

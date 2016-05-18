@@ -22,7 +22,7 @@
 // THE SOFTWARE.
 
 #import <XCTest/XCTest.h>
-#import "AGKVector3D.h"
+#import <AGGeometryKit/AGKVector3D.h>
 
 @interface AGKVector3DTest : XCTestCase
 

@@ -6,7 +6,7 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "AGKLine.h"
+#import <AGGeometryKit/AGKLine.h>
 
 @interface AGKLineTest : XCTestCase
 

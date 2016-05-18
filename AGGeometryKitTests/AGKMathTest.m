@@ -22,7 +22,7 @@
 // THE SOFTWARE.
 
 #import <XCTest/XCTest.h>
-#import "AGKMath.h"
+#import <AGGeometryKit/AGKMath.h>
 
 @interface AGKMathTest : XCTestCase
 

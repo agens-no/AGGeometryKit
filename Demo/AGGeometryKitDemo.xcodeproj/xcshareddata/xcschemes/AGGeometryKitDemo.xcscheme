@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A36D54051B5E7BAC0040BDDC"
+               BlueprintIdentifier = "A364F1921CEC722B00ACEA82"
                BuildableName = "AGGeometryKitDemoTests.xctest"
                BlueprintName = "AGGeometryKitDemoTests"
                ReferencedContainer = "container:AGGeometryKitDemo.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A36D54051B5E7BAC0040BDDC"
+               BlueprintIdentifier = "A364F1921CEC722B00ACEA82"
                BuildableName = "AGGeometryKitDemoTests.xctest"
                BlueprintName = "AGGeometryKitDemoTests"
                ReferencedContainer = "container:AGGeometryKitDemo.xcodeproj">

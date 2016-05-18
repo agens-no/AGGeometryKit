@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "AGKBitOperations.h"
+#import <AGGeometryKit/AGKBitOperations.h>
 
 @interface AGKBitOperationsTest : XCTestCase
 

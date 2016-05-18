@@ -23,7 +23,7 @@
 // THE SOFTWARE.
 
 #import <XCTest/XCTest.h>
-#import "AGKMatrix.h"
+#import <AGGeometryKit/AGKMatrix.h>
 
 @interface AGKMatrixTest : XCTestCase
 @property (nonatomic, strong) AGKMatrix *testMatrix;

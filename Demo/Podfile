@@ -1,3 +1,10 @@
+source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-pod 'AGGeometryKit', :path => '../AGGeometryKit.podspec'
+target 'AGGeometryKitDemo' do
+  pod 'AGGeometryKit', :path => '../AGGeometryKit.podspec'
+
+  target 'AGGeometryKitDemoTests' do
+    inherit! :search_paths
+  end
+end

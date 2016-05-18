@@ -24,7 +24,7 @@
 
 #import <XCTest/XCTest.h>
 #import <QuartzCore/QuartzCore.h>
-#import "AGKMatrix+CATransform3D.h"
+#import <AGGeometryKit/AGKMatrix+CATransform3D.h>
 
 @interface AGKMatrix_CATransform3DTest : XCTestCase
 

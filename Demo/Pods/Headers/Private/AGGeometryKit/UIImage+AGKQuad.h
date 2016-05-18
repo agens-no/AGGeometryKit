@@ -1,1 +1,0 @@
-../../../../../AGGeometryKit/Categories/UIImage+AGKQuad.h

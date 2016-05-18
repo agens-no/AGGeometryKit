@@ -25,7 +25,7 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "AGKCorner.h"
+#import <AGGeometryKit/AGKCorner.h>
 #import "CGGeometry+AGGeometryKit.h"
 
 @interface AGKCornerTest : XCTestCase

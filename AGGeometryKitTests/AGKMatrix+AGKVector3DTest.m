@@ -23,7 +23,7 @@
 // THE SOFTWARE.
 
 #import <XCTest/XCTest.h>
-#import "AGKMatrix+AGKVector3D.h"
+#import <AGGeometryKit/AGKMatrix+AGKVector3D.h>
 
 @interface AGKMatrix_AGKVector3DTest : XCTestCase
 @property (nonatomic, strong) NSArray *initialMembers;

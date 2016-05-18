@@ -23,7 +23,7 @@
 
 #import <XCTest/XCTest.h>
 #import "NSValue+AGKQuad.h"
-#import "AGKQuad.h"
+#import <AGGeometryKit/AGKQuad.h>
 
 @interface AGKQuadTest : XCTestCase
 
