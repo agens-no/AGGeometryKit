@@ -1,5 +1,4 @@
-![# AGGeometryKit](/logo.png?raw=true "AGGeometryKit")
-
+# <img src="/logo.png?raw=true" width="191" alt="AGGeometryKit" />
 [![Build Status](https://travis-ci.org/hfossli/AGGeometryKit.svg?branch=master)](https://travis-ci.org/hfossli/AGGeometryKit)
 
 Quadrilaterals on CALayer (control each corner point individually), CGGeometry-functions, UIView/CALayer properties and other invaluable tools.
