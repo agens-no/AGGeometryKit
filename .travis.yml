@@ -1,3 +1,3 @@
 language: objective-c
 osx_image: xcode8.2
-script: xctool -project AGGeometryKit.xcodeproj -scheme AGGeometryKit -sdk iphonesimulator build test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+script: xcodebuild -project AGGeometryKit.xcodeproj -scheme AGGeometryKit -destination 'platform=iOS Simulator,name=iPad Air' test
