@@ -60,7 +60,7 @@
 		A009D0FB1C9FC92C00966B6D /* CGGeometry+AGGeometryKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D0C81C9FC92C00966B6D /* CGGeometry+AGGeometryKit.m */; };
 		A009D0FC1C9FC92C00966B6D /* CGImageRef+AGK+CATransform3D.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0C91C9FC92C00966B6D /* CGImageRef+AGK+CATransform3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A009D0FD1C9FC92C00966B6D /* CGImageRef+AGK+CATransform3D.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D0CA1C9FC92C00966B6D /* CGImageRef+AGK+CATransform3D.m */; };
-		A0B744361CBFEEFE0017A9BC /* AGGeometryKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A009D07B1C9FC89200966B6D /* AGGeometryKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A0B744361CBFEEFE0017A9BC /* AGGeometryKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A009D07B1C9FC89200966B6D /* AGGeometryKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A0F6914B1CBF5DE400EBC692 /* AGKBitOperationsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F6913C1CBF5DE400EBC692 /* AGKBitOperationsTest.m */; };
 		A0F6914C1CBF5DE400EBC692 /* AGKCornerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F6913D1CBF5DE400EBC692 /* AGKCornerTest.m */; };
 		A0F6914D1CBF5DE400EBC692 /* AGKLineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F6913E1CBF5DE400EBC692 /* AGKLineTest.m */; };
@@ -132,7 +132,7 @@
 		A009D0AC1C9FC92C00966B6D /* CALayer+AGK+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AGK+Properties.m"; sourceTree = "<group>"; };
 		A009D0AD1C9FC92C00966B6D /* CALayer+AGKQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+AGKQuad.h"; sourceTree = "<group>"; };
 		A009D0AE1C9FC92C00966B6D /* CALayer+AGKQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AGKQuad.m"; sourceTree = "<group>"; };
-		A009D0AF1C9FC92C00966B6D /* NSValue+AGKQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+AGKQuad.h"; sourceTree = "<group>"; };
+		A009D0AF1C9FC92C00966B6D /* NSValue+AGKQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+AGKQuad.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		A009D0B01C9FC92C00966B6D /* NSValue+AGKQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+AGKQuad.m"; sourceTree = "<group>"; };
 		A009D0B11C9FC92C00966B6D /* UIBezierPath+AGKQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+AGKQuad.h"; sourceTree = "<group>"; };
 		A009D0B21C9FC92C00966B6D /* UIBezierPath+AGKQuad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+AGKQuad.m"; sourceTree = "<group>"; };
@@ -164,8 +164,8 @@
 		A0F6913F1CBF5DE400EBC692 /* AGKMathTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKMathTest.m; sourceTree = "<group>"; };
 		A0F691401CBF5DE400EBC692 /* AGKMatrix+AGKVector3DTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AGKMatrix+AGKVector3DTest.m"; sourceTree = "<group>"; };
 		A0F691411CBF5DE400EBC692 /* AGKMatrix+CATransform3DTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AGKMatrix+CATransform3DTest.m"; sourceTree = "<group>"; };
-		A0F691421CBF5DE400EBC692 /* AGKMatrixTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKMatrixTest.m; sourceTree = "<group>"; };
-		A0F691431CBF5DE400EBC692 /* AGKQuadTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKQuadTest.m; sourceTree = "<group>"; };
+		A0F691421CBF5DE400EBC692 /* AGKMatrixTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKMatrixTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		A0F691431CBF5DE400EBC692 /* AGKQuadTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKQuadTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		A0F691441CBF5DE400EBC692 /* AGKVector3DTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKVector3DTest.m; sourceTree = "<group>"; };
 		A0F691451CBF5DE400EBC692 /* CALayer+AGK+PropertiesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AGK+PropertiesTest.m"; sourceTree = "<group>"; };
 		A0F691461CBF5DE400EBC692 /* CALayer+AGKQuadTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AGKQuadTest.m"; sourceTree = "<group>"; };
@@ -404,7 +404,7 @@
 		A009D0721C9FC89200966B6D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = hfossli;
 				TargetAttributes = {
 					A009D07A1C9FC89200966B6D = {
@@ -527,8 +527,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -574,8 +576,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -605,6 +609,7 @@
 		A009D0901C9FC89200966B6D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -621,6 +626,7 @@
 		A009D0911C9FC89200966B6D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

@@ -159,7 +159,7 @@ AGKQuad AGKQuadInsetBottom(AGKQuad q, CGFloat inset)
 
 AGKQuad AGKQuadMirror(AGKQuad q, BOOL x, BOOL y)
 {
-    AGKQuad mirroredQ;
+    AGKQuad mirroredQ = AGKQuadZero;
     if(x)
     {
         mirroredQ.tl.x = q.tr.x;

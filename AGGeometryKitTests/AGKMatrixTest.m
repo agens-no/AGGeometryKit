@@ -175,8 +175,8 @@
 - (void)testEnumerateMembersUsingBlock {
     __block NSUInteger defaultValuesRecieved = 0;
     [self.testMatrix enumerateMembersUsingBlock:^(NSNumber *member, NSUInteger index, NSUInteger columnIndex, NSUInteger rowIndex, BOOL *stop) {
-        XCTAssertEqual(columnIndex, index / 4, @"Column index should be %lu for absolute index %lu on a 3x4 matrix", index / 4, (unsigned long)index);
-        XCTAssertEqual(rowIndex, index % 4, @"Row index should be %lu for absolute index %lu on a 3x4 matrix", index % 4, (unsigned long)index);
+        XCTAssertEqual(columnIndex, index / 4, @"Column index should be %u for absolute index %lu on a 3x4 matrix", index / 4, (unsigned long)index);
+        XCTAssertEqual(rowIndex, index % 4, @"Row index should be %u for absolute index %lu on a 3x4 matrix", index % 4, (unsigned long)index);
         
         if (index < self.initialMembers.count) {
             XCTAssertEqualObjects(member, self.initialMembers[index], @"The returned member should be the same as the one passed in: %@", self.initialMembers[index]);

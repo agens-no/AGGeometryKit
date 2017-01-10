@@ -24,7 +24,12 @@
 #import <Foundation/Foundation.h>
 #import <QuartzCore/CAAnimation.h>
 
-@interface AGKCALayerAnimationBlockDelegate : NSObject
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < 100000
+@protocol CAAnimationDelegate <NSObject>
+@end
+#endif
+
+@interface AGKCALayerAnimationBlockDelegate : NSObject <CAAnimationDelegate>
 
 @property (nonatomic, copy) void (^onStart)();
 @property (nonatomic, copy) void (^onStop)(BOOL completed);

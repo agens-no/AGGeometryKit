@@ -61,7 +61,7 @@
 
 - (GLKMatrix2)glkMatrix2Value
 {
-	GLKMatrix2 glkMatrix;
+    GLKMatrix2 glkMatrix = { 0, 0,  0, 0 };
 	
 	for (NSUInteger absoluteIndex = 0; absoluteIndex < (2 * 2); absoluteIndex++)
     {
@@ -83,7 +83,7 @@
 
 - (GLKMatrix3)glkMatrix3Value
 {
-	GLKMatrix3 glkMatrix;
+    GLKMatrix3 glkMatrix = { 0, 0, 0,  0, 0, 0,  0, 0, 0 };
 	
 	for (NSUInteger absoluteIndex = 0; absoluteIndex < (3 * 3); absoluteIndex++)
     {
@@ -105,7 +105,7 @@
 
 - (GLKMatrix4)glkMatrix4Value
 {
-	GLKMatrix4 glkMatrix;
+    GLKMatrix4 glkMatrix = { 0, 0, 0, 0,  0, 0, 0, 0,  0, 0, 0, 0,  0, 0, 0, 0 };
 	
 	for (NSUInteger absoluteIndex = 0; absoluteIndex < (4 * 4); absoluteIndex++)
     {
