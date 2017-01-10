@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A009D07F1C9FC89200966B6D /* AGGeometryKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D07E1C9FC89200966B6D /* AGGeometryKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A009D0861C9FC89200966B6D /* AGGeometryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A009D07B1C9FC89200966B6D /* AGGeometryKit.framework */; };
-		A009D08B1C9FC89200966B6D /* AGGeometryKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A009D08A1C9FC89200966B6D /* AGGeometryKitTests.m */; };
 		A009D0CB1C9FC92C00966B6D /* AGKBaseDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0951C9FC92C00966B6D /* AGKBaseDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A009D0CC1C9FC92C00966B6D /* AGKBitOperations.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0961C9FC92C00966B6D /* AGKBitOperations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A009D0CD1C9FC92C00966B6D /* AGKCorner.h in Headers */ = {isa = PBXBuildFile; fileRef = A009D0971C9FC92C00966B6D /* AGKCorner.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -107,7 +106,6 @@
 		A009D07E1C9FC89200966B6D /* AGGeometryKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGGeometryKit.h; sourceTree = "<group>"; };
 		A009D0801C9FC89200966B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A009D0851C9FC89200966B6D /* AGGeometryKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AGGeometryKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A009D08A1C9FC89200966B6D /* AGGeometryKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGGeometryKitTests.m; sourceTree = "<group>"; };
 		A009D08C1C9FC89200966B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A009D0951C9FC92C00966B6D /* AGKBaseDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKBaseDefines.h; sourceTree = "<group>"; };
 		A009D0961C9FC92C00966B6D /* AGKBitOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKBitOperations.h; sourceTree = "<group>"; };
@@ -241,7 +239,6 @@
 		A009D0891C9FC89200966B6D /* AGGeometryKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				A009D08A1C9FC89200966B6D /* AGGeometryKitTests.m */,
 				A0F6913C1CBF5DE400EBC692 /* AGKBitOperationsTest.m */,
 				A0F6913D1CBF5DE400EBC692 /* AGKCornerTest.m */,
 				A0F6913E1CBF5DE400EBC692 /* AGKLineTest.m */,
@@ -489,7 +486,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0F691501CBF5DE400EBC692 /* AGKMatrix+CATransform3DTest.m in Sources */,
-				A009D08B1C9FC89200966B6D /* AGGeometryKitTests.m in Sources */,
 				A0F691511CBF5DE400EBC692 /* AGKMatrixTest.m in Sources */,
 				A0F691571CBF5DE400EBC692 /* NSValue+AGKQuadTest.m in Sources */,
 				A0F691531CBF5DE400EBC692 /* AGKVector3DTest.m in Sources */,
