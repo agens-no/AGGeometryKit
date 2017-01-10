@@ -28,32 +28,32 @@ class AngleConverterExample: UIViewController {
         updateTextLabel()
     }
     
-    @IBAction func viewASliderValueChanged(sender: UISlider) {
+    @IBAction func viewASliderValueChanged(_ sender: UISlider) {
         updateAngleOfViewA()
         updateTextLabel()
     }
     
-    @IBAction func viewBSliderValueChanged(sender: UISlider) {
+    @IBAction func viewBSliderValueChanged(_ sender: UISlider) {
         updateAngleOfViewB()
         updateTextLabel()
     }
     
-    private func updateAngleOfViewA() {
+    fileprivate func updateAngleOfViewA() {
         let angle = CGFloat(sliderA!.value)
-        viewA?.transform = CGAffineTransformMakeRotation(angle)
+        viewA?.transform = CGAffineTransform(rotationAngle: angle)
     }
     
-    private func updateAngleOfViewB() {
+    fileprivate func updateAngleOfViewB() {
         let angle = CGFloat(sliderB!.value)
-        viewB?.transform = CGAffineTransformMakeRotation(angle)
+        viewB?.transform = CGAffineTransform(rotationAngle: angle)
     }
     
-    private func updateTextLabel() {
+    fileprivate func updateTextLabel() {
         textLabel?.text = textForLabel()
     }
     
-    private func textForLabel() -> String {
-        let radians:CGFloat = viewA!.convertAngleOfViewInRelationToView(viewB!)
+    fileprivate func textForLabel() -> String {
+        let radians:CGFloat = viewA!.convertAngleOfViewInRelation(to: viewB!)
         let degrees:CGFloat = radians * 180.0 / π
         let radiansString = String(format: "%.2f", radians)
         let degreesString = String(format: "%.0f", degrees)

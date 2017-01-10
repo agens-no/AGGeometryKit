@@ -15,7 +15,7 @@ class QuadAnimationExample: UIViewController {
     @IBOutlet var imageView:UIImageView?
     var originalQuad:AGKQuad = AGKQuadZero
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if let source = imageView {
             source.layer.ensureAnchorPointIsSetToZero()
@@ -47,27 +47,27 @@ class QuadAnimationExample: UIViewController {
         animateToQuad(quad)
     }
     
-    @IBAction func tapRecognized(recognizer: UITapGestureRecognizer) {
+    @IBAction func tapRecognized(_ recognizer: UITapGestureRecognizer) {
         NSLog("Tap recognized. Logging just to show that we are receiving touch correctly even when animating.");
     }
     
-    private func animateToQuad(quad: AGKQuad) {
+    fileprivate func animateToQuad(_ quad: AGKQuad) {
         
         NSLog("Animating from: \(NSStringFromAGKQuad(imageView!.layer.quadrilateral))")
         NSLog("Animating to: \(NSStringFromAGKQuad(quad))")
         
-        let duration:NSTimeInterval = 2.0
+        let duration:TimeInterval = 2.0
         
-        let ease: (p: Double) -> Double = {
+        let ease: (_ p: Double) -> Double = {
             return Double(ElasticEaseOut(Float($0)))
         }
         
-        let onComplete: (completed: Bool) -> Void = {
+        let onComplete: (_ completed: Bool) -> Void = {
             let state = $0 ? "FINISHED" : "CANCELLED"
             NSLog("Animation done \(state)")
         }
         
-        imageView!.layer.animateFromPresentedStateToQuadrilateral(quad,
+        imageView!.layer.animateFromPresentedState(toQuadrilateral: quad,
             forNumberOfFrames: UInt(duration * 60),
             duration: duration,
             delay: 0.0,
