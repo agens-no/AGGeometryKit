@@ -31,4 +31,9 @@ Pod::Spec.new do |s|
         ss.frameworks    = 'CoreGraphics', 'QuartzCore'
         ss.source_files  = 'AGGeometryKit/**/CALayer+AGK+Properties.{h,m}'
     end
+
+    s.subspec 'FrameAccessor' do |ss|
+        ss.frameworks    = 'CoreGraphics', 'QuartzCore'
+        ss.source_files        = 'Source/Categories/UIView+AGK+Properties.{h,m}', 'Source/CoreGraphics_Extensions/CGGeometry+AGGeometryKit.{h,m}'
+    end
 end
