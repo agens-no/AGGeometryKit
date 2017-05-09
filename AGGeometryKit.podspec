@@ -4,7 +4,8 @@ Pod::Spec.new do |s|
     s.summary      = "Quadrilaterals on CALayer, CGGeometry-functions, UIView/CALayer properties and other invaluable tools."
     s.homepage     = "https://github.com/hfossli/AGGeometryKit"
     s.license      = 'MIT'
-    s.platform      = :ios, '5.0'
+    s.ios.deployment_target = '5.0'
+    s.tvos.deployment_target = '9.0'
     s.requires_arc  = true
     s.authors      = {
     	"Håvard Fossli" => "hfossli@agens.no",
