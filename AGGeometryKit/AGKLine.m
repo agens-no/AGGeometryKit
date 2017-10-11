@@ -36,6 +36,11 @@ double AGKLineLength(AGKLine l)
     return CGPointLengthBetween_AGK(l.start, l.end);
 }
 
+CGPoint AGKLineCenter(AGKLine l)
+{
+    return CGPointInterpolate_AGK(l.start, l.end, 0.5);
+}
+
 BOOL AGKLineIntersection(AGKLine l1, AGKLine l2, CGPoint *out_pointOfIntersection)
 {
     // http://stackoverflow.com/a/565282/202451
