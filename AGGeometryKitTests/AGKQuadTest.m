@@ -150,28 +150,28 @@
     }
 }
 
-- (void)testAGKQuadSetPointForCorner
+- (void)testAGKQuadModifyCorner
 {
     AGKQuad q = AGKQuadMakeWithCGSize(CGSizeMake(500, 500));
     {
-        AGKQuad changed = AGKQuadSetPointForCorner(q, AGKCornerTopLeft, CGPointMake(250, 0));
+        AGKQuad changed = AGKQuadModifyCorner(q, AGKCornerTopLeft, CGPointMake(250, 0));
         AGKQuad expected = AGKQuadMake(CGPointMake(250, 0), CGPointMake(500, 0), CGPointMake(500, 500), CGPointMake(0, 500));
         XCTAssertTrue(AGKQuadEqual(changed, expected));
     }
     {
-        AGKQuad changed = AGKQuadSetPointForCorner(q, AGKCornerTopRight, CGPointMake(250, 0));
+        AGKQuad changed = AGKQuadModifyCorner(q, AGKCornerTopRight, CGPointMake(250, 0));
         AGKQuad expected = AGKQuadMake(CGPointMake(0, 0), CGPointMake(250, 0), CGPointMake(500, 500), CGPointMake(0, 500));
         XCTAssertTrue(AGKQuadEqual(changed, expected));
 
     }
     {
-        AGKQuad changed = AGKQuadSetPointForCorner(q, AGKCornerBottomRight, CGPointMake(250, 500));
+        AGKQuad changed = AGKQuadModifyCorner(q, AGKCornerBottomRight, CGPointMake(250, 500));
         AGKQuad expected = AGKQuadMake(CGPointMake(0, 0), CGPointMake(500, 0), CGPointMake(250, 500), CGPointMake(0, 500));
         XCTAssertTrue(AGKQuadEqual(changed, expected));
 
     }
     {
-        AGKQuad changed = AGKQuadSetPointForCorner(q, AGKCornerBottomLeft, CGPointMake(250, 500));
+        AGKQuad changed = AGKQuadModifyCorner(q, AGKCornerBottomLeft, CGPointMake(250, 500));
         AGKQuad expected = AGKQuadMake(CGPointMake(0, 0), CGPointMake(500, 0), CGPointMake(500, 500), CGPointMake(250, 500));
         XCTAssertTrue(AGKQuadEqual(changed, expected));
     }

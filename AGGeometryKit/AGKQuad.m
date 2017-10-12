@@ -330,7 +330,7 @@ CGPoint AGKQuadGet(AGKQuad q, int cornerIndex)
     }
 }
 
-AGKQuad AGKQuadSetPointForCorner(AGKQuad q, AGKCorner corner, CGPoint point)
+AGKQuad AGKQuadModifyCorner(AGKQuad q, AGKCorner corner, CGPoint point)
 {
     switch (corner) {
         case AGKCornerTopLeft:
@@ -357,9 +357,9 @@ AGKQuad AGKQuadSetPointForCorner(AGKQuad q, AGKCorner corner, CGPoint point)
     return q;
 }
 
-AGKQuad AGKQuadSetPoint(AGKQuad q, int cornerIndex, CGPoint point)
+AGKQuad AGKQuadModifyCornerAtIndex(AGKQuad q, int cornerIndex, CGPoint point)
 {
-    return AGKQuadSetPointForCorner(q, AGKQuadCornerForCornerIndex(cornerIndex), point);
+    return AGKQuadModifyCorner(q, AGKQuadCornerForCornerIndex(cornerIndex), point);
 }
 
 void AGKQuadGetValues(AGKQuad q, CGPoint *out_values)
