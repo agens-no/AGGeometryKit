@@ -48,4 +48,20 @@
     }
 }
 
+- (void)testAGKLineCenter
+{
+    {
+        AGKLine line = AGKLineMake(CGPointMake(10, 50), CGPointMake(20, 70));
+        CGPoint center = AGKLineCenter(line);
+        CGPoint expected = CGPointMake(15, 60);
+        XCTAssertEqualObjects([NSValue valueWithCGPoint:center], [NSValue valueWithCGPoint:expected]);
+    }
+    {
+        AGKLine line = AGKLineMake(CGPointMake(-500, 20), CGPointMake(1200, -90));
+        CGPoint center = AGKLineCenter(line);
+        CGPoint expected = CGPointMake(350, -35);
+        XCTAssertEqualObjects([NSValue valueWithCGPoint:center], [NSValue valueWithCGPoint:expected]);
+    }
+}
+
 @end
