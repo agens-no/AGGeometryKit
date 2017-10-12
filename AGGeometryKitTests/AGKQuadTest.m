@@ -129,6 +129,54 @@
     XCTAssertEqualObjects([NSValue valueWithCGPoint:center], [NSValue valueWithCGPoint:CGPointMake(250, 250)]);
 }
 
+- (void)testAGKQuadGetCenterForSide
+{
+    AGKQuad q = AGKQuadMakeWithCGSize(CGSizeMake(500, 500));
+    {
+        CGPoint center = AGKQuadGetCenterForSide(q, AGKSideTop);
+        XCTAssertEqualObjects([NSValue valueWithCGPoint:center], [NSValue valueWithCGPoint:CGPointMake(250, 0)]);
+    }
+    {
+        CGPoint center = AGKQuadGetCenterForSide(q, AGKSideRight);
+        XCTAssertEqualObjects([NSValue valueWithCGPoint:center], [NSValue valueWithCGPoint:CGPointMake(500, 250)]);
+    }
+    {
+        CGPoint center = AGKQuadGetCenterForSide(q, AGKSideBottom);
+        XCTAssertEqualObjects([NSValue valueWithCGPoint:center], [NSValue valueWithCGPoint:CGPointMake(250, 500)]);
+    }
+    {
+        CGPoint center = AGKQuadGetCenterForSide(q, AGKSideLeft);
+        XCTAssertEqualObjects([NSValue valueWithCGPoint:center], [NSValue valueWithCGPoint:CGPointMake(0, 250)]);
+    }
+}
+
+- (void)testAGKQuadSetPointForCorner
+{
+    AGKQuad q = AGKQuadMakeWithCGSize(CGSizeMake(500, 500));
+    {
+        AGKQuad changed = AGKQuadSetPointForCorner(q, AGKCornerTopLeft, CGPointMake(250, 0));
+        AGKQuad expected = AGKQuadMake(CGPointMake(250, 0), CGPointMake(500, 0), CGPointMake(500, 500), CGPointMake(0, 500));
+        XCTAssertTrue(AGKQuadEqual(changed, expected));
+    }
+    {
+        AGKQuad changed = AGKQuadSetPointForCorner(q, AGKCornerTopRight, CGPointMake(250, 0));
+        AGKQuad expected = AGKQuadMake(CGPointMake(0, 0), CGPointMake(250, 0), CGPointMake(500, 500), CGPointMake(0, 500));
+        XCTAssertTrue(AGKQuadEqual(changed, expected));
+
+    }
+    {
+        AGKQuad changed = AGKQuadSetPointForCorner(q, AGKCornerBottomRight, CGPointMake(250, 500));
+        AGKQuad expected = AGKQuadMake(CGPointMake(0, 0), CGPointMake(500, 0), CGPointMake(250, 500), CGPointMake(0, 500));
+        XCTAssertTrue(AGKQuadEqual(changed, expected));
+
+    }
+    {
+        AGKQuad changed = AGKQuadSetPointForCorner(q, AGKCornerBottomLeft, CGPointMake(250, 500));
+        AGKQuad expected = AGKQuadMake(CGPointMake(0, 0), CGPointMake(500, 0), CGPointMake(500, 500), CGPointMake(250, 500));
+        XCTAssertTrue(AGKQuadEqual(changed, expected));
+    }
+}
+
 - (void)testAGKQuadGetBoundingRect
 {
     AGKQuad q = AGKQuadMake(CGPointMake(5, 5), CGPointMake(301, -101), CGPointMake(500, 600), CGPointMake(-102, 402));

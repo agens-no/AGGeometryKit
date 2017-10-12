@@ -111,9 +111,9 @@ int AGKQuadCornerIndexForCorner(AGKCorner corner)
     return 0;
 }
 
-AGKCorner AGKQuadCornerForCornerIndex(int i)
+AGKCorner AGKQuadCornerForCornerIndex(int cornerIndex)
 {
-    return kAGKQuadCornersOrdered[i];
+    return kAGKQuadCornersOrdered[cornerIndex];
 }
 
 AGKQuad AGKQuadMove(AGKQuad q, CGFloat x, CGFloat y)
@@ -313,9 +313,9 @@ CGPoint AGKQuadGetPointForCorner(AGKQuad q, AGKCorner corner)
     return AGKQuadGet(q, index);
 }
 
-CGPoint AGKQuadGet(AGKQuad q, int index)
+CGPoint AGKQuadGet(AGKQuad q, int cornerIndex)
 {
-    switch (index) {
+    switch (cornerIndex) {
         case 0:
             return q.tl;
         case 1:
@@ -328,6 +328,38 @@ CGPoint AGKQuadGet(AGKQuad q, int index)
             [NSException raise:NSInternalInconsistencyException format:@"Index beyond scope"];
             return CGPointZero;
     }
+}
+
+AGKQuad AGKQuadSetPointForCorner(AGKQuad q, AGKCorner corner, CGPoint point)
+{
+    switch (corner) {
+        case AGKCornerTopLeft:
+            q.tl = point;
+            break;
+
+        case AGKCornerTopRight:
+            q.tr = point;
+            break;
+
+        case AGKCornerBottomRight:
+            q.br = point;
+            break;
+
+        case AGKCornerBottomLeft:
+            q.bl = point;
+            break;
+
+        default:
+            [NSException raise:NSInternalInconsistencyException format:@"Wrong corner"];
+            break;
+    }
+
+    return q;
+}
+
+AGKQuad AGKQuadSetPoint(AGKQuad q, int cornerIndex, CGPoint point)
+{
+    return AGKQuadSetPointForCorner(q, AGKQuadCornerForCornerIndex(cornerIndex), point);
 }
 
 void AGKQuadGetValues(AGKQuad q, CGPoint *out_values)
