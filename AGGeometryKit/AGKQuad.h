@@ -66,6 +66,7 @@ CGFloat AGKQuadGetSmallestY(AGKQuad q);
 CGFloat AGKQuadGetBiggestY(AGKQuad q);
 CGRect AGKQuadGetBoundingRect(AGKQuad q);
 CGPoint AGKQuadGetCenter(AGKQuad q);
+CGPoint AGKQuadGetCenterForSide(AGKQuad q, AGKSide side);
 CGSize AGKQuadGetSize(AGKQuad q);
 CGPoint AGKQuadGetPointForCorner(AGKQuad q, AGKCorner corner);
 CGPoint AGKQuadGet(AGKQuad q, int index);

@@ -272,6 +272,35 @@ CGPoint AGKQuadGetCenter(AGKQuad q)
     return center;
 }
 
+CGPoint AGKQuadGetCenterForSide(AGKQuad q, AGKSide side)
+{
+    AGKLine line;
+
+    switch (side) {
+        case AGKSideTop:
+            line = AGKLineMake(q.tl, q.tr);
+            break;
+
+        case AGKSideRight:
+            line = AGKLineMake(q.tr, q.br);
+            break;
+
+        case AGKSideBottom:
+            line = AGKLineMake(q.bl, q.br);
+            break;
+
+        case AGKSideLeft:
+            line = AGKLineMake(q.tl, q.bl);
+            break;
+
+        default:
+            [NSException raise:NSInternalInconsistencyException format:@"Wrong side"];
+            break;
+    }
+    
+    return AGKLineCenter(line);
+}
+
 CGSize AGKQuadGetSize(AGKQuad q)
 {
     CGRect smallestRect = AGKQuadGetBoundingRect(q);
