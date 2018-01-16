@@ -131,7 +131,7 @@ quadPreview.backgroundColor = [UIColor clearColor];
 
 ## Useful links
 
-* Bartosz Ciechanowski created a [genie effect](https://github.com/Ciechan/BCGenieEffect/) around desember 2012 using quadrilaterals
+* Bartosz Ciechanowski created a [genie effect](https://github.com/Ciechan/BCGenieEffect/) around december 2012 using quadrilaterals
 * [Quadrilaterals on stackoverflow](http://stackoverflow.com/a/12820877/558816)
 * Want to work with us? Visit [agens.no](http://agens.no/)
 
