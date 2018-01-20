@@ -53,7 +53,10 @@
 - (UIImage *)imageByCroppingToRect:(CGRect)rect
 {
     CGImageRef croppedImage = CGImageCreateWithImageInRect([self CGImage], rect);
-    return [UIImage imageWithCGImage:croppedImage scale:self.scale orientation:self.imageOrientation];
+    UIImage *image = [UIImage imageWithCGImage:croppedImage scale:self.scale orientation:self.imageOrientation];
+    CGImageRelease(croppedImage);
+    croppedImage = NULL;
+    return image;
 }
 
 // Aspect Ratio estimation from:
