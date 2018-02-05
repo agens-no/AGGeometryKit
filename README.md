@@ -7,19 +7,19 @@ Quadrilaterals on CALayer (control each corner point individually), CGGeometry-f
 
 ### Installation
 
-```
+```ruby
 pod 'AGGeometryKit'
 ```
 
 ##### Import in swift
 
-```
+```swift
 import AGGeometryKit
 ```
 
 ##### Import in Objective-C
 
-```
+```objective-c
 #import <AGGeometryKit/AGGeometryKit.h>
 ```
 
@@ -40,7 +40,7 @@ A quadrilateral is a polygon with four sides (or edges) and four vertices or cor
 
 You can access `quadrilateral` as a property just like you would do with `frame`, `center` or `bounds`. The coordinates is in same coordinate system as `frame` and `position`. You can use the quadrilateral on any UIView or CALayer - even webviews - with just as good performance as you would have not using it. The underlying technology is CATransform3D. More about quadrilaterals: http://en.wikipedia.org/wiki/Quadrilateral
 
-```
+```objective-c
 UIView *view = ...; // create a view
 [view.layer ensureAnchorPointIsSetToZero]; // set the anchor point to [0, 0] (this method keeps the same position)
 
@@ -55,7 +55,7 @@ view.layer.quadrilateral = quad; // the quad is converted to CATransform3D and a
 
 Example of some of the properties which is added to UIView and CALayer. Naming is done in same manner as `CGRectGetMaxX` for consistency.
 
-```
+```objective-c
 ...
 @property (nonatomic, assign) CGPoint frameOrigin;
 @property (nonatomic, assign) CGFloat frameMinX;
@@ -75,7 +75,7 @@ Example of some of the properties which is added to UIView and CALayer. Naming i
 
 Some of the most useful functions
 
-```
+```objective-c
 ...
 CGRect  CGRectInterpolate_AGK(CGRect rect1, CGRect rect2, CGFloat progress);
 CGSize  CGRectGapBetween_AGK(CGRect rect1, CGRect rect2);
@@ -90,7 +90,7 @@ CGPoint CGPointAdd_AGK(CGPoint p1, CGPoint p2);
 
 Some of the most useful functions
 
-```
+```objective-c
 ...
 CGFloat AGKInterpolate(CGFloat startValue, CGFloat endValue, CGFloat progress);
 CGFloat AGKRemapToZeroOne(CGFloat value, CGFloat startValue, CGFloat endValue);
@@ -116,7 +116,7 @@ CGFloat AGKDegreesToRadians(CGFloat degrees);
 
 It can also be useful to create a representation of the quadrilateral you are trying to display using a UIBezierPath:
 
-```
+```objective-c
 UIView *quadPreview = [[UIView alloc] init];
 quadPreview.frame = quadView.frame;
 quadPreview.layer.shadowPath = [UIBezierPath bezierPathWithAGQuad:quad].CGPath;
