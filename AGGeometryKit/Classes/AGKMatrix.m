@@ -332,7 +332,9 @@ typedef NS_ENUM(NSUInteger, AGKMatrixDimension) {
 - (NSArray *)allMembers {
     NSMutableArray *allMembers = [NSMutableArray arrayWithCapacity:self.count];
     for (NSUInteger index = 0; index < self.count; index++) {
-        [allMembers addObject:self[index]];
+        NSNumber *number = self[index];
+        NSAssert(number != nil, @"Found unexpected nil");
+        [allMembers addObject:number];
     }
     
     return allMembers;

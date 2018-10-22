@@ -31,7 +31,7 @@
 
 @interface AGKCALayerAnimationBlockDelegate : NSObject <CAAnimationDelegate>
 
-@property (nonatomic, copy) void (^onStart)();
+@property (nonatomic, copy) void (^onStart)(void);
 @property (nonatomic, copy) void (^onStop)(BOOL completed);
 @property (nonatomic, assign) BOOL autoRemoveBlocks; // defaults to YES - will clear blocks after calling onAnimationDidStop
 
