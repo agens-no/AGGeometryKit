@@ -208,7 +208,7 @@ typedef NS_ENUM(NSUInteger, AGKMatrixDimension) {
 #pragma mark - Member Management
 
 - (NSNumber *)defaultMember {
-	if (!_defaultMember) {
+	if (_defaultMember == nil) {
 		_defaultMember = @0;
 	}
 	
@@ -216,7 +216,7 @@ typedef NS_ENUM(NSUInteger, AGKMatrixDimension) {
 }
 
 - (void)resetMatrixToDefault:(NSNumber *)defaultValue {
-    if (defaultValue) {
+    if (defaultValue != nil) {
         self.defaultMember = defaultValue;
     }
 	self.members = nil;
